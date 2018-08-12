@@ -84,6 +84,7 @@
             this.textBoxPwd.PasswordChar = '*';
             this.textBoxPwd.Size = new System.Drawing.Size(160, 14);
             this.textBoxPwd.TabIndex = 5;
+            this.textBoxPwd.Text = "12345678";
             this.textBoxPwd.UseSystemPasswordChar = true;
             // 
             // textBoxAcount
@@ -94,6 +95,7 @@
             this.textBoxAcount.Name = "textBoxAcount";
             this.textBoxAcount.Size = new System.Drawing.Size(160, 14);
             this.textBoxAcount.TabIndex = 5;
+            this.textBoxAcount.Text = "admin";
             // 
             // btnConfigDB
             // 
@@ -133,7 +135,7 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "析之助手术登记系统";
             // 
-            // SignInForm
+            // FormSignIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -149,9 +151,10 @@
             this.Controls.Add(this.btnCloseForm);
             this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "SignInForm";
+            this.Name = "FormSignIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "signIn";
+            this.Load += new System.EventHandler(this.FormSignIn_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

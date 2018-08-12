@@ -27,10 +27,10 @@ namespace xzj
 
         private void ConfigDBForm_Load(object sender, EventArgs e)
         {
-            string dbName = UtilTools.getData(UtilConfig.DB_NAME_KEY);
-            string ipAdd = UtilTools.getData(UtilConfig.DB_IP_KEY);
-            string user = UtilTools.getData(UtilConfig.DB_USER_KEY);
-            string pwd = UtilTools.getData(UtilConfig.DB_PWD_KEY);
+            string dbName = DBSQLite.selectValue(UtilConfig.DB_NAME_KEY);
+            string ipAdd = DBSQLite.selectValue(UtilConfig.DB_IP_KEY);
+            string user = DBSQLite.selectValue(UtilConfig.DB_USER_KEY);
+            string pwd = DBSQLite.selectValue(UtilConfig.DB_PWD_KEY);
 
             if (dbName != null)
             {
@@ -59,28 +59,59 @@ namespace xzj
         {
             if (this.tbDbName.Text != null)
             {
-                UtilTools.setData(UtilConfig.DB_NAME_KEY, this.tbDbName.Text);
+                if (DBSQLite.selectValue(UtilConfig.DB_NAME_KEY) != null)
+                {
+                    DBSQLite.updateValue(UtilConfig.DB_NAME_KEY, this.tbDbName.Text);
+                }
+                else
+                {
+                    DBSQLite.insertValue(UtilConfig.DB_NAME_KEY, this.tbDbName.Text);
+                }
+               
             }
 
             if (this.tbIP.Text != null)
             {
-                UtilTools.setData(UtilConfig.DB_IP_KEY, this.tbIP.Text);
+                if (DBSQLite.selectValue(UtilConfig.DB_IP_KEY) != null)
+                {
+                    DBSQLite.updateValue(UtilConfig.DB_IP_KEY, this.tbIP.Text);
+                }
+                else
+                {
+                    DBSQLite.insertValue(UtilConfig.DB_IP_KEY, this.tbIP.Text);
+                }
             }
 
             if (this.tbUserName.Text != null)
             {
-                UtilTools.setData(UtilConfig.DB_USER_KEY, this.tbUserName.Text);
+                //UtilTools.setData(UtilConfig.DB_USER_KEY, this.tbUserName.Text);
+                if (DBSQLite.selectValue(UtilConfig.DB_USER_KEY) != null)
+                {
+                    DBSQLite.updateValue(UtilConfig.DB_USER_KEY, this.tbUserName.Text);
+                }
+                else
+                {
+                    DBSQLite.insertValue(UtilConfig.DB_USER_KEY, this.tbUserName.Text);
+                }
             }
 
             if (this.tbPwd.Text != null)
             {
-                UtilTools.setData(UtilConfig.DB_PWD_KEY, this.tbPwd.Text);
+               // UtilTools.setData(UtilConfig.DB_PWD_KEY, this.tbPwd.Text);
+                if (DBSQLite.selectValue(UtilConfig.DB_PWD_KEY) != null)
+                {
+                    DBSQLite.updateValue(UtilConfig.DB_PWD_KEY, this.tbPwd.Text);
+                }
+                else
+                {
+                    DBSQLite.insertValue(UtilConfig.DB_PWD_KEY, this.tbPwd.Text);
+                }
             }
 
-            string dbName = UtilTools.getData(UtilConfig.DB_NAME_KEY);
-            string ipAdd = UtilTools.getData(UtilConfig.DB_IP_KEY);
-            string user = UtilTools.getData(UtilConfig.DB_USER_KEY);
-            string pwd = UtilTools.getData(UtilConfig.DB_PWD_KEY);
+            string dbName = DBSQLite.selectValue(UtilConfig.DB_NAME_KEY);
+            string ipAdd = DBSQLite.selectValue(UtilConfig.DB_IP_KEY);
+            string user = DBSQLite.selectValue(UtilConfig.DB_USER_KEY);
+            string pwd = DBSQLite.selectValue(UtilConfig.DB_PWD_KEY);
 
             if (dbName == null || ipAdd == null || user == null || pwd == null)
             {
@@ -89,7 +120,15 @@ namespace xzj
             else
             {
                 string sqlAddress = "server=" + ipAdd + ";port=3306;database=" + dbName + ";user=" + user + ";password=" + pwd + ";SslMode = none;";
-                UtilTools.setData(UtilConfig.SQL_ADDRESS_KEY, sqlAddress);
+                //UtilTools.setData(UtilConfig.SQL_ADDRESS_KEY, sqlAddress);
+                if (DBSQLite.selectValue(UtilConfig.SQL_ADDRESS_KEY) != null)
+                {
+                    DBSQLite.updateValue(UtilConfig.SQL_ADDRESS_KEY, sqlAddress);
+                }
+                else
+                {
+                    DBSQLite.insertValue(UtilConfig.SQL_ADDRESS_KEY, sqlAddress);
+                }
                 MessageBox.Show("保存成功");
             }
 

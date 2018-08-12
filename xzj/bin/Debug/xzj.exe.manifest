@@ -52,24 +52,36 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="xzj.exe" size="884736">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Data.SQLite.dll" size="1343488">
+      <assemblyIdentity name="System.Data.SQLite" version="1.0.108.0" publicKeyToken="DB937BC2D44FF139" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>4Y/adLxSmz9vuGfrJZdRNo9FcLhcg7rSwPBb4ubydBI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="xzj.exe" size="899584">
       <assemblyIdentity name="xzj" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>hryskNJapqJLEmB+7XpFK1LPkqkRXJQk9ZMl/tvkAOk=</dsig:DigestValue>
+        <dsig:DigestValue>8HM265ikOVr7F8hZ3gX8MQgOW+WYD7TBMpOohMA3hW4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="xzj.exe.config" size="169">
+  <file name="xzj.exe.config" size="209">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>GKamJZfmCzfmdfu8cY/8qBYXpld7/aO4xnCSg/b2Uqk=</dsig:DigestValue>
+      <dsig:DigestValue>MHu75u2T8iZLcJVAeJtNTdGLEwbN75TZj/GNUEktw7k=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

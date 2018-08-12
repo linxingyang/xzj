@@ -21,30 +21,29 @@ namespace xzj
         //登录
         private void btnSignIn_Click(object sender, EventArgs e)
         {
-           
-
             string account = this.textBoxAcount.Text;
             string pwd = this.textBoxPwd.Text;
 
-            if (account == null)
+            if (string.IsNullOrEmpty(account))
             {
                 MessageBox.Show("账号不能为空");
                 return;
             }
 
-            if (pwd == null)
+            if (string.IsNullOrEmpty(pwd))
             {
                 MessageBox.Show("密码不能为空");
                 return;
             }
 
-            bool flag = DBEmp.isAccount(account);
+            bool flag = DBEmp.getInstance().isAccount(account);
             
             if (flag)
             {
-                flag = DBEmp.isLogin(account, pwd);
+                flag = DBEmp.getInstance().isLogin(account, pwd);
                 if (flag)
                 {
+                    UtilConfig.ACCOUNT = account;
                     FormMain mainForm = new FormMain();
                     mainForm.Show();
                     Hide();
@@ -80,6 +79,11 @@ namespace xzj
         {
             FormConfigDB configDBForm = new FormConfigDB();
             configDBForm.Show();
+        }
+
+        private void FormSignIn_Load(object sender, EventArgs e)
+        {
+           
         }
 
       

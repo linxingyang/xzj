@@ -67,6 +67,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\..\..\software\sqlite2005\bin\System.Data.SQLite.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -78,6 +81,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBEmp.cs" />
+    <Compile Include="DBRoom.cs" />
+    <Compile Include="DBSQLite.cs" />
     <Compile Include="FormAddEmp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,7 +221,9 @@
   <ItemGroup>
     <None Include="Resources\logo1.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

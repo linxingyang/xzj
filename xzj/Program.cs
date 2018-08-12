@@ -14,9 +14,14 @@ namespace xzj
         [STAThread]
         static void Main()
         {
+            //创建本地存储
+            DBSQLite.CreateDB();
+            DBSQLite.CreateTable();
+            UtilConfig.SQL_ADDRESS = DBSQLite.selectValue(UtilConfig.SQL_ADDRESS_KEY);
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormSignIn());
+            Application.Run(new FormMain());
         }
     }
 }

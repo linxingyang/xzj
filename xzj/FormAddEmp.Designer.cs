@@ -64,7 +64,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.tbPwd = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -80,7 +79,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.listBox1);
             this.groupBox1.Controls.Add(this.panel7);
             this.groupBox1.Controls.Add(this.panel6);
             this.groupBox1.Controls.Add(this.panel5);
@@ -180,6 +178,7 @@
             this.tbTel.Name = "tbTel";
             this.tbTel.Size = new System.Drawing.Size(195, 26);
             this.tbTel.TabIndex = 2;
+            this.tbTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbTel_KeyPress);
             // 
             // panel4
             // 
@@ -221,6 +220,7 @@
             // 
             // cbSex
             // 
+            this.cbSex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSex.FormattingEnabled = true;
             this.cbSex.Items.AddRange(new object[] {
             "男",
@@ -230,7 +230,6 @@
             this.cbSex.Name = "cbSex";
             this.cbSex.Size = new System.Drawing.Size(195, 24);
             this.cbSex.TabIndex = 2;
-            this.cbSex.Text = "男";
             // 
             // label5
             // 
@@ -302,7 +301,6 @@
             this.label1.Size = new System.Drawing.Size(72, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "用户名：";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // tbAccount
             // 
@@ -413,6 +411,7 @@
             this.tbSurePwd.Name = "tbSurePwd";
             this.tbSurePwd.Size = new System.Drawing.Size(195, 26);
             this.tbSurePwd.TabIndex = 2;
+            this.tbSurePwd.UseSystemPasswordChar = true;
             // 
             // label11
             // 
@@ -453,6 +452,7 @@
             this.tbPwd.Name = "tbPwd";
             this.tbPwd.Size = new System.Drawing.Size(195, 26);
             this.tbPwd.TabIndex = 2;
+            this.tbPwd.UseSystemPasswordChar = true;
             // 
             // label13
             // 
@@ -464,18 +464,6 @@
             this.label13.Size = new System.Drawing.Size(16, 16);
             this.label13.TabIndex = 1;
             this.label13.Text = "*";
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Items.AddRange(new object[] {
-            "男",
-            "女"});
-            this.listBox1.Location = new System.Drawing.Point(467, 75);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 36);
-            this.listBox1.TabIndex = 9;
             // 
             // FormAddEmp
             // 
@@ -490,6 +478,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormAddEmp";
             this.Text = "新增用户信息";
+            this.Load += new System.EventHandler(this.FormAddEmp_Load);
             this.groupBox1.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
@@ -552,6 +541,5 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox tbPwd;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ListBox listBox1;
     }
 }
