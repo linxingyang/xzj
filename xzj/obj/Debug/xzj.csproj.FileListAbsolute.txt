@@ -1,0 +1,17 @@
+D:\workspace\MyProject\xzj\xzj\obj\Debug\xzj.csprojResolveAssemblyReference.cache
+D:\workspace\MyProject\xzj\xzj\obj\Debug\xzj.FormAddEmp.resources
+D:\workspace\MyProject\xzj\xzj\obj\Debug\xzj.FormConfigDB.resources
+D:\workspace\MyProject\xzj\xzj\obj\Debug\xzj.FormMain.resources
+D:\workspace\MyProject\xzj\xzj\obj\Debug\xzj.FormMain1.resources
+D:\workspace\MyProject\xzj\xzj\obj\Debug\xzj.Properties.Resources.resources
+D:\workspace\MyProject\xzj\xzj\obj\Debug\xzj.FormSignIn.resources
+D:\workspace\MyProject\xzj\xzj\obj\Debug\xzj.csproj.GenerateResource.Cache
+D:\workspace\MyProject\xzj\xzj\bin\Debug\xzj.exe.config
+D:\workspace\MyProject\xzj\xzj\bin\Debug\xzj.exe.manifest
+D:\workspace\MyProject\xzj\xzj\bin\Debug\xzj.application
+D:\workspace\MyProject\xzj\xzj\bin\Debug\xzj.exe
+D:\workspace\MyProject\xzj\xzj\bin\Debug\xzj.pdb
+D:\workspace\MyProject\xzj\xzj\obj\Debug\xzj.exe.manifest
+D:\workspace\MyProject\xzj\xzj\obj\Debug\xzj.application
+D:\workspace\MyProject\xzj\xzj\obj\Debug\xzj.exe
+D:\workspace\MyProject\xzj\xzj\obj\Debug\xzj.pdb
