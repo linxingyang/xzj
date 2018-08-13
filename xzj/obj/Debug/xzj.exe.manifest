@@ -64,14 +64,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="xzj.exe" size="899584">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="xzj.exe" size="907776">
       <assemblyIdentity name="xzj" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8HM265ikOVr7F8hZ3gX8MQgOW+WYD7TBMpOohMA3hW4=</dsig:DigestValue>
+        <dsig:DigestValue>bMP/nJCDtlmxbx8xKABBgeyZNMzG3FAy/sIXWeX7kqo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

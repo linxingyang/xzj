@@ -55,10 +55,10 @@ namespace xzj
             string r_dialyse_center_area,string r_dialyse_unit_area,string r_start_date)
         {
             int flag = 0;
-            string sql = string.Format("insert into t_room(r_hospital_name,r_address,r_province, sr_rank, r_postcodes,  r_room_name, r_room_tel,"+
+            string sql = string.Format("insert into t_room(r_hospital_name,r_address,r_province, r_rank, r_postcodes,  r_room_name, r_room_tel,"+
                 "r_room_fax,r_responsible,r_responsible_title, r_responsible_tel, r_responsible_phone,  r_responsible_email,"+
                 " r_dialyse_center_area, r_dialyse_unit_area, r_start_date) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}',"+
-                "'{12}','{13}','{14}')",r_hospital_name,r_address,r_province, r_rank, r_postcodes,  r_room_name, r_room_tel,r_room_fax,r_responsible,r_responsible_title,
+                "'{12}','{13}','{14}','{15}')", r_hospital_name, r_address, r_province, r_rank, r_postcodes, r_room_name, r_room_tel, r_room_fax, r_responsible, r_responsible_title,
                 r_responsible_tel, r_responsible_phone, r_responsible_email, r_dialyse_center_area, r_dialyse_unit_area, r_start_date);
 
             try
@@ -82,9 +82,9 @@ namespace xzj
             string r_dialyse_center_area, string r_dialyse_unit_area, string r_start_date)
         {
             int flag = 0;
-            string sql = string.Format("update t_room set r_hospital_name='{0}',r_address,r_province='{1}', sr_rank='{2}', r_postcodes='{3}',  r_room_name='{4}', r_room_tel='{5}'," +
-                "r_room_fax='{6}',r_responsible='{7}',r_responsible_title='{8}', r_responsible_tel='{9}', r_responsible_phone='{10}',  r_responsible_email='{11}'," +
-                " r_dialyse_center_area='{12}', r_dialyse_unit_area='{13}', r_start_date='{14}'",
+            string sql = string.Format("update t_room set r_address='{1}',r_province='{2}', r_rank='{3}', r_postcodes='{4}', r_room_tel='{6}'," +
+                "r_room_fax='{7}',r_responsible='{8}',r_responsible_title='{9}', r_responsible_tel='{10}', r_responsible_phone='{11}',  r_responsible_email='{12}'," +
+                " r_dialyse_center_area='{13}', r_dialyse_unit_area='{14}', r_start_date='{15}', r_start_date='{15}' where r_hospital_name='{0}' and r_room_name='{5}'",
                 r_hospital_name, r_address, r_province, r_rank, r_postcodes, r_room_name, r_room_tel, r_room_fax, r_responsible, r_responsible_title,
                 r_responsible_tel, r_responsible_phone, r_responsible_email, r_dialyse_center_area, r_dialyse_unit_area, r_start_date);
 
@@ -101,6 +101,46 @@ namespace xzj
             }
             //conn.Close();
             return flag;
+        }
+
+        //通过医院名和科室查询
+        public DataTable getRooms(string hispitorName, string roomName)
+        {
+            string sql = string.Format("select r_hospital_name,r_address,r_province, r_rank, r_postcodes,  r_room_name, r_room_tel,r_room_fax,r_responsible," +
+                    "r_responsible_title, r_responsible_tel, r_responsible_phone,  r_responsible_email, r_dialyse_center_area, r_dialyse_unit_area, r_start_date " +
+                    "from t_room where r_hospital_name='{0}' and r_room_name='{1}'", hispitorName, roomName);
+            //if (string.IsNullOrEmpty(roomName))
+            //{
+            //    sql = string.Format("select r_hospital_name,r_address,r_province, sr_rank, r_postcodes,  r_room_name, r_room_tel,r_room_fax,r_responsible," +
+            //        "r_responsible_title, r_responsible_tel, r_responsible_phone,  r_responsible_email, r_dialyse_center_area, r_dialyse_unit_area, r_start_date "+
+            //        "from t_room where r_hospital_name='{0}'", hispitorName);
+            //}
+            //else
+            //{
+            //    sql = string.Format("select r_hospital_name,r_address,r_province, sr_rank, r_postcodes,  r_room_name, r_room_tel,r_room_fax,r_responsible," +
+            //        "r_responsible_title, r_responsible_tel, r_responsible_phone,  r_responsible_email, r_dialyse_center_area, r_dialyse_unit_area, r_start_date " +
+            //        "from t_room where r_hospital_name='{0}' and r_room_name='{1}'", hispitorName, roomName);
+            //}
+
+            try
+            {
+
+                MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                return table;
+            }
+            catch (Exception err)
+            {
+                Console.Write(err);
+            }
+
+            return null;
+            //string conStr = "Server=localhost;user=root;pwd=admin;database=test";
+            //using (MySqlConnection myCon = new MySqlConnection(conStr))
+            //{
+
+            //}
         }
     }
 }

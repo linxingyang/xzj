@@ -17,3 +17,4 @@ D:\workspace\MyProject\xzj\xzj\obj\Debug\xzj.exe
 D:\workspace\MyProject\xzj\xzj\obj\Debug\xzj.pdb
 D:\workspace\MyProject\xzj\xzj\bin\Debug\System.Data.SQLite.dll
 D:\workspace\MyProject\xzj\xzj\bin\Debug\System.Data.SQLite.pdb
+D:\workspace\MyProject\xzj\xzj\obj\Debug\xzj.FormAddDictionary.resources
