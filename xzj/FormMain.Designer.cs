@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewGroup listViewGroup29 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup30 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup31 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup32 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnKSGL = new System.Windows.Forms.Button();
@@ -194,11 +193,16 @@
             this.panel78 = new System.Windows.Forms.Panel();
             this.label111 = new System.Windows.Forms.Label();
             this.panelZDGL = new System.Windows.Forms.Panel();
+            this.listViewDictionaryQKZD = new System.Windows.Forms.ListView();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listViewDictionarySSZD = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.btnDeleteDictionary = new System.Windows.Forms.Button();
+            this.btnGoEditDictionary = new System.Windows.Forms.Button();
+            this.btnGoAddDictionaryy = new System.Windows.Forms.Button();
             this.panel42 = new System.Windows.Forms.Panel();
+            this.listViewDictionary = new System.Windows.Forms.ListView();
             this.panel41 = new System.Windows.Forms.Panel();
             this.labelDictionaryShow = new System.Windows.Forms.Label();
             this.panel40 = new System.Windows.Forms.Panel();
@@ -290,7 +294,6 @@
             this.btnRoomEmpManager = new System.Windows.Forms.Button();
             this.btnRoomInfoManager = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.listViewDictionarySSZD = new System.Windows.Forms.ListView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.flowLayoutForm.SuspendLayout();
@@ -357,6 +360,7 @@
             this.panel78.SuspendLayout();
             this.panelZDGL.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
+            this.panel42.SuspendLayout();
             this.panel41.SuspendLayout();
             this.panel40.SuspendLayout();
             this.panelSJCX.SuspendLayout();
@@ -2022,6 +2026,7 @@
             // panelZDGL
             // 
             this.panelZDGL.BackColor = System.Drawing.Color.White;
+            this.panelZDGL.Controls.Add(this.listViewDictionaryQKZD);
             this.panelZDGL.Controls.Add(this.listViewDictionarySSZD);
             this.panelZDGL.Controls.Add(this.flowLayoutPanel2);
             this.panelZDGL.Controls.Add(this.panel42);
@@ -2033,66 +2038,122 @@
             this.panelZDGL.Size = new System.Drawing.Size(1260, 530);
             this.panelZDGL.TabIndex = 0;
             // 
+            // listViewDictionaryQKZD
+            // 
+            this.listViewDictionaryQKZD.BackColor = System.Drawing.Color.White;
+            this.listViewDictionaryQKZD.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listViewDictionaryQKZD.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader3});
+            this.listViewDictionaryQKZD.Location = new System.Drawing.Point(352, 35);
+            this.listViewDictionaryQKZD.Name = "listViewDictionaryQKZD";
+            this.listViewDictionaryQKZD.Size = new System.Drawing.Size(188, 91);
+            this.listViewDictionaryQKZD.TabIndex = 47;
+            this.listViewDictionaryQKZD.UseCompatibleStateImageBehavior = false;
+            this.listViewDictionaryQKZD.View = System.Windows.Forms.View.List;
+            this.listViewDictionaryQKZD.Visible = false;
+            this.listViewDictionaryQKZD.SelectedIndexChanged += new System.EventHandler(this.listViewDictionaryQKZD_SelectedIndexChanged);
+            this.listViewDictionaryQKZD.MouseLeave += new System.EventHandler(this.listViewDictionaryQKZD_MouseLeave);
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "sex";
+            this.columnHeader3.Width = 182;
+            // 
+            // listViewDictionarySSZD
+            // 
+            this.listViewDictionarySSZD.BackColor = System.Drawing.Color.White;
+            this.listViewDictionarySSZD.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listViewDictionarySSZD.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1});
+            this.listViewDictionarySSZD.Location = new System.Drawing.Point(167, 35);
+            this.listViewDictionarySSZD.Name = "listViewDictionarySSZD";
+            this.listViewDictionarySSZD.Size = new System.Drawing.Size(188, 140);
+            this.listViewDictionarySSZD.TabIndex = 46;
+            this.listViewDictionarySSZD.UseCompatibleStateImageBehavior = false;
+            this.listViewDictionarySSZD.View = System.Windows.Forms.View.List;
+            this.listViewDictionarySSZD.Visible = false;
+            this.listViewDictionarySSZD.SelectedIndexChanged += new System.EventHandler(this.listViewDictionarySSZD_SelectedIndexChanged);
+            this.listViewDictionarySSZD.MouseLeave += new System.EventHandler(this.listViewDictionarySSZD_MouseLeave);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "sex";
+            this.columnHeader1.Width = 182;
+            // 
             // flowLayoutPanel2
             // 
-            this.flowLayoutPanel2.Controls.Add(this.button9);
-            this.flowLayoutPanel2.Controls.Add(this.button10);
-            this.flowLayoutPanel2.Controls.Add(this.button11);
+            this.flowLayoutPanel2.Controls.Add(this.btnDeleteDictionary);
+            this.flowLayoutPanel2.Controls.Add(this.btnGoEditDictionary);
+            this.flowLayoutPanel2.Controls.Add(this.btnGoAddDictionaryy);
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 59);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(1260, 38);
             this.flowLayoutPanel2.TabIndex = 43;
             // 
-            // button9
+            // btnDeleteDictionary
             // 
-            this.button9.BackColor = System.Drawing.Color.Red;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(1174, 3);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(83, 26);
-            this.button9.TabIndex = 6;
-            this.button9.Text = "删除";
-            this.button9.UseVisualStyleBackColor = false;
+            this.btnDeleteDictionary.BackColor = System.Drawing.Color.Red;
+            this.btnDeleteDictionary.FlatAppearance.BorderSize = 0;
+            this.btnDeleteDictionary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteDictionary.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnDeleteDictionary.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteDictionary.Location = new System.Drawing.Point(1174, 3);
+            this.btnDeleteDictionary.Name = "btnDeleteDictionary";
+            this.btnDeleteDictionary.Size = new System.Drawing.Size(83, 26);
+            this.btnDeleteDictionary.TabIndex = 6;
+            this.btnDeleteDictionary.Text = "删除";
+            this.btnDeleteDictionary.UseVisualStyleBackColor = false;
             // 
-            // button10
+            // btnGoEditDictionary
             // 
-            this.button10.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(1085, 3);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(83, 26);
-            this.button10.TabIndex = 7;
-            this.button10.Text = "修改";
-            this.button10.UseVisualStyleBackColor = false;
+            this.btnGoEditDictionary.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnGoEditDictionary.FlatAppearance.BorderSize = 0;
+            this.btnGoEditDictionary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGoEditDictionary.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnGoEditDictionary.ForeColor = System.Drawing.Color.White;
+            this.btnGoEditDictionary.Location = new System.Drawing.Point(1085, 3);
+            this.btnGoEditDictionary.Name = "btnGoEditDictionary";
+            this.btnGoEditDictionary.Size = new System.Drawing.Size(83, 26);
+            this.btnGoEditDictionary.TabIndex = 7;
+            this.btnGoEditDictionary.Text = "修改";
+            this.btnGoEditDictionary.UseVisualStyleBackColor = false;
             // 
-            // button11
+            // btnGoAddDictionaryy
             // 
-            this.button11.BackColor = System.Drawing.Color.Green;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Location = new System.Drawing.Point(996, 3);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(83, 26);
-            this.button11.TabIndex = 8;
-            this.button11.Text = "添加";
-            this.button11.UseVisualStyleBackColor = false;
+            this.btnGoAddDictionaryy.BackColor = System.Drawing.Color.Green;
+            this.btnGoAddDictionaryy.FlatAppearance.BorderSize = 0;
+            this.btnGoAddDictionaryy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGoAddDictionaryy.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnGoAddDictionaryy.ForeColor = System.Drawing.Color.White;
+            this.btnGoAddDictionaryy.Location = new System.Drawing.Point(996, 3);
+            this.btnGoAddDictionaryy.Name = "btnGoAddDictionaryy";
+            this.btnGoAddDictionaryy.Size = new System.Drawing.Size(83, 26);
+            this.btnGoAddDictionaryy.TabIndex = 8;
+            this.btnGoAddDictionaryy.Text = "添加";
+            this.btnGoAddDictionaryy.UseVisualStyleBackColor = false;
+            this.btnGoAddDictionaryy.Click += new System.EventHandler(this.btnGoAddDictionaryy_Click);
             // 
             // panel42
             // 
             this.panel42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel42.Controls.Add(this.listViewDictionary);
             this.panel42.Location = new System.Drawing.Point(103, 106);
             this.panel42.Name = "panel42";
             this.panel42.Size = new System.Drawing.Size(1060, 406);
             this.panel42.TabIndex = 44;
+            // 
+            // listViewDictionary
+            // 
+            this.listViewDictionary.BackColor = System.Drawing.Color.White;
+            this.listViewDictionary.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listViewDictionary.Location = new System.Drawing.Point(42, 10);
+            this.listViewDictionary.Name = "listViewDictionary";
+            this.listViewDictionary.Size = new System.Drawing.Size(965, 375);
+            this.listViewDictionary.TabIndex = 47;
+            this.listViewDictionary.UseCompatibleStateImageBehavior = false;
+            this.listViewDictionary.View = System.Windows.Forms.View.Details;
+            this.listViewDictionary.Visible = false;
             // 
             // panel41
             // 
@@ -2131,7 +2192,7 @@
             this.btnDictionaryQKZD.ForeColor = System.Drawing.Color.White;
             this.btnDictionaryQKZD.Location = new System.Drawing.Point(352, 0);
             this.btnDictionaryQKZD.Name = "btnDictionaryQKZD";
-            this.btnDictionaryQKZD.Size = new System.Drawing.Size(202, 36);
+            this.btnDictionaryQKZD.Size = new System.Drawing.Size(188, 36);
             this.btnDictionaryQKZD.TabIndex = 6;
             this.btnDictionaryQKZD.Text = "情况字典";
             this.btnDictionaryQKZD.UseVisualStyleBackColor = false;
@@ -2950,19 +3011,19 @@
             this.birth,
             this.tel});
             this.listViewEmp.Dock = System.Windows.Forms.DockStyle.Fill;
-            listViewGroup1.Header = "ListViewGroup";
-            listViewGroup1.Name = "listViewGroup1";
-            listViewGroup2.Header = "ListViewGroup";
-            listViewGroup2.Name = "listViewGroup2";
-            listViewGroup3.Header = "ListViewGroup";
-            listViewGroup3.Name = "listViewGroup3";
-            listViewGroup4.Header = "ListViewGroup";
-            listViewGroup4.Name = "listViewGroup4";
+            listViewGroup29.Header = "ListViewGroup";
+            listViewGroup29.Name = "listViewGroup1";
+            listViewGroup30.Header = "ListViewGroup";
+            listViewGroup30.Name = "listViewGroup2";
+            listViewGroup31.Header = "ListViewGroup";
+            listViewGroup31.Name = "listViewGroup3";
+            listViewGroup32.Header = "ListViewGroup";
+            listViewGroup32.Name = "listViewGroup4";
             this.listViewEmp.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1,
-            listViewGroup2,
-            listViewGroup3,
-            listViewGroup4});
+            listViewGroup29,
+            listViewGroup30,
+            listViewGroup31,
+            listViewGroup32});
             this.listViewEmp.Location = new System.Drawing.Point(0, 0);
             this.listViewEmp.Name = "listViewEmp";
             this.listViewEmp.Size = new System.Drawing.Size(1073, 373);
@@ -3049,17 +3110,6 @@
             this.panel4.Padding = new System.Windows.Forms.Padding(10);
             this.panel4.Size = new System.Drawing.Size(1280, 550);
             this.panel4.TabIndex = 13;
-            // 
-            // listViewDictionarySSZD
-            // 
-            this.listViewDictionarySSZD.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listViewDictionarySSZD.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
-            this.listViewDictionarySSZD.Location = new System.Drawing.Point(167, 33);
-            this.listViewDictionarySSZD.Name = "listViewDictionarySSZD";
-            this.listViewDictionarySSZD.Size = new System.Drawing.Size(184, 97);
-            this.listViewDictionarySSZD.TabIndex = 46;
-            this.listViewDictionarySSZD.UseCompatibleStateImageBehavior = false;
             // 
             // FormMain
             // 
@@ -3187,6 +3237,7 @@
             this.panel78.PerformLayout();
             this.panelZDGL.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
+            this.panel42.ResumeLayout(false);
             this.panel41.ResumeLayout(false);
             this.panel41.PerformLayout();
             this.panel40.ResumeLayout(false);
@@ -3500,12 +3551,16 @@
         private System.Windows.Forms.Button btnDictionaryQKZD;
         private System.Windows.Forms.Panel panel41;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button btnDeleteDictionary;
+        private System.Windows.Forms.Button btnGoEditDictionary;
+        private System.Windows.Forms.Button btnGoAddDictionaryy;
         private System.Windows.Forms.Label labelDictionaryShow;
         private System.Windows.Forms.Panel panel42;
         private System.Windows.Forms.ListView listViewDictionarySSZD;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ListView listViewDictionary;
+        private System.Windows.Forms.ListView listViewDictionaryQKZD;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
 
     }
 }

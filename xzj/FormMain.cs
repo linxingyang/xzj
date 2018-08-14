@@ -14,6 +14,8 @@ namespace xzj
     public partial class FormMain : Form
     {
         private DataTable dataTable;
+        private static int dictionary_id = 1;//1代表医保类型 2代表手术字典 3代表情况字典
+        private static int dictionary_parent_id = 1;
 
         public FormMain()
         {
@@ -280,7 +282,7 @@ namespace xzj
         //查询医保类型字典
         private void btnDictionaryYBLX_Click(object sender, EventArgs e)
         {
-            labelDictionaryShow.Text = "医保类型字典";
+            this.setListViewDictionary("医保类型字典", 0, 1);
         }
 
         //查询手术字典
@@ -293,24 +295,64 @@ namespace xzj
                 //设置listview表头颜色
                 this.listViewDictionarySSZD.Items.Clear();
                 this.listViewDictionarySSZD.FullRowSelect = true;
+                
                 this.listViewDictionarySSZD.BackColor = ColorTranslator.FromHtml("#41aaeb");
+                ImageList imgList = new ImageList();
+                imgList.ImageSize = new Size(30, 23);
+                this.listViewDictionarySSZD.SmallImageList = imgList;
 
-                DataTable dt = DBDictionary.getInstance().getDictionarys("top", "手术字典");
+                DataTable dt = DBDictionary.getInstance().getDictionarysByParentId(2);
                 foreach (DataRow row in dt.Rows)
                 {
                     ListViewItem item = new ListViewItem();
                     item.SubItems.Clear();
                     item.Text = row["d_name"].ToString();
+                    item.ForeColor = Color.White;
+                    item.SubItems.Add(row["id"].ToString());
                     //item.SubItems.Add(row["d_name"].ToString());
+                    //记住view改成detail
                     this.listViewDictionarySSZD.Items.Add(item);
+                    this.listViewDictionarySSZD.Columns[0].Width = 100;
+                    //隐藏第二列
+                    //this.listViewDictionarySSZD.Columns[1].Width = 0;
+                    //this.listViewDictionarySSZD.Items.Add(row["d_name"].ToString());
                 }
+                this.listViewDictionarySSZD.EndUpdate();
             }
         }
 
         //查询情况字典
         private void btnDictionaryQKZD_Click(object sender, EventArgs e)
         {
-            
+            this.listViewDictionaryQKZD.Visible = ! this.listViewDictionaryQKZD.Visible;
+
+            if (this.listViewDictionaryQKZD.Visible)
+            {
+                //设置listview表头颜色
+                this.listViewDictionaryQKZD.Items.Clear();
+                this.listViewDictionaryQKZD.FullRowSelect = true;
+
+                this.listViewDictionaryQKZD.BackColor = ColorTranslator.FromHtml("#41aaeb");
+                ImageList imgList = new ImageList();
+                imgList.ImageSize = new Size(1, 23);
+                this.listViewDictionaryQKZD.SmallImageList = imgList;
+
+                DataTable dt = DBDictionary.getInstance().getDictionarysByParentId(3);
+                foreach (DataRow row in dt.Rows)
+                {
+                    ListViewItem item = new ListViewItem();
+                    item.SubItems.Clear();
+                    item.Text = row["d_name"].ToString();
+                    item.ForeColor = Color.White;
+
+                    //item.SubItems.Add(row["d_name"].ToString());
+                    //记住view改成detail
+                    this.listViewDictionaryQKZD.Items.Add(item);
+                    this.listViewDictionaryQKZD.Columns[0].Width = 2000;
+                    //this.listViewDictionarySSZD.Items.Add(row["d_name"].ToString());
+                }
+                this.listViewDictionaryQKZD.EndUpdate();
+            }
         }
 
         //科室增加
@@ -469,6 +511,155 @@ namespace xzj
             if (e.KeyChar != 8 && !Char.IsDigit(e.KeyChar))//如果不是输入数字就不让输入
             {
                 e.Handled = true;
+            }
+        }
+        
+        //鼠标离开 隐藏手术字典列表
+        private void listViewDictionarySSZD_MouseLeave(object sender, EventArgs e)
+        {
+            this.listViewDictionarySSZD.Visible = false;
+        }
+
+        //鼠标离开 隐藏情况字典列表
+        private void listViewDictionaryQKZD_MouseLeave(object sender, EventArgs e)
+        {
+            this.listViewDictionaryQKZD.Visible = false;
+        }
+
+        //选中手术字典列表
+        private void listViewDictionarySSZD_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (int i in this.listViewDictionarySSZD.SelectedIndices)
+            {
+                this.listViewDictionarySSZD.Items[i].Selected = true;
+                //MessageBox.Show(this.listViewEmp.SelectedItems[0].Text);
+            }
+        }
+
+        //选中情况字典列表
+        private void listViewDictionaryQKZD_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (int i in this.listViewDictionaryQKZD.SelectedIndices)
+            {
+                this.listViewDictionaryQKZD.Items[i].Selected = true;
+                this.listViewDictionaryQKZD.Visible = false;
+
+
+                dictionary_parent_id = 0; //this.listViewDictionaryQKZD.SelectedItems[0].Text;
+                dictionary_id = 1;
+                this.labelDictionaryShow.Text = "医保类型字典";
+
+                //设置listview表头颜色
+                this.listViewDictionary.Items.Clear();
+                this.listViewDictionary.FullRowSelect = true;
+
+                //设置标题
+                //标题一
+                ColumnHeader ch = new ColumnHeader();
+                ch.Text = "排列顺序1";   //设置列标题
+                ch.Width = 120;    //设置列宽度
+                ch.TextAlign = HorizontalAlignment.Left;   //设置列的对齐方式
+                this.listViewDictionary.Columns.Add(ch);
+                //标题二
+                ch = new ColumnHeader();
+                ch.Text = this.labelDictionaryShow.Text;   //设置列标题
+                ch.Width = 120;    //设置列宽度
+                ch.TextAlign = HorizontalAlignment.Left;   //设置列的对齐方式
+                this.listViewDictionary.Columns.Add(ch);    //将列头添加到ListView控件。
+                //标题三
+                ch = new ColumnHeader();
+                ch.Text = "描述";   //设置列标题
+                ch.Width = 120;    //设置列宽度
+                ch.TextAlign = HorizontalAlignment.Left;   //设置列的对齐方式
+                this.listViewDictionary.Columns.Add(ch);    //将列头添加到ListView控件。
+
+                this.listViewDictionary.BackColor = ColorTranslator.FromHtml("#41aaeb");
+                ImageList imgList = new ImageList();
+                imgList.ImageSize = new Size(1, 25);
+                this.listViewDictionary.SmallImageList = imgList;
+
+                DataTable dt = DBDictionary.getInstance().getDictionarysByParentId(1);
+                foreach (DataRow row in dt.Rows)
+                {
+                    ListViewItem item = new ListViewItem();
+                    item.SubItems.Clear();
+                    item.Text = row["d_order"].ToString();
+                    //item.ForeColor = Color.White;
+                    item.SubItems.Add(row["d_name"].ToString());
+                    item.SubItems.Add(row["d_desc"].ToString());
+                    //记住view改成detail
+                    this.listViewDictionary.Items.Add(item);
+                    this.listViewDictionary.Columns[0].Width = 2000;
+                    //this.listViewDictionarySSZD.Items.Add(row["d_name"].ToString());
+                }
+                this.listViewDictionary.EndUpdate();
+            }
+        }
+
+        //设置显示字典
+        private void setListViewDictionary(string dName, int parentId, int id)
+        {
+            dictionary_parent_id = parentId;
+            dictionary_id = id;
+            this.labelDictionaryShow.Text = dName;//显示选中的字典名称
+
+            this.listViewDictionary.Items.Clear();
+            this.listViewDictionary.FullRowSelect = true;//选中指定
+
+            //设置标题
+            //标题一
+            ColumnHeader ch = new ColumnHeader();
+            ch.Text = "排列顺序";   //设置列标题
+            ch.Width = 120;    //设置列宽度
+            ch.TextAlign = HorizontalAlignment.Left;   //设置列的对齐方式
+            this.listViewDictionary.Columns.Add(ch);
+            //标题二
+            ch = new ColumnHeader();
+            ch.Text = dName;   //设置列标题
+            ch.Width = 120;    //设置列宽度
+            ch.TextAlign = HorizontalAlignment.Left;   //设置列的对齐方式
+            this.listViewDictionary.Columns.Add(ch);    //将列头添加到ListView控件。
+            //标题三
+            ch = new ColumnHeader();
+            ch.Text = "描述";   //设置列标题
+            ch.Width = 120;    //设置列宽度
+            ch.TextAlign = HorizontalAlignment.Left;   //设置列的对齐方式
+            this.listViewDictionary.Columns.Add(ch);    //将列头添加到ListView控件。
+
+            this.listViewDictionary.BackColor = ColorTranslator.FromHtml("#41aaeb");
+            ImageList imgList = new ImageList();
+            imgList.ImageSize = new Size(1, 25);
+            this.listViewDictionary.SmallImageList = imgList;
+
+            DataTable dt = DBDictionary.getInstance().getDictionarysByParentId(1);
+            foreach (DataRow row in dt.Rows)
+            {
+                ListViewItem item = new ListViewItem();
+                item.SubItems.Clear();
+                item.Text = row["d_order"].ToString();
+                //item.ForeColor = Color.White;
+                item.SubItems.Add(row["d_name"].ToString());
+                item.SubItems.Add(row["d_desc"].ToString());
+                //记住view改成detail
+                this.listViewDictionary.Items.Add(item);
+                this.listViewDictionary.Columns[0].Width = 2000;
+                //this.listViewDictionarySSZD.Items.Add(row["d_name"].ToString());
+            }
+            this.listViewDictionary.EndUpdate();
+        }
+        
+        //前往添加字典界面
+        private void btnGoAddDictionaryy_Click(object sender, EventArgs e)
+        {
+            //FormAddDictionary.dictionary_id = dictionary_id;
+            //FormAddDictionary.title = "添加字典";
+            //FormAddDictionary.dictionary_parent_id = dictionary_parent_id;
+            FormAddDictionary formAddDictionary = new FormAddDictionary();
+            formAddDictionary.setDesc(dictionary_id,-1, "添加字典");
+            formAddDictionary.ShowDialog();
+            if (formAddDictionary.DialogResult == DialogResult.OK)
+            {
+                this.setListViewDictionary(this.labelDictionaryShow.Text,dictionary_parent_id, dictionary_id);//重新绑定
             }
         }
 

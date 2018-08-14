@@ -33,16 +33,16 @@ namespace xzj
 
         /**
     d_order string,##排列序号
-	d_parent_name string,##父名称
+	d_parent_id string,##父名称
 	d_name varchar(50),##字典名称
 	d_desc varchar(500),#描述
    * */
         // 添加字典
-        public int addDictionary(string d_order, string d_parent_name, string d_name, string d_desc)
+        public int addDictionary(string d_order, int d_parent_id, string d_name, string d_desc)
         {
             int flag = 0;
-            string sql = string.Format("insert into t_dictionary(d_order,d_parent_name,d_name,d_desc)"
-                + "values('{0}','{1}','{2}','{3}')", d_order, d_parent_name, d_name, d_desc);
+            string sql = string.Format("insert into t_dictionary(d_order,d_parent_id,d_name,d_desc)"
+                + "values('{0}','{1}','{2}','{3}')", d_order, d_parent_id, d_name, d_desc);
 
             try
             {
@@ -60,11 +60,11 @@ namespace xzj
         }
 
         // 编辑字典
-        public int editDictionary(string d_order, string d_parent_name, string d_name, string d_desc)
+        public int editDictionary(int id,string d_order, int d_parent_id, string d_name, string d_desc)
         {
             int flag = 0;//"update t_emp set e_name='{1}',e_sex='{2}',e_birth='{3}',e_tel='{4}',e_email='{5}',e_address='{6}',e_pwd='{7}' where  e_account='{0}'"
-            string sql = string.Format("update t_dictionary set d_order='{0}',d_name='{1}',d_desc='{2}' where  d_parent_name='{3}' and　d_name＝'{4}'"
-               , d_order, d_name, d_desc, d_parent_name, d_name);
+            string sql = string.Format("update t_dictionary set d_order='{0}',d_name='{1}',d_desc='{2}' where  id={3}"
+               , d_order, d_name, d_desc, id);
 
             try
             {
@@ -82,10 +82,10 @@ namespace xzj
         }
 
         // 删除
-        public int deleteDictionary(string d_parent_name, string d_name)
+        public int deleteDictionary(int id)
         {
             int flag = 0;
-            string sql = string.Format("delete from t_dictionary where d_parent_name = '{0}' and d_name = '{1}'", d_parent_name, d_name);
+            string sql = string.Format("delete from t_dictionary where id = {0}", id);
 
             try
             {
@@ -103,9 +103,9 @@ namespace xzj
         }
 
         //查询数据
-        public DataTable getDictionarys(string d_parent_name, string d_name)
+        public DataTable getDictionarysById(int id)
         {
-            string sql = string.Format("select d_order,d_parent_name,d_name,d_desc from t_dictionary where d_parent_name='{0}' and d_name='{1}'", d_parent_name, d_name);
+            string sql = string.Format("select d_order,d_parent_id,d_name,d_desc from t_dictionary where id='{0}'", id);
           
 
             try
@@ -121,11 +121,48 @@ namespace xzj
             }
 
             return null;
-            //string conStr = "Server=localhost;user=root;pwd=admin;database=test";
-            //using (MySqlConnection myCon = new MySqlConnection(conStr))
-            //{
+        }
 
-            //}
+        //查询数据通过id
+        public DataTable getDictionarysByParentId(int parentId)
+        {
+            string sql = string.Format("select id,d_order,d_parent_id,d_name,d_desc from t_dictionary where d_parent_id={0}", parentId);
+
+
+            try
+            {
+                MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                return table;
+            }
+            catch (Exception err)
+            {
+                Console.Write(err);
+            }
+
+            return null;
+        }
+
+        //查询数据通过id和名称
+        public DataTable getDictionarysByParentIdAndName(int parentId,string d_name)
+        {
+            string sql = string.Format("select id,d_order,d_parent_id,d_name,d_desc from t_dictionary where d_parent_id={0} and d_name='{1}'", parentId, d_name);
+
+
+            try
+            {
+                MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                return table;
+            }
+            catch (Exception err)
+            {
+                Console.Write(err);
+            }
+
+            return null;
         }
     }
 }

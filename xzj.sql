@@ -47,28 +47,28 @@ create table t_dictionary
 (
 	id int not null auto_increment,##id为0表示第一级
 	d_order varchar(4),##排列序号
-	d_parent_name  varchar(50),##父id
+	d_parent_id  int,##父id
 	d_name varchar(50),##字典名称
 	d_desc varchar(500),#描述
 	primary key (id)
 );
 
 ### 
-insert into t_dictionary(d_parent_name,d_name) values('top','医保类型字典');
-insert into t_dictionary(d_parent_name,d_name) values('top','手术字典');
-insert into t_dictionary(d_parent_name,d_name) values('top','情况字典');
+insert into t_dictionary(d_order,d_parent_id,d_name) values(0,0,'医保类型字典');
+insert into t_dictionary(d_order,d_parent_id,d_name) values(1,0,'手术字典');
+insert into t_dictionary(d_order,d_parent_id,d_name) values(2,0,'情况字典');
 
 #手术字典
-insert into t_dictionary(d_parent_name,d_order,d_name) values('手术字典',0,'手术类型字典');
-insert into t_dictionary(d_parent_name,d_order,d_name) values('手术字典',1,'手术地点字典');
-insert into t_dictionary(d_parent_name,d_order,d_name) values('手术字典',2,'手术方式字典');
-insert into t_dictionary(d_parent_name,d_order,d_name) values('手术字典',3,'穿刺方式字典');
-insert into t_dictionary(d_parent_name,d_order,d_name) values('手术字典',4,'手术追踪期限字典');
+insert into t_dictionary(d_parent_id,d_order,d_name) values(2,0,'手术类型字典');
+insert into t_dictionary(d_parent_id,d_order,d_name) values(2,1,'手术地点字典');
+insert into t_dictionary(d_parent_id,d_order,d_name) values(2,2,'手术方式字典');
+insert into t_dictionary(d_parent_id,d_order,d_name) values(2,3,'穿刺方式字典');
+insert into t_dictionary(d_parent_id,d_order,d_name) values(2,4,'手术追踪期限字典');
 
 #情况字典  
-insert into t_dictionary(d_parent_name,d_order,d_name) values('情况字典',0,'内瘘自我锻炼情况字典');
-insert into t_dictionary(d_parent_name,d_order,d_name) values('情况字典',1,'穿刺部位皮肤情况字典');
-insert into t_dictionary(d_parent_name,d_order,d_name) values('情况字典',2,'自我触摸震颤及听诊情况');
+insert into t_dictionary(d_parent_id,d_order,d_name) values(3,0,'内瘘自我锻炼情况字典');
+insert into t_dictionary(d_parent_id,d_order,d_name) values(3,1,'穿刺部位皮肤情况字典');
+insert into t_dictionary(d_parent_id,d_order,d_name) values(3,2,'自我触摸震颤及听诊情况');
 
 
 ### 患者信息表

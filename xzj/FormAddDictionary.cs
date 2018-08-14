@@ -12,9 +12,123 @@ namespace xzj
 {
     public partial class FormAddDictionary : Form
     {
+        public int dictionary_id;//1代表医保类型 2代表手术字典 3代表情况字典
+        public int dictionary_parent_id;
+        public string title;
+
+        public void setDesc(int id,int pid,string title)
+        {
+            this.dictionary_id = id;
+            this.dictionary_parent_id = pid;
+            this.title = title;
+        }
+
         public FormAddDictionary()
         {
             InitializeComponent();
+        }
+
+        private void FormAddDictionary_Load(object sender, EventArgs e)
+        {
+            this.Text = this.title;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            string rank = this.tbRank.Text;
+            string name = this.tbName.Text;
+            string desc = this.tbDesc.Text;
+
+            if (string.IsNullOrEmpty(rank))
+            {
+                MessageBox.Show("序号不能为空");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(name))
+            {
+                MessageBox.Show("名称不能为空");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(desc))
+            {
+                MessageBox.Show("描述不能为空");
+                return;
+            }
+
+            //编辑
+            if (this.dictionary_parent_id > 0)
+            {
+                DialogResult dr = MessageBox.Show("确定要编辑?", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.Yes)
+                {
+                    //int flag = DBEmp.getInstance().editEmp(account, name, sex, birth, tel, email, address, pwd);
+                    //if (flag > 0)
+                    //{
+                    //    this.DialogResult = DialogResult.OK;
+                    //    this.Close();
+                    //}
+                    //else
+                    //{
+                    //    MessageBox.Show("编辑失败");
+                    //}
+                }
+                else
+                {
+                    this.Close();//关闭容器
+                }
+
+            }
+            //添加
+            else
+            {
+                DataTable dt = DBDictionary.getInstance().getDictionarysByParentIdAndName(this.dictionary_id, name);
+                if (dt != null )
+                {
+                    int flag = DBDictionary.getInstance().addDictionary(rank, this.dictionary_id,name, desc);
+                    if (flag > 0)
+                    {
+                        DialogResult dr = MessageBox.Show("添加成功,是否继续添加?", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (dr == DialogResult.Yes)
+                        {
+                            //清理
+                            this.tbRank.Text = "";
+                            this.tbName.Text = "";
+                            //this.cbSex.Text;
+                            this.tbDesc.Text = "";
+                           
+                        }
+                        else
+                        {
+                            this.DialogResult = DialogResult.OK;
+                            this.Close();//关闭容器
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("添加失败");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("该帐号已添加");
+                }
+            }
+        }
+
+        private void tbRank_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar != 8 && !Char.IsDigit(e.KeyChar))//如果不是输入数字就不让输入
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Close();//关闭容器
         }
     }
 }
