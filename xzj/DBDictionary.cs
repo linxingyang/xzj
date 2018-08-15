@@ -102,12 +102,12 @@ namespace xzj
             return flag;
         }
 
-        //查询数据
+        //查询数据       getDictionarysById
         public DataTable getDictionarysById(int id)
         {
-            string sql = string.Format("select d_order,d_parent_id,d_name,d_desc from t_dictionary where id='{0}'", id);
-          
+            string sql = string.Format("select id,d_order,d_parent_id,d_name,d_desc from t_dictionary where id={0}", id);
 
+            Console.Write("getDictionarysById--->" + sql);
             try
             {
                 MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
@@ -123,10 +123,10 @@ namespace xzj
             return null;
         }
 
-        //查询数据通过id
+        //查询数据通过父id
         public DataTable getDictionarysByParentId(int parentId)
         {
-            string sql = string.Format("select id,d_order,d_parent_id,d_name,d_desc from t_dictionary where d_parent_id={0}", parentId);
+            string sql = string.Format("select id,d_order,d_parent_id,d_name,d_desc from t_dictionary where d_parent_id={0} order by d_order,d_name", parentId);
 
 
             try
@@ -144,7 +144,7 @@ namespace xzj
             return null;
         }
 
-        //查询数据通过id和名称
+        //查询数据通过父id和名称
         public DataTable getDictionarysByParentIdAndName(int parentId,string d_name)
         {
             string sql = string.Format("select id,d_order,d_parent_id,d_name,d_desc from t_dictionary where d_parent_id={0} and d_name='{1}'", parentId, d_name);
@@ -164,5 +164,6 @@ namespace xzj
 
             return null;
         }
+
     }
 }

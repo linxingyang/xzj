@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup29 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup30 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup31 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup32 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup7 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup8 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelAccountShow = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnKSGL = new System.Windows.Forms.Button();
             this.btnCJFX = new System.Windows.Forms.Button();
@@ -47,7 +48,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label26 = new System.Windows.Forms.Label();
+            this.labelNowDate = new System.Windows.Forms.Label();
             this.panelSSLR = new System.Windows.Forms.Panel();
             this.panel77 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -155,7 +156,7 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel58 = new System.Windows.Forms.Panel();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.tbSSLR_tel = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
             this.panel59 = new System.Windows.Forms.Panel();
             this.textBox12 = new System.Windows.Forms.TextBox();
@@ -178,7 +179,7 @@
             this.textBox24 = new System.Windows.Forms.TextBox();
             this.label99 = new System.Windows.Forms.Label();
             this.panel64 = new System.Windows.Forms.Panel();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbSSLR_YBLX = new System.Windows.Forms.ComboBox();
             this.label100 = new System.Windows.Forms.Label();
             this.panel65 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
@@ -294,6 +295,8 @@
             this.btnRoomEmpManager = new System.Windows.Forms.Button();
             this.btnRoomInfoManager = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.flowLayoutForm.SuspendLayout();
@@ -334,6 +337,7 @@
             this.panel10.SuspendLayout();
             this.panel68.SuspendLayout();
             this.panel69.SuspendLayout();
+            this.panel70.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel9.SuspendLayout();
             this.panel71.SuspendLayout();
@@ -401,6 +405,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.labelAccountShow);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.flowLayoutForm);
             this.panel1.Controls.Add(this.button1);
@@ -411,6 +416,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1280, 134);
             this.panel1.TabIndex = 7;
+            // 
+            // labelAccountShow
+            // 
+            this.labelAccountShow.AutoSize = true;
+            this.labelAccountShow.BackColor = System.Drawing.Color.Transparent;
+            this.labelAccountShow.Location = new System.Drawing.Point(1200, 70);
+            this.labelAccountShow.Name = "labelAccountShow";
+            this.labelAccountShow.Size = new System.Drawing.Size(0, 16);
+            this.labelAccountShow.TabIndex = 16;
             // 
             // panel2
             // 
@@ -586,24 +600,24 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel3.Controls.Add(this.label26);
+            this.panel3.Controls.Add(this.labelNowDate);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(10, 694);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1280, 29);
             this.panel3.TabIndex = 12;
             // 
-            // label26
+            // labelNowDate
             // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.Yellow;
-            this.label26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label26.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label26.Location = new System.Drawing.Point(324, 6);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(285, 16);
-            this.label26.TabIndex = 3;
-            this.label26.Text = "时间：当前是XXXX年XX月XX日(周几)";
+            this.labelNowDate.AutoSize = true;
+            this.labelNowDate.BackColor = System.Drawing.Color.Yellow;
+            this.labelNowDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelNowDate.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelNowDate.Location = new System.Drawing.Point(553, 3);
+            this.labelNowDate.Name = "labelNowDate";
+            this.labelNowDate.Size = new System.Drawing.Size(285, 16);
+            this.labelNowDate.TabIndex = 3;
+            this.labelNowDate.Text = "时间：当前是XXXX年XX月XX日(周几)";
             // 
             // panelSSLR
             // 
@@ -694,7 +708,7 @@
             // 
             this.panel80.Controls.Add(this.textBox30);
             this.panel80.Controls.Add(this.label112);
-            this.panel80.Location = new System.Drawing.Point(987, 262);
+            this.panel80.Location = new System.Drawing.Point(933, 259);
             this.panel80.Name = "panel80";
             this.panel80.Size = new System.Drawing.Size(267, 34);
             this.panel80.TabIndex = 31;
@@ -1368,6 +1382,8 @@
             // panel70
             // 
             this.panel70.BackColor = System.Drawing.Color.White;
+            this.panel70.Controls.Add(this.comboBox1);
+            this.panel70.Controls.Add(this.label21);
             this.panel70.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel70.Location = new System.Drawing.Point(20, 10);
             this.panel70.Name = "panel70";
@@ -1679,20 +1695,20 @@
             // 
             // panel58
             // 
-            this.panel58.Controls.Add(this.textBox11);
+            this.panel58.Controls.Add(this.tbSSLR_tel);
             this.panel58.Controls.Add(this.label33);
             this.panel58.Location = new System.Drawing.Point(868, 6);
             this.panel58.Name = "panel58";
             this.panel58.Size = new System.Drawing.Size(257, 34);
             this.panel58.TabIndex = 52;
             // 
-            // textBox11
+            // tbSSLR_tel
             // 
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox11.Location = new System.Drawing.Point(83, 0);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(174, 26);
-            this.textBox11.TabIndex = 6;
+            this.tbSSLR_tel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbSSLR_tel.Location = new System.Drawing.Point(83, 0);
+            this.tbSSLR_tel.Name = "tbSSLR_tel";
+            this.tbSSLR_tel.Size = new System.Drawing.Size(174, 26);
+            this.tbSSLR_tel.TabIndex = 6;
             // 
             // label33
             // 
@@ -1715,6 +1731,7 @@
             // textBox12
             // 
             this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox12.Enabled = false;
             this.textBox12.Location = new System.Drawing.Point(83, 0);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(174, 26);
@@ -1883,24 +1900,24 @@
             // 
             // panel64
             // 
-            this.panel64.Controls.Add(this.comboBox3);
+            this.panel64.Controls.Add(this.cbSSLR_YBLX);
             this.panel64.Controls.Add(this.label100);
             this.panel64.Location = new System.Drawing.Point(306, 39);
             this.panel64.Name = "panel64";
             this.panel64.Size = new System.Drawing.Size(234, 34);
             this.panel64.TabIndex = 47;
             // 
-            // comboBox3
+            // cbSSLR_YBLX
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.cbSSLR_YBLX.FormattingEnabled = true;
+            this.cbSSLR_YBLX.Items.AddRange(new object[] {
             "男",
             "女"});
-            this.comboBox3.Location = new System.Drawing.Point(86, 0);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(148, 24);
-            this.comboBox3.TabIndex = 2;
-            this.comboBox3.Text = "男";
+            this.cbSSLR_YBLX.Location = new System.Drawing.Point(86, 0);
+            this.cbSSLR_YBLX.Name = "cbSSLR_YBLX";
+            this.cbSSLR_YBLX.Size = new System.Drawing.Size(148, 24);
+            this.cbSSLR_YBLX.TabIndex = 2;
+            this.cbSSLR_YBLX.Text = "男";
             // 
             // label100
             // 
@@ -2104,6 +2121,7 @@
             this.btnDeleteDictionary.TabIndex = 6;
             this.btnDeleteDictionary.Text = "删除";
             this.btnDeleteDictionary.UseVisualStyleBackColor = false;
+            this.btnDeleteDictionary.Click += new System.EventHandler(this.btnDeleteDictionary_Click);
             // 
             // btnGoEditDictionary
             // 
@@ -2118,6 +2136,7 @@
             this.btnGoEditDictionary.TabIndex = 7;
             this.btnGoEditDictionary.Text = "修改";
             this.btnGoEditDictionary.UseVisualStyleBackColor = false;
+            this.btnGoEditDictionary.Click += new System.EventHandler(this.btnGoEditDictionary_Click);
             // 
             // btnGoAddDictionaryy
             // 
@@ -2153,7 +2172,7 @@
             this.listViewDictionary.TabIndex = 47;
             this.listViewDictionary.UseCompatibleStateImageBehavior = false;
             this.listViewDictionary.View = System.Windows.Forms.View.Details;
-            this.listViewDictionary.Visible = false;
+            this.listViewDictionary.SelectedIndexChanged += new System.EventHandler(this.listViewDictionary_SelectedIndexChanged);
             // 
             // panel41
             // 
@@ -2460,7 +2479,6 @@
             this.tbRoomFZRSJ.Size = new System.Drawing.Size(128, 26);
             this.tbRoomFZRSJ.TabIndex = 6;
             this.tbRoomFZRSJ.Text = "18659683245";
-            this.tbRoomFZRSJ.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
             // 
             // label16
             // 
@@ -3011,19 +3029,19 @@
             this.birth,
             this.tel});
             this.listViewEmp.Dock = System.Windows.Forms.DockStyle.Fill;
-            listViewGroup29.Header = "ListViewGroup";
-            listViewGroup29.Name = "listViewGroup1";
-            listViewGroup30.Header = "ListViewGroup";
-            listViewGroup30.Name = "listViewGroup2";
-            listViewGroup31.Header = "ListViewGroup";
-            listViewGroup31.Name = "listViewGroup3";
-            listViewGroup32.Header = "ListViewGroup";
-            listViewGroup32.Name = "listViewGroup4";
+            listViewGroup5.Header = "ListViewGroup";
+            listViewGroup5.Name = "listViewGroup1";
+            listViewGroup6.Header = "ListViewGroup";
+            listViewGroup6.Name = "listViewGroup2";
+            listViewGroup7.Header = "ListViewGroup";
+            listViewGroup7.Name = "listViewGroup3";
+            listViewGroup8.Header = "ListViewGroup";
+            listViewGroup8.Name = "listViewGroup4";
             this.listViewEmp.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup29,
-            listViewGroup30,
-            listViewGroup31,
-            listViewGroup32});
+            listViewGroup5,
+            listViewGroup6,
+            listViewGroup7,
+            listViewGroup8});
             this.listViewEmp.Location = new System.Drawing.Point(0, 0);
             this.listViewEmp.Name = "listViewEmp";
             this.listViewEmp.Size = new System.Drawing.Size(1073, 373);
@@ -3099,17 +3117,34 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel4.Controls.Add(this.panelZDGL);
             this.panel4.Controls.Add(this.panelSSLR);
             this.panel4.Controls.Add(this.panelKSGL);
             this.panel4.Controls.Add(this.panelCJFX);
             this.panel4.Controls.Add(this.panelSJCX);
+            this.panel4.Controls.Add(this.panelZDGL);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(10, 144);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(10);
             this.panel4.Size = new System.Drawing.Size(1280, 550);
             this.panel4.TabIndex = 13;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(30, 7);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(65, 12);
+            this.label21.TabIndex = 0;
+            this.label21.Text = "字体型号：";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(92, 2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 20);
+            this.comboBox1.TabIndex = 1;
             // 
             // FormMain
             // 
@@ -3127,6 +3162,7 @@
             this.Padding = new System.Windows.Forms.Padding(10);
             this.Text = "析之助手术登记系统";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.flowLayoutForm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
@@ -3193,6 +3229,8 @@
             this.panel68.PerformLayout();
             this.panel69.ResumeLayout(false);
             this.panel69.PerformLayout();
+            this.panel70.ResumeLayout(false);
+            this.panel70.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel71.ResumeLayout(false);
@@ -3308,7 +3346,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label labelNowDate;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnKSGL;
         private System.Windows.Forms.Button btnCJFX;
@@ -3422,7 +3460,7 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel58;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox tbSSLR_tel;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Panel panel59;
         private System.Windows.Forms.TextBox textBox12;
@@ -3445,7 +3483,7 @@
         private System.Windows.Forms.TextBox textBox24;
         private System.Windows.Forms.Label label99;
         private System.Windows.Forms.Panel panel64;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbSSLR_YBLX;
         private System.Windows.Forms.Label label100;
         private System.Windows.Forms.Panel panel65;
         private System.Windows.Forms.Panel panel12;
@@ -3561,6 +3599,9 @@
         private System.Windows.Forms.ListView listViewDictionary;
         private System.Windows.Forms.ListView listViewDictionaryQKZD;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.Label labelAccountShow;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label21;
 
     }
 }

@@ -34,7 +34,7 @@
             this.tbDesc = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
             this.tbName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -65,16 +65,16 @@
             this.panel3.Controls.Add(this.tb);
             this.panel3.Controls.Add(this.tbDesc);
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Location = new System.Drawing.Point(53, 102);
+            this.panel3.Location = new System.Drawing.Point(7, 102);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(357, 109);
+            this.panel3.Size = new System.Drawing.Size(403, 109);
             this.panel3.TabIndex = 7;
             // 
             // tb
             // 
             this.tb.AutoSize = true;
-            this.tb.Location = new System.Drawing.Point(15, 13);
+            this.tb.Location = new System.Drawing.Point(4, 4);
             this.tb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.tb.Name = "tb";
             this.tb.Size = new System.Drawing.Size(41, 12);
@@ -83,7 +83,7 @@
             // 
             // tbDesc
             // 
-            this.tbDesc.Location = new System.Drawing.Point(93, 4);
+            this.tbDesc.Location = new System.Drawing.Point(163, 4);
             this.tbDesc.Margin = new System.Windows.Forms.Padding(4);
             this.tbDesc.Multiline = true;
             this.tbDesc.Name = "tbDesc";
@@ -102,28 +102,28 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.labelName);
             this.panel2.Controls.Add(this.tbName);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(53, 61);
+            this.panel2.Location = new System.Drawing.Point(7, 61);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(357, 33);
+            this.panel2.Size = new System.Drawing.Size(403, 33);
             this.panel2.TabIndex = 6;
             // 
-            // label3
+            // labelName
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 13);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 12);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "穿刺方式：";
+            this.labelName.AutoSize = true;
+            this.labelName.Location = new System.Drawing.Point(4, 1);
+            this.labelName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(65, 12);
+            this.labelName.TabIndex = 0;
+            this.labelName.Text = "穿刺方式：";
             // 
             // tbName
             // 
-            this.tbName.Location = new System.Drawing.Point(93, 4);
+            this.tbName.Location = new System.Drawing.Point(163, 0);
             this.tbName.Margin = new System.Windows.Forms.Padding(4);
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(195, 21);
@@ -143,16 +143,16 @@
             // 
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.tbRank);
-            this.panel1.Location = new System.Drawing.Point(53, 21);
+            this.panel1.Location = new System.Drawing.Point(7, 21);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(357, 33);
+            this.panel1.Size = new System.Drawing.Size(403, 33);
             this.panel1.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 13);
+            this.label1.Location = new System.Drawing.Point(4, 3);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 12);
@@ -161,7 +161,7 @@
             // 
             // tbRank
             // 
-            this.tbRank.Location = new System.Drawing.Point(93, 4);
+            this.tbRank.Location = new System.Drawing.Point(163, 0);
             this.tbRank.Margin = new System.Windows.Forms.Padding(4);
             this.tbRank.Name = "tbRank";
             this.tbRank.Size = new System.Drawing.Size(195, 21);
@@ -232,7 +232,7 @@
         private System.Windows.Forms.TextBox tbDesc;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;

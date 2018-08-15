@@ -10,11 +10,23 @@ namespace xzj
 {
     class UtilTools
     {
+        private static string[] weeks = new string[]{"Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"};
+        private static string[] weeks_ch = new string[] { "一", "二", "三", "四", "五", "六", "天" };
+
+        //根据身份证获取年龄5221261995
+        public static int getAgeByID(string ID)
+        {
+            int nowY = DateTime.Now.Year;
+            int birthY = Convert.ToInt32(ID.Substring(5, 4));
+
+            return nowY - birthY;
+        }
+
         //获取当前周几
         public static String getWeek()
         {
-            DayOfWeek dayOfWeek = new DayOfWeek();
-            return dayOfWeek.ToString();
+            //DayOfWeek dayOfWeek = new DayOfWeek();
+            return DateTime.Now.DayOfWeek.ToString();
         }
 
         //获取当前时间
@@ -26,8 +38,31 @@ namespace xzj
         //获取当前日期
         public static String getDate()
         {
-            return DateTime.Now.ToString("yyyy:mm:dd");
+            return DateTime.Now.ToString("yyyy:MM:dd");
         }
+
+        //获取当前日期及周几
+        public static String getDateAndWeek()
+        {
+            string result = "当前时间：";
+            int y = DateTime.Now.Year;
+            int m = DateTime.Now.Month;
+            int d = DateTime.Now.Day;
+            
+
+            result += y + "年"+m+"月"+d+"日";
+
+            for (int i = 0; i < weeks.Length; i++)
+            {
+                if (DateTime.Now.DayOfWeek.ToString().Equals(weeks[i]))
+                {
+                    result += " 周" + weeks_ch[i];
+                }
+            }
+
+            return result;
+        }
+        
 
        //邮箱格式判断
         public static bool isEmail(String email)
