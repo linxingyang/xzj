@@ -38,6 +38,9 @@ namespace xzj
             this.labelAccountShow.BackColor = ColorTranslator.FromHtml("#0078d7");
             this.labelAccountShow.Text = "用户【"+UtilConfig.ACCOUNT+"】";
             this.labelAccountShow.ForeColor = ColorTranslator.FromHtml("#fff");
+
+            //初始化手术录入
+            initSSLR();
         }
 
         //关闭窗口
@@ -82,6 +85,62 @@ namespace xzj
             this.panelSJCX.Visible = false;
             this.panelCJFX.Visible = false;
             this.panelKSGL.Visible = false;
+
+
+            initSSLR();
+        }
+
+        //初始化手术录入
+        private void initSSLR()
+        {
+            //查询医保类型字典
+            DataTable dt = DBDictionary.getInstance().getDictionarysByParentId(1);
+
+            this.cbSSLR_YBLX.Items.Clear();
+            foreach (DataRow row in dt.Rows)
+            {
+                this.cbSSLR_YBLX.Text = row["d_name"].ToString();
+                this.cbSSLR_YBLX.Items.Add(row["d_name"].ToString());
+            }
+
+            //查询手术地点字典
+            dt = DBDictionary.getInstance().getDictionarysByParentId(5);
+            this.cbSSLR_SSDD.Items.Clear();
+            foreach (DataRow row in dt.Rows)
+            {
+                this.cbSSLR_SSDD.Text = row["d_name"].ToString();
+                this.cbSSLR_SSDD.Items.Add(row["d_name"].ToString());
+            }
+
+            //查询手术类型字典
+            dt = DBDictionary.getInstance().getDictionarysByParentId(4);
+            this.cbSSLR_SSLX.Items.Clear();
+            foreach (DataRow row in dt.Rows)
+            {
+                this.cbSSLR_SSLX.Text = row["d_name"].ToString();
+                this.cbSSLR_SSLX.Items.Add(row["d_name"].ToString());
+            }
+
+            //查询手术方式字典
+            dt = DBDictionary.getInstance().getDictionarysByParentId(6);
+            this.cbSSLR_SSFS.Items.Clear();
+            foreach (DataRow row in dt.Rows)
+            {
+                this.cbSSLR_SSFS.Text = row["d_name"].ToString();
+                this.cbSSLR_SSFS.Items.Add(row["d_name"].ToString());
+            }
+
+            //查询穿刺方式字典
+            dt = DBDictionary.getInstance().getDictionarysByParentId(7);
+            this.cbSSLR_CCFS.Items.Clear();
+            foreach (DataRow row in dt.Rows)
+            {
+                this.cbSSLR_CCFS.Text = row["d_name"].ToString();
+                this.cbSSLR_CCFS.Items.Add(row["d_name"].ToString());
+            }
+
+            //手术日期
+            this.tbSSLR_SSRQ.Text = UtilTools.getDayAndTime();
         }
 
         //字典管理
@@ -689,6 +748,109 @@ namespace xzj
             }
         }
 
+        //保存手术记录
+        private void btnSaveSSJL_Click(object sender, EventArgs e)
+        {
+            string name = this.tbSSLR_NAME.Text;//患者姓名
+            string sex = this.cbSSLR_SEX.Text;//性别
+            string age = this.tbSSLR_AGE.Text;//年龄
+            string tel = this.tbSSLR_TEL.Text;//手机号
+            string ID = this.tbSSLR_ID.Text;//身份证号
+            string yblx = this.cbSSLR_YBLX.Text;//医保类型
+            string province = this.tbSSLR_PROVINCE.Text;//省
+            string city = this.tbSSLR_CITY.Text;//市
+            string county = this.tbSSLR_COUNTY.Text;//县
+            string ctxyy = this.tbSSLR_CTXYY.Text;//常透析医院
+            string ctxyylxr = this.tbSSLR_CTXYYLXR.Text;//常透析医院联系人
+            string ctxyylxrdh = this.tbSSLR_CTXYYLXRDH.Text;//常透析医院联系人电话
+            string ssrq = this.tbSSLR_SSRQ.Text;//手术日期
+            string ssdd = this.cbSSLR_SSDD.Text;//手术地点
+            string sslx = this.cbSSLR_SSLX.Text;//手术类型
+            string ssfs = this.cbSSLR_SSFS.Text;//手术方式
+            string ccfs = this.cbSSLR_CCFS.Text;//穿刺方式
+            string ssjl = this.rtbSSLR_SSJL.Text;//手术记录
+            string zdys = this.tbSSLR_ZDYS.Text;//主刀医生
+            string zs = this.tbSSLR_ZS.Text;//助手
+            string qxfs = this.tbSSLR_QXFS.Text;//器械护士
+
+            string address = province + "-" + city + "-" + county;
+
+            //
+
+            if (string.IsNullOrEmpty(name)) { MessageBox.Show("【姓名】不能为空"); return; }
+            if (string.IsNullOrEmpty(sex)) { MessageBox.Show("【性别】不能为空"); return; }
+            if (string.IsNullOrEmpty(tel)) { MessageBox.Show("【电话】不能为空"); return; }
+            if (tel.Length != 11) { MessageBox.Show("【电话】格式错误"); return; }
+            if (string.IsNullOrEmpty(ID)) { MessageBox.Show("【身份证号】不能为空"); return; }
+            if (ID.Length != 18) { MessageBox.Show("【身份证号】格式错误"); return; }
+            if (string.IsNullOrEmpty(yblx)) { MessageBox.Show("【医保类型】不能为空"); return; }
+            if (string.IsNullOrEmpty(province)) { MessageBox.Show("【省】不能为空"); return; }
+            if (string.IsNullOrEmpty(city)) { MessageBox.Show("【市】不能为空"); return; }
+            if (string.IsNullOrEmpty(county)) { MessageBox.Show("【县】不能为空"); return; }
+            if (string.IsNullOrEmpty(ctxyy)) { MessageBox.Show("【常透析医院】不能为空"); return; }
+            if (string.IsNullOrEmpty(ctxyylxr)) { MessageBox.Show("【常透析医院联系人】不能为空"); return; }
+            if (string.IsNullOrEmpty(ctxyylxrdh)) { MessageBox.Show("【常透析医院联系人电话】不能为空"); return; }
+            if (ctxyylxrdh.Length != 11) { MessageBox.Show("【常透析医院联系人电话】格式错误"); return; }
+            if (string.IsNullOrEmpty(ssdd)) { MessageBox.Show("【手术地点】不能为空"); return; }
+            if (string.IsNullOrEmpty(sslx)) { MessageBox.Show("【手术类型】不能为空"); return; }
+            if (string.IsNullOrEmpty(ssfs)) { MessageBox.Show("【手术方式】不能为空"); return; }
+            if (string.IsNullOrEmpty(ccfs)) { MessageBox.Show("【穿刺方式】不能为空"); return; }
+            if (string.IsNullOrEmpty(ssjl)) { MessageBox.Show("【手术记录】不能为空"); return; }
+            if (string.IsNullOrEmpty(zdys)) { MessageBox.Show("【主刀医生】不能为空"); return; }
+            if (string.IsNullOrEmpty(zs)) { MessageBox.Show("【助手】不能为空"); return; }
+            if (string.IsNullOrEmpty(qxfs)) { MessageBox.Show("【器械护士】不能为空"); return; }
+
+            //添加
+            DBRecords.getInstance().addRecord(name, sex, age, tel, ID, yblx, address, ctxyy, ctxyylxr, ctxyylxrdh, ssrq, ssdd, sslx, ssfs, ccfs, zs, qxfs, ssjl, zdys);
+        }
+
+        //监听身份证输入
+        private void tbSSLR_ID_TextChanged(object sender, EventArgs e)
+        {
+            if (this.tbSSLR_ID.Text.Length == 18)
+            {
+                //int flag = 0;
+                for (int i = 0; i < 17; i++)
+                {
+                    
+                    if (!UtilTools.IsNumber(this.tbSSLR_ID.Text.ToString().Substring(i, 1)))
+                    {
+                        MessageBox.Show("身份证输入有误");
+                        return;
+                    }
+                   // flag++;
+                }
+                this.tbSSLR_AGE.Text = UtilTools.getAgeByID(this.tbSSLR_ID.Text)+"";
+            }
+        }
+
+        //取消手术记录
+        private void btnRecordClear_Click(object sender, EventArgs e)
+        {
+            this.tbSSLR_NAME.Text = "";//患者姓名
+            this.cbSSLR_SEX.Text = "";//性别
+            this.tbSSLR_AGE.Text = "";//年龄
+            this.tbSSLR_TEL.Text = "";//手机号
+            this.tbSSLR_ID.Text = "";//身份证号
+            this.cbSSLR_YBLX.Text = "";//医保类型
+            this.tbSSLR_PROVINCE.Text = "";//省
+            this.tbSSLR_CITY.Text = "";//市
+            this.tbSSLR_COUNTY.Text = "";//县
+            this.tbSSLR_CTXYY.Text = "";//常透析医院
+            this.tbSSLR_CTXYYLXR.Text = "";//常透析医院联系人
+            this.tbSSLR_CTXYYLXRDH.Text = "";//常透析医院联系人电话
+            this.tbSSLR_SSRQ.Text = UtilTools.getDayAndTime();;//手术日期
+            this.cbSSLR_SSDD.Text = "";//手术地点
+            this.cbSSLR_SSLX.Text = "";//手术类型
+            this.cbSSLR_SSFS.Text = "";//手术方式
+            this.cbSSLR_CCFS.Text = "";//穿刺方式
+            this.rtbSSLR_SSJL.Text = "";//手术记录
+            this.tbSSLR_ZDYS.Text = "";//主刀医生
+            this.tbSSLR_ZS.Text = "";//助手
+            this.tbSSLR_QXFS.Text = "";//器械护士
+        }
+
+       
 
         
 

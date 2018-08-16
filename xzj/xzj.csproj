@@ -82,6 +82,7 @@
   <ItemGroup>
     <Compile Include="DBDictionary.cs" />
     <Compile Include="DBEmp.cs" />
+    <Compile Include="DBRecords.cs" />
     <Compile Include="DBRoom.cs" />
     <Compile Include="DBSQLite.cs" />
     <Compile Include="FormAddDictionary.cs">

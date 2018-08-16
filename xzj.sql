@@ -24,7 +24,7 @@ create table t_room
 	id int not null auto_increment,
 	r_hospital_name varchar(50),##医院名称
 	r_address varchar(100),##地址
-	r_province varchar(20),##省/直辖市
+	r_province varchar(20),##省/直辖市 
 	r_rank varchar(20),##等级
 	r_postcodes char(6),##邮编
 	r_room_name varchar(50),##科室名称
@@ -91,10 +91,20 @@ create table t_patient
 
 
 ### 手术记录
+drop table t_record;
 create table t_record
 (
 	id int not null auto_increment,
-	r_patient_id int,##患者id
+	t_name varchar(50),##姓名，
+	t_sex varchar(2),##性别（选择男/女，
+	t_age char(3),##年龄（）根据身份证自动生成，
+	t_tel varchar(11),##手机号，（验证）
+	t_ID varchar(50),##身份证号
+	t_health_type varchar(50),##医保类型（下拉框：字典表-医保类型），
+	t_address  varchar(100),##常住地址：省（下拉框），市（下拉框），县区（下拉框），
+	t_dialyse_hospital varchar(50),##常析透医院，
+	t_dialyse_hospital_contact varchar(50),##常析透医院联系人，
+	t_dialyse_hospital_tel varchar(50),##常析透医院联系人电话（验证
 	r_date varchar(20),##手术日期（自动生成当天时间，精确到分钟）--是否能修改时间？
 	r_ss_address varchar(100),##手术地点（科室信息里面的医院名称）--科室信息里面的医院名称都是一样的？
 	r_ss_type varchar(50),##手术类型（下拉框：字典表-手术类型）
@@ -105,7 +115,7 @@ create table t_record
 	r_qxhs varchar(50),##器械护士
 	r_ss_record varchar(2000),##手术记录（文本框，能够调整文本格式和字体）--格式和字体？格式是？字体是（宋体，黑体？）？
 	primary key (id)
-)
+);
 
 
 

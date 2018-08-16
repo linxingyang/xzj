@@ -13,11 +13,11 @@ namespace xzj
         private static string[] weeks = new string[]{"Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"};
         private static string[] weeks_ch = new string[] { "一", "二", "三", "四", "五", "六", "天" };
 
-        //根据身份证获取年龄5221261995
+        //根据身份证获取年龄
         public static int getAgeByID(string ID)
         {
             int nowY = DateTime.Now.Year;
-            int birthY = Convert.ToInt32(ID.Substring(5, 4));
+            int birthY = Convert.ToInt32(ID.Substring(6, 4));
 
             return nowY - birthY;
         }
@@ -32,7 +32,7 @@ namespace xzj
         //获取当前时间
         public static String getTime()
         {
-            return DateTime.Now.ToString("hh:mm:ss");
+            return DateTime.Now.ToString("hh:mm");
         }
 
         //获取当前日期
@@ -40,6 +40,25 @@ namespace xzj
         {
             return DateTime.Now.ToString("yyyy:MM:dd");
         }
+
+        /// <summary>
+        /// 判断字符串是否是数字
+        /// </summary>
+        public static bool IsNumber(string s)
+        {
+            if (string.IsNullOrWhiteSpace(s)) return false;
+            const string pattern = "^[0-9]*$";
+            Regex rx = new Regex(pattern);
+            return rx.IsMatch(s);
+        }
+
+        //获取当前时间
+        public static String getDayAndTime()
+        {
+            return DateTime.Now.ToString("yyyy:MM:dd hh:mm:ss");
+        }
+
+
 
         //获取当前日期及周几
         public static String getDateAndWeek()

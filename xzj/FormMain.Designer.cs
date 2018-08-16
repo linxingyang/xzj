@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup7 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup8 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup13 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup14 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup15 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup16 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelAccountShow = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -125,28 +125,37 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel68 = new System.Windows.Forms.Panel();
             this.panel69 = new System.Windows.Forms.Panel();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.panel70 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.panel44 = new System.Windows.Forms.Panel();
+            this.tbSSLR_QXFS = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.tbSSLR_ZS = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.tbSSLR_ZDYS = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.panel43 = new System.Windows.Forms.Panel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.rtbSSLR_SSJL = new System.Windows.Forms.RichTextBox();
+            this.btnRecordClear = new System.Windows.Forms.Button();
+            this.btnSaveSSJL = new System.Windows.Forms.Button();
             this.label104 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel71 = new System.Windows.Forms.Panel();
             this.panel72 = new System.Windows.Forms.Panel();
-            this.textBox28 = new System.Windows.Forms.TextBox();
+            this.tbSSLR_SSRQ = new System.Windows.Forms.TextBox();
             this.label105 = new System.Windows.Forms.Label();
             this.panel73 = new System.Windows.Forms.Panel();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.cbSSLR_CCFS = new System.Windows.Forms.ComboBox();
             this.label106 = new System.Windows.Forms.Label();
             this.panel74 = new System.Windows.Forms.Panel();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.cbSSLR_SSFS = new System.Windows.Forms.ComboBox();
             this.label107 = new System.Windows.Forms.Label();
             this.panel75 = new System.Windows.Forms.Panel();
-            this.comboBox28 = new System.Windows.Forms.ComboBox();
+            this.cbSSLR_SSLX = new System.Windows.Forms.ComboBox();
             this.label108 = new System.Windows.Forms.Label();
             this.panel76 = new System.Windows.Forms.Panel();
-            this.textBox29 = new System.Windows.Forms.TextBox();
+            this.cbSSLR_SSDD = new System.Windows.Forms.ComboBox();
             this.label109 = new System.Windows.Forms.Label();
             this.label110 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -156,40 +165,40 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel58 = new System.Windows.Forms.Panel();
-            this.tbSSLR_tel = new System.Windows.Forms.TextBox();
+            this.tbSSLR_TEL = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
             this.panel59 = new System.Windows.Forms.Panel();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.tbSSLR_AGE = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
             this.panel60 = new System.Windows.Forms.Panel();
-            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.tbSSLR_CTXYYLXRDH = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
             this.panel61 = new System.Windows.Forms.Panel();
-            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.tbSSLR_CTXYYLXR = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.panel62 = new System.Windows.Forms.Panel();
-            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.tbSSLR_CTXYY = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.panel63 = new System.Windows.Forms.Panel();
             this.label38 = new System.Windows.Forms.Label();
-            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.tbSSLR_COUNTY = new System.Windows.Forms.TextBox();
             this.label49 = new System.Windows.Forms.Label();
-            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.tbSSLR_CITY = new System.Windows.Forms.TextBox();
             this.label98 = new System.Windows.Forms.Label();
-            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.tbSSLR_PROVINCE = new System.Windows.Forms.TextBox();
             this.label99 = new System.Windows.Forms.Label();
             this.panel64 = new System.Windows.Forms.Panel();
             this.cbSSLR_YBLX = new System.Windows.Forms.ComboBox();
             this.label100 = new System.Windows.Forms.Label();
             this.panel65 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.textBox25 = new System.Windows.Forms.TextBox();
+            this.tbSSLR_ID = new System.Windows.Forms.TextBox();
             this.label101 = new System.Windows.Forms.Label();
             this.panel66 = new System.Windows.Forms.Panel();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cbSSLR_SEX = new System.Windows.Forms.ComboBox();
             this.label102 = new System.Windows.Forms.Label();
             this.panel67 = new System.Windows.Forms.Panel();
-            this.textBox26 = new System.Windows.Forms.TextBox();
+            this.tbSSLR_NAME = new System.Windows.Forms.TextBox();
             this.label103 = new System.Windows.Forms.Label();
             this.panel78 = new System.Windows.Forms.Panel();
             this.label111 = new System.Windows.Forms.Label();
@@ -295,8 +304,6 @@
             this.btnRoomEmpManager = new System.Windows.Forms.Button();
             this.btnRoomInfoManager = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label21 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.flowLayoutForm.SuspendLayout();
@@ -337,7 +344,8 @@
             this.panel10.SuspendLayout();
             this.panel68.SuspendLayout();
             this.panel69.SuspendLayout();
-            this.panel70.SuspendLayout();
+            this.panel44.SuspendLayout();
+            this.panel43.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel9.SuspendLayout();
             this.panel71.SuspendLayout();
@@ -640,7 +648,7 @@
             this.panel77.Controls.Add(this.panel79);
             this.panel77.Controls.Add(this.panel99);
             this.panel77.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel77.Location = new System.Drawing.Point(10, 562);
+            this.panel77.Location = new System.Drawing.Point(10, 686);
             this.panel77.Name = "panel77";
             this.panel77.Size = new System.Drawing.Size(1223, 423);
             this.panel77.TabIndex = 7;
@@ -1333,16 +1341,16 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(10, 213);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1223, 349);
+            this.panel6.Size = new System.Drawing.Size(1223, 473);
             this.panel6.TabIndex = 6;
             // 
             // panel10
             // 
             this.panel10.Controls.Add(this.panel68);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(0, 116);
+            this.panel10.Location = new System.Drawing.Point(0, 175);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1223, 205);
+            this.panel10.Size = new System.Drawing.Size(1223, 270);
             this.panel10.TabIndex = 38;
             // 
             // panel68
@@ -1350,75 +1358,182 @@
             this.panel68.Controls.Add(this.panel69);
             this.panel68.Controls.Add(this.label104);
             this.panel68.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.panel68.Location = new System.Drawing.Point(23, 8);
+            this.panel68.Location = new System.Drawing.Point(23, 15);
             this.panel68.Name = "panel68";
-            this.panel68.Size = new System.Drawing.Size(1211, 192);
+            this.panel68.Size = new System.Drawing.Size(1180, 230);
             this.panel68.TabIndex = 30;
             // 
             // panel69
             // 
             this.panel69.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel69.Controls.Add(this.textBox27);
-            this.panel69.Controls.Add(this.panel70);
-            this.panel69.Controls.Add(this.button6);
-            this.panel69.Controls.Add(this.button7);
+            this.panel69.Controls.Add(this.panel44);
+            this.panel69.Controls.Add(this.panel43);
+            this.panel69.Controls.Add(this.rtbSSLR_SSJL);
+            this.panel69.Controls.Add(this.btnRecordClear);
+            this.panel69.Controls.Add(this.btnSaveSSJL);
             this.panel69.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel69.Location = new System.Drawing.Point(0, 20);
             this.panel69.Name = "panel69";
             this.panel69.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.panel69.Size = new System.Drawing.Size(1211, 172);
+            this.panel69.Size = new System.Drawing.Size(1180, 210);
             this.panel69.TabIndex = 22;
             // 
-            // textBox27
+            // panel44
             // 
-            this.textBox27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox27.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox27.Location = new System.Drawing.Point(20, 36);
-            this.textBox27.Multiline = true;
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(1169, 98);
-            this.textBox27.TabIndex = 7;
+            this.panel44.BackColor = System.Drawing.Color.White;
+            this.panel44.Controls.Add(this.tbSSLR_QXFS);
+            this.panel44.Controls.Add(this.label22);
+            this.panel44.Controls.Add(this.tbSSLR_ZS);
+            this.panel44.Controls.Add(this.label23);
+            this.panel44.Controls.Add(this.tbSSLR_ZDYS);
+            this.panel44.Controls.Add(this.label24);
+            this.panel44.Location = new System.Drawing.Point(33, 140);
+            this.panel44.Name = "panel44";
+            this.panel44.Size = new System.Drawing.Size(1117, 34);
+            this.panel44.TabIndex = 49;
             // 
-            // panel70
+            // tbSSLR_QXFS
             // 
-            this.panel70.BackColor = System.Drawing.Color.White;
-            this.panel70.Controls.Add(this.comboBox1);
-            this.panel70.Controls.Add(this.label21);
-            this.panel70.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel70.Location = new System.Drawing.Point(20, 10);
-            this.panel70.Name = "panel70";
-            this.panel70.Size = new System.Drawing.Size(1169, 26);
-            this.panel70.TabIndex = 6;
+            this.tbSSLR_QXFS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbSSLR_QXFS.Location = new System.Drawing.Point(475, 1);
+            this.tbSSLR_QXFS.Name = "tbSSLR_QXFS";
+            this.tbSSLR_QXFS.Size = new System.Drawing.Size(102, 21);
+            this.tbSSLR_QXFS.TabIndex = 10;
             // 
-            // button6
+            // label22
             // 
-            this.button6.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("宋体", 12F);
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(638, 140);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(141, 23);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "关闭";
-            this.button6.UseVisualStyleBackColor = false;
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(409, 3);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(65, 12);
+            this.label22.TabIndex = 9;
+            this.label22.Text = "器械护士：";
             // 
-            // button7
+            // tbSSLR_ZS
             // 
-            this.button7.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("宋体", 12F);
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(485, 140);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(151, 23);
-            this.button7.TabIndex = 1;
-            this.button7.Text = "保存";
-            this.button7.UseVisualStyleBackColor = false;
+            this.tbSSLR_ZS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbSSLR_ZS.Location = new System.Drawing.Point(283, 0);
+            this.tbSSLR_ZS.Name = "tbSSLR_ZS";
+            this.tbSSLR_ZS.Size = new System.Drawing.Size(114, 21);
+            this.tbSSLR_ZS.TabIndex = 8;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(233, 5);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(41, 12);
+            this.label23.TabIndex = 7;
+            this.label23.Text = "助手：";
+            // 
+            // tbSSLR_ZDYS
+            // 
+            this.tbSSLR_ZDYS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbSSLR_ZDYS.Location = new System.Drawing.Point(96, 0);
+            this.tbSSLR_ZDYS.Name = "tbSSLR_ZDYS";
+            this.tbSSLR_ZDYS.Size = new System.Drawing.Size(130, 21);
+            this.tbSSLR_ZDYS.TabIndex = 6;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(3, 3);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(65, 12);
+            this.label24.TabIndex = 1;
+            this.label24.Text = "主刀医生：";
+            // 
+            // panel43
+            // 
+            this.panel43.BackColor = System.Drawing.Color.White;
+            this.panel43.Controls.Add(this.comboBox2);
+            this.panel43.Controls.Add(this.comboBox1);
+            this.panel43.Location = new System.Drawing.Point(33, 2);
+            this.panel43.Name = "panel43";
+            this.panel43.Size = new System.Drawing.Size(1117, 28);
+            this.panel43.TabIndex = 7;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22"});
+            this.comboBox2.Location = new System.Drawing.Point(129, 5);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(69, 20);
+            this.comboBox2.TabIndex = 1;
+            this.comboBox2.Text = "15";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(2, 5);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 20);
+            this.comboBox1.TabIndex = 0;
+            // 
+            // rtbSSLR_SSJL
+            // 
+            this.rtbSSLR_SSJL.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtbSSLR_SSJL.Location = new System.Drawing.Point(33, 30);
+            this.rtbSSLR_SSJL.Name = "rtbSSLR_SSJL";
+            this.rtbSSLR_SSJL.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.rtbSSLR_SSJL.Size = new System.Drawing.Size(1117, 110);
+            this.rtbSSLR_SSJL.TabIndex = 6;
+            this.rtbSSLR_SSJL.Text = "";
+            // 
+            // btnRecordClear
+            // 
+            this.btnRecordClear.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnRecordClear.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnRecordClear.FlatAppearance.BorderSize = 0;
+            this.btnRecordClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecordClear.Font = new System.Drawing.Font("宋体", 12F);
+            this.btnRecordClear.ForeColor = System.Drawing.Color.White;
+            this.btnRecordClear.Location = new System.Drawing.Point(631, 176);
+            this.btnRecordClear.Name = "btnRecordClear";
+            this.btnRecordClear.Size = new System.Drawing.Size(141, 23);
+            this.btnRecordClear.TabIndex = 5;
+            this.btnRecordClear.Text = "取消";
+            this.btnRecordClear.UseVisualStyleBackColor = false;
+            this.btnRecordClear.Click += new System.EventHandler(this.btnRecordClear_Click);
+            // 
+            // btnSaveSSJL
+            // 
+            this.btnSaveSSJL.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnSaveSSJL.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSaveSSJL.FlatAppearance.BorderSize = 0;
+            this.btnSaveSSJL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveSSJL.Font = new System.Drawing.Font("宋体", 12F);
+            this.btnSaveSSJL.ForeColor = System.Drawing.Color.White;
+            this.btnSaveSSJL.Location = new System.Drawing.Point(477, 176);
+            this.btnSaveSSJL.Name = "btnSaveSSJL";
+            this.btnSaveSSJL.Size = new System.Drawing.Size(151, 23);
+            this.btnSaveSSJL.TabIndex = 1;
+            this.btnSaveSSJL.Text = "保存";
+            this.btnSaveSSJL.UseVisualStyleBackColor = false;
+            this.btnSaveSSJL.Click += new System.EventHandler(this.btnSaveSSJL_Click);
             // 
             // label104
             // 
@@ -1438,7 +1553,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Gainsboro;
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 94);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 153);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(1223, 22);
             this.pictureBox2.TabIndex = 37;
@@ -1450,7 +1565,7 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(0, 24);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1223, 70);
+            this.panel9.Size = new System.Drawing.Size(1223, 129);
             this.panel9.TabIndex = 36;
             // 
             // panel71
@@ -1464,25 +1579,26 @@
             this.panel71.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.panel71.Location = new System.Drawing.Point(23, 3);
             this.panel71.Name = "panel71";
-            this.panel71.Size = new System.Drawing.Size(1187, 66);
+            this.panel71.Size = new System.Drawing.Size(1187, 118);
             this.panel71.TabIndex = 38;
             // 
             // panel72
             // 
-            this.panel72.Controls.Add(this.textBox28);
+            this.panel72.Controls.Add(this.tbSSLR_SSRQ);
             this.panel72.Controls.Add(this.label105);
             this.panel72.Location = new System.Drawing.Point(12, 26);
             this.panel72.Name = "panel72";
-            this.panel72.Size = new System.Drawing.Size(226, 34);
+            this.panel72.Size = new System.Drawing.Size(283, 34);
             this.panel72.TabIndex = 30;
             // 
-            // textBox28
+            // tbSSLR_SSRQ
             // 
-            this.textBox28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox28.Location = new System.Drawing.Point(96, 0);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(120, 26);
-            this.textBox28.TabIndex = 6;
+            this.tbSSLR_SSRQ.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbSSLR_SSRQ.Enabled = false;
+            this.tbSSLR_SSRQ.Location = new System.Drawing.Point(96, 0);
+            this.tbSSLR_SSRQ.Name = "tbSSLR_SSRQ";
+            this.tbSSLR_SSRQ.Size = new System.Drawing.Size(184, 26);
+            this.tbSSLR_SSRQ.TabIndex = 6;
             // 
             // label105
             // 
@@ -1495,24 +1611,21 @@
             // 
             // panel73
             // 
-            this.panel73.Controls.Add(this.comboBox5);
+            this.panel73.Controls.Add(this.cbSSLR_CCFS);
             this.panel73.Controls.Add(this.label106);
-            this.panel73.Location = new System.Drawing.Point(907, 26);
+            this.panel73.Location = new System.Drawing.Point(688, 71);
             this.panel73.Name = "panel73";
-            this.panel73.Size = new System.Drawing.Size(195, 34);
+            this.panel73.Size = new System.Drawing.Size(344, 34);
             this.panel73.TabIndex = 29;
             // 
-            // comboBox5
+            // cbSSLR_CCFS
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            "男",
-            "女"});
-            this.comboBox5.Location = new System.Drawing.Point(86, 0);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(104, 24);
-            this.comboBox5.TabIndex = 2;
-            this.comboBox5.Text = "男";
+            this.cbSSLR_CCFS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSSLR_CCFS.FormattingEnabled = true;
+            this.cbSSLR_CCFS.Location = new System.Drawing.Point(86, 0);
+            this.cbSSLR_CCFS.Name = "cbSSLR_CCFS";
+            this.cbSSLR_CCFS.Size = new System.Drawing.Size(243, 24);
+            this.cbSSLR_CCFS.TabIndex = 2;
             // 
             // label106
             // 
@@ -1525,24 +1638,21 @@
             // 
             // panel74
             // 
-            this.panel74.Controls.Add(this.comboBox6);
+            this.panel74.Controls.Add(this.cbSSLR_SSFS);
             this.panel74.Controls.Add(this.label107);
-            this.panel74.Location = new System.Drawing.Point(705, 26);
+            this.panel74.Location = new System.Drawing.Point(314, 71);
             this.panel74.Name = "panel74";
-            this.panel74.Size = new System.Drawing.Size(195, 34);
+            this.panel74.Size = new System.Drawing.Size(334, 34);
             this.panel74.TabIndex = 28;
             // 
-            // comboBox6
+            // cbSSLR_SSFS
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
-            "男",
-            "女"});
-            this.comboBox6.Location = new System.Drawing.Point(86, 0);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(104, 24);
-            this.comboBox6.TabIndex = 2;
-            this.comboBox6.Text = "男";
+            this.cbSSLR_SSFS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSSLR_SSFS.FormattingEnabled = true;
+            this.cbSSLR_SSFS.Location = new System.Drawing.Point(86, 0);
+            this.cbSSLR_SSFS.Name = "cbSSLR_SSFS";
+            this.cbSSLR_SSFS.Size = new System.Drawing.Size(233, 24);
+            this.cbSSLR_SSFS.TabIndex = 2;
             // 
             // label107
             // 
@@ -1555,24 +1665,21 @@
             // 
             // panel75
             // 
-            this.panel75.Controls.Add(this.comboBox28);
+            this.panel75.Controls.Add(this.cbSSLR_SSLX);
             this.panel75.Controls.Add(this.label108);
-            this.panel75.Location = new System.Drawing.Point(494, 26);
+            this.panel75.Location = new System.Drawing.Point(14, 71);
             this.panel75.Name = "panel75";
-            this.panel75.Size = new System.Drawing.Size(195, 34);
+            this.panel75.Size = new System.Drawing.Size(281, 34);
             this.panel75.TabIndex = 27;
             // 
-            // comboBox28
+            // cbSSLR_SSLX
             // 
-            this.comboBox28.FormattingEnabled = true;
-            this.comboBox28.Items.AddRange(new object[] {
-            "男",
-            "女"});
-            this.comboBox28.Location = new System.Drawing.Point(86, 0);
-            this.comboBox28.Name = "comboBox28";
-            this.comboBox28.Size = new System.Drawing.Size(104, 24);
-            this.comboBox28.TabIndex = 2;
-            this.comboBox28.Text = "男";
+            this.cbSSLR_SSLX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSSLR_SSLX.FormattingEnabled = true;
+            this.cbSSLR_SSLX.Location = new System.Drawing.Point(94, 0);
+            this.cbSSLR_SSLX.Name = "cbSSLR_SSLX";
+            this.cbSSLR_SSLX.Size = new System.Drawing.Size(184, 24);
+            this.cbSSLR_SSLX.TabIndex = 2;
             // 
             // label108
             // 
@@ -1585,20 +1692,21 @@
             // 
             // panel76
             // 
-            this.panel76.Controls.Add(this.textBox29);
+            this.panel76.Controls.Add(this.cbSSLR_SSDD);
             this.panel76.Controls.Add(this.label109);
-            this.panel76.Location = new System.Drawing.Point(241, 26);
+            this.panel76.Location = new System.Drawing.Point(314, 26);
             this.panel76.Name = "panel76";
-            this.panel76.Size = new System.Drawing.Size(234, 34);
+            this.panel76.Size = new System.Drawing.Size(334, 34);
             this.panel76.TabIndex = 28;
             // 
-            // textBox29
+            // cbSSLR_SSDD
             // 
-            this.textBox29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox29.Location = new System.Drawing.Point(96, 0);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(121, 26);
-            this.textBox29.TabIndex = 6;
+            this.cbSSLR_SSDD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSSLR_SSDD.FormattingEnabled = true;
+            this.cbSSLR_SSDD.Location = new System.Drawing.Point(86, 1);
+            this.cbSSLR_SSDD.Name = "cbSSLR_SSDD";
+            this.cbSSLR_SSDD.Size = new System.Drawing.Size(233, 24);
+            this.cbSSLR_SSDD.TabIndex = 3;
             // 
             // label109
             // 
@@ -1626,7 +1734,7 @@
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.Gainsboro;
             this.pictureBox9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBox9.Location = new System.Drawing.Point(0, 327);
+            this.pictureBox9.Location = new System.Drawing.Point(0, 451);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(1223, 22);
             this.pictureBox9.TabIndex = 35;
@@ -1695,20 +1803,21 @@
             // 
             // panel58
             // 
-            this.panel58.Controls.Add(this.tbSSLR_tel);
+            this.panel58.Controls.Add(this.tbSSLR_TEL);
             this.panel58.Controls.Add(this.label33);
             this.panel58.Location = new System.Drawing.Point(868, 6);
             this.panel58.Name = "panel58";
             this.panel58.Size = new System.Drawing.Size(257, 34);
             this.panel58.TabIndex = 52;
             // 
-            // tbSSLR_tel
+            // tbSSLR_TEL
             // 
-            this.tbSSLR_tel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbSSLR_tel.Location = new System.Drawing.Point(83, 0);
-            this.tbSSLR_tel.Name = "tbSSLR_tel";
-            this.tbSSLR_tel.Size = new System.Drawing.Size(174, 26);
-            this.tbSSLR_tel.TabIndex = 6;
+            this.tbSSLR_TEL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbSSLR_TEL.Location = new System.Drawing.Point(83, 0);
+            this.tbSSLR_TEL.Name = "tbSSLR_TEL";
+            this.tbSSLR_TEL.Size = new System.Drawing.Size(174, 26);
+            this.tbSSLR_TEL.TabIndex = 6;
+            this.tbSSLR_TEL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
             // 
             // label33
             // 
@@ -1721,21 +1830,21 @@
             // 
             // panel59
             // 
-            this.panel59.Controls.Add(this.textBox12);
+            this.panel59.Controls.Add(this.tbSSLR_AGE);
             this.panel59.Controls.Add(this.label34);
             this.panel59.Location = new System.Drawing.Point(577, 6);
             this.panel59.Name = "panel59";
             this.panel59.Size = new System.Drawing.Size(257, 34);
             this.panel59.TabIndex = 51;
             // 
-            // textBox12
+            // tbSSLR_AGE
             // 
-            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox12.Enabled = false;
-            this.textBox12.Location = new System.Drawing.Point(83, 0);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(174, 26);
-            this.textBox12.TabIndex = 6;
+            this.tbSSLR_AGE.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbSSLR_AGE.Enabled = false;
+            this.tbSSLR_AGE.Location = new System.Drawing.Point(83, 0);
+            this.tbSSLR_AGE.Name = "tbSSLR_AGE";
+            this.tbSSLR_AGE.Size = new System.Drawing.Size(174, 26);
+            this.tbSSLR_AGE.TabIndex = 6;
             // 
             // label34
             // 
@@ -1748,20 +1857,21 @@
             // 
             // panel60
             // 
-            this.panel60.Controls.Add(this.textBox19);
+            this.panel60.Controls.Add(this.tbSSLR_CTXYYLXRDH);
             this.panel60.Controls.Add(this.label35);
             this.panel60.Location = new System.Drawing.Point(634, 106);
             this.panel60.Name = "panel60";
             this.panel60.Size = new System.Drawing.Size(324, 34);
             this.panel60.TabIndex = 50;
             // 
-            // textBox19
+            // tbSSLR_CTXYYLXRDH
             // 
-            this.textBox19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox19.Location = new System.Drawing.Point(179, 0);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(145, 26);
-            this.textBox19.TabIndex = 7;
+            this.tbSSLR_CTXYYLXRDH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbSSLR_CTXYYLXRDH.Location = new System.Drawing.Point(179, 0);
+            this.tbSSLR_CTXYYLXRDH.Name = "tbSSLR_CTXYYLXRDH";
+            this.tbSSLR_CTXYYLXRDH.Size = new System.Drawing.Size(145, 26);
+            this.tbSSLR_CTXYYLXRDH.TabIndex = 7;
+            this.tbSSLR_CTXYYLXRDH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
             // 
             // label35
             // 
@@ -1774,20 +1884,20 @@
             // 
             // panel61
             // 
-            this.panel61.Controls.Add(this.textBox20);
+            this.panel61.Controls.Add(this.tbSSLR_CTXYYLXR);
             this.panel61.Controls.Add(this.label36);
             this.panel61.Location = new System.Drawing.Point(309, 106);
             this.panel61.Name = "panel61";
             this.panel61.Size = new System.Drawing.Size(295, 34);
             this.panel61.TabIndex = 49;
             // 
-            // textBox20
+            // tbSSLR_CTXYYLXR
             // 
-            this.textBox20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox20.Location = new System.Drawing.Point(147, 0);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(145, 26);
-            this.textBox20.TabIndex = 6;
+            this.tbSSLR_CTXYYLXR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbSSLR_CTXYYLXR.Location = new System.Drawing.Point(147, 0);
+            this.tbSSLR_CTXYYLXR.Name = "tbSSLR_CTXYYLXR";
+            this.tbSSLR_CTXYYLXR.Size = new System.Drawing.Size(145, 26);
+            this.tbSSLR_CTXYYLXR.TabIndex = 6;
             // 
             // label36
             // 
@@ -1800,20 +1910,20 @@
             // 
             // panel62
             // 
-            this.panel62.Controls.Add(this.textBox21);
+            this.panel62.Controls.Add(this.tbSSLR_CTXYY);
             this.panel62.Controls.Add(this.label37);
             this.panel62.Location = new System.Drawing.Point(23, 103);
             this.panel62.Name = "panel62";
             this.panel62.Size = new System.Drawing.Size(257, 34);
             this.panel62.TabIndex = 44;
             // 
-            // textBox21
+            // tbSSLR_CTXYY
             // 
-            this.textBox21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox21.Location = new System.Drawing.Point(96, 0);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(161, 26);
-            this.textBox21.TabIndex = 6;
+            this.tbSSLR_CTXYY.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbSSLR_CTXYY.Location = new System.Drawing.Point(96, 0);
+            this.tbSSLR_CTXYY.Name = "tbSSLR_CTXYY";
+            this.tbSSLR_CTXYY.Size = new System.Drawing.Size(161, 26);
+            this.tbSSLR_CTXYY.TabIndex = 6;
             // 
             // label37
             // 
@@ -1827,11 +1937,11 @@
             // panel63
             // 
             this.panel63.Controls.Add(this.label38);
-            this.panel63.Controls.Add(this.textBox22);
+            this.panel63.Controls.Add(this.tbSSLR_COUNTY);
             this.panel63.Controls.Add(this.label49);
-            this.panel63.Controls.Add(this.textBox23);
+            this.panel63.Controls.Add(this.tbSSLR_CITY);
             this.panel63.Controls.Add(this.label98);
-            this.panel63.Controls.Add(this.textBox24);
+            this.panel63.Controls.Add(this.tbSSLR_PROVINCE);
             this.panel63.Controls.Add(this.label99);
             this.panel63.Location = new System.Drawing.Point(23, 71);
             this.panel63.Name = "panel63";
@@ -1847,13 +1957,13 @@
             this.label38.TabIndex = 11;
             this.label38.Text = "县(区)";
             // 
-            // textBox22
+            // tbSSLR_COUNTY
             // 
-            this.textBox22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox22.Location = new System.Drawing.Point(461, 1);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(102, 26);
-            this.textBox22.TabIndex = 10;
+            this.tbSSLR_COUNTY.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbSSLR_COUNTY.Location = new System.Drawing.Point(461, 1);
+            this.tbSSLR_COUNTY.Name = "tbSSLR_COUNTY";
+            this.tbSSLR_COUNTY.Size = new System.Drawing.Size(102, 26);
+            this.tbSSLR_COUNTY.TabIndex = 10;
             // 
             // label49
             // 
@@ -1864,13 +1974,13 @@
             this.label49.TabIndex = 9;
             this.label49.Text = "市";
             // 
-            // textBox23
+            // tbSSLR_CITY
             // 
-            this.textBox23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox23.Location = new System.Drawing.Point(283, 0);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(114, 26);
-            this.textBox23.TabIndex = 8;
+            this.tbSSLR_CITY.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbSSLR_CITY.Location = new System.Drawing.Point(283, 0);
+            this.tbSSLR_CITY.Name = "tbSSLR_CITY";
+            this.tbSSLR_CITY.Size = new System.Drawing.Size(114, 26);
+            this.tbSSLR_CITY.TabIndex = 8;
             // 
             // label98
             // 
@@ -1881,13 +1991,13 @@
             this.label98.TabIndex = 7;
             this.label98.Text = "省";
             // 
-            // textBox24
+            // tbSSLR_PROVINCE
             // 
-            this.textBox24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox24.Location = new System.Drawing.Point(96, 0);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(130, 26);
-            this.textBox24.TabIndex = 6;
+            this.tbSSLR_PROVINCE.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbSSLR_PROVINCE.Location = new System.Drawing.Point(96, 0);
+            this.tbSSLR_PROVINCE.Name = "tbSSLR_PROVINCE";
+            this.tbSSLR_PROVINCE.Size = new System.Drawing.Size(130, 26);
+            this.tbSSLR_PROVINCE.TabIndex = 6;
             // 
             // label99
             // 
@@ -1909,15 +2019,12 @@
             // 
             // cbSSLR_YBLX
             // 
+            this.cbSSLR_YBLX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSSLR_YBLX.FormattingEnabled = true;
-            this.cbSSLR_YBLX.Items.AddRange(new object[] {
-            "男",
-            "女"});
             this.cbSSLR_YBLX.Location = new System.Drawing.Point(86, 0);
             this.cbSSLR_YBLX.Name = "cbSSLR_YBLX";
             this.cbSSLR_YBLX.Size = new System.Drawing.Size(148, 24);
             this.cbSSLR_YBLX.TabIndex = 2;
-            this.cbSSLR_YBLX.Text = "男";
             // 
             // label100
             // 
@@ -1931,7 +2038,7 @@
             // panel65
             // 
             this.panel65.Controls.Add(this.panel12);
-            this.panel65.Controls.Add(this.textBox25);
+            this.panel65.Controls.Add(this.tbSSLR_ID);
             this.panel65.Controls.Add(this.label101);
             this.panel65.Location = new System.Drawing.Point(23, 38);
             this.panel65.Name = "panel65";
@@ -1945,13 +2052,14 @@
             this.panel12.Size = new System.Drawing.Size(200, 100);
             this.panel12.TabIndex = 25;
             // 
-            // textBox25
+            // tbSSLR_ID
             // 
-            this.textBox25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox25.Location = new System.Drawing.Point(96, 1);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(161, 26);
-            this.textBox25.TabIndex = 6;
+            this.tbSSLR_ID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbSSLR_ID.Location = new System.Drawing.Point(96, 1);
+            this.tbSSLR_ID.Name = "tbSSLR_ID";
+            this.tbSSLR_ID.Size = new System.Drawing.Size(161, 26);
+            this.tbSSLR_ID.TabIndex = 6;
+            this.tbSSLR_ID.TextChanged += new System.EventHandler(this.tbSSLR_ID_TextChanged);
             // 
             // label101
             // 
@@ -1964,24 +2072,24 @@
             // 
             // panel66
             // 
-            this.panel66.Controls.Add(this.comboBox4);
+            this.panel66.Controls.Add(this.cbSSLR_SEX);
             this.panel66.Controls.Add(this.label102);
             this.panel66.Location = new System.Drawing.Point(306, 6);
             this.panel66.Name = "panel66";
             this.panel66.Size = new System.Drawing.Size(234, 34);
             this.panel66.TabIndex = 46;
             // 
-            // comboBox4
+            // cbSSLR_SEX
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.cbSSLR_SEX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSSLR_SEX.FormattingEnabled = true;
+            this.cbSSLR_SEX.Items.AddRange(new object[] {
             "男",
             "女"});
-            this.comboBox4.Location = new System.Drawing.Point(86, 1);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(148, 24);
-            this.comboBox4.TabIndex = 2;
-            this.comboBox4.Text = "男";
+            this.cbSSLR_SEX.Location = new System.Drawing.Point(86, 1);
+            this.cbSSLR_SEX.Name = "cbSSLR_SEX";
+            this.cbSSLR_SEX.Size = new System.Drawing.Size(148, 24);
+            this.cbSSLR_SEX.TabIndex = 2;
             // 
             // label102
             // 
@@ -1994,20 +2102,20 @@
             // 
             // panel67
             // 
-            this.panel67.Controls.Add(this.textBox26);
+            this.panel67.Controls.Add(this.tbSSLR_NAME);
             this.panel67.Controls.Add(this.label103);
             this.panel67.Location = new System.Drawing.Point(23, 6);
             this.panel67.Name = "panel67";
             this.panel67.Size = new System.Drawing.Size(257, 34);
             this.panel67.TabIndex = 43;
             // 
-            // textBox26
+            // tbSSLR_NAME
             // 
-            this.textBox26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox26.Location = new System.Drawing.Point(96, 0);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(161, 26);
-            this.textBox26.TabIndex = 6;
+            this.tbSSLR_NAME.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbSSLR_NAME.Location = new System.Drawing.Point(96, 0);
+            this.tbSSLR_NAME.Name = "tbSSLR_NAME";
+            this.tbSSLR_NAME.Size = new System.Drawing.Size(161, 26);
+            this.tbSSLR_NAME.TabIndex = 6;
             // 
             // label103
             // 
@@ -3029,19 +3137,19 @@
             this.birth,
             this.tel});
             this.listViewEmp.Dock = System.Windows.Forms.DockStyle.Fill;
-            listViewGroup5.Header = "ListViewGroup";
-            listViewGroup5.Name = "listViewGroup1";
-            listViewGroup6.Header = "ListViewGroup";
-            listViewGroup6.Name = "listViewGroup2";
-            listViewGroup7.Header = "ListViewGroup";
-            listViewGroup7.Name = "listViewGroup3";
-            listViewGroup8.Header = "ListViewGroup";
-            listViewGroup8.Name = "listViewGroup4";
+            listViewGroup13.Header = "ListViewGroup";
+            listViewGroup13.Name = "listViewGroup1";
+            listViewGroup14.Header = "ListViewGroup";
+            listViewGroup14.Name = "listViewGroup2";
+            listViewGroup15.Header = "ListViewGroup";
+            listViewGroup15.Name = "listViewGroup3";
+            listViewGroup16.Header = "ListViewGroup";
+            listViewGroup16.Name = "listViewGroup4";
             this.listViewEmp.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup5,
-            listViewGroup6,
-            listViewGroup7,
-            listViewGroup8});
+            listViewGroup13,
+            listViewGroup14,
+            listViewGroup15,
+            listViewGroup16});
             this.listViewEmp.Location = new System.Drawing.Point(0, 0);
             this.listViewEmp.Name = "listViewEmp";
             this.listViewEmp.Size = new System.Drawing.Size(1073, 373);
@@ -3129,23 +3237,6 @@
             this.panel4.Size = new System.Drawing.Size(1280, 550);
             this.panel4.TabIndex = 13;
             // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(30, 7);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(65, 12);
-            this.label21.TabIndex = 0;
-            this.label21.Text = "字体型号：";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(92, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 20);
-            this.comboBox1.TabIndex = 1;
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -3228,9 +3319,9 @@
             this.panel68.ResumeLayout(false);
             this.panel68.PerformLayout();
             this.panel69.ResumeLayout(false);
-            this.panel69.PerformLayout();
-            this.panel70.ResumeLayout(false);
-            this.panel70.PerformLayout();
+            this.panel44.ResumeLayout(false);
+            this.panel44.PerformLayout();
+            this.panel43.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel71.ResumeLayout(false);
@@ -3429,28 +3520,22 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel68;
         private System.Windows.Forms.Panel panel69;
-        private System.Windows.Forms.TextBox textBox27;
-        private System.Windows.Forms.Panel panel70;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnRecordClear;
+        private System.Windows.Forms.Button btnSaveSSJL;
         private System.Windows.Forms.Label label104;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel71;
         private System.Windows.Forms.Panel panel72;
-        private System.Windows.Forms.TextBox textBox28;
+        private System.Windows.Forms.TextBox tbSSLR_SSRQ;
         private System.Windows.Forms.Label label105;
         private System.Windows.Forms.Panel panel73;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox cbSSLR_CCFS;
         private System.Windows.Forms.Label label106;
-        private System.Windows.Forms.Panel panel74;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.Label label107;
         private System.Windows.Forms.Panel panel75;
-        private System.Windows.Forms.ComboBox comboBox28;
+        private System.Windows.Forms.ComboBox cbSSLR_SSLX;
         private System.Windows.Forms.Label label108;
         private System.Windows.Forms.Panel panel76;
-        private System.Windows.Forms.TextBox textBox29;
         private System.Windows.Forms.Label label109;
         private System.Windows.Forms.Label label110;
         private System.Windows.Forms.PictureBox pictureBox9;
@@ -3460,40 +3545,40 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel58;
-        private System.Windows.Forms.TextBox tbSSLR_tel;
+        private System.Windows.Forms.TextBox tbSSLR_TEL;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Panel panel59;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox tbSSLR_AGE;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Panel panel60;
-        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox tbSSLR_CTXYYLXRDH;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Panel panel61;
-        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox tbSSLR_CTXYYLXR;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Panel panel62;
-        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.TextBox tbSSLR_CTXYY;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Panel panel63;
         private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.TextBox tbSSLR_COUNTY;
         private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.TextBox textBox23;
+        private System.Windows.Forms.TextBox tbSSLR_CITY;
         private System.Windows.Forms.Label label98;
-        private System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.TextBox tbSSLR_PROVINCE;
         private System.Windows.Forms.Label label99;
         private System.Windows.Forms.Panel panel64;
         private System.Windows.Forms.ComboBox cbSSLR_YBLX;
         private System.Windows.Forms.Label label100;
         private System.Windows.Forms.Panel panel65;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.TextBox textBox25;
+        private System.Windows.Forms.TextBox tbSSLR_ID;
         private System.Windows.Forms.Label label101;
         private System.Windows.Forms.Panel panel66;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox cbSSLR_SEX;
         private System.Windows.Forms.Label label102;
         private System.Windows.Forms.Panel panel67;
-        private System.Windows.Forms.TextBox textBox26;
+        private System.Windows.Forms.TextBox tbSSLR_NAME;
         private System.Windows.Forms.Label label103;
         private System.Windows.Forms.Panel panel78;
         private System.Windows.Forms.Label label111;
@@ -3600,8 +3685,21 @@
         private System.Windows.Forms.ListView listViewDictionaryQKZD;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.Label labelAccountShow;
+        private System.Windows.Forms.RichTextBox rtbSSLR_SSJL;
+        private System.Windows.Forms.ComboBox cbSSLR_SSDD;
+        private System.Windows.Forms.Panel panel74;
+        private System.Windows.Forms.ComboBox cbSSLR_SSFS;
+        private System.Windows.Forms.Label label107;
+        private System.Windows.Forms.Panel panel44;
+        private System.Windows.Forms.TextBox tbSSLR_QXFS;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox tbSSLR_ZS;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox tbSSLR_ZDYS;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Panel panel43;
+        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label21;
 
     }
 }
