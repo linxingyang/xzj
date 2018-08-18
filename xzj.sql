@@ -18,10 +18,14 @@ insert into t_emp(e_account,e_pwd) values('admin','12345678');
 
 delete FROM xzj.t_emp where e_account='admin';
 
+
 ##科室信息表
+drop table t_room;
+
+
 create table t_room
 (
-	id int not null auto_increment,
+	id int not null,
 	r_hospital_name varchar(50),##医院名称
 	r_address varchar(100),##地址
 	r_province varchar(20),##省/直辖市 
@@ -68,10 +72,10 @@ insert into t_dictionary(d_parent_id,d_order,d_name) values(2,4,'手术追踪期
 #情况字典  
 insert into t_dictionary(d_parent_id,d_order,d_name) values(3,0,'内瘘自我锻炼情况字典');
 insert into t_dictionary(d_parent_id,d_order,d_name) values(3,1,'穿刺部位皮肤情况字典');
-insert into t_dictionary(d_parent_id,d_order,d_name) values(3,2,'自我触摸震颤及听诊情况');
-
+insert into t_dictionary(d_parent_id,d_order,d_name) values(3,3,'感染控制方式字典');
 
 ### 患者信息表
+drop table t_patient;
 create table t_patient
 (
 	id int not null auto_increment,
@@ -95,16 +99,7 @@ drop table t_record;
 create table t_record
 (
 	id int not null auto_increment,
-	t_name varchar(50),##姓名，
-	t_sex varchar(2),##性别（选择男/女，
-	t_age char(3),##年龄（）根据身份证自动生成，
-	t_tel varchar(11),##手机号，（验证）
-	t_ID varchar(50),##身份证号
-	t_health_type varchar(50),##医保类型（下拉框：字典表-医保类型），
-	t_address  varchar(100),##常住地址：省（下拉框），市（下拉框），县区（下拉框），
-	t_dialyse_hospital varchar(50),##常析透医院，
-	t_dialyse_hospital_contact varchar(50),##常析透医院联系人，
-	t_dialyse_hospital_tel varchar(50),##常析透医院联系人电话（验证
+	r_patient_ID varchar(50),##患者身份证号
 	r_date varchar(20),##手术日期（自动生成当天时间，精确到分钟）--是否能修改时间？
 	r_ss_address varchar(100),##手术地点（科室信息里面的医院名称）--科室信息里面的医院名称都是一样的？
 	r_ss_type varchar(50),##手术类型（下拉框：字典表-手术类型）
@@ -114,17 +109,19 @@ create table t_record
 	r_zs varchar(50),## 助手
 	r_qxhs varchar(50),##器械护士
 	r_ss_record varchar(2000),##手术记录（文本框，能够调整文本格式和字体）--格式和字体？格式是？字体是（宋体，黑体？）？
+	r_is_sszz varchar(4),##是否手术追踪
 	primary key (id)
 );
 
 
 
 ### 手术追踪表
+drop table t_track;
 create table t_track
 (
 	id int not null auto_increment,
-	t_patient_id int,##患者id
-	##t_patient_name varchar(50),##患者姓名(选项)，
+	t_record_id varchar(50),##手术记录id
+	##t_record_name varchar(50),##患者姓名(选项)，
  	t_sszz_deadline varchar(50),##手术追踪期限(下拉框，在手术字典，医生按照自己的要求添加)
 	t_sfrq varchar(20),## 随访日期(自动生成，精确到分)，
 	t_ccfs varchar(50),## 穿刺方式(自动生成)，

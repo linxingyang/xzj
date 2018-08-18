@@ -19,6 +19,8 @@ namespace xzj
         public FormMain()
         {
             InitializeComponent();
+            this.ImeMode = System.Windows.Forms.ImeMode.OnHalf;
+
             this.WindowState = FormWindowState.Maximized;
             this.btnSSLR.BackColor = ColorTranslator.FromHtml("#3399ff");
             this.btnZDGL.BackColor = ColorTranslator.FromHtml("#0000cd");
@@ -36,7 +38,7 @@ namespace xzj
             this.labelNowDate.Text = UtilTools.getDateAndWeek();
             //显示当前用户
             this.labelAccountShow.BackColor = ColorTranslator.FromHtml("#0078d7");
-            this.labelAccountShow.Text = "用户【"+UtilConfig.ACCOUNT+"】";
+            this.labelAccountShow.Text = "用户【" + UtilConfig.ACCOUNT + "】";
             this.labelAccountShow.ForeColor = ColorTranslator.FromHtml("#fff");
 
             //初始化手术录入
@@ -61,8 +63,8 @@ namespace xzj
             {
                 this.WindowState = FormWindowState.Maximized;
             }
-            
-            this.flowLayoutForm.Location = new Point(this.Width-102, 0);
+
+            this.flowLayoutForm.Location = new Point(this.Width - 102, 0);
         }
 
         //最小
@@ -95,7 +97,6 @@ namespace xzj
         {
             //查询医保类型字典
             DataTable dt = DBDictionary.getInstance().getDictionarysByParentId(1);
-
             this.cbSSLR_YBLX.Items.Clear();
             foreach (DataRow row in dt.Rows)
             {
@@ -139,8 +140,56 @@ namespace xzj
                 this.cbSSLR_CCFS.Items.Add(row["d_name"].ToString());
             }
 
+            //查询手术追踪期限字典
+            dt = DBDictionary.getInstance().getDictionarysByParentId(8);
+            this.cbSSLR_SSZZQX.Items.Clear();
+            foreach (DataRow row in dt.Rows)
+            {
+                this.cbSSLR_SSZZQX.Text = row["d_name"].ToString();
+                this.cbSSLR_SSZZQX.Items.Add(row["d_name"].ToString());
+            }
+
+            //查询手术追踪-穿刺方式字典
+            dt = DBDictionary.getInstance().getDictionarysByParentId(7);
+            this.cbSSLR_SSZZ_CCFS.Items.Clear();
+            foreach (DataRow row in dt.Rows)
+            {
+                this.cbSSLR_SSZZ_CCFS.Text = row["d_name"].ToString();
+                this.cbSSLR_SSZZ_CCFS.Items.Add(row["d_name"].ToString());
+            }
+
+            //查询手术追踪-感染控制方式字典
+            dt = DBDictionary.getInstance().getDictionarysByParentId(11);
+            this.cbSSLR_SSZZ_GRKZFS.Items.Clear();
+            foreach (DataRow row in dt.Rows)
+            {
+                this.cbSSLR_SSZZ_GRKZFS.Text = row["d_name"].ToString();
+                this.cbSSLR_SSZZ_GRKZFS.Items.Add(row["d_name"].ToString());
+            }
+
+            //查询手术追踪-内痿自我锻炼情况字典
+            dt = DBDictionary.getInstance().getDictionarysByParentId(9);
+            this.cbSSLR_SSZZ_NWZWDLQK.Items.Clear();
+            foreach (DataRow row in dt.Rows)
+            {
+                this.cbSSLR_SSZZ_NWZWDLQK.Text = row["d_name"].ToString();
+                this.cbSSLR_SSZZ_NWZWDLQK.Items.Add(row["d_name"].ToString());
+            }
+
+            //查询手术追踪-穿刺部位皮肤情况字典
+            dt = DBDictionary.getInstance().getDictionarysByParentId(9);
+            this.cbSSLR_SSZZ_CCBWPFQK.Items.Clear();
+            foreach (DataRow row in dt.Rows)
+            {
+                this.cbSSLR_SSZZ_CCBWPFQK.Text = row["d_name"].ToString();
+                this.cbSSLR_SSZZ_CCBWPFQK.Items.Add(row["d_name"].ToString());
+            }
+
             //手术日期
             this.tbSSLR_SSRQ.Text = UtilTools.getDayAndTime();
+
+            //随访日期
+            this.tbSSLR_SSZZ_SFRQ.Text = UtilTools.getDayAndTime();
         }
 
         //字典管理
@@ -177,6 +226,8 @@ namespace xzj
             this.panelSJCX.Visible = true;
             this.panelCJFX.Visible = false;
             this.panelKSGL.Visible = false;
+
+            initSJCX();
         }
 
         //统计分析
@@ -211,6 +262,39 @@ namespace xzj
             this.panelKSGL.Visible = true;
 
             //查询科室信息
+            setKSGL_room();
+        }
+
+        //查询科室信息
+        private void setKSGL_room()
+        {
+            dataTable = DBManager.getInstance().find("select id,r_hospital_name,r_address,r_province, r_rank, r_postcodes,  r_room_name, r_room_tel," +
+                "r_room_fax,r_responsible,r_responsible_title, r_responsible_tel, r_responsible_phone,  r_responsible_email," +
+                " r_dialyse_center_area, r_dialyse_unit_area, r_start_date from t_room where id = 0");
+            if (dataTable != null && dataTable.Rows.Count > 0)
+            {
+                DataRow row = dataTable.Rows[0];
+                this.tbRoomHispitorName.Text = row["r_hospital_name"].ToString();//医院名称
+                this.tbRoomHispitorAddress.Text = row["r_address"].ToString();//医院地址
+                this.cbRoomProvince.Text = row["r_province"].ToString();//省
+                this.cbRoomRank.Text = row["r_rank"].ToString();//等级
+                this.tbRoomPostcode.Text = row["r_postcodes"].ToString();//邮政编码
+                this.tbRoomName.Text = row["r_room_name"].ToString();//科室名称
+                this.tbRoomTel.Text = row["r_room_tel"].ToString();//科室电话
+                this.tbRoomFax.Text = row["r_room_fax"].ToString();//科室传真
+                this.tbRoomFZR.Text = row["r_responsible"].ToString();//科室负责人
+                this.tbRoomFZRZC.Text = row["r_responsible_title"].ToString();//科室负责人职称
+                this.tbRoomFZRDH.Text = row["r_responsible_tel"].ToString();//科室负责人电话
+                this.tbRoomFZRSJ.Text = row["r_responsible_phone"].ToString();//科室负责人手机
+                this.tbRoomFZRYX.Text = row["r_responsible_email"].ToString();//科室负责人邮箱
+                this.tbRoomTXZXMJ.Text = row["r_dialyse_center_area"].ToString();//透析中心面积
+                this.tbRoomTXDYMJ.Text = row["r_dialyse_unit_area"].ToString();//透析单元面积
+                this.dtpRoomKSRQ.Text = row["r_start_date"].ToString();//开始日期
+            }
+            else
+            {
+                MessageBox.Show("当前科室信息为空，请添加科室信息");
+            }
 
         }
 
@@ -226,6 +310,8 @@ namespace xzj
             this.panelRoomInfoManager.Visible = true;
             this.panelRoomEmpManager.Visible = false;
 
+            //查询科室信息
+            setKSGL_room();
         }
 
         //切换科室职员管理按钮
@@ -245,7 +331,7 @@ namespace xzj
         }
 
         //填充人员信息表
-        private void setListViewEmp(String account,string name)
+        private void setListViewEmp(String account, string name)
         {
             //设置listview表头颜色
             this.listViewEmp.Items.Clear();
@@ -302,7 +388,7 @@ namespace xzj
                 DBEmp.getInstance().deleteEmpByAccount(account);
                 this.setListViewEmp(null, null);//重新绑定
             }
-            
+
         }
 
         //打开新增科室职员
@@ -313,7 +399,7 @@ namespace xzj
             form.ShowDialog();
             if (form.DialogResult == DialogResult.OK)
             {
-                this.setListViewEmp(null,null);//重新绑定
+                this.setListViewEmp(null, null);//重新绑定
             }
         }
 
@@ -338,13 +424,7 @@ namespace xzj
         //通过名称和用户名查询用户信息
         private void btnFindEmpByAccountAndName_Click(object sender, EventArgs e)
         {
-            this.setListViewEmp(this.tbFindEmpAccount.Text,this.tbFindEmpName.Text);//重新绑定
-        }
-
-        //科室保存
-        private void btnSaveRoom_Click(object sender, EventArgs e)
-        {
-
+            this.setListViewEmp(this.tbFindEmpAccount.Text, this.tbFindEmpName.Text);//重新绑定
         }
 
         //查询医保类型字典
@@ -356,14 +436,14 @@ namespace xzj
         //查询手术字典
         private void btnDictionarySSZD_Click(object sender, EventArgs e)
         {
-            this.listViewDictionarySSZD.Visible = ! this.listViewDictionarySSZD.Visible;
+            this.listViewDictionarySSZD.Visible = !this.listViewDictionarySSZD.Visible;
 
             if (this.listViewDictionarySSZD.Visible)
             {
                 //设置listview表头颜色
                 this.listViewDictionarySSZD.Items.Clear();
                 this.listViewDictionarySSZD.FullRowSelect = true;
-                
+
                 this.listViewDictionarySSZD.BackColor = ColorTranslator.FromHtml("#41aaeb");
                 ImageList imgList = new ImageList();
                 imgList.ImageSize = new Size(30, 23);
@@ -392,8 +472,8 @@ namespace xzj
         //查询情况字典
         private void btnDictionaryQKZD_Click(object sender, EventArgs e)
         {
-            this.listViewDictionaryQKZD.Visible = ! this.listViewDictionaryQKZD.Visible;
-            
+            this.listViewDictionaryQKZD.Visible = !this.listViewDictionaryQKZD.Visible;
+
 
             if (this.listViewDictionaryQKZD.Visible)
             {
@@ -444,126 +524,52 @@ namespace xzj
             string roomTXZXMJ = this.tbRoomTXZXMJ.Text;//透析中心面积
             string roomTXDYMJ = this.tbRoomTXDYMJ.Text;//透析单元面积
             string roomKSRQ = this.dtpRoomKSRQ.Text;//开始日期
-           // hispitorName,hispitorAddress,province,rank,postcode,roomName,roomTel,roomFax,roomFZR,roomFZRZC,roomFZRDH,roomFZRSJ,roomFZRYX,roomTXZXMJ,roomTXDYMJ,roomKSRQ
+            // hispitorName,hispitorAddress,province,rank,postcode,roomName,roomTel,roomFax,roomFZR,roomFZRZC,roomFZRDH,roomFZRSJ,roomFZRYX,roomTXZXMJ,roomTXDYMJ,roomKSRQ
 
-            if (string.IsNullOrEmpty(hispitorName))
-            {
-                MessageBox.Show("医院名称不能为空");
-                return;
-            }
+            if (string.IsNullOrEmpty(hispitorName)) { MessageBox.Show("【医院名称】不能为空"); return; }
+            if (string.IsNullOrEmpty(hispitorAddress)) { MessageBox.Show("【医院地址】不能为空"); return; }
+            if (string.IsNullOrEmpty(province)) { MessageBox.Show("【省(直辖市)】不能为空"); return; }
+            if (string.IsNullOrEmpty(rank)) { MessageBox.Show("【等级】不能为空"); return; }
+            if (string.IsNullOrEmpty(postcode)) { MessageBox.Show("【邮政编码】不能为空"); return; }
+            if (postcode.Length != 6) { MessageBox.Show("【邮政编码】 格式有误"); return; }
+            if (string.IsNullOrEmpty(roomName)) { MessageBox.Show("【科室名称】不能为空"); return; }
+            if (string.IsNullOrEmpty(roomTel)) { MessageBox.Show("【科室电话】不能为空"); return; }
+            if (roomTel.Length > 11) { MessageBox.Show("【科室电话】 格式有误"); return; }
+            if (string.IsNullOrEmpty(roomFax)) { MessageBox.Show("【科室传真】不能为空"); return; }
+            if (string.IsNullOrEmpty(roomFZR)) { MessageBox.Show("【科室负责人】不能为空"); return; }
+            if (string.IsNullOrEmpty(roomFZRZC)) { MessageBox.Show("【科室负责人职称】不能为空"); return; }
+            if (string.IsNullOrEmpty(roomFZRDH)) { MessageBox.Show("【科室负责人电话】不能为空"); return; }
+            if (roomFZRDH.Length > 11) { MessageBox.Show("【科室负责人电话】 格式有误"); return; }
+            if (string.IsNullOrEmpty(roomFZRSJ)) { MessageBox.Show("【科室负责人手机】不能为空"); return; }
+            if (roomFZRSJ.Length != 11) { MessageBox.Show("【科室负责人手机】 格式有误"); return; }
+            if (string.IsNullOrEmpty(roomFZRYX)) { MessageBox.Show("【科室负责人邮箱】不能为空"); return; }
+            if (!UtilTools.isEmail(roomFZRYX)) { MessageBox.Show("【科室负责人邮箱】 格式有误"); return; }
+            if (string.IsNullOrEmpty(roomTXZXMJ)) { MessageBox.Show("【透析中心面积】 不能为空"); return; }
+            if (string.IsNullOrEmpty(roomTXDYMJ)) { MessageBox.Show("【透析单元面积】 不能为空"); return; }
+            if (string.IsNullOrEmpty(roomKSRQ)) { MessageBox.Show("【开始日期】 不能为空"); return; }
 
-            if (string.IsNullOrEmpty(hispitorAddress))
-            {
-                MessageBox.Show("医院地址不能为空");
-                return;
-            }
-
-            if (string.IsNullOrEmpty(province))
-            {
-                MessageBox.Show("省(直辖市)不能为空");
-                return;
-            }
-
-            if (string.IsNullOrEmpty(rank))
-            {
-                MessageBox.Show("等级不能为空");
-                return;
-            }
-
-            if (string.IsNullOrEmpty(postcode))
-            {
-                MessageBox.Show("邮政编码不能为空");
-                return;
-            }
-
-            if (string.IsNullOrEmpty(roomName))
-            {
-                MessageBox.Show("科室名称不能为空");
-                return;
-            }
-
-            if (string.IsNullOrEmpty(roomTel))
-            {
-                MessageBox.Show("科室电话不能为空");
-                return;
-            }
-
-            if (string.IsNullOrEmpty(roomFax))
-            {
-                MessageBox.Show("科室传真不能为空");
-                return;
-            }
-
-            if (string.IsNullOrEmpty(roomFZR))
-            {
-                MessageBox.Show("科室负责人不能为空");
-                return;
-            }
-
-            if (string.IsNullOrEmpty(roomFZRZC))
-            {
-                MessageBox.Show("科室负责人职称不能为空");
-                return;
-            }
-
-            if (string.IsNullOrEmpty(roomFZRDH))
-            {
-                MessageBox.Show("科室负责人电话不能为空");
-                return;
-            }
-
-            if (string.IsNullOrEmpty(roomFZRSJ))
-            {
-                MessageBox.Show("科室负责人手机不能为空");
-                return;
-            }
-
-            if (roomFZRSJ.Length != 11)
-            {
-                MessageBox.Show("科室负责人手机 格式有误");
-                return;
-            }
-
-            if (string.IsNullOrEmpty(roomFZRYX))
-            {
-                MessageBox.Show("科室负责人邮箱不能为空");
-                return;
-            }
-
-            if (!UtilTools.isEmail(roomFZRYX))
-            {
-                MessageBox.Show("科室负责人邮箱 格式有误");
-                return;
-            }
-
-            if (string.IsNullOrEmpty(roomTXZXMJ))
-            {
-                MessageBox.Show("透析中心面积 不能为空");
-                return;
-            }
-
-            if (string.IsNullOrEmpty(roomTXDYMJ))
-            {
-                MessageBox.Show("透析单元面积 不能为空");
-                return;
-            }
-
-            if (string.IsNullOrEmpty(roomKSRQ))
-            {
-                MessageBox.Show("开始日期 不能为空");
-                return;
-            }
 
             int flag = 0;
-
-            dataTable = DBRoom.getInstance().getRooms(hispitorName, roomName);
+            string sql = "";
+            dataTable = DBManager.getInstance().find("select * from t_room where id = 0");
             if (dataTable != null && dataTable.Rows.Count > 0)
             {
-                flag = DBRoom.getInstance().editRoom(hispitorName, hispitorAddress, province, rank, postcode, roomName, roomTel, roomFax, roomFZR, roomFZRZC, roomFZRDH, roomFZRSJ, roomFZRYX, roomTXZXMJ, roomTXDYMJ, roomKSRQ);
+                //hispitorName, hispitorAddress, province, rank, postcode, roomName, roomTel, roomFax, roomFZR, roomFZRZC, roomFZRDH, roomFZRSJ, roomFZRYX, roomTXZXMJ, roomTXDYMJ, roomKSRQ
+                sql = string.Format("update t_room set r_address='{1}',r_province='{2}', r_rank='{3}', r_postcodes='{4}', r_room_tel='{6}'," +
+                "r_room_fax='{7}',r_responsible='{8}',r_responsible_title='{9}', r_responsible_tel='{10}', r_responsible_phone='{11}',  r_responsible_email='{12}'," +
+                " r_dialyse_center_area='{13}', r_dialyse_unit_area='{14}', r_start_date='{15}', r_start_date='{15}' where id=0",
+                 hispitorName, hispitorAddress, province, rank, postcode, roomName, roomTel, roomFax, roomFZR, roomFZRZC, roomFZRDH,
+                 roomFZRSJ, roomFZRYX, roomTXZXMJ, roomTXDYMJ, roomKSRQ);
+                flag = DBManager.getInstance().edit(sql);
             }
             else
             {
-                flag = DBRoom.getInstance().addRoom(hispitorName, hispitorAddress, province, rank, postcode, roomName, roomTel, roomFax, roomFZR, roomFZRZC, roomFZRDH, roomFZRSJ, roomFZRYX, roomTXZXMJ, roomTXDYMJ, roomKSRQ);
+                sql = string.Format("insert into t_room(id,r_hospital_name,r_address,r_province, r_rank, r_postcodes,  r_room_name, r_room_tel," +
+               "r_room_fax,r_responsible,r_responsible_title, r_responsible_tel, r_responsible_phone,  r_responsible_email," +
+               " r_dialyse_center_area, r_dialyse_unit_area, r_start_date) values(0,'{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}'," +
+               "'{12}','{13}','{14}','{15}')", hispitorName, hispitorAddress, province, rank, postcode, roomName, roomTel, roomFax, roomFZR, roomFZRZC, roomFZRDH,
+               roomFZRSJ, roomFZRYX, roomTXZXMJ, roomTXDYMJ, roomKSRQ);
+                flag = DBManager.getInstance().add(sql);
             }
             if (flag > 0)
             {
@@ -583,7 +589,7 @@ namespace xzj
                 e.Handled = true;
             }
         }
-        
+
         //鼠标离开 隐藏手术字典列表
         private void listViewDictionarySSZD_MouseLeave(object sender, EventArgs e)
         {
@@ -599,7 +605,7 @@ namespace xzj
         //选中手术字典列表
         private void listViewDictionarySSZD_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
             foreach (int i in this.listViewDictionarySSZD.SelectedIndices)
             {
                 this.listViewDictionarySSZD.Items[i].Selected = true;
@@ -652,13 +658,13 @@ namespace xzj
             //标题二
             ch = new ColumnHeader();
             ch.Text = dName;   //设置列标题
-            ch.Width = 3*96;    //设置列宽度
+            ch.Width = 3 * 96;    //设置列宽度
             ch.TextAlign = HorizontalAlignment.Left;   //设置列的对齐方式
             this.listViewDictionary.Columns.Add(ch);    //将列头添加到ListView控件。
             //标题三
             ch = new ColumnHeader();
             ch.Text = "描述";   //设置列标题
-            ch.Width = 6*96-10;    //设置列宽度
+            ch.Width = 6 * 96 - 10;    //设置列宽度
             ch.TextAlign = HorizontalAlignment.Left;   //设置列的对齐方式
             this.listViewDictionary.Columns.Add(ch);    //将列头添加到ListView控件。
 
@@ -678,12 +684,12 @@ namespace xzj
                 item.SubItems.Add(row["d_desc"].ToString());
                 //记住view改成detail
                 this.listViewDictionary.Items.Add(item);
-               // this.listViewDictionary.Columns[0].Width = 2000;
+                // this.listViewDictionary.Columns[0].Width = 2000;
                 //this.listViewDictionarySSZD.Items.Add(row["d_name"].ToString());
             }
             this.listViewDictionary.EndUpdate();
         }
-        
+
         //前往添加字典界面
         private void btnGoAddDictionaryy_Click(object sender, EventArgs e)
         {
@@ -695,7 +701,7 @@ namespace xzj
             formAddDictionary.ShowDialog();
             if (formAddDictionary.DialogResult == DialogResult.OK)
             {
-                this.setListViewDictionary(this.labelDictionaryShow.Text,dictionary_parent_id);//重新绑定
+                this.setListViewDictionary(this.labelDictionaryShow.Text, dictionary_parent_id);//重新绑定
             }
         }
 
@@ -707,7 +713,7 @@ namespace xzj
                 MessageBox.Show("请选择要修改的字典");
                 return;
             }
-           
+
             int id = Convert.ToInt32(this.listViewDictionary.SelectedItems[0].Text);
 
 
@@ -801,7 +807,70 @@ namespace xzj
             if (string.IsNullOrEmpty(qxfs)) { MessageBox.Show("【器械护士】不能为空"); return; }
 
             //添加
-            DBRecords.getInstance().addRecord(name, sex, age, tel, ID, yblx, address, ctxyy, ctxyylxr, ctxyylxrdh, ssrq, ssdd, sslx, ssfs, ccfs, zs, qxfs, ssjl, zdys);
+            //string sql = string.Format("select * from t_patient where p_ID='{0}'", this.tbSSLR_ID.Text);
+            int flag = 0;// DBManager.getInstance().add();
+            string sql = string.Format("select * from t_patient where p_ID='{0}'", this.tbSSLR_ID.Text);
+            dataTable = DBManager.getInstance().find(sql);
+            //判该身份证是否存在，不存在就添加联系人
+            if (dataTable == null || dataTable.Rows.Count == 0)
+            {
+                sql = string.Format("insert into t_patient(p_name,p_sex,p_age,p_tel,p_ID,p_health_type,p_address,p_dialyse_hospital,p_dialyse_hospital_contact," +
+                    "p_dialyse_hospital_tel) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')",
+                    name, sex, age, tel, ID, yblx, address, ctxyy, ctxyylxr, ctxyylxrdh);
+                flag = DBManager.getInstance().add(sql);
+                if (flag == 0)
+                {
+                    MessageBox.Show("患者信息保存失败");
+                    return;
+                }
+            }
+            else
+            {
+                sql = string.Format("update t_patient set p_name='{0}',p_sex='{1}',p_age='{2}',p_tel='{3}',p_health_type='{4}',p_address='{5}',p_dialyse_hospital='{6}'," +
+                 "p_dialyse_hospital_contact='{7}',p_dialyse_hospital_tel='{8}' where p_ID='{9}'",
+                    name, sex, age, tel, yblx, address, ctxyy, ctxyylxr, ctxyylxrdh, ID);
+                flag = DBManager.getInstance().edit(sql);
+                if (flag == 0)
+                {
+                    MessageBox.Show("患者信息保存失败");
+                    return;
+                }
+            }
+
+            //保存手术录入单
+            sql = string.Format("insert into t_record(r_patient_ID,r_date,r_ss_address,r_ss_type,r_ss_method,r_cc_method,r_zd_docotor,r_zs,r_qxhs," +
+                   "r_ss_record,r_is_sszz) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','否')", ID, ssrq, ssdd, sslx, ssfs, ccfs, zs, qxfs, ssjl, zdys);
+            flag = DBManager.getInstance().add(sql);
+            if (flag > 0)
+            {
+                MessageBox.Show("保存成功");
+                this.tbSSLR_NAME.Text = "";//患者姓名
+                this.cbSSLR_SEX.Text = "";//性别
+                this.tbSSLR_AGE.Text = "";//年龄
+                this.tbSSLR_TEL.Text = "";//手机号
+                this.tbSSLR_ID.Text = "";//身份证号
+                this.cbSSLR_YBLX.Text = "";//医保类型
+                this.tbSSLR_PROVINCE.Text = "";//省
+                this.tbSSLR_CITY.Text = "";//市
+                this.tbSSLR_COUNTY.Text = "";//县
+                this.tbSSLR_CTXYY.Text = "";//常透析医院
+                this.tbSSLR_CTXYYLXR.Text = "";//常透析医院联系人
+                this.tbSSLR_CTXYYLXRDH.Text = "";//常透析医院联系人电话
+                this.tbSSLR_SSRQ.Text = "";//手术日期
+                this.cbSSLR_SSDD.Text = "";//手术地点
+                this.cbSSLR_SSLX.Text = "";//手术类型
+                this.cbSSLR_SSFS.Text = "";//手术方式
+                this.cbSSLR_CCFS.Text = "";//穿刺方式
+                this.rtbSSLR_SSJL.Text = "";//手术记录
+                this.tbSSLR_ZDYS.Text = "";//主刀医生
+                this.tbSSLR_ZS.Text = "";//助手
+                this.tbSSLR_QXFS.Text = "";//器械护士
+            }
+            else
+            {
+                MessageBox.Show("保存失败");
+            }
+            
         }
 
         //监听身份证输入
@@ -812,48 +881,305 @@ namespace xzj
                 //int flag = 0;
                 for (int i = 0; i < 17; i++)
                 {
-                    
-                    if (!UtilTools.IsNumber(this.tbSSLR_ID.Text.ToString().Substring(i, 1)))
+
+                    if (!UtilTools.IsNumber(this.tbSSLR_ID.Text.ToString().Substring(i, 1)) && UtilTools.getAgeByID(this.tbSSLR_ID.Text) <=0)
                     {
                         MessageBox.Show("身份证输入有误");
                         return;
                     }
-                   // flag++;
+                    // flag++;
                 }
-                this.tbSSLR_AGE.Text = UtilTools.getAgeByID(this.tbSSLR_ID.Text)+"";
+                this.tbSSLR_AGE.Text = UtilTools.getAgeByID(this.tbSSLR_ID.Text) + "";
             }
         }
 
         //取消手术记录
         private void btnRecordClear_Click(object sender, EventArgs e)
         {
-            this.tbSSLR_NAME.Text = "";//患者姓名
-            this.cbSSLR_SEX.Text = "";//性别
-            this.tbSSLR_AGE.Text = "";//年龄
-            this.tbSSLR_TEL.Text = "";//手机号
-            this.tbSSLR_ID.Text = "";//身份证号
-            this.cbSSLR_YBLX.Text = "";//医保类型
-            this.tbSSLR_PROVINCE.Text = "";//省
-            this.tbSSLR_CITY.Text = "";//市
-            this.tbSSLR_COUNTY.Text = "";//县
-            this.tbSSLR_CTXYY.Text = "";//常透析医院
-            this.tbSSLR_CTXYYLXR.Text = "";//常透析医院联系人
-            this.tbSSLR_CTXYYLXRDH.Text = "";//常透析医院联系人电话
-            this.tbSSLR_SSRQ.Text = UtilTools.getDayAndTime();;//手术日期
-            this.cbSSLR_SSDD.Text = "";//手术地点
-            this.cbSSLR_SSLX.Text = "";//手术类型
-            this.cbSSLR_SSFS.Text = "";//手术方式
-            this.cbSSLR_CCFS.Text = "";//穿刺方式
-            this.rtbSSLR_SSJL.Text = "";//手术记录
-            this.tbSSLR_ZDYS.Text = "";//主刀医生
-            this.tbSSLR_ZS.Text = "";//助手
-            this.tbSSLR_QXFS.Text = "";//器械护士
+            //    this.tbSSLR_NAME.Text = "";//患者姓名
+            //    this.cbSSLR_SEX.Text = "";//性别
+            //    this.tbSSLR_AGE.Text = "";//年龄
+            //    this.tbSSLR_TEL.Text = "";//手机号
+            //    this.tbSSLR_ID.Text = "";//身份证号
+            //    this.cbSSLR_YBLX.Text = "";//医保类型
+            //    this.tbSSLR_PROVINCE.Text = "";//省
+            //    this.tbSSLR_CITY.Text = "";//市
+            //    this.tbSSLR_COUNTY.Text = "";//县
+            //    this.tbSSLR_CTXYY.Text = "";//常透析医院
+            //    this.tbSSLR_CTXYYLXR.Text = "";//常透析医院联系人
+            //    this.tbSSLR_CTXYYLXRDH.Text = "";//常透析医院联系人电话
+            //    this.tbSSLR_SSRQ.Text = UtilTools.getDayAndTime();;//手术日期
+            //    this.cbSSLR_SSDD.Text = "";//手术地点
+            //    this.cbSSLR_SSLX.Text = "";//手术类型
+            //    this.cbSSLR_SSFS.Text = "";//手术方式
+            //    this.cbSSLR_CCFS.Text = "";//穿刺方式
+            //    this.rtbSSLR_SSJL.Text = "";//手术记录
+            //    this.tbSSLR_ZDYS.Text = "";//主刀医生
+            //    this.tbSSLR_ZS.Text = "";//助手
+            //    this.tbSSLR_QXFS.Text = "";//器械护士
+        }
+
+        //手术记录名字输入后 回车键查询
+        private void tbSSLR_NAME_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (string.IsNullOrEmpty(this.tbSSLR_NAME.Text))
+                {
+                    MessageBox.Show("请输入名称");
+                    return;
+                }
+
+                //r_patient_ID,r_date,r_ss_address,r_ss_type,r_ss_method,r_cc_method,r_zd_docotor,r_zs,r_qxhs,r_ss_record,r_is_sszz
+                string sql = string.Format("select p_name,p_sex,p_age,p_tel,p_ID,p_health_type,p_address,p_dialyse_hospital,p_dialyse_hospital_contact," +
+                    "p_dialyse_hospital_tel from t_patient where p_name='{0}'", this.tbSSLR_NAME.Text);
+                dataTable = DBManager.getInstance().find(sql);
+                if (dataTable != null && dataTable.Rows.Count > 0)
+                {
+                    if (dataTable.Rows.Count > 1)
+                    {
+                        MessageBox.Show("该名称有多个，请再输入身份证");
+                    }
+                    else
+                    {
+                        foreach (DataRow row in dataTable.Rows)
+                        {
+                            this.tbSSLR_NAME.Text = row["p_name"].ToString();//患者姓名
+                            this.cbSSLR_SEX.Text = row["p_sex"].ToString();//性别
+                            this.tbSSLR_AGE.Text = row["p_age"].ToString();//年龄
+                            this.tbSSLR_TEL.Text = row["p_tel"].ToString();//手机号
+                            this.tbSSLR_ID.Text = row["p_ID"].ToString();//身份证号
+                            this.cbSSLR_YBLX.Text = row["p_health_type"].ToString();//医保类型
+                            this.tbSSLR_PROVINCE.Text = row["p_address"].ToString().Split('-')[0];//省
+                            this.tbSSLR_CITY.Text = row["p_address"].ToString().Split('-')[1];//市
+                            this.tbSSLR_COUNTY.Text = row["p_address"].ToString().Split('-')[2];//县
+                            this.tbSSLR_CTXYY.Text = row["p_dialyse_hospital"].ToString();//常透析医院
+                            this.tbSSLR_CTXYYLXR.Text = row["p_dialyse_hospital_contact"].ToString();//常透析医院联系人
+                            this.tbSSLR_CTXYYLXRDH.Text = row["p_dialyse_hospital_tel"].ToString();//常透析医院联系人电话
+                        }
+
+                        //查询该患者的最近一次的手术记录
+                        sql = string.Format("select id,r_date,r_ss_address,r_ss_type,r_ss_method,r_cc_method,r_zd_docotor,r_zs,r_qxhs,r_ss_record,r_is_sszz" +
+                        " from t_record where r_patient_ID='{0}' order by id DESC limit 1", this.tbSSLR_ID.Text);
+                        dataTable = DBManager.getInstance().find(sql);
+                        if (dataTable != null && dataTable.Rows.Count > 0)
+                        {
+                            foreach (DataRow row in dataTable.Rows)
+                            {
+                                this.labelSSLR_SSJL_ID.Text = row["id"].ToString();//手术记录id
+                                this.tbSSLR_SSRQ.Text = row["r_date"].ToString();//手术日期
+                                this.cbSSLR_SSDD.Text = row["r_ss_address"].ToString();//手术地点
+                                this.cbSSLR_SSLX.Text = row["r_ss_type"].ToString();//手术类型
+                                this.cbSSLR_SSFS.Text = row["r_ss_method"].ToString();//手术方式
+                                this.cbSSLR_CCFS.Text = row["r_cc_method"].ToString();//穿刺方式
+                                this.rtbSSLR_SSJL.Text = row["r_ss_record"].ToString();//手术记录
+                                this.tbSSLR_ZDYS.Text = row["r_zd_docotor"].ToString();//主刀医生
+                                this.tbSSLR_ZS.Text = row["r_zs"].ToString();//助手
+                                this.tbSSLR_QXFS.Text = row["r_qxhs"].ToString();//器械护士
+                            }
+                        }
+                        
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("该名称不存在");
+                }
+
+            }
+        }
+
+        //手术记录身份证输入后 回车键查询
+        private void tbSSLR_ID_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (string.IsNullOrEmpty(this.tbSSLR_ID.Text))
+                {
+                    MessageBox.Show("请输入身份证");
+                    return;
+                }
+
+                string sql = string.Format("select p_name,p_sex,p_age,p_tel,p_ID,p_health_type,p_address,p_dialyse_hospital,p_dialyse_hospital_contact," +
+                    "p_dialyse_hospital_tel from t_patient where p_ID='{0}'", this.tbSSLR_ID.Text);
+                dataTable = DBManager.getInstance().find(sql);
+                if (dataTable != null && dataTable.Rows.Count > 0)
+                {
+                    foreach (DataRow row in dataTable.Rows)
+                    {
+                        this.tbSSLR_NAME.Text = row["p_name"].ToString();//患者姓名
+                        this.cbSSLR_SEX.Text = row["p_sex"].ToString();//性别
+                        this.tbSSLR_AGE.Text = row["p_age"].ToString();//年龄
+                        this.tbSSLR_TEL.Text = row["p_tel"].ToString();//手机号
+                        this.tbSSLR_ID.Text = row["p_ID"].ToString();//身份证号
+                        this.cbSSLR_YBLX.Text = row["p_health_type"].ToString();//医保类型
+                        this.tbSSLR_PROVINCE.Text = row["p_address"].ToString().Split('-')[0];//省
+                        this.tbSSLR_CITY.Text = row["p_address"].ToString().Split('-')[1];//市
+                        this.tbSSLR_COUNTY.Text = row["p_address"].ToString().Split('-')[2];//县
+                        this.tbSSLR_CTXYY.Text = row["p_dialyse_hospital"].ToString();//常透析医院
+                        this.tbSSLR_CTXYYLXR.Text = row["p_dialyse_hospital_contact"].ToString();//常透析医院联系人
+                        this.tbSSLR_CTXYYLXRDH.Text = row["p_dialyse_hospital_tel"].ToString();//常透析医院联系人电话
+                    }
+
+                    //查询该患者的最近一次的手术记录
+                    sql = string.Format("select id,r_date,r_ss_address,r_ss_type,r_ss_method,r_cc_method,r_zd_docotor,r_zs,r_qxhs,r_ss_record,r_is_sszz" +
+                    " from t_record where r_patient_ID='{0}' order by id DESC limit 1", this.tbSSLR_ID.Text);
+                    dataTable = DBManager.getInstance().find(sql);
+                    if (dataTable != null && dataTable.Rows.Count > 0)
+                    {
+                        foreach (DataRow row in dataTable.Rows)
+                        {
+                            this.labelSSLR_SSJL_ID.Text = row["id"].ToString();//手术记录id
+                            this.tbSSLR_SSRQ.Text = row["r_date"].ToString();//手术日期
+                            this.cbSSLR_SSDD.Text = row["r_ss_address"].ToString();//手术地点
+                            this.cbSSLR_SSLX.Text = row["r_ss_type"].ToString();//手术类型
+                            this.cbSSLR_SSFS.Text = row["r_ss_method"].ToString();//手术方式
+                            this.cbSSLR_CCFS.Text = row["r_cc_method"].ToString();//穿刺方式
+                            this.rtbSSLR_SSJL.Text = row["r_ss_record"].ToString();//手术记录
+                            this.tbSSLR_ZDYS.Text = row["r_zd_docotor"].ToString();//主刀医生
+                            this.tbSSLR_ZS.Text = row["r_zs"].ToString();//助手
+                            this.tbSSLR_QXFS.Text = row["r_qxhs"].ToString();//器械护士
+                        }
+                    }
+                   
+                }
+                else
+                {
+                    MessageBox.Show("该身份证不存在");
+                }
+            }
+
+        }
+
+       //输入数字包括小数点
+        private void decimal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar != 8 && !Char.IsDigit(e.KeyChar) && e.KeyChar != (char)('.'))//如果不是输入数字就不让输入
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        //新增手术追踪
+        private void btnSaveSSLR_SSZZ_Click(object sender, EventArgs e)
+        {
+            int recordId = -1;//手术记录id
+            try
+            {
+                recordId = Convert.ToInt32(this.labelSSLR_SSJL_ID.Text);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("请查询手术记录单，再进行跟踪");
+                return;
+            }
+            
+            string sszzqx = this.cbSSLR_SSZZQX.Text; //手术追踪期限
+            string sfrq = this.tbSSLR_SSZZ_SFRQ.Text; //随访日期
+            string ccfs = this.cbSSLR_SSZZ_CCFS.Text; //穿刺方式
+            string sfct = this.cbSSLR_SSZZ_SFTC.Text; //是否畅通
+            string ywxlbct = this.cbSSLR_SSZZ_YWXLBCT.Text; //有无血液不畅通
+            string ywxm = this.cbSSLR_SSZZ_YWXM.Text; //有无胸闷
+            string ywccbwpfgmqk = this.cbSSLR_SSZZ_YWCCBWPFGMQK.Text; //有无穿刺部位皮肤过敏情况：
+            string ywbfz = this.cbSSLR_SSZZ_YWBFZ.Text; //有无并发症
+            string ywxbjmqz = this.cbSSLR_SSZZ_YWXBJMQZ.Text; //有无胸壁静脉曲张
+            string grkzfs = this.cbSSLR_SSZZ_GRKZFS.Text; //感染控制方式
+            string nwzwdlqk = this.cbSSLR_SSZZ_NWZWDLQK.Text; //内痿自我锻炼情况
+            string ccbwpfqk = this.cbSSLR_SSZZ_CCBWPFQK.Text; //穿刺部位皮肤情况
+            string sffz = this.cbSSLR_SSZZ_SSFZ.Text; //是否复诊
+            string jmyfw = this.tbSSLR_SSZZ_JMYFW.Text; //静脉压范围
+            string sjqbxsjmy = this.tbSSLR_SSZZ_SJQBXSJMY.Text; //上机前半小时静脉压
+            string xjqbxsjmy = this.tbSSLR_SSZZ_XJQBXSJMY.Text; //下机前半小时静脉压
+            string xll = this.tbSSLR_SSZZ_XLL.Text; //血流量
+            string ypzxsj = this.tbSSLR_SSZZ_YPZXSJ.Text; //压迫止血时间
+            string zwcmjtzqk = this.tbSSLR_SSZZ_ZWQMJTZQK.Text; //自我触摸及听诊情况
+            string sfys = this.tbSSLR_SSZZ_SFYS.Text; //随访医生
+
+            if (string.IsNullOrEmpty(sszzqx)) { MessageBox.Show("【手术追踪期限】不能为空"); return; }
+            if (string.IsNullOrEmpty(sfrq)) { MessageBox.Show("【随访日期】不能为空"); return; }
+            if (string.IsNullOrEmpty(ccfs)) { MessageBox.Show("【穿刺方式】不能为空"); return; }
+            if (string.IsNullOrEmpty(sfct)) { MessageBox.Show("【是否畅通】不能为空"); return; }
+            if (string.IsNullOrEmpty(ywxlbct)) { MessageBox.Show("【有无血液不畅通】不能为空"); return; }
+            if (string.IsNullOrEmpty(ywxm)) { MessageBox.Show("【有无胸闷】不能为空"); return; }
+            if (string.IsNullOrEmpty(ywccbwpfgmqk)) { MessageBox.Show("【有无穿刺部位皮肤过敏情况】不能为空"); return; }
+            if (string.IsNullOrEmpty(ywbfz)) { MessageBox.Show("【有无并发症】不能为空"); return; }
+            if (string.IsNullOrEmpty(ywxbjmqz)) { MessageBox.Show("【有无胸壁静脉曲张】不能为空"); return; }
+            if (string.IsNullOrEmpty(grkzfs)) { MessageBox.Show("【感染控制方式】不能为空"); return; }
+            if (string.IsNullOrEmpty(nwzwdlqk)) { MessageBox.Show("【内痿自我锻炼情况】不能为空"); return; }
+            if (string.IsNullOrEmpty(ccbwpfqk)) { MessageBox.Show("【穿刺部位皮肤情况】不能为空"); return; }
+            if (string.IsNullOrEmpty(sffz)) { MessageBox.Show("【是否复诊】不能为空"); return; }
+            if (string.IsNullOrEmpty(jmyfw)) { MessageBox.Show("【静脉压范围】不能为空"); return; }
+            if (string.IsNullOrEmpty(sjqbxsjmy)) { MessageBox.Show("【上机前半小时静脉压】不能为空"); return; }
+            if (string.IsNullOrEmpty(xjqbxsjmy)) { MessageBox.Show("【下机前半小时静脉压】不能为空"); return; }
+            if (string.IsNullOrEmpty(xll)) { MessageBox.Show("【血流量】不能为空"); return; }
+            if (string.IsNullOrEmpty(ypzxsj)) { MessageBox.Show("【压迫止血时间】不能为空"); return; }
+            if (string.IsNullOrEmpty(zwcmjtzqk)) { MessageBox.Show("【自我触摸及听诊情况】不能为空"); return; }
+            if (string.IsNullOrEmpty(sfys)) { MessageBox.Show("【随访医生】不能为空"); return; }
+
+            //判断手术记录是否存在
+            string sql = string.Format("select * from t_record where id={0}", recordId);
+            dataTable = DBManager.getInstance().find(sql);
+            if (dataTable == null && dataTable.Rows.Count == 0)
+            {
+                MessageBox.Show("手术记录为空，不能进行打术跟踪");
+                return;
+            }
+
+            sql = string.Format("insert into t_track(t_record_id,t_sszz_deadline,t_sfrq,t_ccfs,t_ssct,t_ywxlbct,t_ywxm,t_ywccbwphgmqk,t_ywbfz,t_ywxbjmqz," +
+                "t_grkzfs,t_nwzwdlqk,t_ccbwpfqk,t_sffz,t_jmqzfw,t_sjqbxsjmy,t_xjqbxsjmy,t_xll,t_ypzxsj,t_zwcmzcjtzqk,t_sfys)"+
+                " values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}')",
+                   recordId,sszzqx, sfrq, ccfs, sfct, ywxlbct, ywxm, ywccbwpfgmqk, ywbfz, ywxbjmqz, grkzfs, nwzwdlqk, ccbwpfqk, sffz, jmyfw, sjqbxsjmy, xjqbxsjmy, xll, ypzxsj, zwcmjtzqk, sfys);
+            int flag = DBManager.getInstance().add(sql);
+            if (flag > 0)
+            {
+                MessageBox.Show("保存成功");
+            }
+            else
+            {
+                MessageBox.Show("保存失败");
+            }
+        }
+
+        //数据查询-->手术记录单
+        private void btnSJCX_SSJLD_Click(object sender, EventArgs e)
+        {
+            initSJCX();
+        }
+
+        //数据查询-->手术追踪单
+        private void btnSJCX_SSZZCX_Click(object sender, EventArgs e)
+        {
+            this.btnSJCX_SSZZCX.ForeColor = ColorTranslator.FromHtml("#3399ff");
+            this.btnSJCX_SSZZCX.BackColor = Color.White;
+
+            this.btnSJCX_SSJLD.ForeColor = Color.White;
+            this.btnSJCX_SSJLD.BackColor = ColorTranslator.FromHtml("#3399ff");
+
+            this.panelSJCX_SSZZD.Visible = true;
+            this.panelSJCX_SSJLD.Visible = false;
+        }
+
+        //初始化数据查询界面
+        private void initSJCX()
+        {
+            this.btnSJCX_SSJLD.ForeColor = ColorTranslator.FromHtml("#3399ff");
+            this.btnSJCX_SSJLD.BackColor = Color.White;
+
+            this.btnSJCX_SSZZCX.ForeColor = Color.White;
+            this.btnSJCX_SSZZCX.BackColor = ColorTranslator.FromHtml("#3399ff");
+
+            this.panelSJCX_SSJLD.Visible = true;
+            //this.panelSJCX_SSJLD.BackColor =
+            this.panelSJCX_SSZZD.Visible = false;
+
+            string sql = string.Format("select * from t_patient p,t_record t where p.id = t.");
         }
 
        
 
         
+    }
 
        
-    }
 }

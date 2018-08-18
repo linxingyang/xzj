@@ -17,6 +17,7 @@ namespace xzj
         public FormAddEmp()
         {
             InitializeComponent();
+            this.ImeMode = System.Windows.Forms.ImeMode.OnHalf;
         }
 
         private void FormAddEmp_Load(object sender, EventArgs e)

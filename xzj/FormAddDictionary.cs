@@ -29,6 +29,7 @@ namespace xzj
         public FormAddDictionary()
         {
             InitializeComponent();
+            this.ImeMode = System.Windows.Forms.ImeMode.OnHalf;
         }
 
         private void FormAddDictionary_Load(object sender, EventArgs e)

@@ -83,7 +83,7 @@
     <Compile Include="DBDictionary.cs" />
     <Compile Include="DBEmp.cs" />
     <Compile Include="DBRecords.cs" />
-    <Compile Include="DBRoom.cs" />
+    <Compile Include="DBManager.cs" />
     <Compile Include="DBSQLite.cs" />
     <Compile Include="FormAddDictionary.cs">
       <SubType>Form</SubType>
@@ -234,6 +234,21 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\end.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
