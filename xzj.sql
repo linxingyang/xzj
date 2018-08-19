@@ -93,14 +93,13 @@ create table t_patient
 );
 
 
-
 ### 手术记录
 drop table t_record;
 create table t_record
 (
 	id int not null auto_increment,
 	r_patient_ID varchar(50),##患者身份证号
-	r_date varchar(20),##手术日期（自动生成当天时间，精确到分钟）--是否能修改时间？
+	r_date datetime,##手术日期（自动生成当天时间，精确到分钟）--是否能修改时间？
 	r_ss_address varchar(100),##手术地点（科室信息里面的医院名称）--科室信息里面的医院名称都是一样的？
 	r_ss_type varchar(50),##手术类型（下拉框：字典表-手术类型）
 	r_ss_method varchar(50),##手术方式（下拉框：字典表-手术方式）
@@ -113,6 +112,23 @@ create table t_record
 	primary key (id)
 );
 
+SET SQL_SAFE_UPDATES = 0;
+
+select 
+	p.p_name,p.p_sex,p.p_age,p.p_tel,p.p_ID,p.p_health_type,p.p_address,
+	p.p_dialyse_hospital,p.p_dialyse_hospital_contact,p.p_dialyse_hospital_tel,
+	r.r_date,r.r_ss_address,r.r_ss_type,r.r_ss_method,r.r_cc_method,r.r_zd_docotor,
+	r.r_zs,r_qxhs,r.r_ss_record,r.r_is_sszz,
+	t.t_sszz_deadline,t.t_sfrq,t.t_ccfs,t.t_ssct,t.t_ywxlbct,t.t_ywxm,
+	t.t_ywccbwphgmqk,t.t_ywbfz,t.t_ywxbjmqz,t.t_grkzfs,t.t_nwzwdlqk,t.t_ccbwpfqk,
+	t.t_sffz,t.t_jmyfw,t.t_sjqbxsjmy,t.t_xjqbxsjmy,t.t_xll,t.t_ypzxsj,t.t_zwcmzcjtzqk,
+	t.t_sfys
+from t_patient p,t_record r,t_track t
+where 
+	p.p_ID = r.r_patient_ID
+	and r.id = t.t_record_id
+	and p.p_ID = '522126186825365632';
+
 
 
 ### 手术追踪表
@@ -121,7 +137,6 @@ create table t_track
 (
 	id int not null auto_increment,
 	t_record_id varchar(50),##手术记录id
-	##t_record_name varchar(50),##患者姓名(选项)，
  	t_sszz_deadline varchar(50),##手术追踪期限(下拉框，在手术字典，医生按照自己的要求添加)
 	t_sfrq varchar(20),## 随访日期(自动生成，精确到分)，
 	t_ccfs varchar(50),## 穿刺方式(自动生成)，
@@ -135,7 +150,7 @@ create table t_track
 	t_nwzwdlqk varchar(50),##内瘘自我锻炼情况(手术字典)，
 	t_ccbwpfqk varchar(50),##穿刺部位皮肤情况(手术字典)，
 	t_sffz char(1),##是否复诊，0否 非0是
-	t_jmqzfw varchar(50),##静脉压范围，
+	t_jmyfw varchar(50),##静脉压范围，
 	t_sjqbxsjmy varchar(50),##上机前半小时静脉压，
 	t_xjqbxsjmy varchar(50),##下机前半小时静脉压，
 	t_xll varchar(50),##血流量，

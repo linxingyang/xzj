@@ -238,12 +238,14 @@ namespace xzj
             this.btnSJCX.BackColor = ColorTranslator.FromHtml("#0000cd");
             this.btnCJFX.BackColor = ColorTranslator.FromHtml("#3399ff");
             this.btnKSGL.BackColor = ColorTranslator.FromHtml("#0000cd");
-            this.panelCJFX.BackColor = ColorTranslator.FromHtml("#ff0033");
+            //this.panelCJFX.BackColor = ColorTranslator.FromHtml("#0000cd");
             this.panelSSLR.Visible = false;
             this.panelZDGL.Visible = false;
             this.panelSJCX.Visible = false;
             this.panelCJFX.Visible = true;
             this.panelKSGL.Visible = false;
+
+            initTjfx();
         }
 
         //科室管理
@@ -555,9 +557,9 @@ namespace xzj
             if (dataTable != null && dataTable.Rows.Count > 0)
             {
                 //hispitorName, hispitorAddress, province, rank, postcode, roomName, roomTel, roomFax, roomFZR, roomFZRZC, roomFZRDH, roomFZRSJ, roomFZRYX, roomTXZXMJ, roomTXDYMJ, roomKSRQ
-                sql = string.Format("update t_room set r_address='{1}',r_province='{2}', r_rank='{3}', r_postcodes='{4}', r_room_tel='{6}'," +
+                sql = string.Format("update t_room set r_hospital_name='{0}',r_address='{1}',r_province='{2}', r_rank='{3}', r_postcodes='{4}', r_room_name='{5}', r_room_tel='{6}'," +
                 "r_room_fax='{7}',r_responsible='{8}',r_responsible_title='{9}', r_responsible_tel='{10}', r_responsible_phone='{11}',  r_responsible_email='{12}'," +
-                " r_dialyse_center_area='{13}', r_dialyse_unit_area='{14}', r_start_date='{15}', r_start_date='{15}' where id=0",
+                " r_dialyse_center_area='{13}', r_dialyse_unit_area='{14}', r_start_date='{15}' where id=0",
                  hispitorName, hispitorAddress, province, rank, postcode, roomName, roomTel, roomFax, roomFZR, roomFZRZC, roomFZRDH,
                  roomFZRSJ, roomFZRYX, roomTXZXMJ, roomTXDYMJ, roomKSRQ);
                 flag = DBManager.getInstance().edit(sql);
@@ -779,7 +781,7 @@ namespace xzj
             string zs = this.tbSSLR_ZS.Text;//助手
             string qxfs = this.tbSSLR_QXFS.Text;//器械护士
 
-            string address = province + "-" + city + "-" + county;
+            string address = province + "-" + city + "-" + county+"-";
 
             //
 
@@ -839,7 +841,7 @@ namespace xzj
 
             //保存手术录入单
             sql = string.Format("insert into t_record(r_patient_ID,r_date,r_ss_address,r_ss_type,r_ss_method,r_cc_method,r_zd_docotor,r_zs,r_qxhs," +
-                   "r_ss_record,r_is_sszz) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','否')", ID, ssrq, ssdd, sslx, ssfs, ccfs, zs, qxfs, ssjl, zdys);
+                   "r_ss_record,r_is_sszz) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','否')", ID, ssrq, ssdd, sslx, ssfs, ccfs, zdys,zs, qxfs, ssjl);
             flag = DBManager.getInstance().add(sql);
             if (flag > 0)
             {
@@ -1122,18 +1124,42 @@ namespace xzj
             dataTable = DBManager.getInstance().find(sql);
             if (dataTable == null && dataTable.Rows.Count == 0)
             {
-                MessageBox.Show("手术记录为空，不能进行打术跟踪");
+                MessageBox.Show("手术记录为空，不能进行手术跟踪");
                 return;
             }
 
+            //判断手术记录的手术追踪是否存在
+            sql = string.Format("select * from t_track where t_record_id={0}", recordId);
+            dataTable = DBManager.getInstance().find(sql);
+            if (dataTable != null && dataTable.Rows.Count > 0)
+            {
+                DialogResult dr = MessageBox.Show("该手术已追踪，是否继续追踪?", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr != DialogResult.Yes)
+                {
+                    return;
+                }
+            }
+
+            //添加手术追踪
             sql = string.Format("insert into t_track(t_record_id,t_sszz_deadline,t_sfrq,t_ccfs,t_ssct,t_ywxlbct,t_ywxm,t_ywccbwphgmqk,t_ywbfz,t_ywxbjmqz," +
-                "t_grkzfs,t_nwzwdlqk,t_ccbwpfqk,t_sffz,t_jmqzfw,t_sjqbxsjmy,t_xjqbxsjmy,t_xll,t_ypzxsj,t_zwcmzcjtzqk,t_sfys)"+
+                "t_grkzfs,t_nwzwdlqk,t_ccbwpfqk,t_sffz,t_jmyfw,t_sjqbxsjmy,t_xjqbxsjmy,t_xll,t_ypzxsj,t_zwcmzcjtzqk,t_sfys)"+
                 " values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}')",
                    recordId,sszzqx, sfrq, ccfs, sfct, ywxlbct, ywxm, ywccbwpfgmqk, ywbfz, ywxbjmqz, grkzfs, nwzwdlqk, ccbwpfqk, sffz, jmyfw, sjqbxsjmy, xjqbxsjmy, xll, ypzxsj, zwcmjtzqk, sfys);
             int flag = DBManager.getInstance().add(sql);
             if (flag > 0)
             {
-                MessageBox.Show("保存成功");
+                //修改手术记录为已追踪
+                sql = string.Format("update t_record set r_is_sszz='是' where id={0}", recordId);
+                flag = DBManager.getInstance().edit(sql);
+                if (flag > 0)
+                {
+                    MessageBox.Show("保存成功");
+                }
+                else
+                {
+                    MessageBox.Show("保存失败");
+                }
+                //MessageBox.Show("保存成功");
             }
             else
             {
@@ -1158,6 +1184,28 @@ namespace xzj
 
             this.panelSJCX_SSZZD.Visible = true;
             this.panelSJCX_SSJLD.Visible = false;
+
+            string sql = "select 姓名,性别,年龄,医保类型,穿刺方式,手术类型,常透析医院,联系电话,是否手术追踪" +
+                        "t.t_sszz_deadline,t.t_sfrq,t.t_ccfs,t.t_ssct,t.t_ywxlbct,t.t_ywxm, " +
+                        "t.t_ywccbwphgmqk,t.t_ywbfz,t.t_ywxbjmqz,t.t_grkzfs,t.t_nwzwdlqk,t.t_ccbwpfqk, " +
+                        "t.t_sffz,t.t_jmyfw,t.t_sjqbxsjmy,t.t_xjqbxsjmy,t.t_xll,t.t_ypzxsj,t.t_zwcmzcjtzqk, " +
+                        "t.t_sfys " +
+                    "from t_track t";
+            findSSZZ(sql);
+        }
+
+        //查询手术追踪
+        private void findSSZZ(string sql)
+        {
+            dataTable = DBManager.getInstance().find(sql);
+            if (dataTable != null && dataTable.Rows.Count > 0)
+            {
+                this.dgvSJCX_RECORDS.DataSource = dataTable;
+                this.dgvSJCX_RECORDS.Columns[0].Visible = false;
+                this.dgvSJCX_RECORDS.Columns[1].Width = 80;
+                this.dgvSJCX_RECORDS.Columns[2].Width = 130;
+            }
+            //dgvSJCX_RECORDS
         }
 
         //初始化数据查询界面
@@ -1170,10 +1218,319 @@ namespace xzj
             this.btnSJCX_SSZZCX.BackColor = ColorTranslator.FromHtml("#3399ff");
 
             this.panelSJCX_SSJLD.Visible = true;
-            //this.panelSJCX_SSJLD.BackColor =
             this.panelSJCX_SSZZD.Visible = false;
 
-            string sql = string.Format("select * from t_patient p,t_record t where p.id = t.");
+            this.gbSJCX_SSJLD_SSZZ.Visible = false;
+
+            string sql = string.Format("select r.id 'id',p.p_name '姓名',r.r_date '手术日期' from t_patient p,t_record r where p.p_ID = r.r_patient_ID");
+            selectRecords(sql);
+
+            sql = string.Format("select r_hospital_name,r_room_name from t_room");
+            dataTable = DBManager.getInstance().find(sql);
+            if (dataTable != null && dataTable.Rows.Count > 0)
+            {
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    this.labelSSJLD_TITLE.Text = row["r_hospital_name"].ToString() + row["r_room_name"].ToString();
+                }
+            }
+
+            initRecord();
+            
+        }
+
+        //初始化手术记录单
+        private void initRecord()
+        {
+            this.cbSJCX_XSSSZZ.Checked = false;
+
+            this.all_name.Text = "";
+            this.all_sex.Text = "";
+            this.all_age.Text = "";
+            this.all_tel.Text = "";
+            this.all_ID.Text = "";
+            this.all_yblx.Text = "";
+            this.all_czdz.Text = "";
+            this.all_ctxyy.Text = "";
+            this.all_ctxyylxr.Text = "";
+            this.all_ctxyylxrdh.Text = "";
+            this.all_ssrq.Text = "";
+            this.all_ssdd.Text = "";
+            this.all_sslx.Text = "";
+            this.all_ssfs.Text = "";
+            this.all_ccfs.Text = "";
+            //this.all_ccfs_1.Text = row["r_cc_method"].ToString();
+            this.all_zdys.Text = "";
+            this.all_zs.Text = "";
+            this.all_qxhs.Text = "";
+            this.all_ssjl.Text = "";
+            //this.all_name.Text = row["r_is_sszz"].ToString();
+            this.all_sszzqx.Text = "";
+            this.all_sfrq.Text = "";
+            this.all_ccfs_1.Text = "";
+            this.all_ssct.Text = "";
+            this.all_ywxlbct.Text = "";
+            this.all_ywxm.Text = "";
+            this.all_ywccbwpfgmqk.Text = "";
+            this.all_ywbfz.Text = "";
+            this.all_ywxbjmqz.Text = "";
+            this.all_grkzfs.Text = "";
+            this.all_nwzwdlqk.Text = "";
+            this.all_ccbwpfqk.Text = "";
+            this.all_sffz.Text = "";
+            this.all_grkzfs.Text = "";
+            this.all_jmyfw.Text = "";
+            this.all_sjqbxsjmy.Text = "";
+            this.all_xjqbxsjmy.Text = "";
+            this.all_xll.Text = "";
+            this.all_ypzxsj.Text = "";
+            this.all_zwcmzcjtzqk.Text = "";
+            this.all_sfys.Text = "";
+        }
+
+        //设置手术记录列表
+        private void selectRecords(string sql)
+        {
+            this.dgvSJCX_RECORDS.DataSource = null;
+            dataTable = DBManager.getInstance().find(sql);
+            if (dataTable != null && dataTable.Rows.Count > 0)
+            {
+                this.dgvSJCX_RECORDS.DataSource = dataTable;
+                this.dgvSJCX_RECORDS.Columns[0].Visible = false;
+                this.dgvSJCX_RECORDS.Columns[1].Width = 80;
+                this.dgvSJCX_RECORDS.Columns[2].Width = 130;
+            }
+        }
+
+        //搜索手术记录单
+        private void btnSJCX_FIND_RECORDS_Click(object sender, EventArgs e)
+        {
+            this.cbSJCX_XSSSZZ.Checked = false;
+            string name = this.tbSJCX_NAME.Text;//姓名
+            string kssj = this.dtpSJCX_KSSJ.Value.ToString( "yyyy-MM-dd hh:mm:ss");//开始时间
+            string jssj = this.dtpSJCX_JSSJ.Value.ToString("yyyy-MM-dd hh:mm:ss");//结束时间
+
+            string sqlStr = "select r.id '身份证',p.p_name '姓名',r.r_date '手术日期' from t_patient p,t_record r where p.p_ID = r.r_patient_ID " +
+                "and r.r_date > '{0}' and r.r_date <= '{1}' ";
+            if (!string.IsNullOrEmpty(name))
+            {
+                sqlStr += "and p.p_name like '%{2}%' ";
+            }
+
+            //sqlStr += " GROUP BY p.p_ID";
+            string sql = string.Format(sqlStr,kssj,jssj,name);
+            selectRecords(sql);
+        }
+
+        //选中手术记录-》弹出手术记录及患者信息
+        private void dgvSJCX_RECORDS_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            initRecord();
+            int index = this.dgvSJCX_RECORDS.CurrentRow.Index;
+            string id = this.dgvSJCX_RECORDS.Rows[index].Cells[0].Value.ToString();
+            
+            string sql = string.Format(
+                "select "+
+	                "p.p_name,p.p_sex,p.p_age,p.p_tel,p.p_ID,p.p_health_type,p.p_address, "+
+                    "p.p_dialyse_hospital,p.p_dialyse_hospital_contact,p.p_dialyse_hospital_tel, " +
+                    "r.r_date,r.r_ss_address,r.r_ss_type,r.r_ss_method,r.r_cc_method,r.r_zd_docotor, " +
+                    "r.r_zs,r_qxhs,r.r_ss_record,r.r_is_sszz " +
+                "from t_patient p,t_record r " +
+                "where  " +
+                    "p.p_ID = r.r_patient_ID " +
+                    "and r.id={0}", id
+            );
+            dataTable = DBManager.getInstance().find(sql);
+            if (dataTable != null && dataTable.Rows.Count > 0)
+            {
+                foreach(DataRow row in dataTable.Rows)
+                {
+                    this.all_name.Text = row["p_name"].ToString();
+                    this.all_sex.Text = row["p_sex"].ToString();
+                    this.all_age.Text = row["p_age"].ToString();
+                    this.all_tel.Text = row["p_tel"].ToString();
+                    this.all_ID.Text = row["p_ID"].ToString();
+                    this.all_yblx.Text = row["p_health_type"].ToString();
+                    this.all_czdz.Text = row["p_address"].ToString();
+                    this.all_ctxyy.Text = row["p_dialyse_hospital"].ToString();
+                    this.all_ctxyylxr.Text = row["p_dialyse_hospital_contact"].ToString();
+                    this.all_ctxyylxrdh.Text = row["p_dialyse_hospital_tel"].ToString();
+                    this.all_ssrq.Text = row["r_date"].ToString();
+                    this.all_ssdd.Text = row["r_ss_address"].ToString();
+                    this.all_sslx.Text = row["r_ss_type"].ToString();
+                    this.all_ssfs.Text = row["r_ss_method"].ToString();
+                    this.all_ccfs.Text = row["r_cc_method"].ToString();
+                    //this.all_ccfs_1.Text = row["r_cc_method"].ToString();
+                    this.all_zdys.Text = row["r_zd_docotor"].ToString();
+                    this.all_zs.Text = row["r_zs"].ToString();
+                    this.all_qxhs.Text = row["r_qxhs"].ToString();
+                    this.all_ssjl.Text = row["r_ss_record"].ToString();
+                }
+            }
+        }
+
+        //是否显示手术追踪
+        private void cbSJCX_XSSSZZ_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox cb =  (CheckBox)sender;
+
+            if (this.dgvSJCX_RECORDS.CurrentRow == null)
+            {
+                MessageBox.Show("你还没有选择一条记录，不能显示手术追踪");
+                return;
+            }
+            
+            this.gbSJCX_SSJLD_SSZZ.Visible = cb.Checked;
+            if (cb.Checked)
+            {
+                int index = this.dgvSJCX_RECORDS.CurrentRow.Index;
+                string id = this.dgvSJCX_RECORDS.Rows[index].Cells[0].Value.ToString();
+
+                string sql = string.Format(
+                    "select " +
+                        "t.t_sszz_deadline,t.t_sfrq,t.t_ccfs,t.t_ssct,t.t_ywxlbct,t.t_ywxm, " +
+                        "t.t_ywccbwphgmqk,t.t_ywbfz,t.t_ywxbjmqz,t.t_grkzfs,t.t_nwzwdlqk,t.t_ccbwpfqk, " +
+                        "t.t_sffz,t.t_jmyfw,t.t_sjqbxsjmy,t.t_xjqbxsjmy,t.t_xll,t.t_ypzxsj,t.t_zwcmzcjtzqk, " +
+                        "t.t_sfys " +
+                    "from t_track t " +
+                    "where t_record_id={0}", id
+                );
+                dataTable = DBManager.getInstance().find(sql);
+                if (dataTable != null && dataTable.Rows.Count > 0)
+                {
+                    foreach (DataRow row in dataTable.Rows)
+                    {
+                        this.all_sszzqx.Text = row["t_sszz_deadline"].ToString();
+                        this.all_sfrq.Text = row["t_sfrq"].ToString();
+                        this.all_ccfs_1.Text = row["t_ccfs"].ToString();
+                        this.all_ssct.Text = row["t_ssct"].ToString();
+                        this.all_ywxlbct.Text = row["t_ywxlbct"].ToString();
+                        this.all_ywxm.Text = row["t_ywxm"].ToString();
+                        this.all_ywccbwpfgmqk.Text = row["t_ywccbwphgmqk"].ToString();
+                        this.all_ywbfz.Text = row["t_ywbfz"].ToString();
+                        this.all_ywxbjmqz.Text = row["t_ywxbjmqz"].ToString();
+                        this.all_grkzfs.Text = row["t_grkzfs"].ToString();
+                        this.all_nwzwdlqk.Text = row["t_nwzwdlqk"].ToString();
+                        this.all_ccbwpfqk.Text = row["t_ccbwpfqk"].ToString();
+                        this.all_sffz.Text = row["t_sffz"].ToString();
+                        this.all_grkzfs.Text = row["t_grkzfs"].ToString();
+                        this.all_jmyfw.Text = row["t_jmyfw"].ToString();
+                        this.all_sjqbxsjmy.Text = row["t_sjqbxsjmy"].ToString();
+                        this.all_xjqbxsjmy.Text = row["t_xjqbxsjmy"].ToString();
+                        this.all_xll.Text = row["t_xll"].ToString();
+                        this.all_ypzxsj.Text = row["t_ypzxsj"].ToString();
+                        this.all_zwcmzcjtzqk.Text = row["t_zwcmzcjtzqk"].ToString();
+                        this.all_sfys.Text = row["t_sfys"].ToString();
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("该记录没有手术追踪");
+                }
+            }
+        }
+
+        //查询手术追踪
+        private void btnSJCX_SSZZ_FIND_Click(object sender, EventArgs e)
+        {
+            string name = this.tbSJCX_SSZZ_NAME.Text;//姓名
+            string kssj = this.dtpSJCX_SSZZ_KSRQ.Value.ToString("yyyy-MM-dd hh:mm:ss");//开始时间
+            string jssj = this.dtpSJCX_SSZZ_JSRQ.Value.ToString("yyyy-MM-dd hh:mm:ss");//结束时间
+            string sszz = this.cbSJCX_SSZZ_CXTJ.Text;//追踪状态 未追踪 已追踪  全部
+
+            string sql = "select p.p_name 姓名,p.p_sex 性别,p.p_age 年龄,p.p_health_type 医保类型,r.r_cc_method 穿刺方式,r.r_ss_type 手术类型,"+
+                "p.p_dialyse_hospital 常透析医院,p.p_tel 联系电话,r.r_is_sszz 是否手术跟踪" +
+                " from t_patient p,t_record r where r_date>'{0}' and r_date<'{1}' ";
+            if (!string.IsNullOrEmpty(name))
+            {
+                sql += "and p.p_name like '%"+name+"%' ";
+            }
+
+            if (!string.IsNullOrEmpty(sszz))
+            {
+                if (sszz.Equals("已追踪"))
+                {
+                    sql += "and r.r_is_sszz = '是' ";
+                }
+                else if (sszz.Equals("未追踪"))
+                {
+                    sql += "and r.r_is_sszz = '否' ";
+                }
+            }
+
+            dataTable = DBManager.getInstance().find(string.Format(sql, kssj, jssj));
+
+            if (dataTable == null || dataTable.Rows.Count == 0)
+            {
+                MessageBox.Show("当前数据为空");
+            }
+            else
+            {
+                this.dgvSJCX_SSZZ.DataSource = dataTable;
+            }
+            //
+        }
+
+        //基本信息统计
+        private void btnTJFX_JBXXTJ_Click(object sender, EventArgs e)
+        {
+
+            initTjfx();
+        }
+
+        //初始化信息统计
+        private void initTjfx()
+        {
+            this.btnTJFX_JBXXTJ.ForeColor = ColorTranslator.FromHtml("#3399ff");
+            this.btnTJFX_JBXXTJ.BackColor = Color.White;
+
+            this.btnTJFX_SSTJ.ForeColor = Color.White;
+            this.btnTJFX_SSTJ.BackColor = ColorTranslator.FromHtml("#3399ff");
+
+            this.btnTJFX_GZLTJ.ForeColor = Color.White;
+            this.btnTJFX_GZLTJ.BackColor = ColorTranslator.FromHtml("#3399ff");
+
+            this.panelTJFX_PIE.Visible = true;
+            this.panelTJFX_GZLTJ.Visible = false;
+        }
+
+        //基本信息统计饼图
+        private void JBXXTJ_PIE()
+        {
+
+        }
+
+        //手术统计
+        private void btnTJFX_SSTJ_Click(object sender, EventArgs e)
+        {
+            this.btnTJFX_SSTJ.ForeColor = ColorTranslator.FromHtml("#3399ff");
+            this.btnTJFX_SSTJ.BackColor = Color.White;
+
+            this.btnTJFX_JBXXTJ.ForeColor = Color.White;
+            this.btnTJFX_JBXXTJ.BackColor = ColorTranslator.FromHtml("#3399ff");
+
+            this.btnTJFX_GZLTJ.ForeColor = Color.White;
+            this.btnTJFX_GZLTJ.BackColor = ColorTranslator.FromHtml("#3399ff");
+
+            this.panelTJFX_PIE.Visible = true;
+            this.panelTJFX_GZLTJ.Visible = false;
+        }
+
+        //工作量统计
+        private void btnTJFX_GZLTJ_Click(object sender, EventArgs e)
+        {
+            this.btnTJFX_GZLTJ.ForeColor = ColorTranslator.FromHtml("#3399ff");
+            this.btnTJFX_GZLTJ.BackColor = Color.White;
+
+            this.btnTJFX_JBXXTJ.ForeColor = Color.White;
+            this.btnTJFX_JBXXTJ.BackColor = ColorTranslator.FromHtml("#3399ff");
+
+            this.btnTJFX_SSTJ.ForeColor = Color.White;
+            this.btnTJFX_SSTJ.BackColor = ColorTranslator.FromHtml("#3399ff");
+
+            this.panelTJFX_PIE.Visible = false;
+            this.panelTJFX_GZLTJ.Visible = true;
         }
 
        
