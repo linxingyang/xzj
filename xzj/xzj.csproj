@@ -130,6 +130,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="UtilTextAndValue.cs" />
     <Compile Include="UtilTools.cs" />
     <EmbeddedResource Include="FormAddDictionary.resx">
       <DependentUpon>FormAddDictionary.cs</DependentUpon>

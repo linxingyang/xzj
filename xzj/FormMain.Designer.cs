@@ -30,13 +30,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
             System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
             System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
             System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelAccountShow = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -228,21 +237,6 @@
             this.panel45 = new System.Windows.Forms.Panel();
             this.btnSJCX_SSZZCX = new System.Windows.Forms.Button();
             this.btnSJCX_SSJLD = new System.Windows.Forms.Button();
-            this.panelSJCX_SSZZD = new System.Windows.Forms.Panel();
-            this.panel117 = new System.Windows.Forms.Panel();
-            this.panel120 = new System.Windows.Forms.Panel();
-            this.cbSJCX_SSZZ_CXTJ = new System.Windows.Forms.ComboBox();
-            this.label155 = new System.Windows.Forms.Label();
-            this.btnSJCX_SSZZ_FIND = new System.Windows.Forms.Button();
-            this.panel118 = new System.Windows.Forms.Panel();
-            this.label152 = new System.Windows.Forms.Label();
-            this.dtpSJCX_SSZZ_JSRQ = new System.Windows.Forms.DateTimePicker();
-            this.dtpSJCX_SSZZ_KSRQ = new System.Windows.Forms.DateTimePicker();
-            this.label153 = new System.Windows.Forms.Label();
-            this.panel119 = new System.Windows.Forms.Panel();
-            this.tbSJCX_SSZZ_NAME = new System.Windows.Forms.TextBox();
-            this.label154 = new System.Windows.Forms.Label();
-            this.dgvSJCX_SSZZ = new System.Windows.Forms.DataGridView();
             this.panelSJCX_SSJLD = new System.Windows.Forms.Panel();
             this.panel51 = new System.Windows.Forms.Panel();
             this.panel102 = new System.Windows.Forms.Panel();
@@ -370,11 +364,57 @@
             this.label26 = new System.Windows.Forms.Label();
             this.panel46 = new System.Windows.Forms.Panel();
             this.label21 = new System.Windows.Forms.Label();
+            this.panelSJCX_SSZZD = new System.Windows.Forms.Panel();
+            this.panel117 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.panel120 = new System.Windows.Forms.Panel();
+            this.cbSJCX_SSZZ_CXTJ = new System.Windows.Forms.ComboBox();
+            this.label155 = new System.Windows.Forms.Label();
+            this.btnSJCX_SSZZ_FIND = new System.Windows.Forms.Button();
+            this.panel118 = new System.Windows.Forms.Panel();
+            this.label152 = new System.Windows.Forms.Label();
+            this.dtpSJCX_SSZZ_JSRQ = new System.Windows.Forms.DateTimePicker();
+            this.dtpSJCX_SSZZ_KSRQ = new System.Windows.Forms.DateTimePicker();
+            this.label153 = new System.Windows.Forms.Label();
+            this.panel119 = new System.Windows.Forms.Panel();
+            this.tbSJCX_SSZZ_NAME = new System.Windows.Forms.TextBox();
+            this.label154 = new System.Windows.Forms.Label();
+            this.dgvSJCX_SSZZ = new System.Windows.Forms.DataGridView();
             this.panelCJFX = new System.Windows.Forms.Panel();
             this.panel121 = new System.Windows.Forms.Panel();
             this.btnTJFX_GZLTJ = new System.Windows.Forms.Button();
             this.btnTJFX_SSTJ = new System.Windows.Forms.Button();
             this.btnTJFX_JBXXTJ = new System.Windows.Forms.Button();
+            this.panelTJFX_PIE = new System.Windows.Forms.Panel();
+            this.panel116 = new System.Windows.Forms.Panel();
+            this.btnCJCX_time = new System.Windows.Forms.Button();
+            this.panel123 = new System.Windows.Forms.Panel();
+            this.label31 = new System.Windows.Forms.Label();
+            this.dtpTJCX_JSSJ = new System.Windows.Forms.DateTimePicker();
+            this.dtpTJCX_KSSJ = new System.Windows.Forms.DateTimePicker();
+            this.label32 = new System.Windows.Forms.Label();
+            this.panel115 = new System.Windows.Forms.Panel();
+            this.labelTJFX_PIE_4 = new System.Windows.Forms.Label();
+            this.chartPie_4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panel103 = new System.Windows.Forms.Panel();
+            this.labelTJFX_PIE_3 = new System.Windows.Forms.Label();
+            this.panel100 = new System.Windows.Forms.Panel();
+            this.labelTJFX_PIE_2 = new System.Windows.Forms.Label();
+            this.chartPie_2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panel57 = new System.Windows.Forms.Panel();
+            this.labelTJFX_PIE_1 = new System.Windows.Forms.Label();
+            this.chartPie_1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panelTJFX_GZLTJ = new System.Windows.Forms.Panel();
+            this.dgvTJCX_GZL = new System.Windows.Forms.DataGridView();
+            this.panel124 = new System.Windows.Forms.Panel();
+            this.tbTJCX_XXTJ = new System.Windows.Forms.RadioButton();
+            this.tbTJCX_TJMS = new System.Windows.Forms.RadioButton();
+            this.btnTJFX_GZL = new System.Windows.Forms.Button();
+            this.panel125 = new System.Windows.Forms.Panel();
+            this.label29 = new System.Windows.Forms.Label();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.label39 = new System.Windows.Forms.Label();
             this.panelKSGL = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panelRoomInfoManager = new System.Windows.Forms.Panel();
@@ -456,32 +496,7 @@
             this.btnRoomEmpManager = new System.Windows.Forms.Button();
             this.btnRoomInfoManager = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panelTJFX_PIE = new System.Windows.Forms.Panel();
-            this.panel57 = new System.Windows.Forms.Panel();
-            this.panel100 = new System.Windows.Forms.Panel();
-            this.panel103 = new System.Windows.Forms.Panel();
-            this.panel115 = new System.Windows.Forms.Panel();
-            this.panel116 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.panel123 = new System.Windows.Forms.Panel();
-            this.label31 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label32 = new System.Windows.Forms.Label();
-            this.panelTJFX_GZLTJ = new System.Windows.Forms.Panel();
-            this.panel125 = new System.Windows.Forms.Panel();
-            this.label39 = new System.Windows.Forms.Label();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.label29 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.panel124 = new System.Windows.Forms.Panel();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.chartPie_one = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.labelTJFX_PIE_ONE = new System.Windows.Forms.Label();
+            this.chartPie_3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.flowLayoutForm.SuspendLayout();
@@ -554,12 +569,6 @@
             this.panel40.SuspendLayout();
             this.panelSJCX.SuspendLayout();
             this.panel45.SuspendLayout();
-            this.panelSJCX_SSZZD.SuspendLayout();
-            this.panel117.SuspendLayout();
-            this.panel120.SuspendLayout();
-            this.panel118.SuspendLayout();
-            this.panel119.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSJCX_SSZZ)).BeginInit();
             this.panelSJCX_SSJLD.SuspendLayout();
             this.panel51.SuspendLayout();
             this.panel102.SuspendLayout();
@@ -596,8 +605,28 @@
             this.panel48.SuspendLayout();
             this.panel49.SuspendLayout();
             this.panel46.SuspendLayout();
+            this.panelSJCX_SSZZD.SuspendLayout();
+            this.panel117.SuspendLayout();
+            this.panel120.SuspendLayout();
+            this.panel118.SuspendLayout();
+            this.panel119.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSJCX_SSZZ)).BeginInit();
             this.panelCJFX.SuspendLayout();
             this.panel121.SuspendLayout();
+            this.panelTJFX_PIE.SuspendLayout();
+            this.panel116.SuspendLayout();
+            this.panel123.SuspendLayout();
+            this.panel115.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartPie_4)).BeginInit();
+            this.panel103.SuspendLayout();
+            this.panel100.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartPie_2)).BeginInit();
+            this.panel57.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartPie_1)).BeginInit();
+            this.panelTJFX_GZLTJ.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTJCX_GZL)).BeginInit();
+            this.panel124.SuspendLayout();
+            this.panel125.SuspendLayout();
             this.panelKSGL.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panelRoomInfoManager.SuspendLayout();
@@ -630,15 +659,7 @@
             this.panel39.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panelTJFX_PIE.SuspendLayout();
-            this.panel57.SuspendLayout();
-            this.panel116.SuspendLayout();
-            this.panel123.SuspendLayout();
-            this.panelTJFX_GZLTJ.SuspendLayout();
-            this.panel125.SuspendLayout();
-            this.panel124.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartPie_one)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartPie_3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -1173,6 +1194,7 @@
             // 
             // cbSSLR_SSZZ_SSFZ
             // 
+            this.cbSSLR_SSZZ_SSFZ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSSLR_SSZZ_SSFZ.FormattingEnabled = true;
             this.cbSSLR_SSZZ_SSFZ.Items.AddRange(new object[] {
             "是",
@@ -1181,7 +1203,6 @@
             this.cbSSLR_SSZZ_SSFZ.Name = "cbSSLR_SSZZ_SSFZ";
             this.cbSSLR_SSZZ_SSFZ.Size = new System.Drawing.Size(115, 24);
             this.cbSSLR_SSZZ_SSFZ.TabIndex = 2;
-            this.cbSSLR_SSZZ_SSFZ.Text = "否";
             // 
             // label119
             // 
@@ -1284,6 +1305,7 @@
             // 
             // cbSSLR_SSZZ_YWXBJMQZ
             // 
+            this.cbSSLR_SSZZ_YWXBJMQZ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSSLR_SSZZ_YWXBJMQZ.FormattingEnabled = true;
             this.cbSSLR_SSZZ_YWXBJMQZ.Items.AddRange(new object[] {
             "有",
@@ -1292,7 +1314,6 @@
             this.cbSSLR_SSZZ_YWXBJMQZ.Name = "cbSSLR_SSZZ_YWXBJMQZ";
             this.cbSSLR_SSZZ_YWXBJMQZ.Size = new System.Drawing.Size(115, 24);
             this.cbSSLR_SSZZ_YWXBJMQZ.TabIndex = 2;
-            this.cbSSLR_SSZZ_YWXBJMQZ.Text = "无";
             // 
             // label123
             // 
@@ -1314,6 +1335,7 @@
             // 
             // cbSSLR_SSZZ_YWBFZ
             // 
+            this.cbSSLR_SSZZ_YWBFZ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSSLR_SSZZ_YWBFZ.FormattingEnabled = true;
             this.cbSSLR_SSZZ_YWBFZ.Items.AddRange(new object[] {
             "有",
@@ -1322,7 +1344,6 @@
             this.cbSSLR_SSZZ_YWBFZ.Name = "cbSSLR_SSZZ_YWBFZ";
             this.cbSSLR_SSZZ_YWBFZ.Size = new System.Drawing.Size(115, 24);
             this.cbSSLR_SSZZ_YWBFZ.TabIndex = 2;
-            this.cbSSLR_SSZZ_YWBFZ.Text = "无";
             // 
             // label124
             // 
@@ -1344,6 +1365,7 @@
             // 
             // cbSSLR_SSZZ_YWCCBWPFGMQK
             // 
+            this.cbSSLR_SSZZ_YWCCBWPFGMQK.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSSLR_SSZZ_YWCCBWPFGMQK.FormattingEnabled = true;
             this.cbSSLR_SSZZ_YWCCBWPFGMQK.Items.AddRange(new object[] {
             "有",
@@ -1352,7 +1374,6 @@
             this.cbSSLR_SSZZ_YWCCBWPFGMQK.Name = "cbSSLR_SSZZ_YWCCBWPFGMQK";
             this.cbSSLR_SSZZ_YWCCBWPFGMQK.Size = new System.Drawing.Size(115, 24);
             this.cbSSLR_SSZZ_YWCCBWPFGMQK.TabIndex = 2;
-            this.cbSSLR_SSZZ_YWCCBWPFGMQK.Text = "无";
             // 
             // label125
             // 
@@ -1374,6 +1395,7 @@
             // 
             // cbSSLR_SSZZ_YWXM
             // 
+            this.cbSSLR_SSZZ_YWXM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSSLR_SSZZ_YWXM.FormattingEnabled = true;
             this.cbSSLR_SSZZ_YWXM.Items.AddRange(new object[] {
             "有",
@@ -1382,7 +1404,6 @@
             this.cbSSLR_SSZZ_YWXM.Name = "cbSSLR_SSZZ_YWXM";
             this.cbSSLR_SSZZ_YWXM.Size = new System.Drawing.Size(115, 24);
             this.cbSSLR_SSZZ_YWXM.TabIndex = 2;
-            this.cbSSLR_SSZZ_YWXM.Text = "无";
             // 
             // label126
             // 
@@ -1404,6 +1425,7 @@
             // 
             // cbSSLR_SSZZ_YWXLBCT
             // 
+            this.cbSSLR_SSZZ_YWXLBCT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSSLR_SSZZ_YWXLBCT.FormattingEnabled = true;
             this.cbSSLR_SSZZ_YWXLBCT.Items.AddRange(new object[] {
             "有",
@@ -1412,7 +1434,6 @@
             this.cbSSLR_SSZZ_YWXLBCT.Name = "cbSSLR_SSZZ_YWXLBCT";
             this.cbSSLR_SSZZ_YWXLBCT.Size = new System.Drawing.Size(115, 24);
             this.cbSSLR_SSZZ_YWXLBCT.TabIndex = 2;
-            this.cbSSLR_SSZZ_YWXLBCT.Text = "无";
             // 
             // label127
             // 
@@ -1434,6 +1455,7 @@
             // 
             // cbSSLR_SSZZ_SFTC
             // 
+            this.cbSSLR_SSZZ_SFTC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSSLR_SSZZ_SFTC.FormattingEnabled = true;
             this.cbSSLR_SSZZ_SFTC.Items.AddRange(new object[] {
             "是",
@@ -1442,7 +1464,6 @@
             this.cbSSLR_SSZZ_SFTC.Name = "cbSSLR_SSZZ_SFTC";
             this.cbSSLR_SSZZ_SFTC.Size = new System.Drawing.Size(115, 24);
             this.cbSSLR_SSZZ_SFTC.TabIndex = 2;
-            this.cbSSLR_SSZZ_SFTC.Text = "否";
             // 
             // label128
             // 
@@ -2612,8 +2633,8 @@
             // 
             this.panelSJCX.BackColor = System.Drawing.Color.White;
             this.panelSJCX.Controls.Add(this.panel45);
-            this.panelSJCX.Controls.Add(this.panelSJCX_SSZZD);
             this.panelSJCX.Controls.Add(this.panelSJCX_SSJLD);
+            this.panelSJCX.Controls.Add(this.panelSJCX_SSZZD);
             this.panelSJCX.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelSJCX.Location = new System.Drawing.Point(10, 10);
             this.panelSJCX.Name = "panelSJCX";
@@ -2659,153 +2680,6 @@
             this.btnSJCX_SSJLD.Text = "手术记录单";
             this.btnSJCX_SSJLD.UseVisualStyleBackColor = false;
             this.btnSJCX_SSJLD.Click += new System.EventHandler(this.btnSJCX_SSJLD_Click);
-            // 
-            // panelSJCX_SSZZD
-            // 
-            this.panelSJCX_SSZZD.Controls.Add(this.panel117);
-            this.panelSJCX_SSZZD.Controls.Add(this.dgvSJCX_SSZZ);
-            this.panelSJCX_SSZZD.Location = new System.Drawing.Point(8, 38);
-            this.panelSJCX_SSZZD.Name = "panelSJCX_SSZZD";
-            this.panelSJCX_SSZZD.Size = new System.Drawing.Size(1242, 487);
-            this.panelSJCX_SSZZD.TabIndex = 41;
-            // 
-            // panel117
-            // 
-            this.panel117.Controls.Add(this.button2);
-            this.panel117.Controls.Add(this.panel120);
-            this.panel117.Controls.Add(this.btnSJCX_SSZZ_FIND);
-            this.panel117.Controls.Add(this.panel118);
-            this.panel117.Controls.Add(this.panel119);
-            this.panel117.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel117.Location = new System.Drawing.Point(0, 0);
-            this.panel117.Name = "panel117";
-            this.panel117.Size = new System.Drawing.Size(1242, 42);
-            this.panel117.TabIndex = 41;
-            // 
-            // panel120
-            // 
-            this.panel120.Controls.Add(this.cbSJCX_SSZZ_CXTJ);
-            this.panel120.Controls.Add(this.label155);
-            this.panel120.Location = new System.Drawing.Point(618, 1);
-            this.panel120.Name = "panel120";
-            this.panel120.Size = new System.Drawing.Size(234, 34);
-            this.panel120.TabIndex = 37;
-            // 
-            // cbSJCX_SSZZ_CXTJ
-            // 
-            this.cbSJCX_SSZZ_CXTJ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSJCX_SSZZ_CXTJ.FormattingEnabled = true;
-            this.cbSJCX_SSZZ_CXTJ.Items.AddRange(new object[] {
-            "已追踪",
-            "未追踪",
-            "全部"});
-            this.cbSJCX_SSZZ_CXTJ.Location = new System.Drawing.Point(84, 1);
-            this.cbSJCX_SSZZ_CXTJ.Name = "cbSJCX_SSZZ_CXTJ";
-            this.cbSJCX_SSZZ_CXTJ.Size = new System.Drawing.Size(121, 24);
-            this.cbSJCX_SSZZ_CXTJ.TabIndex = 2;
-            // 
-            // label155
-            // 
-            this.label155.AutoSize = true;
-            this.label155.Location = new System.Drawing.Point(3, 2);
-            this.label155.Name = "label155";
-            this.label155.Size = new System.Drawing.Size(88, 16);
-            this.label155.TabIndex = 1;
-            this.label155.Text = "查询条件：";
-            // 
-            // btnSJCX_SSZZ_FIND
-            // 
-            this.btnSJCX_SSZZ_FIND.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnSJCX_SSZZ_FIND.FlatAppearance.BorderSize = 0;
-            this.btnSJCX_SSZZ_FIND.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSJCX_SSZZ_FIND.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnSJCX_SSZZ_FIND.ForeColor = System.Drawing.Color.White;
-            this.btnSJCX_SSZZ_FIND.Location = new System.Drawing.Point(876, 2);
-            this.btnSJCX_SSZZ_FIND.Name = "btnSJCX_SSZZ_FIND";
-            this.btnSJCX_SSZZ_FIND.Size = new System.Drawing.Size(81, 26);
-            this.btnSJCX_SSZZ_FIND.TabIndex = 36;
-            this.btnSJCX_SSZZ_FIND.Text = "查询";
-            this.btnSJCX_SSZZ_FIND.UseVisualStyleBackColor = false;
-            this.btnSJCX_SSZZ_FIND.Click += new System.EventHandler(this.btnSJCX_SSZZ_FIND_Click);
-            // 
-            // panel118
-            // 
-            this.panel118.Controls.Add(this.label152);
-            this.panel118.Controls.Add(this.dtpSJCX_SSZZ_JSRQ);
-            this.panel118.Controls.Add(this.dtpSJCX_SSZZ_KSRQ);
-            this.panel118.Controls.Add(this.label153);
-            this.panel118.Location = new System.Drawing.Point(207, 0);
-            this.panel118.Name = "panel118";
-            this.panel118.Size = new System.Drawing.Size(402, 34);
-            this.panel118.TabIndex = 35;
-            // 
-            // label152
-            // 
-            this.label152.AutoSize = true;
-            this.label152.Location = new System.Drawing.Point(229, 5);
-            this.label152.Name = "label152";
-            this.label152.Size = new System.Drawing.Size(16, 16);
-            this.label152.TabIndex = 4;
-            this.label152.Text = "-";
-            // 
-            // dtpSJCX_SSZZ_JSRQ
-            // 
-            this.dtpSJCX_SSZZ_JSRQ.Location = new System.Drawing.Point(251, 0);
-            this.dtpSJCX_SSZZ_JSRQ.Name = "dtpSJCX_SSZZ_JSRQ";
-            this.dtpSJCX_SSZZ_JSRQ.Size = new System.Drawing.Size(138, 26);
-            this.dtpSJCX_SSZZ_JSRQ.TabIndex = 3;
-            // 
-            // dtpSJCX_SSZZ_KSRQ
-            // 
-            this.dtpSJCX_SSZZ_KSRQ.Location = new System.Drawing.Point(85, 0);
-            this.dtpSJCX_SSZZ_KSRQ.Name = "dtpSJCX_SSZZ_KSRQ";
-            this.dtpSJCX_SSZZ_KSRQ.Size = new System.Drawing.Size(138, 26);
-            this.dtpSJCX_SSZZ_KSRQ.TabIndex = 2;
-            // 
-            // label153
-            // 
-            this.label153.AutoSize = true;
-            this.label153.Location = new System.Drawing.Point(4, 4);
-            this.label153.Name = "label153";
-            this.label153.Size = new System.Drawing.Size(88, 16);
-            this.label153.TabIndex = 1;
-            this.label153.Text = "时间范围：";
-            // 
-            // panel119
-            // 
-            this.panel119.Controls.Add(this.tbSJCX_SSZZ_NAME);
-            this.panel119.Controls.Add(this.label154);
-            this.panel119.Location = new System.Drawing.Point(13, 2);
-            this.panel119.Name = "panel119";
-            this.panel119.Size = new System.Drawing.Size(183, 34);
-            this.panel119.TabIndex = 33;
-            // 
-            // tbSJCX_SSZZ_NAME
-            // 
-            this.tbSJCX_SSZZ_NAME.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbSJCX_SSZZ_NAME.Location = new System.Drawing.Point(47, 1);
-            this.tbSJCX_SSZZ_NAME.Name = "tbSJCX_SSZZ_NAME";
-            this.tbSJCX_SSZZ_NAME.Size = new System.Drawing.Size(128, 26);
-            this.tbSJCX_SSZZ_NAME.TabIndex = 6;
-            // 
-            // label154
-            // 
-            this.label154.AutoSize = true;
-            this.label154.Location = new System.Drawing.Point(3, 2);
-            this.label154.Name = "label154";
-            this.label154.Size = new System.Drawing.Size(56, 16);
-            this.label154.TabIndex = 1;
-            this.label154.Text = "姓名：";
-            // 
-            // dgvSJCX_SSZZ
-            // 
-            this.dgvSJCX_SSZZ.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSJCX_SSZZ.Location = new System.Drawing.Point(11, 48);
-            this.dgvSJCX_SSZZ.Name = "dgvSJCX_SSZZ";
-            this.dgvSJCX_SSZZ.ReadOnly = true;
-            this.dgvSJCX_SSZZ.RowTemplate.Height = 23;
-            this.dgvSJCX_SSZZ.Size = new System.Drawing.Size(1219, 431);
-            this.dgvSJCX_SSZZ.TabIndex = 42;
             // 
             // panelSJCX_SSJLD
             // 
@@ -4108,6 +3982,167 @@
             this.label21.TabIndex = 5;
             this.label21.Text = "查询条件";
             // 
+            // panelSJCX_SSZZD
+            // 
+            this.panelSJCX_SSZZD.Controls.Add(this.panel117);
+            this.panelSJCX_SSZZD.Controls.Add(this.dgvSJCX_SSZZ);
+            this.panelSJCX_SSZZD.Location = new System.Drawing.Point(8, 38);
+            this.panelSJCX_SSZZD.Name = "panelSJCX_SSZZD";
+            this.panelSJCX_SSZZD.Size = new System.Drawing.Size(1242, 487);
+            this.panelSJCX_SSZZD.TabIndex = 41;
+            // 
+            // panel117
+            // 
+            this.panel117.Controls.Add(this.button2);
+            this.panel117.Controls.Add(this.panel120);
+            this.panel117.Controls.Add(this.btnSJCX_SSZZ_FIND);
+            this.panel117.Controls.Add(this.panel118);
+            this.panel117.Controls.Add(this.panel119);
+            this.panel117.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel117.Location = new System.Drawing.Point(0, 0);
+            this.panel117.Name = "panel117";
+            this.panel117.Size = new System.Drawing.Size(1242, 42);
+            this.panel117.TabIndex = 41;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(972, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(81, 26);
+            this.button2.TabIndex = 38;
+            this.button2.Text = "打印";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // panel120
+            // 
+            this.panel120.Controls.Add(this.cbSJCX_SSZZ_CXTJ);
+            this.panel120.Controls.Add(this.label155);
+            this.panel120.Location = new System.Drawing.Point(618, 1);
+            this.panel120.Name = "panel120";
+            this.panel120.Size = new System.Drawing.Size(234, 34);
+            this.panel120.TabIndex = 37;
+            // 
+            // cbSJCX_SSZZ_CXTJ
+            // 
+            this.cbSJCX_SSZZ_CXTJ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSJCX_SSZZ_CXTJ.FormattingEnabled = true;
+            this.cbSJCX_SSZZ_CXTJ.Items.AddRange(new object[] {
+            "已追踪",
+            "未追踪",
+            "全部"});
+            this.cbSJCX_SSZZ_CXTJ.Location = new System.Drawing.Point(84, 1);
+            this.cbSJCX_SSZZ_CXTJ.Name = "cbSJCX_SSZZ_CXTJ";
+            this.cbSJCX_SSZZ_CXTJ.Size = new System.Drawing.Size(121, 24);
+            this.cbSJCX_SSZZ_CXTJ.TabIndex = 2;
+            // 
+            // label155
+            // 
+            this.label155.AutoSize = true;
+            this.label155.Location = new System.Drawing.Point(3, 2);
+            this.label155.Name = "label155";
+            this.label155.Size = new System.Drawing.Size(88, 16);
+            this.label155.TabIndex = 1;
+            this.label155.Text = "查询条件：";
+            // 
+            // btnSJCX_SSZZ_FIND
+            // 
+            this.btnSJCX_SSZZ_FIND.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnSJCX_SSZZ_FIND.FlatAppearance.BorderSize = 0;
+            this.btnSJCX_SSZZ_FIND.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSJCX_SSZZ_FIND.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSJCX_SSZZ_FIND.ForeColor = System.Drawing.Color.White;
+            this.btnSJCX_SSZZ_FIND.Location = new System.Drawing.Point(876, 2);
+            this.btnSJCX_SSZZ_FIND.Name = "btnSJCX_SSZZ_FIND";
+            this.btnSJCX_SSZZ_FIND.Size = new System.Drawing.Size(81, 26);
+            this.btnSJCX_SSZZ_FIND.TabIndex = 36;
+            this.btnSJCX_SSZZ_FIND.Text = "查询";
+            this.btnSJCX_SSZZ_FIND.UseVisualStyleBackColor = false;
+            this.btnSJCX_SSZZ_FIND.Click += new System.EventHandler(this.btnSJCX_SSZZ_FIND_Click);
+            // 
+            // panel118
+            // 
+            this.panel118.Controls.Add(this.label152);
+            this.panel118.Controls.Add(this.dtpSJCX_SSZZ_JSRQ);
+            this.panel118.Controls.Add(this.dtpSJCX_SSZZ_KSRQ);
+            this.panel118.Controls.Add(this.label153);
+            this.panel118.Location = new System.Drawing.Point(207, 0);
+            this.panel118.Name = "panel118";
+            this.panel118.Size = new System.Drawing.Size(402, 34);
+            this.panel118.TabIndex = 35;
+            // 
+            // label152
+            // 
+            this.label152.AutoSize = true;
+            this.label152.Location = new System.Drawing.Point(229, 5);
+            this.label152.Name = "label152";
+            this.label152.Size = new System.Drawing.Size(16, 16);
+            this.label152.TabIndex = 4;
+            this.label152.Text = "-";
+            // 
+            // dtpSJCX_SSZZ_JSRQ
+            // 
+            this.dtpSJCX_SSZZ_JSRQ.Location = new System.Drawing.Point(251, 0);
+            this.dtpSJCX_SSZZ_JSRQ.Name = "dtpSJCX_SSZZ_JSRQ";
+            this.dtpSJCX_SSZZ_JSRQ.Size = new System.Drawing.Size(138, 26);
+            this.dtpSJCX_SSZZ_JSRQ.TabIndex = 3;
+            // 
+            // dtpSJCX_SSZZ_KSRQ
+            // 
+            this.dtpSJCX_SSZZ_KSRQ.Location = new System.Drawing.Point(85, 0);
+            this.dtpSJCX_SSZZ_KSRQ.Name = "dtpSJCX_SSZZ_KSRQ";
+            this.dtpSJCX_SSZZ_KSRQ.Size = new System.Drawing.Size(138, 26);
+            this.dtpSJCX_SSZZ_KSRQ.TabIndex = 2;
+            // 
+            // label153
+            // 
+            this.label153.AutoSize = true;
+            this.label153.Location = new System.Drawing.Point(4, 4);
+            this.label153.Name = "label153";
+            this.label153.Size = new System.Drawing.Size(88, 16);
+            this.label153.TabIndex = 1;
+            this.label153.Text = "时间范围：";
+            // 
+            // panel119
+            // 
+            this.panel119.Controls.Add(this.tbSJCX_SSZZ_NAME);
+            this.panel119.Controls.Add(this.label154);
+            this.panel119.Location = new System.Drawing.Point(13, 2);
+            this.panel119.Name = "panel119";
+            this.panel119.Size = new System.Drawing.Size(183, 34);
+            this.panel119.TabIndex = 33;
+            // 
+            // tbSJCX_SSZZ_NAME
+            // 
+            this.tbSJCX_SSZZ_NAME.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbSJCX_SSZZ_NAME.Location = new System.Drawing.Point(47, 1);
+            this.tbSJCX_SSZZ_NAME.Name = "tbSJCX_SSZZ_NAME";
+            this.tbSJCX_SSZZ_NAME.Size = new System.Drawing.Size(128, 26);
+            this.tbSJCX_SSZZ_NAME.TabIndex = 6;
+            // 
+            // label154
+            // 
+            this.label154.AutoSize = true;
+            this.label154.Location = new System.Drawing.Point(3, 2);
+            this.label154.Name = "label154";
+            this.label154.Size = new System.Drawing.Size(56, 16);
+            this.label154.TabIndex = 1;
+            this.label154.Text = "姓名：";
+            // 
+            // dgvSJCX_SSZZ
+            // 
+            this.dgvSJCX_SSZZ.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSJCX_SSZZ.Location = new System.Drawing.Point(11, 48);
+            this.dgvSJCX_SSZZ.Name = "dgvSJCX_SSZZ";
+            this.dgvSJCX_SSZZ.ReadOnly = true;
+            this.dgvSJCX_SSZZ.RowTemplate.Height = 23;
+            this.dgvSJCX_SSZZ.Size = new System.Drawing.Size(1219, 431);
+            this.dgvSJCX_SSZZ.TabIndex = 42;
+            // 
             // panelCJFX
             // 
             this.panelCJFX.BackColor = System.Drawing.Color.White;
@@ -4175,6 +4210,330 @@
             this.btnTJFX_JBXXTJ.Text = "基本信息统计";
             this.btnTJFX_JBXXTJ.UseVisualStyleBackColor = false;
             this.btnTJFX_JBXXTJ.Click += new System.EventHandler(this.btnTJFX_JBXXTJ_Click);
+            // 
+            // panelTJFX_PIE
+            // 
+            this.panelTJFX_PIE.Controls.Add(this.panel116);
+            this.panelTJFX_PIE.Controls.Add(this.panel115);
+            this.panelTJFX_PIE.Controls.Add(this.panel103);
+            this.panelTJFX_PIE.Controls.Add(this.panel100);
+            this.panelTJFX_PIE.Controls.Add(this.panel57);
+            this.panelTJFX_PIE.Location = new System.Drawing.Point(13, 41);
+            this.panelTJFX_PIE.Name = "panelTJFX_PIE";
+            this.panelTJFX_PIE.Size = new System.Drawing.Size(1237, 480);
+            this.panelTJFX_PIE.TabIndex = 7;
+            // 
+            // panel116
+            // 
+            this.panel116.Controls.Add(this.btnCJCX_time);
+            this.panel116.Controls.Add(this.panel123);
+            this.panel116.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel116.Location = new System.Drawing.Point(0, 0);
+            this.panel116.Name = "panel116";
+            this.panel116.Size = new System.Drawing.Size(1237, 42);
+            this.panel116.TabIndex = 42;
+            // 
+            // btnCJCX_time
+            // 
+            this.btnCJCX_time.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnCJCX_time.FlatAppearance.BorderSize = 0;
+            this.btnCJCX_time.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCJCX_time.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnCJCX_time.ForeColor = System.Drawing.Color.White;
+            this.btnCJCX_time.Location = new System.Drawing.Point(487, 3);
+            this.btnCJCX_time.Name = "btnCJCX_time";
+            this.btnCJCX_time.Size = new System.Drawing.Size(81, 26);
+            this.btnCJCX_time.TabIndex = 36;
+            this.btnCJCX_time.Text = "统计";
+            this.btnCJCX_time.UseVisualStyleBackColor = false;
+            this.btnCJCX_time.Click += new System.EventHandler(this.btnCJCX_time_Click);
+            // 
+            // panel123
+            // 
+            this.panel123.Controls.Add(this.label31);
+            this.panel123.Controls.Add(this.dtpTJCX_JSSJ);
+            this.panel123.Controls.Add(this.dtpTJCX_KSSJ);
+            this.panel123.Controls.Add(this.label32);
+            this.panel123.Location = new System.Drawing.Point(20, 3);
+            this.panel123.Name = "panel123";
+            this.panel123.Size = new System.Drawing.Size(402, 34);
+            this.panel123.TabIndex = 35;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(229, 5);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(16, 16);
+            this.label31.TabIndex = 4;
+            this.label31.Text = "-";
+            // 
+            // dtpTJCX_JSSJ
+            // 
+            this.dtpTJCX_JSSJ.Location = new System.Drawing.Point(251, 0);
+            this.dtpTJCX_JSSJ.Name = "dtpTJCX_JSSJ";
+            this.dtpTJCX_JSSJ.Size = new System.Drawing.Size(138, 26);
+            this.dtpTJCX_JSSJ.TabIndex = 3;
+            // 
+            // dtpTJCX_KSSJ
+            // 
+            this.dtpTJCX_KSSJ.Location = new System.Drawing.Point(85, 0);
+            this.dtpTJCX_KSSJ.Name = "dtpTJCX_KSSJ";
+            this.dtpTJCX_KSSJ.Size = new System.Drawing.Size(138, 26);
+            this.dtpTJCX_KSSJ.TabIndex = 2;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(4, 4);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(88, 16);
+            this.label32.TabIndex = 1;
+            this.label32.Text = "时间范围：";
+            // 
+            // panel115
+            // 
+            this.panel115.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel115.Controls.Add(this.labelTJFX_PIE_4);
+            this.panel115.Controls.Add(this.chartPie_4);
+            this.panel115.Location = new System.Drawing.Point(625, 257);
+            this.panel115.Name = "panel115";
+            this.panel115.Size = new System.Drawing.Size(581, 219);
+            this.panel115.TabIndex = 3;
+            // 
+            // labelTJFX_PIE_4
+            // 
+            this.labelTJFX_PIE_4.AutoSize = true;
+            this.labelTJFX_PIE_4.Location = new System.Drawing.Point(297, 6);
+            this.labelTJFX_PIE_4.Name = "labelTJFX_PIE_4";
+            this.labelTJFX_PIE_4.Size = new System.Drawing.Size(72, 16);
+            this.labelTJFX_PIE_4.TabIndex = 3;
+            this.labelTJFX_PIE_4.Text = "男女比例";
+            // 
+            // chartPie_4
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chartPie_4.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartPie_4.Legends.Add(legend1);
+            this.chartPie_4.Location = new System.Drawing.Point(8, 20);
+            this.chartPie_4.Name = "chartPie_4";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.IsValueShownAsLabel = true;
+            series1.Label = "#VALX\\n[#VAL](#PERCENT)";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            this.chartPie_4.Series.Add(series1);
+            this.chartPie_4.Size = new System.Drawing.Size(550, 189);
+            this.chartPie_4.TabIndex = 2;
+            this.chartPie_4.Text = "男女比例";
+            // 
+            // panel103
+            // 
+            this.panel103.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel103.Controls.Add(this.chartPie_3);
+            this.panel103.Controls.Add(this.labelTJFX_PIE_3);
+            this.panel103.Location = new System.Drawing.Point(20, 256);
+            this.panel103.Name = "panel103";
+            this.panel103.Size = new System.Drawing.Size(581, 220);
+            this.panel103.TabIndex = 2;
+            // 
+            // labelTJFX_PIE_3
+            // 
+            this.labelTJFX_PIE_3.AutoSize = true;
+            this.labelTJFX_PIE_3.Location = new System.Drawing.Point(262, 4);
+            this.labelTJFX_PIE_3.Name = "labelTJFX_PIE_3";
+            this.labelTJFX_PIE_3.Size = new System.Drawing.Size(72, 16);
+            this.labelTJFX_PIE_3.TabIndex = 3;
+            this.labelTJFX_PIE_3.Text = "男女比例";
+            // 
+            // panel100
+            // 
+            this.panel100.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel100.Controls.Add(this.labelTJFX_PIE_2);
+            this.panel100.Controls.Add(this.chartPie_2);
+            this.panel100.Location = new System.Drawing.Point(624, 43);
+            this.panel100.Name = "panel100";
+            this.panel100.Size = new System.Drawing.Size(581, 207);
+            this.panel100.TabIndex = 1;
+            // 
+            // labelTJFX_PIE_2
+            // 
+            this.labelTJFX_PIE_2.AutoSize = true;
+            this.labelTJFX_PIE_2.Location = new System.Drawing.Point(291, 5);
+            this.labelTJFX_PIE_2.Name = "labelTJFX_PIE_2";
+            this.labelTJFX_PIE_2.Size = new System.Drawing.Size(72, 16);
+            this.labelTJFX_PIE_2.TabIndex = 3;
+            this.labelTJFX_PIE_2.Text = "男女比例";
+            // 
+            // chartPie_2
+            // 
+            chartArea3.Name = "ChartArea1";
+            this.chartPie_2.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartPie_2.Legends.Add(legend3);
+            this.chartPie_2.Location = new System.Drawing.Point(12, 19);
+            this.chartPie_2.Name = "chartPie_2";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.IsValueShownAsLabel = true;
+            series3.Label = "#VALX [#VAL](#PERCENT)";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            series3.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            this.chartPie_2.Series.Add(series3);
+            this.chartPie_2.Size = new System.Drawing.Size(552, 180);
+            this.chartPie_2.TabIndex = 2;
+            this.chartPie_2.Text = "男女比例";
+            // 
+            // panel57
+            // 
+            this.panel57.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel57.Controls.Add(this.labelTJFX_PIE_1);
+            this.panel57.Controls.Add(this.chartPie_1);
+            this.panel57.Location = new System.Drawing.Point(20, 43);
+            this.panel57.Name = "panel57";
+            this.panel57.Size = new System.Drawing.Size(581, 207);
+            this.panel57.TabIndex = 0;
+            // 
+            // labelTJFX_PIE_1
+            // 
+            this.labelTJFX_PIE_1.AutoSize = true;
+            this.labelTJFX_PIE_1.Location = new System.Drawing.Point(262, 6);
+            this.labelTJFX_PIE_1.Name = "labelTJFX_PIE_1";
+            this.labelTJFX_PIE_1.Size = new System.Drawing.Size(72, 16);
+            this.labelTJFX_PIE_1.TabIndex = 1;
+            this.labelTJFX_PIE_1.Text = "男女比例";
+            // 
+            // chartPie_1
+            // 
+            chartArea4.Name = "ChartArea1";
+            this.chartPie_1.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chartPie_1.Legends.Add(legend4);
+            this.chartPie_1.Location = new System.Drawing.Point(8, 20);
+            this.chartPie_1.Name = "chartPie_1";
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series4.IsValueShownAsLabel = true;
+            series4.Label = "#VALX[#VAL](#PERCENT)";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chartPie_1.Series.Add(series4);
+            this.chartPie_1.Size = new System.Drawing.Size(558, 180);
+            this.chartPie_1.TabIndex = 0;
+            this.chartPie_1.Text = "男女比例";
+            // 
+            // panelTJFX_GZLTJ
+            // 
+            this.panelTJFX_GZLTJ.Controls.Add(this.dgvTJCX_GZL);
+            this.panelTJFX_GZLTJ.Controls.Add(this.panel124);
+            this.panelTJFX_GZLTJ.Location = new System.Drawing.Point(13, 41);
+            this.panelTJFX_GZLTJ.Name = "panelTJFX_GZLTJ";
+            this.panelTJFX_GZLTJ.Size = new System.Drawing.Size(1237, 480);
+            this.panelTJFX_GZLTJ.TabIndex = 8;
+            // 
+            // dgvTJCX_GZL
+            // 
+            this.dgvTJCX_GZL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTJCX_GZL.Location = new System.Drawing.Point(20, 54);
+            this.dgvTJCX_GZL.Name = "dgvTJCX_GZL";
+            this.dgvTJCX_GZL.RowTemplate.Height = 23;
+            this.dgvTJCX_GZL.Size = new System.Drawing.Size(1191, 413);
+            this.dgvTJCX_GZL.TabIndex = 43;
+            // 
+            // panel124
+            // 
+            this.panel124.Controls.Add(this.tbTJCX_XXTJ);
+            this.panel124.Controls.Add(this.tbTJCX_TJMS);
+            this.panel124.Controls.Add(this.btnTJFX_GZL);
+            this.panel124.Controls.Add(this.panel125);
+            this.panel124.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel124.Location = new System.Drawing.Point(0, 0);
+            this.panel124.Name = "panel124";
+            this.panel124.Size = new System.Drawing.Size(1237, 42);
+            this.panel124.TabIndex = 42;
+            // 
+            // tbTJCX_XXTJ
+            // 
+            this.tbTJCX_XXTJ.AutoSize = true;
+            this.tbTJCX_XXTJ.Checked = true;
+            this.tbTJCX_XXTJ.Location = new System.Drawing.Point(610, 10);
+            this.tbTJCX_XXTJ.Name = "tbTJCX_XXTJ";
+            this.tbTJCX_XXTJ.Size = new System.Drawing.Size(90, 20);
+            this.tbTJCX_XXTJ.TabIndex = 38;
+            this.tbTJCX_XXTJ.TabStop = true;
+            this.tbTJCX_XXTJ.Text = "详细统计";
+            this.tbTJCX_XXTJ.UseVisualStyleBackColor = true;
+            // 
+            // tbTJCX_TJMS
+            // 
+            this.tbTJCX_TJMS.AutoSize = true;
+            this.tbTJCX_TJMS.Location = new System.Drawing.Point(498, 9);
+            this.tbTJCX_TJMS.Name = "tbTJCX_TJMS";
+            this.tbTJCX_TJMS.Size = new System.Drawing.Size(90, 20);
+            this.tbTJCX_TJMS.TabIndex = 37;
+            this.tbTJCX_TJMS.Text = "统计模式";
+            this.tbTJCX_TJMS.UseVisualStyleBackColor = true;
+            // 
+            // btnTJFX_GZL
+            // 
+            this.btnTJFX_GZL.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnTJFX_GZL.FlatAppearance.BorderSize = 0;
+            this.btnTJFX_GZL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTJFX_GZL.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnTJFX_GZL.ForeColor = System.Drawing.Color.White;
+            this.btnTJFX_GZL.Location = new System.Drawing.Point(752, 2);
+            this.btnTJFX_GZL.Name = "btnTJFX_GZL";
+            this.btnTJFX_GZL.Size = new System.Drawing.Size(81, 26);
+            this.btnTJFX_GZL.TabIndex = 36;
+            this.btnTJFX_GZL.Text = "统计";
+            this.btnTJFX_GZL.UseVisualStyleBackColor = false;
+            // 
+            // panel125
+            // 
+            this.panel125.Controls.Add(this.label29);
+            this.panel125.Controls.Add(this.dateTimePicker3);
+            this.panel125.Controls.Add(this.dateTimePicker4);
+            this.panel125.Controls.Add(this.label39);
+            this.panel125.Location = new System.Drawing.Point(20, 3);
+            this.panel125.Name = "panel125";
+            this.panel125.Size = new System.Drawing.Size(402, 34);
+            this.panel125.TabIndex = 35;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(229, 5);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(16, 16);
+            this.label29.TabIndex = 4;
+            this.label29.Text = "-";
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.Location = new System.Drawing.Point(251, 0);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(138, 26);
+            this.dateTimePicker3.TabIndex = 3;
+            // 
+            // dateTimePicker4
+            // 
+            this.dateTimePicker4.Location = new System.Drawing.Point(85, 0);
+            this.dateTimePicker4.Name = "dateTimePicker4";
+            this.dateTimePicker4.Size = new System.Drawing.Size(138, 26);
+            this.dateTimePicker4.TabIndex = 2;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(4, 4);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(88, 16);
+            this.label39.TabIndex = 1;
+            this.label39.Text = "时间范围：";
             // 
             // panelKSGL
             // 
@@ -5007,267 +5366,25 @@
             this.panel4.Size = new System.Drawing.Size(1280, 550);
             this.panel4.TabIndex = 13;
             // 
-            // button2
+            // chartPie_3
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(972, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(81, 26);
-            this.button2.TabIndex = 38;
-            this.button2.Text = "打印";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // panelTJFX_PIE
-            // 
-            this.panelTJFX_PIE.Controls.Add(this.panel116);
-            this.panelTJFX_PIE.Controls.Add(this.panel115);
-            this.panelTJFX_PIE.Controls.Add(this.panel103);
-            this.panelTJFX_PIE.Controls.Add(this.panel100);
-            this.panelTJFX_PIE.Controls.Add(this.panel57);
-            this.panelTJFX_PIE.Location = new System.Drawing.Point(13, 41);
-            this.panelTJFX_PIE.Name = "panelTJFX_PIE";
-            this.panelTJFX_PIE.Size = new System.Drawing.Size(1237, 480);
-            this.panelTJFX_PIE.TabIndex = 7;
-            // 
-            // panel57
-            // 
-            this.panel57.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel57.Controls.Add(this.labelTJFX_PIE_ONE);
-            this.panel57.Controls.Add(this.chartPie_one);
-            this.panel57.Location = new System.Drawing.Point(20, 43);
-            this.panel57.Name = "panel57";
-            this.panel57.Size = new System.Drawing.Size(581, 207);
-            this.panel57.TabIndex = 0;
-            // 
-            // panel100
-            // 
-            this.panel100.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel100.Location = new System.Drawing.Point(624, 43);
-            this.panel100.Name = "panel100";
-            this.panel100.Size = new System.Drawing.Size(581, 207);
-            this.panel100.TabIndex = 1;
-            // 
-            // panel103
-            // 
-            this.panel103.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel103.Location = new System.Drawing.Point(20, 256);
-            this.panel103.Name = "panel103";
-            this.panel103.Size = new System.Drawing.Size(581, 220);
-            this.panel103.TabIndex = 2;
-            // 
-            // panel115
-            // 
-            this.panel115.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel115.Location = new System.Drawing.Point(625, 257);
-            this.panel115.Name = "panel115";
-            this.panel115.Size = new System.Drawing.Size(581, 219);
-            this.panel115.TabIndex = 3;
-            // 
-            // panel116
-            // 
-            this.panel116.Controls.Add(this.button4);
-            this.panel116.Controls.Add(this.panel123);
-            this.panel116.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel116.Location = new System.Drawing.Point(0, 0);
-            this.panel116.Name = "panel116";
-            this.panel116.Size = new System.Drawing.Size(1237, 42);
-            this.panel116.TabIndex = 42;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(487, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(81, 26);
-            this.button4.TabIndex = 36;
-            this.button4.Text = "统计";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // panel123
-            // 
-            this.panel123.Controls.Add(this.label31);
-            this.panel123.Controls.Add(this.dateTimePicker1);
-            this.panel123.Controls.Add(this.dateTimePicker2);
-            this.panel123.Controls.Add(this.label32);
-            this.panel123.Location = new System.Drawing.Point(20, 3);
-            this.panel123.Name = "panel123";
-            this.panel123.Size = new System.Drawing.Size(402, 34);
-            this.panel123.TabIndex = 35;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(229, 5);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(16, 16);
-            this.label31.TabIndex = 4;
-            this.label31.Text = "-";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(251, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(138, 26);
-            this.dateTimePicker1.TabIndex = 3;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(85, 0);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(138, 26);
-            this.dateTimePicker2.TabIndex = 2;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(4, 4);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(88, 16);
-            this.label32.TabIndex = 1;
-            this.label32.Text = "时间范围：";
-            // 
-            // panelTJFX_GZLTJ
-            // 
-            this.panelTJFX_GZLTJ.Controls.Add(this.dataGridView1);
-            this.panelTJFX_GZLTJ.Controls.Add(this.panel124);
-            this.panelTJFX_GZLTJ.Location = new System.Drawing.Point(13, 41);
-            this.panelTJFX_GZLTJ.Name = "panelTJFX_GZLTJ";
-            this.panelTJFX_GZLTJ.Size = new System.Drawing.Size(1237, 480);
-            this.panelTJFX_GZLTJ.TabIndex = 8;
-            // 
-            // panel125
-            // 
-            this.panel125.Controls.Add(this.label29);
-            this.panel125.Controls.Add(this.dateTimePicker3);
-            this.panel125.Controls.Add(this.dateTimePicker4);
-            this.panel125.Controls.Add(this.label39);
-            this.panel125.Location = new System.Drawing.Point(20, 3);
-            this.panel125.Name = "panel125";
-            this.panel125.Size = new System.Drawing.Size(402, 34);
-            this.panel125.TabIndex = 35;
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(4, 4);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(88, 16);
-            this.label39.TabIndex = 1;
-            this.label39.Text = "时间范围：";
-            // 
-            // dateTimePicker4
-            // 
-            this.dateTimePicker4.Location = new System.Drawing.Point(85, 0);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(138, 26);
-            this.dateTimePicker4.TabIndex = 2;
-            // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(251, 0);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(138, 26);
-            this.dateTimePicker3.TabIndex = 3;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(229, 5);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(16, 16);
-            this.label29.TabIndex = 4;
-            this.label29.Text = "-";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(1128, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(81, 26);
-            this.button3.TabIndex = 36;
-            this.button3.Text = "统计";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // panel124
-            // 
-            this.panel124.Controls.Add(this.radioButton2);
-            this.panel124.Controls.Add(this.radioButton1);
-            this.panel124.Controls.Add(this.button3);
-            this.panel124.Controls.Add(this.panel125);
-            this.panel124.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel124.Location = new System.Drawing.Point(0, 0);
-            this.panel124.Name = "panel124";
-            this.panel124.Size = new System.Drawing.Size(1237, 42);
-            this.panel124.TabIndex = 42;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(498, 9);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(90, 20);
-            this.radioButton1.TabIndex = 37;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "统计模式";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(610, 10);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(90, 20);
-            this.radioButton2.TabIndex = 38;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "详细统计";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(20, 54);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(1191, 413);
-            this.dataGridView1.TabIndex = 43;
-            // 
-            // chartPie_one
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chartPie_one.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartPie_one.Legends.Add(legend1);
-            this.chartPie_one.Location = new System.Drawing.Point(179, 45);
-            this.chartPie_one.Name = "chartPie_one";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartPie_one.Series.Add(series1);
-            this.chartPie_one.Size = new System.Drawing.Size(259, 127);
-            this.chartPie_one.TabIndex = 0;
-            this.chartPie_one.Text = "男女比例";
-            // 
-            // labelTJFX_PIE_ONE
-            // 
-            this.labelTJFX_PIE_ONE.AutoSize = true;
-            this.labelTJFX_PIE_ONE.Location = new System.Drawing.Point(243, 7);
-            this.labelTJFX_PIE_ONE.Name = "labelTJFX_PIE_ONE";
-            this.labelTJFX_PIE_ONE.Size = new System.Drawing.Size(72, 16);
-            this.labelTJFX_PIE_ONE.TabIndex = 1;
-            this.labelTJFX_PIE_ONE.Text = "男女比例";
+            chartArea2.Name = "ChartArea1";
+            this.chartPie_3.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartPie_3.Legends.Add(legend2);
+            this.chartPie_3.Location = new System.Drawing.Point(13, 19);
+            this.chartPie_3.Name = "chartPie_3";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.IsValueShownAsLabel = true;
+            series2.Label = "#VALX\\n [#VAL](#PERCENT)";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            this.chartPie_3.Series.Add(series2);
+            this.chartPie_3.Size = new System.Drawing.Size(552, 180);
+            this.chartPie_3.TabIndex = 4;
+            this.chartPie_3.Text = "男女比例";
             // 
             // FormMain
             // 
@@ -5402,15 +5519,6 @@
             this.panel40.ResumeLayout(false);
             this.panelSJCX.ResumeLayout(false);
             this.panel45.ResumeLayout(false);
-            this.panelSJCX_SSZZD.ResumeLayout(false);
-            this.panel117.ResumeLayout(false);
-            this.panel120.ResumeLayout(false);
-            this.panel120.PerformLayout();
-            this.panel118.ResumeLayout(false);
-            this.panel118.PerformLayout();
-            this.panel119.ResumeLayout(false);
-            this.panel119.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSJCX_SSZZ)).EndInit();
             this.panelSJCX_SSJLD.ResumeLayout(false);
             this.panel51.ResumeLayout(false);
             this.panel102.ResumeLayout(false);
@@ -5472,8 +5580,38 @@
             this.panel49.PerformLayout();
             this.panel46.ResumeLayout(false);
             this.panel46.PerformLayout();
+            this.panelSJCX_SSZZD.ResumeLayout(false);
+            this.panel117.ResumeLayout(false);
+            this.panel120.ResumeLayout(false);
+            this.panel120.PerformLayout();
+            this.panel118.ResumeLayout(false);
+            this.panel118.PerformLayout();
+            this.panel119.ResumeLayout(false);
+            this.panel119.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSJCX_SSZZ)).EndInit();
             this.panelCJFX.ResumeLayout(false);
             this.panel121.ResumeLayout(false);
+            this.panelTJFX_PIE.ResumeLayout(false);
+            this.panel116.ResumeLayout(false);
+            this.panel123.ResumeLayout(false);
+            this.panel123.PerformLayout();
+            this.panel115.ResumeLayout(false);
+            this.panel115.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartPie_4)).EndInit();
+            this.panel103.ResumeLayout(false);
+            this.panel103.PerformLayout();
+            this.panel100.ResumeLayout(false);
+            this.panel100.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartPie_2)).EndInit();
+            this.panel57.ResumeLayout(false);
+            this.panel57.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartPie_1)).EndInit();
+            this.panelTJFX_GZLTJ.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTJCX_GZL)).EndInit();
+            this.panel124.ResumeLayout(false);
+            this.panel124.PerformLayout();
+            this.panel125.ResumeLayout(false);
+            this.panel125.PerformLayout();
             this.panelKSGL.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             this.panelRoomInfoManager.ResumeLayout(false);
@@ -5524,19 +5662,7 @@
             this.panel39.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.panelTJFX_PIE.ResumeLayout(false);
-            this.panel57.ResumeLayout(false);
-            this.panel57.PerformLayout();
-            this.panel116.ResumeLayout(false);
-            this.panel123.ResumeLayout(false);
-            this.panel123.PerformLayout();
-            this.panelTJFX_GZLTJ.ResumeLayout(false);
-            this.panel125.ResumeLayout(false);
-            this.panel125.PerformLayout();
-            this.panel124.ResumeLayout(false);
-            this.panel124.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartPie_one)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartPie_3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -5965,29 +6091,35 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panelTJFX_PIE;
         private System.Windows.Forms.Panel panel116;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnCJCX_time;
         private System.Windows.Forms.Panel panel123;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpTJCX_JSSJ;
+        private System.Windows.Forms.DateTimePicker dtpTJCX_KSSJ;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Panel panel115;
         private System.Windows.Forms.Panel panel103;
         private System.Windows.Forms.Panel panel100;
         private System.Windows.Forms.Panel panel57;
         private System.Windows.Forms.Panel panelTJFX_GZLTJ;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvTJCX_GZL;
         private System.Windows.Forms.Panel panel124;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.RadioButton tbTJCX_XXTJ;
+        private System.Windows.Forms.RadioButton tbTJCX_TJMS;
+        private System.Windows.Forms.Button btnTJFX_GZL;
         private System.Windows.Forms.Panel panel125;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.DateTimePicker dateTimePicker4;
         private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartPie_one;
-        private System.Windows.Forms.Label labelTJFX_PIE_ONE;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartPie_1;
+        private System.Windows.Forms.Label labelTJFX_PIE_1;
+        private System.Windows.Forms.Label labelTJFX_PIE_4;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartPie_4;
+        private System.Windows.Forms.Label labelTJFX_PIE_3;
+        private System.Windows.Forms.Label labelTJFX_PIE_2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartPie_2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartPie_3;
 
     }
 }

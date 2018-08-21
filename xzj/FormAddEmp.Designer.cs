@@ -230,6 +230,7 @@
             this.cbSex.Name = "cbSex";
             this.cbSex.Size = new System.Drawing.Size(195, 24);
             this.cbSex.TabIndex = 2;
+//            this.cbSex.SelectedIndexChanged += new System.EventHandler(this.cbSex_SelectedIndexChanged);
             // 
             // label5
             // 

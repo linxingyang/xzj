@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Collections;
 
 namespace xzj
 {
@@ -92,104 +92,94 @@ namespace xzj
             initSSLR();
         }
 
+        //字典combobox
+        private void combobox(ComboBox cb,DataTable dt)
+        {
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                ArrayList al = new ArrayList();
+                foreach (DataRow row in dt.Rows)
+                {
+                    string text = row["d_name"].ToString();
+                    int value = Convert.ToInt32(row["id"].ToString());
+                    al.Add(new UtilTextAndValue(text, value));
+
+                }
+                cb.DataSource = al;
+                cb.DisplayMember = "DisplayText";
+                cb.ValueMember = "RealValue";
+                cb.SelectedIndex = 0;
+                dt = null;
+            }
+        }
+
         //初始化手术录入
         private void initSSLR()
         {
+            //性别
+            this.cbSSLR_SEX.SelectedIndex = 0;
+            
             //查询医保类型字典
             DataTable dt = DBDictionary.getInstance().getDictionarysByParentId(1);
-            this.cbSSLR_YBLX.Items.Clear();
-            foreach (DataRow row in dt.Rows)
-            {
-                this.cbSSLR_YBLX.Text = row["d_name"].ToString();
-                this.cbSSLR_YBLX.Items.Add(row["d_name"].ToString());
-            }
+            combobox(this.cbSSLR_YBLX, dt);//
 
             //查询手术地点字典
             dt = DBDictionary.getInstance().getDictionarysByParentId(5);
-            this.cbSSLR_SSDD.Items.Clear();
-            foreach (DataRow row in dt.Rows)
-            {
-                this.cbSSLR_SSDD.Text = row["d_name"].ToString();
-                this.cbSSLR_SSDD.Items.Add(row["d_name"].ToString());
-            }
+            combobox(this.cbSSLR_SSDD, dt);
 
             //查询手术类型字典
             dt = DBDictionary.getInstance().getDictionarysByParentId(4);
-            this.cbSSLR_SSLX.Items.Clear();
-            foreach (DataRow row in dt.Rows)
-            {
-                this.cbSSLR_SSLX.Text = row["d_name"].ToString();
-                this.cbSSLR_SSLX.Items.Add(row["d_name"].ToString());
-            }
+            combobox(this.cbSSLR_SSLX, dt);
 
             //查询手术方式字典
             dt = DBDictionary.getInstance().getDictionarysByParentId(6);
-            this.cbSSLR_SSFS.Items.Clear();
-            foreach (DataRow row in dt.Rows)
-            {
-                this.cbSSLR_SSFS.Text = row["d_name"].ToString();
-                this.cbSSLR_SSFS.Items.Add(row["d_name"].ToString());
-            }
+            combobox(this.cbSSLR_SSFS, dt);
 
             //查询穿刺方式字典
             dt = DBDictionary.getInstance().getDictionarysByParentId(7);
-            this.cbSSLR_CCFS.Items.Clear();
-            foreach (DataRow row in dt.Rows)
-            {
-                this.cbSSLR_CCFS.Text = row["d_name"].ToString();
-                this.cbSSLR_CCFS.Items.Add(row["d_name"].ToString());
-            }
+            combobox(this.cbSSLR_CCFS, dt);
 
             //查询手术追踪期限字典
             dt = DBDictionary.getInstance().getDictionarysByParentId(8);
-            this.cbSSLR_SSZZQX.Items.Clear();
-            foreach (DataRow row in dt.Rows)
-            {
-                this.cbSSLR_SSZZQX.Text = row["d_name"].ToString();
-                this.cbSSLR_SSZZQX.Items.Add(row["d_name"].ToString());
-            }
+            combobox(this.cbSSLR_SSZZQX, dt);
 
             //查询手术追踪-穿刺方式字典
             dt = DBDictionary.getInstance().getDictionarysByParentId(7);
-            this.cbSSLR_SSZZ_CCFS.Items.Clear();
-            foreach (DataRow row in dt.Rows)
-            {
-                this.cbSSLR_SSZZ_CCFS.Text = row["d_name"].ToString();
-                this.cbSSLR_SSZZ_CCFS.Items.Add(row["d_name"].ToString());
-            }
+            combobox(this.cbSSLR_SSZZ_CCFS, dt);
 
             //查询手术追踪-感染控制方式字典
             dt = DBDictionary.getInstance().getDictionarysByParentId(11);
-            this.cbSSLR_SSZZ_GRKZFS.Items.Clear();
-            foreach (DataRow row in dt.Rows)
-            {
-                this.cbSSLR_SSZZ_GRKZFS.Text = row["d_name"].ToString();
-                this.cbSSLR_SSZZ_GRKZFS.Items.Add(row["d_name"].ToString());
-            }
+            combobox(this.cbSSLR_SSZZ_GRKZFS, dt);
 
             //查询手术追踪-内痿自我锻炼情况字典
             dt = DBDictionary.getInstance().getDictionarysByParentId(9);
-            this.cbSSLR_SSZZ_NWZWDLQK.Items.Clear();
-            foreach (DataRow row in dt.Rows)
-            {
-                this.cbSSLR_SSZZ_NWZWDLQK.Text = row["d_name"].ToString();
-                this.cbSSLR_SSZZ_NWZWDLQK.Items.Add(row["d_name"].ToString());
-            }
+            combobox(this.cbSSLR_SSZZ_NWZWDLQK, dt);
 
             //查询手术追踪-穿刺部位皮肤情况字典
-            dt = DBDictionary.getInstance().getDictionarysByParentId(9);
-            this.cbSSLR_SSZZ_CCBWPFQK.Items.Clear();
-            foreach (DataRow row in dt.Rows)
-            {
-                this.cbSSLR_SSZZ_CCBWPFQK.Text = row["d_name"].ToString();
-                this.cbSSLR_SSZZ_CCBWPFQK.Items.Add(row["d_name"].ToString());
-            }
-
+            dt = DBDictionary.getInstance().getDictionarysByParentId(10);
+            combobox(this.cbSSLR_SSZZ_CCBWPFQK, dt);
+            
             //手术日期
             this.tbSSLR_SSRQ.Text = UtilTools.getDayAndTime();
 
             //随访日期
             this.tbSSLR_SSZZ_SFRQ.Text = UtilTools.getDayAndTime();
+
+            //是否畅通
+            this.cbSSLR_SSZZ_SFTC.SelectedIndex = 0;
+            //有无血流不畅通
+            this.cbSSLR_SSZZ_YWXLBCT.SelectedIndex = 0;
+            //有胸闷
+            this.cbSSLR_SSZZ_YWXM.SelectedIndex = 0;
+            //有无过敏情况
+            this.cbSSLR_SSZZ_YWCCBWPFGMQK.SelectedIndex = 0;
+            //有无并发症
+            this.cbSSLR_SSZZ_YWBFZ.SelectedIndex = 0;
+            //有无胸壁静脉曲张
+            this.cbSSLR_SSZZ_YWXBJMQZ.SelectedIndex = 0;
+            //是否复诊
+            this.cbSSLR_SSZZ_SSFZ.SelectedIndex = 0;
+           
         }
 
         //字典管理
@@ -772,10 +762,10 @@ namespace xzj
             string ctxyylxr = this.tbSSLR_CTXYYLXR.Text;//常透析医院联系人
             string ctxyylxrdh = this.tbSSLR_CTXYYLXRDH.Text;//常透析医院联系人电话
             string ssrq = this.tbSSLR_SSRQ.Text;//手术日期
-            string ssdd = this.cbSSLR_SSDD.Text;//手术地点
-            string sslx = this.cbSSLR_SSLX.Text;//手术类型
-            string ssfs = this.cbSSLR_SSFS.Text;//手术方式
-            string ccfs = this.cbSSLR_CCFS.Text;//穿刺方式
+            string ssdd = this.cbSSLR_SSDD.Text;// SelectedValue.ToString();//手术地点
+            string sslx = this.cbSSLR_SSLX.Text;// SelectedValue.ToString();//手术类型
+            string ssfs = this.cbSSLR_SSFS.Text;//SelectedValue.ToString();//手术方式
+            string ccfs = this.cbSSLR_CCFS.Text;//SelectedValue.ToString();//穿刺方式
             string ssjl = this.rtbSSLR_SSJL.Text;//手术记录
             string zdys = this.tbSSLR_ZDYS.Text;//主刀医生
             string zs = this.tbSSLR_ZS.Text;//助手
@@ -1076,19 +1066,19 @@ namespace xzj
                 MessageBox.Show("请查询手术记录单，再进行跟踪");
                 return;
             }
-            
-            string sszzqx = this.cbSSLR_SSZZQX.Text; //手术追踪期限
+
+            string sszzqx = this.cbSSLR_SSZZQX.Text;//SelectedValue.ToString(); //手术追踪期限
             string sfrq = this.tbSSLR_SSZZ_SFRQ.Text; //随访日期
-            string ccfs = this.cbSSLR_SSZZ_CCFS.Text; //穿刺方式
+            string ccfs = this.cbSSLR_SSZZ_CCFS.Text;//SelectedValue.ToString(); //穿刺方式
             string sfct = this.cbSSLR_SSZZ_SFTC.Text; //是否畅通
             string ywxlbct = this.cbSSLR_SSZZ_YWXLBCT.Text; //有无血液不畅通
             string ywxm = this.cbSSLR_SSZZ_YWXM.Text; //有无胸闷
             string ywccbwpfgmqk = this.cbSSLR_SSZZ_YWCCBWPFGMQK.Text; //有无穿刺部位皮肤过敏情况：
             string ywbfz = this.cbSSLR_SSZZ_YWBFZ.Text; //有无并发症
             string ywxbjmqz = this.cbSSLR_SSZZ_YWXBJMQZ.Text; //有无胸壁静脉曲张
-            string grkzfs = this.cbSSLR_SSZZ_GRKZFS.Text; //感染控制方式
-            string nwzwdlqk = this.cbSSLR_SSZZ_NWZWDLQK.Text; //内痿自我锻炼情况
-            string ccbwpfqk = this.cbSSLR_SSZZ_CCBWPFQK.Text; //穿刺部位皮肤情况
+            string grkzfs = this.cbSSLR_SSZZ_GRKZFS.Text;//SelectedValue.ToString(); //感染控制方式
+            string nwzwdlqk = this.cbSSLR_SSZZ_NWZWDLQK.Text;//SelectedValue.ToString(); //内痿自我锻炼情况
+            string ccbwpfqk = this.cbSSLR_SSZZ_CCBWPFQK.Text;//SelectedValue.ToString(); //穿刺部位皮肤情况
             string sffz = this.cbSSLR_SSZZ_SSFZ.Text; //是否复诊
             string jmyfw = this.tbSSLR_SSZZ_JMYFW.Text; //静脉压范围
             string sjqbxsjmy = this.tbSSLR_SSZZ_SJQBXSJMY.Text; //上机前半小时静脉压
@@ -1441,7 +1431,7 @@ namespace xzj
 
             string sql = "select p.p_name 姓名,p.p_sex 性别,p.p_age 年龄,p.p_health_type 医保类型,r.r_cc_method 穿刺方式,r.r_ss_type 手术类型,"+
                 "p.p_dialyse_hospital 常透析医院,p.p_tel 联系电话,r.r_is_sszz 是否手术跟踪" +
-                " from t_patient p,t_record r where r_date>'{0}' and r_date<'{1}' ";
+                " from t_patient p left join t_record r on r.r_patient_ID=p.p_ID where r_date>'{0}' and r_date<'{1}' ";
             if (!string.IsNullOrEmpty(name))
             {
                 sql += "and p.p_name like '%"+name+"%' ";
@@ -1475,7 +1465,6 @@ namespace xzj
         //基本信息统计
         private void btnTJFX_JBXXTJ_Click(object sender, EventArgs e)
         {
-
             initTjfx();
         }
 
@@ -1493,12 +1482,223 @@ namespace xzj
 
             this.panelTJFX_PIE.Visible = true;
             this.panelTJFX_GZLTJ.Visible = false;
+
+            JBXXTJ_PIE();
         }
 
         //基本信息统计饼图
         private void JBXXTJ_PIE()
         {
+            tjSex(null,null);
+            tjAge(null, null);
+            tjZWDL(null,null);
+            tjCCBWPFTJ(null,null);
+        }
 
+        //统计性别
+        private void tjSex(string kssj,string jssj)
+        {
+            this.chartPie_1.Series[0].Points.Clear();
+            List<int> data = new List<int>();
+            if(string.IsNullOrEmpty(kssj) &&　string.IsNullOrEmpty(jssj))
+            {
+                string sql = 
+                    "select p.p_sex,count(*) as total "+
+                    "from t_patient p,t_record r "+
+                    "where p.p_ID=r.r_patient_ID  group by p.p_sex";
+                dataTable = DBManager.getInstance().find(sql);
+            }else{
+                string sql = string.Format(
+                     "select p.p_sex,count(*) as total "+
+                    "from t_patient p,t_record r "+
+                    "where p.p_ID=r.r_patient_ID and r.r_date > '{0}' and r.r_date < '{1}' "+
+                    "group by p.p_sex", kssj, jssj);
+                dataTable = DBManager.getInstance().find(sql);
+            }
+
+            if(dataTable != null && dataTable.Rows.Count > 0)
+            {
+                List<int> arrays = new List<int>();
+                List<string> sexs = new List<string>();
+                foreach(DataRow row in dataTable.Rows)
+                {
+                    int y = Convert.ToInt32(row["total"].ToString());
+                    string x = row["p_sex"].ToString();
+                   // string legel = row["p_sex"].ToString() + "[" + y + "](" + row["percent"].ToString() + ")";
+                    arrays.Add(y);
+                    sexs.Add(x);
+                }
+
+                this.chartPie_1.Series[0]["PieLabelStyle"] = "Outside";//将文字移到外侧
+                this.chartPie_1.Series[0]["PieLineColor"] = "Black";//绘制黑色的连线。
+                this.chartPie_1.Series[0].Points.DataBindXY(sexs, arrays);
+                //this.chartPie_1.Series[0].Legend =
+            }
+           
+            this.labelTJFX_PIE_1.Text = "男女比例";
+        }
+
+        //统计年龄
+        private void tjAge(string kssj, string jssj)
+        {
+            this.chartPie_2.Series[0].Points.Clear();
+            List<int> data = new List<int>();
+            if (string.IsNullOrEmpty(kssj) && string.IsNullOrEmpty(jssj))
+            {
+                string sql =
+                    "select p_age,count(*) as total,"+
+	                    " case"+
+		                    " when p_age between 1 and 18 then '[<=18]'"+
+		                    " when p_age between 10 and 30 then '[18-30]'"+
+		                    " when p_age between 30 and 40 then '[30-40]'"+
+		                    " when p_age between 40 and 50 then '[40-50]'"+
+		                    " when p_age between 50 and 60 then '[50-60]'"+
+		                    " when p_age between 60 and 70 then '[60-70]'"+
+		                    " when p_age between 70 and 80 then '[70-80]'"+
+		                    " when p_age > 80 then '[>80]'"+
+	                    " end as age_temp"+
+                    " from t_patient p,t_record r"+
+                    " where"+
+                    " p.p_ID = r.r_patient_ID"+
+                    " group by age_temp";
+                dataTable = DBManager.getInstance().find(sql);
+            }
+            else
+            {
+                string sql =
+                    "select p_age,count(*) as total,"+
+                        " case" +
+                            " when p_age between 1 and 18 then '[<=18]'" +
+                            " when p_age between 10 and 30 then '[18-30]'" +
+                            " when p_age between 30 and 40 then '[30-40]'" +
+                            " when p_age between 40 and 50 then '[40-50]'" +
+                            " when p_age between 50 and 60 then '[50-60]'" +
+                            " when p_age between 60 and 70 then '[60-70]'" +
+                            " when p_age between 70 and 80 then '[70-80]'" +
+                            " when p_age > 80 then '[>80]'" +
+                        " end as age_temp" +
+                    " from t_patient p,t_record r" +
+                    " where" +
+                    " p.p_ID = r.r_patient_ID" +
+                    " and r.r_date > '{0}' and r.r_date < '{1}'"+
+                    " group by age_temp";
+                sql = string.Format(sql, kssj, jssj);
+                dataTable = DBManager.getInstance().find(sql);
+            }
+
+            if (dataTable != null && dataTable.Rows.Count > 0)
+            {
+                List<int> arrays = new List<int>();
+                List<string> ages = new List<string>();
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    int y = Convert.ToInt32(row["total"].ToString());
+                    string x = row["age_temp"].ToString();
+                    //string legel = row["p_age"].ToString() + "[" + y + "](" + row["percent"].ToString() + ")";
+                    arrays.Add(Convert.ToInt32(row["total"].ToString()));
+                    ages.Add(x);
+                }
+
+                this.chartPie_2.Series[0]["PieLabelStyle"] = "Outside";//将文字移到外侧
+                this.chartPie_2.Series[0]["PieLineColor"] = "Black";//绘制黑色的连线。
+                this.chartPie_2.Series[0].Points.DataBindXY(ages, arrays);
+            }
+
+            this.labelTJFX_PIE_2.Text = "年龄比例";
+        }
+
+        //统计自我锻炼情况统计
+        private void tjZWDL(string kssj, string jssj)
+        {
+            this.chartPie_3.Series[0].Points.Clear();
+            List<int> data = new List<int>();
+            if (string.IsNullOrEmpty(kssj) && string.IsNullOrEmpty(jssj))
+            {
+                string sql =
+                    "select t.t_nwzwdlqk,count(*) as total "+
+                    "from t_track t,t_record r  "+
+                    "where t.t_record_id = r.id "+
+                    "group by t.t_nwzwdlqk";
+                dataTable = DBManager.getInstance().find(sql);
+            }
+            else
+            {
+                string sql = string.Format(
+                     "select t.t_nwzwdlqk,count(*) as total "+
+                    "from t_track t,t_record r  "+
+                    "where t.t_record_id = r.id "+
+                    "and r.r_date > '{0}' and r.r_date < '{1}' "+
+                    "group by t.t_nwzwdlqk", kssj, jssj);
+                dataTable = DBManager.getInstance().find(sql);
+            }
+
+            if (dataTable != null && dataTable.Rows.Count > 0)
+            {
+                List<int> arrays = new List<int>();
+                List<string> values = new List<string>();
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    int y = Convert.ToInt32(row["total"].ToString());
+                    string x = row["t_nwzwdlqk"].ToString();
+                    //string legel = row["t_nwzwdlqk"].ToString() + "[" + y + "](" + row["percent"].ToString() + "%)";
+                    arrays.Add(y);
+                    values.Add(x);
+                }
+
+                this.chartPie_3.Series[0]["PieLabelStyle"] = "Outside";//将文字移到外侧
+                this.chartPie_3.Series[0]["PieLineColor"] = "Black";//绘制黑色的连线。
+                this.chartPie_3.Series[0].Points.DataBindXY(values, arrays);
+                
+            }
+
+            this.labelTJFX_PIE_3.Text = "自我锻炼情况统计";
+        }
+
+        //穿刺部位皮肤情况统计
+        private void tjCCBWPFTJ(string kssj, string jssj)
+        {
+            this.chartPie_4.Series[0].Points.Clear();
+            List<int> data = new List<int>();
+            if (string.IsNullOrEmpty(kssj) && string.IsNullOrEmpty(jssj))
+            {
+                string sql =
+                    "select t.t_ccbwpfqk,count(*) as total " +
+                    "from t_track t,t_record r  "+
+                    "where t.t_record_id = r.id "+
+                    "group by t.t_ccbwpfqk";
+                dataTable = DBManager.getInstance().find(sql);
+            }
+            else
+            {
+                string sql = string.Format(
+                     "select t.t_ccbwpfqk,count(*) as total " +
+                    "from t_track t,t_record r  "+
+                    "where t.t_record_id = r.id "+
+                    "and r.r_date > '{0}' and r.r_date < '{1}' "+
+                    "group by t.t_ccbwpfqk", kssj, jssj);
+                dataTable = DBManager.getInstance().find(sql);
+            }
+
+            if (dataTable != null && dataTable.Rows.Count > 0)
+            {
+                List<int> arrays = new List<int>();
+                List<string> values = new List<string>();
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    int y = Convert.ToInt32(row["total"].ToString());
+                    string x = row["t_ccbwpfqk"].ToString();
+                    //string legel = row["t_nwzwdlqk"].ToString() + "[" + y + "](" + row["percent"].ToString() + "%)";
+                    arrays.Add(y);
+                    values.Add(x);
+                }
+
+                this.chartPie_4.Series[0]["PieLabelStyle"] = "Outside";//将文字移到外侧
+                this.chartPie_4.Series[0]["PieLineColor"] = "Black";//绘制黑色的连线。
+                this.chartPie_4.Series[0].Points.DataBindXY(values, arrays);
+                
+            }
+
+            this.labelTJFX_PIE_4.Text = "穿刺部位皮肤情况统计";
         }
 
         //手术统计
@@ -1531,9 +1731,35 @@ namespace xzj
 
             this.panelTJFX_PIE.Visible = false;
             this.panelTJFX_GZLTJ.Visible = true;
+
+            //工作量统计
+            initGJLTJ();
         }
 
-       
+        //工作量统计
+        private void initGJLTJ()
+        {
+
+        }
+
+        //
+        private void btnCJCX_time_Click(object sender, EventArgs e)
+        {
+            string kssj = this.dtpTJCX_KSSJ.Value.ToString("yyyy-MM-dd hh:mm:ss");
+            string jssj = this.dtpTJCX_JSSJ.Value.ToString("yyyy-MM-dd hh:mm:ss");
+
+            //基本信息查询
+            if (this.btnTJFX_JBXXTJ.Visible)
+            {
+                tjSex(kssj, jssj);
+                tjAge(kssj, jssj);
+                tjZWDL(kssj, jssj);
+                tjCCBWPFTJ(kssj, jssj);
+            }
+            
+        }
+
+        
 
         
     }

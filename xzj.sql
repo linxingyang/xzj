@@ -114,23 +114,6 @@ create table t_record
 
 SET SQL_SAFE_UPDATES = 0;
 
-select 
-	p.p_name,p.p_sex,p.p_age,p.p_tel,p.p_ID,p.p_health_type,p.p_address,
-	p.p_dialyse_hospital,p.p_dialyse_hospital_contact,p.p_dialyse_hospital_tel,
-	r.r_date,r.r_ss_address,r.r_ss_type,r.r_ss_method,r.r_cc_method,r.r_zd_docotor,
-	r.r_zs,r_qxhs,r.r_ss_record,r.r_is_sszz,
-	t.t_sszz_deadline,t.t_sfrq,t.t_ccfs,t.t_ssct,t.t_ywxlbct,t.t_ywxm,
-	t.t_ywccbwphgmqk,t.t_ywbfz,t.t_ywxbjmqz,t.t_grkzfs,t.t_nwzwdlqk,t.t_ccbwpfqk,
-	t.t_sffz,t.t_jmyfw,t.t_sjqbxsjmy,t.t_xjqbxsjmy,t.t_xll,t.t_ypzxsj,t.t_zwcmzcjtzqk,
-	t.t_sfys
-from t_patient p,t_record r,t_track t
-where 
-	p.p_ID = r.r_patient_ID
-	and r.id = t.t_record_id
-	and p.p_ID = '522126186825365632';
-
-
-
 ### 手术追踪表
 drop table t_track;
 create table t_track

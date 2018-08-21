@@ -42,6 +42,10 @@ namespace xzj
                     this.tbSurePwd.Text = row["e_pwd"].ToString();
                 }
             }
+            else
+            {
+                this.cbSex.SelectedIndex = 0;
+            }
         }
 
         //添加用户
@@ -205,6 +209,8 @@ namespace xzj
                 e.Handled = true;
             }
         }
+
+       
 
     }
 }
