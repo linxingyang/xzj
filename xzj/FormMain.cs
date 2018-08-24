@@ -1462,6 +1462,7 @@ namespace xzj
             //
         }
 
+        static int TJ_FLAG = 0;//0表示是基本信息统计，1表示是手术统计
         //基本信息统计
         private void btnTJFX_JBXXTJ_Click(object sender, EventArgs e)
         {
@@ -1471,6 +1472,8 @@ namespace xzj
         //初始化信息统计
         private void initTjfx()
         {
+            TJ_FLAG = 0;
+
             this.btnTJFX_JBXXTJ.ForeColor = ColorTranslator.FromHtml("#3399ff");
             this.btnTJFX_JBXXTJ.BackColor = Color.White;
 
@@ -1701,6 +1704,37 @@ namespace xzj
             this.labelTJFX_PIE_4.Text = "穿刺部位皮肤情况统计";
         }
 
+        //根据时间查询统计
+        private void btnCJCX_time_Click(object sender, EventArgs e)
+        {
+            string kssj = this.dtpTJCX_KSSJ.Value.ToString("yyyy-MM-dd hh:mm:ss");
+            string jssj = this.dtpTJCX_JSSJ.Value.ToString("yyyy-MM-dd hh:mm:ss");
+
+            //基本信息查询
+            if (TJ_FLAG == 0)
+            {
+                //MessageBox.Show("基本信息查询");
+                tjSex(kssj, jssj);
+                tjAge(kssj, jssj);
+                tjZWDL(kssj, jssj);
+                tjCCBWPFTJ(kssj, jssj);
+            }
+            else
+            {
+                //TJ_FLAG = 1;
+                ccfstj(kssj, jssj);
+                sslxtj(kssj, jssj);
+                ssfstj(kssj, jssj);
+                ctxyytj(kssj, jssj);
+            }
+            
+        }
+
+        private void panelCJFX_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         //手术统计
         private void btnTJFX_SSTJ_Click(object sender, EventArgs e)
         {
@@ -1715,6 +1749,8 @@ namespace xzj
 
             this.panelTJFX_PIE.Visible = true;
             this.panelTJFX_GZLTJ.Visible = false;
+
+            initTjss();
         }
 
         //工作量统计
@@ -1742,26 +1778,347 @@ namespace xzj
 
         }
 
-        //
-        private void btnCJCX_time_Click(object sender, EventArgs e)
+        //手术统计
+        private void initTjss()
         {
-            string kssj = this.dtpTJCX_KSSJ.Value.ToString("yyyy-MM-dd hh:mm:ss");
-            string jssj = this.dtpTJCX_JSSJ.Value.ToString("yyyy-MM-dd hh:mm:ss");
-
-            //基本信息查询
-            if (this.btnTJFX_JBXXTJ.Visible)
-            {
-                tjSex(kssj, jssj);
-                tjAge(kssj, jssj);
-                tjZWDL(kssj, jssj);
-                tjCCBWPFTJ(kssj, jssj);
-            }
-            
+            TJ_FLAG = 1;
+            ccfstj(null, null);
+            sslxtj(null, null);
+            ssfstj(null, null);
+            ctxyytj(null, null);
         }
 
-        
+        //穿刺方式统计
+        private void ccfstj(string kssj, string jssj)
+        {
+            this.chartPie_1.Series[0].Points.Clear();
+            List<int> data = new List<int>();
+            if (string.IsNullOrEmpty(kssj) && string.IsNullOrEmpty(jssj))
+            {
+                string sql =
+                    "select t.t_ccfs,count(*) as total " +
+                    "from t_track t,t_record r  " +
+                    "where t.t_record_id = r.id " +
+                    "group by t.t_ccfs";
+                dataTable = DBManager.getInstance().find(sql);
+            }
+            else
+            {
+                string sql = string.Format(
+                     "select t.t_ccfs,count(*) as total " +
+                    "from t_track t,t_record r  " +
+                    "where t.t_record_id = r.id " +
+                    "and r.r_date > '{0}' and r.r_date < '{1}' " +
+                    "group by t.t_ccfs", kssj, jssj);
+                dataTable = DBManager.getInstance().find(sql);
+            }
 
-        
+            if (dataTable != null && dataTable.Rows.Count > 0)
+            {
+                List<int> arrays = new List<int>();
+                List<string> values = new List<string>();
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    int y = Convert.ToInt32(row["total"].ToString());
+                    string x = row["t_ccfs"].ToString();
+                    //string legel = row["t_nwzwdlqk"].ToString() + "[" + y + "](" + row["percent"].ToString() + "%)";
+                    arrays.Add(y);
+                    values.Add(x);
+                }
+
+                this.chartPie_1.Series[0]["PieLabelStyle"] = "Outside";//将文字移到外侧
+                this.chartPie_1.Series[0]["PieLineColor"] = "Black";//绘制黑色的连线。
+                this.chartPie_1.Series[0].Points.DataBindXY(values, arrays);
+
+            }
+
+            this.labelTJFX_PIE_1.Text = "穿刺方式统计";
+        }
+
+        //手术类型统计
+        private void sslxtj(string kssj, string jssj)
+        {
+            this.chartPie_2.Series[0].Points.Clear();
+            List<int> data = new List<int>();
+            if (string.IsNullOrEmpty(kssj) && string.IsNullOrEmpty(jssj))
+            {
+                string sql =
+                    "select r.r_ss_type,count(*) as total " +
+                    "from t_track t,t_record r  " +
+                    "where t.t_record_id = r.id " +
+                    "group by r.r_ss_type";
+                dataTable = DBManager.getInstance().find(sql);
+            }
+            else
+            {
+                string sql = string.Format(
+                     "select r.r_ss_type,count(*) as total " +
+                    "from t_track t,t_record r  " +
+                    "where t.t_record_id = r.id " +
+                    "and r.r_date > '{0}' and r.r_date < '{1}' " +
+                    "group by r.r_ss_type", kssj, jssj);
+                dataTable = DBManager.getInstance().find(sql);
+            }
+
+            if (dataTable != null && dataTable.Rows.Count > 0)
+            {
+                List<int> arrays = new List<int>();
+                List<string> values = new List<string>();
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    int y = Convert.ToInt32(row["total"].ToString());
+                    string x = row["r_ss_type"].ToString();
+                    //string legel = row["t_nwzwdlqk"].ToString() + "[" + y + "](" + row["percent"].ToString() + "%)";
+                    arrays.Add(y);
+                    values.Add(x);
+                }
+
+                this.chartPie_2.Series[0]["PieLabelStyle"] = "Outside";//将文字移到外侧
+                this.chartPie_2.Series[0]["PieLineColor"] = "Black";//绘制黑色的连线。
+                this.chartPie_2.Series[0].Points.DataBindXY(values, arrays);
+
+            }
+
+            this.labelTJFX_PIE_2.Text = "手术类型统计";
+        }
+
+        //手术方式统计
+        private void ssfstj(string kssj, string jssj)
+        {
+            this.chartPie_3.Series[0].Points.Clear();
+            List<int> data = new List<int>();
+            if (string.IsNullOrEmpty(kssj) && string.IsNullOrEmpty(jssj))
+            {
+                string sql =
+                    "select r.r_ss_method,count(*) as total " +
+                    "from t_track t,t_record r  " +
+                    "where t.t_record_id = r.id " +
+                    "group by r.r_ss_method";
+                dataTable = DBManager.getInstance().find(sql);
+            }
+            else
+            {
+                string sql = string.Format(
+                     "select r.r_ss_method,count(*) as total " +
+                    "from t_track t,t_record r  " +
+                    "where t.t_record_id = r.id " +
+                    "and r.r_date > '{0}' and r.r_date < '{1}' " +
+                    "group by r.r_ss_method", kssj, jssj);
+                dataTable = DBManager.getInstance().find(sql);
+            }
+
+            if (dataTable != null && dataTable.Rows.Count > 0)
+            {
+                List<int> arrays = new List<int>();
+                List<string> values = new List<string>();
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    int y = Convert.ToInt32(row["total"].ToString());
+                    string x = row["r_ss_method"].ToString();
+                    //string legel = row["t_nwzwdlqk"].ToString() + "[" + y + "](" + row["percent"].ToString() + "%)";
+                    arrays.Add(y);
+                    values.Add(x);
+                }
+
+                this.chartPie_3.Series[0]["PieLabelStyle"] = "Outside";//将文字移到外侧
+                this.chartPie_3.Series[0]["PieLineColor"] = "Black";//绘制黑色的连线。
+                this.chartPie_3.Series[0].Points.DataBindXY(values, arrays);
+
+            }
+
+            this.labelTJFX_PIE_3.Text = "手术方式统计";
+        }
+
+        //常透析医院统计
+        private void ctxyytj(string kssj, string jssj)
+        {
+            this.chartPie_4.Series[0].Points.Clear();
+            List<int> data = new List<int>();
+            if (string.IsNullOrEmpty(kssj) && string.IsNullOrEmpty(jssj))
+            {
+                string sql =
+                    "select p.p_dialyse_hospital,count(*) as total " +
+                     "from t_patient p,t_record r  " +
+                    "where p.p_ID = r.r_patient_ID " +
+                    "group by  p.p_dialyse_hospital";
+                dataTable = DBManager.getInstance().find(sql);
+            }
+            else
+            {
+                string sql = string.Format(
+                     "select p.p_dialyse_hospital,count(*) as total " +
+                    "from t_patient p,t_record r  " +
+                    "where p.p_ID = r.r_patient_ID " +
+                    "and r.r_date > '{0}' and r.r_date < '{1}' " +
+                    "group by  p.p_dialyse_hospital", kssj, jssj);
+                dataTable = DBManager.getInstance().find(sql);
+            }
+
+            if (dataTable != null && dataTable.Rows.Count > 0)
+            {
+                List<int> arrays = new List<int>();
+                List<string> values = new List<string>();
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    int y = Convert.ToInt32(row["total"].ToString());
+                    string x = row["p_dialyse_hospital"].ToString();
+                    //string legel = row["t_nwzwdlqk"].ToString() + "[" + y + "](" + row["percent"].ToString() + "%)";
+                    arrays.Add(y);
+                    values.Add(x);
+                }
+
+                this.chartPie_4.Series[0]["PieLabelStyle"] = "Outside";//将文字移到外侧
+                this.chartPie_4.Series[0]["PieLineColor"] = "Black";//绘制黑色的连线。
+                this.chartPie_4.Series[0].Points.DataBindXY(values, arrays);
+
+            }
+
+            this.labelTJFX_PIE_4.Text = "常透析医院统计";
+        }
+
+        //工作量统计
+        private void btnTJFX_GZL_Click(object sender, EventArgs e)
+        {
+            initTJFX_XXTJ();
+        }
+
+        //详细统计
+        private void initTJFX_XXTJ()
+        {
+            string kssj = this.dtpTJFX_GZLGL_KSSJ.Value.ToString();
+            string jssj = this.dtpTJFX_GZLGL_JSSJ.Value.ToString();
+
+            DataTable dt1 = null, dt2 = null, dt3 = null;
+            //详细统计
+            if (this.tbTJCX_XXTJ.Checked)
+            {
+                dt1 = this.findZDYS_XX(kssj, jssj);
+                dt2 = this.findZS_XX(kssj, jssj);
+                dt3 = this.findQXHS_XX(kssj, jssj);
+            }
+
+            //统计模式
+            if (this.tbTJCX_TJMS.Checked)
+            {
+                dt1 = this.findZDYS_TJ(kssj, jssj);
+                dt2 = this.findZS_TJ(kssj, jssj);
+                dt3 = this.findQXHS_TJ(kssj, jssj);
+            }
+           
+
+            dt1.Merge(dt2, false, MissingSchemaAction.AddWithKey);
+            dt1.Merge(dt3, false, MissingSchemaAction.AddWithKey);
+
+            this.dgvTJCX_GZL.DataSource = dt1;
+        }
+
+        //详细统计-》查询主刀医生
+        private DataTable findZDYS_XX(string kssj, string jssj)
+        {
+            string sql = string.Format("select " +
+                       " r.r_zd_docotor as '医护人员姓名'," +
+                       " p.p_name as '患者姓名'," +
+                      "  p.p_sex as '患者性别'," +
+                       " r.r_ss_type as '手术类型'," +
+                      "  r.r_ss_method as '手术方式'," +
+                      "  r.r_cc_method as '穿刺方式'," +
+                       " '主刀医生' as '工作性质'" +
+                      "  from " +
+                      "  t_record r left join t_patient p on r.r_patient_ID = p.p_ID" +
+                      "  where r.r_date > '{0}' and  r.r_date < '{1}'", kssj, jssj);
+            
+            dataTable = DBManager.getInstance().find(sql);
+            return dataTable;
+        }
+
+        //详细统计-》查询助手
+        private DataTable findZS_XX(string kssj, string jssj)
+        {
+            string sql = string.Format("select " +
+                       " r.r_zs as '医护人员姓名'," +
+                       " p.p_name as '患者姓名'," +
+                      "  p.p_sex as '患者性别'," +
+                       " r.r_ss_type as '手术类型'," +
+                      "  r.r_ss_method as '手术方式'," +
+                      "  r.r_cc_method as '穿刺方式'," +
+                       " '助手' as '工作性质'" +
+                      "  from " +
+                      "  t_record r left join t_patient p on r.r_patient_ID = p.p_ID" +
+                      "  where r.r_date > '{0}' and  r.r_date < '{1}'", kssj, jssj);
+            
+
+            dataTable = DBManager.getInstance().find(sql);
+            return dataTable;
+        }
+
+        //详细统计-》器械护士
+        private DataTable findQXHS_XX(string kssj, string jssj)
+        {
+            string sql = string.Format("select " +
+                       " r.r_qxhs as '医护人员姓名'," +
+                       " p.p_name as '患者姓名'," +
+                      "  p.p_sex as '患者性别'," +
+                       " r.r_ss_type as '手术类型'," +
+                      "  r.r_ss_method as '手术方式'," +
+                      "  r.r_cc_method as '穿刺方式'," +
+                       " '器械护士' as '工作性质'" +
+                      "  from " +
+                      "  t_record r left join t_patient p on r.r_patient_ID = p.p_ID" +
+                      "  where r.r_date > '{0}' and  r.r_date < '{1}'", kssj, jssj);
+           
+            dataTable = DBManager.getInstance().find(sql);
+            return dataTable;
+        }
+
+        //统计模式-》查询主刀医生
+        private DataTable findZDYS_TJ(string kssj, string jssj)
+        {
+            string sql = string.Format("select " +
+                       " r.r_zd_docotor as '医护人员姓名'," +
+                       " '主刀医生' as '工作性质'," +
+                       " count(*) as '手术台次' " +
+                      "  from " +
+                      "  t_record r left join t_patient p on r.r_patient_ID = p.p_ID" +
+                      "  where r.r_date > '{0}' and  r.r_date < '{1}'" +
+                      " group by r.r_zd_docotor", kssj, jssj);
+
+            dataTable = DBManager.getInstance().find(sql);
+            return dataTable;
+        }
+
+        //统计模式-》查询助手
+        private DataTable findZS_TJ(string kssj, string jssj)
+        {
+            string sql = string.Format("select " +
+                       " r.r_zs as '医护人员姓名'," +
+                       " '助手' as '工作性质'," +
+                       " count(*) as '手术台次' " +
+                      "  from " +
+                      "  t_record r left join t_patient p on r.r_patient_ID = p.p_ID" +
+                      "  where r.r_date > '{0}' and  r.r_date < '{1}'" +
+                      " group by r.r_zs", kssj, jssj);
+
+
+            dataTable = DBManager.getInstance().find(sql);
+            return dataTable;
+        }
+
+        //统计模式-》器械护士
+        private DataTable findQXHS_TJ(string kssj, string jssj)
+        {
+            string sql = string.Format("select " +
+                       " r.r_qxhs as '医护人员姓名'," +
+                       " '器械护士' as '工作性质'," +
+                        " count(*) as '手术台次' " +
+                      "  from " +
+                      "  t_record r left join t_patient p on r.r_patient_ID = p.p_ID" +
+                      "  where r.r_date > '{0}' and  r.r_date < '{1}'"+
+                      " group by r.r_qxhs", kssj, jssj);
+
+            dataTable = DBManager.getInstance().find(sql);
+            return dataTable;
+        }
+
     }
 
        
