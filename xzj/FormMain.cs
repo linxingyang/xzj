@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
+using System.Drawing.Printing;
+using System.IO;
 
 namespace xzj
 {
@@ -15,7 +17,7 @@ namespace xzj
     {
         private DataTable dataTable;
         private static int dictionary_parent_id = 1;
-
+       
         public FormMain()
         {
             InitializeComponent();
@@ -44,6 +46,7 @@ namespace xzj
             //初始化手术录入
             initSSLR();
         }
+
 
         //关闭窗口
         private void picClose_Click(object sender, EventArgs e)
@@ -1046,10 +1049,51 @@ namespace xzj
        //输入数字包括小数点
         private void decimal_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar != 8 && !Char.IsDigit(e.KeyChar) && e.KeyChar != (char)('.'))//如果不是输入数字就不让输入
-            {
+            //判断按键是不是要输入的类型。
+            TextBox textBox1 = (TextBox)sender;
+
+            if (((int)e.KeyChar < 48 || (int)e.KeyChar > 57) && (int)e.KeyChar != 8 && (int)e.KeyChar != 46)
+
                 e.Handled = true;
-                return;
+
+
+            //小数点的处理。
+
+            if ((int)e.KeyChar == 46)                           //小数点
+            {
+
+                if (textBox1.Text.Length <= 0)
+
+                    e.Handled = true;   //小数点不能在第一位
+
+                else
+                {
+
+                    float f;
+
+                    float oldf;
+
+                    bool b1 = false, b2 = false;
+
+                    b1 = float.TryParse(textBox1.Text, out oldf);
+
+                    b2 = float.TryParse(textBox1.Text + e.KeyChar.ToString(), out f);
+
+                    if (b2 == false)
+                    {
+
+                        if (b1 == true)
+
+                            e.Handled = true;
+
+                        else
+
+                            e.Handled = false;
+
+                    }
+
+                }
+
             }
         }
 
@@ -1363,6 +1407,7 @@ namespace xzj
         private void cbSJCX_XSSSZZ_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox cb =  (CheckBox)sender;
+            this.gbSJCX_SSJLD_SSZZ.Visible = false;
 
             if (this.dgvSJCX_RECORDS.CurrentRow == null)
             {
@@ -1370,7 +1415,7 @@ namespace xzj
                 return;
             }
             
-            this.gbSJCX_SSJLD_SSZZ.Visible = cb.Checked;
+            
             if (cb.Checked)
             {
                 int index = this.dgvSJCX_RECORDS.CurrentRow.Index;
@@ -1413,6 +1458,7 @@ namespace xzj
                         this.all_sfys.Text = row["t_sfys"].ToString();
 
                     }
+                    this.gbSJCX_SSJLD_SSZZ.Visible = true;
                 }
                 else
                 {
@@ -2118,6 +2164,119 @@ namespace xzj
             dataTable = DBManager.getInstance().find(sql);
             return dataTable;
         }
+
+        
+
+        //打印手术记录单
+        private void btnPrintSSCX_SSJL_Click(object sender, EventArgs e)
+        {
+            this.printDialogSSCX_SSJL.Document = this.printDucumentSSCX_SSJL;
+            if (this.printDialogSSCX_SSJL.ShowDialog() == DialogResult.OK)
+            {
+                this.printDucumentSSCX_SSJL.Print();
+            }
+        }
+
+        private void printDucumentSSCX_SSJL_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            //打印内容 为 局部的 this.panel1
+            Bitmap _NewBitmap = new Bitmap(this.panelSSCX_SSJLD.Width, this.panelSSCX_SSJLD.Height);
+            this.panelSSCX_SSJLD.DrawToBitmap(_NewBitmap, new Rectangle(0, 0, _NewBitmap.Width, _NewBitmap.Height));
+            e.Graphics.DrawImage(_NewBitmap, 0, 0, _NewBitmap.Width, _NewBitmap.Height);
+        }
+
+        //打印手术追踪查询
+        private void printDocumentSJCX_SSZZ_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            //打印内容 为 局部的 this.panel1
+            Bitmap _NewBitmap = new Bitmap(this.panelSJCX_SSZZ.Width, this.panelSJCX_SSZZ.Height);
+            this.panelSJCX_SSZZ.DrawToBitmap(_NewBitmap, new Rectangle(0, 0, _NewBitmap.Width, _NewBitmap.Height));
+            e.Graphics.DrawImage(_NewBitmap, 0, 0, _NewBitmap.Width, _NewBitmap.Height);
+        }
+
+        //手术追踪打印
+        private void btnSSCX_SSZZDY_Click(object sender, EventArgs e)
+        {
+            this.printDialogSSCX_SSJL.Document = this.printDucumentSSCX_SSJL;
+            if (this.printDialogSSCX_SSJL.ShowDialog() == DialogResult.OK)
+            {
+                this.printDocumentSJCX_SSZZ.Print();
+            }
+        }
+
+    
+        //设置字体加粗
+        private void menuSSLR_CT_Click(object sender, EventArgs e)
+        {
+            string fontType = this.menuSSLR_ZZLX.Text;
+            int fontSize = Convert.ToInt32(this.menuSSLR_ZZDX.Text);
+            if (string.IsNullOrEmpty(fontType))
+            {
+                fontType = "宋体";
+            }
+
+            this.rtbSSLR_SSJL.SelectionFont = new Font(fontType, fontSize, FontStyle.Bold);
+        }
+
+        //设置字体 斜体
+        private void menuSSLR_XT_Click(object sender, EventArgs e)
+        {
+            string fontType = this.menuSSLR_ZZLX.Text;
+            int fontSize = Convert.ToInt32(this.menuSSLR_ZZDX.Text);
+            if (string.IsNullOrEmpty(fontType))
+            {
+                fontType = "宋体";
+            }
+
+            this.rtbSSLR_SSJL.SelectionFont = new Font(fontType, fontSize, FontStyle.Italic);
+        }
+
+        //设置字体下划线
+        private void menuSSLR_XHX_Click(object sender, EventArgs e)
+        {
+            string fontType = this.menuSSLR_ZZLX.Text;
+            int fontSize = Convert.ToInt32(this.menuSSLR_ZZDX.Text);
+            if (string.IsNullOrEmpty(fontType))
+            {
+                fontType = "宋体";
+            }
+
+            this.rtbSSLR_SSJL.SelectionFont = new Font(fontType, fontSize, FontStyle.Underline);
+        }
+
+        //文本左对齐
+        private void menuSSLR_ZDQ_Click(object sender, EventArgs e)
+        {
+            this.rtbSSLR_SSJL.SelectionAlignment = HorizontalAlignment.Left;
+        }
+
+        //文本右对齐
+        private void menuSSLR_YDQ_Click(object sender, EventArgs e)
+        {
+            this.rtbSSLR_SSJL.SelectionAlignment = HorizontalAlignment.Right;
+        }
+
+        //文本剧中
+        private void menuSSLR_JZ_Click(object sender, EventArgs e)
+        {
+            this.rtbSSLR_SSJL.SelectionAlignment = HorizontalAlignment.Center;
+        }
+
+        //设置字体类型 粗体 宋体
+        private void menuSSLR_setFont_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string fontType = this.menuSSLR_ZZLX.Text;
+            int fontSize = Convert.ToInt32(this.menuSSLR_ZZDX.Text);
+            if (string.IsNullOrEmpty(fontType))
+            {
+                fontType = "宋体";
+            }
+
+            this.rtbSSLR_SSJL.SelectionFont = new Font(fontType, fontSize, FontStyle.Bold);
+        }
+
+       
+       
 
     }
 
