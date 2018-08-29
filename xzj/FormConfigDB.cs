@@ -22,6 +22,8 @@ namespace xzj
 
         private void btnCloseForm_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.OK;
+            //this.Close();
             this.Close();
         }
 
@@ -129,6 +131,8 @@ namespace xzj
                 {
                     DBSQLite.insertValue(UtilConfig.SQL_ADDRESS_KEY, sqlAddress);
                 }
+
+
                 MessageBox.Show("保存成功");
             }
 

@@ -1,4 +1,5 @@
 SET SQL_SAFE_UPDATES = 0;
+drop table t_emp;
 ##用户信息表
 create table t_emp
 (
@@ -12,17 +13,11 @@ create table t_emp
  	e_address varchar(100),##地址
  	e_pwd varchar(20),##密码
 	primary key (id)
-)
-select 1 from dual;
-insert into t_emp(e_account,e_pwd) values('admin','12345678');
-
-delete FROM xzj.t_emp where e_account='admin';
+);
 
 
 ##科室信息表
 drop table t_room;
-
-
 create table t_room
 (
 	id int not null,
@@ -45,8 +40,8 @@ create table t_room
 	primary key (id)
 );
 
-drop table t_dictionary;
 ##字典管理
+drop table t_dictionary;
 create table t_dictionary
 (
 	id int not null auto_increment,##id为0表示第一级
@@ -56,23 +51,6 @@ create table t_dictionary
 	d_desc varchar(500),#描述
 	primary key (id)
 );
-
-### 
-insert into t_dictionary(d_order,d_parent_id,d_name) values(0,0,'医保类型字典');
-insert into t_dictionary(d_order,d_parent_id,d_name) values(1,0,'手术字典');
-insert into t_dictionary(d_order,d_parent_id,d_name) values(2,0,'情况字典');
-
-#手术字典
-insert into t_dictionary(d_parent_id,d_order,d_name) values(2,0,'手术类型字典');
-insert into t_dictionary(d_parent_id,d_order,d_name) values(2,1,'手术地点字典');
-insert into t_dictionary(d_parent_id,d_order,d_name) values(2,2,'手术方式字典');
-insert into t_dictionary(d_parent_id,d_order,d_name) values(2,3,'穿刺方式字典');
-insert into t_dictionary(d_parent_id,d_order,d_name) values(2,4,'手术追踪期限字典');
-
-#情况字典  
-insert into t_dictionary(d_parent_id,d_order,d_name) values(3,0,'内瘘自我锻炼情况字典');
-insert into t_dictionary(d_parent_id,d_order,d_name) values(3,1,'穿刺部位皮肤情况字典');
-insert into t_dictionary(d_parent_id,d_order,d_name) values(3,3,'感染控制方式字典');
 
 ### 患者信息表
 drop table t_patient;
@@ -92,7 +70,6 @@ create table t_patient
 	primary key (id)
 );
 
-
 ### 手术记录
 drop table t_record;
 create table t_record
@@ -111,8 +88,6 @@ create table t_record
 	r_is_sszz varchar(4),##是否手术追踪
 	primary key (id)
 );
-
-SET SQL_SAFE_UPDATES = 0;
 
 ### 手术追踪表
 drop table t_track;
@@ -141,5 +116,26 @@ create table t_track
 	t_zwcmzcjtzqk varchar(2000),##自我触摸震颤及听诊情况(自己输入)，
 	t_sfys varchar(50),##随访医生
 	primary key (id)
-)
+);
+
+
+
+insert into t_emp(e_account,e_pwd) values('admin','12345678');
+
+### 
+insert into t_dictionary(d_order,d_parent_id,d_name) values(0,0,'医保类型字典');
+insert into t_dictionary(d_order,d_parent_id,d_name) values(1,0,'手术字典');
+insert into t_dictionary(d_order,d_parent_id,d_name) values(2,0,'情况字典');
+
+#手术字典
+insert into t_dictionary(d_parent_id,d_order,d_name) values(2,0,'手术类型字典');
+insert into t_dictionary(d_parent_id,d_order,d_name) values(2,1,'手术地点字典');
+insert into t_dictionary(d_parent_id,d_order,d_name) values(2,2,'手术方式字典');
+insert into t_dictionary(d_parent_id,d_order,d_name) values(2,3,'穿刺方式字典');
+insert into t_dictionary(d_parent_id,d_order,d_name) values(2,4,'手术追踪期限字典');
+
+#情况字典  
+insert into t_dictionary(d_parent_id,d_order,d_name) values(3,0,'内瘘自我锻炼情况字典');
+insert into t_dictionary(d_parent_id,d_order,d_name) values(3,1,'穿刺部位皮肤情况字典');
+insert into t_dictionary(d_parent_id,d_order,d_name) values(3,3,'感染控制方式字典');
  

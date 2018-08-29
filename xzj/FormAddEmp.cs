@@ -74,41 +74,41 @@ namespace xzj
                 return;
             }
 
-            if (string.IsNullOrEmpty(sex))
-            {
-                MessageBox.Show("性别不能为空");
-                return;
-            }
+            //if (string.IsNullOrEmpty(sex))
+            //{
+            //    MessageBox.Show("性别不能为空");
+            //    return;
+            //}
 
-            if (string.IsNullOrEmpty(tel))
-            {
-                MessageBox.Show("电话不能为空");
-                return;
-            }
+            //if (string.IsNullOrEmpty(tel))
+            //{
+            //    MessageBox.Show("电话不能为空");
+            //    return;
+            //}
 
-            if (tel.Length != 11)
-            {
-                MessageBox.Show("电话不正确");
-                return;
-            }
+            //if (tel.Length != 11)
+            //{
+            //    MessageBox.Show("电话不正确");
+            //    return;
+            //}
 
-            if (string.IsNullOrEmpty(email))
-            {
-                MessageBox.Show("邮箱不能为空");
-                return;
-            }
+            //if (string.IsNullOrEmpty(email))
+            //{
+            //    MessageBox.Show("邮箱不能为空");
+            //    return;
+            //}
 
-            if (!UtilTools.isEmail(email))
-            {
-                MessageBox.Show("邮箱格式不正确");
-                return;
-            }
+            //if (!UtilTools.isEmail(email))
+            //{
+            //    MessageBox.Show("邮箱格式不正确");
+            //    return;
+            //}
 
-            if (string.IsNullOrEmpty(address))
-            {
-                MessageBox.Show("地址不能为空");
-                return;
-            }
+            //if (string.IsNullOrEmpty(address))
+            //{
+            //    MessageBox.Show("地址不能为空");
+            //    return;
+            //}
 
             if (string.IsNullOrEmpty(pwd))
             {

@@ -28,133 +28,158 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSignIn));
-            this.btnCloseForm = new System.Windows.Forms.Button();
-            this.btnSignIn = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
             this.textBoxPwd = new System.Windows.Forms.TextBox();
             this.textBoxAcount = new System.Windows.Forms.TextBox();
             this.btnConfigDB = new System.Windows.Forms.Button();
-            this.labelTime = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnSignIn = new System.Windows.Forms.Button();
+            this.btnCloseForm = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnTime = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // textBoxPwd
+            // 
+            this.textBoxPwd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPwd.Font = new System.Drawing.Font("宋体", 15F);
+            this.textBoxPwd.Location = new System.Drawing.Point(488, 258);
+            this.textBoxPwd.Margin = new System.Windows.Forms.Padding(1);
+            this.textBoxPwd.Name = "textBoxPwd";
+            this.textBoxPwd.PasswordChar = '*';
+            this.textBoxPwd.Size = new System.Drawing.Size(231, 23);
+            this.textBoxPwd.TabIndex = 5;
+            this.textBoxPwd.UseSystemPasswordChar = true;
+            // 
+            // textBoxAcount
+            // 
+            this.textBoxAcount.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxAcount.Font = new System.Drawing.Font("宋体", 15F);
+            this.textBoxAcount.Location = new System.Drawing.Point(488, 196);
+            this.textBoxAcount.Margin = new System.Windows.Forms.Padding(1);
+            this.textBoxAcount.Name = "textBoxAcount";
+            this.textBoxAcount.Size = new System.Drawing.Size(231, 23);
+            this.textBoxAcount.TabIndex = 5;
+            // 
+            // btnConfigDB
+            // 
+            this.btnConfigDB.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnConfigDB.FlatAppearance.BorderSize = 0;
+            this.btnConfigDB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfigDB.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Underline);
+            this.btnConfigDB.ForeColor = System.Drawing.Color.White;
+            this.btnConfigDB.Location = new System.Drawing.Point(434, 478);
+            this.btnConfigDB.Name = "btnConfigDB";
+            this.btnConfigDB.Size = new System.Drawing.Size(129, 32);
+            this.btnConfigDB.TabIndex = 6;
+            this.btnConfigDB.Text = "配置数据库";
+            this.btnConfigDB.UseVisualStyleBackColor = false;
+            this.btnConfigDB.Click += new System.EventHandler(this.btnConfigDB_Click);
+            // 
+            // labelTitle
+            // 
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.BackColor = System.Drawing.SystemColors.Highlight;
+            this.labelTitle.Font = new System.Drawing.Font("宋体", 30F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelTitle.ForeColor = System.Drawing.Color.White;
+            this.labelTitle.Location = new System.Drawing.Point(21, 18);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(457, 40);
+            this.labelTitle.TabIndex = 10;
+            this.labelTitle.Text = "析之助手术登记管理系统";
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackgroundImage = global::xzj.Properties.Resources.signInBtnClose1;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(625, 328);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(103, 27);
+            this.btnClose.TabIndex = 3;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnSignIn
+            // 
+            this.btnSignIn.BackgroundImage = global::xzj.Properties.Resources.signInBtn1;
+            this.btnSignIn.FlatAppearance.BorderSize = 0;
+            this.btnSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSignIn.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSignIn.Location = new System.Drawing.Point(455, 326);
+            this.btnSignIn.Name = "btnSignIn";
+            this.btnSignIn.Size = new System.Drawing.Size(108, 29);
+            this.btnSignIn.TabIndex = 2;
+            this.btnSignIn.UseVisualStyleBackColor = true;
+            this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
             // 
             // btnCloseForm
             // 
             this.btnCloseForm.BackgroundImage = global::xzj.Properties.Resources.signInCloseForm;
             this.btnCloseForm.FlatAppearance.BorderSize = 0;
             this.btnCloseForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseForm.Location = new System.Drawing.Point(536, 0);
+            this.btnCloseForm.Location = new System.Drawing.Point(775, 0);
             this.btnCloseForm.Name = "btnCloseForm";
-            this.btnCloseForm.Size = new System.Drawing.Size(26, 23);
+            this.btnCloseForm.Size = new System.Drawing.Size(25, 25);
             this.btnCloseForm.TabIndex = 1;
             this.btnCloseForm.UseVisualStyleBackColor = true;
             this.btnCloseForm.Click += new System.EventHandler(this.btnCloseForm_Click);
             // 
-            // btnSignIn
+            // pictureBox1
             // 
-            this.btnSignIn.BackgroundImage = global::xzj.Properties.Resources.signInBtn;
-            this.btnSignIn.FlatAppearance.BorderSize = 0;
-            this.btnSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSignIn.Location = new System.Drawing.Point(309, 222);
-            this.btnSignIn.Name = "btnSignIn";
-            this.btnSignIn.Size = new System.Drawing.Size(84, 31);
-            this.btnSignIn.TabIndex = 2;
-            this.btnSignIn.UseVisualStyleBackColor = true;
-            this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::xzj.Properties.Resources.signIn1;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(800, 525);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
-            // btnClose
+            // btnTime
             // 
-            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(423, 222);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(79, 27);
-            this.btnClose.TabIndex = 3;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnTime.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnTime.FlatAppearance.BorderSize = 0;
+            this.btnTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTime.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Underline);
+            this.btnTime.ForeColor = System.Drawing.Color.White;
+            this.btnTime.Location = new System.Drawing.Point(560, 478);
+            this.btnTime.Name = "btnTime";
+            this.btnTime.Size = new System.Drawing.Size(228, 32);
+            this.btnTime.TabIndex = 11;
+            this.btnTime.UseVisualStyleBackColor = false;
             // 
-            // textBoxPwd
+            // timer1
             // 
-            this.textBoxPwd.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxPwd.Location = new System.Drawing.Point(339, 179);
-            this.textBoxPwd.Margin = new System.Windows.Forms.Padding(1);
-            this.textBoxPwd.Name = "textBoxPwd";
-            this.textBoxPwd.PasswordChar = '*';
-            this.textBoxPwd.Size = new System.Drawing.Size(160, 14);
-            this.textBoxPwd.TabIndex = 5;
-            this.textBoxPwd.Text = "12345678";
-            this.textBoxPwd.UseSystemPasswordChar = true;
-            // 
-            // textBoxAcount
-            // 
-            this.textBoxAcount.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxAcount.Location = new System.Drawing.Point(339, 137);
-            this.textBoxAcount.Margin = new System.Windows.Forms.Padding(1);
-            this.textBoxAcount.Name = "textBoxAcount";
-            this.textBoxAcount.Size = new System.Drawing.Size(160, 14);
-            this.textBoxAcount.TabIndex = 5;
-            this.textBoxAcount.Text = "admin";
-            // 
-            // btnConfigDB
-            // 
-            this.btnConfigDB.BackColor = System.Drawing.Color.Transparent;
-            this.btnConfigDB.FlatAppearance.BorderSize = 0;
-            this.btnConfigDB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfigDB.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnConfigDB.ForeColor = System.Drawing.Color.White;
-            this.btnConfigDB.Location = new System.Drawing.Point(330, 312);
-            this.btnConfigDB.Name = "btnConfigDB";
-            this.btnConfigDB.Size = new System.Drawing.Size(81, 23);
-            this.btnConfigDB.TabIndex = 6;
-            this.btnConfigDB.Text = "配置数据库";
-            this.btnConfigDB.UseVisualStyleBackColor = false;
-            this.btnConfigDB.Click += new System.EventHandler(this.btnConfigDB_Click);
-            // 
-            // labelTime
-            // 
-            this.labelTime.AutoSize = true;
-            this.labelTime.BackColor = System.Drawing.Color.Transparent;
-            this.labelTime.ForeColor = System.Drawing.Color.White;
-            this.labelTime.Location = new System.Drawing.Point(437, 316);
-            this.labelTime.Name = "labelTime";
-            this.labelTime.Size = new System.Drawing.Size(53, 12);
-            this.labelTime.TabIndex = 7;
-            this.labelTime.Text = "显示时间";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("宋体", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(29, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(264, 27);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "析之助手术登记系统";
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FormSignIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::xzj.Properties.Resources.signIn1;
-            this.ClientSize = new System.Drawing.Size(563, 337);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.labelTime);
+            this.ClientSize = new System.Drawing.Size(800, 525);
+            this.Controls.Add(this.btnTime);
+            this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.btnConfigDB);
             this.Controls.Add(this.textBoxAcount);
             this.Controls.Add(this.textBoxPwd);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSignIn);
             this.Controls.Add(this.btnCloseForm);
+            this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormSignIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "signIn";
             this.Load += new System.EventHandler(this.FormSignIn_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,8 +193,10 @@
         private System.Windows.Forms.TextBox textBoxPwd;
         private System.Windows.Forms.TextBox textBoxAcount;
         private System.Windows.Forms.Button btnConfigDB;
-        private System.Windows.Forms.Label labelTime;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.Button btnTime;
+        private System.Windows.Forms.Timer timer1;
 
 
     }

@@ -29,6 +29,7 @@ namespace xzj
         public FormAddDictionary()
         {
             InitializeComponent();
+            //设置输入法
             this.ImeMode = System.Windows.Forms.ImeMode.OnHalf;
         }
 
@@ -36,6 +37,7 @@ namespace xzj
         {
             this.Text = this.title;
             this.labelName.Text = this.typeName+"：";
+            //修改
             if (this.dictionary_id >= 0)
             {
                 DataTable dt = DBDictionary.getInstance().getDictionarysById(this.dictionary_id);
@@ -48,6 +50,25 @@ namespace xzj
                     name_flag = row["d_name"].ToString();
                     //this.dictionary_parent_id = 
                 }
+            }
+            else
+            {
+                string sql = string.Format("select d_order from t_dictionary where d_parent_id = {0} order by d_order desc limit 1", this.dictionary_parent_id);
+                DataTable dt = DBManager.getInstance().find(sql);
+
+                if (dt != null && dt.Rows.Count > 0)
+                {
+                    foreach (DataRow rows in dt.Rows)
+                    {
+                        this.tbRank.Text = Convert.ToInt32(rows["d_order"].ToString())+1 + "";
+                    }
+                    
+                }
+                else
+                {
+                    this.tbRank.Text = "1";
+                }
+                
             }
         }
 

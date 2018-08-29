@@ -58,7 +58,11 @@ namespace xzj
             return DateTime.Now.ToString("yyyy:MM:dd hh:mm:ss");
         }
 
-
+        //获取当前时间
+        public static String getDayAndTimeMM()
+        {
+            return DateTime.Now.ToString("yyyy-MM-dd hh:mm");
+        }
 
         //获取当前日期及周几
         public static String getDateAndWeek()

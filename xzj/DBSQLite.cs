@@ -100,6 +100,48 @@ namespace xzj
             }
         }
 
+        public static void clear()
+        {
+            try
+            {
+                SQLiteConnection cn = new SQLiteConnection("data source=" + path);
+                if (cn.State != System.Data.ConnectionState.Open)
+                {
+                    cn.Open();
+                    SQLiteCommand cmd = new SQLiteCommand();
+                    cmd.Connection = cn;
+                    cmd.CommandText = "delete from mydata";
+                    cmd.ExecuteNonQuery();
+                }
+                cn.Close();
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine("-->DeleteTable" + err);
+            }
+        }
+
+        public static void clearByKey(string key)
+        {
+            try
+            {
+                SQLiteConnection cn = new SQLiteConnection("data source=" + path);
+                if (cn.State != System.Data.ConnectionState.Open)
+                {
+                    cn.Open();
+                    SQLiteCommand cmd = new SQLiteCommand();
+                    cmd.Connection = cn;
+                    cmd.CommandText = string.Format("delete from mydata where key='{0}'", key);
+                    cmd.ExecuteNonQuery();
+                }
+                cn.Close();
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine("-->DeleteTable" + err);
+            }
+        }
+
         public static int insertValue(string key, string value)
         {
             int flag = 0;
@@ -126,6 +168,12 @@ namespace xzj
 
         public static int updateValue(string key, string value)
         {
+            string myvalue = selectValue(key);
+            if (string.IsNullOrEmpty(myvalue))
+            {
+                insertValue(key, value);
+                return 0;
+            }
             int flag = 0;
             string sqlstr = string.Format("update mydata set value='{0}' where key='{1}'", key, value);
             try

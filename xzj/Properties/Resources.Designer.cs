@@ -253,9 +253,29 @@ namespace xzj.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap signInBtn1 {
+            get {
+                object obj = ResourceManager.GetObject("signInBtn1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap signInBtnClose {
             get {
                 object obj = ResourceManager.GetObject("signInBtnClose", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap signInBtnClose1 {
+            get {
+                object obj = ResourceManager.GetObject("signInBtnClose1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

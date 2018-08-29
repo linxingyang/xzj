@@ -40,17 +40,27 @@ namespace xzj
             this.labelNowDate.Text = UtilTools.getDateAndWeek();
             //显示当前用户
             this.labelAccountShow.BackColor = ColorTranslator.FromHtml("#0078d7");
-            this.labelAccountShow.Text = "用户【" + UtilConfig.ACCOUNT + "】";
-            this.labelAccountShow.ForeColor = ColorTranslator.FromHtml("#fff");
+
+            //获取用户名
+            string account = DBSQLite.selectValue(UtilConfig.ACCOUNT_KEY);
+            dataTable = DBEmp.getInstance().getEmps(account, null);
+            if (dataTable != null && dataTable.Rows.Count > 0)
+            {
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    this.labelAccountShow.Text = "用户名【" + row["e_name"].ToString() + "】";
+                    this.labelAccountShow.ForeColor = ColorTranslator.FromHtml("#fff");
+                }
+            }
 
             //初始化手术录入
             initSSLR();
         }
 
-
         //关闭窗口
         private void picClose_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
 
@@ -163,7 +173,7 @@ namespace xzj
             combobox(this.cbSSLR_SSZZ_CCBWPFQK, dt);
             
             //手术日期
-            this.tbSSLR_SSRQ.Text = UtilTools.getDayAndTime();
+            this.dpSSLR_SSRQ.Value = Convert.ToDateTime(UtilTools.getDayAndTimeMM()); ;
 
             //随访日期
             this.tbSSLR_SSZZ_SFRQ.Text = UtilTools.getDayAndTime();
@@ -200,7 +210,7 @@ namespace xzj
             this.panelCJFX.Visible = false;
             this.panelKSGL.Visible = false;
 
-            this.listViewDictionary.FullRowSelect = true;
+            //this.listViewDictionary.FullRowSelect = true;
 
             this.setListViewDictionary("医保类型字典", 1);
         }
@@ -328,61 +338,45 @@ namespace xzj
         //填充人员信息表
         private void setListViewEmp(String account, string name)
         {
-            //设置listview表头颜色
-            this.listViewEmp.Items.Clear();
-            this.listViewEmp.FullRowSelect = true;
-            //this.listViewEmp.Items.H
-            DataTable dt = DBEmp.getInstance().getEmps(account, name);
-            int i = 0;
-            foreach (DataRow row in dt.Rows)
-            {
-                ListViewItem item = new ListViewItem();
-                item.SubItems.Clear();
 
-                //item.Text = row["id"].ToString();
-                item.Text = row["e_account"].ToString();
-                item.SubItems.Add(row["e_name"].ToString());
-                item.SubItems.Add(row["e_sex"].ToString());
-                item.SubItems.Add(row["e_birth"].ToString());
-                item.SubItems.Add(row["e_tel"].ToString());
+            string sql = string.Format("select id,e_account as '账号',e_name as '姓名',e_sex as '性别',e_birth as '生日',e_tel as '电话',e_email as '邮箱',e_address as '地址' " +
+                "from t_emp where e_account like '%{0}%' and e_name like '%{1}%'", account, name);
+            DataTable dt = DBManager.getInstance().find(sql);
 
-                if (i % 2 == 0)
-                {
-                    item.BackColor = ColorTranslator.FromHtml("#f1f3f2"); ;
-                    //item.ForeColor = Color.Red;
-                }
+            this.dgvKSGL_EMP.DataSource = null;//清空
+            this.dgvKSGL_EMP.SelectionMode = DataGridViewSelectionMode.FullRowSelect;//选中整行
 
-                this.listViewEmp.Items.Add(item);
-                i++;
-            }
+            this.dgvKSGL_EMP.DataSource = dt;//设置数据
+            this.dgvKSGL_EMP.Columns[0].Visible = false;//隐藏第一列
+
+            // Header以外所有的单元格的背景色
+            this.dgvKSGL_EMP.RowsDefaultCellStyle.BackColor = Color.White;
+
+            ////列Header的背景色 CellBorderStyle->Single   EnableHeaderVisualStyles->false
+            this.dgvKSGL_EMP.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#4f81DD");
+            this.dgvKSGL_EMP.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            this.dgvKSGL_EMP.DefaultCellStyle.SelectionBackColor = Color.Gray;//设置选中的颜色
+            
         }
 
-        //选中人员信息行
-        private void listViewEmp_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            foreach (int i in this.listViewEmp.SelectedIndices)
-            {
-                this.listViewEmp.Items[i].Selected = true;
-                //MessageBox.Show(this.listViewEmp.SelectedItems[0].Text);
-            }
-        }
 
         //通过帐户删除人员信息
         private void btnDeleteEmp_Click(object sender, EventArgs e)
         {
-            if (this.listViewEmp.SelectedItems.Count == 0)
-            {
-                MessageBox.Show("请选择要删除的科室人员");
-                return;
-            }
-            string account = this.listViewEmp.SelectedItems[0].Text;
-            string name = this.listViewEmp.SelectedItems[0].SubItems[1].Text;
-            DialogResult dr = MessageBox.Show("删除【" + name + "(" + account + ")】用户?", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr == DialogResult.Yes)
-            {
-                DBEmp.getInstance().deleteEmpByAccount(account);
-                this.setListViewEmp(null, null);//重新绑定
-            }
+            //if (this.listViewEmp.SelectedItems.Count == 0)
+            //{
+            //    MessageBox.Show("请选择要删除的科室人员");
+            //    return;
+            //}
+            //string account = this.listViewEmp.SelectedItems[0].Text;
+            //string name = this.listViewEmp.SelectedItems[0].SubItems[1].Text;
+            //DialogResult dr = MessageBox.Show("删除【" + name + "(" + account + ")】用户?", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            //if (dr == DialogResult.Yes)
+            //{
+            //    DBEmp.getInstance().deleteEmpByAccount(account);
+            //    this.setListViewEmp(null, null);//重新绑定
+            //}
 
         }
 
@@ -401,19 +395,29 @@ namespace xzj
         //编辑人员信息
         private void btnGoEditEmp_Click(object sender, EventArgs e)
         {
-            if (this.listViewEmp.SelectedItems.Count == 0)
+            try
+            {
+                int index = dgvKSGL_EMP.CurrentRow.Index; //获取选中行的行号
+                string account = dgvKSGL_EMP.Rows[index].Cells[1].Value.ToString();
+                if (string.IsNullOrEmpty(account))
+                {
+                    MessageBox.Show("请选择要编辑的科室人员");
+                    return;
+                }
+                //string account = this.listViewEmp.SelectedItems[0].Text;
+                FormAddEmp.ACCOUNT = account;
+                FormAddEmp form = new FormAddEmp();
+                form.ShowDialog();
+                if (form.DialogResult == DialogResult.OK)
+                {
+                    this.setListViewEmp(null, null);//重新绑定
+                }
+            }
+            catch (Exception err)
             {
                 MessageBox.Show("请选择要编辑的科室人员");
-                return;
             }
-            //string account = this.listViewEmp.SelectedItems[0].Text;
-            FormAddEmp.ACCOUNT = this.listViewEmp.SelectedItems[0].Text;
-            FormAddEmp form = new FormAddEmp();
-            form.ShowDialog();
-            if (form.DialogResult == DialogResult.OK)
-            {
-                this.setListViewEmp(null, null);//重新绑定
-            }
+
         }
 
         //通过名称和用户名查询用户信息
@@ -432,6 +436,7 @@ namespace xzj
         private void btnDictionarySSZD_Click(object sender, EventArgs e)
         {
             this.listViewDictionarySSZD.Visible = !this.listViewDictionarySSZD.Visible;
+            this.listViewDictionaryQKZD.Visible = false;
 
             if (this.listViewDictionarySSZD.Visible)
             {
@@ -467,6 +472,7 @@ namespace xzj
         //查询情况字典
         private void btnDictionaryQKZD_Click(object sender, EventArgs e)
         {
+            this.listViewDictionarySSZD.Visible = false;
             this.listViewDictionaryQKZD.Visible = !this.listViewDictionaryQKZD.Visible;
 
 
@@ -522,26 +528,26 @@ namespace xzj
             // hispitorName,hispitorAddress,province,rank,postcode,roomName,roomTel,roomFax,roomFZR,roomFZRZC,roomFZRDH,roomFZRSJ,roomFZRYX,roomTXZXMJ,roomTXDYMJ,roomKSRQ
 
             if (string.IsNullOrEmpty(hispitorName)) { MessageBox.Show("【医院名称】不能为空"); return; }
-            if (string.IsNullOrEmpty(hispitorAddress)) { MessageBox.Show("【医院地址】不能为空"); return; }
-            if (string.IsNullOrEmpty(province)) { MessageBox.Show("【省(直辖市)】不能为空"); return; }
-            if (string.IsNullOrEmpty(rank)) { MessageBox.Show("【等级】不能为空"); return; }
-            if (string.IsNullOrEmpty(postcode)) { MessageBox.Show("【邮政编码】不能为空"); return; }
-            if (postcode.Length != 6) { MessageBox.Show("【邮政编码】 格式有误"); return; }
+            //if (string.IsNullOrEmpty(hispitorAddress)) { MessageBox.Show("【医院地址】不能为空"); return; }
+            //if (string.IsNullOrEmpty(province)) { MessageBox.Show("【省(直辖市)】不能为空"); return; }
+            //if (string.IsNullOrEmpty(rank)) { MessageBox.Show("【等级】不能为空"); return; }
+            //if (string.IsNullOrEmpty(postcode)) { MessageBox.Show("【邮政编码】不能为空"); return; }
+            //if (postcode.Length != 6) { MessageBox.Show("【邮政编码】 格式有误"); return; }
             if (string.IsNullOrEmpty(roomName)) { MessageBox.Show("【科室名称】不能为空"); return; }
-            if (string.IsNullOrEmpty(roomTel)) { MessageBox.Show("【科室电话】不能为空"); return; }
-            if (roomTel.Length > 11) { MessageBox.Show("【科室电话】 格式有误"); return; }
-            if (string.IsNullOrEmpty(roomFax)) { MessageBox.Show("【科室传真】不能为空"); return; }
-            if (string.IsNullOrEmpty(roomFZR)) { MessageBox.Show("【科室负责人】不能为空"); return; }
-            if (string.IsNullOrEmpty(roomFZRZC)) { MessageBox.Show("【科室负责人职称】不能为空"); return; }
-            if (string.IsNullOrEmpty(roomFZRDH)) { MessageBox.Show("【科室负责人电话】不能为空"); return; }
-            if (roomFZRDH.Length > 11) { MessageBox.Show("【科室负责人电话】 格式有误"); return; }
-            if (string.IsNullOrEmpty(roomFZRSJ)) { MessageBox.Show("【科室负责人手机】不能为空"); return; }
-            if (roomFZRSJ.Length != 11) { MessageBox.Show("【科室负责人手机】 格式有误"); return; }
-            if (string.IsNullOrEmpty(roomFZRYX)) { MessageBox.Show("【科室负责人邮箱】不能为空"); return; }
-            if (!UtilTools.isEmail(roomFZRYX)) { MessageBox.Show("【科室负责人邮箱】 格式有误"); return; }
-            if (string.IsNullOrEmpty(roomTXZXMJ)) { MessageBox.Show("【透析中心面积】 不能为空"); return; }
-            if (string.IsNullOrEmpty(roomTXDYMJ)) { MessageBox.Show("【透析单元面积】 不能为空"); return; }
-            if (string.IsNullOrEmpty(roomKSRQ)) { MessageBox.Show("【开始日期】 不能为空"); return; }
+            //if (string.IsNullOrEmpty(roomTel)) { MessageBox.Show("【科室电话】不能为空"); return; }
+            //if (roomTel.Length > 11) { MessageBox.Show("【科室电话】 格式有误"); return; }
+            //if (string.IsNullOrEmpty(roomFax)) { MessageBox.Show("【科室传真】不能为空"); return; }
+            //if (string.IsNullOrEmpty(roomFZR)) { MessageBox.Show("【科室负责人】不能为空"); return; }
+            //if (string.IsNullOrEmpty(roomFZRZC)) { MessageBox.Show("【科室负责人职称】不能为空"); return; }
+            //if (string.IsNullOrEmpty(roomFZRDH)) { MessageBox.Show("【科室负责人电话】不能为空"); return; }
+            //if (roomFZRDH.Length > 11) { MessageBox.Show("【科室负责人电话】 格式有误"); return; }
+            //if (string.IsNullOrEmpty(roomFZRSJ)) { MessageBox.Show("【科室负责人手机】不能为空"); return; }
+            //if (roomFZRSJ.Length != 11) { MessageBox.Show("【科室负责人手机】 格式有误"); return; }
+            //if (string.IsNullOrEmpty(roomFZRYX)) { MessageBox.Show("【科室负责人邮箱】不能为空"); return; }
+            //if (!UtilTools.isEmail(roomFZRYX)) { MessageBox.Show("【科室负责人邮箱】 格式有误"); return; }
+            //if (string.IsNullOrEmpty(roomTXZXMJ)) { MessageBox.Show("【透析中心面积】 不能为空"); return; }
+            //if (string.IsNullOrEmpty(roomTXDYMJ)) { MessageBox.Show("【透析单元面积】 不能为空"); return; }
+            //if (string.IsNullOrEmpty(roomKSRQ)) { MessageBox.Show("【开始日期】 不能为空"); return; }
 
 
             int flag = 0;
@@ -626,71 +632,81 @@ namespace xzj
             this.listViewDictionaryQKZD.Visible = false;
         }
 
+        /// <summary>
+        /// 使DataGridView的列自适应宽度
+        /// </summary>
+        /// <param name="dgViewFiles"></param>
+        private void AutoSizeColumn(DataGridView dgViewFiles)
+        {
+            int width = 0;
+            //使列自使用宽度
+            //对于DataGridView的每一个列都调整
+            for (int i = 0; i < dgViewFiles.Columns.Count; i++)
+            {
+                //将每一列都调整为自动适应模式
+                dgViewFiles.AutoResizeColumn(i, DataGridViewAutoSizeColumnMode.AllCells);
+                //记录整个DataGridView的宽度
+                width += dgViewFiles.Columns[i].Width;
+            }
+            //判断调整后的宽度与原来设定的宽度的关系，如果是调整后的宽度大于原来设定的宽度，
+            //则将DataGridView的列自动调整模式设置为显示的列即可，
+            //如果是小于原来设定的宽度，将模式改为填充。
+            if (width > dgViewFiles.Size.Width)
+            {
+                dgViewFiles.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            }
+            else
+            {
+                dgViewFiles.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            }
+            //冻结某列 从左开始 0，1，2
+            dgViewFiles.Columns[1].Frozen = true;
+        }
+
         //设置显示字典
         private void setListViewDictionary(string dName, int parentId)
         {
+            this.dgvDictionary.DataSource = null;//清空
+            this.dgvDictionary.SelectionMode = DataGridViewSelectionMode.FullRowSelect;//选中整行
+
             dictionary_parent_id = parentId;
             this.labelDictionaryShow.Text = dName;//显示选中的字典名称
 
-            this.listViewDictionary.Clear();
-            //this.listViewDictionary.Items.Clear();
-            this.listViewDictionary.FullRowSelect = true;//选中指定
-            //this.listViewDictionary.BackColor = ColorTranslator.FromHtml("#41aaeb");
+            string sql = string.Format("select id,d_parent_id,d_order,d_name,d_desc from t_dictionary where d_parent_id={0} order by d_order,d_name", parentId);
+            DataTable dt = DBManager.getInstance().find(sql);
+           
+            this.dgvDictionary.DataSource = dt;
 
-            //设置标题
-            //隐藏标题id
-            ColumnHeader ch = new ColumnHeader();
-            ch.Text = "id";   //设置列标题
-            ch.Width = 0;    //设置列宽度
-            ch.TextAlign = HorizontalAlignment.Left;   //设置列的对齐方式
-            this.listViewDictionary.Columns.Add(ch);
-            //标题一
-            ch = new ColumnHeader();
-            ch.Text = "排列顺序";   //设置列标题
-            ch.Width = 96 + 10;    //设置列宽度
-            ch.TextAlign = HorizontalAlignment.Left;   //设置列的对齐方式
-            this.listViewDictionary.Columns.Add(ch);
-            //标题二
-            ch = new ColumnHeader();
-            ch.Text = dName;   //设置列标题
-            ch.Width = 3 * 96;    //设置列宽度
-            ch.TextAlign = HorizontalAlignment.Left;   //设置列的对齐方式
-            this.listViewDictionary.Columns.Add(ch);    //将列头添加到ListView控件。
-            //标题三
-            ch = new ColumnHeader();
-            ch.Text = "描述";   //设置列标题
-            ch.Width = 6 * 96 - 10;    //设置列宽度
-            ch.TextAlign = HorizontalAlignment.Left;   //设置列的对齐方式
-            this.listViewDictionary.Columns.Add(ch);    //将列头添加到ListView控件。
+            this.dgvDictionary.Columns[0].Visible = false;
+            this.dgvDictionary.Columns[1].Visible = false;
 
-            ImageList imgList = new ImageList();
-            imgList.ImageSize = new Size(1, 25);
-            this.listViewDictionary.SmallImageList = imgList;
+            this.dgvDictionary.Columns[0].FillWeight = 1;
+            this.dgvDictionary.Columns[1].FillWeight = 1;
+            this.dgvDictionary.Columns[2].FillWeight = 10;
+            this.dgvDictionary.Columns[3].FillWeight = 20;
+            this.dgvDictionary.Columns[4].FillWeight = 40;
 
-            DataTable dt = DBDictionary.getInstance().getDictionarysByParentId(parentId);
-            foreach (DataRow row in dt.Rows)
-            {
-                ListViewItem item = new ListViewItem();
-                item.SubItems.Clear();
-                item.Text = row["id"].ToString();
-                //item.ForeColor = Color.White;
-                item.SubItems.Add(row["d_order"].ToString());
-                item.SubItems.Add(row["d_name"].ToString());
-                item.SubItems.Add(row["d_desc"].ToString());
-                //记住view改成detail
-                this.listViewDictionary.Items.Add(item);
-                // this.listViewDictionary.Columns[0].Width = 2000;
-                //this.listViewDictionarySSZD.Items.Add(row["d_name"].ToString());
-            }
-            this.listViewDictionary.EndUpdate();
+            this.dgvDictionary.Columns[0].HeaderText = "id";
+            this.dgvDictionary.Columns[1].HeaderText = "pId";
+            this.dgvDictionary.Columns[2].HeaderText = "排列序号";
+            this.dgvDictionary.Columns[3].HeaderText = dName;
+            this.dgvDictionary.Columns[4].HeaderText = "描述";
+
+            // Header以外所有的单元格的背景色
+            this.dgvDictionary.RowsDefaultCellStyle.BackColor = Color.White;
+
+            ////列Header的背景色 CellBorderStyle->Single   EnableHeaderVisualStyles->false
+            this.dgvDictionary.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#4f81DD");
+            this.dgvDictionary.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            //设置选中的颜色
+            this.dgvDictionary.DefaultCellStyle.SelectionBackColor = Color.Gray;
+
         }
 
         //前往添加字典界面
         private void btnGoAddDictionaryy_Click(object sender, EventArgs e)
         {
-            //FormAddDictionary.dictionary_id = dictionary_id;
-            //FormAddDictionary.title = "添加字典";
-            //FormAddDictionary.dictionary_parent_id = dictionary_parent_id;
             FormAddDictionary formAddDictionary = new FormAddDictionary();
             formAddDictionary.setDesc(-1, dictionary_parent_id, "添加字典", this.labelDictionaryShow.Text);
             formAddDictionary.ShowDialog();
@@ -703,50 +719,59 @@ namespace xzj
         //修改字典
         private void btnGoEditDictionary_Click(object sender, EventArgs e)
         {
-            if (this.listViewDictionary.SelectedItems.Count == 0)
+            try
+            {
+                int index = dgvDictionary.CurrentRow.Index; //获取选中行的行号
+                int id = Convert.ToInt32(dgvDictionary.Rows[index].Cells[0].Value.ToString());
+               
+                if (id == 0)
+                {
+                    MessageBox.Show("请选择要修改的字典");
+                    return;
+                }
+
+                FormAddDictionary formAddDictionary = new FormAddDictionary();
+                formAddDictionary.setDesc(id, dictionary_parent_id, "修改字典", this.labelDictionaryShow.Text);
+                formAddDictionary.ShowDialog();
+                if (formAddDictionary.DialogResult == DialogResult.OK)
+                {
+                    this.setListViewDictionary(this.labelDictionaryShow.Text, dictionary_parent_id);//重新绑定
+                }
+            }
+            catch (Exception err)
             {
                 MessageBox.Show("请选择要修改的字典");
-                return;
             }
-
-            int id = Convert.ToInt32(this.listViewDictionary.SelectedItems[0].Text);
-
-
-            FormAddDictionary formAddDictionary = new FormAddDictionary();
-            formAddDictionary.setDesc(id, dictionary_parent_id, "修改字典", this.labelDictionaryShow.Text);
-            formAddDictionary.ShowDialog();
-            if (formAddDictionary.DialogResult == DialogResult.OK)
-            {
-                this.setListViewDictionary(this.labelDictionaryShow.Text, dictionary_parent_id);//重新绑定
-            }
-        }
-
-        //字典列表选中设置
-        private void listViewDictionary_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            foreach (int i in this.listViewDictionary.SelectedIndices)
-            {
-                this.listViewDictionary.Items[i].Selected = true;
-                //string dName = this.listViewDictionary.SelectedItems[0].Text;
-            }
+            
         }
 
         //删除字典
         private void btnDeleteDictionary_Click(object sender, EventArgs e)
         {
-            if (this.listViewDictionary.SelectedItems.Count == 0)
+            try
+            {
+                int index = dgvDictionary.CurrentRow.Index; //获取选中行的行号
+                int id = Convert.ToInt32(dgvDictionary.Rows[index].Cells[0].Value.ToString());
+                string name = dgvDictionary.Rows[index].Cells[3].Value.ToString();
+
+                if (id == 0)
+                {
+                    MessageBox.Show("请选择要修改的字典");
+                    return;
+                }
+
+                DialogResult dr = MessageBox.Show("删除【" + name + "】?", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.Yes)
+                {
+                    DBDictionary.getInstance().deleteDictionary(id);
+                    this.setListViewDictionary(this.labelDictionaryShow.Text, dictionary_parent_id);//重新绑定
+                }
+            }
+            catch (Exception err)
             {
                 MessageBox.Show("请选择要删除的字典");
-                return;
             }
-            int id = Convert.ToInt32(this.listViewDictionary.SelectedItems[0].Text);
-            string name = this.listViewDictionary.SelectedItems[0].SubItems[2].Text;
-            DialogResult dr = MessageBox.Show("删除【" + name + "(" + id + ")】?", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr == DialogResult.Yes)
-            {
-                DBDictionary.getInstance().deleteDictionary(id);
-                this.setListViewDictionary(this.labelDictionaryShow.Text, dictionary_parent_id);//重新绑定
-            }
+            
         }
 
         //保存手术记录
@@ -764,7 +789,7 @@ namespace xzj
             string ctxyy = this.tbSSLR_CTXYY.Text;//常透析医院
             string ctxyylxr = this.tbSSLR_CTXYYLXR.Text;//常透析医院联系人
             string ctxyylxrdh = this.tbSSLR_CTXYYLXRDH.Text;//常透析医院联系人电话
-            string ssrq = this.tbSSLR_SSRQ.Text;//手术日期
+            string ssrq = this.dpSSLR_SSRQ.Text;//手术日期
             string ssdd = this.cbSSLR_SSDD.Text;// SelectedValue.ToString();//手术地点
             string sslx = this.cbSSLR_SSLX.Text;// SelectedValue.ToString();//手术类型
             string ssfs = this.cbSSLR_SSFS.Text;//SelectedValue.ToString();//手术方式
@@ -851,7 +876,7 @@ namespace xzj
                 this.tbSSLR_CTXYY.Text = "";//常透析医院
                 this.tbSSLR_CTXYYLXR.Text = "";//常透析医院联系人
                 this.tbSSLR_CTXYYLXRDH.Text = "";//常透析医院联系人电话
-                this.tbSSLR_SSRQ.Text = "";//手术日期
+               // this.tbSSLR_SSRQ.Text = "";//手术日期
                 this.cbSSLR_SSDD.Text = "";//手术地点
                 this.cbSSLR_SSLX.Text = "";//手术类型
                 this.cbSSLR_SSFS.Text = "";//手术方式
@@ -962,7 +987,7 @@ namespace xzj
                             foreach (DataRow row in dataTable.Rows)
                             {
                                 this.labelSSLR_SSJL_ID.Text = row["id"].ToString();//手术记录id
-                                this.tbSSLR_SSRQ.Text = row["r_date"].ToString();//手术日期
+                                this.dpSSLR_SSRQ.Value = Convert.ToDateTime(row["r_date"].ToString());//手术日期
                                 this.cbSSLR_SSDD.Text = row["r_ss_address"].ToString();//手术地点
                                 this.cbSSLR_SSLX.Text = row["r_ss_type"].ToString();//手术类型
                                 this.cbSSLR_SSFS.Text = row["r_ss_method"].ToString();//手术方式
@@ -1025,7 +1050,7 @@ namespace xzj
                         foreach (DataRow row in dataTable.Rows)
                         {
                             this.labelSSLR_SSJL_ID.Text = row["id"].ToString();//手术记录id
-                            this.tbSSLR_SSRQ.Text = row["r_date"].ToString();//手术日期
+                            this.dpSSLR_SSRQ.Value = Convert.ToDateTime(row["r_date"].ToString());//手术日期
                             this.cbSSLR_SSDD.Text = row["r_ss_address"].ToString();//手术地点
                             this.cbSSLR_SSLX.Text = row["r_ss_type"].ToString();//手术类型
                             this.cbSSLR_SSFS.Text = row["r_ss_method"].ToString();//手术方式
@@ -1225,22 +1250,11 @@ namespace xzj
                         "t.t_sffz,t.t_jmyfw,t.t_sjqbxsjmy,t.t_xjqbxsjmy,t.t_xll,t.t_ypzxsj,t.t_zwcmzcjtzqk, " +
                         "t.t_sfys " +
                     "from t_track t";
-            findSSZZ(sql);
+
+
+            btnSJCX_SSZZ_FIND_Click(null, null);
         }
 
-        //查询手术追踪
-        private void findSSZZ(string sql)
-        {
-            dataTable = DBManager.getInstance().find(sql);
-            if (dataTable != null && dataTable.Rows.Count > 0)
-            {
-                this.dgvSJCX_RECORDS.DataSource = dataTable;
-                this.dgvSJCX_RECORDS.Columns[0].Visible = false;
-                this.dgvSJCX_RECORDS.Columns[1].Width = 80;
-                this.dgvSJCX_RECORDS.Columns[2].Width = 130;
-            }
-            //dgvSJCX_RECORDS
-        }
 
         //初始化数据查询界面
         private void initSJCX()
@@ -1254,7 +1268,7 @@ namespace xzj
             this.panelSJCX_SSJLD.Visible = true;
             this.panelSJCX_SSZZD.Visible = false;
 
-            this.gbSJCX_SSJLD_SSZZ.Visible = false;
+            this.gbSJCX_SSJLD_SSZZ.Visible = true;
 
             string sql = string.Format("select r.id 'id',p.p_name '姓名',r.r_date '手术日期' from t_patient p,t_record r where p.p_ID = r.r_patient_ID");
             selectRecords(sql);
@@ -1325,15 +1339,23 @@ namespace xzj
         //设置手术记录列表
         private void selectRecords(string sql)
         {
-            this.dgvSJCX_RECORDS.DataSource = null;
-            dataTable = DBManager.getInstance().find(sql);
-            if (dataTable != null && dataTable.Rows.Count > 0)
-            {
-                this.dgvSJCX_RECORDS.DataSource = dataTable;
-                this.dgvSJCX_RECORDS.Columns[0].Visible = false;
-                this.dgvSJCX_RECORDS.Columns[1].Width = 80;
-                this.dgvSJCX_RECORDS.Columns[2].Width = 130;
-            }
+           
+            this.dgvSJCX_RECORDS.DataSource = null;//清空
+            this.dgvSJCX_RECORDS.SelectionMode = DataGridViewSelectionMode.FullRowSelect;//选中整行
+
+            DataTable dt = DBManager.getInstance().find(sql);
+            this.dgvSJCX_RECORDS.DataSource = dt;
+
+            //第一列隐藏
+            this.dgvSJCX_RECORDS.Columns[0].Visible = false;
+            // Header以外所有的单元格的背景色
+            dgvDictionary.RowsDefaultCellStyle.BackColor = Color.White;
+
+            ////列Header的背景色 CellBorderStyle->Single   EnableHeaderVisualStyles->false
+            dgvDictionary.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#4f81DD");
+            dgvDictionary.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            dgvDictionary.DefaultCellStyle.SelectionBackColor = Color.Gray;//设置选中的颜色
         }
 
         //搜索手术记录单
@@ -1341,8 +1363,9 @@ namespace xzj
         {
             this.cbSJCX_XSSSZZ.Checked = false;
             string name = this.tbSJCX_NAME.Text;//姓名
-            string kssj = this.dtpSJCX_KSSJ.Value.ToString( "yyyy-MM-dd hh:mm:ss");//开始时间
-            string jssj = this.dtpSJCX_JSSJ.Value.ToString("yyyy-MM-dd hh:mm:ss");//结束时间
+
+            string kssj = this.dtpSJCX_KSSJ.Value.ToString("yyyy-MM") + "-01";//开始时间
+            string jssj = this.dtpSJCX_JSSJ.Value.ToString("yyyy-MM") + "-31";//结束时间
 
             string sqlStr = "select r.id '身份证',p.p_name '姓名',r.r_date '手术日期' from t_patient p,t_record r where p.p_ID = r.r_patient_ID " +
                 "and r.r_date > '{0}' and r.r_date <= '{1}' ";
@@ -1470,9 +1493,12 @@ namespace xzj
         //查询手术追踪
         private void btnSJCX_SSZZ_FIND_Click(object sender, EventArgs e)
         {
+            this.dgvSJCX_SSZZ.DataSource = null;
+
             string name = this.tbSJCX_SSZZ_NAME.Text;//姓名
-            string kssj = this.dtpSJCX_SSZZ_KSRQ.Value.ToString("yyyy-MM-dd hh:mm:ss");//开始时间
-            string jssj = this.dtpSJCX_SSZZ_JSRQ.Value.ToString("yyyy-MM-dd hh:mm:ss");//结束时间
+            
+            string kssj = this.dtpSJCX_SSZZ_KSRQ.Value.ToString("yyyy-MM") + "-01";//开始时间
+            string jssj = this.dtpSJCX_SSZZ_JSRQ.Value.ToString("yyyy-MM") + "-31";//结束时间
             string sszz = this.cbSJCX_SSZZ_CXTJ.Text;//追踪状态 未追踪 已追踪  全部
 
             string sql = "select p.p_name 姓名,p.p_sex 性别,p.p_age 年龄,p.p_health_type 医保类型,r.r_cc_method 穿刺方式,r.r_ss_type 手术类型,"+
@@ -1503,9 +1529,20 @@ namespace xzj
             }
             else
             {
+                this.dgvSJCX_SSZZ.SelectionMode = DataGridViewSelectionMode.FullRowSelect;//选中整行
+                this.dgvSJCX_SSZZ.DataSource = null;//清空
                 this.dgvSJCX_SSZZ.DataSource = dataTable;
+
+                // Header以外所有的单元格的背景色
+                this.dgvSJCX_SSZZ.RowsDefaultCellStyle.BackColor = Color.White;
+
+                ////列Header的背景色 CellBorderStyle->Single   EnableHeaderVisualStyles->false
+                this.dgvSJCX_SSZZ.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#4f81DD");
+                this.dgvSJCX_SSZZ.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+                this.dgvSJCX_SSZZ.DefaultCellStyle.SelectionBackColor = Color.Gray;//设置选中的颜色
+
             }
-            //
         }
 
         static int TJ_FLAG = 0;//0表示是基本信息统计，1表示是手术统计
@@ -1753,8 +1790,8 @@ namespace xzj
         //根据时间查询统计
         private void btnCJCX_time_Click(object sender, EventArgs e)
         {
-            string kssj = this.dtpTJCX_KSSJ.Value.ToString("yyyy-MM-dd hh:mm:ss");
-            string jssj = this.dtpTJCX_JSSJ.Value.ToString("yyyy-MM-dd hh:mm:ss");
+            string kssj = this.dtpTJCX_KSSJ.Value.ToString("yyyy-MM")+"-01";
+            string jssj = this.dtpTJCX_JSSJ.Value.ToString("yyyy-MM")+"-31";
 
             //基本信息查询
             if (TJ_FLAG == 0)
@@ -1775,12 +1812,7 @@ namespace xzj
             }
             
         }
-
-        private void panelCJFX_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        
         //手术统计
         private void btnTJFX_SSTJ_Click(object sender, EventArgs e)
         {
@@ -1815,13 +1847,7 @@ namespace xzj
             this.panelTJFX_GZLTJ.Visible = true;
 
             //工作量统计
-            initGJLTJ();
-        }
-
-        //工作量统计
-        private void initGJLTJ()
-        {
-
+           // initGJLTJ();
         }
 
         //手术统计
@@ -2031,16 +2057,28 @@ namespace xzj
         //详细统计
         private void initTJFX_XXTJ()
         {
-            string kssj = this.dtpTJFX_GZLGL_KSSJ.Value.ToString();
-            string jssj = this.dtpTJFX_GZLGL_JSSJ.Value.ToString();
+            string kssj = this.dtpTJFX_GZLGL_KSSJ.Value.ToString("yyyy-MM") + "-01";
+            string jssj = this.dtpTJFX_GZLGL_JSSJ.Value.ToString("yyyy-MM") + "-31";
 
             DataTable dt1 = null, dt2 = null, dt3 = null;
             //详细统计
             if (this.tbTJCX_XXTJ.Checked)
             {
-                dt1 = this.findZDYS_XX(kssj, jssj);
-                dt2 = this.findZS_XX(kssj, jssj);
-                dt3 = this.findQXHS_XX(kssj, jssj);
+             
+                string sql = string.Format("select " +
+                           " r.r_zd_docotor as '主刀医生'," +
+                           " r.r_zs as '助手'," +
+                           " r.r_qxhs as '器械护士'," +
+                           " p.p_name as '患者姓名'," +
+                          "  p.p_sex as '患者性别'," +
+                           " r.r_ss_type as '手术类型'," +
+                          "  r.r_ss_method as '手术方式'," +
+                          "  r.r_cc_method as '穿刺方式'" +
+                          "  from " +
+                          "  t_record r left join t_patient p on r.r_patient_ID = p.p_ID" +
+                          "  where r.r_date > '{0}' and  r.r_date < '{1}'", kssj, jssj);
+
+                dt1 = DBManager.getInstance().find(sql);
             }
 
             //统计模式
@@ -2049,71 +2087,23 @@ namespace xzj
                 dt1 = this.findZDYS_TJ(kssj, jssj);
                 dt2 = this.findZS_TJ(kssj, jssj);
                 dt3 = this.findQXHS_TJ(kssj, jssj);
+                dt1.Merge(dt2, false, MissingSchemaAction.AddWithKey);
+                dt1.Merge(dt3, false, MissingSchemaAction.AddWithKey);
             }
            
 
-            dt1.Merge(dt2, false, MissingSchemaAction.AddWithKey);
-            dt1.Merge(dt3, false, MissingSchemaAction.AddWithKey);
-
+            this.dgvTJCX_GZL.SelectionMode = DataGridViewSelectionMode.FullRowSelect;//选中整行
+            this.dgvTJCX_GZL.DataSource = null;//清空
             this.dgvTJCX_GZL.DataSource = dt1;
-        }
 
-        //详细统计-》查询主刀医生
-        private DataTable findZDYS_XX(string kssj, string jssj)
-        {
-            string sql = string.Format("select " +
-                       " r.r_zd_docotor as '医护人员姓名'," +
-                       " p.p_name as '患者姓名'," +
-                      "  p.p_sex as '患者性别'," +
-                       " r.r_ss_type as '手术类型'," +
-                      "  r.r_ss_method as '手术方式'," +
-                      "  r.r_cc_method as '穿刺方式'," +
-                       " '主刀医生' as '工作性质'" +
-                      "  from " +
-                      "  t_record r left join t_patient p on r.r_patient_ID = p.p_ID" +
-                      "  where r.r_date > '{0}' and  r.r_date < '{1}'", kssj, jssj);
-            
-            dataTable = DBManager.getInstance().find(sql);
-            return dataTable;
-        }
+            // Header以外所有的单元格的背景色
+            this.dgvTJCX_GZL.RowsDefaultCellStyle.BackColor = Color.White;
 
-        //详细统计-》查询助手
-        private DataTable findZS_XX(string kssj, string jssj)
-        {
-            string sql = string.Format("select " +
-                       " r.r_zs as '医护人员姓名'," +
-                       " p.p_name as '患者姓名'," +
-                      "  p.p_sex as '患者性别'," +
-                       " r.r_ss_type as '手术类型'," +
-                      "  r.r_ss_method as '手术方式'," +
-                      "  r.r_cc_method as '穿刺方式'," +
-                       " '助手' as '工作性质'" +
-                      "  from " +
-                      "  t_record r left join t_patient p on r.r_patient_ID = p.p_ID" +
-                      "  where r.r_date > '{0}' and  r.r_date < '{1}'", kssj, jssj);
-            
+            ////列Header的背景色 CellBorderStyle->Single   EnableHeaderVisualStyles->false
+            this.dgvTJCX_GZL.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#4f81DD");
+            this.dgvTJCX_GZL.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
 
-            dataTable = DBManager.getInstance().find(sql);
-            return dataTable;
-        }
-
-        //详细统计-》器械护士
-        private DataTable findQXHS_XX(string kssj, string jssj)
-        {
-            string sql = string.Format("select " +
-                       " r.r_qxhs as '医护人员姓名'," +
-                       " p.p_name as '患者姓名'," +
-                      "  p.p_sex as '患者性别'," +
-                       " r.r_ss_type as '手术类型'," +
-                      "  r.r_ss_method as '手术方式'," +
-                      "  r.r_cc_method as '穿刺方式'," +
-                       " '器械护士' as '工作性质'" +
-                      "  from " +
-                      "  t_record r left join t_patient p on r.r_patient_ID = p.p_ID" +
-                      "  where r.r_date > '{0}' and  r.r_date < '{1}'", kssj, jssj);
-           
-            dataTable = DBManager.getInstance().find(sql);
-            return dataTable;
+            this.dgvTJCX_GZL.DefaultCellStyle.SelectionBackColor = Color.Gray;//设置选中的颜色
         }
 
         //统计模式-》查询主刀医生
@@ -2164,8 +2154,6 @@ namespace xzj
             dataTable = DBManager.getInstance().find(sql);
             return dataTable;
         }
-
-        
 
         //打印手术记录单
         private void btnPrintSSCX_SSJL_Click(object sender, EventArgs e)
@@ -2275,8 +2263,47 @@ namespace xzj
             this.rtbSSLR_SSJL.SelectionFont = new Font(fontType, fontSize, FontStyle.Bold);
         }
 
-       
-       
+        //监听窗体的变化
+        private void FormMain_SizeChanged(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                this.Hide();
+                this.notifyIcon1.Visible = true;
+                this.notifyIcon1.Text = "析之助手术登记管理系统";//鼠标放在托盘时显示的文字
+                this.notifyIcon1.BalloonTipText = "析之助手术登记管理系统";//气泡显示的文字
+                this.notifyIcon1.ShowBalloonTip(1000);//托盘气泡的显现时间
+                
+            }
+        }
+
+        //双击托盘，显示应用
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            this.Show();
+            this.WindowState = FormWindowState.Normal;
+        }
+
+        //让datagridview自动 编号
+        private void dgvTJCX_GZL_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            autoAddId(sender,e);
+        }
+
+        //工作量统计让datagridview自动 编号
+        public void autoAddId(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            DataGridView dt = (DataGridView)sender;
+            Rectangle rectangle = new Rectangle(e.RowBounds.Location.X, e.RowBounds.Location.Y, dgvTJCX_GZL.RowHeadersWidth - 4, e.RowBounds.Height);
+            TextRenderer.DrawText(e.Graphics,
+                  (e.RowIndex + 1).ToString(),
+                   dt.RowHeadersDefaultCellStyle.Font,
+                   rectangle,
+                   dt.RowHeadersDefaultCellStyle.ForeColor,
+                   TextFormatFlags.VerticalCenter | TextFormatFlags.Right);
+        }
+
+      
 
     }
 

@@ -29,23 +29,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup7 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup8 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelAccountShow = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -164,7 +162,6 @@
             this.panel71 = new System.Windows.Forms.Panel();
             this.labelSSLR_SSJL_ID = new System.Windows.Forms.Label();
             this.panel72 = new System.Windows.Forms.Panel();
-            this.tbSSLR_SSRQ = new System.Windows.Forms.TextBox();
             this.label105 = new System.Windows.Forms.Label();
             this.panel73 = new System.Windows.Forms.Panel();
             this.cbSSLR_CCFS = new System.Windows.Forms.ComboBox();
@@ -232,35 +229,17 @@
             this.btnDeleteDictionary = new System.Windows.Forms.Button();
             this.btnGoEditDictionary = new System.Windows.Forms.Button();
             this.btnGoAddDictionaryy = new System.Windows.Forms.Button();
-            this.panel42 = new System.Windows.Forms.Panel();
-            this.listViewDictionary = new System.Windows.Forms.ListView();
             this.panel41 = new System.Windows.Forms.Panel();
             this.labelDictionaryShow = new System.Windows.Forms.Label();
             this.panel40 = new System.Windows.Forms.Panel();
             this.btnDictionaryQKZD = new System.Windows.Forms.Button();
             this.btnDictionarySSZD = new System.Windows.Forms.Button();
             this.btnDictionaryYBLX = new System.Windows.Forms.Button();
+            this.dgvDictionary = new System.Windows.Forms.DataGridView();
             this.panelSJCX = new System.Windows.Forms.Panel();
             this.panel45 = new System.Windows.Forms.Panel();
             this.btnSJCX_SSZZCX = new System.Windows.Forms.Button();
             this.btnSJCX_SSJLD = new System.Windows.Forms.Button();
-            this.panelSJCX_SSZZD = new System.Windows.Forms.Panel();
-            this.panelSJCX_SSZZ = new System.Windows.Forms.Panel();
-            this.dgvSJCX_SSZZ = new System.Windows.Forms.DataGridView();
-            this.panel117 = new System.Windows.Forms.Panel();
-            this.btnSSCX_SSZZDY = new System.Windows.Forms.Button();
-            this.panel120 = new System.Windows.Forms.Panel();
-            this.cbSJCX_SSZZ_CXTJ = new System.Windows.Forms.ComboBox();
-            this.label155 = new System.Windows.Forms.Label();
-            this.btnSJCX_SSZZ_FIND = new System.Windows.Forms.Button();
-            this.panel118 = new System.Windows.Forms.Panel();
-            this.label152 = new System.Windows.Forms.Label();
-            this.dtpSJCX_SSZZ_JSRQ = new System.Windows.Forms.DateTimePicker();
-            this.dtpSJCX_SSZZ_KSRQ = new System.Windows.Forms.DateTimePicker();
-            this.label153 = new System.Windows.Forms.Label();
-            this.panel119 = new System.Windows.Forms.Panel();
-            this.tbSJCX_SSZZ_NAME = new System.Windows.Forms.TextBox();
-            this.label154 = new System.Windows.Forms.Label();
             this.panelSJCX_SSJLD = new System.Windows.Forms.Panel();
             this.panelSSCX_SSJLD = new System.Windows.Forms.Panel();
             this.panel102 = new System.Windows.Forms.Panel();
@@ -271,11 +250,55 @@
             this.all_zdys = new System.Windows.Forms.Label();
             this.label65 = new System.Windows.Forms.Label();
             this.panel52 = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.all_ssjl = new System.Windows.Forms.RichTextBox();
+            this.panel53 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel70 = new System.Windows.Forms.Panel();
+            this.all_ssdd = new System.Windows.Forms.Label();
+            this.all_ssrq = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
+            this.panel11111 = new System.Windows.Forms.Panel();
+            this.all_ccfs = new System.Windows.Forms.Label();
+            this.all_ssfs = new System.Windows.Forms.Label();
+            this.all_sslx = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.panel56 = new System.Windows.Forms.Panel();
+            this.all_ctxyylxrdh = new System.Windows.Forms.Label();
+            this.all_ctxyylxr = new System.Windows.Forms.Label();
+            this.all_ctxyy = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.panel55 = new System.Windows.Forms.Panel();
+            this.all_czdz = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.panel54 = new System.Windows.Forms.Panel();
+            this.all_yblx = new System.Windows.Forms.Label();
+            this.all_ID = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.panel108 = new System.Windows.Forms.Panel();
+            this.all_tel = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.all_age = new System.Windows.Forms.Label();
+            this.all_sex = new System.Windows.Forms.Label();
+            this.all_name = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.panel51 = new System.Windows.Forms.Panel();
+            this.labelSSJLD_TITLE = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
             this.gbSJCX_SSJLD_SSZZ = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.all_sfys = new System.Windows.Forms.Label();
             this.label146 = new System.Windows.Forms.Label();
             this.panel114 = new System.Windows.Forms.Panel();
+            this.panel42 = new System.Windows.Forms.Panel();
             this.all_zwcmzcjtzqk = new System.Windows.Forms.Label();
             this.label143 = new System.Windows.Forms.Label();
             this.panel113 = new System.Windows.Forms.Panel();
@@ -324,46 +347,6 @@
             this.panel109 = new System.Windows.Forms.Panel();
             this.all_sszzqx = new System.Windows.Forms.Label();
             this.label95 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.all_ssjl = new System.Windows.Forms.RichTextBox();
-            this.labelSSJLD_TITLE = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel70 = new System.Windows.Forms.Panel();
-            this.all_ssdd = new System.Windows.Forms.Label();
-            this.all_ssrq = new System.Windows.Forms.Label();
-            this.label66 = new System.Windows.Forms.Label();
-            this.label67 = new System.Windows.Forms.Label();
-            this.panel11111 = new System.Windows.Forms.Panel();
-            this.all_ccfs = new System.Windows.Forms.Label();
-            this.all_ssfs = new System.Windows.Forms.Label();
-            this.all_sslx = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
-            this.label60 = new System.Windows.Forms.Label();
-            this.label61 = new System.Windows.Forms.Label();
-            this.panel56 = new System.Windows.Forms.Panel();
-            this.all_ctxyylxrdh = new System.Windows.Forms.Label();
-            this.all_ctxyylxr = new System.Windows.Forms.Label();
-            this.all_ctxyy = new System.Windows.Forms.Label();
-            this.label55 = new System.Windows.Forms.Label();
-            this.label56 = new System.Windows.Forms.Label();
-            this.label57 = new System.Windows.Forms.Label();
-            this.panel55 = new System.Windows.Forms.Panel();
-            this.all_czdz = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.panel54 = new System.Windows.Forms.Panel();
-            this.all_yblx = new System.Windows.Forms.Label();
-            this.all_ID = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
-            this.panel108 = new System.Windows.Forms.Panel();
-            this.all_tel = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.all_age = new System.Windows.Forms.Label();
-            this.all_sex = new System.Windows.Forms.Label();
-            this.all_name = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
             this.panel50 = new System.Windows.Forms.Panel();
             this.dgvSJCX_RECORDS = new System.Windows.Forms.DataGridView();
             this.panel47 = new System.Windows.Forms.Panel();
@@ -380,6 +363,23 @@
             this.label26 = new System.Windows.Forms.Label();
             this.panel46 = new System.Windows.Forms.Panel();
             this.label21 = new System.Windows.Forms.Label();
+            this.panelSJCX_SSZZD = new System.Windows.Forms.Panel();
+            this.panelSJCX_SSZZ = new System.Windows.Forms.Panel();
+            this.dgvSJCX_SSZZ = new System.Windows.Forms.DataGridView();
+            this.panel117 = new System.Windows.Forms.Panel();
+            this.btnSSCX_SSZZDY = new System.Windows.Forms.Button();
+            this.panel120 = new System.Windows.Forms.Panel();
+            this.cbSJCX_SSZZ_CXTJ = new System.Windows.Forms.ComboBox();
+            this.label155 = new System.Windows.Forms.Label();
+            this.btnSJCX_SSZZ_FIND = new System.Windows.Forms.Button();
+            this.panel118 = new System.Windows.Forms.Panel();
+            this.label152 = new System.Windows.Forms.Label();
+            this.dtpSJCX_SSZZ_JSRQ = new System.Windows.Forms.DateTimePicker();
+            this.dtpSJCX_SSZZ_KSRQ = new System.Windows.Forms.DateTimePicker();
+            this.label153 = new System.Windows.Forms.Label();
+            this.panel119 = new System.Windows.Forms.Panel();
+            this.tbSJCX_SSZZ_NAME = new System.Windows.Forms.TextBox();
+            this.label154 = new System.Windows.Forms.Label();
             this.panelCJFX = new System.Windows.Forms.Panel();
             this.panel121 = new System.Windows.Forms.Panel();
             this.btnTJFX_GZLTJ = new System.Windows.Forms.Button();
@@ -487,12 +487,7 @@
             this.tbFindEmpName = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.panel39 = new System.Windows.Forms.Panel();
-            this.listViewEmp = new System.Windows.Forms.ListView();
-            this.account = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.sex = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.birth = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dgvKSGL_EMP = new System.Windows.Forms.DataGridView();
             this.panel13 = new System.Windows.Forms.Panel();
             this.btnRoomEmpManager = new System.Windows.Forms.Button();
             this.btnRoomInfoManager = new System.Windows.Forms.Button();
@@ -500,6 +495,9 @@
             this.printDucumentSSCX_SSJL = new System.Drawing.Printing.PrintDocument();
             this.printDialogSSCX_SSJL = new System.Windows.Forms.PrintDialog();
             this.printDocumentSJCX_SSZZ = new System.Drawing.Printing.PrintDocument();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.dpSSLR_SSRQ = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.flowLayoutForm.SuspendLayout();
@@ -568,25 +566,29 @@
             this.panel78.SuspendLayout();
             this.panelZDGL.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
-            this.panel42.SuspendLayout();
             this.panel41.SuspendLayout();
             this.panel40.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDictionary)).BeginInit();
             this.panelSJCX.SuspendLayout();
             this.panel45.SuspendLayout();
-            this.panelSJCX_SSZZD.SuspendLayout();
-            this.panelSJCX_SSZZ.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSJCX_SSZZ)).BeginInit();
-            this.panel117.SuspendLayout();
-            this.panel120.SuspendLayout();
-            this.panel118.SuspendLayout();
-            this.panel119.SuspendLayout();
             this.panelSJCX_SSJLD.SuspendLayout();
             this.panelSSCX_SSJLD.SuspendLayout();
             this.panel102.SuspendLayout();
             this.panel52.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.panel53.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.panel70.SuspendLayout();
+            this.panel11111.SuspendLayout();
+            this.panel56.SuspendLayout();
+            this.panel55.SuspendLayout();
+            this.panel54.SuspendLayout();
+            this.panel108.SuspendLayout();
+            this.panel51.SuspendLayout();
             this.gbSJCX_SSJLD_SSZZ.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.panel114.SuspendLayout();
+            this.panel42.SuspendLayout();
             this.panel113.SuspendLayout();
             this.panel112.SuspendLayout();
             this.panel111.SuspendLayout();
@@ -597,20 +599,19 @@
             this.panel104.SuspendLayout();
             this.panel1231321.SuspendLayout();
             this.panel109.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.panel70.SuspendLayout();
-            this.panel11111.SuspendLayout();
-            this.panel56.SuspendLayout();
-            this.panel55.SuspendLayout();
-            this.panel54.SuspendLayout();
-            this.panel108.SuspendLayout();
             this.panel50.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSJCX_RECORDS)).BeginInit();
             this.panel47.SuspendLayout();
             this.panel48.SuspendLayout();
             this.panel49.SuspendLayout();
             this.panel46.SuspendLayout();
+            this.panelSJCX_SSZZD.SuspendLayout();
+            this.panelSJCX_SSZZ.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSJCX_SSZZ)).BeginInit();
+            this.panel117.SuspendLayout();
+            this.panel120.SuspendLayout();
+            this.panel118.SuspendLayout();
+            this.panel119.SuspendLayout();
             this.panelCJFX.SuspendLayout();
             this.panel121.SuspendLayout();
             this.panelTJFX_GZLTJ.SuspendLayout();
@@ -658,6 +659,7 @@
             this.panel37.SuspendLayout();
             this.panel38.SuspendLayout();
             this.panel39.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKSGL_EMP)).BeginInit();
             this.panel13.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -671,9 +673,9 @@
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(10, 10);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1280, 134);
+            this.panel1.Size = new System.Drawing.Size(1300, 134);
             this.panel1.TabIndex = 7;
             // 
             // labelAccountShow
@@ -696,7 +698,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 98);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1280, 36);
+            this.panel2.Size = new System.Drawing.Size(1300, 36);
             this.panel2.TabIndex = 15;
             // 
             // btnKSGL
@@ -783,7 +785,7 @@
             this.flowLayoutForm.Controls.Add(this.picMax);
             this.flowLayoutForm.Controls.Add(this.picMin);
             this.flowLayoutForm.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutForm.Location = new System.Drawing.Point(1166, 0);
+            this.flowLayoutForm.Location = new System.Drawing.Point(1186, 0);
             this.flowLayoutForm.Name = "flowLayoutForm";
             this.flowLayoutForm.Size = new System.Drawing.Size(102, 22);
             this.flowLayoutForm.TabIndex = 6;
@@ -827,9 +829,9 @@
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(128, 11);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(387, 47);
+            this.button1.Size = new System.Drawing.Size(460, 47);
             this.button1.TabIndex = 14;
-            this.button1.Text = "析之助手术登记系统";
+            this.button1.Text = "析之助手术登记管理系统";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // pictureBox3
@@ -851,7 +853,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1280, 136);
+            this.pictureBox1.Size = new System.Drawing.Size(1300, 136);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
@@ -861,9 +863,9 @@
             this.panel3.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel3.Controls.Add(this.labelNowDate);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(10, 694);
+            this.panel3.Location = new System.Drawing.Point(0, 704);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1280, 29);
+            this.panel3.Size = new System.Drawing.Size(1300, 29);
             this.panel3.TabIndex = 12;
             // 
             // labelNowDate
@@ -889,7 +891,7 @@
             this.panelSSLR.Location = new System.Drawing.Point(10, 10);
             this.panelSSLR.Name = "panelSSLR";
             this.panelSSLR.Padding = new System.Windows.Forms.Padding(10);
-            this.panelSSLR.Size = new System.Drawing.Size(1260, 530);
+            this.panelSSLR.Size = new System.Drawing.Size(1280, 550);
             this.panelSSLR.TabIndex = 30;
             // 
             // panel77
@@ -901,9 +903,9 @@
             this.panel77.Controls.Add(this.panel79);
             this.panel77.Controls.Add(this.panel99);
             this.panel77.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel77.Location = new System.Drawing.Point(10, 686);
+            this.panel77.Location = new System.Drawing.Point(10, 1014);
             this.panel77.Name = "panel77";
-            this.panel77.Size = new System.Drawing.Size(1223, 511);
+            this.panel77.Size = new System.Drawing.Size(1243, 499);
             this.panel77.TabIndex = 7;
             // 
             // button7
@@ -914,7 +916,7 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("宋体", 12F);
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(579, 397);
+            this.button7.Location = new System.Drawing.Point(576, 460);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(141, 23);
             this.button7.TabIndex = 33;
@@ -929,7 +931,7 @@
             this.btnSaveSSLR_SSZZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaveSSLR_SSZZ.Font = new System.Drawing.Font("宋体", 12F);
             this.btnSaveSSLR_SSZZ.ForeColor = System.Drawing.Color.White;
-            this.btnSaveSSLR_SSZZ.Location = new System.Drawing.Point(422, 396);
+            this.btnSaveSSLR_SSZZ.Location = new System.Drawing.Point(419, 459);
             this.btnSaveSSLR_SSZZ.Name = "btnSaveSSLR_SSZZ";
             this.btnSaveSSLR_SSZZ.Size = new System.Drawing.Size(151, 23);
             this.btnSaveSSLR_SSZZ.TabIndex = 32;
@@ -943,7 +945,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1223, 24);
+            this.panel8.Size = new System.Drawing.Size(1243, 24);
             this.panel8.TabIndex = 31;
             // 
             // label2
@@ -993,16 +995,16 @@
             this.panel79.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.panel79.Location = new System.Drawing.Point(23, 102);
             this.panel79.Name = "panel79";
-            this.panel79.Size = new System.Drawing.Size(1200, 296);
+            this.panel79.Size = new System.Drawing.Size(1200, 345);
             this.panel79.TabIndex = 30;
             // 
             // panel80
             // 
             this.panel80.Controls.Add(this.tbSSLR_SSZZ_SFYS);
             this.panel80.Controls.Add(this.label112);
-            this.panel80.Location = new System.Drawing.Point(933, 259);
+            this.panel80.Location = new System.Drawing.Point(947, 305);
             this.panel80.Name = "panel80";
-            this.panel80.Size = new System.Drawing.Size(267, 34);
+            this.panel80.Size = new System.Drawing.Size(250, 34);
             this.panel80.TabIndex = 31;
             // 
             // tbSSLR_SSZZ_SFYS
@@ -1028,15 +1030,17 @@
             this.panel81.Controls.Add(this.label113);
             this.panel81.Location = new System.Drawing.Point(3, 224);
             this.panel81.Name = "panel81";
-            this.panel81.Size = new System.Drawing.Size(869, 34);
+            this.panel81.Size = new System.Drawing.Size(869, 104);
             this.panel81.TabIndex = 40;
             // 
             // tbSSLR_SSZZ_ZWQMJTZQK
             // 
             this.tbSSLR_SSZZ_ZWQMJTZQK.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbSSLR_SSZZ_ZWQMJTZQK.Location = new System.Drawing.Point(162, 0);
+            this.tbSSLR_SSZZ_ZWQMJTZQK.Multiline = true;
             this.tbSSLR_SSZZ_ZWQMJTZQK.Name = "tbSSLR_SSZZ_ZWQMJTZQK";
-            this.tbSSLR_SSZZ_ZWQMJTZQK.Size = new System.Drawing.Size(677, 26);
+            this.tbSSLR_SSZZ_ZWQMJTZQK.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbSSLR_SSZZ_ZWQMJTZQK.Size = new System.Drawing.Size(700, 100);
             this.tbSSLR_SSZZ_ZWQMJTZQK.TabIndex = 6;
             // 
             // label113
@@ -1172,7 +1176,6 @@
             this.tbSSLR_SSZZ_JMYFW.Name = "tbSSLR_SSZZ_JMYFW";
             this.tbSSLR_SSZZ_JMYFW.Size = new System.Drawing.Size(116, 26);
             this.tbSSLR_SSZZ_JMYFW.TabIndex = 7;
-            this.tbSSLR_SSZZ_JMYFW.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.decimal_KeyPress);
             // 
             // label118
             // 
@@ -1540,9 +1543,9 @@
             this.label131.Location = new System.Drawing.Point(1, 0);
             this.label131.Name = "label131";
             this.label131.Padding = new System.Windows.Forms.Padding(3);
-            this.label131.Size = new System.Drawing.Size(97, 20);
+            this.label131.Size = new System.Drawing.Size(69, 20);
             this.label131.TabIndex = 21;
-            this.label131.Text = "手术相关信息";
+            this.label131.Text = "随访内容";
             // 
             // panel99
             // 
@@ -1604,7 +1607,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(10, 213);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1223, 473);
+            this.panel6.Size = new System.Drawing.Size(1243, 801);
             this.panel6.TabIndex = 6;
             // 
             // panel10
@@ -1613,7 +1616,7 @@
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel10.Location = new System.Drawing.Point(0, 175);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1223, 270);
+            this.panel10.Size = new System.Drawing.Size(1243, 594);
             this.panel10.TabIndex = 38;
             // 
             // panel68
@@ -1623,7 +1626,7 @@
             this.panel68.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.panel68.Location = new System.Drawing.Point(23, 15);
             this.panel68.Name = "panel68";
-            this.panel68.Size = new System.Drawing.Size(1180, 230);
+            this.panel68.Size = new System.Drawing.Size(1199, 562);
             this.panel68.TabIndex = 30;
             // 
             // panel69
@@ -1638,7 +1641,7 @@
             this.panel69.Location = new System.Drawing.Point(0, 20);
             this.panel69.Name = "panel69";
             this.panel69.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.panel69.Size = new System.Drawing.Size(1180, 210);
+            this.panel69.Size = new System.Drawing.Size(1199, 542);
             this.panel69.TabIndex = 22;
             // 
             // panel44
@@ -1650,7 +1653,7 @@
             this.panel44.Controls.Add(this.label23);
             this.panel44.Controls.Add(this.tbSSLR_ZDYS);
             this.panel44.Controls.Add(this.label24);
-            this.panel44.Location = new System.Drawing.Point(33, 140);
+            this.panel44.Location = new System.Drawing.Point(36, 467);
             this.panel44.Name = "panel44";
             this.panel44.Size = new System.Drawing.Size(1117, 34);
             this.panel44.TabIndex = 49;
@@ -1816,10 +1819,10 @@
             // rtbSSLR_SSJL
             // 
             this.rtbSSLR_SSJL.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtbSSLR_SSJL.Location = new System.Drawing.Point(33, 30);
+            this.rtbSSLR_SSJL.Location = new System.Drawing.Point(33, 36);
             this.rtbSSLR_SSJL.Name = "rtbSSLR_SSJL";
             this.rtbSSLR_SSJL.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.rtbSSLR_SSJL.Size = new System.Drawing.Size(1117, 110);
+            this.rtbSSLR_SSJL.Size = new System.Drawing.Size(1152, 425);
             this.rtbSSLR_SSJL.TabIndex = 6;
             this.rtbSSLR_SSJL.Text = "";
             // 
@@ -1831,7 +1834,7 @@
             this.btnRecordClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRecordClear.Font = new System.Drawing.Font("宋体", 12F);
             this.btnRecordClear.ForeColor = System.Drawing.Color.White;
-            this.btnRecordClear.Location = new System.Drawing.Point(631, 176);
+            this.btnRecordClear.Location = new System.Drawing.Point(598, 510);
             this.btnRecordClear.Name = "btnRecordClear";
             this.btnRecordClear.Size = new System.Drawing.Size(141, 23);
             this.btnRecordClear.TabIndex = 5;
@@ -1847,7 +1850,7 @@
             this.btnSaveSSJL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaveSSJL.Font = new System.Drawing.Font("宋体", 12F);
             this.btnSaveSSJL.ForeColor = System.Drawing.Color.White;
-            this.btnSaveSSJL.Location = new System.Drawing.Point(477, 176);
+            this.btnSaveSSJL.Location = new System.Drawing.Point(444, 510);
             this.btnSaveSSJL.Name = "btnSaveSSJL";
             this.btnSaveSSJL.Size = new System.Drawing.Size(151, 23);
             this.btnSaveSSJL.TabIndex = 1;
@@ -1875,7 +1878,7 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox2.Location = new System.Drawing.Point(0, 153);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1223, 22);
+            this.pictureBox2.Size = new System.Drawing.Size(1243, 22);
             this.pictureBox2.TabIndex = 37;
             this.pictureBox2.TabStop = false;
             // 
@@ -1885,7 +1888,7 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(0, 24);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1223, 129);
+            this.panel9.Size = new System.Drawing.Size(1243, 129);
             this.panel9.TabIndex = 36;
             // 
             // panel71
@@ -1913,21 +1916,12 @@
             // 
             // panel72
             // 
-            this.panel72.Controls.Add(this.tbSSLR_SSRQ);
+            this.panel72.Controls.Add(this.dpSSLR_SSRQ);
             this.panel72.Controls.Add(this.label105);
             this.panel72.Location = new System.Drawing.Point(12, 26);
             this.panel72.Name = "panel72";
             this.panel72.Size = new System.Drawing.Size(283, 34);
             this.panel72.TabIndex = 30;
-            // 
-            // tbSSLR_SSRQ
-            // 
-            this.tbSSLR_SSRQ.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbSSLR_SSRQ.Enabled = false;
-            this.tbSSLR_SSRQ.Location = new System.Drawing.Point(96, 0);
-            this.tbSSLR_SSRQ.Name = "tbSSLR_SSRQ";
-            this.tbSSLR_SSRQ.Size = new System.Drawing.Size(184, 26);
-            this.tbSSLR_SSRQ.TabIndex = 6;
             // 
             // label105
             // 
@@ -2005,9 +1999,9 @@
             // 
             this.cbSSLR_SSLX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSSLR_SSLX.FormattingEnabled = true;
-            this.cbSSLR_SSLX.Location = new System.Drawing.Point(94, 0);
+            this.cbSSLR_SSLX.Location = new System.Drawing.Point(81, 0);
             this.cbSSLR_SSLX.Name = "cbSSLR_SSLX";
-            this.cbSSLR_SSLX.Size = new System.Drawing.Size(184, 24);
+            this.cbSSLR_SSLX.Size = new System.Drawing.Size(197, 24);
             this.cbSSLR_SSLX.TabIndex = 2;
             // 
             // label108
@@ -2063,9 +2057,9 @@
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.Gainsboro;
             this.pictureBox9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBox9.Location = new System.Drawing.Point(0, 451);
+            this.pictureBox9.Location = new System.Drawing.Point(0, 779);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(1223, 22);
+            this.pictureBox9.Size = new System.Drawing.Size(1243, 22);
             this.pictureBox9.TabIndex = 35;
             this.pictureBox9.TabStop = false;
             // 
@@ -2075,7 +2069,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1223, 24);
+            this.panel7.Size = new System.Drawing.Size(1243, 24);
             this.panel7.TabIndex = 34;
             // 
             // label1
@@ -2099,7 +2093,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(10, 10);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1223, 203);
+            this.panel5.Size = new System.Drawing.Size(1243, 203);
             this.panel5.TabIndex = 5;
             // 
             // pictureBox7
@@ -2108,7 +2102,7 @@
             this.pictureBox7.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pictureBox7.Location = new System.Drawing.Point(0, 181);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(1223, 22);
+            this.pictureBox7.Size = new System.Drawing.Size(1243, 22);
             this.pictureBox7.TabIndex = 34;
             this.pictureBox7.TabStop = false;
             // 
@@ -2127,7 +2121,7 @@
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel11.Location = new System.Drawing.Point(0, 24);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1223, 142);
+            this.panel11.Size = new System.Drawing.Size(1243, 142);
             this.panel11.TabIndex = 33;
             // 
             // panel58
@@ -2463,7 +2457,7 @@
             this.panel78.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel78.Location = new System.Drawing.Point(0, 0);
             this.panel78.Name = "panel78";
-            this.panel78.Size = new System.Drawing.Size(1223, 24);
+            this.panel78.Size = new System.Drawing.Size(1243, 24);
             this.panel78.TabIndex = 32;
             // 
             // label111
@@ -2485,13 +2479,13 @@
             this.panelZDGL.Controls.Add(this.listViewDictionaryQKZD);
             this.panelZDGL.Controls.Add(this.listViewDictionarySSZD);
             this.panelZDGL.Controls.Add(this.flowLayoutPanel2);
-            this.panelZDGL.Controls.Add(this.panel42);
             this.panelZDGL.Controls.Add(this.panel41);
             this.panelZDGL.Controls.Add(this.panel40);
+            this.panelZDGL.Controls.Add(this.dgvDictionary);
             this.panelZDGL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelZDGL.Location = new System.Drawing.Point(10, 10);
             this.panelZDGL.Name = "panelZDGL";
-            this.panelZDGL.Size = new System.Drawing.Size(1260, 530);
+            this.panelZDGL.Size = new System.Drawing.Size(1280, 550);
             this.panelZDGL.TabIndex = 0;
             // 
             // listViewDictionaryQKZD
@@ -2592,27 +2586,6 @@
             this.btnGoAddDictionaryy.UseVisualStyleBackColor = false;
             this.btnGoAddDictionaryy.Click += new System.EventHandler(this.btnGoAddDictionaryy_Click);
             // 
-            // panel42
-            // 
-            this.panel42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel42.Controls.Add(this.listViewDictionary);
-            this.panel42.Location = new System.Drawing.Point(103, 106);
-            this.panel42.Name = "panel42";
-            this.panel42.Size = new System.Drawing.Size(1060, 406);
-            this.panel42.TabIndex = 44;
-            // 
-            // listViewDictionary
-            // 
-            this.listViewDictionary.BackColor = System.Drawing.Color.White;
-            this.listViewDictionary.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listViewDictionary.Location = new System.Drawing.Point(42, 10);
-            this.listViewDictionary.Name = "listViewDictionary";
-            this.listViewDictionary.Size = new System.Drawing.Size(965, 375);
-            this.listViewDictionary.TabIndex = 47;
-            this.listViewDictionary.UseCompatibleStateImageBehavior = false;
-            this.listViewDictionary.View = System.Windows.Forms.View.Details;
-            this.listViewDictionary.SelectedIndexChanged += new System.EventHandler(this.listViewDictionary_SelectedIndexChanged);
-            // 
             // panel41
             // 
             this.panel41.Controls.Add(this.labelDictionaryShow);
@@ -2638,7 +2611,7 @@
             this.panel40.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel40.Location = new System.Drawing.Point(0, 0);
             this.panel40.Name = "panel40";
-            this.panel40.Size = new System.Drawing.Size(1260, 35);
+            this.panel40.Size = new System.Drawing.Size(1280, 35);
             this.panel40.TabIndex = 5;
             // 
             // btnDictionaryQKZD
@@ -2686,16 +2659,38 @@
             this.btnDictionaryYBLX.UseVisualStyleBackColor = false;
             this.btnDictionaryYBLX.Click += new System.EventHandler(this.btnDictionaryYBLX_Click);
             // 
+            // dgvDictionary
+            // 
+            this.dgvDictionary.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDictionary.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDictionary.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvDictionary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDictionary.EnableHeadersVisualStyles = false;
+            this.dgvDictionary.Location = new System.Drawing.Point(103, 120);
+            this.dgvDictionary.Name = "dgvDictionary";
+            this.dgvDictionary.ReadOnly = true;
+            this.dgvDictionary.RowHeadersVisible = false;
+            this.dgvDictionary.RowTemplate.Height = 23;
+            this.dgvDictionary.Size = new System.Drawing.Size(1093, 418);
+            this.dgvDictionary.TabIndex = 48;
+            // 
             // panelSJCX
             // 
             this.panelSJCX.BackColor = System.Drawing.Color.White;
             this.panelSJCX.Controls.Add(this.panel45);
-            this.panelSJCX.Controls.Add(this.panelSJCX_SSZZD);
             this.panelSJCX.Controls.Add(this.panelSJCX_SSJLD);
+            this.panelSJCX.Controls.Add(this.panelSJCX_SSZZD);
             this.panelSJCX.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelSJCX.Location = new System.Drawing.Point(10, 10);
             this.panelSJCX.Name = "panelSJCX";
-            this.panelSJCX.Size = new System.Drawing.Size(1260, 530);
+            this.panelSJCX.Size = new System.Drawing.Size(1280, 550);
             this.panelSJCX.TabIndex = 1;
             // 
             // panel45
@@ -2705,7 +2700,7 @@
             this.panel45.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel45.Location = new System.Drawing.Point(0, 0);
             this.panel45.Name = "panel45";
-            this.panel45.Size = new System.Drawing.Size(1260, 35);
+            this.panel45.Size = new System.Drawing.Size(1280, 35);
             this.panel45.TabIndex = 5;
             // 
             // btnSJCX_SSZZCX
@@ -2737,177 +2732,6 @@
             this.btnSJCX_SSJLD.Text = "手术记录单";
             this.btnSJCX_SSJLD.UseVisualStyleBackColor = false;
             this.btnSJCX_SSJLD.Click += new System.EventHandler(this.btnSJCX_SSJLD_Click);
-            // 
-            // panelSJCX_SSZZD
-            // 
-            this.panelSJCX_SSZZD.Controls.Add(this.panelSJCX_SSZZ);
-            this.panelSJCX_SSZZD.Controls.Add(this.panel117);
-            this.panelSJCX_SSZZD.Location = new System.Drawing.Point(8, 38);
-            this.panelSJCX_SSZZD.Name = "panelSJCX_SSZZD";
-            this.panelSJCX_SSZZD.Size = new System.Drawing.Size(1242, 487);
-            this.panelSJCX_SSZZD.TabIndex = 41;
-            // 
-            // panelSJCX_SSZZ
-            // 
-            this.panelSJCX_SSZZ.Controls.Add(this.dgvSJCX_SSZZ);
-            this.panelSJCX_SSZZ.Location = new System.Drawing.Point(13, 50);
-            this.panelSJCX_SSZZ.Name = "panelSJCX_SSZZ";
-            this.panelSJCX_SSZZ.Size = new System.Drawing.Size(1209, 434);
-            this.panelSJCX_SSZZ.TabIndex = 43;
-            // 
-            // dgvSJCX_SSZZ
-            // 
-            this.dgvSJCX_SSZZ.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSJCX_SSZZ.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvSJCX_SSZZ.Location = new System.Drawing.Point(0, 0);
-            this.dgvSJCX_SSZZ.Name = "dgvSJCX_SSZZ";
-            this.dgvSJCX_SSZZ.ReadOnly = true;
-            this.dgvSJCX_SSZZ.RowTemplate.Height = 23;
-            this.dgvSJCX_SSZZ.Size = new System.Drawing.Size(1209, 434);
-            this.dgvSJCX_SSZZ.TabIndex = 42;
-            // 
-            // panel117
-            // 
-            this.panel117.Controls.Add(this.btnSSCX_SSZZDY);
-            this.panel117.Controls.Add(this.panel120);
-            this.panel117.Controls.Add(this.btnSJCX_SSZZ_FIND);
-            this.panel117.Controls.Add(this.panel118);
-            this.panel117.Controls.Add(this.panel119);
-            this.panel117.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel117.Location = new System.Drawing.Point(0, 0);
-            this.panel117.Name = "panel117";
-            this.panel117.Size = new System.Drawing.Size(1242, 42);
-            this.panel117.TabIndex = 41;
-            // 
-            // btnSSCX_SSZZDY
-            // 
-            this.btnSSCX_SSZZDY.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnSSCX_SSZZDY.FlatAppearance.BorderSize = 0;
-            this.btnSSCX_SSZZDY.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSSCX_SSZZDY.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnSSCX_SSZZDY.ForeColor = System.Drawing.Color.White;
-            this.btnSSCX_SSZZDY.Location = new System.Drawing.Point(972, 3);
-            this.btnSSCX_SSZZDY.Name = "btnSSCX_SSZZDY";
-            this.btnSSCX_SSZZDY.Size = new System.Drawing.Size(81, 26);
-            this.btnSSCX_SSZZDY.TabIndex = 38;
-            this.btnSSCX_SSZZDY.Text = "打印";
-            this.btnSSCX_SSZZDY.UseVisualStyleBackColor = false;
-            this.btnSSCX_SSZZDY.Click += new System.EventHandler(this.btnSSCX_SSZZDY_Click);
-            // 
-            // panel120
-            // 
-            this.panel120.Controls.Add(this.cbSJCX_SSZZ_CXTJ);
-            this.panel120.Controls.Add(this.label155);
-            this.panel120.Location = new System.Drawing.Point(618, 1);
-            this.panel120.Name = "panel120";
-            this.panel120.Size = new System.Drawing.Size(234, 34);
-            this.panel120.TabIndex = 37;
-            // 
-            // cbSJCX_SSZZ_CXTJ
-            // 
-            this.cbSJCX_SSZZ_CXTJ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSJCX_SSZZ_CXTJ.FormattingEnabled = true;
-            this.cbSJCX_SSZZ_CXTJ.Items.AddRange(new object[] {
-            "已追踪",
-            "未追踪",
-            "全部"});
-            this.cbSJCX_SSZZ_CXTJ.Location = new System.Drawing.Point(84, 1);
-            this.cbSJCX_SSZZ_CXTJ.Name = "cbSJCX_SSZZ_CXTJ";
-            this.cbSJCX_SSZZ_CXTJ.Size = new System.Drawing.Size(121, 24);
-            this.cbSJCX_SSZZ_CXTJ.TabIndex = 2;
-            // 
-            // label155
-            // 
-            this.label155.AutoSize = true;
-            this.label155.Location = new System.Drawing.Point(3, 2);
-            this.label155.Name = "label155";
-            this.label155.Size = new System.Drawing.Size(88, 16);
-            this.label155.TabIndex = 1;
-            this.label155.Text = "查询条件：";
-            // 
-            // btnSJCX_SSZZ_FIND
-            // 
-            this.btnSJCX_SSZZ_FIND.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnSJCX_SSZZ_FIND.FlatAppearance.BorderSize = 0;
-            this.btnSJCX_SSZZ_FIND.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSJCX_SSZZ_FIND.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnSJCX_SSZZ_FIND.ForeColor = System.Drawing.Color.White;
-            this.btnSJCX_SSZZ_FIND.Location = new System.Drawing.Point(876, 2);
-            this.btnSJCX_SSZZ_FIND.Name = "btnSJCX_SSZZ_FIND";
-            this.btnSJCX_SSZZ_FIND.Size = new System.Drawing.Size(81, 26);
-            this.btnSJCX_SSZZ_FIND.TabIndex = 36;
-            this.btnSJCX_SSZZ_FIND.Text = "查询";
-            this.btnSJCX_SSZZ_FIND.UseVisualStyleBackColor = false;
-            this.btnSJCX_SSZZ_FIND.Click += new System.EventHandler(this.btnSJCX_SSZZ_FIND_Click);
-            // 
-            // panel118
-            // 
-            this.panel118.Controls.Add(this.label152);
-            this.panel118.Controls.Add(this.dtpSJCX_SSZZ_JSRQ);
-            this.panel118.Controls.Add(this.dtpSJCX_SSZZ_KSRQ);
-            this.panel118.Controls.Add(this.label153);
-            this.panel118.Location = new System.Drawing.Point(207, 0);
-            this.panel118.Name = "panel118";
-            this.panel118.Size = new System.Drawing.Size(402, 34);
-            this.panel118.TabIndex = 35;
-            // 
-            // label152
-            // 
-            this.label152.AutoSize = true;
-            this.label152.Location = new System.Drawing.Point(229, 5);
-            this.label152.Name = "label152";
-            this.label152.Size = new System.Drawing.Size(16, 16);
-            this.label152.TabIndex = 4;
-            this.label152.Text = "-";
-            // 
-            // dtpSJCX_SSZZ_JSRQ
-            // 
-            this.dtpSJCX_SSZZ_JSRQ.Location = new System.Drawing.Point(251, 0);
-            this.dtpSJCX_SSZZ_JSRQ.Name = "dtpSJCX_SSZZ_JSRQ";
-            this.dtpSJCX_SSZZ_JSRQ.Size = new System.Drawing.Size(138, 26);
-            this.dtpSJCX_SSZZ_JSRQ.TabIndex = 3;
-            // 
-            // dtpSJCX_SSZZ_KSRQ
-            // 
-            this.dtpSJCX_SSZZ_KSRQ.Location = new System.Drawing.Point(85, 0);
-            this.dtpSJCX_SSZZ_KSRQ.Name = "dtpSJCX_SSZZ_KSRQ";
-            this.dtpSJCX_SSZZ_KSRQ.Size = new System.Drawing.Size(138, 26);
-            this.dtpSJCX_SSZZ_KSRQ.TabIndex = 2;
-            // 
-            // label153
-            // 
-            this.label153.AutoSize = true;
-            this.label153.Location = new System.Drawing.Point(4, 4);
-            this.label153.Name = "label153";
-            this.label153.Size = new System.Drawing.Size(88, 16);
-            this.label153.TabIndex = 1;
-            this.label153.Text = "时间范围：";
-            // 
-            // panel119
-            // 
-            this.panel119.Controls.Add(this.tbSJCX_SSZZ_NAME);
-            this.panel119.Controls.Add(this.label154);
-            this.panel119.Location = new System.Drawing.Point(13, 2);
-            this.panel119.Name = "panel119";
-            this.panel119.Size = new System.Drawing.Size(183, 34);
-            this.panel119.TabIndex = 33;
-            // 
-            // tbSJCX_SSZZ_NAME
-            // 
-            this.tbSJCX_SSZZ_NAME.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbSJCX_SSZZ_NAME.Location = new System.Drawing.Point(47, 1);
-            this.tbSJCX_SSZZ_NAME.Name = "tbSJCX_SSZZ_NAME";
-            this.tbSJCX_SSZZ_NAME.Size = new System.Drawing.Size(128, 26);
-            this.tbSJCX_SSZZ_NAME.TabIndex = 6;
-            // 
-            // label154
-            // 
-            this.label154.AutoSize = true;
-            this.label154.Location = new System.Drawing.Point(3, 2);
-            this.label154.Name = "label154";
-            this.label154.Size = new System.Drawing.Size(56, 16);
-            this.label154.TabIndex = 1;
-            this.label154.Text = "姓名：";
             // 
             // panelSJCX_SSJLD
             // 
@@ -2941,9 +2765,9 @@
             this.panel102.Controls.Add(this.all_zdys);
             this.panel102.Controls.Add(this.label65);
             this.panel102.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel102.Location = new System.Drawing.Point(10, 362);
+            this.panel102.Location = new System.Drawing.Point(10, 379);
             this.panel102.Name = "panel102";
-            this.panel102.Size = new System.Drawing.Size(944, 31);
+            this.panel102.Size = new System.Drawing.Size(939, 31);
             this.panel102.TabIndex = 45;
             // 
             // all_qxhs
@@ -2969,7 +2793,7 @@
             // 
             this.all_zs.AutoSize = true;
             this.all_zs.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.all_zs.Location = new System.Drawing.Point(594, 7);
+            this.all_zs.Location = new System.Drawing.Point(611, 5);
             this.all_zs.Name = "all_zs";
             this.all_zs.Size = new System.Drawing.Size(49, 14);
             this.all_zs.TabIndex = 6;
@@ -2978,7 +2802,7 @@
             // label148
             // 
             this.label148.AutoSize = true;
-            this.label148.Location = new System.Drawing.Point(545, 7);
+            this.label148.Location = new System.Drawing.Point(562, 5);
             this.label148.Name = "label148";
             this.label148.Size = new System.Drawing.Size(56, 16);
             this.label148.TabIndex = 5;
@@ -3007,14 +2831,454 @@
             // 
             this.panel52.AutoScroll = true;
             this.panel52.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel52.Controls.Add(this.gbSJCX_SSJLD_SSZZ);
             this.panel52.Controls.Add(this.groupBox2);
-            this.panel52.Controls.Add(this.labelSSJLD_TITLE);
-            this.panel52.Controls.Add(this.groupBox1);
-            this.panel52.Location = new System.Drawing.Point(10, 4);
+            this.panel52.Controls.Add(this.panel53);
+            this.panel52.Controls.Add(this.panel51);
+            this.panel52.Controls.Add(this.gbSJCX_SSJLD_SSZZ);
+            this.panel52.Location = new System.Drawing.Point(10, 9);
             this.panel52.Name = "panel52";
-            this.panel52.Size = new System.Drawing.Size(944, 332);
+            this.panel52.Size = new System.Drawing.Size(944, 364);
             this.panel52.TabIndex = 46;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.all_ssjl);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox2.Location = new System.Drawing.Point(0, 240);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(923, 329);
+            this.groupBox2.TabIndex = 5;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "手术记录";
+            // 
+            // all_ssjl
+            // 
+            this.all_ssjl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.all_ssjl.Location = new System.Drawing.Point(3, 22);
+            this.all_ssjl.Name = "all_ssjl";
+            this.all_ssjl.ReadOnly = true;
+            this.all_ssjl.Size = new System.Drawing.Size(917, 304);
+            this.all_ssjl.TabIndex = 0;
+            this.all_ssjl.Text = "";
+            // 
+            // panel53
+            // 
+            this.panel53.Controls.Add(this.groupBox1);
+            this.panel53.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel53.Location = new System.Drawing.Point(0, 61);
+            this.panel53.Name = "panel53";
+            this.panel53.Size = new System.Drawing.Size(923, 179);
+            this.panel53.TabIndex = 9;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.panel70);
+            this.groupBox1.Controls.Add(this.panel11111);
+            this.groupBox1.Controls.Add(this.panel56);
+            this.groupBox1.Controls.Add(this.panel55);
+            this.groupBox1.Controls.Add(this.panel54);
+            this.groupBox1.Controls.Add(this.panel108);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Font = new System.Drawing.Font("宋体", 10F);
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(923, 179);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "基本信息";
+            // 
+            // panel70
+            // 
+            this.panel70.Controls.Add(this.all_ssdd);
+            this.panel70.Controls.Add(this.all_ssrq);
+            this.panel70.Controls.Add(this.label66);
+            this.panel70.Controls.Add(this.label67);
+            this.panel70.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel70.Location = new System.Drawing.Point(3, 139);
+            this.panel70.Name = "panel70";
+            this.panel70.Size = new System.Drawing.Size(917, 24);
+            this.panel70.TabIndex = 57;
+            // 
+            // all_ssdd
+            // 
+            this.all_ssdd.AutoSize = true;
+            this.all_ssdd.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
+            this.all_ssdd.Location = new System.Drawing.Point(523, 2);
+            this.all_ssdd.Name = "all_ssdd";
+            this.all_ssdd.Size = new System.Drawing.Size(49, 14);
+            this.all_ssdd.TabIndex = 3;
+            this.all_ssdd.Text = "性别：";
+            // 
+            // all_ssrq
+            // 
+            this.all_ssrq.AutoSize = true;
+            this.all_ssrq.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
+            this.all_ssrq.Location = new System.Drawing.Point(71, 3);
+            this.all_ssrq.Name = "all_ssrq";
+            this.all_ssrq.Size = new System.Drawing.Size(49, 14);
+            this.all_ssrq.TabIndex = 2;
+            this.all_ssrq.Text = "姓名：";
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Location = new System.Drawing.Point(442, 2);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(77, 14);
+            this.label66.TabIndex = 1;
+            this.label66.Text = "手术地点：";
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Location = new System.Drawing.Point(3, 3);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(77, 14);
+            this.label67.TabIndex = 1;
+            this.label67.Text = "手术日期：";
+            // 
+            // panel11111
+            // 
+            this.panel11111.Controls.Add(this.all_ccfs);
+            this.panel11111.Controls.Add(this.all_ssfs);
+            this.panel11111.Controls.Add(this.all_sslx);
+            this.panel11111.Controls.Add(this.label59);
+            this.panel11111.Controls.Add(this.label60);
+            this.panel11111.Controls.Add(this.label61);
+            this.panel11111.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel11111.Location = new System.Drawing.Point(3, 115);
+            this.panel11111.Name = "panel11111";
+            this.panel11111.Size = new System.Drawing.Size(917, 24);
+            this.panel11111.TabIndex = 56;
+            // 
+            // all_ccfs
+            // 
+            this.all_ccfs.AutoSize = true;
+            this.all_ccfs.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
+            this.all_ccfs.Location = new System.Drawing.Point(521, 2);
+            this.all_ccfs.Name = "all_ccfs";
+            this.all_ccfs.Size = new System.Drawing.Size(49, 14);
+            this.all_ccfs.TabIndex = 4;
+            this.all_ccfs.Text = "性别：";
+            // 
+            // all_ssfs
+            // 
+            this.all_ssfs.AutoSize = true;
+            this.all_ssfs.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
+            this.all_ssfs.Location = new System.Drawing.Point(290, 3);
+            this.all_ssfs.Name = "all_ssfs";
+            this.all_ssfs.Size = new System.Drawing.Size(49, 14);
+            this.all_ssfs.TabIndex = 3;
+            this.all_ssfs.Text = "性别：";
+            // 
+            // all_sslx
+            // 
+            this.all_sslx.AutoSize = true;
+            this.all_sslx.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
+            this.all_sslx.Location = new System.Drawing.Point(71, 3);
+            this.all_sslx.Name = "all_sslx";
+            this.all_sslx.Size = new System.Drawing.Size(49, 14);
+            this.all_sslx.TabIndex = 2;
+            this.all_sslx.Text = "姓名：";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Location = new System.Drawing.Point(440, 2);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(77, 14);
+            this.label59.TabIndex = 1;
+            this.label59.Text = "穿刺方式：";
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Location = new System.Drawing.Point(218, 2);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(77, 14);
+            this.label60.TabIndex = 1;
+            this.label60.Text = "手术方式：";
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Location = new System.Drawing.Point(3, 3);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(77, 14);
+            this.label61.TabIndex = 1;
+            this.label61.Text = "手术类型：";
+            // 
+            // panel56
+            // 
+            this.panel56.Controls.Add(this.all_ctxyylxrdh);
+            this.panel56.Controls.Add(this.all_ctxyylxr);
+            this.panel56.Controls.Add(this.all_ctxyy);
+            this.panel56.Controls.Add(this.label55);
+            this.panel56.Controls.Add(this.label56);
+            this.panel56.Controls.Add(this.label57);
+            this.panel56.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel56.Location = new System.Drawing.Point(3, 91);
+            this.panel56.Name = "panel56";
+            this.panel56.Size = new System.Drawing.Size(917, 24);
+            this.panel56.TabIndex = 55;
+            // 
+            // all_ctxyylxrdh
+            // 
+            this.all_ctxyylxrdh.AutoSize = true;
+            this.all_ctxyylxrdh.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
+            this.all_ctxyylxrdh.Location = new System.Drawing.Point(589, 3);
+            this.all_ctxyylxrdh.Name = "all_ctxyylxrdh";
+            this.all_ctxyylxrdh.Size = new System.Drawing.Size(49, 14);
+            this.all_ctxyylxrdh.TabIndex = 4;
+            this.all_ctxyylxrdh.Text = "性别：";
+            // 
+            // all_ctxyylxr
+            // 
+            this.all_ctxyylxr.AutoSize = true;
+            this.all_ctxyylxr.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
+            this.all_ctxyylxr.Location = new System.Drawing.Point(343, 2);
+            this.all_ctxyylxr.Name = "all_ctxyylxr";
+            this.all_ctxyylxr.Size = new System.Drawing.Size(49, 14);
+            this.all_ctxyylxr.TabIndex = 3;
+            this.all_ctxyylxr.Text = "性别：";
+            // 
+            // all_ctxyy
+            // 
+            this.all_ctxyy.AutoSize = true;
+            this.all_ctxyy.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
+            this.all_ctxyy.Location = new System.Drawing.Point(91, 3);
+            this.all_ctxyy.Name = "all_ctxyy";
+            this.all_ctxyy.Size = new System.Drawing.Size(49, 14);
+            this.all_ctxyy.TabIndex = 2;
+            this.all_ctxyy.Text = "姓名：";
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(437, 3);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(161, 14);
+            this.label55.TabIndex = 1;
+            this.label55.Text = "常透析医院联系人电话：";
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Location = new System.Drawing.Point(216, 2);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(133, 14);
+            this.label56.TabIndex = 1;
+            this.label56.Text = "常透析医院联系人：";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(3, 3);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(91, 14);
+            this.label57.TabIndex = 1;
+            this.label57.Text = "常透析医院：";
+            // 
+            // panel55
+            // 
+            this.panel55.Controls.Add(this.all_czdz);
+            this.panel55.Controls.Add(this.label50);
+            this.panel55.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel55.Location = new System.Drawing.Point(3, 67);
+            this.panel55.Name = "panel55";
+            this.panel55.Size = new System.Drawing.Size(917, 24);
+            this.panel55.TabIndex = 54;
+            // 
+            // all_czdz
+            // 
+            this.all_czdz.AutoSize = true;
+            this.all_czdz.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
+            this.all_czdz.Location = new System.Drawing.Point(74, 3);
+            this.all_czdz.Name = "all_czdz";
+            this.all_czdz.Size = new System.Drawing.Size(49, 14);
+            this.all_czdz.TabIndex = 2;
+            this.all_czdz.Text = "姓名：";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(3, 3);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(77, 14);
+            this.label50.TabIndex = 1;
+            this.label50.Text = "常住地址：";
+            // 
+            // panel54
+            // 
+            this.panel54.Controls.Add(this.all_yblx);
+            this.panel54.Controls.Add(this.all_ID);
+            this.panel54.Controls.Add(this.label48);
+            this.panel54.Controls.Add(this.label51);
+            this.panel54.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel54.Location = new System.Drawing.Point(3, 43);
+            this.panel54.Name = "panel54";
+            this.panel54.Size = new System.Drawing.Size(917, 24);
+            this.panel54.TabIndex = 53;
+            // 
+            // all_yblx
+            // 
+            this.all_yblx.AutoSize = true;
+            this.all_yblx.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
+            this.all_yblx.Location = new System.Drawing.Point(511, 4);
+            this.all_yblx.Name = "all_yblx";
+            this.all_yblx.Size = new System.Drawing.Size(49, 14);
+            this.all_yblx.TabIndex = 4;
+            this.all_yblx.Text = "性别：";
+            // 
+            // all_ID
+            // 
+            this.all_ID.AutoSize = true;
+            this.all_ID.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
+            this.all_ID.Location = new System.Drawing.Point(74, 3);
+            this.all_ID.Name = "all_ID";
+            this.all_ID.Size = new System.Drawing.Size(49, 14);
+            this.all_ID.TabIndex = 2;
+            this.all_ID.Text = "姓名：";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(437, 3);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(77, 14);
+            this.label48.TabIndex = 1;
+            this.label48.Text = "医保类型：";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(3, 3);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(77, 14);
+            this.label51.TabIndex = 1;
+            this.label51.Text = "身份证号：";
+            // 
+            // panel108
+            // 
+            this.panel108.Controls.Add(this.all_tel);
+            this.panel108.Controls.Add(this.label40);
+            this.panel108.Controls.Add(this.all_age);
+            this.panel108.Controls.Add(this.all_sex);
+            this.panel108.Controls.Add(this.all_name);
+            this.panel108.Controls.Add(this.label30);
+            this.panel108.Controls.Add(this.label46);
+            this.panel108.Controls.Add(this.label47);
+            this.panel108.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel108.Location = new System.Drawing.Point(3, 19);
+            this.panel108.Name = "panel108";
+            this.panel108.Size = new System.Drawing.Size(917, 24);
+            this.panel108.TabIndex = 52;
+            // 
+            // all_tel
+            // 
+            this.all_tel.AutoSize = true;
+            this.all_tel.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
+            this.all_tel.Location = new System.Drawing.Point(718, 3);
+            this.all_tel.Name = "all_tel";
+            this.all_tel.Size = new System.Drawing.Size(49, 14);
+            this.all_tel.TabIndex = 6;
+            this.all_tel.Text = "性别：";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(655, 3);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(63, 14);
+            this.label40.TabIndex = 5;
+            this.label40.Text = "手机号：";
+            // 
+            // all_age
+            // 
+            this.all_age.AutoSize = true;
+            this.all_age.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
+            this.all_age.Location = new System.Drawing.Point(485, 3);
+            this.all_age.Name = "all_age";
+            this.all_age.Size = new System.Drawing.Size(49, 14);
+            this.all_age.TabIndex = 4;
+            this.all_age.Text = "性别：";
+            // 
+            // all_sex
+            // 
+            this.all_sex.AutoSize = true;
+            this.all_sex.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
+            this.all_sex.Location = new System.Drawing.Point(272, 3);
+            this.all_sex.Name = "all_sex";
+            this.all_sex.Size = new System.Drawing.Size(49, 14);
+            this.all_sex.TabIndex = 3;
+            this.all_sex.Text = "性别：";
+            // 
+            // all_name
+            // 
+            this.all_name.AutoSize = true;
+            this.all_name.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
+            this.all_name.Location = new System.Drawing.Point(47, 3);
+            this.all_name.Name = "all_name";
+            this.all_name.Size = new System.Drawing.Size(49, 14);
+            this.all_name.TabIndex = 2;
+            this.all_name.Text = "姓名：";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(435, 3);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(49, 14);
+            this.label30.TabIndex = 1;
+            this.label30.Text = "年龄：";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(220, 3);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(49, 14);
+            this.label46.TabIndex = 1;
+            this.label46.Text = "性别：";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(3, 3);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(49, 14);
+            this.label47.TabIndex = 1;
+            this.label47.Text = "姓名：";
+            // 
+            // panel51
+            // 
+            this.panel51.Controls.Add(this.labelSSJLD_TITLE);
+            this.panel51.Controls.Add(this.label28);
+            this.panel51.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel51.Location = new System.Drawing.Point(0, 0);
+            this.panel51.Name = "panel51";
+            this.panel51.Size = new System.Drawing.Size(923, 61);
+            this.panel51.TabIndex = 8;
+            // 
+            // labelSSJLD_TITLE
+            // 
+            this.labelSSJLD_TITLE.AutoSize = true;
+            this.labelSSJLD_TITLE.Font = new System.Drawing.Font("黑体", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelSSJLD_TITLE.Location = new System.Drawing.Point(358, 4);
+            this.labelSSJLD_TITLE.Name = "labelSSJLD_TITLE";
+            this.labelSSJLD_TITLE.Size = new System.Drawing.Size(101, 23);
+            this.labelSSJLD_TITLE.TabIndex = 4;
+            this.labelSSJLD_TITLE.Text = "label30";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("仿宋", 15F);
+            this.label28.Location = new System.Drawing.Point(382, 33);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(109, 20);
+            this.label28.TabIndex = 7;
+            this.label28.Text = "手术记录单";
             // 
             // gbSJCX_SSJLD_SSZZ
             // 
@@ -3030,10 +3294,11 @@
             this.gbSJCX_SSJLD_SSZZ.Controls.Add(this.panel104);
             this.gbSJCX_SSJLD_SSZZ.Controls.Add(this.panel1231321);
             this.gbSJCX_SSJLD_SSZZ.Controls.Add(this.panel109);
+            this.gbSJCX_SSJLD_SSZZ.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.gbSJCX_SSJLD_SSZZ.Font = new System.Drawing.Font("宋体", 10F);
-            this.gbSJCX_SSJLD_SSZZ.Location = new System.Drawing.Point(19, 327);
+            this.gbSJCX_SSJLD_SSZZ.Location = new System.Drawing.Point(0, 569);
             this.gbSJCX_SSJLD_SSZZ.Name = "gbSJCX_SSJLD_SSZZ";
-            this.gbSJCX_SSJLD_SSZZ.Size = new System.Drawing.Size(896, 312);
+            this.gbSJCX_SSJLD_SSZZ.Size = new System.Drawing.Size(923, 390);
             this.gbSJCX_SSJLD_SSZZ.TabIndex = 6;
             this.gbSJCX_SSJLD_SSZZ.TabStop = false;
             this.gbSJCX_SSJLD_SSZZ.Text = "手术追踪";
@@ -3042,18 +3307,18 @@
             // 
             this.flowLayoutPanel3.Controls.Add(this.all_sfys);
             this.flowLayoutPanel3.Controls.Add(this.label146);
-            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 283);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 364);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(890, 25);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(917, 23);
             this.flowLayoutPanel3.TabIndex = 63;
             // 
             // all_sfys
             // 
             this.all_sfys.AutoSize = true;
             this.all_sfys.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.all_sfys.Location = new System.Drawing.Point(838, 0);
+            this.all_sfys.Location = new System.Drawing.Point(865, 0);
             this.all_sfys.Name = "all_sfys";
             this.all_sfys.Size = new System.Drawing.Size(49, 14);
             this.all_sfys.TabIndex = 6;
@@ -3062,7 +3327,7 @@
             // label146
             // 
             this.label146.AutoSize = true;
-            this.label146.Location = new System.Drawing.Point(755, 0);
+            this.label146.Location = new System.Drawing.Point(782, 0);
             this.label146.Name = "label146";
             this.label146.Size = new System.Drawing.Size(77, 14);
             this.label146.TabIndex = 5;
@@ -3070,23 +3335,32 @@
             // 
             // panel114
             // 
-            this.panel114.Controls.Add(this.all_zwcmzcjtzqk);
+            this.panel114.Controls.Add(this.panel42);
             this.panel114.Controls.Add(this.label143);
             this.panel114.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel114.Location = new System.Drawing.Point(3, 259);
             this.panel114.Name = "panel114";
-            this.panel114.Size = new System.Drawing.Size(890, 24);
+            this.panel114.Size = new System.Drawing.Size(917, 99);
             this.panel114.TabIndex = 62;
+            // 
+            // panel42
+            // 
+            this.panel42.AutoScroll = true;
+            this.panel42.Controls.Add(this.all_zwcmzcjtzqk);
+            this.panel42.Location = new System.Drawing.Point(178, 4);
+            this.panel42.Name = "panel42";
+            this.panel42.Size = new System.Drawing.Size(702, 92);
+            this.panel42.TabIndex = 2;
             // 
             // all_zwcmzcjtzqk
             // 
             this.all_zwcmzcjtzqk.AutoSize = true;
+            this.all_zwcmzcjtzqk.Dock = System.Windows.Forms.DockStyle.Fill;
             this.all_zwcmzcjtzqk.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.all_zwcmzcjtzqk.Location = new System.Drawing.Point(175, 3);
+            this.all_zwcmzcjtzqk.Location = new System.Drawing.Point(0, 0);
             this.all_zwcmzcjtzqk.Name = "all_zwcmzcjtzqk";
-            this.all_zwcmzcjtzqk.Size = new System.Drawing.Size(49, 14);
+            this.all_zwcmzcjtzqk.Size = new System.Drawing.Size(0, 14);
             this.all_zwcmzcjtzqk.TabIndex = 2;
-            this.all_zwcmzcjtzqk.Text = "姓名：";
             // 
             // label143
             // 
@@ -3104,7 +3378,7 @@
             this.panel113.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel113.Location = new System.Drawing.Point(3, 235);
             this.panel113.Name = "panel113";
-            this.panel113.Size = new System.Drawing.Size(890, 24);
+            this.panel113.Size = new System.Drawing.Size(917, 24);
             this.panel113.TabIndex = 61;
             // 
             // all_ypzxsj
@@ -3135,7 +3409,7 @@
             this.panel112.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel112.Location = new System.Drawing.Point(3, 211);
             this.panel112.Name = "panel112";
-            this.panel112.Size = new System.Drawing.Size(890, 24);
+            this.panel112.Size = new System.Drawing.Size(917, 24);
             this.panel112.TabIndex = 60;
             // 
             // all_xll
@@ -3185,7 +3459,7 @@
             this.panel111.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel111.Location = new System.Drawing.Point(3, 187);
             this.panel111.Name = "panel111";
-            this.panel111.Size = new System.Drawing.Size(890, 24);
+            this.panel111.Size = new System.Drawing.Size(917, 24);
             this.panel111.TabIndex = 59;
             // 
             // all_sjqbxsjmy
@@ -3235,7 +3509,7 @@
             this.panel110.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel110.Location = new System.Drawing.Point(3, 163);
             this.panel110.Name = "panel110";
-            this.panel110.Size = new System.Drawing.Size(890, 24);
+            this.panel110.Size = new System.Drawing.Size(917, 24);
             this.panel110.TabIndex = 58;
             // 
             // all_sffz
@@ -3285,7 +3559,7 @@
             this.panel107.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel107.Location = new System.Drawing.Point(3, 139);
             this.panel107.Name = "panel107";
-            this.panel107.Size = new System.Drawing.Size(890, 24);
+            this.panel107.Size = new System.Drawing.Size(917, 24);
             this.panel107.TabIndex = 57;
             // 
             // all_nwzwdlqk
@@ -3335,7 +3609,7 @@
             this.panel106.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel106.Location = new System.Drawing.Point(3, 115);
             this.panel106.Name = "panel106";
-            this.panel106.Size = new System.Drawing.Size(890, 24);
+            this.panel106.Size = new System.Drawing.Size(917, 24);
             this.panel106.TabIndex = 56;
             // 
             // all_ywxbjmqz
@@ -3385,7 +3659,7 @@
             this.panel105.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel105.Location = new System.Drawing.Point(3, 91);
             this.panel105.Name = "panel105";
-            this.panel105.Size = new System.Drawing.Size(890, 24);
+            this.panel105.Size = new System.Drawing.Size(917, 24);
             this.panel105.TabIndex = 55;
             // 
             // all_ywccbwpfgmqk
@@ -3435,7 +3709,7 @@
             this.panel104.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel104.Location = new System.Drawing.Point(3, 67);
             this.panel104.Name = "panel104";
-            this.panel104.Size = new System.Drawing.Size(890, 24);
+            this.panel104.Size = new System.Drawing.Size(917, 24);
             this.panel104.TabIndex = 54;
             // 
             // all_ywxlbct
@@ -3485,7 +3759,7 @@
             this.panel1231321.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1231321.Location = new System.Drawing.Point(3, 43);
             this.panel1231321.Name = "panel1231321";
-            this.panel1231321.Size = new System.Drawing.Size(890, 24);
+            this.panel1231321.Size = new System.Drawing.Size(917, 24);
             this.panel1231321.TabIndex = 53;
             // 
             // all_ccfs_1
@@ -3533,7 +3807,7 @@
             this.panel109.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel109.Location = new System.Drawing.Point(3, 19);
             this.panel109.Name = "panel109";
-            this.panel109.Size = new System.Drawing.Size(890, 24);
+            this.panel109.Size = new System.Drawing.Size(917, 24);
             this.panel109.TabIndex = 52;
             // 
             // all_sszzqx
@@ -3555,415 +3829,6 @@
             this.label95.TabIndex = 1;
             this.label95.Text = "手术追踪期限：";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.all_ssjl);
-            this.groupBox2.Location = new System.Drawing.Point(19, 205);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(895, 114);
-            this.groupBox2.TabIndex = 5;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "手术记录";
-            // 
-            // all_ssjl
-            // 
-            this.all_ssjl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.all_ssjl.Location = new System.Drawing.Point(3, 22);
-            this.all_ssjl.Name = "all_ssjl";
-            this.all_ssjl.ReadOnly = true;
-            this.all_ssjl.Size = new System.Drawing.Size(889, 89);
-            this.all_ssjl.TabIndex = 0;
-            this.all_ssjl.Text = resources.GetString("all_ssjl.Text");
-            // 
-            // labelSSJLD_TITLE
-            // 
-            this.labelSSJLD_TITLE.AutoSize = true;
-            this.labelSSJLD_TITLE.Font = new System.Drawing.Font("黑体", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelSSJLD_TITLE.Location = new System.Drawing.Point(352, 4);
-            this.labelSSJLD_TITLE.Name = "labelSSJLD_TITLE";
-            this.labelSSJLD_TITLE.Size = new System.Drawing.Size(101, 23);
-            this.labelSSJLD_TITLE.TabIndex = 4;
-            this.labelSSJLD_TITLE.Text = "label30";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.panel70);
-            this.groupBox1.Controls.Add(this.panel11111);
-            this.groupBox1.Controls.Add(this.panel56);
-            this.groupBox1.Controls.Add(this.panel55);
-            this.groupBox1.Controls.Add(this.panel54);
-            this.groupBox1.Controls.Add(this.panel108);
-            this.groupBox1.Font = new System.Drawing.Font("宋体", 10F);
-            this.groupBox1.Location = new System.Drawing.Point(19, 33);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(896, 169);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "基本信息";
-            // 
-            // panel70
-            // 
-            this.panel70.Controls.Add(this.all_ssdd);
-            this.panel70.Controls.Add(this.all_ssrq);
-            this.panel70.Controls.Add(this.label66);
-            this.panel70.Controls.Add(this.label67);
-            this.panel70.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel70.Location = new System.Drawing.Point(3, 139);
-            this.panel70.Name = "panel70";
-            this.panel70.Size = new System.Drawing.Size(890, 24);
-            this.panel70.TabIndex = 57;
-            // 
-            // all_ssdd
-            // 
-            this.all_ssdd.AutoSize = true;
-            this.all_ssdd.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.all_ssdd.Location = new System.Drawing.Point(423, 3);
-            this.all_ssdd.Name = "all_ssdd";
-            this.all_ssdd.Size = new System.Drawing.Size(49, 14);
-            this.all_ssdd.TabIndex = 3;
-            this.all_ssdd.Text = "性别：";
-            // 
-            // all_ssrq
-            // 
-            this.all_ssrq.AutoSize = true;
-            this.all_ssrq.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.all_ssrq.Location = new System.Drawing.Point(71, 3);
-            this.all_ssrq.Name = "all_ssrq";
-            this.all_ssrq.Size = new System.Drawing.Size(49, 14);
-            this.all_ssrq.TabIndex = 2;
-            this.all_ssrq.Text = "姓名：";
-            // 
-            // label66
-            // 
-            this.label66.AutoSize = true;
-            this.label66.Location = new System.Drawing.Point(340, 0);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(77, 14);
-            this.label66.TabIndex = 1;
-            this.label66.Text = "手术地点：";
-            // 
-            // label67
-            // 
-            this.label67.AutoSize = true;
-            this.label67.Location = new System.Drawing.Point(3, 3);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(77, 14);
-            this.label67.TabIndex = 1;
-            this.label67.Text = "手术日期：";
-            // 
-            // panel11111
-            // 
-            this.panel11111.Controls.Add(this.all_ccfs);
-            this.panel11111.Controls.Add(this.all_ssfs);
-            this.panel11111.Controls.Add(this.all_sslx);
-            this.panel11111.Controls.Add(this.label59);
-            this.panel11111.Controls.Add(this.label60);
-            this.panel11111.Controls.Add(this.label61);
-            this.panel11111.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel11111.Location = new System.Drawing.Point(3, 115);
-            this.panel11111.Name = "panel11111";
-            this.panel11111.Size = new System.Drawing.Size(890, 24);
-            this.panel11111.TabIndex = 56;
-            // 
-            // all_ccfs
-            // 
-            this.all_ccfs.AutoSize = true;
-            this.all_ccfs.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.all_ccfs.Location = new System.Drawing.Point(449, 3);
-            this.all_ccfs.Name = "all_ccfs";
-            this.all_ccfs.Size = new System.Drawing.Size(49, 14);
-            this.all_ccfs.TabIndex = 4;
-            this.all_ccfs.Text = "性别：";
-            // 
-            // all_ssfs
-            // 
-            this.all_ssfs.AutoSize = true;
-            this.all_ssfs.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.all_ssfs.Location = new System.Drawing.Point(247, 4);
-            this.all_ssfs.Name = "all_ssfs";
-            this.all_ssfs.Size = new System.Drawing.Size(49, 14);
-            this.all_ssfs.TabIndex = 3;
-            this.all_ssfs.Text = "性别：";
-            // 
-            // all_sslx
-            // 
-            this.all_sslx.AutoSize = true;
-            this.all_sslx.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.all_sslx.Location = new System.Drawing.Point(71, 3);
-            this.all_sslx.Name = "all_sslx";
-            this.all_sslx.Size = new System.Drawing.Size(49, 14);
-            this.all_sslx.TabIndex = 2;
-            this.all_sslx.Text = "姓名：";
-            // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(368, 3);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(77, 14);
-            this.label59.TabIndex = 1;
-            this.label59.Text = "穿刺方式：";
-            // 
-            // label60
-            // 
-            this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(175, 3);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(77, 14);
-            this.label60.TabIndex = 1;
-            this.label60.Text = "手术方式：";
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(3, 3);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(77, 14);
-            this.label61.TabIndex = 1;
-            this.label61.Text = "手术类型：";
-            // 
-            // panel56
-            // 
-            this.panel56.Controls.Add(this.all_ctxyylxrdh);
-            this.panel56.Controls.Add(this.all_ctxyylxr);
-            this.panel56.Controls.Add(this.all_ctxyy);
-            this.panel56.Controls.Add(this.label55);
-            this.panel56.Controls.Add(this.label56);
-            this.panel56.Controls.Add(this.label57);
-            this.panel56.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel56.Location = new System.Drawing.Point(3, 91);
-            this.panel56.Name = "panel56";
-            this.panel56.Size = new System.Drawing.Size(890, 24);
-            this.panel56.TabIndex = 55;
-            // 
-            // all_ctxyylxrdh
-            // 
-            this.all_ctxyylxrdh.AutoSize = true;
-            this.all_ctxyylxrdh.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.all_ctxyylxrdh.Location = new System.Drawing.Point(520, 3);
-            this.all_ctxyylxrdh.Name = "all_ctxyylxrdh";
-            this.all_ctxyylxrdh.Size = new System.Drawing.Size(49, 14);
-            this.all_ctxyylxrdh.TabIndex = 4;
-            this.all_ctxyylxrdh.Text = "性别：";
-            // 
-            // all_ctxyylxr
-            // 
-            this.all_ctxyylxr.AutoSize = true;
-            this.all_ctxyylxr.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.all_ctxyylxr.Location = new System.Drawing.Point(302, 3);
-            this.all_ctxyylxr.Name = "all_ctxyylxr";
-            this.all_ctxyylxr.Size = new System.Drawing.Size(49, 14);
-            this.all_ctxyylxr.TabIndex = 3;
-            this.all_ctxyylxr.Text = "性别：";
-            // 
-            // all_ctxyy
-            // 
-            this.all_ctxyy.AutoSize = true;
-            this.all_ctxyy.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.all_ctxyy.Location = new System.Drawing.Point(91, 3);
-            this.all_ctxyy.Name = "all_ctxyy";
-            this.all_ctxyy.Size = new System.Drawing.Size(49, 14);
-            this.all_ctxyy.TabIndex = 2;
-            this.all_ctxyy.Text = "姓名：";
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(368, 3);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(161, 14);
-            this.label55.TabIndex = 1;
-            this.label55.Text = "常透析医院联系人电话：";
-            // 
-            // label56
-            // 
-            this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(175, 3);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(133, 14);
-            this.label56.TabIndex = 1;
-            this.label56.Text = "常透析医院联系人：";
-            // 
-            // label57
-            // 
-            this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(3, 3);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(91, 14);
-            this.label57.TabIndex = 1;
-            this.label57.Text = "常透析医院：";
-            // 
-            // panel55
-            // 
-            this.panel55.Controls.Add(this.all_czdz);
-            this.panel55.Controls.Add(this.label50);
-            this.panel55.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel55.Location = new System.Drawing.Point(3, 67);
-            this.panel55.Name = "panel55";
-            this.panel55.Size = new System.Drawing.Size(890, 24);
-            this.panel55.TabIndex = 54;
-            // 
-            // all_czdz
-            // 
-            this.all_czdz.AutoSize = true;
-            this.all_czdz.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.all_czdz.Location = new System.Drawing.Point(74, 3);
-            this.all_czdz.Name = "all_czdz";
-            this.all_czdz.Size = new System.Drawing.Size(49, 14);
-            this.all_czdz.TabIndex = 2;
-            this.all_czdz.Text = "姓名：";
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(3, 3);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(77, 14);
-            this.label50.TabIndex = 1;
-            this.label50.Text = "常住地址：";
-            // 
-            // panel54
-            // 
-            this.panel54.Controls.Add(this.all_yblx);
-            this.panel54.Controls.Add(this.all_ID);
-            this.panel54.Controls.Add(this.label48);
-            this.panel54.Controls.Add(this.label51);
-            this.panel54.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel54.Location = new System.Drawing.Point(3, 43);
-            this.panel54.Name = "panel54";
-            this.panel54.Size = new System.Drawing.Size(890, 24);
-            this.panel54.TabIndex = 53;
-            // 
-            // all_yblx
-            // 
-            this.all_yblx.AutoSize = true;
-            this.all_yblx.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.all_yblx.Location = new System.Drawing.Point(420, 3);
-            this.all_yblx.Name = "all_yblx";
-            this.all_yblx.Size = new System.Drawing.Size(49, 14);
-            this.all_yblx.TabIndex = 4;
-            this.all_yblx.Text = "性别：";
-            // 
-            // all_ID
-            // 
-            this.all_ID.AutoSize = true;
-            this.all_ID.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.all_ID.Location = new System.Drawing.Point(74, 3);
-            this.all_ID.Name = "all_ID";
-            this.all_ID.Size = new System.Drawing.Size(49, 14);
-            this.all_ID.TabIndex = 2;
-            this.all_ID.Text = "姓名：";
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(340, 3);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(77, 14);
-            this.label48.TabIndex = 1;
-            this.label48.Text = "医保类型：";
-            // 
-            // label51
-            // 
-            this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(3, 3);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(77, 14);
-            this.label51.TabIndex = 1;
-            this.label51.Text = "身份证号：";
-            // 
-            // panel108
-            // 
-            this.panel108.Controls.Add(this.all_tel);
-            this.panel108.Controls.Add(this.label40);
-            this.panel108.Controls.Add(this.all_age);
-            this.panel108.Controls.Add(this.all_sex);
-            this.panel108.Controls.Add(this.all_name);
-            this.panel108.Controls.Add(this.label30);
-            this.panel108.Controls.Add(this.label46);
-            this.panel108.Controls.Add(this.label47);
-            this.panel108.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel108.Location = new System.Drawing.Point(3, 19);
-            this.panel108.Name = "panel108";
-            this.panel108.Size = new System.Drawing.Size(890, 24);
-            this.panel108.TabIndex = 52;
-            // 
-            // all_tel
-            // 
-            this.all_tel.AutoSize = true;
-            this.all_tel.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.all_tel.Location = new System.Drawing.Point(619, 3);
-            this.all_tel.Name = "all_tel";
-            this.all_tel.Size = new System.Drawing.Size(49, 14);
-            this.all_tel.TabIndex = 6;
-            this.all_tel.Text = "性别：";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(556, 3);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(63, 14);
-            this.label40.TabIndex = 5;
-            this.label40.Text = "手机号：";
-            // 
-            // all_age
-            // 
-            this.all_age.AutoSize = true;
-            this.all_age.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.all_age.Location = new System.Drawing.Point(418, 3);
-            this.all_age.Name = "all_age";
-            this.all_age.Size = new System.Drawing.Size(49, 14);
-            this.all_age.TabIndex = 4;
-            this.all_age.Text = "性别：";
-            // 
-            // all_sex
-            // 
-            this.all_sex.AutoSize = true;
-            this.all_sex.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.all_sex.Location = new System.Drawing.Point(221, 3);
-            this.all_sex.Name = "all_sex";
-            this.all_sex.Size = new System.Drawing.Size(49, 14);
-            this.all_sex.TabIndex = 3;
-            this.all_sex.Text = "性别：";
-            // 
-            // all_name
-            // 
-            this.all_name.AutoSize = true;
-            this.all_name.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.all_name.Location = new System.Drawing.Point(47, 3);
-            this.all_name.Name = "all_name";
-            this.all_name.Size = new System.Drawing.Size(49, 14);
-            this.all_name.TabIndex = 2;
-            this.all_name.Text = "姓名：";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(368, 3);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(49, 14);
-            this.label30.TabIndex = 1;
-            this.label30.Text = "年龄：";
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(175, 3);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(49, 14);
-            this.label46.TabIndex = 1;
-            this.label46.Text = "性别：";
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(3, 3);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(49, 14);
-            this.label47.TabIndex = 1;
-            this.label47.Text = "姓名：";
-            // 
             // panel50
             // 
             this.panel50.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -3975,7 +3840,9 @@
             // 
             // dgvSJCX_RECORDS
             // 
+            this.dgvSJCX_RECORDS.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSJCX_RECORDS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSJCX_RECORDS.EnableHeadersVisualStyles = false;
             this.dgvSJCX_RECORDS.Location = new System.Drawing.Point(5, 4);
             this.dgvSJCX_RECORDS.Name = "dgvSJCX_RECORDS";
             this.dgvSJCX_RECORDS.ReadOnly = true;
@@ -4062,15 +3929,21 @@
             // 
             // dtpSJCX_JSSJ
             // 
+            this.dtpSJCX_JSSJ.CustomFormat = "yyyy年MM月";
+            this.dtpSJCX_JSSJ.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpSJCX_JSSJ.Location = new System.Drawing.Point(251, 0);
             this.dtpSJCX_JSSJ.Name = "dtpSJCX_JSSJ";
+            this.dtpSJCX_JSSJ.ShowUpDown = true;
             this.dtpSJCX_JSSJ.Size = new System.Drawing.Size(138, 26);
             this.dtpSJCX_JSSJ.TabIndex = 3;
             // 
             // dtpSJCX_KSSJ
             // 
+            this.dtpSJCX_KSSJ.CustomFormat = "yyyy年MM月";
+            this.dtpSJCX_KSSJ.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpSJCX_KSSJ.Location = new System.Drawing.Point(85, 0);
             this.dtpSJCX_KSSJ.Name = "dtpSJCX_KSSJ";
+            this.dtpSJCX_KSSJ.ShowUpDown = true;
             this.dtpSJCX_KSSJ.Size = new System.Drawing.Size(138, 26);
             this.dtpSJCX_KSSJ.TabIndex = 2;
             // 
@@ -4128,6 +4001,186 @@
             this.label21.TabIndex = 5;
             this.label21.Text = "查询条件";
             // 
+            // panelSJCX_SSZZD
+            // 
+            this.panelSJCX_SSZZD.Controls.Add(this.panelSJCX_SSZZ);
+            this.panelSJCX_SSZZD.Controls.Add(this.panel117);
+            this.panelSJCX_SSZZD.Location = new System.Drawing.Point(8, 38);
+            this.panelSJCX_SSZZD.Name = "panelSJCX_SSZZD";
+            this.panelSJCX_SSZZD.Size = new System.Drawing.Size(1236, 487);
+            this.panelSJCX_SSZZD.TabIndex = 41;
+            // 
+            // panelSJCX_SSZZ
+            // 
+            this.panelSJCX_SSZZ.Controls.Add(this.dgvSJCX_SSZZ);
+            this.panelSJCX_SSZZ.Location = new System.Drawing.Point(13, 50);
+            this.panelSJCX_SSZZ.Name = "panelSJCX_SSZZ";
+            this.panelSJCX_SSZZ.Size = new System.Drawing.Size(1209, 434);
+            this.panelSJCX_SSZZ.TabIndex = 43;
+            // 
+            // dgvSJCX_SSZZ
+            // 
+            this.dgvSJCX_SSZZ.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSJCX_SSZZ.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSJCX_SSZZ.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvSJCX_SSZZ.EnableHeadersVisualStyles = false;
+            this.dgvSJCX_SSZZ.Location = new System.Drawing.Point(0, 0);
+            this.dgvSJCX_SSZZ.Name = "dgvSJCX_SSZZ";
+            this.dgvSJCX_SSZZ.ReadOnly = true;
+            this.dgvSJCX_SSZZ.RowTemplate.Height = 23;
+            this.dgvSJCX_SSZZ.Size = new System.Drawing.Size(1209, 434);
+            this.dgvSJCX_SSZZ.TabIndex = 42;
+            this.dgvSJCX_SSZZ.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.autoAddId);
+            // 
+            // panel117
+            // 
+            this.panel117.Controls.Add(this.btnSSCX_SSZZDY);
+            this.panel117.Controls.Add(this.panel120);
+            this.panel117.Controls.Add(this.btnSJCX_SSZZ_FIND);
+            this.panel117.Controls.Add(this.panel118);
+            this.panel117.Controls.Add(this.panel119);
+            this.panel117.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel117.Location = new System.Drawing.Point(0, 0);
+            this.panel117.Name = "panel117";
+            this.panel117.Size = new System.Drawing.Size(1236, 42);
+            this.panel117.TabIndex = 41;
+            // 
+            // btnSSCX_SSZZDY
+            // 
+            this.btnSSCX_SSZZDY.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnSSCX_SSZZDY.FlatAppearance.BorderSize = 0;
+            this.btnSSCX_SSZZDY.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSSCX_SSZZDY.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSSCX_SSZZDY.ForeColor = System.Drawing.Color.White;
+            this.btnSSCX_SSZZDY.Location = new System.Drawing.Point(972, 3);
+            this.btnSSCX_SSZZDY.Name = "btnSSCX_SSZZDY";
+            this.btnSSCX_SSZZDY.Size = new System.Drawing.Size(81, 26);
+            this.btnSSCX_SSZZDY.TabIndex = 38;
+            this.btnSSCX_SSZZDY.Text = "打印";
+            this.btnSSCX_SSZZDY.UseVisualStyleBackColor = false;
+            this.btnSSCX_SSZZDY.Click += new System.EventHandler(this.btnSSCX_SSZZDY_Click);
+            // 
+            // panel120
+            // 
+            this.panel120.Controls.Add(this.cbSJCX_SSZZ_CXTJ);
+            this.panel120.Controls.Add(this.label155);
+            this.panel120.Location = new System.Drawing.Point(618, 1);
+            this.panel120.Name = "panel120";
+            this.panel120.Size = new System.Drawing.Size(234, 34);
+            this.panel120.TabIndex = 37;
+            // 
+            // cbSJCX_SSZZ_CXTJ
+            // 
+            this.cbSJCX_SSZZ_CXTJ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSJCX_SSZZ_CXTJ.FormattingEnabled = true;
+            this.cbSJCX_SSZZ_CXTJ.Items.AddRange(new object[] {
+            "已追踪",
+            "未追踪",
+            "全部"});
+            this.cbSJCX_SSZZ_CXTJ.Location = new System.Drawing.Point(84, 1);
+            this.cbSJCX_SSZZ_CXTJ.Name = "cbSJCX_SSZZ_CXTJ";
+            this.cbSJCX_SSZZ_CXTJ.Size = new System.Drawing.Size(121, 24);
+            this.cbSJCX_SSZZ_CXTJ.TabIndex = 2;
+            // 
+            // label155
+            // 
+            this.label155.AutoSize = true;
+            this.label155.Location = new System.Drawing.Point(3, 2);
+            this.label155.Name = "label155";
+            this.label155.Size = new System.Drawing.Size(88, 16);
+            this.label155.TabIndex = 1;
+            this.label155.Text = "查询条件：";
+            // 
+            // btnSJCX_SSZZ_FIND
+            // 
+            this.btnSJCX_SSZZ_FIND.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnSJCX_SSZZ_FIND.FlatAppearance.BorderSize = 0;
+            this.btnSJCX_SSZZ_FIND.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSJCX_SSZZ_FIND.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSJCX_SSZZ_FIND.ForeColor = System.Drawing.Color.White;
+            this.btnSJCX_SSZZ_FIND.Location = new System.Drawing.Point(876, 2);
+            this.btnSJCX_SSZZ_FIND.Name = "btnSJCX_SSZZ_FIND";
+            this.btnSJCX_SSZZ_FIND.Size = new System.Drawing.Size(81, 26);
+            this.btnSJCX_SSZZ_FIND.TabIndex = 36;
+            this.btnSJCX_SSZZ_FIND.Text = "查询";
+            this.btnSJCX_SSZZ_FIND.UseVisualStyleBackColor = false;
+            this.btnSJCX_SSZZ_FIND.Click += new System.EventHandler(this.btnSJCX_SSZZ_FIND_Click);
+            // 
+            // panel118
+            // 
+            this.panel118.Controls.Add(this.label152);
+            this.panel118.Controls.Add(this.dtpSJCX_SSZZ_JSRQ);
+            this.panel118.Controls.Add(this.dtpSJCX_SSZZ_KSRQ);
+            this.panel118.Controls.Add(this.label153);
+            this.panel118.Location = new System.Drawing.Point(207, 0);
+            this.panel118.Name = "panel118";
+            this.panel118.Size = new System.Drawing.Size(402, 34);
+            this.panel118.TabIndex = 35;
+            // 
+            // label152
+            // 
+            this.label152.AutoSize = true;
+            this.label152.Location = new System.Drawing.Point(229, 5);
+            this.label152.Name = "label152";
+            this.label152.Size = new System.Drawing.Size(16, 16);
+            this.label152.TabIndex = 4;
+            this.label152.Text = "-";
+            // 
+            // dtpSJCX_SSZZ_JSRQ
+            // 
+            this.dtpSJCX_SSZZ_JSRQ.CustomFormat = "yyyy年MM月";
+            this.dtpSJCX_SSZZ_JSRQ.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpSJCX_SSZZ_JSRQ.Location = new System.Drawing.Point(251, 0);
+            this.dtpSJCX_SSZZ_JSRQ.Name = "dtpSJCX_SSZZ_JSRQ";
+            this.dtpSJCX_SSZZ_JSRQ.ShowUpDown = true;
+            this.dtpSJCX_SSZZ_JSRQ.Size = new System.Drawing.Size(138, 26);
+            this.dtpSJCX_SSZZ_JSRQ.TabIndex = 3;
+            // 
+            // dtpSJCX_SSZZ_KSRQ
+            // 
+            this.dtpSJCX_SSZZ_KSRQ.CustomFormat = "yyyy年MM月";
+            this.dtpSJCX_SSZZ_KSRQ.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpSJCX_SSZZ_KSRQ.Location = new System.Drawing.Point(85, 0);
+            this.dtpSJCX_SSZZ_KSRQ.Name = "dtpSJCX_SSZZ_KSRQ";
+            this.dtpSJCX_SSZZ_KSRQ.ShowUpDown = true;
+            this.dtpSJCX_SSZZ_KSRQ.Size = new System.Drawing.Size(138, 26);
+            this.dtpSJCX_SSZZ_KSRQ.TabIndex = 2;
+            // 
+            // label153
+            // 
+            this.label153.AutoSize = true;
+            this.label153.Location = new System.Drawing.Point(4, 4);
+            this.label153.Name = "label153";
+            this.label153.Size = new System.Drawing.Size(88, 16);
+            this.label153.TabIndex = 1;
+            this.label153.Text = "时间范围：";
+            // 
+            // panel119
+            // 
+            this.panel119.Controls.Add(this.tbSJCX_SSZZ_NAME);
+            this.panel119.Controls.Add(this.label154);
+            this.panel119.Location = new System.Drawing.Point(13, 2);
+            this.panel119.Name = "panel119";
+            this.panel119.Size = new System.Drawing.Size(183, 34);
+            this.panel119.TabIndex = 33;
+            // 
+            // tbSJCX_SSZZ_NAME
+            // 
+            this.tbSJCX_SSZZ_NAME.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbSJCX_SSZZ_NAME.Location = new System.Drawing.Point(47, 1);
+            this.tbSJCX_SSZZ_NAME.Name = "tbSJCX_SSZZ_NAME";
+            this.tbSJCX_SSZZ_NAME.Size = new System.Drawing.Size(128, 26);
+            this.tbSJCX_SSZZ_NAME.TabIndex = 6;
+            // 
+            // label154
+            // 
+            this.label154.AutoSize = true;
+            this.label154.Location = new System.Drawing.Point(3, 2);
+            this.label154.Name = "label154";
+            this.label154.Size = new System.Drawing.Size(56, 16);
+            this.label154.TabIndex = 1;
+            this.label154.Text = "姓名：";
+            // 
             // panelCJFX
             // 
             this.panelCJFX.BackColor = System.Drawing.Color.White;
@@ -4137,9 +4190,8 @@
             this.panelCJFX.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCJFX.Location = new System.Drawing.Point(10, 10);
             this.panelCJFX.Name = "panelCJFX";
-            this.panelCJFX.Size = new System.Drawing.Size(1260, 530);
+            this.panelCJFX.Size = new System.Drawing.Size(1280, 550);
             this.panelCJFX.TabIndex = 2;
-            this.panelCJFX.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCJFX_Paint);
             // 
             // panel121
             // 
@@ -4149,7 +4201,7 @@
             this.panel121.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel121.Location = new System.Drawing.Point(0, 0);
             this.panel121.Name = "panel121";
-            this.panel121.Size = new System.Drawing.Size(1260, 35);
+            this.panel121.Size = new System.Drawing.Size(1280, 35);
             this.panel121.TabIndex = 6;
             // 
             // btnTJFX_GZLTJ
@@ -4208,12 +4260,15 @@
             // 
             // dgvTJCX_GZL
             // 
+            this.dgvTJCX_GZL.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTJCX_GZL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTJCX_GZL.EnableHeadersVisualStyles = false;
             this.dgvTJCX_GZL.Location = new System.Drawing.Point(20, 54);
             this.dgvTJCX_GZL.Name = "dgvTJCX_GZL";
             this.dgvTJCX_GZL.RowTemplate.Height = 23;
             this.dgvTJCX_GZL.Size = new System.Drawing.Size(1191, 453);
             this.dgvTJCX_GZL.TabIndex = 43;
+            this.dgvTJCX_GZL.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgvTJCX_GZL_RowPostPaint);
             // 
             // panel124
             // 
@@ -4286,15 +4341,21 @@
             // 
             // dtpTJFX_GZLGL_JSSJ
             // 
+            this.dtpTJFX_GZLGL_JSSJ.CustomFormat = "yyyy年MM月";
+            this.dtpTJFX_GZLGL_JSSJ.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpTJFX_GZLGL_JSSJ.Location = new System.Drawing.Point(251, 0);
             this.dtpTJFX_GZLGL_JSSJ.Name = "dtpTJFX_GZLGL_JSSJ";
+            this.dtpTJFX_GZLGL_JSSJ.ShowUpDown = true;
             this.dtpTJFX_GZLGL_JSSJ.Size = new System.Drawing.Size(138, 26);
             this.dtpTJFX_GZLGL_JSSJ.TabIndex = 3;
             // 
             // dtpTJFX_GZLGL_KSSJ
             // 
+            this.dtpTJFX_GZLGL_KSSJ.CustomFormat = "yyyy年MM月";
+            this.dtpTJFX_GZLGL_KSSJ.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpTJFX_GZLGL_KSSJ.Location = new System.Drawing.Point(85, 0);
             this.dtpTJFX_GZLGL_KSSJ.Name = "dtpTJFX_GZLGL_KSSJ";
+            this.dtpTJFX_GZLGL_KSSJ.ShowUpDown = true;
             this.dtpTJFX_GZLGL_KSSJ.Size = new System.Drawing.Size(138, 26);
             this.dtpTJFX_GZLGL_KSSJ.TabIndex = 2;
             // 
@@ -4367,15 +4428,25 @@
             // 
             // dtpTJCX_JSSJ
             // 
+            this.dtpTJCX_JSSJ.CustomFormat = "yyyy年MM月";
+            this.dtpTJCX_JSSJ.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpTJCX_JSSJ.Location = new System.Drawing.Point(251, 0);
             this.dtpTJCX_JSSJ.Name = "dtpTJCX_JSSJ";
+            this.dtpTJCX_JSSJ.ShowUpDown = true;
             this.dtpTJCX_JSSJ.Size = new System.Drawing.Size(138, 26);
             this.dtpTJCX_JSSJ.TabIndex = 3;
+            this.dtpTJCX_JSSJ.Value = new System.DateTime(2018, 8, 28, 0, 0, 0, 0);
             // 
             // dtpTJCX_KSSJ
             // 
+            this.dtpTJCX_KSSJ.AllowDrop = true;
+            this.dtpTJCX_KSSJ.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.dtpTJCX_KSSJ.CustomFormat = "yyyy年MM月";
+            this.dtpTJCX_KSSJ.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpTJCX_KSSJ.Location = new System.Drawing.Point(85, 0);
+            this.dtpTJCX_KSSJ.MaxDate = new System.DateTime(9998, 12, 1, 0, 0, 0, 0);
             this.dtpTJCX_KSSJ.Name = "dtpTJCX_KSSJ";
+            this.dtpTJCX_KSSJ.ShowUpDown = true;
             this.dtpTJCX_KSSJ.Size = new System.Drawing.Size(138, 26);
             this.dtpTJCX_KSSJ.TabIndex = 2;
             // 
@@ -4409,20 +4480,20 @@
             // 
             // chartPie_4
             // 
-            chartArea5.Name = "ChartArea1";
-            this.chartPie_4.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chartPie_4.Legends.Add(legend5);
+            chartArea1.Name = "ChartArea1";
+            this.chartPie_4.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartPie_4.Legends.Add(legend1);
             this.chartPie_4.Location = new System.Drawing.Point(8, 20);
             this.chartPie_4.Name = "chartPie_4";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series5.IsValueShownAsLabel = true;
-            series5.Label = "#VALX\\n[#VAL](#PERCENT)";
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            series5.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
-            this.chartPie_4.Series.Add(series5);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.IsValueShownAsLabel = true;
+            series1.Label = "#VALX\\n[#VAL](#PERCENT)";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            this.chartPie_4.Series.Add(series1);
             this.chartPie_4.Size = new System.Drawing.Size(550, 189);
             this.chartPie_4.TabIndex = 2;
             this.chartPie_4.Text = "男女比例";
@@ -4439,20 +4510,20 @@
             // 
             // chartPie_3
             // 
-            chartArea6.Name = "ChartArea1";
-            this.chartPie_3.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chartPie_3.Legends.Add(legend6);
+            chartArea2.Name = "ChartArea1";
+            this.chartPie_3.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartPie_3.Legends.Add(legend2);
             this.chartPie_3.Location = new System.Drawing.Point(13, 19);
             this.chartPie_3.Name = "chartPie_3";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series6.IsValueShownAsLabel = true;
-            series6.Label = "#VALX\\n [#VAL](#PERCENT)";
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            series6.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
-            this.chartPie_3.Series.Add(series6);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.IsValueShownAsLabel = true;
+            series2.Label = "#VALX\\n [#VAL](#PERCENT)";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            this.chartPie_3.Series.Add(series2);
             this.chartPie_3.Size = new System.Drawing.Size(552, 180);
             this.chartPie_3.TabIndex = 4;
             this.chartPie_3.Text = "男女比例";
@@ -4487,20 +4558,20 @@
             // 
             // chartPie_2
             // 
-            chartArea7.Name = "ChartArea1";
-            this.chartPie_2.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            this.chartPie_2.Legends.Add(legend7);
+            chartArea3.Name = "ChartArea1";
+            this.chartPie_2.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartPie_2.Legends.Add(legend3);
             this.chartPie_2.Location = new System.Drawing.Point(12, 19);
             this.chartPie_2.Name = "chartPie_2";
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series7.IsValueShownAsLabel = true;
-            series7.Label = "#VALX [#VAL](#PERCENT)";
-            series7.Legend = "Legend1";
-            series7.Name = "Series1";
-            series7.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
-            this.chartPie_2.Series.Add(series7);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.IsValueShownAsLabel = true;
+            series3.Label = "#VALX [#VAL](#PERCENT)";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            series3.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            this.chartPie_2.Series.Add(series3);
             this.chartPie_2.Size = new System.Drawing.Size(552, 198);
             this.chartPie_2.TabIndex = 2;
             this.chartPie_2.Text = "男女比例";
@@ -4526,19 +4597,19 @@
             // 
             // chartPie_1
             // 
-            chartArea8.Name = "ChartArea1";
-            this.chartPie_1.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.chartPie_1.Legends.Add(legend8);
+            chartArea4.Name = "ChartArea1";
+            this.chartPie_1.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chartPie_1.Legends.Add(legend4);
             this.chartPie_1.Location = new System.Drawing.Point(8, 20);
             this.chartPie_1.Name = "chartPie_1";
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series8.IsValueShownAsLabel = true;
-            series8.Label = "#VALX[#VAL](#PERCENT)";
-            series8.Legend = "Legend1";
-            series8.Name = "Series1";
-            this.chartPie_1.Series.Add(series8);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series4.IsValueShownAsLabel = true;
+            series4.Label = "#VALX[#VAL](#PERCENT)";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chartPie_1.Series.Add(series4);
             this.chartPie_1.Size = new System.Drawing.Size(558, 200);
             this.chartPie_1.TabIndex = 0;
             this.chartPie_1.Text = "男女比例";
@@ -4551,7 +4622,7 @@
             this.panelKSGL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelKSGL.Location = new System.Drawing.Point(10, 10);
             this.panelKSGL.Name = "panelKSGL";
-            this.panelKSGL.Size = new System.Drawing.Size(1260, 530);
+            this.panelKSGL.Size = new System.Drawing.Size(1280, 550);
             this.panelKSGL.TabIndex = 3;
             // 
             // panel14
@@ -5147,6 +5218,7 @@
             this.btnDeleteEmp.TabIndex = 6;
             this.btnDeleteEmp.Text = "删除";
             this.btnDeleteEmp.UseVisualStyleBackColor = false;
+            this.btnDeleteEmp.Visible = false;
             // 
             // btnEditEmp
             // 
@@ -5202,6 +5274,7 @@
             this.btnFindEmpByAccountAndName.TabIndex = 36;
             this.btnFindEmpByAccountAndName.Text = "查询";
             this.btnFindEmpByAccountAndName.UseVisualStyleBackColor = false;
+            this.btnFindEmpByAccountAndName.Click += new System.EventHandler(this.btnFindEmpByAccountAndName_Click);
             // 
             // panel37
             // 
@@ -5258,66 +5331,26 @@
             // panel39
             // 
             this.panel39.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel39.Controls.Add(this.listViewEmp);
+            this.panel39.Controls.Add(this.dgvKSGL_EMP);
             this.panel39.Location = new System.Drawing.Point(91, 92);
             this.panel39.Name = "panel39";
             this.panel39.Size = new System.Drawing.Size(1075, 375);
             this.panel39.TabIndex = 40;
             // 
-            // listViewEmp
+            // dgvKSGL_EMP
             // 
-            this.listViewEmp.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listViewEmp.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.account,
-            this.name,
-            this.sex,
-            this.birth,
-            this.tel});
-            this.listViewEmp.Dock = System.Windows.Forms.DockStyle.Fill;
-            listViewGroup5.Header = "ListViewGroup";
-            listViewGroup5.Name = "listViewGroup1";
-            listViewGroup6.Header = "ListViewGroup";
-            listViewGroup6.Name = "listViewGroup2";
-            listViewGroup7.Header = "ListViewGroup";
-            listViewGroup7.Name = "listViewGroup3";
-            listViewGroup8.Header = "ListViewGroup";
-            listViewGroup8.Name = "listViewGroup4";
-            this.listViewEmp.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup5,
-            listViewGroup6,
-            listViewGroup7,
-            listViewGroup8});
-            this.listViewEmp.Location = new System.Drawing.Point(0, 0);
-            this.listViewEmp.Name = "listViewEmp";
-            this.listViewEmp.Size = new System.Drawing.Size(1073, 373);
-            this.listViewEmp.TabIndex = 0;
-            this.listViewEmp.UseCompatibleStateImageBehavior = false;
-            this.listViewEmp.View = System.Windows.Forms.View.Details;
-            // 
-            // account
-            // 
-            this.account.Text = "用户名";
-            this.account.Width = 224;
-            // 
-            // name
-            // 
-            this.name.Text = "姓名";
-            this.name.Width = 205;
-            // 
-            // sex
-            // 
-            this.sex.Text = "性别";
-            this.sex.Width = 195;
-            // 
-            // birth
-            // 
-            this.birth.Text = "出生日期";
-            this.birth.Width = 176;
-            // 
-            // tel
-            // 
-            this.tel.Text = "联系方式";
-            this.tel.Width = 197;
+            this.dgvKSGL_EMP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvKSGL_EMP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKSGL_EMP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvKSGL_EMP.EnableHeadersVisualStyles = false;
+            this.dgvKSGL_EMP.Location = new System.Drawing.Point(0, 0);
+            this.dgvKSGL_EMP.Name = "dgvKSGL_EMP";
+            this.dgvKSGL_EMP.ReadOnly = true;
+            this.dgvKSGL_EMP.RowTemplate.Height = 23;
+            this.dgvKSGL_EMP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect;
+            this.dgvKSGL_EMP.Size = new System.Drawing.Size(1073, 373);
+            this.dgvKSGL_EMP.TabIndex = 1;
+            this.dgvKSGL_EMP.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.autoAddId);
             // 
             // panel13
             // 
@@ -5326,7 +5359,7 @@
             this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel13.Location = new System.Drawing.Point(0, 0);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(1260, 35);
+            this.panel13.Size = new System.Drawing.Size(1280, 35);
             this.panel13.TabIndex = 4;
             // 
             // btnRoomEmpManager
@@ -5368,10 +5401,10 @@
             this.panel4.Controls.Add(this.panelSJCX);
             this.panel4.Controls.Add(this.panelZDGL);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(10, 144);
+            this.panel4.Location = new System.Drawing.Point(0, 134);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(10);
-            this.panel4.Size = new System.Drawing.Size(1280, 550);
+            this.panel4.Size = new System.Drawing.Size(1300, 570);
             this.panel4.TabIndex = 13;
             // 
             // printDucumentSSCX_SSJL
@@ -5386,6 +5419,27 @@
             // 
             this.printDocumentSJCX_SSZZ.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocumentSJCX_SSZZ_PrintPage);
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // dpSSLR_SSRQ
+            // 
+            this.dpSSLR_SSRQ.CustomFormat = "yyyy年MM月dd日 hh:mm";
+            this.dpSSLR_SSRQ.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dpSSLR_SSRQ.Location = new System.Drawing.Point(83, 1);
+            this.dpSSLR_SSRQ.Name = "dpSSLR_SSRQ";
+            this.dpSSLR_SSRQ.ShowCheckBox = true;
+            this.dpSSLR_SSRQ.Size = new System.Drawing.Size(197, 26);
+            this.dpSSLR_SSRQ.TabIndex = 33;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -5399,8 +5453,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "FormMain";
-            this.Padding = new System.Windows.Forms.Padding(10);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "析之助手术登记系统";
+            this.SizeChanged += new System.EventHandler(this.FormMain_SizeChanged);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -5516,33 +5571,41 @@
             this.panel78.PerformLayout();
             this.panelZDGL.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
-            this.panel42.ResumeLayout(false);
             this.panel41.ResumeLayout(false);
             this.panel41.PerformLayout();
             this.panel40.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDictionary)).EndInit();
             this.panelSJCX.ResumeLayout(false);
             this.panel45.ResumeLayout(false);
-            this.panelSJCX_SSZZD.ResumeLayout(false);
-            this.panelSJCX_SSZZ.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSJCX_SSZZ)).EndInit();
-            this.panel117.ResumeLayout(false);
-            this.panel120.ResumeLayout(false);
-            this.panel120.PerformLayout();
-            this.panel118.ResumeLayout(false);
-            this.panel118.PerformLayout();
-            this.panel119.ResumeLayout(false);
-            this.panel119.PerformLayout();
             this.panelSJCX_SSJLD.ResumeLayout(false);
             this.panelSSCX_SSJLD.ResumeLayout(false);
             this.panel102.ResumeLayout(false);
             this.panel102.PerformLayout();
             this.panel52.ResumeLayout(false);
-            this.panel52.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.panel53.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.panel70.ResumeLayout(false);
+            this.panel70.PerformLayout();
+            this.panel11111.ResumeLayout(false);
+            this.panel11111.PerformLayout();
+            this.panel56.ResumeLayout(false);
+            this.panel56.PerformLayout();
+            this.panel55.ResumeLayout(false);
+            this.panel55.PerformLayout();
+            this.panel54.ResumeLayout(false);
+            this.panel54.PerformLayout();
+            this.panel108.ResumeLayout(false);
+            this.panel108.PerformLayout();
+            this.panel51.ResumeLayout(false);
+            this.panel51.PerformLayout();
             this.gbSJCX_SSJLD_SSZZ.ResumeLayout(false);
             this.flowLayoutPanel3.ResumeLayout(false);
             this.flowLayoutPanel3.PerformLayout();
             this.panel114.ResumeLayout(false);
             this.panel114.PerformLayout();
+            this.panel42.ResumeLayout(false);
+            this.panel42.PerformLayout();
             this.panel113.ResumeLayout(false);
             this.panel113.PerformLayout();
             this.panel112.ResumeLayout(false);
@@ -5563,20 +5626,6 @@
             this.panel1231321.PerformLayout();
             this.panel109.ResumeLayout(false);
             this.panel109.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.panel70.ResumeLayout(false);
-            this.panel70.PerformLayout();
-            this.panel11111.ResumeLayout(false);
-            this.panel11111.PerformLayout();
-            this.panel56.ResumeLayout(false);
-            this.panel56.PerformLayout();
-            this.panel55.ResumeLayout(false);
-            this.panel55.PerformLayout();
-            this.panel54.ResumeLayout(false);
-            this.panel54.PerformLayout();
-            this.panel108.ResumeLayout(false);
-            this.panel108.PerformLayout();
             this.panel50.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSJCX_RECORDS)).EndInit();
             this.panel47.ResumeLayout(false);
@@ -5587,6 +5636,16 @@
             this.panel49.PerformLayout();
             this.panel46.ResumeLayout(false);
             this.panel46.PerformLayout();
+            this.panelSJCX_SSZZD.ResumeLayout(false);
+            this.panelSJCX_SSZZ.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSJCX_SSZZ)).EndInit();
+            this.panel117.ResumeLayout(false);
+            this.panel120.ResumeLayout(false);
+            this.panel120.PerformLayout();
+            this.panel118.ResumeLayout(false);
+            this.panel118.PerformLayout();
+            this.panel119.ResumeLayout(false);
+            this.panel119.PerformLayout();
             this.panelCJFX.ResumeLayout(false);
             this.panel121.ResumeLayout(false);
             this.panelTJFX_GZLTJ.ResumeLayout(false);
@@ -5659,6 +5718,7 @@
             this.panel38.ResumeLayout(false);
             this.panel38.PerformLayout();
             this.panel39.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKSGL_EMP)).EndInit();
             this.panel13.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -5695,7 +5755,6 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel71;
         private System.Windows.Forms.Panel panel72;
-        private System.Windows.Forms.TextBox tbSSLR_SSRQ;
         private System.Windows.Forms.Label label105;
         private System.Windows.Forms.Panel panel73;
         private System.Windows.Forms.ComboBox cbSSLR_CCFS;
@@ -5825,12 +5884,6 @@
         private System.Windows.Forms.TextBox tbFindEmpName;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Panel panel39;
-        private System.Windows.Forms.ListView listViewEmp;
-        private System.Windows.Forms.ColumnHeader account;
-        private System.Windows.Forms.ColumnHeader name;
-        private System.Windows.Forms.ColumnHeader sex;
-        private System.Windows.Forms.ColumnHeader birth;
-        private System.Windows.Forms.ColumnHeader tel;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Button btnRoomEmpManager;
         private System.Windows.Forms.Button btnRoomInfoManager;
@@ -5844,10 +5897,8 @@
         private System.Windows.Forms.Button btnGoEditDictionary;
         private System.Windows.Forms.Button btnGoAddDictionaryy;
         private System.Windows.Forms.Label labelDictionaryShow;
-        private System.Windows.Forms.Panel panel42;
         private System.Windows.Forms.ListView listViewDictionarySSZD;
         private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ListView listViewDictionary;
         private System.Windows.Forms.ListView listViewDictionaryQKZD;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.Label labelAccountShow;
@@ -5886,8 +5937,6 @@
         private System.Windows.Forms.DataGridView dgvSJCX_RECORDS;
         private System.Windows.Forms.Button btnPrintSSCX_SSJL;
         private System.Windows.Forms.Panel panel52;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RichTextBox all_ssjl;
         private System.Windows.Forms.Label labelSSJLD_TITLE;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel70;
@@ -6121,6 +6170,17 @@
         private System.Windows.Forms.ToolStripMenuItem menuSSLR_ZDQ;
         private System.Windows.Forms.ToolStripMenuItem menuSSLR_YDQ;
         private System.Windows.Forms.ToolStripMenuItem menuSSLR_JZ;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.DataGridView dgvDictionary;
+        private System.Windows.Forms.Panel panel42;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RichTextBox all_ssjl;
+        private System.Windows.Forms.Panel panel53;
+        private System.Windows.Forms.Panel panel51;
+        private System.Windows.Forms.DataGridView dgvKSGL_EMP;
+        private System.Windows.Forms.DateTimePicker dpSSLR_SSRQ;
 
     }
 }
