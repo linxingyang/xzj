@@ -17,6 +17,7 @@ namespace xzj
         public static string SQL_ADDRESS = "";//"server=localhost;port=3306;database=xzj;user=" + user + ";password=" + pwd + ";SslMode = none;";//数据
         //public static string sqlAddress = "server=localhost;port=3306;database=xzj;user=" + user + ";password=" + pwd + ";SslMode = none;";//数据
         public static string ACCOUNT_KEY = "account_key";//保存当前登录的帐号
+        public static string PWD_KEY = "pwd_key";//保存当前登录的密码
         public static string ACCOUNT = "";//保存当前登录的帐号
         public static string IS_LOGIN = "is_login";//记录是否登录
          

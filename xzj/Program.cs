@@ -28,15 +28,16 @@ namespace xzj
             else
             {
                 UtilConfig.SQL_ADDRESS = DBSQLite.selectValue(UtilConfig.SQL_ADDRESS_KEY);
-                string ACCOUNT = DBSQLite.selectValue(UtilConfig.ACCOUNT_KEY);
-                if (!string.IsNullOrEmpty(ACCOUNT))
-                {
-                    Application.Run(new FormMain());
-                }
-                else
-                {
-                    Application.Run(new FormSignIn());
-                }
+                Application.Run(new FormSignIn());
+                //string ACCOUNT = DBSQLite.selectValue(UtilConfig.ACCOUNT_KEY);
+                //if (!string.IsNullOrEmpty(ACCOUNT))
+                //{
+                //    Application.Run(new FormMain());
+                //}
+                //else
+                //{
+                //    Application.Run(new FormSignIn());
+                //}
             }
         }
 

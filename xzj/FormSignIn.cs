@@ -16,6 +16,16 @@ namespace xzj
         public FormSignIn()
         {
             InitializeComponent();
+
+            string account = DBSQLite.selectValue(UtilConfig.ACCOUNT_KEY);
+            string pwd = DBSQLite.selectValue(UtilConfig.PWD_KEY);
+            bool flag = DBEmp.getInstance().isLogin(account, pwd);
+            if (flag)
+            {
+                goMainForm();
+            }
+           
+
         }
 
         private void FormSignIn_Load(object sender, EventArgs e)
@@ -31,7 +41,7 @@ namespace xzj
             string account = this.textBoxAcount.Text;
             string pwd = this.textBoxPwd.Text;
 
-            string sqlAddress =  DBSQLite.selectValue(UtilConfig.SQL_ADDRESS_KEY)+"";
+            string sqlAddress = DBSQLite.selectValue(UtilConfig.SQL_ADDRESS_KEY) + "";
             if (sqlAddress.Length == 0)
             {
                 MessageBox.Show("你还没有配置数据库，需要先配置数据库，才能登录");
@@ -51,7 +61,7 @@ namespace xzj
             }
 
             bool flag = DBEmp.getInstance().isAccount(account);
-            
+
             if (flag)
             {
                 flag = DBEmp.getInstance().isLogin(account, pwd);
@@ -59,6 +69,7 @@ namespace xzj
                 {
                     //UtilConfig.ACCOUNT = account;
                     DBSQLite.updateValue(UtilConfig.ACCOUNT_KEY, account);
+                    DBSQLite.updateValue(UtilConfig.PWD_KEY, pwd);
                     goMainForm();
                 }
                 else

@@ -30,19 +30,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea17 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend17 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea18 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend18 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea19 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend19 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea20 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend20 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelAccountShow = new System.Windows.Forms.Label();
@@ -162,6 +162,7 @@
             this.panel71 = new System.Windows.Forms.Panel();
             this.labelSSLR_SSJL_ID = new System.Windows.Forms.Label();
             this.panel72 = new System.Windows.Forms.Panel();
+            this.dpSSLR_SSRQ = new System.Windows.Forms.DateTimePicker();
             this.label105 = new System.Windows.Forms.Label();
             this.panel73 = new System.Windows.Forms.Panel();
             this.cbSSLR_CCFS = new System.Windows.Forms.ComboBox();
@@ -198,12 +199,6 @@
             this.tbSSLR_CTXYY = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.panel63 = new System.Windows.Forms.Panel();
-            this.label38 = new System.Windows.Forms.Label();
-            this.tbSSLR_COUNTY = new System.Windows.Forms.TextBox();
-            this.label49 = new System.Windows.Forms.Label();
-            this.tbSSLR_CITY = new System.Windows.Forms.TextBox();
-            this.label98 = new System.Windows.Forms.Label();
-            this.tbSSLR_PROVINCE = new System.Windows.Forms.TextBox();
             this.label99 = new System.Windows.Forms.Label();
             this.panel64 = new System.Windows.Forms.Panel();
             this.cbSSLR_YBLX = new System.Windows.Forms.ComboBox();
@@ -497,7 +492,11 @@
             this.printDocumentSJCX_SSZZ = new System.Drawing.Printing.PrintDocument();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.dpSSLR_SSRQ = new System.Windows.Forms.DateTimePicker();
+            this.cbSSLR_PROVINCE = new System.Windows.Forms.ComboBox();
+            this.cbSSLR_CITY = new System.Windows.Forms.ComboBox();
+            this.cbSSLR_COUNTY = new System.Windows.Forms.ComboBox();
+            this.tbSSLR_DETAIL_ADDRESS = new System.Windows.Forms.TextBox();
+            this.label38 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.flowLayoutForm.SuspendLayout();
@@ -1920,8 +1919,18 @@
             this.panel72.Controls.Add(this.label105);
             this.panel72.Location = new System.Drawing.Point(12, 26);
             this.panel72.Name = "panel72";
-            this.panel72.Size = new System.Drawing.Size(283, 34);
+            this.panel72.Size = new System.Drawing.Size(299, 34);
             this.panel72.TabIndex = 30;
+            // 
+            // dpSSLR_SSRQ
+            // 
+            this.dpSSLR_SSRQ.CustomFormat = "yyyy年MM月dd日 hh:mm";
+            this.dpSSLR_SSRQ.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dpSSLR_SSRQ.Location = new System.Drawing.Point(83, 1);
+            this.dpSSLR_SSRQ.Name = "dpSSLR_SSRQ";
+            this.dpSSLR_SSRQ.ShowCheckBox = true;
+            this.dpSSLR_SSRQ.Size = new System.Drawing.Size(213, 26);
+            this.dpSSLR_SSRQ.TabIndex = 33;
             // 
             // label105
             // 
@@ -1963,7 +1972,7 @@
             // 
             this.panel74.Controls.Add(this.cbSSLR_SSFS);
             this.panel74.Controls.Add(this.label107);
-            this.panel74.Location = new System.Drawing.Point(314, 71);
+            this.panel74.Location = new System.Drawing.Point(332, 71);
             this.panel74.Name = "panel74";
             this.panel74.Size = new System.Drawing.Size(334, 34);
             this.panel74.TabIndex = 28;
@@ -1992,7 +2001,7 @@
             this.panel75.Controls.Add(this.label108);
             this.panel75.Location = new System.Drawing.Point(14, 71);
             this.panel75.Name = "panel75";
-            this.panel75.Size = new System.Drawing.Size(281, 34);
+            this.panel75.Size = new System.Drawing.Size(297, 34);
             this.panel75.TabIndex = 27;
             // 
             // cbSSLR_SSLX
@@ -2001,7 +2010,7 @@
             this.cbSSLR_SSLX.FormattingEnabled = true;
             this.cbSSLR_SSLX.Location = new System.Drawing.Point(81, 0);
             this.cbSSLR_SSLX.Name = "cbSSLR_SSLX";
-            this.cbSSLR_SSLX.Size = new System.Drawing.Size(197, 24);
+            this.cbSSLR_SSLX.Size = new System.Drawing.Size(213, 24);
             this.cbSSLR_SSLX.TabIndex = 2;
             // 
             // label108
@@ -2017,7 +2026,7 @@
             // 
             this.panel76.Controls.Add(this.cbSSLR_SSDD);
             this.panel76.Controls.Add(this.label109);
-            this.panel76.Location = new System.Drawing.Point(314, 26);
+            this.panel76.Location = new System.Drawing.Point(332, 26);
             this.panel76.Name = "panel76";
             this.panel76.Size = new System.Drawing.Size(334, 34);
             this.panel76.TabIndex = 28;
@@ -2260,67 +2269,15 @@
             // panel63
             // 
             this.panel63.Controls.Add(this.label38);
-            this.panel63.Controls.Add(this.tbSSLR_COUNTY);
-            this.panel63.Controls.Add(this.label49);
-            this.panel63.Controls.Add(this.tbSSLR_CITY);
-            this.panel63.Controls.Add(this.label98);
-            this.panel63.Controls.Add(this.tbSSLR_PROVINCE);
+            this.panel63.Controls.Add(this.tbSSLR_DETAIL_ADDRESS);
+            this.panel63.Controls.Add(this.cbSSLR_COUNTY);
+            this.panel63.Controls.Add(this.cbSSLR_CITY);
+            this.panel63.Controls.Add(this.cbSSLR_PROVINCE);
             this.panel63.Controls.Add(this.label99);
             this.panel63.Location = new System.Drawing.Point(23, 71);
             this.panel63.Name = "panel63";
-            this.panel63.Size = new System.Drawing.Size(935, 34);
+            this.panel63.Size = new System.Drawing.Size(1154, 34);
             this.panel63.TabIndex = 48;
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(569, 5);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(56, 16);
-            this.label38.TabIndex = 11;
-            this.label38.Text = "县(区)";
-            // 
-            // tbSSLR_COUNTY
-            // 
-            this.tbSSLR_COUNTY.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbSSLR_COUNTY.Location = new System.Drawing.Point(461, 1);
-            this.tbSSLR_COUNTY.Name = "tbSSLR_COUNTY";
-            this.tbSSLR_COUNTY.Size = new System.Drawing.Size(102, 26);
-            this.tbSSLR_COUNTY.TabIndex = 10;
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(409, 3);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(24, 16);
-            this.label49.TabIndex = 9;
-            this.label49.Text = "市";
-            // 
-            // tbSSLR_CITY
-            // 
-            this.tbSSLR_CITY.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbSSLR_CITY.Location = new System.Drawing.Point(283, 0);
-            this.tbSSLR_CITY.Name = "tbSSLR_CITY";
-            this.tbSSLR_CITY.Size = new System.Drawing.Size(114, 26);
-            this.tbSSLR_CITY.TabIndex = 8;
-            // 
-            // label98
-            // 
-            this.label98.AutoSize = true;
-            this.label98.Location = new System.Drawing.Point(233, 5);
-            this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(24, 16);
-            this.label98.TabIndex = 7;
-            this.label98.Text = "省";
-            // 
-            // tbSSLR_PROVINCE
-            // 
-            this.tbSSLR_PROVINCE.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbSSLR_PROVINCE.Location = new System.Drawing.Point(96, 0);
-            this.tbSSLR_PROVINCE.Name = "tbSSLR_PROVINCE";
-            this.tbSSLR_PROVINCE.Size = new System.Drawing.Size(130, 26);
-            this.tbSSLR_PROVINCE.TabIndex = 6;
             // 
             // label99
             // 
@@ -2663,14 +2620,14 @@
             // 
             this.dgvDictionary.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDictionary.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDictionary.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDictionary.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvDictionary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDictionary.EnableHeadersVisualStyles = false;
             this.dgvDictionary.Location = new System.Drawing.Point(103, 120);
@@ -4480,20 +4437,20 @@
             // 
             // chartPie_4
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartPie_4.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartPie_4.Legends.Add(legend1);
+            chartArea17.Name = "ChartArea1";
+            this.chartPie_4.ChartAreas.Add(chartArea17);
+            legend17.Name = "Legend1";
+            this.chartPie_4.Legends.Add(legend17);
             this.chartPie_4.Location = new System.Drawing.Point(8, 20);
             this.chartPie_4.Name = "chartPie_4";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.IsValueShownAsLabel = true;
-            series1.Label = "#VALX\\n[#VAL](#PERCENT)";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
-            this.chartPie_4.Series.Add(series1);
+            series17.ChartArea = "ChartArea1";
+            series17.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series17.IsValueShownAsLabel = true;
+            series17.Label = "#VALX\\n[#VAL](#PERCENT)";
+            series17.Legend = "Legend1";
+            series17.Name = "Series1";
+            series17.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            this.chartPie_4.Series.Add(series17);
             this.chartPie_4.Size = new System.Drawing.Size(550, 189);
             this.chartPie_4.TabIndex = 2;
             this.chartPie_4.Text = "男女比例";
@@ -4510,20 +4467,20 @@
             // 
             // chartPie_3
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartPie_3.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartPie_3.Legends.Add(legend2);
+            chartArea18.Name = "ChartArea1";
+            this.chartPie_3.ChartAreas.Add(chartArea18);
+            legend18.Name = "Legend1";
+            this.chartPie_3.Legends.Add(legend18);
             this.chartPie_3.Location = new System.Drawing.Point(13, 19);
             this.chartPie_3.Name = "chartPie_3";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.IsValueShownAsLabel = true;
-            series2.Label = "#VALX\\n [#VAL](#PERCENT)";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
-            this.chartPie_3.Series.Add(series2);
+            series18.ChartArea = "ChartArea1";
+            series18.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series18.IsValueShownAsLabel = true;
+            series18.Label = "#VALX\\n [#VAL](#PERCENT)";
+            series18.Legend = "Legend1";
+            series18.Name = "Series1";
+            series18.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            this.chartPie_3.Series.Add(series18);
             this.chartPie_3.Size = new System.Drawing.Size(552, 180);
             this.chartPie_3.TabIndex = 4;
             this.chartPie_3.Text = "男女比例";
@@ -4558,20 +4515,20 @@
             // 
             // chartPie_2
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chartPie_2.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartPie_2.Legends.Add(legend3);
+            chartArea19.Name = "ChartArea1";
+            this.chartPie_2.ChartAreas.Add(chartArea19);
+            legend19.Name = "Legend1";
+            this.chartPie_2.Legends.Add(legend19);
             this.chartPie_2.Location = new System.Drawing.Point(12, 19);
             this.chartPie_2.Name = "chartPie_2";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series3.IsValueShownAsLabel = true;
-            series3.Label = "#VALX [#VAL](#PERCENT)";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            series3.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
-            this.chartPie_2.Series.Add(series3);
+            series19.ChartArea = "ChartArea1";
+            series19.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series19.IsValueShownAsLabel = true;
+            series19.Label = "#VALX [#VAL](#PERCENT)";
+            series19.Legend = "Legend1";
+            series19.Name = "Series1";
+            series19.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            this.chartPie_2.Series.Add(series19);
             this.chartPie_2.Size = new System.Drawing.Size(552, 198);
             this.chartPie_2.TabIndex = 2;
             this.chartPie_2.Text = "男女比例";
@@ -4597,19 +4554,19 @@
             // 
             // chartPie_1
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chartPie_1.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chartPie_1.Legends.Add(legend4);
+            chartArea20.Name = "ChartArea1";
+            this.chartPie_1.ChartAreas.Add(chartArea20);
+            legend20.Name = "Legend1";
+            this.chartPie_1.Legends.Add(legend20);
             this.chartPie_1.Location = new System.Drawing.Point(8, 20);
             this.chartPie_1.Name = "chartPie_1";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series4.IsValueShownAsLabel = true;
-            series4.Label = "#VALX[#VAL](#PERCENT)";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chartPie_1.Series.Add(series4);
+            series20.ChartArea = "ChartArea1";
+            series20.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series20.IsValueShownAsLabel = true;
+            series20.Label = "#VALX[#VAL](#PERCENT)";
+            series20.Legend = "Legend1";
+            series20.Name = "Series1";
+            this.chartPie_1.Series.Add(series20);
             this.chartPie_1.Size = new System.Drawing.Size(558, 200);
             this.chartPie_1.TabIndex = 0;
             this.chartPie_1.Text = "男女比例";
@@ -5430,15 +5387,53 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // dpSSLR_SSRQ
+            // cbSSLR_PROVINCE
             // 
-            this.dpSSLR_SSRQ.CustomFormat = "yyyy年MM月dd日 hh:mm";
-            this.dpSSLR_SSRQ.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dpSSLR_SSRQ.Location = new System.Drawing.Point(83, 1);
-            this.dpSSLR_SSRQ.Name = "dpSSLR_SSRQ";
-            this.dpSSLR_SSRQ.ShowCheckBox = true;
-            this.dpSSLR_SSRQ.Size = new System.Drawing.Size(197, 26);
-            this.dpSSLR_SSRQ.TabIndex = 33;
+            this.cbSSLR_PROVINCE.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSSLR_PROVINCE.FormattingEnabled = true;
+            this.cbSSLR_PROVINCE.Location = new System.Drawing.Point(95, 4);
+            this.cbSSLR_PROVINCE.Name = "cbSSLR_PROVINCE";
+            this.cbSSLR_PROVINCE.Size = new System.Drawing.Size(162, 24);
+            this.cbSSLR_PROVINCE.TabIndex = 12;
+            this.cbSSLR_PROVINCE.SelectedIndexChanged += new System.EventHandler(this.cbSSLR_PROVINCE_SelectedIndexChanged);
+            // 
+            // cbSSLR_CITY
+            // 
+            this.cbSSLR_CITY.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSSLR_CITY.FormattingEnabled = true;
+            this.cbSSLR_CITY.Location = new System.Drawing.Point(263, 5);
+            this.cbSSLR_CITY.Name = "cbSSLR_CITY";
+            this.cbSSLR_CITY.Size = new System.Drawing.Size(162, 24);
+            this.cbSSLR_CITY.TabIndex = 13;
+            this.cbSSLR_CITY.SelectionChangeCommitted += new System.EventHandler(this.cbSSLR_CITY_SelectionChangeCommitted);
+            // 
+            // cbSSLR_COUNTY
+            // 
+            this.cbSSLR_COUNTY.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSSLR_COUNTY.FormattingEnabled = true;
+            this.cbSSLR_COUNTY.Location = new System.Drawing.Point(433, 5);
+            this.cbSSLR_COUNTY.Name = "cbSSLR_COUNTY";
+            this.cbSSLR_COUNTY.Size = new System.Drawing.Size(162, 24);
+            this.cbSSLR_COUNTY.TabIndex = 14;
+            // 
+            // tbSSLR_DETAIL_ADDRESS
+            // 
+            this.tbSSLR_DETAIL_ADDRESS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbSSLR_DETAIL_ADDRESS.Enabled = false;
+            this.tbSSLR_DETAIL_ADDRESS.Location = new System.Drawing.Point(605, 4);
+            this.tbSSLR_DETAIL_ADDRESS.Name = "tbSSLR_DETAIL_ADDRESS";
+            this.tbSSLR_DETAIL_ADDRESS.ReadOnly = true;
+            this.tbSSLR_DETAIL_ADDRESS.Size = new System.Drawing.Size(448, 26);
+            this.tbSSLR_DETAIL_ADDRESS.TabIndex = 15;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(1061, 8);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(72, 16);
+            this.label38.TabIndex = 16;
+            this.label38.Text = "详细地址";
             // 
             // FormMain
             // 
@@ -5787,12 +5782,6 @@
         private System.Windows.Forms.TextBox tbSSLR_CTXYY;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Panel panel63;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.TextBox tbSSLR_COUNTY;
-        private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.TextBox tbSSLR_CITY;
-        private System.Windows.Forms.Label label98;
-        private System.Windows.Forms.TextBox tbSSLR_PROVINCE;
         private System.Windows.Forms.Label label99;
         private System.Windows.Forms.Panel panel64;
         private System.Windows.Forms.ComboBox cbSSLR_YBLX;
@@ -6181,6 +6170,11 @@
         private System.Windows.Forms.Panel panel51;
         private System.Windows.Forms.DataGridView dgvKSGL_EMP;
         private System.Windows.Forms.DateTimePicker dpSSLR_SSRQ;
+        private System.Windows.Forms.ComboBox cbSSLR_PROVINCE;
+        private System.Windows.Forms.ComboBox cbSSLR_COUNTY;
+        private System.Windows.Forms.ComboBox cbSSLR_CITY;
+        private System.Windows.Forms.TextBox tbSSLR_DETAIL_ADDRESS;
+        private System.Windows.Forms.Label label38;
 
     }
 }

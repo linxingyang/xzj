@@ -131,9 +131,21 @@ namespace xzj
         {
             //性别
             this.cbSSLR_SEX.SelectedIndex = 0;
-            
+
+            //查询省
+            DataTable dt = DBManager.getInstance().find("SELECT id,p_name as d_name FROM t_province");
+            combobox(this.cbSSLR_PROVINCE, dt);//
+
+            //查询市
+            dt = DBManager.getInstance().find(string.Format("SELECT  id,c_name as d_name FROM xzj.t_city where c_province_id = {0}", this.cbSSLR_PROVINCE.SelectedValue));
+            combobox(this.cbSSLR_CITY, dt);//
+
+            //查询县
+            dt = DBManager.getInstance().find(string.Format("SELECT  id,a_name as d_name FROM xzj.t_area where a_city_id = {0}", this.cbSSLR_CITY.SelectedValue));
+            combobox(this.cbSSLR_COUNTY, dt);//
+
             //查询医保类型字典
-            DataTable dt = DBDictionary.getInstance().getDictionarysByParentId(1);
+            dt = DBDictionary.getInstance().getDictionarysByParentId(1);
             combobox(this.cbSSLR_YBLX, dt);//
 
             //查询手术地点字典
@@ -783,9 +795,9 @@ namespace xzj
             string tel = this.tbSSLR_TEL.Text;//手机号
             string ID = this.tbSSLR_ID.Text;//身份证号
             string yblx = this.cbSSLR_YBLX.Text;//医保类型
-            string province = this.tbSSLR_PROVINCE.Text;//省
-            string city = this.tbSSLR_CITY.Text;//市
-            string county = this.tbSSLR_COUNTY.Text;//县
+            string province = this.cbSSLR_PROVINCE.Text;//省
+            string city = this.cbSSLR_CITY.Text;//市
+            string county = this.cbSSLR_COUNTY.Text;//县
             string ctxyy = this.tbSSLR_CTXYY.Text;//常透析医院
             string ctxyylxr = this.tbSSLR_CTXYYLXR.Text;//常透析医院联系人
             string ctxyylxrdh = this.tbSSLR_CTXYYLXRDH.Text;//常透析医院联系人电话
@@ -870,9 +882,9 @@ namespace xzj
                 this.tbSSLR_TEL.Text = "";//手机号
                 this.tbSSLR_ID.Text = "";//身份证号
                 this.cbSSLR_YBLX.Text = "";//医保类型
-                this.tbSSLR_PROVINCE.Text = "";//省
-                this.tbSSLR_CITY.Text = "";//市
-                this.tbSSLR_COUNTY.Text = "";//县
+                this.cbSSLR_PROVINCE.Text = "";//省
+                this.cbSSLR_CITY.Text = "";//市
+                this.cbSSLR_COUNTY.Text = "";//县
                 this.tbSSLR_CTXYY.Text = "";//常透析医院
                 this.tbSSLR_CTXYYLXR.Text = "";//常透析医院联系人
                 this.tbSSLR_CTXYYLXRDH.Text = "";//常透析医院联系人电话
@@ -970,9 +982,9 @@ namespace xzj
                             this.tbSSLR_TEL.Text = row["p_tel"].ToString();//手机号
                             this.tbSSLR_ID.Text = row["p_ID"].ToString();//身份证号
                             this.cbSSLR_YBLX.Text = row["p_health_type"].ToString();//医保类型
-                            this.tbSSLR_PROVINCE.Text = row["p_address"].ToString().Split('-')[0];//省
-                            this.tbSSLR_CITY.Text = row["p_address"].ToString().Split('-')[1];//市
-                            this.tbSSLR_COUNTY.Text = row["p_address"].ToString().Split('-')[2];//县
+                            this.cbSSLR_PROVINCE.Text = row["p_address"].ToString().Split('-')[0];//省
+                            this.cbSSLR_CITY.Text = row["p_address"].ToString().Split('-')[1];//市
+                            this.cbSSLR_COUNTY.Text = row["p_address"].ToString().Split('-')[2];//县
                             this.tbSSLR_CTXYY.Text = row["p_dialyse_hospital"].ToString();//常透析医院
                             this.tbSSLR_CTXYYLXR.Text = row["p_dialyse_hospital_contact"].ToString();//常透析医院联系人
                             this.tbSSLR_CTXYYLXRDH.Text = row["p_dialyse_hospital_tel"].ToString();//常透析医院联系人电话
@@ -1033,9 +1045,9 @@ namespace xzj
                         this.tbSSLR_TEL.Text = row["p_tel"].ToString();//手机号
                         this.tbSSLR_ID.Text = row["p_ID"].ToString();//身份证号
                         this.cbSSLR_YBLX.Text = row["p_health_type"].ToString();//医保类型
-                        this.tbSSLR_PROVINCE.Text = row["p_address"].ToString().Split('-')[0];//省
-                        this.tbSSLR_CITY.Text = row["p_address"].ToString().Split('-')[1];//市
-                        this.tbSSLR_COUNTY.Text = row["p_address"].ToString().Split('-')[2];//县
+                        this.cbSSLR_PROVINCE.Text = row["p_address"].ToString().Split('-')[0];//省
+                        this.cbSSLR_CITY.Text = row["p_address"].ToString().Split('-')[1];//市
+                        this.cbSSLR_COUNTY.Text = row["p_address"].ToString().Split('-')[2];//县
                         this.tbSSLR_CTXYY.Text = row["p_dialyse_hospital"].ToString();//常透析医院
                         this.tbSSLR_CTXYYLXR.Text = row["p_dialyse_hospital_contact"].ToString();//常透析医院联系人
                         this.tbSSLR_CTXYYLXRDH.Text = row["p_dialyse_hospital_tel"].ToString();//常透析医院联系人电话
@@ -2301,6 +2313,26 @@ namespace xzj
                    rectangle,
                    dt.RowHeadersDefaultCellStyle.ForeColor,
                    TextFormatFlags.VerticalCenter | TextFormatFlags.Right);
+        }
+
+        //选择省 -》改变市与县
+        private void cbSSLR_PROVINCE_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //查询市
+            dataTable = DBManager.getInstance().find(string.Format("SELECT  id,c_name as d_name FROM xzj.t_city where c_province_id = {0}", this.cbSSLR_PROVINCE.SelectedValue));
+            combobox(this.cbSSLR_CITY, dataTable);//
+
+            //查询县
+            dataTable = DBManager.getInstance().find(string.Format("SELECT  id,a_name as d_name FROM xzj.t_area where a_city_id = {0}", this.cbSSLR_CITY.SelectedValue));
+            combobox(this.cbSSLR_COUNTY, dataTable);//
+
+        }
+
+        private void cbSSLR_CITY_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            //查询县
+            dataTable = DBManager.getInstance().find(string.Format("SELECT  id,a_name as d_name FROM xzj.t_area where a_city_id = {0}", this.cbSSLR_CITY.SelectedValue));
+            combobox(this.cbSSLR_COUNTY, dataTable);//
         }
 
       
