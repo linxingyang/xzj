@@ -115,10 +115,111 @@ create table t_record
 	r_zd_docotor varchar(50),##主刀医生
 	r_zs varchar(50),## 助手
 	r_qxhs varchar(50),##器械护士
-	r_ss_record varchar(2000),##手术记录（文本框，能够调整文本格式和字体）--格式和字体？格式是？字体是（宋体，黑体？）？
+	r_ss_record varchar(20000),##手术记录（文本框，能够调整文本格式和字体）--格式和字体？格式是？字体是（宋体，黑体？）？
 	r_is_sszz varchar(4),##是否手术追踪
 	primary key (id)
 );
+
+##手术录入 插入患者信息时，同时插入手术记录单
+DROP PROCEDURE IF EXISTS sslr_proc;
+DELIMITER //
+  CREATE PROCEDURE sslr_proc(
+		OUT error_code integer,
+		IN i_p_name varchar(50),##姓名，
+		IN i_p_sex varchar(2),##性别（选择男/女，
+		IN i_p_age char(3),##年龄（）根据身份证自动生成，
+		IN i_p_tel varchar(11),##手机号，（验证）
+		IN i_p_ID varchar(50),##身份证号
+		IN i_p_health_type varchar(50),##医保类型（下拉框：字典表-医保类型），
+		IN i_p_address  varchar(100),##常住地址：省（下拉框），市（下拉框），县区（下拉框），
+		IN i_p_dialyse_hospital varchar(50),##常析透医院，
+		IN i_p_dialyse_hospital_contact varchar(50),##常析透医院联系人，
+		IN i_p_dialyse_hospital_tel varchar(50),##常析透医院联系人电话（验证
+		IN i_r_date datetime,##手术日期（自动生成当天时间，精确到分钟）--是否能修改时间？
+		IN i_r_ss_address varchar(100),##手术地点（科室信息里面的医院名称）--科室信息里面的医院名称都是一样的？
+		IN i_r_ss_type varchar(50),##手术类型（下拉框：字典表-手术类型）
+		IN i_r_ss_method varchar(50),##手术方式（下拉框：字典表-手术方式）
+		IN i_r_cc_method varchar(50),##穿刺方式（下拉框：字典表-穿刺方式）类型
+		IN i_r_zd_docotor varchar(50),##主刀医生
+		IN i_r_zs varchar(50),## 助手
+		IN i_r_qxhs varchar(50),##器械护士
+		IN i_r_ss_record varchar(20000),##手术记录（文本框，能够调整文本格式和字体）--格式和字体？格式是？字体是（宋体，黑体？）？
+		IN i_r_is_sszz varchar(4)##是否手术追踪
+	)
+    BEGIN
+		DECLARE t_error INTEGER DEFAULT 0;#结果码
+		DECLARE msg VARCHAR(20) DEFAULT '';##结果信息
+		DECLARE flag INTEGER;#标记信息
+		DECLARE CONTINUE HANDLER FOR SQLEXCEPTION SET t_error = -1; ##EXIT CONTINUE
+
+		START TRANSACTION; -- 开始事务
+		
+		#根据身份证查询患者信息
+		SELECT COUNT(*) INTO flag from t_patient t where t.p_ID=i_p_ID;
+		#如果存在患者就进行修改信息 否则就是添加患者
+		IF flag > 0 THEN 
+			update t_patient t set 
+				t.p_name = i_p_name,
+				t.p_sex = i_p_sex,
+				t.p_age = i_p_age,
+				p_tel = i_p_tel,
+				t.p_health_type = i_p_health_type,
+				t.p_address = i_p_address,
+				t.p_dialyse_hospital = i_p_dialyse_hospital,
+                t.p_dialyse_hospital_contact = i_p_dialyse_hospital_contact,
+				t.p_dialyse_hospital_tel = i_p_dialyse_hospital_tel 
+			where t.p_ID=i_p_ID;
+		ELSE 
+			insert into t_patient(
+				p_name, p_sex, p_age, p_tel, p_ID, p_health_type, p_address,
+				p_dialyse_hospital, p_dialyse_hospital_contact, p_dialyse_hospital_tel
+            ) values(
+				i_p_name, i_p_sex, i_p_age, i_p_tel, i_p_ID, i_p_health_type, i_p_address,
+				i_p_dialyse_hospital, i_p_dialyse_hospital_contact, i_p_dialyse_hospital_tel
+			) ;
+		END IF;
+			
+		insert into t_record(
+			r_patient_ID,
+			r_date,
+			r_ss_address,
+			r_ss_type,
+			r_ss_method,
+			r_cc_method,
+			r_zd_docotor,
+			r_zs,
+			r_qxhs,
+			r_ss_record,
+			r_is_sszz
+		) values(
+			i_p_ID,
+			i_r_date,
+			i_r_ss_address,
+			i_r_ss_type,
+			i_r_ss_method,
+			i_r_cc_method,
+			i_r_zd_docotor,
+			i_r_zs,
+			i_r_qxhs,
+			i_r_ss_record,
+			i_r_is_sszz
+		);
+
+        IF t_error = -1 THEN -- 可以根据不同的业务逻辑错误返回不同的result_code，这里只定义了1和0
+			##set msg = '保存失败';
+			ROLLBACK; 
+		ELSE 
+			##set msg = '保存成功';
+			COMMIT; 
+		END IF;
+
+		# 返回赋值
+		SET error_code = t_error;
+		#SET result = msg;
+    END
+	//
+DELIMITER ;
+
 
 ### 手术追踪表
 drop table if exists t_track;
@@ -151,12 +252,13 @@ create table t_track
 
 
 
-insert into t_emp(e_account,e_pwd) values('admin','12345678');
+
+insert into t_emp(e_account,e_name,e_pwd) values('admin','管理员','12345678');
 
 ### 
-insert into t_dictionary(d_order,d_parent_id,d_name) values(0,0,'医保类型字典');
-insert into t_dictionary(d_order,d_parent_id,d_name) values(1,0,'手术字典');
-insert into t_dictionary(d_order,d_parent_id,d_name) values(2,0,'情况字典');
+insert into t_dictionary(d_parent_id,d_order,d_name) values(0,0,'医保类型字典');
+insert into t_dictionary(d_parent_id,d_order,d_name) values(0,1,'手术字典');
+insert into t_dictionary(d_parent_id,d_order,d_name) values(0,2,'情况字典');
 
 #手术字典
 insert into t_dictionary(d_parent_id,d_order,d_name) values(2,0,'手术类型字典');

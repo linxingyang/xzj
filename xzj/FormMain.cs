@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Collections;
 using System.Drawing.Printing;
 using System.IO;
+using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 
 namespace xzj
 {
@@ -36,14 +38,12 @@ namespace xzj
             this.panelCJFX.Visible = false;
             this.panelKSGL.Visible = false;
 
-            //显示当前时间
-            this.labelNowDate.Text = UtilTools.getDateAndWeek();
             //显示当前用户
             this.labelAccountShow.BackColor = ColorTranslator.FromHtml("#0078d7");
 
             //获取用户名
             string account = DBSQLite.selectValue(UtilConfig.ACCOUNT_KEY);
-            dataTable = DBEmp.getInstance().getEmps(account, null);
+            dataTable = DBManager.getInstance().find(string.Format("select e_name from t_emp where e_account='{0}'", account));
             if (dataTable != null && dataTable.Rows.Count > 0)
             {
                 foreach (DataRow row in dataTable.Rows)
@@ -60,8 +60,9 @@ namespace xzj
         //关闭窗口
         private void picClose_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            //this.DialogResult = DialogResult.OK;
+            this.Hide();
+            this.WindowState = FormWindowState.Minimized;
         }
 
         //最大化 正常化
@@ -129,6 +130,21 @@ namespace xzj
         //初始化手术录入
         private void initSSLR()
         {
+            this.labelSSLR_SSJL_ID.Text = "";//手术记录与手术跟踪的id
+            this.tbSSLR_NAME.Text = "";//患者姓名
+            this.cbSSLR_SEX.Text = "";//性别
+            this.tbSSLR_AGE.Text = "";//年龄
+            this.tbSSLR_TEL.Text = "";//手机号
+            this.tbSSLR_ID.Text = "";//身份证号
+            this.tbSSLR_DETAIL_ADDRESS.Text = "";//详细地址
+            this.tbSSLR_CTXYY.Text = "";//常透析医院
+            this.tbSSLR_CTXYYLXR.Text = "";//常透析医院联系人
+            this.tbSSLR_CTXYYLXRDH.Text = "";//常透析医院联系人电话
+            this.rtbSSLR_SSJL.Text = "";//手术记录
+            this.tbSSLR_ZDYS.Text = "";//主刀医生
+            this.tbSSLR_ZS.Text = "";//助手
+            this.tbSSLR_QXFS.Text = "";//器械护士
+
             //性别
             this.cbSSLR_SEX.SelectedIndex = 0;
 
@@ -188,7 +204,7 @@ namespace xzj
             this.dpSSLR_SSRQ.Value = Convert.ToDateTime(UtilTools.getDayAndTimeMM()); ;
 
             //随访日期
-            this.tbSSLR_SSZZ_SFRQ.Text = UtilTools.getDayAndTime();
+            this.tbSSLR_SSZZ_SFRQ.Value = Convert.ToDateTime(UtilTools.getDayAndTimeMM()); ;
 
             //是否畅通
             this.cbSSLR_SSZZ_SFTC.SelectedIndex = 0;
@@ -798,10 +814,11 @@ namespace xzj
             string province = this.cbSSLR_PROVINCE.Text;//省
             string city = this.cbSSLR_CITY.Text;//市
             string county = this.cbSSLR_COUNTY.Text;//县
+            string deatilAddress = this.tbSSLR_DETAIL_ADDRESS.Text;//详细地址
             string ctxyy = this.tbSSLR_CTXYY.Text;//常透析医院
             string ctxyylxr = this.tbSSLR_CTXYYLXR.Text;//常透析医院联系人
             string ctxyylxrdh = this.tbSSLR_CTXYYLXRDH.Text;//常透析医院联系人电话
-            string ssrq = this.dpSSLR_SSRQ.Text;//手术日期
+            DateTime ssrq = this.dpSSLR_SSRQ.Value;//手术日期
             string ssdd = this.cbSSLR_SSDD.Text;// SelectedValue.ToString();//手术地点
             string sslx = this.cbSSLR_SSLX.Text;// SelectedValue.ToString();//手术类型
             string ssfs = this.cbSSLR_SSFS.Text;//SelectedValue.ToString();//手术方式
@@ -811,9 +828,7 @@ namespace xzj
             string zs = this.tbSSLR_ZS.Text;//助手
             string qxfs = this.tbSSLR_QXFS.Text;//器械护士
 
-            string address = province + "-" + city + "-" + county+"-";
-
-            //
+            string address = province + "-" + city + "-" + county + "-" + deatilAddress+"";
 
             if (string.IsNullOrEmpty(name)) { MessageBox.Show("【姓名】不能为空"); return; }
             if (string.IsNullOrEmpty(sex)) { MessageBox.Show("【性别】不能为空"); return; }
@@ -821,59 +836,55 @@ namespace xzj
             if (tel.Length != 11) { MessageBox.Show("【电话】格式错误"); return; }
             if (string.IsNullOrEmpty(ID)) { MessageBox.Show("【身份证号】不能为空"); return; }
             if (ID.Length != 18) { MessageBox.Show("【身份证号】格式错误"); return; }
-            if (string.IsNullOrEmpty(yblx)) { MessageBox.Show("【医保类型】不能为空"); return; }
-            if (string.IsNullOrEmpty(province)) { MessageBox.Show("【省】不能为空"); return; }
-            if (string.IsNullOrEmpty(city)) { MessageBox.Show("【市】不能为空"); return; }
-            if (string.IsNullOrEmpty(county)) { MessageBox.Show("【县】不能为空"); return; }
             if (string.IsNullOrEmpty(ctxyy)) { MessageBox.Show("【常透析医院】不能为空"); return; }
             if (string.IsNullOrEmpty(ctxyylxr)) { MessageBox.Show("【常透析医院联系人】不能为空"); return; }
             if (string.IsNullOrEmpty(ctxyylxrdh)) { MessageBox.Show("【常透析医院联系人电话】不能为空"); return; }
             if (ctxyylxrdh.Length != 11) { MessageBox.Show("【常透析医院联系人电话】格式错误"); return; }
-            if (string.IsNullOrEmpty(ssdd)) { MessageBox.Show("【手术地点】不能为空"); return; }
-            if (string.IsNullOrEmpty(sslx)) { MessageBox.Show("【手术类型】不能为空"); return; }
-            if (string.IsNullOrEmpty(ssfs)) { MessageBox.Show("【手术方式】不能为空"); return; }
-            if (string.IsNullOrEmpty(ccfs)) { MessageBox.Show("【穿刺方式】不能为空"); return; }
             if (string.IsNullOrEmpty(ssjl)) { MessageBox.Show("【手术记录】不能为空"); return; }
             if (string.IsNullOrEmpty(zdys)) { MessageBox.Show("【主刀医生】不能为空"); return; }
             if (string.IsNullOrEmpty(zs)) { MessageBox.Show("【助手】不能为空"); return; }
             if (string.IsNullOrEmpty(qxfs)) { MessageBox.Show("【器械护士】不能为空"); return; }
 
-            //添加
-            //string sql = string.Format("select * from t_patient where p_ID='{0}'", this.tbSSLR_ID.Text);
-            int flag = 0;// DBManager.getInstance().add();
-            string sql = string.Format("select * from t_patient where p_ID='{0}'", this.tbSSLR_ID.Text);
-            dataTable = DBManager.getInstance().find(sql);
-            //判该身份证是否存在，不存在就添加联系人
-            if (dataTable == null || dataTable.Rows.Count == 0)
-            {
-                sql = string.Format("insert into t_patient(p_name,p_sex,p_age,p_tel,p_ID,p_health_type,p_address,p_dialyse_hospital,p_dialyse_hospital_contact," +
-                    "p_dialyse_hospital_tel) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')",
-                    name, sex, age, tel, ID, yblx, address, ctxyy, ctxyylxr, ctxyylxrdh);
-                flag = DBManager.getInstance().add(sql);
-                if (flag == 0)
-                {
-                    MessageBox.Show("患者信息保存失败");
-                    return;
-                }
-            }
-            else
-            {
-                sql = string.Format("update t_patient set p_name='{0}',p_sex='{1}',p_age='{2}',p_tel='{3}',p_health_type='{4}',p_address='{5}',p_dialyse_hospital='{6}'," +
-                 "p_dialyse_hospital_contact='{7}',p_dialyse_hospital_tel='{8}' where p_ID='{9}'",
-                    name, sex, age, tel, yblx, address, ctxyy, ctxyylxr, ctxyylxrdh, ID);
-                flag = DBManager.getInstance().edit(sql);
-                if (flag == 0)
-                {
-                    MessageBox.Show("患者信息保存失败");
-                    return;
-                }
-            }
+            int flag = -1;
+            
+            string sql = "sslr_proc";   //存储过程名称myproc  
 
-            //保存手术录入单
-            sql = string.Format("insert into t_record(r_patient_ID,r_date,r_ss_address,r_ss_type,r_ss_method,r_cc_method,r_zd_docotor,r_zs,r_qxhs," +
-                   "r_ss_record,r_is_sszz) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','否')", ID, ssrq, ssdd, sslx, ssfs, ccfs, zdys,zs, qxfs, ssjl);
-            flag = DBManager.getInstance().add(sql);
-            if (flag > 0)
+            MySqlCommand cmd = DBManager.getInstance().getMySqlCommand(sql);
+            //设置Command对象的类型  
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            //p_name,p_sex,p_age,p_tel,p_ID,p_health_type,p_address,p_dialyse_hospital,p_dialyse_hospital_contact,p_dialyse_hospital_tel
+            //name, sex, age, tel, ID, yblx, address, ctxyy, ctxyylxr, ctxyylxrdh
+            cmd.Parameters.AddWithValue("@i_p_name", name);
+            cmd.Parameters.AddWithValue("@i_p_sex", sex);
+            cmd.Parameters.AddWithValue("@i_p_age", age);
+            cmd.Parameters.AddWithValue("@i_p_tel", tel);
+            cmd.Parameters.AddWithValue("@i_p_ID", ID);
+            cmd.Parameters.AddWithValue("@i_p_health_type", yblx);
+            cmd.Parameters.AddWithValue("@i_p_address", address);
+            cmd.Parameters.AddWithValue("@i_p_dialyse_hospital", ctxyy);
+            cmd.Parameters.AddWithValue("@i_p_dialyse_hospital_contact", ctxyylxr);
+            cmd.Parameters.AddWithValue("@i_p_dialyse_hospital_tel", ctxyylxrdh);
+
+            //r_patient_ID,r_date,r_ss_address,r_ss_type,r_ss_method,r_cc_method,r_zd_docotor,r_zs,r_qxhs,r_ss_record,r_is_sszz
+            //ID, ssrq, ssdd, sslx, ssfs, ccfs, zdys,zs, qxfs, ssjl
+            cmd.Parameters.AddWithValue("@i_r_date", ssrq);
+            cmd.Parameters.AddWithValue("@i_r_ss_address", ssdd);
+            cmd.Parameters.AddWithValue("@i_r_ss_type", sslx);
+            cmd.Parameters.AddWithValue("@i_r_ss_method", ssfs);
+            cmd.Parameters.AddWithValue("@i_r_cc_method", ccfs);
+            cmd.Parameters.AddWithValue("@i_r_zd_docotor", zdys);
+            cmd.Parameters.AddWithValue("@i_r_zs", zs);
+            cmd.Parameters.AddWithValue("@i_r_qxhs", qxfs);
+            cmd.Parameters.AddWithValue("@i_r_ss_record", ssjl);
+            cmd.Parameters.AddWithValue("@i_r_is_sszz", "否");
+            cmd.Parameters.Add("@error_code", SqlDbType.Int).Direction = ParameterDirection.Output;
+
+            //执行  
+            cmd.ExecuteNonQuery();
+
+            flag = Convert.ToInt32(cmd.Parameters["@error_code"].Value.ToString());
+            if (flag >= 0)
             {
                 MessageBox.Show("保存成功");
                 this.tbSSLR_NAME.Text = "";//患者姓名
@@ -881,18 +892,10 @@ namespace xzj
                 this.tbSSLR_AGE.Text = "";//年龄
                 this.tbSSLR_TEL.Text = "";//手机号
                 this.tbSSLR_ID.Text = "";//身份证号
-                this.cbSSLR_YBLX.Text = "";//医保类型
-                this.cbSSLR_PROVINCE.Text = "";//省
-                this.cbSSLR_CITY.Text = "";//市
-                this.cbSSLR_COUNTY.Text = "";//县
+                this.tbSSLR_DETAIL_ADDRESS.Text = "";//详细地址
                 this.tbSSLR_CTXYY.Text = "";//常透析医院
                 this.tbSSLR_CTXYYLXR.Text = "";//常透析医院联系人
                 this.tbSSLR_CTXYYLXRDH.Text = "";//常透析医院联系人电话
-               // this.tbSSLR_SSRQ.Text = "";//手术日期
-                this.cbSSLR_SSDD.Text = "";//手术地点
-                this.cbSSLR_SSLX.Text = "";//手术类型
-                this.cbSSLR_SSFS.Text = "";//手术方式
-                this.cbSSLR_CCFS.Text = "";//穿刺方式
                 this.rtbSSLR_SSJL.Text = "";//手术记录
                 this.tbSSLR_ZDYS.Text = "";//主刀医生
                 this.tbSSLR_ZS.Text = "";//助手
@@ -900,6 +903,7 @@ namespace xzj
             }
             else
             {
+                DBManager.getInstance().edit(sql);
                 MessageBox.Show("保存失败");
             }
             
@@ -928,27 +932,7 @@ namespace xzj
         //取消手术记录
         private void btnRecordClear_Click(object sender, EventArgs e)
         {
-            //    this.tbSSLR_NAME.Text = "";//患者姓名
-            //    this.cbSSLR_SEX.Text = "";//性别
-            //    this.tbSSLR_AGE.Text = "";//年龄
-            //    this.tbSSLR_TEL.Text = "";//手机号
-            //    this.tbSSLR_ID.Text = "";//身份证号
-            //    this.cbSSLR_YBLX.Text = "";//医保类型
-            //    this.tbSSLR_PROVINCE.Text = "";//省
-            //    this.tbSSLR_CITY.Text = "";//市
-            //    this.tbSSLR_COUNTY.Text = "";//县
-            //    this.tbSSLR_CTXYY.Text = "";//常透析医院
-            //    this.tbSSLR_CTXYYLXR.Text = "";//常透析医院联系人
-            //    this.tbSSLR_CTXYYLXRDH.Text = "";//常透析医院联系人电话
-            //    this.tbSSLR_SSRQ.Text = UtilTools.getDayAndTime();;//手术日期
-            //    this.cbSSLR_SSDD.Text = "";//手术地点
-            //    this.cbSSLR_SSLX.Text = "";//手术类型
-            //    this.cbSSLR_SSFS.Text = "";//手术方式
-            //    this.cbSSLR_CCFS.Text = "";//穿刺方式
-            //    this.rtbSSLR_SSJL.Text = "";//手术记录
-            //    this.tbSSLR_ZDYS.Text = "";//主刀医生
-            //    this.tbSSLR_ZS.Text = "";//助手
-            //    this.tbSSLR_QXFS.Text = "";//器械护士
+            initSSLR();
         }
 
         //手术记录名字输入后 回车键查询
@@ -985,6 +969,7 @@ namespace xzj
                             this.cbSSLR_PROVINCE.Text = row["p_address"].ToString().Split('-')[0];//省
                             this.cbSSLR_CITY.Text = row["p_address"].ToString().Split('-')[1];//市
                             this.cbSSLR_COUNTY.Text = row["p_address"].ToString().Split('-')[2];//县
+                            this.tbSSLR_DETAIL_ADDRESS.Text = row["p_address"].ToString().Split('-')[3];//详细地址
                             this.tbSSLR_CTXYY.Text = row["p_dialyse_hospital"].ToString();//常透析医院
                             this.tbSSLR_CTXYYLXR.Text = row["p_dialyse_hospital_contact"].ToString();//常透析医院联系人
                             this.tbSSLR_CTXYYLXRDH.Text = row["p_dialyse_hospital_tel"].ToString();//常透析医院联系人电话
@@ -1048,6 +1033,7 @@ namespace xzj
                         this.cbSSLR_PROVINCE.Text = row["p_address"].ToString().Split('-')[0];//省
                         this.cbSSLR_CITY.Text = row["p_address"].ToString().Split('-')[1];//市
                         this.cbSSLR_COUNTY.Text = row["p_address"].ToString().Split('-')[2];//县
+                        this.tbSSLR_DETAIL_ADDRESS.Text = row["p_address"].ToString().Split('-')[3];//详细地址
                         this.tbSSLR_CTXYY.Text = row["p_dialyse_hospital"].ToString();//常透析医院
                         this.tbSSLR_CTXYYLXR.Text = row["p_dialyse_hospital_contact"].ToString();//常透析医院联系人
                         this.tbSSLR_CTXYYLXRDH.Text = row["p_dialyse_hospital_tel"].ToString();//常透析医院联系人电话
@@ -1280,7 +1266,7 @@ namespace xzj
             this.panelSJCX_SSJLD.Visible = true;
             this.panelSJCX_SSZZD.Visible = false;
 
-            this.gbSJCX_SSJLD_SSZZ.Visible = true;
+            this.gbSJCX_SSJLD_SSZZ.Visible = false;
 
             string sql = string.Format("select r.id 'id',p.p_name '姓名',r.r_date '手术日期' from t_patient p,t_record r where p.p_ID = r.r_patient_ID");
             selectRecords(sql);
@@ -2280,8 +2266,8 @@ namespace xzj
         {
             if (this.WindowState == FormWindowState.Minimized)
             {
-                this.Hide();
-                this.notifyIcon1.Visible = true;
+                //this.Hide();
+                //this.notifyIcon1.Visible = true;
                 this.notifyIcon1.Text = "析之助手术登记管理系统";//鼠标放在托盘时显示的文字
                 this.notifyIcon1.BalloonTipText = "析之助手术登记管理系统";//气泡显示的文字
                 this.notifyIcon1.ShowBalloonTip(1000);//托盘气泡的显现时间
@@ -2328,6 +2314,7 @@ namespace xzj
 
         }
 
+        //查询县
         private void cbSSLR_CITY_SelectionChangeCommitted(object sender, EventArgs e)
         {
             //查询县
@@ -2335,7 +2322,40 @@ namespace xzj
             combobox(this.cbSSLR_COUNTY, dataTable);//
         }
 
+        //托盘item事件
+        private void contextMenuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            for (int i = 0; i < contextMenuStrip1.Items.Count; i++)
+            {
+
+                if (contextMenuStrip1.Items[i].Selected)
+                {
+
+                    if (contextMenuStrip1.Items[i].Text.Trim() == "退出登录")
+                    {
+                        this.Hide();
+                        FormSignIn f = new FormSignIn();
+                        f.Show();
+                        
+                    }
+
+                    else if (contextMenuStrip1.Items[i].Text.Trim() == "退出")
+                    {
+                        Application.Exit(); 
+                    }
+
+                }
+
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.labelNowDate.Text = UtilTools.getDayAndTime();
+        }
+
       
+
 
     }
 

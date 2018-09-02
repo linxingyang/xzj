@@ -30,19 +30,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea17 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend17 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea18 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend18 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea19 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend19 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea20 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend20 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea45 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend45 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series45 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea46 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend46 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series46 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea47 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend47 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series47 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea48 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend48 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series48 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelAccountShow = new System.Windows.Forms.Label();
@@ -60,7 +60,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.labelNowDate = new System.Windows.Forms.Label();
             this.panelSSLR = new System.Windows.Forms.Panel();
             this.panel77 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
@@ -73,7 +72,6 @@
             this.tbSSLR_SSZZ_SFYS = new System.Windows.Forms.TextBox();
             this.label112 = new System.Windows.Forms.Label();
             this.panel81 = new System.Windows.Forms.Panel();
-            this.tbSSLR_SSZZ_ZWQMJTZQK = new System.Windows.Forms.TextBox();
             this.label113 = new System.Windows.Forms.Label();
             this.panel82 = new System.Windows.Forms.Panel();
             this.tbSSLR_SSZZ_YPZXSJ = new System.Windows.Forms.TextBox();
@@ -121,7 +119,6 @@
             this.cbSSLR_SSZZ_SFTC = new System.Windows.Forms.ComboBox();
             this.label128 = new System.Windows.Forms.Label();
             this.panel97 = new System.Windows.Forms.Panel();
-            this.tbSSLR_SSZZ_SFRQ = new System.Windows.Forms.TextBox();
             this.label129 = new System.Windows.Forms.Label();
             this.panel98 = new System.Windows.Forms.Panel();
             this.cbSSLR_SSZZ_CCFS = new System.Windows.Forms.ComboBox();
@@ -131,7 +128,6 @@
             this.panel101 = new System.Windows.Forms.Panel();
             this.cbSSLR_SSZZQX = new System.Windows.Forms.ComboBox();
             this.label133 = new System.Windows.Forms.Label();
-            this.label134 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel68 = new System.Windows.Forms.Panel();
@@ -199,6 +195,11 @@
             this.tbSSLR_CTXYY = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.panel63 = new System.Windows.Forms.Panel();
+            this.label38 = new System.Windows.Forms.Label();
+            this.tbSSLR_DETAIL_ADDRESS = new System.Windows.Forms.TextBox();
+            this.cbSSLR_COUNTY = new System.Windows.Forms.ComboBox();
+            this.cbSSLR_CITY = new System.Windows.Forms.ComboBox();
+            this.cbSSLR_PROVINCE = new System.Windows.Forms.ComboBox();
             this.label99 = new System.Windows.Forms.Label();
             this.panel64 = new System.Windows.Forms.Panel();
             this.cbSSLR_YBLX = new System.Windows.Forms.ComboBox();
@@ -293,8 +294,6 @@
             this.all_sfys = new System.Windows.Forms.Label();
             this.label146 = new System.Windows.Forms.Label();
             this.panel114 = new System.Windows.Forms.Panel();
-            this.panel42 = new System.Windows.Forms.Panel();
-            this.all_zwcmzcjtzqk = new System.Windows.Forms.Label();
             this.label143 = new System.Windows.Forms.Label();
             this.panel113 = new System.Windows.Forms.Panel();
             this.all_ypzxsj = new System.Windows.Forms.Label();
@@ -487,16 +486,19 @@
             this.btnRoomEmpManager = new System.Windows.Forms.Button();
             this.btnRoomInfoManager = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel122 = new System.Windows.Forms.Panel();
+            this.labelNowDate = new System.Windows.Forms.Label();
             this.printDucumentSSCX_SSJL = new System.Drawing.Printing.PrintDocument();
             this.printDialogSSCX_SSJL = new System.Windows.Forms.PrintDialog();
             this.printDocumentSJCX_SSZZ = new System.Drawing.Printing.PrintDocument();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.cbSSLR_PROVINCE = new System.Windows.Forms.ComboBox();
-            this.cbSSLR_CITY = new System.Windows.Forms.ComboBox();
-            this.cbSSLR_COUNTY = new System.Windows.Forms.ComboBox();
-            this.tbSSLR_DETAIL_ADDRESS = new System.Windows.Forms.TextBox();
-            this.label38 = new System.Windows.Forms.Label();
+            this.menuExitLogin = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.tbSSLR_SSZZ_SFRQ = new System.Windows.Forms.DateTimePicker();
+            this.tbSSLR_SSZZ_ZWQMJTZQK = new System.Windows.Forms.RichTextBox();
+            this.all_zwcmzcjtzqk = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.flowLayoutForm.SuspendLayout();
@@ -505,7 +507,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel3.SuspendLayout();
             this.panelSSLR.SuspendLayout();
             this.panel77.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -587,7 +588,6 @@
             this.gbSJCX_SSJLD_SSZZ.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.panel114.SuspendLayout();
-            this.panel42.SuspendLayout();
             this.panel113.SuspendLayout();
             this.panel112.SuspendLayout();
             this.panel111.SuspendLayout();
@@ -661,6 +661,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvKSGL_EMP)).BeginInit();
             this.panel13.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel122.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -681,10 +683,11 @@
             // 
             this.labelAccountShow.AutoSize = true;
             this.labelAccountShow.BackColor = System.Drawing.Color.Transparent;
-            this.labelAccountShow.Location = new System.Drawing.Point(1200, 70);
+            this.labelAccountShow.Location = new System.Drawing.Point(1160, 67);
             this.labelAccountShow.Name = "labelAccountShow";
-            this.labelAccountShow.Size = new System.Drawing.Size(0, 16);
+            this.labelAccountShow.Size = new System.Drawing.Size(32, 16);
             this.labelAccountShow.TabIndex = 16;
+            this.labelAccountShow.Text = "111";
             // 
             // panel2
             // 
@@ -786,8 +789,9 @@
             this.flowLayoutForm.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutForm.Location = new System.Drawing.Point(1186, 0);
             this.flowLayoutForm.Name = "flowLayoutForm";
-            this.flowLayoutForm.Size = new System.Drawing.Size(102, 22);
+            this.flowLayoutForm.Size = new System.Drawing.Size(102, 25);
             this.flowLayoutForm.TabIndex = 6;
+            this.flowLayoutForm.Visible = false;
             // 
             // picClose
             // 
@@ -852,7 +856,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1300, 136);
+            this.pictureBox1.Size = new System.Drawing.Size(1300, 137);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
@@ -860,24 +864,11 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel3.Controls.Add(this.labelNowDate);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 704);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1300, 29);
             this.panel3.TabIndex = 12;
-            // 
-            // labelNowDate
-            // 
-            this.labelNowDate.AutoSize = true;
-            this.labelNowDate.BackColor = System.Drawing.Color.Yellow;
-            this.labelNowDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelNowDate.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelNowDate.Location = new System.Drawing.Point(553, 3);
-            this.labelNowDate.Name = "labelNowDate";
-            this.labelNowDate.Size = new System.Drawing.Size(285, 16);
-            this.labelNowDate.TabIndex = 3;
-            this.labelNowDate.Text = "时间：当前是XXXX年XX月XX日(周几)";
             // 
             // panelSSLR
             // 
@@ -887,10 +878,10 @@
             this.panelSSLR.Controls.Add(this.panel6);
             this.panelSSLR.Controls.Add(this.panel5);
             this.panelSSLR.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelSSLR.Location = new System.Drawing.Point(10, 10);
+            this.panelSSLR.Location = new System.Drawing.Point(10, 37);
             this.panelSSLR.Name = "panelSSLR";
             this.panelSSLR.Padding = new System.Windows.Forms.Padding(10);
-            this.panelSSLR.Size = new System.Drawing.Size(1280, 550);
+            this.panelSSLR.Size = new System.Drawing.Size(1280, 523);
             this.panelSSLR.TabIndex = 30;
             // 
             // panel77
@@ -1001,9 +992,9 @@
             // 
             this.panel80.Controls.Add(this.tbSSLR_SSZZ_SFYS);
             this.panel80.Controls.Add(this.label112);
-            this.panel80.Location = new System.Drawing.Point(947, 305);
+            this.panel80.Location = new System.Drawing.Point(918, 308);
             this.panel80.Name = "panel80";
-            this.panel80.Size = new System.Drawing.Size(250, 34);
+            this.panel80.Size = new System.Drawing.Size(268, 34);
             this.panel80.TabIndex = 31;
             // 
             // tbSSLR_SSZZ_SFYS
@@ -1031,16 +1022,6 @@
             this.panel81.Name = "panel81";
             this.panel81.Size = new System.Drawing.Size(869, 104);
             this.panel81.TabIndex = 40;
-            // 
-            // tbSSLR_SSZZ_ZWQMJTZQK
-            // 
-            this.tbSSLR_SSZZ_ZWQMJTZQK.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbSSLR_SSZZ_ZWQMJTZQK.Location = new System.Drawing.Point(162, 0);
-            this.tbSSLR_SSZZ_ZWQMJTZQK.Multiline = true;
-            this.tbSSLR_SSZZ_ZWQMJTZQK.Name = "tbSSLR_SSZZ_ZWQMJTZQK";
-            this.tbSSLR_SSZZ_ZWQMJTZQK.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbSSLR_SSZZ_ZWQMJTZQK.Size = new System.Drawing.Size(700, 100);
-            this.tbSSLR_SSZZ_ZWQMJTZQK.TabIndex = 6;
             // 
             // label113
             // 
@@ -1482,17 +1463,8 @@
             this.panel97.Controls.Add(this.label129);
             this.panel97.Location = new System.Drawing.Point(12, 26);
             this.panel97.Name = "panel97";
-            this.panel97.Size = new System.Drawing.Size(318, 34);
+            this.panel97.Size = new System.Drawing.Size(362, 34);
             this.panel97.TabIndex = 30;
-            // 
-            // tbSSLR_SSZZ_SFRQ
-            // 
-            this.tbSSLR_SSZZ_SFRQ.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbSSLR_SSZZ_SFRQ.Location = new System.Drawing.Point(144, 0);
-            this.tbSSLR_SSZZ_SFRQ.Name = "tbSSLR_SSZZ_SFRQ";
-            this.tbSSLR_SSZZ_SFRQ.ReadOnly = true;
-            this.tbSSLR_SSZZ_SFRQ.Size = new System.Drawing.Size(170, 26);
-            this.tbSSLR_SSZZ_SFRQ.TabIndex = 6;
             // 
             // label129
             // 
@@ -1549,7 +1521,6 @@
             // panel99
             // 
             this.panel99.Controls.Add(this.panel101);
-            this.panel99.Controls.Add(this.label134);
             this.panel99.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.panel99.Location = new System.Drawing.Point(23, 28);
             this.panel99.Name = "panel99";
@@ -1560,7 +1531,7 @@
             // 
             this.panel101.Controls.Add(this.cbSSLR_SSZZQX);
             this.panel101.Controls.Add(this.label133);
-            this.panel101.Location = new System.Drawing.Point(9, 23);
+            this.panel101.Location = new System.Drawing.Point(7, 8);
             this.panel101.Name = "panel101";
             this.panel101.Size = new System.Drawing.Size(321, 31);
             this.panel101.TabIndex = 27;
@@ -1582,19 +1553,6 @@
             this.label133.Size = new System.Drawing.Size(120, 16);
             this.label133.TabIndex = 1;
             this.label133.Text = "手术追踪期限：";
-            // 
-            // label134
-            // 
-            this.label134.AutoSize = true;
-            this.label134.BackColor = System.Drawing.Color.White;
-            this.label134.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label134.ForeColor = System.Drawing.Color.Black;
-            this.label134.Location = new System.Drawing.Point(1, 0);
-            this.label134.Name = "label134";
-            this.label134.Padding = new System.Windows.Forms.Padding(3);
-            this.label134.Size = new System.Drawing.Size(97, 20);
-            this.label134.TabIndex = 21;
-            this.label134.Text = "手术相关信息";
             // 
             // panel6
             // 
@@ -1837,7 +1795,7 @@
             this.btnRecordClear.Name = "btnRecordClear";
             this.btnRecordClear.Size = new System.Drawing.Size(141, 23);
             this.btnRecordClear.TabIndex = 5;
-            this.btnRecordClear.Text = "关闭";
+            this.btnRecordClear.Text = "取消";
             this.btnRecordClear.UseVisualStyleBackColor = false;
             this.btnRecordClear.Click += new System.EventHandler(this.btnRecordClear_Click);
             // 
@@ -1928,7 +1886,7 @@
             this.dpSSLR_SSRQ.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dpSSLR_SSRQ.Location = new System.Drawing.Point(83, 1);
             this.dpSSLR_SSRQ.Name = "dpSSLR_SSRQ";
-            this.dpSSLR_SSRQ.ShowCheckBox = true;
+            this.dpSSLR_SSRQ.ShowUpDown = true;
             this.dpSSLR_SSRQ.Size = new System.Drawing.Size(213, 26);
             this.dpSSLR_SSRQ.TabIndex = 33;
             // 
@@ -2055,7 +2013,7 @@
             this.label110.BackColor = System.Drawing.Color.White;
             this.label110.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label110.ForeColor = System.Drawing.Color.Black;
-            this.label110.Location = new System.Drawing.Point(1, 0);
+            this.label110.Location = new System.Drawing.Point(1, 3);
             this.label110.Name = "label110";
             this.label110.Padding = new System.Windows.Forms.Padding(3);
             this.label110.Size = new System.Drawing.Size(97, 20);
@@ -2279,6 +2237,53 @@
             this.panel63.Size = new System.Drawing.Size(1154, 34);
             this.panel63.TabIndex = 48;
             // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("宋体", 9F);
+            this.label38.Location = new System.Drawing.Point(1061, 8);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(53, 12);
+            this.label38.TabIndex = 16;
+            this.label38.Text = "详细地址";
+            // 
+            // tbSSLR_DETAIL_ADDRESS
+            // 
+            this.tbSSLR_DETAIL_ADDRESS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbSSLR_DETAIL_ADDRESS.Location = new System.Drawing.Point(605, 4);
+            this.tbSSLR_DETAIL_ADDRESS.Name = "tbSSLR_DETAIL_ADDRESS";
+            this.tbSSLR_DETAIL_ADDRESS.Size = new System.Drawing.Size(448, 26);
+            this.tbSSLR_DETAIL_ADDRESS.TabIndex = 15;
+            // 
+            // cbSSLR_COUNTY
+            // 
+            this.cbSSLR_COUNTY.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSSLR_COUNTY.FormattingEnabled = true;
+            this.cbSSLR_COUNTY.Location = new System.Drawing.Point(433, 5);
+            this.cbSSLR_COUNTY.Name = "cbSSLR_COUNTY";
+            this.cbSSLR_COUNTY.Size = new System.Drawing.Size(162, 24);
+            this.cbSSLR_COUNTY.TabIndex = 14;
+            // 
+            // cbSSLR_CITY
+            // 
+            this.cbSSLR_CITY.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSSLR_CITY.FormattingEnabled = true;
+            this.cbSSLR_CITY.Location = new System.Drawing.Point(263, 5);
+            this.cbSSLR_CITY.Name = "cbSSLR_CITY";
+            this.cbSSLR_CITY.Size = new System.Drawing.Size(162, 24);
+            this.cbSSLR_CITY.TabIndex = 13;
+            this.cbSSLR_CITY.SelectionChangeCommitted += new System.EventHandler(this.cbSSLR_CITY_SelectionChangeCommitted);
+            // 
+            // cbSSLR_PROVINCE
+            // 
+            this.cbSSLR_PROVINCE.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSSLR_PROVINCE.FormattingEnabled = true;
+            this.cbSSLR_PROVINCE.Location = new System.Drawing.Point(95, 4);
+            this.cbSSLR_PROVINCE.Name = "cbSSLR_PROVINCE";
+            this.cbSSLR_PROVINCE.Size = new System.Drawing.Size(162, 24);
+            this.cbSSLR_PROVINCE.TabIndex = 12;
+            this.cbSSLR_PROVINCE.SelectedIndexChanged += new System.EventHandler(this.cbSSLR_PROVINCE_SelectedIndexChanged);
+            // 
             // label99
             // 
             this.label99.AutoSize = true;
@@ -2440,9 +2445,9 @@
             this.panelZDGL.Controls.Add(this.panel40);
             this.panelZDGL.Controls.Add(this.dgvDictionary);
             this.panelZDGL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelZDGL.Location = new System.Drawing.Point(10, 10);
+            this.panelZDGL.Location = new System.Drawing.Point(10, 37);
             this.panelZDGL.Name = "panelZDGL";
-            this.panelZDGL.Size = new System.Drawing.Size(1280, 550);
+            this.panelZDGL.Size = new System.Drawing.Size(1280, 523);
             this.panelZDGL.TabIndex = 0;
             // 
             // listViewDictionaryQKZD
@@ -2585,6 +2590,7 @@
             this.btnDictionaryQKZD.Text = "情况字典";
             this.btnDictionaryQKZD.UseVisualStyleBackColor = false;
             this.btnDictionaryQKZD.Click += new System.EventHandler(this.btnDictionaryQKZD_Click);
+            this.btnDictionaryQKZD.MouseLeave += new System.EventHandler(this.listViewDictionaryQKZD_MouseLeave);
             // 
             // btnDictionarySSZD
             // 
@@ -2600,6 +2606,7 @@
             this.btnDictionarySSZD.Text = "手术字典";
             this.btnDictionarySSZD.UseVisualStyleBackColor = false;
             this.btnDictionarySSZD.Click += new System.EventHandler(this.btnDictionarySSZD_Click);
+            this.btnDictionarySSZD.MouseLeave += new System.EventHandler(this.listViewDictionarySSZD_MouseLeave);
             // 
             // btnDictionaryYBLX
             // 
@@ -2620,14 +2627,14 @@
             // 
             this.dgvDictionary.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDictionary.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDictionary.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDictionary.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvDictionary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDictionary.EnableHeadersVisualStyles = false;
             this.dgvDictionary.Location = new System.Drawing.Point(103, 120);
@@ -2645,9 +2652,9 @@
             this.panelSJCX.Controls.Add(this.panelSJCX_SSJLD);
             this.panelSJCX.Controls.Add(this.panelSJCX_SSZZD);
             this.panelSJCX.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelSJCX.Location = new System.Drawing.Point(10, 10);
+            this.panelSJCX.Location = new System.Drawing.Point(10, 37);
             this.panelSJCX.Name = "panelSJCX";
-            this.panelSJCX.Size = new System.Drawing.Size(1280, 550);
+            this.panelSJCX.Size = new System.Drawing.Size(1280, 523);
             this.panelSJCX.TabIndex = 1;
             // 
             // panel45
@@ -2692,13 +2699,14 @@
             // 
             // panelSJCX_SSJLD
             // 
+            this.panelSJCX_SSJLD.AutoScroll = true;
             this.panelSJCX_SSJLD.Controls.Add(this.panelSSCX_SSJLD);
             this.panelSJCX_SSJLD.Controls.Add(this.panel50);
             this.panelSJCX_SSJLD.Controls.Add(this.panel47);
             this.panelSJCX_SSJLD.Controls.Add(this.panel46);
             this.panelSJCX_SSJLD.Location = new System.Drawing.Point(10, 40);
             this.panelSJCX_SSJLD.Name = "panelSJCX_SSJLD";
-            this.panelSJCX_SSJLD.Size = new System.Drawing.Size(1237, 485);
+            this.panelSJCX_SSJLD.Size = new System.Drawing.Size(1265, 482);
             this.panelSJCX_SSJLD.TabIndex = 40;
             // 
             // panelSSCX_SSJLD
@@ -2707,10 +2715,10 @@
             this.panelSSCX_SSJLD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelSSCX_SSJLD.Controls.Add(this.panel102);
             this.panelSSCX_SSJLD.Controls.Add(this.panel52);
-            this.panelSSCX_SSJLD.Location = new System.Drawing.Point(259, 70);
+            this.panelSSCX_SSJLD.Location = new System.Drawing.Point(258, 60);
             this.panelSSCX_SSJLD.Name = "panelSSCX_SSJLD";
             this.panelSSCX_SSJLD.Padding = new System.Windows.Forms.Padding(10, 10, 10, 0);
-            this.panelSSCX_SSJLD.Size = new System.Drawing.Size(961, 412);
+            this.panelSSCX_SSJLD.Size = new System.Drawing.Size(1020, 385);
             this.panelSSCX_SSJLD.TabIndex = 42;
             // 
             // panel102
@@ -2722,9 +2730,9 @@
             this.panel102.Controls.Add(this.all_zdys);
             this.panel102.Controls.Add(this.label65);
             this.panel102.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel102.Location = new System.Drawing.Point(10, 379);
+            this.panel102.Location = new System.Drawing.Point(10, 352);
             this.panel102.Name = "panel102";
-            this.panel102.Size = new System.Drawing.Size(939, 31);
+            this.panel102.Size = new System.Drawing.Size(998, 31);
             this.panel102.TabIndex = 45;
             // 
             // all_qxhs
@@ -2794,7 +2802,7 @@
             this.panel52.Controls.Add(this.gbSJCX_SSJLD_SSZZ);
             this.panel52.Location = new System.Drawing.Point(10, 9);
             this.panel52.Name = "panel52";
-            this.panel52.Size = new System.Drawing.Size(944, 364);
+            this.panel52.Size = new System.Drawing.Size(1000, 323);
             this.panel52.TabIndex = 46;
             // 
             // groupBox2
@@ -2803,18 +2811,17 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox2.Location = new System.Drawing.Point(0, 240);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(923, 329);
+            this.groupBox2.Size = new System.Drawing.Size(979, 329);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "手术记录";
             // 
             // all_ssjl
             // 
-            this.all_ssjl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.all_ssjl.Location = new System.Drawing.Point(3, 22);
             this.all_ssjl.Name = "all_ssjl";
             this.all_ssjl.ReadOnly = true;
-            this.all_ssjl.Size = new System.Drawing.Size(917, 304);
+            this.all_ssjl.Size = new System.Drawing.Size(948, 304);
             this.all_ssjl.TabIndex = 0;
             this.all_ssjl.Text = "";
             // 
@@ -2824,7 +2831,7 @@
             this.panel53.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel53.Location = new System.Drawing.Point(0, 61);
             this.panel53.Name = "panel53";
-            this.panel53.Size = new System.Drawing.Size(923, 179);
+            this.panel53.Size = new System.Drawing.Size(979, 179);
             this.panel53.TabIndex = 9;
             // 
             // groupBox1
@@ -2839,7 +2846,7 @@
             this.groupBox1.Font = new System.Drawing.Font("宋体", 10F);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(923, 179);
+            this.groupBox1.Size = new System.Drawing.Size(979, 179);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "基本信息";
@@ -2853,7 +2860,7 @@
             this.panel70.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel70.Location = new System.Drawing.Point(3, 139);
             this.panel70.Name = "panel70";
-            this.panel70.Size = new System.Drawing.Size(917, 24);
+            this.panel70.Size = new System.Drawing.Size(973, 24);
             this.panel70.TabIndex = 57;
             // 
             // all_ssdd
@@ -2905,7 +2912,7 @@
             this.panel11111.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel11111.Location = new System.Drawing.Point(3, 115);
             this.panel11111.Name = "panel11111";
-            this.panel11111.Size = new System.Drawing.Size(917, 24);
+            this.panel11111.Size = new System.Drawing.Size(973, 24);
             this.panel11111.TabIndex = 56;
             // 
             // all_ccfs
@@ -2976,7 +2983,7 @@
             this.panel56.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel56.Location = new System.Drawing.Point(3, 91);
             this.panel56.Name = "panel56";
-            this.panel56.Size = new System.Drawing.Size(917, 24);
+            this.panel56.Size = new System.Drawing.Size(973, 24);
             this.panel56.TabIndex = 55;
             // 
             // all_ctxyylxrdh
@@ -3043,7 +3050,7 @@
             this.panel55.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel55.Location = new System.Drawing.Point(3, 67);
             this.panel55.Name = "panel55";
-            this.panel55.Size = new System.Drawing.Size(917, 24);
+            this.panel55.Size = new System.Drawing.Size(973, 24);
             this.panel55.TabIndex = 54;
             // 
             // all_czdz
@@ -3074,7 +3081,7 @@
             this.panel54.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel54.Location = new System.Drawing.Point(3, 43);
             this.panel54.Name = "panel54";
-            this.panel54.Size = new System.Drawing.Size(917, 24);
+            this.panel54.Size = new System.Drawing.Size(973, 24);
             this.panel54.TabIndex = 53;
             // 
             // all_yblx
@@ -3128,7 +3135,7 @@
             this.panel108.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel108.Location = new System.Drawing.Point(3, 19);
             this.panel108.Name = "panel108";
-            this.panel108.Size = new System.Drawing.Size(917, 24);
+            this.panel108.Size = new System.Drawing.Size(973, 24);
             this.panel108.TabIndex = 52;
             // 
             // all_tel
@@ -3214,7 +3221,7 @@
             this.panel51.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel51.Location = new System.Drawing.Point(0, 0);
             this.panel51.Name = "panel51";
-            this.panel51.Size = new System.Drawing.Size(923, 61);
+            this.panel51.Size = new System.Drawing.Size(979, 61);
             this.panel51.TabIndex = 8;
             // 
             // labelSSJLD_TITLE
@@ -3223,9 +3230,9 @@
             this.labelSSJLD_TITLE.Font = new System.Drawing.Font("黑体", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labelSSJLD_TITLE.Location = new System.Drawing.Point(358, 4);
             this.labelSSJLD_TITLE.Name = "labelSSJLD_TITLE";
-            this.labelSSJLD_TITLE.Size = new System.Drawing.Size(101, 23);
+            this.labelSSJLD_TITLE.Size = new System.Drawing.Size(188, 23);
             this.labelSSJLD_TITLE.TabIndex = 4;
-            this.labelSSJLD_TITLE.Text = "label30";
+            this.labelSSJLD_TITLE.Text = "xxx医院xxx科室";
             // 
             // label28
             // 
@@ -3255,7 +3262,7 @@
             this.gbSJCX_SSJLD_SSZZ.Font = new System.Drawing.Font("宋体", 10F);
             this.gbSJCX_SSJLD_SSZZ.Location = new System.Drawing.Point(0, 569);
             this.gbSJCX_SSJLD_SSZZ.Name = "gbSJCX_SSJLD_SSZZ";
-            this.gbSJCX_SSJLD_SSZZ.Size = new System.Drawing.Size(923, 390);
+            this.gbSJCX_SSJLD_SSZZ.Size = new System.Drawing.Size(979, 390);
             this.gbSJCX_SSJLD_SSZZ.TabIndex = 6;
             this.gbSJCX_SSJLD_SSZZ.TabStop = false;
             this.gbSJCX_SSJLD_SSZZ.Text = "手术追踪";
@@ -3268,14 +3275,14 @@
             this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 364);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(917, 23);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(973, 23);
             this.flowLayoutPanel3.TabIndex = 63;
             // 
             // all_sfys
             // 
             this.all_sfys.AutoSize = true;
             this.all_sfys.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.all_sfys.Location = new System.Drawing.Point(865, 0);
+            this.all_sfys.Location = new System.Drawing.Point(921, 0);
             this.all_sfys.Name = "all_sfys";
             this.all_sfys.Size = new System.Drawing.Size(49, 14);
             this.all_sfys.TabIndex = 6;
@@ -3284,7 +3291,7 @@
             // label146
             // 
             this.label146.AutoSize = true;
-            this.label146.Location = new System.Drawing.Point(782, 0);
+            this.label146.Location = new System.Drawing.Point(838, 0);
             this.label146.Name = "label146";
             this.label146.Size = new System.Drawing.Size(77, 14);
             this.label146.TabIndex = 5;
@@ -3292,32 +3299,13 @@
             // 
             // panel114
             // 
-            this.panel114.Controls.Add(this.panel42);
             this.panel114.Controls.Add(this.label143);
+            this.panel114.Controls.Add(this.all_zwcmzcjtzqk);
             this.panel114.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel114.Location = new System.Drawing.Point(3, 259);
             this.panel114.Name = "panel114";
-            this.panel114.Size = new System.Drawing.Size(917, 99);
+            this.panel114.Size = new System.Drawing.Size(973, 99);
             this.panel114.TabIndex = 62;
-            // 
-            // panel42
-            // 
-            this.panel42.AutoScroll = true;
-            this.panel42.Controls.Add(this.all_zwcmzcjtzqk);
-            this.panel42.Location = new System.Drawing.Point(178, 4);
-            this.panel42.Name = "panel42";
-            this.panel42.Size = new System.Drawing.Size(702, 92);
-            this.panel42.TabIndex = 2;
-            // 
-            // all_zwcmzcjtzqk
-            // 
-            this.all_zwcmzcjtzqk.AutoSize = true;
-            this.all_zwcmzcjtzqk.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.all_zwcmzcjtzqk.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.all_zwcmzcjtzqk.Location = new System.Drawing.Point(0, 0);
-            this.all_zwcmzcjtzqk.Name = "all_zwcmzcjtzqk";
-            this.all_zwcmzcjtzqk.Size = new System.Drawing.Size(0, 14);
-            this.all_zwcmzcjtzqk.TabIndex = 2;
             // 
             // label143
             // 
@@ -3335,7 +3323,7 @@
             this.panel113.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel113.Location = new System.Drawing.Point(3, 235);
             this.panel113.Name = "panel113";
-            this.panel113.Size = new System.Drawing.Size(917, 24);
+            this.panel113.Size = new System.Drawing.Size(973, 24);
             this.panel113.TabIndex = 61;
             // 
             // all_ypzxsj
@@ -3366,7 +3354,7 @@
             this.panel112.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel112.Location = new System.Drawing.Point(3, 211);
             this.panel112.Name = "panel112";
-            this.panel112.Size = new System.Drawing.Size(917, 24);
+            this.panel112.Size = new System.Drawing.Size(973, 24);
             this.panel112.TabIndex = 60;
             // 
             // all_xll
@@ -3416,7 +3404,7 @@
             this.panel111.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel111.Location = new System.Drawing.Point(3, 187);
             this.panel111.Name = "panel111";
-            this.panel111.Size = new System.Drawing.Size(917, 24);
+            this.panel111.Size = new System.Drawing.Size(973, 24);
             this.panel111.TabIndex = 59;
             // 
             // all_sjqbxsjmy
@@ -3466,7 +3454,7 @@
             this.panel110.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel110.Location = new System.Drawing.Point(3, 163);
             this.panel110.Name = "panel110";
-            this.panel110.Size = new System.Drawing.Size(917, 24);
+            this.panel110.Size = new System.Drawing.Size(973, 24);
             this.panel110.TabIndex = 58;
             // 
             // all_sffz
@@ -3516,7 +3504,7 @@
             this.panel107.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel107.Location = new System.Drawing.Point(3, 139);
             this.panel107.Name = "panel107";
-            this.panel107.Size = new System.Drawing.Size(917, 24);
+            this.panel107.Size = new System.Drawing.Size(973, 24);
             this.panel107.TabIndex = 57;
             // 
             // all_nwzwdlqk
@@ -3566,7 +3554,7 @@
             this.panel106.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel106.Location = new System.Drawing.Point(3, 115);
             this.panel106.Name = "panel106";
-            this.panel106.Size = new System.Drawing.Size(917, 24);
+            this.panel106.Size = new System.Drawing.Size(973, 24);
             this.panel106.TabIndex = 56;
             // 
             // all_ywxbjmqz
@@ -3616,7 +3604,7 @@
             this.panel105.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel105.Location = new System.Drawing.Point(3, 91);
             this.panel105.Name = "panel105";
-            this.panel105.Size = new System.Drawing.Size(917, 24);
+            this.panel105.Size = new System.Drawing.Size(973, 24);
             this.panel105.TabIndex = 55;
             // 
             // all_ywccbwpfgmqk
@@ -3666,7 +3654,7 @@
             this.panel104.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel104.Location = new System.Drawing.Point(3, 67);
             this.panel104.Name = "panel104";
-            this.panel104.Size = new System.Drawing.Size(917, 24);
+            this.panel104.Size = new System.Drawing.Size(973, 24);
             this.panel104.TabIndex = 54;
             // 
             // all_ywxlbct
@@ -3716,7 +3704,7 @@
             this.panel1231321.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1231321.Location = new System.Drawing.Point(3, 43);
             this.panel1231321.Name = "panel1231321";
-            this.panel1231321.Size = new System.Drawing.Size(917, 24);
+            this.panel1231321.Size = new System.Drawing.Size(973, 24);
             this.panel1231321.TabIndex = 53;
             // 
             // all_ccfs_1
@@ -3764,7 +3752,7 @@
             this.panel109.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel109.Location = new System.Drawing.Point(3, 19);
             this.panel109.Name = "panel109";
-            this.panel109.Size = new System.Drawing.Size(917, 24);
+            this.panel109.Size = new System.Drawing.Size(973, 24);
             this.panel109.TabIndex = 52;
             // 
             // all_sszzqx
@@ -3790,9 +3778,9 @@
             // 
             this.panel50.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel50.Controls.Add(this.dgvSJCX_RECORDS);
-            this.panel50.Location = new System.Drawing.Point(13, 70);
+            this.panel50.Location = new System.Drawing.Point(11, 60);
             this.panel50.Name = "panel50";
-            this.panel50.Size = new System.Drawing.Size(240, 412);
+            this.panel50.Size = new System.Drawing.Size(240, 385);
             this.panel50.TabIndex = 41;
             // 
             // dgvSJCX_RECORDS
@@ -3806,7 +3794,7 @@
             this.dgvSJCX_RECORDS.RowHeadersVisible = false;
             this.dgvSJCX_RECORDS.RowTemplate.Height = 23;
             this.dgvSJCX_RECORDS.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSJCX_RECORDS.Size = new System.Drawing.Size(230, 402);
+            this.dgvSJCX_RECORDS.Size = new System.Drawing.Size(230, 364);
             this.dgvSJCX_RECORDS.TabIndex = 0;
             this.dgvSJCX_RECORDS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSJCX_RECORDS_CellContentClick);
             // 
@@ -3820,7 +3808,7 @@
             this.panel47.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel47.Location = new System.Drawing.Point(0, 21);
             this.panel47.Name = "panel47";
-            this.panel47.Size = new System.Drawing.Size(1237, 42);
+            this.panel47.Size = new System.Drawing.Size(1278, 36);
             this.panel47.TabIndex = 40;
             // 
             // btnPrintSSCX_SSJL
@@ -3945,7 +3933,7 @@
             this.panel46.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel46.Location = new System.Drawing.Point(0, 0);
             this.panel46.Name = "panel46";
-            this.panel46.Size = new System.Drawing.Size(1237, 21);
+            this.panel46.Size = new System.Drawing.Size(1278, 21);
             this.panel46.TabIndex = 7;
             // 
             // label21
@@ -4145,9 +4133,9 @@
             this.panelCJFX.Controls.Add(this.panelTJFX_GZLTJ);
             this.panelCJFX.Controls.Add(this.panelTJFX_PIE);
             this.panelCJFX.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCJFX.Location = new System.Drawing.Point(10, 10);
+            this.panelCJFX.Location = new System.Drawing.Point(10, 37);
             this.panelCJFX.Name = "panelCJFX";
-            this.panelCJFX.Size = new System.Drawing.Size(1280, 550);
+            this.panelCJFX.Size = new System.Drawing.Size(1280, 523);
             this.panelCJFX.TabIndex = 2;
             // 
             // panel121
@@ -4437,20 +4425,20 @@
             // 
             // chartPie_4
             // 
-            chartArea17.Name = "ChartArea1";
-            this.chartPie_4.ChartAreas.Add(chartArea17);
-            legend17.Name = "Legend1";
-            this.chartPie_4.Legends.Add(legend17);
+            chartArea45.Name = "ChartArea1";
+            this.chartPie_4.ChartAreas.Add(chartArea45);
+            legend45.Name = "Legend1";
+            this.chartPie_4.Legends.Add(legend45);
             this.chartPie_4.Location = new System.Drawing.Point(8, 20);
             this.chartPie_4.Name = "chartPie_4";
-            series17.ChartArea = "ChartArea1";
-            series17.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series17.IsValueShownAsLabel = true;
-            series17.Label = "#VALX\\n[#VAL](#PERCENT)";
-            series17.Legend = "Legend1";
-            series17.Name = "Series1";
-            series17.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
-            this.chartPie_4.Series.Add(series17);
+            series45.ChartArea = "ChartArea1";
+            series45.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series45.IsValueShownAsLabel = true;
+            series45.Label = "#VALX\\n[#VAL](#PERCENT)";
+            series45.Legend = "Legend1";
+            series45.Name = "Series1";
+            series45.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            this.chartPie_4.Series.Add(series45);
             this.chartPie_4.Size = new System.Drawing.Size(550, 189);
             this.chartPie_4.TabIndex = 2;
             this.chartPie_4.Text = "男女比例";
@@ -4467,20 +4455,20 @@
             // 
             // chartPie_3
             // 
-            chartArea18.Name = "ChartArea1";
-            this.chartPie_3.ChartAreas.Add(chartArea18);
-            legend18.Name = "Legend1";
-            this.chartPie_3.Legends.Add(legend18);
+            chartArea46.Name = "ChartArea1";
+            this.chartPie_3.ChartAreas.Add(chartArea46);
+            legend46.Name = "Legend1";
+            this.chartPie_3.Legends.Add(legend46);
             this.chartPie_3.Location = new System.Drawing.Point(13, 19);
             this.chartPie_3.Name = "chartPie_3";
-            series18.ChartArea = "ChartArea1";
-            series18.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series18.IsValueShownAsLabel = true;
-            series18.Label = "#VALX\\n [#VAL](#PERCENT)";
-            series18.Legend = "Legend1";
-            series18.Name = "Series1";
-            series18.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
-            this.chartPie_3.Series.Add(series18);
+            series46.ChartArea = "ChartArea1";
+            series46.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series46.IsValueShownAsLabel = true;
+            series46.Label = "#VALX\\n [#VAL](#PERCENT)";
+            series46.Legend = "Legend1";
+            series46.Name = "Series1";
+            series46.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            this.chartPie_3.Series.Add(series46);
             this.chartPie_3.Size = new System.Drawing.Size(552, 180);
             this.chartPie_3.TabIndex = 4;
             this.chartPie_3.Text = "男女比例";
@@ -4515,20 +4503,20 @@
             // 
             // chartPie_2
             // 
-            chartArea19.Name = "ChartArea1";
-            this.chartPie_2.ChartAreas.Add(chartArea19);
-            legend19.Name = "Legend1";
-            this.chartPie_2.Legends.Add(legend19);
+            chartArea47.Name = "ChartArea1";
+            this.chartPie_2.ChartAreas.Add(chartArea47);
+            legend47.Name = "Legend1";
+            this.chartPie_2.Legends.Add(legend47);
             this.chartPie_2.Location = new System.Drawing.Point(12, 19);
             this.chartPie_2.Name = "chartPie_2";
-            series19.ChartArea = "ChartArea1";
-            series19.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series19.IsValueShownAsLabel = true;
-            series19.Label = "#VALX [#VAL](#PERCENT)";
-            series19.Legend = "Legend1";
-            series19.Name = "Series1";
-            series19.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
-            this.chartPie_2.Series.Add(series19);
+            series47.ChartArea = "ChartArea1";
+            series47.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series47.IsValueShownAsLabel = true;
+            series47.Label = "#VALX [#VAL](#PERCENT)";
+            series47.Legend = "Legend1";
+            series47.Name = "Series1";
+            series47.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            this.chartPie_2.Series.Add(series47);
             this.chartPie_2.Size = new System.Drawing.Size(552, 198);
             this.chartPie_2.TabIndex = 2;
             this.chartPie_2.Text = "男女比例";
@@ -4554,19 +4542,19 @@
             // 
             // chartPie_1
             // 
-            chartArea20.Name = "ChartArea1";
-            this.chartPie_1.ChartAreas.Add(chartArea20);
-            legend20.Name = "Legend1";
-            this.chartPie_1.Legends.Add(legend20);
+            chartArea48.Name = "ChartArea1";
+            this.chartPie_1.ChartAreas.Add(chartArea48);
+            legend48.Name = "Legend1";
+            this.chartPie_1.Legends.Add(legend48);
             this.chartPie_1.Location = new System.Drawing.Point(8, 20);
             this.chartPie_1.Name = "chartPie_1";
-            series20.ChartArea = "ChartArea1";
-            series20.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series20.IsValueShownAsLabel = true;
-            series20.Label = "#VALX[#VAL](#PERCENT)";
-            series20.Legend = "Legend1";
-            series20.Name = "Series1";
-            this.chartPie_1.Series.Add(series20);
+            series48.ChartArea = "ChartArea1";
+            series48.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series48.IsValueShownAsLabel = true;
+            series48.Label = "#VALX[#VAL](#PERCENT)";
+            series48.Legend = "Legend1";
+            series48.Name = "Series1";
+            this.chartPie_1.Series.Add(series48);
             this.chartPie_1.Size = new System.Drawing.Size(558, 200);
             this.chartPie_1.TabIndex = 0;
             this.chartPie_1.Text = "男女比例";
@@ -4577,9 +4565,9 @@
             this.panelKSGL.Controls.Add(this.panel14);
             this.panelKSGL.Controls.Add(this.panel13);
             this.panelKSGL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelKSGL.Location = new System.Drawing.Point(10, 10);
+            this.panelKSGL.Location = new System.Drawing.Point(10, 37);
             this.panelKSGL.Name = "panelKSGL";
-            this.panelKSGL.Size = new System.Drawing.Size(1280, 550);
+            this.panelKSGL.Size = new System.Drawing.Size(1280, 523);
             this.panelKSGL.TabIndex = 3;
             // 
             // panel14
@@ -5357,12 +5345,34 @@
             this.panel4.Controls.Add(this.panelCJFX);
             this.panel4.Controls.Add(this.panelSJCX);
             this.panel4.Controls.Add(this.panelZDGL);
+            this.panel4.Controls.Add(this.panel122);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 134);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(10);
             this.panel4.Size = new System.Drawing.Size(1300, 570);
             this.panel4.TabIndex = 13;
+            // 
+            // panel122
+            // 
+            this.panel122.Controls.Add(this.labelNowDate);
+            this.panel122.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel122.Location = new System.Drawing.Point(10, 10);
+            this.panel122.Name = "panel122";
+            this.panel122.Size = new System.Drawing.Size(1280, 27);
+            this.panel122.TabIndex = 31;
+            // 
+            // labelNowDate
+            // 
+            this.labelNowDate.AutoSize = true;
+            this.labelNowDate.BackColor = System.Drawing.Color.Yellow;
+            this.labelNowDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelNowDate.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelNowDate.Location = new System.Drawing.Point(1, 0);
+            this.labelNowDate.Name = "labelNowDate";
+            this.labelNowDate.Size = new System.Drawing.Size(285, 16);
+            this.labelNowDate.TabIndex = 4;
+            this.labelNowDate.Text = "时间：当前是XXXX年XX月XX日(周几)";
             // 
             // printDucumentSSCX_SSJL
             // 
@@ -5378,62 +5388,65 @@
             // 
             // notifyIcon1
             // 
+            this.notifyIcon1.ContextMenuStrip = this.contextMenuStrip1;
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
             this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuExitLogin,
+            this.menuExit});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(125, 48);
+            this.contextMenuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip1_ItemClicked);
             // 
-            // cbSSLR_PROVINCE
+            // menuExitLogin
             // 
-            this.cbSSLR_PROVINCE.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSSLR_PROVINCE.FormattingEnabled = true;
-            this.cbSSLR_PROVINCE.Location = new System.Drawing.Point(95, 4);
-            this.cbSSLR_PROVINCE.Name = "cbSSLR_PROVINCE";
-            this.cbSSLR_PROVINCE.Size = new System.Drawing.Size(162, 24);
-            this.cbSSLR_PROVINCE.TabIndex = 12;
-            this.cbSSLR_PROVINCE.SelectedIndexChanged += new System.EventHandler(this.cbSSLR_PROVINCE_SelectedIndexChanged);
+            this.menuExitLogin.Name = "menuExitLogin";
+            this.menuExitLogin.Size = new System.Drawing.Size(124, 22);
+            this.menuExitLogin.Text = "退出登录";
             // 
-            // cbSSLR_CITY
+            // menuExit
             // 
-            this.cbSSLR_CITY.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSSLR_CITY.FormattingEnabled = true;
-            this.cbSSLR_CITY.Location = new System.Drawing.Point(263, 5);
-            this.cbSSLR_CITY.Name = "cbSSLR_CITY";
-            this.cbSSLR_CITY.Size = new System.Drawing.Size(162, 24);
-            this.cbSSLR_CITY.TabIndex = 13;
-            this.cbSSLR_CITY.SelectionChangeCommitted += new System.EventHandler(this.cbSSLR_CITY_SelectionChangeCommitted);
+            this.menuExit.Name = "menuExit";
+            this.menuExit.Size = new System.Drawing.Size(124, 22);
+            this.menuExit.Text = "退出";
             // 
-            // cbSSLR_COUNTY
+            // timer1
             // 
-            this.cbSSLR_COUNTY.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSSLR_COUNTY.FormattingEnabled = true;
-            this.cbSSLR_COUNTY.Location = new System.Drawing.Point(433, 5);
-            this.cbSSLR_COUNTY.Name = "cbSSLR_COUNTY";
-            this.cbSSLR_COUNTY.Size = new System.Drawing.Size(162, 24);
-            this.cbSSLR_COUNTY.TabIndex = 14;
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // tbSSLR_DETAIL_ADDRESS
+            // tbSSLR_SSZZ_SFRQ
             // 
-            this.tbSSLR_DETAIL_ADDRESS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbSSLR_DETAIL_ADDRESS.Enabled = false;
-            this.tbSSLR_DETAIL_ADDRESS.Location = new System.Drawing.Point(605, 4);
-            this.tbSSLR_DETAIL_ADDRESS.Name = "tbSSLR_DETAIL_ADDRESS";
-            this.tbSSLR_DETAIL_ADDRESS.ReadOnly = true;
-            this.tbSSLR_DETAIL_ADDRESS.Size = new System.Drawing.Size(448, 26);
-            this.tbSSLR_DETAIL_ADDRESS.TabIndex = 15;
+            this.tbSSLR_SSZZ_SFRQ.CustomFormat = "yyyy年MM月dd日 hh:mm";
+            this.tbSSLR_SSZZ_SFRQ.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.tbSSLR_SSZZ_SFRQ.Location = new System.Drawing.Point(146, 0);
+            this.tbSSLR_SSZZ_SFRQ.Name = "tbSSLR_SSZZ_SFRQ";
+            this.tbSSLR_SSZZ_SFRQ.ShowUpDown = true;
+            this.tbSSLR_SSZZ_SFRQ.Size = new System.Drawing.Size(213, 26);
+            this.tbSSLR_SSZZ_SFRQ.TabIndex = 34;
             // 
-            // label38
+            // tbSSLR_SSZZ_ZWQMJTZQK
             // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(1061, 8);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(72, 16);
-            this.label38.TabIndex = 16;
-            this.label38.Text = "详细地址";
+            this.tbSSLR_SSZZ_ZWQMJTZQK.Location = new System.Drawing.Point(160, 4);
+            this.tbSSLR_SSZZ_ZWQMJTZQK.Name = "tbSSLR_SSZZ_ZWQMJTZQK";
+            this.tbSSLR_SSZZ_ZWQMJTZQK.Size = new System.Drawing.Size(689, 96);
+            this.tbSSLR_SSZZ_ZWQMJTZQK.TabIndex = 7;
+            this.tbSSLR_SSZZ_ZWQMJTZQK.Text = "";
+            // 
+            // all_zwcmzcjtzqk
+            // 
+            this.all_zwcmzcjtzqk.Location = new System.Drawing.Point(182, 3);
+            this.all_zwcmzcjtzqk.Name = "all_zwcmzcjtzqk";
+            this.all_zwcmzcjtzqk.ReadOnly = true;
+            this.all_zwcmzcjtzqk.Size = new System.Drawing.Size(758, 93);
+            this.all_zwcmzcjtzqk.TabIndex = 9;
+            this.all_zwcmzcjtzqk.Text = "";
             // 
             // FormMain
             // 
@@ -5445,7 +5458,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -5460,8 +5473,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picMin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panelSSLR.ResumeLayout(false);
             this.panel77.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
@@ -5508,7 +5519,6 @@
             this.panel98.ResumeLayout(false);
             this.panel98.PerformLayout();
             this.panel99.ResumeLayout(false);
-            this.panel99.PerformLayout();
             this.panel101.ResumeLayout(false);
             this.panel101.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -5599,8 +5609,6 @@
             this.flowLayoutPanel3.PerformLayout();
             this.panel114.ResumeLayout(false);
             this.panel114.PerformLayout();
-            this.panel42.ResumeLayout(false);
-            this.panel42.PerformLayout();
             this.panel113.ResumeLayout(false);
             this.panel113.PerformLayout();
             this.panel112.ResumeLayout(false);
@@ -5716,6 +5724,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvKSGL_EMP)).EndInit();
             this.panel13.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.panel122.ResumeLayout(false);
+            this.panel122.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -5731,7 +5742,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label labelNowDate;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnKSGL;
         private System.Windows.Forms.Button btnCJFX;
@@ -5969,7 +5979,6 @@
         private System.Windows.Forms.Label all_sfys;
         private System.Windows.Forms.Label label146;
         private System.Windows.Forms.Panel panel114;
-        private System.Windows.Forms.Label all_zwcmzcjtzqk;
         private System.Windows.Forms.Label label143;
         private System.Windows.Forms.Panel panel113;
         private System.Windows.Forms.Label all_ypzxsj;
@@ -6028,7 +6037,6 @@
         private System.Windows.Forms.TextBox tbSSLR_SSZZ_SFYS;
         private System.Windows.Forms.Label label112;
         private System.Windows.Forms.Panel panel81;
-        private System.Windows.Forms.TextBox tbSSLR_SSZZ_ZWQMJTZQK;
         private System.Windows.Forms.Label label113;
         private System.Windows.Forms.Panel panel82;
         private System.Windows.Forms.Label label114;
@@ -6071,7 +6079,6 @@
         private System.Windows.Forms.ComboBox cbSSLR_SSZZ_SFTC;
         private System.Windows.Forms.Label label128;
         private System.Windows.Forms.Panel panel97;
-        private System.Windows.Forms.TextBox tbSSLR_SSZZ_SFRQ;
         private System.Windows.Forms.Label label129;
         private System.Windows.Forms.Panel panel98;
         private System.Windows.Forms.ComboBox cbSSLR_SSZZ_CCFS;
@@ -6081,7 +6088,6 @@
         private System.Windows.Forms.Panel panel101;
         private System.Windows.Forms.ComboBox cbSSLR_SSZZQX;
         private System.Windows.Forms.Label label133;
-        private System.Windows.Forms.Label label134;
         private System.Windows.Forms.Panel panelSJCX_SSZZD;
         private System.Windows.Forms.Panel panel117;
         private System.Windows.Forms.Panel panel120;
@@ -6162,7 +6168,6 @@
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.DataGridView dgvDictionary;
-        private System.Windows.Forms.Panel panel42;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RichTextBox all_ssjl;
@@ -6175,6 +6180,14 @@
         private System.Windows.Forms.ComboBox cbSSLR_CITY;
         private System.Windows.Forms.TextBox tbSSLR_DETAIL_ADDRESS;
         private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.ToolStripMenuItem menuExitLogin;
+        private System.Windows.Forms.ToolStripMenuItem menuExit;
+        private System.Windows.Forms.Panel panel122;
+        private System.Windows.Forms.Label labelNowDate;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.DateTimePicker tbSSLR_SSZZ_SFRQ;
+        private System.Windows.Forms.RichTextBox tbSSLR_SSZZ_ZWQMJTZQK;
+        private System.Windows.Forms.RichTextBox all_zwcmzcjtzqk;
 
     }
 }

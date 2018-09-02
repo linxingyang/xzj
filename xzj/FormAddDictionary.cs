@@ -53,22 +53,28 @@ namespace xzj
             }
             else
             {
-                string sql = string.Format("select d_order from t_dictionary where d_parent_id = {0} order by d_order desc limit 1", this.dictionary_parent_id);
-                DataTable dt = DBManager.getInstance().find(sql);
-
-                if (dt != null && dt.Rows.Count > 0)
-                {
-                    foreach (DataRow rows in dt.Rows)
-                    {
-                        this.tbRank.Text = Convert.ToInt32(rows["d_order"].ToString())+1 + "";
-                    }
-                    
-                }
-                else
-                {
-                    this.tbRank.Text = "1";
-                }
+                setRank();
                 
+            }
+        }
+
+        //自动编号
+        private void setRank()
+        {
+            string sql = string.Format("select d_order from t_dictionary where d_parent_id = {0} order by d_order desc limit 1", this.dictionary_parent_id);
+            DataTable dt = DBManager.getInstance().find(sql);
+
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                foreach (DataRow rows in dt.Rows)
+                {
+                    this.tbRank.Text = Convert.ToInt32(rows["d_order"].ToString()) + 1 + "";
+                }
+
+            }
+            else
+            {
+                this.tbRank.Text = "1";
             }
         }
 
@@ -145,7 +151,7 @@ namespace xzj
                         if (dr == DialogResult.Yes)
                         {
                             //清理
-                            this.tbRank.Text = "";
+                            setRank();
                             this.tbName.Text = "";
                             //this.cbSex.Text;
                             this.tbDesc.Text = "";

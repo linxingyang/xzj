@@ -28,16 +28,17 @@ namespace xzj
             else
             {
                 UtilConfig.SQL_ADDRESS = DBSQLite.selectValue(UtilConfig.SQL_ADDRESS_KEY);
-                Application.Run(new FormSignIn());
-                //string ACCOUNT = DBSQLite.selectValue(UtilConfig.ACCOUNT_KEY);
-                //if (!string.IsNullOrEmpty(ACCOUNT))
-                //{
-                //    Application.Run(new FormMain());
-                //}
-                //else
-                //{
-                //    Application.Run(new FormSignIn());
-                //}
+                string account = DBSQLite.selectValue(UtilConfig.ACCOUNT_KEY);
+                string pwd = DBSQLite.selectValue(UtilConfig.PWD_KEY);
+                bool flag = DBEmp.getInstance().isLogin(account, pwd);
+                if (flag)
+                {
+                    Application.Run(new FormMain());
+                }
+                else
+                {
+                    Application.Run(new FormSignIn());
+                }
             }
         }
 

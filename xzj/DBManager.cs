@@ -33,6 +33,20 @@ namespace xzj
             
         }
 
+        public MySqlConnection getMySqlConnection()
+        {
+            return conn;
+        }
+
+        public MySqlCommand getMySqlCommand(string sql)
+        {
+            cmd = new MySqlCommand(sql, conn);
+            //设置Command对象的类型  
+            cmd.CommandType = CommandType.StoredProcedure;
+            return cmd;
+        }
+
+        //新增
         public int add(string sql)
         {
             int flag = 0;

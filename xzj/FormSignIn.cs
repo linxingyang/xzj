@@ -17,15 +17,6 @@ namespace xzj
         {
             InitializeComponent();
 
-            string account = DBSQLite.selectValue(UtilConfig.ACCOUNT_KEY);
-            string pwd = DBSQLite.selectValue(UtilConfig.PWD_KEY);
-            bool flag = DBEmp.getInstance().isLogin(account, pwd);
-            if (flag)
-            {
-                goMainForm();
-            }
-           
-
         }
 
         private void FormSignIn_Load(object sender, EventArgs e)
