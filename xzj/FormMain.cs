@@ -19,6 +19,7 @@ namespace xzj
     {
         private DataTable dataTable;
         private static int dictionary_parent_id = 1;
+        static int listViewDictionaryFlag = 0;//1代表在列表上，0代表不在列表上
        
         public FormMain()
         {
@@ -91,15 +92,19 @@ namespace xzj
         private void btnSSLR_Click(object sender, EventArgs e)
         {
             this.btnSSLR.BackColor = ColorTranslator.FromHtml("#3399ff");
+            this.btnSSZZ.BackColor = ColorTranslator.FromHtml("#0000cd");
             this.btnZDGL.BackColor = ColorTranslator.FromHtml("#0000cd");
             this.btnSJCX.BackColor = ColorTranslator.FromHtml("#0000cd");
             this.btnCJFX.BackColor = ColorTranslator.FromHtml("#0000cd");
+            this.btnSSXGXY.BackColor = ColorTranslator.FromHtml("#0000cd");
             this.btnKSGL.BackColor = ColorTranslator.FromHtml("#0000cd");
 
             this.panelSSLR.Visible = true;
+            this.panelSSZZ.Visible = false;
             this.panelZDGL.Visible = false;
             this.panelSJCX.Visible = false;
             this.panelCJFX.Visible = false;
+            this.panelSSXGXY.Visible = false;
             this.panelKSGL.Visible = false;
 
 
@@ -130,9 +135,9 @@ namespace xzj
         //初始化手术录入
         private void initSSLR()
         {
-            this.labelSSLR_SSJL_ID.Text = "";//手术记录与手术跟踪的id
+            //this.labelSSLR_SSJL_ID.Text = "1111";//手术记录与手术跟踪的id
             this.tbSSLR_NAME.Text = "";//患者姓名
-            this.cbSSLR_SEX.Text = "";//性别
+            //this.cbSSLR_SEX.Text = "";//性别
             this.tbSSLR_AGE.Text = "";//年龄
             this.tbSSLR_TEL.Text = "";//手机号
             this.tbSSLR_ID.Text = "";//身份证号
@@ -184,10 +189,14 @@ namespace xzj
             dt = DBDictionary.getInstance().getDictionarysByParentId(8);
             combobox(this.cbSSLR_SSZZQX, dt);
 
-            //查询手术追踪-穿刺方式字典
-            dt = DBDictionary.getInstance().getDictionarysByParentId(7);
-            combobox(this.cbSSLR_SSZZ_CCFS, dt);
+            //查询手术部位字典
+            dt = DBDictionary.getInstance().getDictionarysByParentId(9);
+            combobox(this.cbSSLR_SSBW, dt);
 
+            //手术日期
+            this.dpSSLR_SSRQ.Value = Convert.ToDateTime(UtilTools.getDayAndTimeMM());
+
+            /**
             //查询手术追踪-感染控制方式字典
             dt = DBDictionary.getInstance().getDictionarysByParentId(11);
             combobox(this.cbSSLR_SSZZ_GRKZFS, dt);
@@ -199,13 +208,8 @@ namespace xzj
             //查询手术追踪-穿刺部位皮肤情况字典
             dt = DBDictionary.getInstance().getDictionarysByParentId(10);
             combobox(this.cbSSLR_SSZZ_CCBWPFQK, dt);
-            
-            //手术日期
-            this.dpSSLR_SSRQ.Value = Convert.ToDateTime(UtilTools.getDayAndTimeMM()); ;
 
-            //随访日期
-            this.tbSSLR_SSZZ_SFRQ.Value = Convert.ToDateTime(UtilTools.getDayAndTimeMM()); ;
-
+           
             //是否畅通
             this.cbSSLR_SSZZ_SFTC.SelectedIndex = 0;
             //有无血流不畅通
@@ -219,26 +223,28 @@ namespace xzj
             //有无胸壁静脉曲张
             this.cbSSLR_SSZZ_YWXBJMQZ.SelectedIndex = 0;
             //是否复诊
-            this.cbSSLR_SSZZ_SSFZ.SelectedIndex = 0;
-           
+            //this.cbSSLR_SSZZ_SSFZ.SelectedIndex = 0;
+           **/
         }
 
         //字典管理
         private void btnZDGL_Click(object sender, EventArgs e)
         {
             this.btnSSLR.BackColor = ColorTranslator.FromHtml("#0000cd");
+            this.btnSSZZ.BackColor = ColorTranslator.FromHtml("#0000cd");
             this.btnZDGL.BackColor = ColorTranslator.FromHtml("#3399ff");
             this.btnSJCX.BackColor = ColorTranslator.FromHtml("#0000cd");
             this.btnCJFX.BackColor = ColorTranslator.FromHtml("#0000cd");
+            this.btnSSXGXY.BackColor = ColorTranslator.FromHtml("#0000cd");
             this.btnKSGL.BackColor = ColorTranslator.FromHtml("#0000cd");
 
             this.panelSSLR.Visible = false;
+            this.panelSSZZ.Visible = false;
             this.panelZDGL.Visible = true;
             this.panelSJCX.Visible = false;
             this.panelCJFX.Visible = false;
+            this.panelSSXGXY.Visible = false;
             this.panelKSGL.Visible = false;
-
-            //this.listViewDictionary.FullRowSelect = true;
 
             this.setListViewDictionary("医保类型字典", 1);
         }
@@ -247,15 +253,19 @@ namespace xzj
         private void btnSJCX_Click(object sender, EventArgs e)
         {
             this.btnSSLR.BackColor = ColorTranslator.FromHtml("#0000cd");
+            this.btnSSZZ.BackColor = ColorTranslator.FromHtml("#0000cd");
             this.btnZDGL.BackColor = ColorTranslator.FromHtml("#0000cd");
             this.btnSJCX.BackColor = ColorTranslator.FromHtml("#3399ff");
             this.btnCJFX.BackColor = ColorTranslator.FromHtml("#0000cd");
+            this.btnSSXGXY.BackColor = ColorTranslator.FromHtml("#0000cd");
             this.btnKSGL.BackColor = ColorTranslator.FromHtml("#0000cd");
 
             this.panelSSLR.Visible = false;
+            this.panelSSZZ.Visible = false;
             this.panelZDGL.Visible = false;
             this.panelSJCX.Visible = true;
             this.panelCJFX.Visible = false;
+            this.panelSSXGXY.Visible = false;
             this.panelKSGL.Visible = false;
 
             initSJCX();
@@ -265,15 +275,19 @@ namespace xzj
         private void btnCJFX_Click(object sender, EventArgs e)
         {
             this.btnSSLR.BackColor = ColorTranslator.FromHtml("#0000cd");
+            this.btnSSZZ.BackColor = ColorTranslator.FromHtml("#0000cd");
             this.btnZDGL.BackColor = ColorTranslator.FromHtml("#0000cd");
             this.btnSJCX.BackColor = ColorTranslator.FromHtml("#0000cd");
             this.btnCJFX.BackColor = ColorTranslator.FromHtml("#3399ff");
+            this.btnSSXGXY.BackColor = ColorTranslator.FromHtml("#0000cd");
             this.btnKSGL.BackColor = ColorTranslator.FromHtml("#0000cd");
             //this.panelCJFX.BackColor = ColorTranslator.FromHtml("#0000cd");
             this.panelSSLR.Visible = false;
+            this.panelSSZZ.Visible = false;
             this.panelZDGL.Visible = false;
             this.panelSJCX.Visible = false;
             this.panelCJFX.Visible = true;
+            this.panelSSXGXY.Visible = false;
             this.panelKSGL.Visible = false;
 
             initTjfx();
@@ -283,15 +297,19 @@ namespace xzj
         private void btnKSGL_Click(object sender, EventArgs e)
         {
             this.btnSSLR.BackColor = ColorTranslator.FromHtml("#0000cd");
+            this.btnSSZZ.BackColor = ColorTranslator.FromHtml("#0000cd");
             this.btnZDGL.BackColor = ColorTranslator.FromHtml("#0000cd");
             this.btnSJCX.BackColor = ColorTranslator.FromHtml("#0000cd");
             this.btnCJFX.BackColor = ColorTranslator.FromHtml("#0000cd");
+            this.btnSSXGXY.BackColor = ColorTranslator.FromHtml("#0000cd");
             this.btnKSGL.BackColor = ColorTranslator.FromHtml("#3399ff");
 
             this.panelSSLR.Visible = false;
+            this.panelSSZZ.Visible = false;
             this.panelZDGL.Visible = false;
             this.panelSJCX.Visible = false;
             this.panelCJFX.Visible = false;
+            this.panelSSXGXY.Visible = false;
             this.panelKSGL.Visible = true;
 
             //查询科室信息
@@ -457,6 +475,8 @@ namespace xzj
         //查询医保类型字典
         private void btnDictionaryYBLX_Click(object sender, EventArgs e)
         {
+            this.listViewDictionarySSZD.Visible = false;
+            this.listViewDictionaryQKZD.Visible = false;
             this.setListViewDictionary("医保类型字典", 1);
         }
 
@@ -500,6 +520,7 @@ namespace xzj
         //查询情况字典
         private void btnDictionaryQKZD_Click(object sender, EventArgs e)
         {
+           
             this.listViewDictionarySSZD.Visible = false;
             this.listViewDictionaryQKZD.Visible = !this.listViewDictionaryQKZD.Visible;
 
@@ -654,7 +675,6 @@ namespace xzj
                 this.listViewDictionaryQKZD.Items[i].Selected = true;
                 string dName = this.listViewDictionaryQKZD.SelectedItems[0].Text;
                 int id = Convert.ToInt32(this.listViewDictionaryQKZD.SelectedItems[0].SubItems[1].Text);
-                //MessageBox.Show(this.listViewDictionarySSZD.SelectedItems[0].SubItems[1].Text);
                 this.setListViewDictionary(dName, id);
             }
             this.listViewDictionaryQKZD.Visible = false;
@@ -823,7 +843,8 @@ namespace xzj
             string sslx = this.cbSSLR_SSLX.Text;// SelectedValue.ToString();//手术类型
             string ssfs = this.cbSSLR_SSFS.Text;//SelectedValue.ToString();//手术方式
             string ccfs = this.cbSSLR_CCFS.Text;//SelectedValue.ToString();//穿刺方式
-            string ssjl = this.rtbSSLR_SSJL.Text;//手术记录
+            string sszzqx = this.cbSSLR_SSZZQX.Text;//SelectedValue.ToString();//手术追踪期限
+            string ssjl = this.rtbSSLR_SSJL.Rtf;//手术记录
             string zdys = this.tbSSLR_ZDYS.Text;//主刀医生
             string zs = this.tbSSLR_ZS.Text;//助手
             string qxfs = this.tbSSLR_QXFS.Text;//器械护士
@@ -864,7 +885,7 @@ namespace xzj
             cmd.Parameters.AddWithValue("@i_p_address", address);
             cmd.Parameters.AddWithValue("@i_p_dialyse_hospital", ctxyy);
             cmd.Parameters.AddWithValue("@i_p_dialyse_hospital_contact", ctxyylxr);
-            cmd.Parameters.AddWithValue("@i_p_dialyse_hospital_tel", ctxyylxrdh);
+            cmd.Parameters.AddWithValue("@i_p_dialyse_hospital_tel", ctxyylxrdh);//sszzqx
 
             //r_patient_ID,r_date,r_ss_address,r_ss_type,r_ss_method,r_cc_method,r_zd_docotor,r_zs,r_qxhs,r_ss_record,r_is_sszz
             //ID, ssrq, ssdd, sslx, ssfs, ccfs, zdys,zs, qxfs, ssjl
@@ -1134,9 +1155,6 @@ namespace xzj
                 return;
             }
 
-            string sszzqx = this.cbSSLR_SSZZQX.Text;//SelectedValue.ToString(); //手术追踪期限
-            string sfrq = this.tbSSLR_SSZZ_SFRQ.Text; //随访日期
-            string ccfs = this.cbSSLR_SSZZ_CCFS.Text;//SelectedValue.ToString(); //穿刺方式
             string sfct = this.cbSSLR_SSZZ_SFTC.Text; //是否畅通
             string ywxlbct = this.cbSSLR_SSZZ_YWXLBCT.Text; //有无血液不畅通
             string ywxm = this.cbSSLR_SSZZ_YWXM.Text; //有无胸闷
@@ -1146,18 +1164,8 @@ namespace xzj
             string grkzfs = this.cbSSLR_SSZZ_GRKZFS.Text;//SelectedValue.ToString(); //感染控制方式
             string nwzwdlqk = this.cbSSLR_SSZZ_NWZWDLQK.Text;//SelectedValue.ToString(); //内痿自我锻炼情况
             string ccbwpfqk = this.cbSSLR_SSZZ_CCBWPFQK.Text;//SelectedValue.ToString(); //穿刺部位皮肤情况
-            string sffz = this.cbSSLR_SSZZ_SSFZ.Text; //是否复诊
-            string jmyfw = this.tbSSLR_SSZZ_JMYFW.Text; //静脉压范围
-            string sjqbxsjmy = this.tbSSLR_SSZZ_SJQBXSJMY.Text; //上机前半小时静脉压
-            string xjqbxsjmy = this.tbSSLR_SSZZ_XJQBXSJMY.Text; //下机前半小时静脉压
-            string xll = this.tbSSLR_SSZZ_XLL.Text; //血流量
-            string ypzxsj = this.tbSSLR_SSZZ_YPZXSJ.Text; //压迫止血时间
             string zwcmjtzqk = this.tbSSLR_SSZZ_ZWQMJTZQK.Text; //自我触摸及听诊情况
-            string sfys = this.tbSSLR_SSZZ_SFYS.Text; //随访医生
 
-            if (string.IsNullOrEmpty(sszzqx)) { MessageBox.Show("【手术追踪期限】不能为空"); return; }
-            if (string.IsNullOrEmpty(sfrq)) { MessageBox.Show("【随访日期】不能为空"); return; }
-            if (string.IsNullOrEmpty(ccfs)) { MessageBox.Show("【穿刺方式】不能为空"); return; }
             if (string.IsNullOrEmpty(sfct)) { MessageBox.Show("【是否畅通】不能为空"); return; }
             if (string.IsNullOrEmpty(ywxlbct)) { MessageBox.Show("【有无血液不畅通】不能为空"); return; }
             if (string.IsNullOrEmpty(ywxm)) { MessageBox.Show("【有无胸闷】不能为空"); return; }
@@ -1167,14 +1175,7 @@ namespace xzj
             if (string.IsNullOrEmpty(grkzfs)) { MessageBox.Show("【感染控制方式】不能为空"); return; }
             if (string.IsNullOrEmpty(nwzwdlqk)) { MessageBox.Show("【内痿自我锻炼情况】不能为空"); return; }
             if (string.IsNullOrEmpty(ccbwpfqk)) { MessageBox.Show("【穿刺部位皮肤情况】不能为空"); return; }
-            if (string.IsNullOrEmpty(sffz)) { MessageBox.Show("【是否复诊】不能为空"); return; }
-            if (string.IsNullOrEmpty(jmyfw)) { MessageBox.Show("【静脉压范围】不能为空"); return; }
-            if (string.IsNullOrEmpty(sjqbxsjmy)) { MessageBox.Show("【上机前半小时静脉压】不能为空"); return; }
-            if (string.IsNullOrEmpty(xjqbxsjmy)) { MessageBox.Show("【下机前半小时静脉压】不能为空"); return; }
-            if (string.IsNullOrEmpty(xll)) { MessageBox.Show("【血流量】不能为空"); return; }
-            if (string.IsNullOrEmpty(ypzxsj)) { MessageBox.Show("【压迫止血时间】不能为空"); return; }
             if (string.IsNullOrEmpty(zwcmjtzqk)) { MessageBox.Show("【自我触摸及听诊情况】不能为空"); return; }
-            if (string.IsNullOrEmpty(sfys)) { MessageBox.Show("【随访医生】不能为空"); return; }
 
             //判断手术记录是否存在
             string sql = string.Format("select * from t_record where id={0}", recordId);
@@ -1201,7 +1202,7 @@ namespace xzj
             sql = string.Format("insert into t_track(t_record_id,t_sszz_deadline,t_sfrq,t_ccfs,t_ssct,t_ywxlbct,t_ywxm,t_ywccbwphgmqk,t_ywbfz,t_ywxbjmqz," +
                 "t_grkzfs,t_nwzwdlqk,t_ccbwpfqk,t_sffz,t_jmyfw,t_sjqbxsjmy,t_xjqbxsjmy,t_xll,t_ypzxsj,t_zwcmzcjtzqk,t_sfys)"+
                 " values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}')",
-                   recordId,sszzqx, sfrq, ccfs, sfct, ywxlbct, ywxm, ywccbwpfgmqk, ywbfz, ywxbjmqz, grkzfs, nwzwdlqk, ccbwpfqk, sffz, jmyfw, sjqbxsjmy, xjqbxsjmy, xll, ypzxsj, zwcmjtzqk, sfys);
+                   recordId,sfct, ywxlbct, ywxm, ywccbwpfgmqk, ywbfz, ywxbjmqz, grkzfs, nwzwdlqk, ccbwpfqk, zwcmjtzqk);
             int flag = DBManager.getInstance().add(sql);
             if (flag > 0)
             {
@@ -2351,11 +2352,97 @@ namespace xzj
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            this.labelNowDate.Text = UtilTools.getDayAndTime();
+            this.labelNowDate.Text = UtilTools.getDateAndWeek();
         }
 
-      
+        //切换到手术追踪
+        private void btnSSZZ_Click(object sender, EventArgs e)
+        {
+            this.btnSSLR.BackColor = ColorTranslator.FromHtml("#0000cd");
+            this.btnSSZZ.BackColor = ColorTranslator.FromHtml("#3399ff");
+            this.btnZDGL.BackColor = ColorTranslator.FromHtml("#0000cd");
+            this.btnSJCX.BackColor = ColorTranslator.FromHtml("#0000cd");
+            this.btnCJFX.BackColor = ColorTranslator.FromHtml("#0000cd");
+            this.btnSSXGXY.BackColor = ColorTranslator.FromHtml("#0000cd");
+            this.btnKSGL.BackColor = ColorTranslator.FromHtml("#0000cd");
 
+            this.panelSSLR.Visible = false;
+            this.panelSSZZ.Visible = true;
+            this.panelZDGL.Visible = false;
+            this.panelSJCX.Visible = false;
+            this.panelCJFX.Visible = false;
+            this.panelSSXGXY.Visible = false;
+            this.panelKSGL.Visible = false;
+        }
+
+        //切换到手术相关协议
+        private void btnSSXGXY_Click(object sender, EventArgs e)
+        {
+            this.btnSSLR.BackColor = ColorTranslator.FromHtml("#0000cd");
+            this.btnSSZZ.BackColor = ColorTranslator.FromHtml("#0000cd");
+            this.btnZDGL.BackColor = ColorTranslator.FromHtml("#0000cd");
+            this.btnSJCX.BackColor = ColorTranslator.FromHtml("#0000cd");
+            this.btnCJFX.BackColor = ColorTranslator.FromHtml("#0000cd");
+            this.btnSSXGXY.BackColor = ColorTranslator.FromHtml("#3399ff");
+            this.btnKSGL.BackColor = ColorTranslator.FromHtml("#0000cd");
+
+            this.panelSSLR.Visible = false;
+            this.panelSSZZ.Visible = false;
+            this.panelZDGL.Visible = false;
+            this.panelSJCX.Visible = false;
+            this.panelCJFX.Visible = false;
+            this.panelSSXGXY.Visible = true;
+            this.panelKSGL.Visible = false;
+        }
+
+        //去添加手术追踪界面
+        private void btnGoAddSSZZ_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //手术记录添加图片
+        private void btnSSJLa_addPic_Click(object sender, EventArgs e)
+        {
+            //打开的文件选择对话框上的标题
+            this.openFileDialogSSLR.Title = "请选择图片";
+            //设置文件类型
+            this.openFileDialogSSLR.Filter = "PNG图片|*.png|JPG图片|*.jpg|BMP图片|*.bmp|Gif图片|*.gif";
+            //设置默认文件类型显示顺序
+            this.openFileDialogSSLR.FilterIndex = 1;
+            //保存对话框是否记忆上次打开的目录
+            this.openFileDialogSSLR.RestoreDirectory = true;
+            //设置是否允许多选
+            this.openFileDialogSSLR.Multiselect = true;
+            //按下确定选择的按钮
+            if (this.openFileDialogSSLR.ShowDialog() == DialogResult.OK)
+            {
+                foreach (string s in this.openFileDialogSSLR.FileNames)
+                {
+                    
+                } 
+            }
+        }
+
+        private void panel122_MouseHover(object sender, EventArgs e)
+        {
+            this.listViewDictionarySSZD.Visible = false;
+            this.listViewDictionaryQKZD.Visible = false;
+        }
+
+        //去增加协议界面
+        private void btnSSXGXY_add_control_Click(object sender, EventArgs e)
+        {
+            FormAddControl formAddControl = new FormAddControl();
+            //formAddControl.setDesc(-1, dictionary_parent_id, "添加字典", this.labelDictionaryShow.Text);
+            formAddControl.ShowDialog();
+            if (formAddControl.DialogResult == DialogResult.OK)
+            {
+                //this.setListViewDictionary(this.labelDictionaryShow.Text, dictionary_parent_id);//重新绑定
+            }
+        }
+
+        
 
     }
 

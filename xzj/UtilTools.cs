@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
 namespace xzj
 {
@@ -94,7 +95,6 @@ namespace xzj
             return r.IsMatch(email);
         }
 
-        //获取城市名称
-        //public static 
+       
     }
 }

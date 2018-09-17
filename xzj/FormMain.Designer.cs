@@ -30,115 +30,49 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea45 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend45 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series45 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea46 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend46 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series46 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea47 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend47 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series47 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea48 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend48 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series48 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea13 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend13 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea14 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend14 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea15 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend15 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea16 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend16 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelAccountShow = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnKSGL = new System.Windows.Forms.Button();
-            this.btnCJFX = new System.Windows.Forms.Button();
-            this.btnSJCX = new System.Windows.Forms.Button();
-            this.btnZDGL = new System.Windows.Forms.Button();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnSSLR = new System.Windows.Forms.Button();
-            this.flowLayoutForm = new System.Windows.Forms.FlowLayoutPanel();
-            this.picClose = new System.Windows.Forms.PictureBox();
-            this.picMax = new System.Windows.Forms.PictureBox();
-            this.picMin = new System.Windows.Forms.PictureBox();
+            this.btnSSZZ = new System.Windows.Forms.Button();
+            this.btnSJCX = new System.Windows.Forms.Button();
+            this.btnCJFX = new System.Windows.Forms.Button();
+            this.btnZDGL = new System.Windows.Forms.Button();
+            this.btnSSXGXY = new System.Windows.Forms.Button();
+            this.btnKSGL = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panelSSLR = new System.Windows.Forms.Panel();
-            this.panel77 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.btnSaveSSLR_SSZZ = new System.Windows.Forms.Button();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.panel79 = new System.Windows.Forms.Panel();
-            this.panel80 = new System.Windows.Forms.Panel();
-            this.tbSSLR_SSZZ_SFYS = new System.Windows.Forms.TextBox();
-            this.label112 = new System.Windows.Forms.Label();
-            this.panel81 = new System.Windows.Forms.Panel();
-            this.label113 = new System.Windows.Forms.Label();
-            this.panel82 = new System.Windows.Forms.Panel();
-            this.tbSSLR_SSZZ_YPZXSJ = new System.Windows.Forms.TextBox();
-            this.label114 = new System.Windows.Forms.Label();
-            this.panel83 = new System.Windows.Forms.Panel();
-            this.tbSSLR_SSZZ_XLL = new System.Windows.Forms.TextBox();
-            this.label115 = new System.Windows.Forms.Label();
-            this.panel84 = new System.Windows.Forms.Panel();
-            this.tbSSLR_SSZZ_XJQBXSJMY = new System.Windows.Forms.TextBox();
-            this.label116 = new System.Windows.Forms.Label();
-            this.panel85 = new System.Windows.Forms.Panel();
-            this.tbSSLR_SSZZ_SJQBXSJMY = new System.Windows.Forms.TextBox();
-            this.label117 = new System.Windows.Forms.Label();
-            this.panel86 = new System.Windows.Forms.Panel();
-            this.tbSSLR_SSZZ_JMYFW = new System.Windows.Forms.TextBox();
-            this.label118 = new System.Windows.Forms.Label();
-            this.panel87 = new System.Windows.Forms.Panel();
-            this.cbSSLR_SSZZ_SSFZ = new System.Windows.Forms.ComboBox();
-            this.label119 = new System.Windows.Forms.Label();
-            this.panel88 = new System.Windows.Forms.Panel();
-            this.cbSSLR_SSZZ_CCBWPFQK = new System.Windows.Forms.ComboBox();
-            this.label120 = new System.Windows.Forms.Label();
-            this.panel89 = new System.Windows.Forms.Panel();
-            this.cbSSLR_SSZZ_NWZWDLQK = new System.Windows.Forms.ComboBox();
-            this.label121 = new System.Windows.Forms.Label();
-            this.panel90 = new System.Windows.Forms.Panel();
-            this.cbSSLR_SSZZ_GRKZFS = new System.Windows.Forms.ComboBox();
-            this.label122 = new System.Windows.Forms.Label();
-            this.panel91 = new System.Windows.Forms.Panel();
-            this.cbSSLR_SSZZ_YWXBJMQZ = new System.Windows.Forms.ComboBox();
-            this.label123 = new System.Windows.Forms.Label();
-            this.panel92 = new System.Windows.Forms.Panel();
-            this.cbSSLR_SSZZ_YWBFZ = new System.Windows.Forms.ComboBox();
-            this.label124 = new System.Windows.Forms.Label();
-            this.panel93 = new System.Windows.Forms.Panel();
-            this.cbSSLR_SSZZ_YWCCBWPFGMQK = new System.Windows.Forms.ComboBox();
-            this.label125 = new System.Windows.Forms.Label();
-            this.panel94 = new System.Windows.Forms.Panel();
-            this.cbSSLR_SSZZ_YWXM = new System.Windows.Forms.ComboBox();
-            this.label126 = new System.Windows.Forms.Label();
-            this.panel95 = new System.Windows.Forms.Panel();
-            this.cbSSLR_SSZZ_YWXLBCT = new System.Windows.Forms.ComboBox();
-            this.label127 = new System.Windows.Forms.Label();
-            this.panel96 = new System.Windows.Forms.Panel();
-            this.cbSSLR_SSZZ_SFTC = new System.Windows.Forms.ComboBox();
-            this.label128 = new System.Windows.Forms.Label();
-            this.panel97 = new System.Windows.Forms.Panel();
-            this.label129 = new System.Windows.Forms.Label();
-            this.panel98 = new System.Windows.Forms.Panel();
-            this.cbSSLR_SSZZ_CCFS = new System.Windows.Forms.ComboBox();
-            this.label130 = new System.Windows.Forms.Label();
-            this.label131 = new System.Windows.Forms.Label();
-            this.panel99 = new System.Windows.Forms.Panel();
-            this.panel101 = new System.Windows.Forms.Panel();
-            this.cbSSLR_SSZZQX = new System.Windows.Forms.ComboBox();
-            this.label133 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel99 = new System.Windows.Forms.Panel();
+            this.paneSSBW_pic = new System.Windows.Forms.Panel();
+            this.panel128 = new System.Windows.Forms.Panel();
+            this.panel129 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.btnSSJLa_addPic = new System.Windows.Forms.Button();
+            this.cbSSLR_SSBW = new System.Windows.Forms.ComboBox();
+            this.label62 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel68 = new System.Windows.Forms.Panel();
             this.panel69 = new System.Windows.Forms.Panel();
-            this.panel44 = new System.Windows.Forms.Panel();
-            this.tbSSLR_QXFS = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.tbSSLR_ZS = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.tbSSLR_ZDYS = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
             this.panel43 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuSSLR_ZZLX = new System.Windows.Forms.ToolStripComboBox();
@@ -150,10 +84,10 @@
             this.menuSSLR_YDQ = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSSLR_JZ = new System.Windows.Forms.ToolStripMenuItem();
             this.rtbSSLR_SSJL = new System.Windows.Forms.RichTextBox();
-            this.btnRecordClear = new System.Windows.Forms.Button();
-            this.btnSaveSSJL = new System.Windows.Forms.Button();
             this.label104 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel87 = new System.Windows.Forms.Panel();
+            this.cbSSLR_SSZZQX = new System.Windows.Forms.ComboBox();
+            this.label52 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel71 = new System.Windows.Forms.Panel();
             this.labelSSLR_SSJL_ID = new System.Windows.Forms.Label();
@@ -173,11 +107,19 @@
             this.cbSSLR_SSDD = new System.Windows.Forms.ComboBox();
             this.label109 = new System.Windows.Forms.Label();
             this.label110 = new System.Windows.Forms.Label();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel98 = new System.Windows.Forms.Panel();
+            this.label24 = new System.Windows.Forms.Label();
+            this.tbSSLR_ZDYS = new System.Windows.Forms.TextBox();
+            this.tbSSLR_QXFS = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.tbSSLR_ZS = new System.Windows.Forms.TextBox();
+            this.panel44 = new System.Windows.Forms.Panel();
+            this.btnRecordClear = new System.Windows.Forms.Button();
+            this.btnSaveSSJL = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel58 = new System.Windows.Forms.Panel();
             this.tbSSLR_TEL = new System.Windows.Forms.TextBox();
@@ -295,6 +237,7 @@
             this.label146 = new System.Windows.Forms.Label();
             this.panel114 = new System.Windows.Forms.Panel();
             this.label143 = new System.Windows.Forms.Label();
+            this.all_zwcmzcjtzqk = new System.Windows.Forms.RichTextBox();
             this.panel113 = new System.Windows.Forms.Panel();
             this.all_ypzxsj = new System.Windows.Forms.Label();
             this.label144 = new System.Windows.Forms.Label();
@@ -411,7 +354,25 @@
             this.labelTJFX_PIE_1 = new System.Windows.Forms.Label();
             this.chartPie_1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panelKSGL = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.btnRoomEmpManager = new System.Windows.Forms.Button();
+            this.btnRoomInfoManager = new System.Windows.Forms.Button();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.panelRoomEmpManager = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnDeleteEmp = new System.Windows.Forms.Button();
+            this.btnEditEmp = new System.Windows.Forms.Button();
+            this.btnGoAddEmp = new System.Windows.Forms.Button();
+            this.panel36 = new System.Windows.Forms.Panel();
+            this.btnFindEmpByAccountAndName = new System.Windows.Forms.Button();
+            this.panel37 = new System.Windows.Forms.Panel();
+            this.tbFindEmpAccount = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.panel38 = new System.Windows.Forms.Panel();
+            this.tbFindEmpName = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.panel39 = new System.Windows.Forms.Panel();
+            this.dgvKSGL_EMP = new System.Windows.Forms.DataGridView();
             this.panelRoomInfoManager = new System.Windows.Forms.Panel();
             this.btnSaveRoom = new System.Windows.Forms.Button();
             this.panel30 = new System.Windows.Forms.Panel();
@@ -467,25 +428,73 @@
             this.panel35 = new System.Windows.Forms.Panel();
             this.tbRoomHispitorName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.panelRoomEmpManager = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnDeleteEmp = new System.Windows.Forms.Button();
-            this.btnEditEmp = new System.Windows.Forms.Button();
-            this.btnGoAddEmp = new System.Windows.Forms.Button();
-            this.panel36 = new System.Windows.Forms.Panel();
-            this.btnFindEmpByAccountAndName = new System.Windows.Forms.Button();
-            this.panel37 = new System.Windows.Forms.Panel();
-            this.tbFindEmpAccount = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.panel38 = new System.Windows.Forms.Panel();
-            this.tbFindEmpName = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.panel39 = new System.Windows.Forms.Panel();
-            this.dgvKSGL_EMP = new System.Windows.Forms.DataGridView();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.btnRoomEmpManager = new System.Windows.Forms.Button();
-            this.btnRoomInfoManager = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panelSSXGXY = new System.Windows.Forms.Panel();
+            this.panelSSZZ = new System.Windows.Forms.Panel();
+            this.panel82 = new System.Windows.Forms.Panel();
+            this.panel86 = new System.Windows.Forms.Panel();
+            this.label49 = new System.Windows.Forms.Label();
+            this.panel85 = new System.Windows.Forms.Panel();
+            this.label45 = new System.Windows.Forms.Label();
+            this.panel84 = new System.Windows.Forms.Panel();
+            this.label44 = new System.Windows.Forms.Label();
+            this.panel97 = new System.Windows.Forms.Panel();
+            this.label53 = new System.Windows.Forms.Label();
+            this.panel83 = new System.Windows.Forms.Panel();
+            this.label43 = new System.Windows.Forms.Label();
+            this.panel80 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.btnGoAddSSZZ = new System.Windows.Forms.Button();
+            this.panel79 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button3 = new System.Windows.Forms.Button();
+            this.panel77 = new System.Windows.Forms.Panel();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.panel96 = new System.Windows.Forms.Panel();
+            this.cbSSLR_SSZZ_SFTC = new System.Windows.Forms.ComboBox();
+            this.label128 = new System.Windows.Forms.Label();
+            this.btnSaveSSLR_SSZZ = new System.Windows.Forms.Button();
+            this.panel95 = new System.Windows.Forms.Panel();
+            this.cbSSLR_SSZZ_YWXLBCT = new System.Windows.Forms.ComboBox();
+            this.label127 = new System.Windows.Forms.Label();
+            this.panel81 = new System.Windows.Forms.Panel();
+            this.tbSSLR_SSZZ_ZWQMJTZQK = new System.Windows.Forms.RichTextBox();
+            this.label113 = new System.Windows.Forms.Label();
+            this.panel94 = new System.Windows.Forms.Panel();
+            this.cbSSLR_SSZZ_YWXM = new System.Windows.Forms.ComboBox();
+            this.label126 = new System.Windows.Forms.Label();
+            this.panel88 = new System.Windows.Forms.Panel();
+            this.cbSSLR_SSZZ_CCBWPFQK = new System.Windows.Forms.ComboBox();
+            this.label120 = new System.Windows.Forms.Label();
+            this.panel90 = new System.Windows.Forms.Panel();
+            this.cbSSLR_SSZZ_GRKZFS = new System.Windows.Forms.ComboBox();
+            this.label122 = new System.Windows.Forms.Label();
+            this.panel93 = new System.Windows.Forms.Panel();
+            this.cbSSLR_SSZZ_YWCCBWPFGMQK = new System.Windows.Forms.ComboBox();
+            this.label125 = new System.Windows.Forms.Label();
+            this.panel89 = new System.Windows.Forms.Panel();
+            this.cbSSLR_SSZZ_NWZWDLQK = new System.Windows.Forms.ComboBox();
+            this.label121 = new System.Windows.Forms.Label();
+            this.panel91 = new System.Windows.Forms.Panel();
+            this.cbSSLR_SSZZ_YWXBJMQZ = new System.Windows.Forms.ComboBox();
+            this.label123 = new System.Windows.Forms.Label();
+            this.panel92 = new System.Windows.Forms.Panel();
+            this.cbSSLR_SSZZ_YWBFZ = new System.Windows.Forms.ComboBox();
+            this.label124 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel42 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.panel127 = new System.Windows.Forms.Panel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label42 = new System.Windows.Forms.Label();
+            this.panel126 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label41 = new System.Windows.Forms.Label();
             this.panel122 = new System.Windows.Forms.Panel();
             this.labelNowDate = new System.Windows.Forms.Label();
             this.printDucumentSSCX_SSJL = new System.Drawing.Printing.PrintDocument();
@@ -496,51 +505,43 @@
             this.menuExitLogin = new System.Windows.Forms.ToolStripMenuItem();
             this.menuExit = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.tbSSLR_SSZZ_SFRQ = new System.Windows.Forms.DateTimePicker();
-            this.tbSSLR_SSZZ_ZWQMJTZQK = new System.Windows.Forms.RichTextBox();
-            this.all_zwcmzcjtzqk = new System.Windows.Forms.RichTextBox();
+            this.openFileDialogSSLR = new System.Windows.Forms.OpenFileDialog();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.btnSSXGXY_add_control = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.panel101 = new System.Windows.Forms.Panel();
+            this.label63 = new System.Windows.Forms.Label();
+            this.panel130 = new System.Windows.Forms.Panel();
+            this.panel131 = new System.Windows.Forms.Panel();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.flowLayoutForm = new System.Windows.Forms.FlowLayoutPanel();
+            this.picClose = new System.Windows.Forms.PictureBox();
+            this.picMax = new System.Windows.Forms.PictureBox();
+            this.picMin = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.flowLayoutForm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMax)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.flowLayoutPanel4.SuspendLayout();
             this.panelSSLR.SuspendLayout();
-            this.panel77.SuspendLayout();
-            this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            this.panel79.SuspendLayout();
-            this.panel80.SuspendLayout();
-            this.panel81.SuspendLayout();
-            this.panel82.SuspendLayout();
-            this.panel83.SuspendLayout();
-            this.panel84.SuspendLayout();
-            this.panel85.SuspendLayout();
-            this.panel86.SuspendLayout();
-            this.panel87.SuspendLayout();
-            this.panel88.SuspendLayout();
-            this.panel89.SuspendLayout();
-            this.panel90.SuspendLayout();
-            this.panel91.SuspendLayout();
-            this.panel92.SuspendLayout();
-            this.panel93.SuspendLayout();
-            this.panel94.SuspendLayout();
-            this.panel95.SuspendLayout();
-            this.panel96.SuspendLayout();
-            this.panel97.SuspendLayout();
-            this.panel98.SuspendLayout();
-            this.panel99.SuspendLayout();
-            this.panel101.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel99.SuspendLayout();
+            this.panel128.SuspendLayout();
+            this.panel129.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel68.SuspendLayout();
             this.panel69.SuspendLayout();
-            this.panel44.SuspendLayout();
             this.panel43.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel87.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel71.SuspendLayout();
             this.panel72.SuspendLayout();
@@ -548,10 +549,10 @@
             this.panel74.SuspendLayout();
             this.panel75.SuspendLayout();
             this.panel76.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panel7.SuspendLayout();
+            this.panel98.SuspendLayout();
+            this.panel44.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel11.SuspendLayout();
             this.panel58.SuspendLayout();
             this.panel59.SuspendLayout();
@@ -629,7 +630,15 @@
             this.panel57.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartPie_1)).BeginInit();
             this.panelKSGL.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
+            this.panelRoomEmpManager.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.panel36.SuspendLayout();
+            this.panel37.SuspendLayout();
+            this.panel38.SuspendLayout();
+            this.panel39.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKSGL_EMP)).BeginInit();
             this.panelRoomInfoManager.SuspendLayout();
             this.panel30.SuspendLayout();
             this.panel32.SuspendLayout();
@@ -652,17 +661,52 @@
             this.panel17.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel35.SuspendLayout();
-            this.panelRoomEmpManager.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.panel36.SuspendLayout();
-            this.panel37.SuspendLayout();
-            this.panel38.SuspendLayout();
-            this.panel39.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKSGL_EMP)).BeginInit();
-            this.panel13.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panelSSXGXY.SuspendLayout();
+            this.panelSSZZ.SuspendLayout();
+            this.panel82.SuspendLayout();
+            this.panel86.SuspendLayout();
+            this.panel85.SuspendLayout();
+            this.panel84.SuspendLayout();
+            this.panel97.SuspendLayout();
+            this.panel83.SuspendLayout();
+            this.panel80.SuspendLayout();
+            this.panel79.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel77.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.panel96.SuspendLayout();
+            this.panel95.SuspendLayout();
+            this.panel81.SuspendLayout();
+            this.panel94.SuspendLayout();
+            this.panel88.SuspendLayout();
+            this.panel90.SuspendLayout();
+            this.panel93.SuspendLayout();
+            this.panel89.SuspendLayout();
+            this.panel91.SuspendLayout();
+            this.panel92.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel42.SuspendLayout();
+            this.panel127.SuspendLayout();
+            this.panel126.SuspendLayout();
             this.panel122.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
+            this.panel101.SuspendLayout();
+            this.panel130.SuspendLayout();
+            this.panel131.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.flowLayoutForm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMax)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -692,76 +736,27 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel2.Controls.Add(this.btnKSGL);
-            this.panel2.Controls.Add(this.btnCJFX);
-            this.panel2.Controls.Add(this.btnSJCX);
-            this.panel2.Controls.Add(this.btnZDGL);
-            this.panel2.Controls.Add(this.btnSSLR);
+            this.panel2.Controls.Add(this.flowLayoutPanel4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 98);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1300, 36);
             this.panel2.TabIndex = 15;
             // 
-            // btnKSGL
+            // flowLayoutPanel4
             // 
-            this.btnKSGL.BackColor = System.Drawing.Color.MediumBlue;
-            this.btnKSGL.FlatAppearance.BorderSize = 0;
-            this.btnKSGL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKSGL.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnKSGL.ForeColor = System.Drawing.Color.White;
-            this.btnKSGL.Location = new System.Drawing.Point(509, 0);
-            this.btnKSGL.Name = "btnKSGL";
-            this.btnKSGL.Size = new System.Drawing.Size(131, 36);
-            this.btnKSGL.TabIndex = 4;
-            this.btnKSGL.Text = "科室管理";
-            this.btnKSGL.UseVisualStyleBackColor = false;
-            this.btnKSGL.Click += new System.EventHandler(this.btnKSGL_Click);
-            // 
-            // btnCJFX
-            // 
-            this.btnCJFX.BackColor = System.Drawing.Color.MediumBlue;
-            this.btnCJFX.FlatAppearance.BorderSize = 0;
-            this.btnCJFX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCJFX.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnCJFX.ForeColor = System.Drawing.Color.White;
-            this.btnCJFX.Location = new System.Drawing.Point(384, 0);
-            this.btnCJFX.Name = "btnCJFX";
-            this.btnCJFX.Size = new System.Drawing.Size(131, 36);
-            this.btnCJFX.TabIndex = 3;
-            this.btnCJFX.Text = "统计分析";
-            this.btnCJFX.UseVisualStyleBackColor = false;
-            this.btnCJFX.Click += new System.EventHandler(this.btnCJFX_Click);
-            // 
-            // btnSJCX
-            // 
-            this.btnSJCX.BackColor = System.Drawing.Color.MediumBlue;
-            this.btnSJCX.FlatAppearance.BorderSize = 0;
-            this.btnSJCX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSJCX.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnSJCX.ForeColor = System.Drawing.Color.White;
-            this.btnSJCX.Location = new System.Drawing.Point(256, 0);
-            this.btnSJCX.Name = "btnSJCX";
-            this.btnSJCX.Size = new System.Drawing.Size(131, 36);
-            this.btnSJCX.TabIndex = 2;
-            this.btnSJCX.Text = "数据查询";
-            this.btnSJCX.UseVisualStyleBackColor = false;
-            this.btnSJCX.Click += new System.EventHandler(this.btnSJCX_Click);
-            // 
-            // btnZDGL
-            // 
-            this.btnZDGL.BackColor = System.Drawing.Color.MediumBlue;
-            this.btnZDGL.FlatAppearance.BorderSize = 0;
-            this.btnZDGL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnZDGL.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnZDGL.ForeColor = System.Drawing.Color.White;
-            this.btnZDGL.Location = new System.Drawing.Point(128, 0);
-            this.btnZDGL.Name = "btnZDGL";
-            this.btnZDGL.Size = new System.Drawing.Size(131, 36);
-            this.btnZDGL.TabIndex = 1;
-            this.btnZDGL.Text = "字典管理";
-            this.btnZDGL.UseVisualStyleBackColor = false;
-            this.btnZDGL.Click += new System.EventHandler(this.btnZDGL_Click);
+            this.flowLayoutPanel4.Controls.Add(this.btnSSLR);
+            this.flowLayoutPanel4.Controls.Add(this.btnSSZZ);
+            this.flowLayoutPanel4.Controls.Add(this.btnSJCX);
+            this.flowLayoutPanel4.Controls.Add(this.btnCJFX);
+            this.flowLayoutPanel4.Controls.Add(this.btnZDGL);
+            this.flowLayoutPanel4.Controls.Add(this.btnSSXGXY);
+            this.flowLayoutPanel4.Controls.Add(this.btnKSGL);
+            this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(1300, 36);
+            this.flowLayoutPanel4.TabIndex = 0;
             // 
             // btnSSLR
             // 
@@ -771,6 +766,7 @@
             this.btnSSLR.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSSLR.ForeColor = System.Drawing.Color.White;
             this.btnSSLR.Location = new System.Drawing.Point(0, 0);
+            this.btnSSLR.Margin = new System.Windows.Forms.Padding(0);
             this.btnSSLR.Name = "btnSSLR";
             this.btnSSLR.Size = new System.Drawing.Size(131, 36);
             this.btnSSLR.TabIndex = 0;
@@ -778,50 +774,101 @@
             this.btnSSLR.UseVisualStyleBackColor = false;
             this.btnSSLR.Click += new System.EventHandler(this.btnSSLR_Click);
             // 
-            // flowLayoutForm
+            // btnSSZZ
             // 
-            this.flowLayoutForm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutForm.BackColor = System.Drawing.Color.SteelBlue;
-            this.flowLayoutForm.BackgroundImage = global::xzj.Properties.Resources.mainToRight;
-            this.flowLayoutForm.Controls.Add(this.picClose);
-            this.flowLayoutForm.Controls.Add(this.picMax);
-            this.flowLayoutForm.Controls.Add(this.picMin);
-            this.flowLayoutForm.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutForm.Location = new System.Drawing.Point(1186, 0);
-            this.flowLayoutForm.Name = "flowLayoutForm";
-            this.flowLayoutForm.Size = new System.Drawing.Size(102, 25);
-            this.flowLayoutForm.TabIndex = 6;
-            this.flowLayoutForm.Visible = false;
+            this.btnSSZZ.BackColor = System.Drawing.Color.MediumBlue;
+            this.btnSSZZ.FlatAppearance.BorderSize = 0;
+            this.btnSSZZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSSZZ.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSSZZ.ForeColor = System.Drawing.Color.White;
+            this.btnSSZZ.Location = new System.Drawing.Point(131, 0);
+            this.btnSSZZ.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSSZZ.Name = "btnSSZZ";
+            this.btnSSZZ.Size = new System.Drawing.Size(131, 36);
+            this.btnSSZZ.TabIndex = 5;
+            this.btnSSZZ.Text = "手术追踪";
+            this.btnSSZZ.UseVisualStyleBackColor = false;
+            this.btnSSZZ.Click += new System.EventHandler(this.btnSSZZ_Click);
             // 
-            // picClose
+            // btnSJCX
             // 
-            this.picClose.BackColor = System.Drawing.Color.Transparent;
-            this.picClose.Location = new System.Drawing.Point(74, 3);
-            this.picClose.Name = "picClose";
-            this.picClose.Size = new System.Drawing.Size(25, 19);
-            this.picClose.TabIndex = 0;
-            this.picClose.TabStop = false;
-            this.picClose.Click += new System.EventHandler(this.picClose_Click);
+            this.btnSJCX.BackColor = System.Drawing.Color.MediumBlue;
+            this.btnSJCX.FlatAppearance.BorderSize = 0;
+            this.btnSJCX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSJCX.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSJCX.ForeColor = System.Drawing.Color.White;
+            this.btnSJCX.Location = new System.Drawing.Point(262, 0);
+            this.btnSJCX.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSJCX.Name = "btnSJCX";
+            this.btnSJCX.Size = new System.Drawing.Size(131, 36);
+            this.btnSJCX.TabIndex = 2;
+            this.btnSJCX.Text = "数据查询";
+            this.btnSJCX.UseVisualStyleBackColor = false;
+            this.btnSJCX.Click += new System.EventHandler(this.btnSJCX_Click);
             // 
-            // picMax
+            // btnCJFX
             // 
-            this.picMax.BackColor = System.Drawing.Color.Transparent;
-            this.picMax.Location = new System.Drawing.Point(43, 3);
-            this.picMax.Name = "picMax";
-            this.picMax.Size = new System.Drawing.Size(25, 19);
-            this.picMax.TabIndex = 1;
-            this.picMax.TabStop = false;
-            this.picMax.Click += new System.EventHandler(this.picMax_Click);
+            this.btnCJFX.BackColor = System.Drawing.Color.MediumBlue;
+            this.btnCJFX.FlatAppearance.BorderSize = 0;
+            this.btnCJFX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCJFX.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnCJFX.ForeColor = System.Drawing.Color.White;
+            this.btnCJFX.Location = new System.Drawing.Point(393, 0);
+            this.btnCJFX.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCJFX.Name = "btnCJFX";
+            this.btnCJFX.Size = new System.Drawing.Size(131, 36);
+            this.btnCJFX.TabIndex = 3;
+            this.btnCJFX.Text = "统计分析";
+            this.btnCJFX.UseVisualStyleBackColor = false;
+            this.btnCJFX.Click += new System.EventHandler(this.btnCJFX_Click);
             // 
-            // picMin
+            // btnZDGL
             // 
-            this.picMin.BackColor = System.Drawing.Color.Transparent;
-            this.picMin.Location = new System.Drawing.Point(12, 3);
-            this.picMin.Name = "picMin";
-            this.picMin.Size = new System.Drawing.Size(25, 19);
-            this.picMin.TabIndex = 2;
-            this.picMin.TabStop = false;
-            this.picMin.Click += new System.EventHandler(this.picMin_Click);
+            this.btnZDGL.BackColor = System.Drawing.Color.MediumBlue;
+            this.btnZDGL.FlatAppearance.BorderSize = 0;
+            this.btnZDGL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnZDGL.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnZDGL.ForeColor = System.Drawing.Color.White;
+            this.btnZDGL.Location = new System.Drawing.Point(524, 0);
+            this.btnZDGL.Margin = new System.Windows.Forms.Padding(0);
+            this.btnZDGL.Name = "btnZDGL";
+            this.btnZDGL.Size = new System.Drawing.Size(131, 36);
+            this.btnZDGL.TabIndex = 1;
+            this.btnZDGL.Text = "字典管理";
+            this.btnZDGL.UseVisualStyleBackColor = false;
+            this.btnZDGL.Click += new System.EventHandler(this.btnZDGL_Click);
+            // 
+            // btnSSXGXY
+            // 
+            this.btnSSXGXY.BackColor = System.Drawing.Color.MediumBlue;
+            this.btnSSXGXY.FlatAppearance.BorderSize = 0;
+            this.btnSSXGXY.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSSXGXY.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSSXGXY.ForeColor = System.Drawing.Color.White;
+            this.btnSSXGXY.Location = new System.Drawing.Point(655, 0);
+            this.btnSSXGXY.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSSXGXY.Name = "btnSSXGXY";
+            this.btnSSXGXY.Size = new System.Drawing.Size(131, 36);
+            this.btnSSXGXY.TabIndex = 6;
+            this.btnSSXGXY.Text = "手术相关协议";
+            this.btnSSXGXY.UseVisualStyleBackColor = false;
+            this.btnSSXGXY.Click += new System.EventHandler(this.btnSSXGXY_Click);
+            // 
+            // btnKSGL
+            // 
+            this.btnKSGL.BackColor = System.Drawing.Color.MediumBlue;
+            this.btnKSGL.FlatAppearance.BorderSize = 0;
+            this.btnKSGL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKSGL.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnKSGL.ForeColor = System.Drawing.Color.White;
+            this.btnKSGL.Location = new System.Drawing.Point(786, 0);
+            this.btnKSGL.Margin = new System.Windows.Forms.Padding(0);
+            this.btnKSGL.Name = "btnKSGL";
+            this.btnKSGL.Size = new System.Drawing.Size(131, 36);
+            this.btnKSGL.TabIndex = 4;
+            this.btnKSGL.Text = "科室管理";
+            this.btnKSGL.UseVisualStyleBackColor = false;
+            this.btnKSGL.Click += new System.EventHandler(this.btnKSGL_Click);
             // 
             // button1
             // 
@@ -837,30 +884,6 @@
             this.button1.Text = "析之助手术登记管理系统";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::xzj.Properties.Resources.logo1;
-            this.pictureBox3.Location = new System.Drawing.Point(0, -1);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(120, 98);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 12;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Image = global::xzj.Properties.Resources.mainTop2;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1300, 137);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -874,7 +897,6 @@
             // 
             this.panelSSLR.AutoScroll = true;
             this.panelSSLR.BackColor = System.Drawing.Color.White;
-            this.panelSSLR.Controls.Add(this.panel77);
             this.panelSSLR.Controls.Add(this.panel6);
             this.panelSSLR.Controls.Add(this.panel5);
             this.panelSSLR.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -884,787 +906,186 @@
             this.panelSSLR.Size = new System.Drawing.Size(1280, 523);
             this.panelSSLR.TabIndex = 30;
             // 
-            // panel77
-            // 
-            this.panel77.Controls.Add(this.button7);
-            this.panel77.Controls.Add(this.btnSaveSSLR_SSZZ);
-            this.panel77.Controls.Add(this.panel8);
-            this.panel77.Controls.Add(this.pictureBox10);
-            this.panel77.Controls.Add(this.panel79);
-            this.panel77.Controls.Add(this.panel99);
-            this.panel77.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel77.Location = new System.Drawing.Point(10, 1014);
-            this.panel77.Name = "panel77";
-            this.panel77.Size = new System.Drawing.Size(1243, 499);
-            this.panel77.TabIndex = 7;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("宋体", 12F);
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(576, 460);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(141, 23);
-            this.button7.TabIndex = 33;
-            this.button7.Text = "关闭";
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // btnSaveSSLR_SSZZ
-            // 
-            this.btnSaveSSLR_SSZZ.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnSaveSSLR_SSZZ.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnSaveSSLR_SSZZ.FlatAppearance.BorderSize = 0;
-            this.btnSaveSSLR_SSZZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveSSLR_SSZZ.Font = new System.Drawing.Font("宋体", 12F);
-            this.btnSaveSSLR_SSZZ.ForeColor = System.Drawing.Color.White;
-            this.btnSaveSSLR_SSZZ.Location = new System.Drawing.Point(419, 459);
-            this.btnSaveSSLR_SSZZ.Name = "btnSaveSSLR_SSZZ";
-            this.btnSaveSSLR_SSZZ.Size = new System.Drawing.Size(151, 23);
-            this.btnSaveSSLR_SSZZ.TabIndex = 32;
-            this.btnSaveSSLR_SSZZ.Text = "保存";
-            this.btnSaveSSLR_SSZZ.UseVisualStyleBackColor = false;
-            this.btnSaveSSLR_SSZZ.Click += new System.EventHandler(this.btnSaveSSLR_SSZZ_Click);
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.label2);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1243, 24);
-            this.panel8.TabIndex = 31;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.label2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(3);
-            this.label2.Size = new System.Drawing.Size(82, 22);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "手术追踪";
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox10.Location = new System.Drawing.Point(-2, 86);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(1274, 10);
-            this.pictureBox10.TabIndex = 31;
-            this.pictureBox10.TabStop = false;
-            // 
-            // panel79
-            // 
-            this.panel79.Controls.Add(this.panel80);
-            this.panel79.Controls.Add(this.panel81);
-            this.panel79.Controls.Add(this.panel82);
-            this.panel79.Controls.Add(this.panel83);
-            this.panel79.Controls.Add(this.panel84);
-            this.panel79.Controls.Add(this.panel85);
-            this.panel79.Controls.Add(this.panel86);
-            this.panel79.Controls.Add(this.panel87);
-            this.panel79.Controls.Add(this.panel88);
-            this.panel79.Controls.Add(this.panel89);
-            this.panel79.Controls.Add(this.panel90);
-            this.panel79.Controls.Add(this.panel91);
-            this.panel79.Controls.Add(this.panel92);
-            this.panel79.Controls.Add(this.panel93);
-            this.panel79.Controls.Add(this.panel94);
-            this.panel79.Controls.Add(this.panel95);
-            this.panel79.Controls.Add(this.panel96);
-            this.panel79.Controls.Add(this.panel97);
-            this.panel79.Controls.Add(this.panel98);
-            this.panel79.Controls.Add(this.label131);
-            this.panel79.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.panel79.Location = new System.Drawing.Point(23, 102);
-            this.panel79.Name = "panel79";
-            this.panel79.Size = new System.Drawing.Size(1200, 345);
-            this.panel79.TabIndex = 30;
-            // 
-            // panel80
-            // 
-            this.panel80.Controls.Add(this.tbSSLR_SSZZ_SFYS);
-            this.panel80.Controls.Add(this.label112);
-            this.panel80.Location = new System.Drawing.Point(918, 308);
-            this.panel80.Name = "panel80";
-            this.panel80.Size = new System.Drawing.Size(268, 34);
-            this.panel80.TabIndex = 31;
-            // 
-            // tbSSLR_SSZZ_SFYS
-            // 
-            this.tbSSLR_SSZZ_SFYS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbSSLR_SSZZ_SFYS.Location = new System.Drawing.Point(144, 0);
-            this.tbSSLR_SSZZ_SFYS.Name = "tbSSLR_SSZZ_SFYS";
-            this.tbSSLR_SSZZ_SFYS.Size = new System.Drawing.Size(116, 26);
-            this.tbSSLR_SSZZ_SFYS.TabIndex = 6;
-            // 
-            // label112
-            // 
-            this.label112.AutoSize = true;
-            this.label112.Location = new System.Drawing.Point(55, 3);
-            this.label112.Name = "label112";
-            this.label112.Size = new System.Drawing.Size(88, 16);
-            this.label112.TabIndex = 1;
-            this.label112.Text = "随访医生：";
-            // 
-            // panel81
-            // 
-            this.panel81.Controls.Add(this.tbSSLR_SSZZ_ZWQMJTZQK);
-            this.panel81.Controls.Add(this.label113);
-            this.panel81.Location = new System.Drawing.Point(3, 224);
-            this.panel81.Name = "panel81";
-            this.panel81.Size = new System.Drawing.Size(869, 104);
-            this.panel81.TabIndex = 40;
-            // 
-            // label113
-            // 
-            this.label113.AutoSize = true;
-            this.label113.Location = new System.Drawing.Point(3, 5);
-            this.label113.Name = "label113";
-            this.label113.Size = new System.Drawing.Size(168, 16);
-            this.label113.TabIndex = 1;
-            this.label113.Text = "自我触摸及听诊情况：";
-            // 
-            // panel82
-            // 
-            this.panel82.Controls.Add(this.tbSSLR_SSZZ_YPZXSJ);
-            this.panel82.Controls.Add(this.label114);
-            this.panel82.Location = new System.Drawing.Point(322, 188);
-            this.panel82.Name = "panel82";
-            this.panel82.Size = new System.Drawing.Size(300, 34);
-            this.panel82.TabIndex = 37;
-            // 
-            // tbSSLR_SSZZ_YPZXSJ
-            // 
-            this.tbSSLR_SSZZ_YPZXSJ.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbSSLR_SSZZ_YPZXSJ.Location = new System.Drawing.Point(168, 2);
-            this.tbSSLR_SSZZ_YPZXSJ.Name = "tbSSLR_SSZZ_YPZXSJ";
-            this.tbSSLR_SSZZ_YPZXSJ.Size = new System.Drawing.Size(116, 26);
-            this.tbSSLR_SSZZ_YPZXSJ.TabIndex = 9;
-            this.tbSSLR_SSZZ_YPZXSJ.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.decimal_KeyPress);
-            // 
-            // label114
-            // 
-            this.label114.AutoSize = true;
-            this.label114.Location = new System.Drawing.Point(14, 2);
-            this.label114.Name = "label114";
-            this.label114.Size = new System.Drawing.Size(160, 16);
-            this.label114.TabIndex = 1;
-            this.label114.Text = "压迫止血时间(min)：";
-            // 
-            // panel83
-            // 
-            this.panel83.Controls.Add(this.tbSSLR_SSZZ_XLL);
-            this.panel83.Controls.Add(this.label115);
-            this.panel83.Location = new System.Drawing.Point(8, 184);
-            this.panel83.Name = "panel83";
-            this.panel83.Size = new System.Drawing.Size(267, 34);
-            this.panel83.TabIndex = 36;
-            // 
-            // tbSSLR_SSZZ_XLL
-            // 
-            this.tbSSLR_SSZZ_XLL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbSSLR_SSZZ_XLL.Location = new System.Drawing.Point(149, 2);
-            this.tbSSLR_SSZZ_XLL.Name = "tbSSLR_SSZZ_XLL";
-            this.tbSSLR_SSZZ_XLL.Size = new System.Drawing.Size(116, 26);
-            this.tbSSLR_SSZZ_XLL.TabIndex = 8;
-            this.tbSSLR_SSZZ_XLL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.decimal_KeyPress);
-            // 
-            // label115
-            // 
-            this.label115.AutoSize = true;
-            this.label115.Location = new System.Drawing.Point(13, 1);
-            this.label115.Name = "label115";
-            this.label115.Size = new System.Drawing.Size(136, 16);
-            this.label115.TabIndex = 1;
-            this.label115.Text = "血流量(ml/min)：";
-            // 
-            // panel84
-            // 
-            this.panel84.Controls.Add(this.tbSSLR_SSZZ_XJQBXSJMY);
-            this.panel84.Controls.Add(this.label116);
-            this.panel84.Location = new System.Drawing.Point(678, 153);
-            this.panel84.Name = "panel84";
-            this.panel84.Size = new System.Drawing.Size(350, 34);
-            this.panel84.TabIndex = 39;
-            // 
-            // tbSSLR_SSZZ_XJQBXSJMY
-            // 
-            this.tbSSLR_SSZZ_XJQBXSJMY.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbSSLR_SSZZ_XJQBXSJMY.Location = new System.Drawing.Point(218, 1);
-            this.tbSSLR_SSZZ_XJQBXSJMY.Name = "tbSSLR_SSZZ_XJQBXSJMY";
-            this.tbSSLR_SSZZ_XJQBXSJMY.Size = new System.Drawing.Size(116, 26);
-            this.tbSSLR_SSZZ_XJQBXSJMY.TabIndex = 9;
-            this.tbSSLR_SSZZ_XJQBXSJMY.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.decimal_KeyPress);
-            // 
-            // label116
-            // 
-            this.label116.AutoSize = true;
-            this.label116.Location = new System.Drawing.Point(7, 3);
-            this.label116.Name = "label116";
-            this.label116.Size = new System.Drawing.Size(216, 16);
-            this.label116.TabIndex = 1;
-            this.label116.Text = "下机前半小时静脉压(mmHg)：";
-            // 
-            // panel85
-            // 
-            this.panel85.Controls.Add(this.tbSSLR_SSZZ_SJQBXSJMY);
-            this.panel85.Controls.Add(this.label117);
-            this.panel85.Location = new System.Drawing.Point(279, 153);
-            this.panel85.Name = "panel85";
-            this.panel85.Size = new System.Drawing.Size(379, 34);
-            this.panel85.TabIndex = 38;
-            // 
-            // tbSSLR_SSZZ_SJQBXSJMY
-            // 
-            this.tbSSLR_SSZZ_SJQBXSJMY.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbSSLR_SSZZ_SJQBXSJMY.Location = new System.Drawing.Point(211, 3);
-            this.tbSSLR_SSZZ_SJQBXSJMY.Name = "tbSSLR_SSZZ_SJQBXSJMY";
-            this.tbSSLR_SSZZ_SJQBXSJMY.Size = new System.Drawing.Size(116, 26);
-            this.tbSSLR_SSZZ_SJQBXSJMY.TabIndex = 8;
-            this.tbSSLR_SSZZ_SJQBXSJMY.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.decimal_KeyPress);
-            // 
-            // label117
-            // 
-            this.label117.AutoSize = true;
-            this.label117.Location = new System.Drawing.Point(1, 4);
-            this.label117.Name = "label117";
-            this.label117.Size = new System.Drawing.Size(216, 16);
-            this.label117.TabIndex = 1;
-            this.label117.Text = "上机前半小时静脉压(mmHg)：";
-            // 
-            // panel86
-            // 
-            this.panel86.Controls.Add(this.tbSSLR_SSZZ_JMYFW);
-            this.panel86.Controls.Add(this.label118);
-            this.panel86.Location = new System.Drawing.Point(0, 153);
-            this.panel86.Name = "panel86";
-            this.panel86.Size = new System.Drawing.Size(275, 34);
-            this.panel86.TabIndex = 35;
-            // 
-            // tbSSLR_SSZZ_JMYFW
-            // 
-            this.tbSSLR_SSZZ_JMYFW.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbSSLR_SSZZ_JMYFW.Location = new System.Drawing.Point(157, 2);
-            this.tbSSLR_SSZZ_JMYFW.Name = "tbSSLR_SSZZ_JMYFW";
-            this.tbSSLR_SSZZ_JMYFW.Size = new System.Drawing.Size(116, 26);
-            this.tbSSLR_SSZZ_JMYFW.TabIndex = 7;
-            // 
-            // label118
-            // 
-            this.label118.AutoSize = true;
-            this.label118.Location = new System.Drawing.Point(5, 4);
-            this.label118.Name = "label118";
-            this.label118.Size = new System.Drawing.Size(152, 16);
-            this.label118.TabIndex = 1;
-            this.label118.Text = "静脉压范围(mmHg)：";
-            // 
-            // panel87
-            // 
-            this.panel87.Controls.Add(this.cbSSLR_SSZZ_SSFZ);
-            this.panel87.Controls.Add(this.label119);
-            this.panel87.Location = new System.Drawing.Point(716, 124);
-            this.panel87.Name = "panel87";
-            this.panel87.Size = new System.Drawing.Size(330, 30);
-            this.panel87.TabIndex = 38;
-            // 
-            // cbSSLR_SSZZ_SSFZ
-            // 
-            this.cbSSLR_SSZZ_SSFZ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSSLR_SSZZ_SSFZ.FormattingEnabled = true;
-            this.cbSSLR_SSZZ_SSFZ.Items.AddRange(new object[] {
-            "是",
-            "否"});
-            this.cbSSLR_SSZZ_SSFZ.Location = new System.Drawing.Point(180, 0);
-            this.cbSSLR_SSZZ_SSFZ.Name = "cbSSLR_SSZZ_SSFZ";
-            this.cbSSLR_SSZZ_SSFZ.Size = new System.Drawing.Size(115, 24);
-            this.cbSSLR_SSZZ_SSFZ.TabIndex = 2;
-            // 
-            // label119
-            // 
-            this.label119.AutoSize = true;
-            this.label119.Location = new System.Drawing.Point(97, 3);
-            this.label119.Name = "label119";
-            this.label119.Size = new System.Drawing.Size(88, 16);
-            this.label119.TabIndex = 1;
-            this.label119.Text = "是否复诊：";
-            // 
-            // panel88
-            // 
-            this.panel88.Controls.Add(this.cbSSLR_SSZZ_CCBWPFQK);
-            this.panel88.Controls.Add(this.label120);
-            this.panel88.Location = new System.Drawing.Point(342, 121);
-            this.panel88.Name = "panel88";
-            this.panel88.Size = new System.Drawing.Size(323, 34);
-            this.panel88.TabIndex = 37;
-            // 
-            // cbSSLR_SSZZ_CCBWPFQK
-            // 
-            this.cbSSLR_SSZZ_CCBWPFQK.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSSLR_SSZZ_CCBWPFQK.FormattingEnabled = true;
-            this.cbSSLR_SSZZ_CCBWPFQK.Location = new System.Drawing.Point(149, 0);
-            this.cbSSLR_SSZZ_CCBWPFQK.Name = "cbSSLR_SSZZ_CCBWPFQK";
-            this.cbSSLR_SSZZ_CCBWPFQK.Size = new System.Drawing.Size(171, 24);
-            this.cbSSLR_SSZZ_CCBWPFQK.TabIndex = 2;
-            // 
-            // label120
-            // 
-            this.label120.AutoSize = true;
-            this.label120.Location = new System.Drawing.Point(3, 3);
-            this.label120.Name = "label120";
-            this.label120.Size = new System.Drawing.Size(152, 16);
-            this.label120.TabIndex = 1;
-            this.label120.Text = "穿刺部位皮肤情况：";
-            // 
-            // panel89
-            // 
-            this.panel89.Controls.Add(this.cbSSLR_SSZZ_NWZWDLQK);
-            this.panel89.Controls.Add(this.label121);
-            this.panel89.Location = new System.Drawing.Point(4, 120);
-            this.panel89.Name = "panel89";
-            this.panel89.Size = new System.Drawing.Size(326, 34);
-            this.panel89.TabIndex = 37;
-            // 
-            // cbSSLR_SSZZ_NWZWDLQK
-            // 
-            this.cbSSLR_SSZZ_NWZWDLQK.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSSLR_SSZZ_NWZWDLQK.FormattingEnabled = true;
-            this.cbSSLR_SSZZ_NWZWDLQK.Location = new System.Drawing.Point(153, 2);
-            this.cbSSLR_SSZZ_NWZWDLQK.Name = "cbSSLR_SSZZ_NWZWDLQK";
-            this.cbSSLR_SSZZ_NWZWDLQK.Size = new System.Drawing.Size(170, 24);
-            this.cbSSLR_SSZZ_NWZWDLQK.TabIndex = 2;
-            // 
-            // label121
-            // 
-            this.label121.AutoSize = true;
-            this.label121.Location = new System.Drawing.Point(1, 5);
-            this.label121.Name = "label121";
-            this.label121.Size = new System.Drawing.Size(152, 16);
-            this.label121.TabIndex = 1;
-            this.label121.Text = "内痿自我锻炼情况：";
-            // 
-            // panel90
-            // 
-            this.panel90.Controls.Add(this.cbSSLR_SSZZ_GRKZFS);
-            this.panel90.Controls.Add(this.label122);
-            this.panel90.Location = new System.Drawing.Point(764, 90);
-            this.panel90.Name = "panel90";
-            this.panel90.Size = new System.Drawing.Size(361, 34);
-            this.panel90.TabIndex = 36;
-            // 
-            // cbSSLR_SSZZ_GRKZFS
-            // 
-            this.cbSSLR_SSZZ_GRKZFS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSSLR_SSZZ_GRKZFS.FormattingEnabled = true;
-            this.cbSSLR_SSZZ_GRKZFS.Location = new System.Drawing.Point(132, 0);
-            this.cbSSLR_SSZZ_GRKZFS.Name = "cbSSLR_SSZZ_GRKZFS";
-            this.cbSSLR_SSZZ_GRKZFS.Size = new System.Drawing.Size(226, 24);
-            this.cbSSLR_SSZZ_GRKZFS.TabIndex = 2;
-            // 
-            // label122
-            // 
-            this.label122.AutoSize = true;
-            this.label122.Location = new System.Drawing.Point(17, 5);
-            this.label122.Name = "label122";
-            this.label122.Size = new System.Drawing.Size(120, 16);
-            this.label122.TabIndex = 1;
-            this.label122.Text = "感染控制方式：";
-            // 
-            // panel91
-            // 
-            this.panel91.Controls.Add(this.cbSSLR_SSZZ_YWXBJMQZ);
-            this.panel91.Controls.Add(this.label123);
-            this.panel91.Location = new System.Drawing.Point(342, 88);
-            this.panel91.Name = "panel91";
-            this.panel91.Size = new System.Drawing.Size(280, 34);
-            this.panel91.TabIndex = 35;
-            // 
-            // cbSSLR_SSZZ_YWXBJMQZ
-            // 
-            this.cbSSLR_SSZZ_YWXBJMQZ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSSLR_SSZZ_YWXBJMQZ.FormattingEnabled = true;
-            this.cbSSLR_SSZZ_YWXBJMQZ.Items.AddRange(new object[] {
-            "有",
-            "无"});
-            this.cbSSLR_SSZZ_YWXBJMQZ.Location = new System.Drawing.Point(148, 0);
-            this.cbSSLR_SSZZ_YWXBJMQZ.Name = "cbSSLR_SSZZ_YWXBJMQZ";
-            this.cbSSLR_SSZZ_YWXBJMQZ.Size = new System.Drawing.Size(115, 24);
-            this.cbSSLR_SSZZ_YWXBJMQZ.TabIndex = 2;
-            // 
-            // label123
-            // 
-            this.label123.AutoSize = true;
-            this.label123.Location = new System.Drawing.Point(3, 3);
-            this.label123.Name = "label123";
-            this.label123.Size = new System.Drawing.Size(152, 16);
-            this.label123.TabIndex = 1;
-            this.label123.Text = "有无胸壁静脉曲张：";
-            // 
-            // panel92
-            // 
-            this.panel92.Controls.Add(this.cbSSLR_SSZZ_YWBFZ);
-            this.panel92.Controls.Add(this.label124);
-            this.panel92.Location = new System.Drawing.Point(12, 88);
-            this.panel92.Name = "panel92";
-            this.panel92.Size = new System.Drawing.Size(267, 34);
-            this.panel92.TabIndex = 34;
-            // 
-            // cbSSLR_SSZZ_YWBFZ
-            // 
-            this.cbSSLR_SSZZ_YWBFZ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSSLR_SSZZ_YWBFZ.FormattingEnabled = true;
-            this.cbSSLR_SSZZ_YWBFZ.Items.AddRange(new object[] {
-            "有",
-            "无"});
-            this.cbSSLR_SSZZ_YWBFZ.Location = new System.Drawing.Point(145, 0);
-            this.cbSSLR_SSZZ_YWBFZ.Name = "cbSSLR_SSZZ_YWBFZ";
-            this.cbSSLR_SSZZ_YWBFZ.Size = new System.Drawing.Size(115, 24);
-            this.cbSSLR_SSZZ_YWBFZ.TabIndex = 2;
-            // 
-            // label124
-            // 
-            this.label124.AutoSize = true;
-            this.label124.Location = new System.Drawing.Point(41, 3);
-            this.label124.Name = "label124";
-            this.label124.Size = new System.Drawing.Size(104, 16);
-            this.label124.TabIndex = 1;
-            this.label124.Text = "有无并发症：";
-            // 
-            // panel93
-            // 
-            this.panel93.Controls.Add(this.cbSSLR_SSZZ_YWCCBWPFGMQK);
-            this.panel93.Controls.Add(this.label125);
-            this.panel93.Location = new System.Drawing.Point(682, 56);
-            this.panel93.Name = "panel93";
-            this.panel93.Size = new System.Drawing.Size(364, 34);
-            this.panel93.TabIndex = 33;
-            // 
-            // cbSSLR_SSZZ_YWCCBWPFGMQK
-            // 
-            this.cbSSLR_SSZZ_YWCCBWPFGMQK.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSSLR_SSZZ_YWCCBWPFGMQK.FormattingEnabled = true;
-            this.cbSSLR_SSZZ_YWCCBWPFGMQK.Items.AddRange(new object[] {
-            "有",
-            "无"});
-            this.cbSSLR_SSZZ_YWCCBWPFGMQK.Location = new System.Drawing.Point(214, 0);
-            this.cbSSLR_SSZZ_YWCCBWPFGMQK.Name = "cbSSLR_SSZZ_YWCCBWPFGMQK";
-            this.cbSSLR_SSZZ_YWCCBWPFGMQK.Size = new System.Drawing.Size(115, 24);
-            this.cbSSLR_SSZZ_YWCCBWPFGMQK.TabIndex = 2;
-            // 
-            // label125
-            // 
-            this.label125.AutoSize = true;
-            this.label125.Location = new System.Drawing.Point(3, 3);
-            this.label125.Name = "label125";
-            this.label125.Size = new System.Drawing.Size(216, 16);
-            this.label125.TabIndex = 1;
-            this.label125.Text = "有无穿刺部位皮肤过敏情况：";
-            // 
-            // panel94
-            // 
-            this.panel94.Controls.Add(this.cbSSLR_SSZZ_YWXM);
-            this.panel94.Controls.Add(this.label126);
-            this.panel94.Location = new System.Drawing.Point(373, 58);
-            this.panel94.Name = "panel94";
-            this.panel94.Size = new System.Drawing.Size(249, 34);
-            this.panel94.TabIndex = 32;
-            // 
-            // cbSSLR_SSZZ_YWXM
-            // 
-            this.cbSSLR_SSZZ_YWXM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSSLR_SSZZ_YWXM.FormattingEnabled = true;
-            this.cbSSLR_SSZZ_YWXM.Items.AddRange(new object[] {
-            "有",
-            "无"});
-            this.cbSSLR_SSZZ_YWXM.Location = new System.Drawing.Point(117, 0);
-            this.cbSSLR_SSZZ_YWXM.Name = "cbSSLR_SSZZ_YWXM";
-            this.cbSSLR_SSZZ_YWXM.Size = new System.Drawing.Size(115, 24);
-            this.cbSSLR_SSZZ_YWXM.TabIndex = 2;
-            // 
-            // label126
-            // 
-            this.label126.AutoSize = true;
-            this.label126.Location = new System.Drawing.Point(36, 5);
-            this.label126.Name = "label126";
-            this.label126.Size = new System.Drawing.Size(88, 16);
-            this.label126.TabIndex = 1;
-            this.label126.Text = "有无胸闷：";
-            // 
-            // panel95
-            // 
-            this.panel95.Controls.Add(this.cbSSLR_SSZZ_YWXLBCT);
-            this.panel95.Controls.Add(this.label127);
-            this.panel95.Location = new System.Drawing.Point(12, 58);
-            this.panel95.Name = "panel95";
-            this.panel95.Size = new System.Drawing.Size(267, 34);
-            this.panel95.TabIndex = 31;
-            // 
-            // cbSSLR_SSZZ_YWXLBCT
-            // 
-            this.cbSSLR_SSZZ_YWXLBCT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSSLR_SSZZ_YWXLBCT.FormattingEnabled = true;
-            this.cbSSLR_SSZZ_YWXLBCT.Items.AddRange(new object[] {
-            "有",
-            "无"});
-            this.cbSSLR_SSZZ_YWXLBCT.Location = new System.Drawing.Point(145, 0);
-            this.cbSSLR_SSZZ_YWXLBCT.Name = "cbSSLR_SSZZ_YWXLBCT";
-            this.cbSSLR_SSZZ_YWXLBCT.Size = new System.Drawing.Size(115, 24);
-            this.cbSSLR_SSZZ_YWXLBCT.TabIndex = 2;
-            // 
-            // label127
-            // 
-            this.label127.AutoSize = true;
-            this.label127.Location = new System.Drawing.Point(9, 5);
-            this.label127.Name = "label127";
-            this.label127.Size = new System.Drawing.Size(136, 16);
-            this.label127.TabIndex = 1;
-            this.label127.Text = "有无血流不畅通：";
-            // 
-            // panel96
-            // 
-            this.panel96.Controls.Add(this.cbSSLR_SSZZ_SFTC);
-            this.panel96.Controls.Add(this.label128);
-            this.panel96.Location = new System.Drawing.Point(716, 26);
-            this.panel96.Name = "panel96";
-            this.panel96.Size = new System.Drawing.Size(330, 34);
-            this.panel96.TabIndex = 28;
-            // 
-            // cbSSLR_SSZZ_SFTC
-            // 
-            this.cbSSLR_SSZZ_SFTC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSSLR_SSZZ_SFTC.FormattingEnabled = true;
-            this.cbSSLR_SSZZ_SFTC.Items.AddRange(new object[] {
-            "是",
-            "否"});
-            this.cbSSLR_SSZZ_SFTC.Location = new System.Drawing.Point(180, 0);
-            this.cbSSLR_SSZZ_SFTC.Name = "cbSSLR_SSZZ_SFTC";
-            this.cbSSLR_SSZZ_SFTC.Size = new System.Drawing.Size(115, 24);
-            this.cbSSLR_SSZZ_SFTC.TabIndex = 2;
-            // 
-            // label128
-            // 
-            this.label128.AutoSize = true;
-            this.label128.Location = new System.Drawing.Point(97, 3);
-            this.label128.Name = "label128";
-            this.label128.Size = new System.Drawing.Size(88, 16);
-            this.label128.TabIndex = 1;
-            this.label128.Text = "是否畅通：";
-            // 
-            // panel97
-            // 
-            this.panel97.Controls.Add(this.tbSSLR_SSZZ_SFRQ);
-            this.panel97.Controls.Add(this.label129);
-            this.panel97.Location = new System.Drawing.Point(12, 26);
-            this.panel97.Name = "panel97";
-            this.panel97.Size = new System.Drawing.Size(362, 34);
-            this.panel97.TabIndex = 30;
-            // 
-            // label129
-            // 
-            this.label129.AutoSize = true;
-            this.label129.Location = new System.Drawing.Point(55, 3);
-            this.label129.Name = "label129";
-            this.label129.Size = new System.Drawing.Size(88, 16);
-            this.label129.TabIndex = 1;
-            this.label129.Text = "随访日期：";
-            // 
-            // panel98
-            // 
-            this.panel98.Controls.Add(this.cbSSLR_SSZZ_CCFS);
-            this.panel98.Controls.Add(this.label130);
-            this.panel98.Location = new System.Drawing.Point(373, 26);
-            this.panel98.Name = "panel98";
-            this.panel98.Size = new System.Drawing.Size(249, 34);
-            this.panel98.TabIndex = 27;
-            // 
-            // cbSSLR_SSZZ_CCFS
-            // 
-            this.cbSSLR_SSZZ_CCFS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSSLR_SSZZ_CCFS.FormattingEnabled = true;
-            this.cbSSLR_SSZZ_CCFS.Items.AddRange(new object[] {
-            "男",
-            "女"});
-            this.cbSSLR_SSZZ_CCFS.Location = new System.Drawing.Point(117, 0);
-            this.cbSSLR_SSZZ_CCFS.Name = "cbSSLR_SSZZ_CCFS";
-            this.cbSSLR_SSZZ_CCFS.Size = new System.Drawing.Size(115, 24);
-            this.cbSSLR_SSZZ_CCFS.TabIndex = 2;
-            // 
-            // label130
-            // 
-            this.label130.AutoSize = true;
-            this.label130.Location = new System.Drawing.Point(36, 3);
-            this.label130.Name = "label130";
-            this.label130.Size = new System.Drawing.Size(88, 16);
-            this.label130.TabIndex = 1;
-            this.label130.Text = "穿刺方式：";
-            // 
-            // label131
-            // 
-            this.label131.AutoSize = true;
-            this.label131.BackColor = System.Drawing.Color.White;
-            this.label131.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label131.ForeColor = System.Drawing.Color.Black;
-            this.label131.Location = new System.Drawing.Point(1, 0);
-            this.label131.Name = "label131";
-            this.label131.Padding = new System.Windows.Forms.Padding(3);
-            this.label131.Size = new System.Drawing.Size(69, 20);
-            this.label131.TabIndex = 21;
-            this.label131.Text = "随访内容";
-            // 
-            // panel99
-            // 
-            this.panel99.Controls.Add(this.panel101);
-            this.panel99.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.panel99.Location = new System.Drawing.Point(23, 28);
-            this.panel99.Name = "panel99";
-            this.panel99.Size = new System.Drawing.Size(1200, 59);
-            this.panel99.TabIndex = 28;
-            // 
-            // panel101
-            // 
-            this.panel101.Controls.Add(this.cbSSLR_SSZZQX);
-            this.panel101.Controls.Add(this.label133);
-            this.panel101.Location = new System.Drawing.Point(7, 8);
-            this.panel101.Name = "panel101";
-            this.panel101.Size = new System.Drawing.Size(321, 31);
-            this.panel101.TabIndex = 27;
-            // 
-            // cbSSLR_SSZZQX
-            // 
-            this.cbSSLR_SSZZQX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSSLR_SSZZQX.FormattingEnabled = true;
-            this.cbSSLR_SSZZQX.Location = new System.Drawing.Point(117, 0);
-            this.cbSSLR_SSZZQX.Name = "cbSSLR_SSZZQX";
-            this.cbSSLR_SSZZQX.Size = new System.Drawing.Size(201, 24);
-            this.cbSSLR_SSZZQX.TabIndex = 2;
-            // 
-            // label133
-            // 
-            this.label133.AutoSize = true;
-            this.label133.Location = new System.Drawing.Point(3, 3);
-            this.label133.Name = "label133";
-            this.label133.Size = new System.Drawing.Size(120, 16);
-            this.label133.TabIndex = 1;
-            this.label133.Text = "手术追踪期限：";
-            // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.panel99);
             this.panel6.Controls.Add(this.panel10);
+            this.panel6.Controls.Add(this.pictureBox4);
+            this.panel6.Controls.Add(this.panel87);
             this.panel6.Controls.Add(this.pictureBox2);
             this.panel6.Controls.Add(this.panel9);
-            this.panel6.Controls.Add(this.pictureBox9);
             this.panel6.Controls.Add(this.panel7);
+            this.panel6.Controls.Add(this.pictureBox9);
+            this.panel6.Controls.Add(this.panel98);
+            this.panel6.Controls.Add(this.panel44);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(10, 213);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1243, 801);
+            this.panel6.Size = new System.Drawing.Size(1243, 1223);
             this.panel6.TabIndex = 6;
+            // 
+            // panel99
+            // 
+            this.panel99.Controls.Add(this.paneSSBW_pic);
+            this.panel99.Controls.Add(this.panel128);
+            this.panel99.Controls.Add(this.label54);
+            this.panel99.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel99.Font = new System.Drawing.Font("宋体", 12F);
+            this.panel99.Location = new System.Drawing.Point(0, 769);
+            this.panel99.Name = "panel99";
+            this.panel99.Padding = new System.Windows.Forms.Padding(10);
+            this.panel99.Size = new System.Drawing.Size(1243, 359);
+            this.panel99.TabIndex = 52;
+            // 
+            // paneSSBW_pic
+            // 
+            this.paneSSBW_pic.AutoScroll = true;
+            this.paneSSBW_pic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.paneSSBW_pic.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.paneSSBW_pic.Location = new System.Drawing.Point(10, 65);
+            this.paneSSBW_pic.Name = "paneSSBW_pic";
+            this.paneSSBW_pic.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
+            this.paneSSBW_pic.Size = new System.Drawing.Size(1223, 284);
+            this.paneSSBW_pic.TabIndex = 22;
+            // 
+            // panel128
+            // 
+            this.panel128.Controls.Add(this.panel129);
+            this.panel128.Controls.Add(this.comboBox3);
+            this.panel128.Controls.Add(this.label58);
+            this.panel128.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel128.Location = new System.Drawing.Point(10, 30);
+            this.panel128.Name = "panel128";
+            this.panel128.Size = new System.Drawing.Size(1223, 35);
+            this.panel128.TabIndex = 34;
+            // 
+            // panel129
+            // 
+            this.panel129.Controls.Add(this.button6);
+            this.panel129.Controls.Add(this.btnSSJLa_addPic);
+            this.panel129.Controls.Add(this.cbSSLR_SSBW);
+            this.panel129.Controls.Add(this.label62);
+            this.panel129.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel129.Location = new System.Drawing.Point(0, 0);
+            this.panel129.Name = "panel129";
+            this.panel129.Size = new System.Drawing.Size(1223, 35);
+            this.panel129.TabIndex = 37;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("宋体", 12F);
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(472, 7);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(92, 23);
+            this.button6.TabIndex = 36;
+            this.button6.Text = "上传图片";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // btnSSJLa_addPic
+            // 
+            this.btnSSJLa_addPic.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnSSJLa_addPic.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSSJLa_addPic.FlatAppearance.BorderSize = 0;
+            this.btnSSJLa_addPic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSSJLa_addPic.Font = new System.Drawing.Font("宋体", 12F);
+            this.btnSSJLa_addPic.ForeColor = System.Drawing.Color.White;
+            this.btnSSJLa_addPic.Location = new System.Drawing.Point(367, 7);
+            this.btnSSJLa_addPic.Name = "btnSSJLa_addPic";
+            this.btnSSJLa_addPic.Size = new System.Drawing.Size(92, 23);
+            this.btnSSJLa_addPic.TabIndex = 35;
+            this.btnSSJLa_addPic.Text = "添加图片";
+            this.btnSSJLa_addPic.UseVisualStyleBackColor = false;
+            this.btnSSJLa_addPic.Click += new System.EventHandler(this.btnSSJLa_addPic_Click);
+            // 
+            // cbSSLR_SSBW
+            // 
+            this.cbSSLR_SSBW.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSSLR_SSBW.FormattingEnabled = true;
+            this.cbSSLR_SSBW.Location = new System.Drawing.Point(93, 6);
+            this.cbSSLR_SSBW.Name = "cbSSLR_SSBW";
+            this.cbSSLR_SSBW.Size = new System.Drawing.Size(233, 24);
+            this.cbSSLR_SSBW.TabIndex = 3;
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Location = new System.Drawing.Point(12, 9);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(88, 16);
+            this.label62.TabIndex = 1;
+            this.label62.Text = "手术部位：";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(93, 6);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(233, 24);
+            this.comboBox3.TabIndex = 3;
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Location = new System.Drawing.Point(12, 9);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(88, 16);
+            this.label58.TabIndex = 1;
+            this.label58.Text = "手术部位：";
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.BackColor = System.Drawing.Color.White;
+            this.label54.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label54.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label54.ForeColor = System.Drawing.Color.Black;
+            this.label54.Location = new System.Drawing.Point(10, 10);
+            this.label54.Name = "label54";
+            this.label54.Padding = new System.Windows.Forms.Padding(3);
+            this.label54.Size = new System.Drawing.Size(69, 20);
+            this.label54.TabIndex = 21;
+            this.label54.Text = "手术视图";
             // 
             // panel10
             // 
             this.panel10.Controls.Add(this.panel68);
+            this.panel10.Controls.Add(this.pictureBox5);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(0, 175);
+            this.panel10.Location = new System.Drawing.Point(0, 231);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1243, 594);
+            this.panel10.Size = new System.Drawing.Size(1243, 538);
             this.panel10.TabIndex = 38;
             // 
             // panel68
             // 
             this.panel68.Controls.Add(this.panel69);
             this.panel68.Controls.Add(this.label104);
+            this.panel68.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel68.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.panel68.Location = new System.Drawing.Point(23, 15);
+            this.panel68.Location = new System.Drawing.Point(0, 0);
             this.panel68.Name = "panel68";
-            this.panel68.Size = new System.Drawing.Size(1199, 562);
+            this.panel68.Padding = new System.Windows.Forms.Padding(10);
+            this.panel68.Size = new System.Drawing.Size(1243, 510);
             this.panel68.TabIndex = 30;
             // 
             // panel69
             // 
+            this.panel69.AutoScroll = true;
             this.panel69.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel69.Controls.Add(this.panel44);
             this.panel69.Controls.Add(this.panel43);
             this.panel69.Controls.Add(this.rtbSSLR_SSJL);
-            this.panel69.Controls.Add(this.btnRecordClear);
-            this.panel69.Controls.Add(this.btnSaveSSJL);
             this.panel69.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel69.Location = new System.Drawing.Point(0, 20);
+            this.panel69.Location = new System.Drawing.Point(10, 32);
             this.panel69.Name = "panel69";
-            this.panel69.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.panel69.Size = new System.Drawing.Size(1199, 542);
+            this.panel69.Padding = new System.Windows.Forms.Padding(30, 30, 10, 10);
+            this.panel69.Size = new System.Drawing.Size(1223, 468);
             this.panel69.TabIndex = 22;
-            // 
-            // panel44
-            // 
-            this.panel44.BackColor = System.Drawing.Color.White;
-            this.panel44.Controls.Add(this.tbSSLR_QXFS);
-            this.panel44.Controls.Add(this.label22);
-            this.panel44.Controls.Add(this.tbSSLR_ZS);
-            this.panel44.Controls.Add(this.label23);
-            this.panel44.Controls.Add(this.tbSSLR_ZDYS);
-            this.panel44.Controls.Add(this.label24);
-            this.panel44.Location = new System.Drawing.Point(36, 467);
-            this.panel44.Name = "panel44";
-            this.panel44.Size = new System.Drawing.Size(1117, 34);
-            this.panel44.TabIndex = 49;
-            // 
-            // tbSSLR_QXFS
-            // 
-            this.tbSSLR_QXFS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbSSLR_QXFS.Location = new System.Drawing.Point(475, 1);
-            this.tbSSLR_QXFS.Name = "tbSSLR_QXFS";
-            this.tbSSLR_QXFS.Size = new System.Drawing.Size(102, 21);
-            this.tbSSLR_QXFS.TabIndex = 10;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(409, 3);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(65, 12);
-            this.label22.TabIndex = 9;
-            this.label22.Text = "器械护士：";
-            // 
-            // tbSSLR_ZS
-            // 
-            this.tbSSLR_ZS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbSSLR_ZS.Location = new System.Drawing.Point(283, 0);
-            this.tbSSLR_ZS.Name = "tbSSLR_ZS";
-            this.tbSSLR_ZS.Size = new System.Drawing.Size(114, 21);
-            this.tbSSLR_ZS.TabIndex = 8;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(233, 5);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(41, 12);
-            this.label23.TabIndex = 7;
-            this.label23.Text = "助手：";
-            // 
-            // tbSSLR_ZDYS
-            // 
-            this.tbSSLR_ZDYS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbSSLR_ZDYS.Location = new System.Drawing.Point(96, 0);
-            this.tbSSLR_ZDYS.Name = "tbSSLR_ZDYS";
-            this.tbSSLR_ZDYS.Size = new System.Drawing.Size(130, 21);
-            this.tbSSLR_ZDYS.TabIndex = 6;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(3, 3);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(65, 12);
-            this.label24.TabIndex = 1;
-            this.label24.Text = "主刀医生：";
             // 
             // panel43
             // 
@@ -1687,6 +1108,7 @@
             this.menuSSLR_YDQ,
             this.menuSSLR_JZ});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1117, 29);
             this.menuStrip1.TabIndex = 0;
@@ -1776,68 +1198,55 @@
             // rtbSSLR_SSJL
             // 
             this.rtbSSLR_SSJL.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtbSSLR_SSJL.Location = new System.Drawing.Point(33, 36);
+            this.rtbSSLR_SSJL.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtbSSLR_SSJL.Location = new System.Drawing.Point(30, 30);
             this.rtbSSLR_SSJL.Name = "rtbSSLR_SSJL";
             this.rtbSSLR_SSJL.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.rtbSSLR_SSJL.Size = new System.Drawing.Size(1152, 425);
+            this.rtbSSLR_SSJL.Size = new System.Drawing.Size(1181, 426);
             this.rtbSSLR_SSJL.TabIndex = 6;
             this.rtbSSLR_SSJL.Text = "";
-            // 
-            // btnRecordClear
-            // 
-            this.btnRecordClear.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnRecordClear.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnRecordClear.FlatAppearance.BorderSize = 0;
-            this.btnRecordClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRecordClear.Font = new System.Drawing.Font("宋体", 12F);
-            this.btnRecordClear.ForeColor = System.Drawing.Color.White;
-            this.btnRecordClear.Location = new System.Drawing.Point(598, 510);
-            this.btnRecordClear.Name = "btnRecordClear";
-            this.btnRecordClear.Size = new System.Drawing.Size(141, 23);
-            this.btnRecordClear.TabIndex = 5;
-            this.btnRecordClear.Text = "取消";
-            this.btnRecordClear.UseVisualStyleBackColor = false;
-            this.btnRecordClear.Click += new System.EventHandler(this.btnRecordClear_Click);
-            // 
-            // btnSaveSSJL
-            // 
-            this.btnSaveSSJL.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnSaveSSJL.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnSaveSSJL.FlatAppearance.BorderSize = 0;
-            this.btnSaveSSJL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveSSJL.Font = new System.Drawing.Font("宋体", 12F);
-            this.btnSaveSSJL.ForeColor = System.Drawing.Color.White;
-            this.btnSaveSSJL.Location = new System.Drawing.Point(444, 510);
-            this.btnSaveSSJL.Name = "btnSaveSSJL";
-            this.btnSaveSSJL.Size = new System.Drawing.Size(151, 23);
-            this.btnSaveSSJL.TabIndex = 1;
-            this.btnSaveSSJL.Text = "保存";
-            this.btnSaveSSJL.UseVisualStyleBackColor = false;
-            this.btnSaveSSJL.Click += new System.EventHandler(this.btnSaveSSJL_Click);
             // 
             // label104
             // 
             this.label104.AutoSize = true;
             this.label104.BackColor = System.Drawing.Color.White;
             this.label104.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label104.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label104.Font = new System.Drawing.Font("宋体", 12F);
             this.label104.ForeColor = System.Drawing.Color.Black;
-            this.label104.Location = new System.Drawing.Point(0, 0);
+            this.label104.Location = new System.Drawing.Point(10, 10);
             this.label104.Name = "label104";
             this.label104.Padding = new System.Windows.Forms.Padding(3);
-            this.label104.Size = new System.Drawing.Size(69, 20);
+            this.label104.Size = new System.Drawing.Size(78, 22);
             this.label104.TabIndex = 21;
             this.label104.Text = "手术记录";
             // 
-            // pictureBox2
+            // panel87
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 153);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1243, 22);
-            this.pictureBox2.TabIndex = 37;
-            this.pictureBox2.TabStop = false;
+            this.panel87.Controls.Add(this.cbSSLR_SSZZQX);
+            this.panel87.Controls.Add(this.label52);
+            this.panel87.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel87.Location = new System.Drawing.Point(0, 175);
+            this.panel87.Name = "panel87";
+            this.panel87.Size = new System.Drawing.Size(1243, 34);
+            this.panel87.TabIndex = 32;
+            // 
+            // cbSSLR_SSZZQX
+            // 
+            this.cbSSLR_SSZZQX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSSLR_SSZZQX.FormattingEnabled = true;
+            this.cbSSLR_SSZZQX.Location = new System.Drawing.Point(135, 6);
+            this.cbSSLR_SSZZQX.Name = "cbSSLR_SSZZQX";
+            this.cbSSLR_SSZZQX.Size = new System.Drawing.Size(233, 24);
+            this.cbSSLR_SSZZQX.TabIndex = 3;
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(6, 9);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(120, 16);
+            this.label52.TabIndex = 1;
+            this.label52.Text = "手术追踪期限：";
             // 
             // panel9
             // 
@@ -1858,7 +1267,7 @@
             this.panel71.Controls.Add(this.panel76);
             this.panel71.Controls.Add(this.label110);
             this.panel71.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.panel71.Location = new System.Drawing.Point(23, 3);
+            this.panel71.Location = new System.Drawing.Point(2, 1);
             this.panel71.Name = "panel71";
             this.panel71.Size = new System.Drawing.Size(1187, 118);
             this.panel71.TabIndex = 38;
@@ -1882,7 +1291,7 @@
             // 
             // dpSSLR_SSRQ
             // 
-            this.dpSSLR_SSRQ.CustomFormat = "yyyy年MM月dd日 hh:mm";
+            this.dpSSLR_SSRQ.CustomFormat = "yyyy年MM月dd日";
             this.dpSSLR_SSRQ.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dpSSLR_SSRQ.Location = new System.Drawing.Point(83, 1);
             this.dpSSLR_SSRQ.Name = "dpSSLR_SSRQ";
@@ -2020,16 +1429,6 @@
             this.label110.TabIndex = 21;
             this.label110.Text = "手术相关信息";
             // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBox9.Location = new System.Drawing.Point(0, 779);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(1243, 22);
-            this.pictureBox9.TabIndex = 35;
-            this.pictureBox9.TabStop = false;
-            // 
             // panel7
             // 
             this.panel7.Controls.Add(this.label1);
@@ -2050,7 +1449,116 @@
             this.label1.Padding = new System.Windows.Forms.Padding(3);
             this.label1.Size = new System.Drawing.Size(82, 22);
             this.label1.TabIndex = 30;
-            this.label1.Text = "基本记录";
+            this.label1.Text = "手术记录";
+            // 
+            // panel98
+            // 
+            this.panel98.BackColor = System.Drawing.Color.White;
+            this.panel98.Controls.Add(this.label24);
+            this.panel98.Controls.Add(this.tbSSLR_ZDYS);
+            this.panel98.Controls.Add(this.tbSSLR_QXFS);
+            this.panel98.Controls.Add(this.label23);
+            this.panel98.Controls.Add(this.label22);
+            this.panel98.Controls.Add(this.tbSSLR_ZS);
+            this.panel98.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel98.Location = new System.Drawing.Point(0, 1155);
+            this.panel98.Name = "panel98";
+            this.panel98.Size = new System.Drawing.Size(1243, 34);
+            this.panel98.TabIndex = 50;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(19, 3);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(88, 16);
+            this.label24.TabIndex = 1;
+            this.label24.Text = "主刀医生：";
+            // 
+            // tbSSLR_ZDYS
+            // 
+            this.tbSSLR_ZDYS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbSSLR_ZDYS.Location = new System.Drawing.Point(112, 0);
+            this.tbSSLR_ZDYS.Name = "tbSSLR_ZDYS";
+            this.tbSSLR_ZDYS.Size = new System.Drawing.Size(130, 26);
+            this.tbSSLR_ZDYS.TabIndex = 6;
+            // 
+            // tbSSLR_QXFS
+            // 
+            this.tbSSLR_QXFS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbSSLR_QXFS.Location = new System.Drawing.Point(507, 2);
+            this.tbSSLR_QXFS.Name = "tbSSLR_QXFS";
+            this.tbSSLR_QXFS.Size = new System.Drawing.Size(102, 26);
+            this.tbSSLR_QXFS.TabIndex = 10;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(249, 5);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(56, 16);
+            this.label23.TabIndex = 7;
+            this.label23.Text = "助手：";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(425, 3);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(88, 16);
+            this.label22.TabIndex = 9;
+            this.label22.Text = "器械护士：";
+            // 
+            // tbSSLR_ZS
+            // 
+            this.tbSSLR_ZS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbSSLR_ZS.Location = new System.Drawing.Point(305, 0);
+            this.tbSSLR_ZS.Name = "tbSSLR_ZS";
+            this.tbSSLR_ZS.Size = new System.Drawing.Size(114, 26);
+            this.tbSSLR_ZS.TabIndex = 8;
+            // 
+            // panel44
+            // 
+            this.panel44.BackColor = System.Drawing.Color.White;
+            this.panel44.Controls.Add(this.btnRecordClear);
+            this.panel44.Controls.Add(this.btnSaveSSJL);
+            this.panel44.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel44.Location = new System.Drawing.Point(0, 1189);
+            this.panel44.Name = "panel44";
+            this.panel44.Size = new System.Drawing.Size(1243, 34);
+            this.panel44.TabIndex = 49;
+            // 
+            // btnRecordClear
+            // 
+            this.btnRecordClear.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnRecordClear.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnRecordClear.FlatAppearance.BorderSize = 0;
+            this.btnRecordClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecordClear.Font = new System.Drawing.Font("宋体", 12F);
+            this.btnRecordClear.ForeColor = System.Drawing.Color.White;
+            this.btnRecordClear.Location = new System.Drawing.Point(604, 6);
+            this.btnRecordClear.Name = "btnRecordClear";
+            this.btnRecordClear.Size = new System.Drawing.Size(141, 23);
+            this.btnRecordClear.TabIndex = 5;
+            this.btnRecordClear.Text = "取消";
+            this.btnRecordClear.UseVisualStyleBackColor = false;
+            this.btnRecordClear.Click += new System.EventHandler(this.btnRecordClear_Click);
+            // 
+            // btnSaveSSJL
+            // 
+            this.btnSaveSSJL.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnSaveSSJL.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSaveSSJL.FlatAppearance.BorderSize = 0;
+            this.btnSaveSSJL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveSSJL.Font = new System.Drawing.Font("宋体", 12F);
+            this.btnSaveSSJL.ForeColor = System.Drawing.Color.White;
+            this.btnSaveSSJL.Location = new System.Drawing.Point(440, 6);
+            this.btnSaveSSJL.Name = "btnSaveSSJL";
+            this.btnSaveSSJL.Size = new System.Drawing.Size(151, 23);
+            this.btnSaveSSJL.TabIndex = 1;
+            this.btnSaveSSJL.Text = "保存";
+            this.btnSaveSSJL.UseVisualStyleBackColor = false;
+            this.btnSaveSSJL.Click += new System.EventHandler(this.btnSaveSSJL_Click);
             // 
             // panel5
             // 
@@ -2062,16 +1570,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1243, 203);
             this.panel5.TabIndex = 5;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBox7.Location = new System.Drawing.Point(0, 181);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(1243, 22);
-            this.pictureBox7.TabIndex = 34;
-            this.pictureBox7.TabStop = false;
             // 
             // panel11
             // 
@@ -2479,7 +1977,7 @@
             this.columnHeader1});
             this.listViewDictionarySSZD.Location = new System.Drawing.Point(167, 35);
             this.listViewDictionarySSZD.Name = "listViewDictionarySSZD";
-            this.listViewDictionarySSZD.Size = new System.Drawing.Size(188, 140);
+            this.listViewDictionarySSZD.Size = new System.Drawing.Size(188, 170);
             this.listViewDictionarySSZD.TabIndex = 46;
             this.listViewDictionarySSZD.UseCompatibleStateImageBehavior = false;
             this.listViewDictionarySSZD.View = System.Windows.Forms.View.List;
@@ -2555,6 +2053,7 @@
             this.panel41.Name = "panel41";
             this.panel41.Size = new System.Drawing.Size(1260, 24);
             this.panel41.TabIndex = 42;
+            this.panel41.MouseHover += new System.EventHandler(this.panel122_MouseHover);
             // 
             // labelDictionaryShow
             // 
@@ -2575,6 +2074,7 @@
             this.panel40.Name = "panel40";
             this.panel40.Size = new System.Drawing.Size(1280, 35);
             this.panel40.TabIndex = 5;
+            this.panel40.MouseHover += new System.EventHandler(this.panel122_MouseHover);
             // 
             // btnDictionaryQKZD
             // 
@@ -2590,7 +2090,6 @@
             this.btnDictionaryQKZD.Text = "情况字典";
             this.btnDictionaryQKZD.UseVisualStyleBackColor = false;
             this.btnDictionaryQKZD.Click += new System.EventHandler(this.btnDictionaryQKZD_Click);
-            this.btnDictionaryQKZD.MouseLeave += new System.EventHandler(this.listViewDictionaryQKZD_MouseLeave);
             // 
             // btnDictionarySSZD
             // 
@@ -2606,7 +2105,6 @@
             this.btnDictionarySSZD.Text = "手术字典";
             this.btnDictionarySSZD.UseVisualStyleBackColor = false;
             this.btnDictionarySSZD.Click += new System.EventHandler(this.btnDictionarySSZD_Click);
-            this.btnDictionarySSZD.MouseLeave += new System.EventHandler(this.listViewDictionarySSZD_MouseLeave);
             // 
             // btnDictionaryYBLX
             // 
@@ -2622,28 +2120,30 @@
             this.btnDictionaryYBLX.Text = "医保类型字典";
             this.btnDictionaryYBLX.UseVisualStyleBackColor = false;
             this.btnDictionaryYBLX.Click += new System.EventHandler(this.btnDictionaryYBLX_Click);
+            this.btnDictionaryYBLX.MouseHover += new System.EventHandler(this.panel122_MouseHover);
             // 
             // dgvDictionary
             // 
             this.dgvDictionary.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDictionary.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDictionary.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDictionary.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvDictionary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDictionary.EnableHeadersVisualStyles = false;
-            this.dgvDictionary.Location = new System.Drawing.Point(103, 120);
+            this.dgvDictionary.Location = new System.Drawing.Point(106, 104);
             this.dgvDictionary.Name = "dgvDictionary";
             this.dgvDictionary.ReadOnly = true;
             this.dgvDictionary.RowHeadersVisible = false;
             this.dgvDictionary.RowTemplate.Height = 23;
-            this.dgvDictionary.Size = new System.Drawing.Size(1093, 418);
+            this.dgvDictionary.Size = new System.Drawing.Size(1093, 407);
             this.dgvDictionary.TabIndex = 48;
+            this.dgvDictionary.MouseHover += new System.EventHandler(this.panel122_MouseHover);
             // 
             // panelSJCX
             // 
@@ -2730,9 +2230,9 @@
             this.panel102.Controls.Add(this.all_zdys);
             this.panel102.Controls.Add(this.label65);
             this.panel102.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel102.Location = new System.Drawing.Point(10, 352);
+            this.panel102.Location = new System.Drawing.Point(10, 335);
             this.panel102.Name = "panel102";
-            this.panel102.Size = new System.Drawing.Size(998, 31);
+            this.panel102.Size = new System.Drawing.Size(1000, 31);
             this.panel102.TabIndex = 45;
             // 
             // all_qxhs
@@ -3315,6 +2815,15 @@
             this.label143.Size = new System.Drawing.Size(175, 14);
             this.label143.TabIndex = 1;
             this.label143.Text = "自我触摸震颤及听诊情况：";
+            // 
+            // all_zwcmzcjtzqk
+            // 
+            this.all_zwcmzcjtzqk.Location = new System.Drawing.Point(182, 3);
+            this.all_zwcmzcjtzqk.Name = "all_zwcmzcjtzqk";
+            this.all_zwcmzcjtzqk.ReadOnly = true;
+            this.all_zwcmzcjtzqk.Size = new System.Drawing.Size(758, 93);
+            this.all_zwcmzcjtzqk.TabIndex = 9;
+            this.all_zwcmzcjtzqk.Text = "";
             // 
             // panel113
             // 
@@ -4425,20 +3934,20 @@
             // 
             // chartPie_4
             // 
-            chartArea45.Name = "ChartArea1";
-            this.chartPie_4.ChartAreas.Add(chartArea45);
-            legend45.Name = "Legend1";
-            this.chartPie_4.Legends.Add(legend45);
+            chartArea13.Name = "ChartArea1";
+            this.chartPie_4.ChartAreas.Add(chartArea13);
+            legend13.Name = "Legend1";
+            this.chartPie_4.Legends.Add(legend13);
             this.chartPie_4.Location = new System.Drawing.Point(8, 20);
             this.chartPie_4.Name = "chartPie_4";
-            series45.ChartArea = "ChartArea1";
-            series45.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series45.IsValueShownAsLabel = true;
-            series45.Label = "#VALX\\n[#VAL](#PERCENT)";
-            series45.Legend = "Legend1";
-            series45.Name = "Series1";
-            series45.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
-            this.chartPie_4.Series.Add(series45);
+            series13.ChartArea = "ChartArea1";
+            series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series13.IsValueShownAsLabel = true;
+            series13.Label = "#VALX\\n[#VAL](#PERCENT)";
+            series13.Legend = "Legend1";
+            series13.Name = "Series1";
+            series13.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            this.chartPie_4.Series.Add(series13);
             this.chartPie_4.Size = new System.Drawing.Size(550, 189);
             this.chartPie_4.TabIndex = 2;
             this.chartPie_4.Text = "男女比例";
@@ -4455,20 +3964,20 @@
             // 
             // chartPie_3
             // 
-            chartArea46.Name = "ChartArea1";
-            this.chartPie_3.ChartAreas.Add(chartArea46);
-            legend46.Name = "Legend1";
-            this.chartPie_3.Legends.Add(legend46);
+            chartArea14.Name = "ChartArea1";
+            this.chartPie_3.ChartAreas.Add(chartArea14);
+            legend14.Name = "Legend1";
+            this.chartPie_3.Legends.Add(legend14);
             this.chartPie_3.Location = new System.Drawing.Point(13, 19);
             this.chartPie_3.Name = "chartPie_3";
-            series46.ChartArea = "ChartArea1";
-            series46.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series46.IsValueShownAsLabel = true;
-            series46.Label = "#VALX\\n [#VAL](#PERCENT)";
-            series46.Legend = "Legend1";
-            series46.Name = "Series1";
-            series46.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
-            this.chartPie_3.Series.Add(series46);
+            series14.ChartArea = "ChartArea1";
+            series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series14.IsValueShownAsLabel = true;
+            series14.Label = "#VALX\\n [#VAL](#PERCENT)";
+            series14.Legend = "Legend1";
+            series14.Name = "Series1";
+            series14.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            this.chartPie_3.Series.Add(series14);
             this.chartPie_3.Size = new System.Drawing.Size(552, 180);
             this.chartPie_3.TabIndex = 4;
             this.chartPie_3.Text = "男女比例";
@@ -4503,20 +4012,20 @@
             // 
             // chartPie_2
             // 
-            chartArea47.Name = "ChartArea1";
-            this.chartPie_2.ChartAreas.Add(chartArea47);
-            legend47.Name = "Legend1";
-            this.chartPie_2.Legends.Add(legend47);
+            chartArea15.Name = "ChartArea1";
+            this.chartPie_2.ChartAreas.Add(chartArea15);
+            legend15.Name = "Legend1";
+            this.chartPie_2.Legends.Add(legend15);
             this.chartPie_2.Location = new System.Drawing.Point(12, 19);
             this.chartPie_2.Name = "chartPie_2";
-            series47.ChartArea = "ChartArea1";
-            series47.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series47.IsValueShownAsLabel = true;
-            series47.Label = "#VALX [#VAL](#PERCENT)";
-            series47.Legend = "Legend1";
-            series47.Name = "Series1";
-            series47.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
-            this.chartPie_2.Series.Add(series47);
+            series15.ChartArea = "ChartArea1";
+            series15.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series15.IsValueShownAsLabel = true;
+            series15.Label = "#VALX [#VAL](#PERCENT)";
+            series15.Legend = "Legend1";
+            series15.Name = "Series1";
+            series15.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            this.chartPie_2.Series.Add(series15);
             this.chartPie_2.Size = new System.Drawing.Size(552, 198);
             this.chartPie_2.TabIndex = 2;
             this.chartPie_2.Text = "男女比例";
@@ -4542,19 +4051,19 @@
             // 
             // chartPie_1
             // 
-            chartArea48.Name = "ChartArea1";
-            this.chartPie_1.ChartAreas.Add(chartArea48);
-            legend48.Name = "Legend1";
-            this.chartPie_1.Legends.Add(legend48);
+            chartArea16.Name = "ChartArea1";
+            this.chartPie_1.ChartAreas.Add(chartArea16);
+            legend16.Name = "Legend1";
+            this.chartPie_1.Legends.Add(legend16);
             this.chartPie_1.Location = new System.Drawing.Point(8, 20);
             this.chartPie_1.Name = "chartPie_1";
-            series48.ChartArea = "ChartArea1";
-            series48.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series48.IsValueShownAsLabel = true;
-            series48.Label = "#VALX[#VAL](#PERCENT)";
-            series48.Legend = "Legend1";
-            series48.Name = "Series1";
-            this.chartPie_1.Series.Add(series48);
+            series16.ChartArea = "ChartArea1";
+            series16.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series16.IsValueShownAsLabel = true;
+            series16.Label = "#VALX[#VAL](#PERCENT)";
+            series16.Legend = "Legend1";
+            series16.Name = "Series1";
+            this.chartPie_1.Series.Add(series16);
             this.chartPie_1.Size = new System.Drawing.Size(558, 200);
             this.chartPie_1.TabIndex = 0;
             this.chartPie_1.Text = "男女比例";
@@ -4562,23 +4071,233 @@
             // panelKSGL
             // 
             this.panelKSGL.BackColor = System.Drawing.Color.White;
-            this.panelKSGL.Controls.Add(this.panel14);
             this.panelKSGL.Controls.Add(this.panel13);
+            this.panelKSGL.Controls.Add(this.panel14);
             this.panelKSGL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelKSGL.Location = new System.Drawing.Point(10, 37);
             this.panelKSGL.Name = "panelKSGL";
             this.panelKSGL.Size = new System.Drawing.Size(1280, 523);
             this.panelKSGL.TabIndex = 3;
             // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.btnRoomEmpManager);
+            this.panel13.Controls.Add(this.btnRoomInfoManager);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel13.Location = new System.Drawing.Point(0, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(1280, 35);
+            this.panel13.TabIndex = 4;
+            // 
+            // btnRoomEmpManager
+            // 
+            this.btnRoomEmpManager.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnRoomEmpManager.FlatAppearance.BorderSize = 0;
+            this.btnRoomEmpManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRoomEmpManager.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnRoomEmpManager.ForeColor = System.Drawing.Color.White;
+            this.btnRoomEmpManager.Location = new System.Drawing.Point(134, 0);
+            this.btnRoomEmpManager.Name = "btnRoomEmpManager";
+            this.btnRoomEmpManager.Size = new System.Drawing.Size(131, 36);
+            this.btnRoomEmpManager.TabIndex = 5;
+            this.btnRoomEmpManager.Text = "科室职员管理";
+            this.btnRoomEmpManager.UseVisualStyleBackColor = false;
+            this.btnRoomEmpManager.Click += new System.EventHandler(this.btnRoomEmpManager_Click);
+            // 
+            // btnRoomInfoManager
+            // 
+            this.btnRoomInfoManager.BackColor = System.Drawing.Color.Transparent;
+            this.btnRoomInfoManager.FlatAppearance.BorderSize = 0;
+            this.btnRoomInfoManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRoomInfoManager.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnRoomInfoManager.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnRoomInfoManager.Location = new System.Drawing.Point(0, 0);
+            this.btnRoomInfoManager.Name = "btnRoomInfoManager";
+            this.btnRoomInfoManager.Size = new System.Drawing.Size(131, 36);
+            this.btnRoomInfoManager.TabIndex = 4;
+            this.btnRoomInfoManager.Text = "科室信息管理";
+            this.btnRoomInfoManager.UseVisualStyleBackColor = false;
+            this.btnRoomInfoManager.Click += new System.EventHandler(this.btnRoomInfoManager_Click);
+            // 
             // panel14
             // 
-            this.panel14.Controls.Add(this.panelRoomInfoManager);
             this.panel14.Controls.Add(this.panelRoomEmpManager);
+            this.panel14.Controls.Add(this.panelRoomInfoManager);
             this.panel14.Location = new System.Drawing.Point(16, 35);
             this.panel14.Name = "panel14";
             this.panel14.Padding = new System.Windows.Forms.Padding(10);
             this.panel14.Size = new System.Drawing.Size(1244, 503);
             this.panel14.TabIndex = 6;
+            // 
+            // panelRoomEmpManager
+            // 
+            this.panelRoomEmpManager.Controls.Add(this.flowLayoutPanel1);
+            this.panelRoomEmpManager.Controls.Add(this.panel36);
+            this.panelRoomEmpManager.Controls.Add(this.panel39);
+            this.panelRoomEmpManager.Location = new System.Drawing.Point(10, 10);
+            this.panelRoomEmpManager.Name = "panelRoomEmpManager";
+            this.panelRoomEmpManager.Size = new System.Drawing.Size(1215, 483);
+            this.panelRoomEmpManager.TabIndex = 7;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.btnDeleteEmp);
+            this.flowLayoutPanel1.Controls.Add(this.btnEditEmp);
+            this.flowLayoutPanel1.Controls.Add(this.btnGoAddEmp);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 42);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1215, 37);
+            this.flowLayoutPanel1.TabIndex = 39;
+            // 
+            // btnDeleteEmp
+            // 
+            this.btnDeleteEmp.BackColor = System.Drawing.Color.Red;
+            this.btnDeleteEmp.FlatAppearance.BorderSize = 0;
+            this.btnDeleteEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteEmp.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnDeleteEmp.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteEmp.Location = new System.Drawing.Point(1109, 3);
+            this.btnDeleteEmp.Name = "btnDeleteEmp";
+            this.btnDeleteEmp.Size = new System.Drawing.Size(83, 26);
+            this.btnDeleteEmp.TabIndex = 6;
+            this.btnDeleteEmp.Text = "删除";
+            this.btnDeleteEmp.UseVisualStyleBackColor = false;
+            this.btnDeleteEmp.Visible = false;
+            // 
+            // btnEditEmp
+            // 
+            this.btnEditEmp.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEditEmp.FlatAppearance.BorderSize = 0;
+            this.btnEditEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditEmp.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnEditEmp.ForeColor = System.Drawing.Color.White;
+            this.btnEditEmp.Location = new System.Drawing.Point(1020, 3);
+            this.btnEditEmp.Name = "btnEditEmp";
+            this.btnEditEmp.Size = new System.Drawing.Size(83, 26);
+            this.btnEditEmp.TabIndex = 7;
+            this.btnEditEmp.Text = "修改";
+            this.btnEditEmp.UseVisualStyleBackColor = false;
+            this.btnEditEmp.Click += new System.EventHandler(this.btnGoEditEmp_Click);
+            // 
+            // btnGoAddEmp
+            // 
+            this.btnGoAddEmp.BackColor = System.Drawing.Color.Green;
+            this.btnGoAddEmp.FlatAppearance.BorderSize = 0;
+            this.btnGoAddEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGoAddEmp.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnGoAddEmp.ForeColor = System.Drawing.Color.White;
+            this.btnGoAddEmp.Location = new System.Drawing.Point(931, 3);
+            this.btnGoAddEmp.Name = "btnGoAddEmp";
+            this.btnGoAddEmp.Size = new System.Drawing.Size(83, 26);
+            this.btnGoAddEmp.TabIndex = 8;
+            this.btnGoAddEmp.Text = "添加";
+            this.btnGoAddEmp.UseVisualStyleBackColor = false;
+            this.btnGoAddEmp.Click += new System.EventHandler(this.btnGoAddEmp_Click);
+            // 
+            // panel36
+            // 
+            this.panel36.Controls.Add(this.btnFindEmpByAccountAndName);
+            this.panel36.Controls.Add(this.panel37);
+            this.panel36.Controls.Add(this.panel38);
+            this.panel36.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel36.Location = new System.Drawing.Point(0, 0);
+            this.panel36.Name = "panel36";
+            this.panel36.Size = new System.Drawing.Size(1215, 42);
+            this.panel36.TabIndex = 38;
+            // 
+            // btnFindEmpByAccountAndName
+            // 
+            this.btnFindEmpByAccountAndName.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnFindEmpByAccountAndName.FlatAppearance.BorderSize = 0;
+            this.btnFindEmpByAccountAndName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindEmpByAccountAndName.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnFindEmpByAccountAndName.ForeColor = System.Drawing.Color.White;
+            this.btnFindEmpByAccountAndName.Location = new System.Drawing.Point(555, 3);
+            this.btnFindEmpByAccountAndName.Name = "btnFindEmpByAccountAndName";
+            this.btnFindEmpByAccountAndName.Size = new System.Drawing.Size(81, 26);
+            this.btnFindEmpByAccountAndName.TabIndex = 36;
+            this.btnFindEmpByAccountAndName.Text = "查询";
+            this.btnFindEmpByAccountAndName.UseVisualStyleBackColor = false;
+            this.btnFindEmpByAccountAndName.Click += new System.EventHandler(this.btnFindEmpByAccountAndName_Click);
+            // 
+            // panel37
+            // 
+            this.panel37.Controls.Add(this.tbFindEmpAccount);
+            this.panel37.Controls.Add(this.label19);
+            this.panel37.Location = new System.Drawing.Point(285, 0);
+            this.panel37.Name = "panel37";
+            this.panel37.Size = new System.Drawing.Size(258, 34);
+            this.panel37.TabIndex = 35;
+            // 
+            // tbFindEmpAccount
+            // 
+            this.tbFindEmpAccount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbFindEmpAccount.Location = new System.Drawing.Point(98, 1);
+            this.tbFindEmpAccount.Name = "tbFindEmpAccount";
+            this.tbFindEmpAccount.Size = new System.Drawing.Size(128, 26);
+            this.tbFindEmpAccount.TabIndex = 6;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(4, 4);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(72, 16);
+            this.label19.TabIndex = 1;
+            this.label19.Text = "登录名：";
+            // 
+            // panel38
+            // 
+            this.panel38.Controls.Add(this.tbFindEmpName);
+            this.panel38.Controls.Add(this.label20);
+            this.panel38.Location = new System.Drawing.Point(28, 2);
+            this.panel38.Name = "panel38";
+            this.panel38.Size = new System.Drawing.Size(236, 34);
+            this.panel38.TabIndex = 33;
+            // 
+            // tbFindEmpName
+            // 
+            this.tbFindEmpName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbFindEmpName.Location = new System.Drawing.Point(104, 0);
+            this.tbFindEmpName.Name = "tbFindEmpName";
+            this.tbFindEmpName.Size = new System.Drawing.Size(128, 26);
+            this.tbFindEmpName.TabIndex = 6;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(30, 3);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(56, 16);
+            this.label20.TabIndex = 1;
+            this.label20.Text = "姓名：";
+            // 
+            // panel39
+            // 
+            this.panel39.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel39.Controls.Add(this.dgvKSGL_EMP);
+            this.panel39.Location = new System.Drawing.Point(91, 92);
+            this.panel39.Name = "panel39";
+            this.panel39.Size = new System.Drawing.Size(1075, 375);
+            this.panel39.TabIndex = 40;
+            // 
+            // dgvKSGL_EMP
+            // 
+            this.dgvKSGL_EMP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvKSGL_EMP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKSGL_EMP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvKSGL_EMP.EnableHeadersVisualStyles = false;
+            this.dgvKSGL_EMP.Location = new System.Drawing.Point(0, 0);
+            this.dgvKSGL_EMP.Name = "dgvKSGL_EMP";
+            this.dgvKSGL_EMP.ReadOnly = true;
+            this.dgvKSGL_EMP.RowTemplate.Height = 23;
+            this.dgvKSGL_EMP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect;
+            this.dgvKSGL_EMP.Size = new System.Drawing.Size(1073, 373);
+            this.dgvKSGL_EMP.TabIndex = 1;
+            this.dgvKSGL_EMP.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.autoAddId);
             // 
             // panelRoomInfoManager
             // 
@@ -5127,224 +4846,16 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "医院名称：";
             // 
-            // panelRoomEmpManager
-            // 
-            this.panelRoomEmpManager.Controls.Add(this.flowLayoutPanel1);
-            this.panelRoomEmpManager.Controls.Add(this.panel36);
-            this.panelRoomEmpManager.Controls.Add(this.panel39);
-            this.panelRoomEmpManager.Location = new System.Drawing.Point(10, 10);
-            this.panelRoomEmpManager.Name = "panelRoomEmpManager";
-            this.panelRoomEmpManager.Size = new System.Drawing.Size(1215, 483);
-            this.panelRoomEmpManager.TabIndex = 7;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.btnDeleteEmp);
-            this.flowLayoutPanel1.Controls.Add(this.btnEditEmp);
-            this.flowLayoutPanel1.Controls.Add(this.btnGoAddEmp);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 42);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1215, 37);
-            this.flowLayoutPanel1.TabIndex = 39;
-            // 
-            // btnDeleteEmp
-            // 
-            this.btnDeleteEmp.BackColor = System.Drawing.Color.Red;
-            this.btnDeleteEmp.FlatAppearance.BorderSize = 0;
-            this.btnDeleteEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteEmp.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnDeleteEmp.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteEmp.Location = new System.Drawing.Point(1109, 3);
-            this.btnDeleteEmp.Name = "btnDeleteEmp";
-            this.btnDeleteEmp.Size = new System.Drawing.Size(83, 26);
-            this.btnDeleteEmp.TabIndex = 6;
-            this.btnDeleteEmp.Text = "删除";
-            this.btnDeleteEmp.UseVisualStyleBackColor = false;
-            this.btnDeleteEmp.Visible = false;
-            // 
-            // btnEditEmp
-            // 
-            this.btnEditEmp.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnEditEmp.FlatAppearance.BorderSize = 0;
-            this.btnEditEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditEmp.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnEditEmp.ForeColor = System.Drawing.Color.White;
-            this.btnEditEmp.Location = new System.Drawing.Point(1020, 3);
-            this.btnEditEmp.Name = "btnEditEmp";
-            this.btnEditEmp.Size = new System.Drawing.Size(83, 26);
-            this.btnEditEmp.TabIndex = 7;
-            this.btnEditEmp.Text = "修改";
-            this.btnEditEmp.UseVisualStyleBackColor = false;
-            this.btnEditEmp.Click += new System.EventHandler(this.btnGoEditEmp_Click);
-            // 
-            // btnGoAddEmp
-            // 
-            this.btnGoAddEmp.BackColor = System.Drawing.Color.Green;
-            this.btnGoAddEmp.FlatAppearance.BorderSize = 0;
-            this.btnGoAddEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGoAddEmp.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnGoAddEmp.ForeColor = System.Drawing.Color.White;
-            this.btnGoAddEmp.Location = new System.Drawing.Point(931, 3);
-            this.btnGoAddEmp.Name = "btnGoAddEmp";
-            this.btnGoAddEmp.Size = new System.Drawing.Size(83, 26);
-            this.btnGoAddEmp.TabIndex = 8;
-            this.btnGoAddEmp.Text = "添加";
-            this.btnGoAddEmp.UseVisualStyleBackColor = false;
-            this.btnGoAddEmp.Click += new System.EventHandler(this.btnGoAddEmp_Click);
-            // 
-            // panel36
-            // 
-            this.panel36.Controls.Add(this.btnFindEmpByAccountAndName);
-            this.panel36.Controls.Add(this.panel37);
-            this.panel36.Controls.Add(this.panel38);
-            this.panel36.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel36.Location = new System.Drawing.Point(0, 0);
-            this.panel36.Name = "panel36";
-            this.panel36.Size = new System.Drawing.Size(1215, 42);
-            this.panel36.TabIndex = 38;
-            // 
-            // btnFindEmpByAccountAndName
-            // 
-            this.btnFindEmpByAccountAndName.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnFindEmpByAccountAndName.FlatAppearance.BorderSize = 0;
-            this.btnFindEmpByAccountAndName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFindEmpByAccountAndName.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnFindEmpByAccountAndName.ForeColor = System.Drawing.Color.White;
-            this.btnFindEmpByAccountAndName.Location = new System.Drawing.Point(555, 3);
-            this.btnFindEmpByAccountAndName.Name = "btnFindEmpByAccountAndName";
-            this.btnFindEmpByAccountAndName.Size = new System.Drawing.Size(81, 26);
-            this.btnFindEmpByAccountAndName.TabIndex = 36;
-            this.btnFindEmpByAccountAndName.Text = "查询";
-            this.btnFindEmpByAccountAndName.UseVisualStyleBackColor = false;
-            this.btnFindEmpByAccountAndName.Click += new System.EventHandler(this.btnFindEmpByAccountAndName_Click);
-            // 
-            // panel37
-            // 
-            this.panel37.Controls.Add(this.tbFindEmpAccount);
-            this.panel37.Controls.Add(this.label19);
-            this.panel37.Location = new System.Drawing.Point(285, 0);
-            this.panel37.Name = "panel37";
-            this.panel37.Size = new System.Drawing.Size(258, 34);
-            this.panel37.TabIndex = 35;
-            // 
-            // tbFindEmpAccount
-            // 
-            this.tbFindEmpAccount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbFindEmpAccount.Location = new System.Drawing.Point(98, 1);
-            this.tbFindEmpAccount.Name = "tbFindEmpAccount";
-            this.tbFindEmpAccount.Size = new System.Drawing.Size(128, 26);
-            this.tbFindEmpAccount.TabIndex = 6;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(4, 4);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(72, 16);
-            this.label19.TabIndex = 1;
-            this.label19.Text = "登录名：";
-            // 
-            // panel38
-            // 
-            this.panel38.Controls.Add(this.tbFindEmpName);
-            this.panel38.Controls.Add(this.label20);
-            this.panel38.Location = new System.Drawing.Point(28, 2);
-            this.panel38.Name = "panel38";
-            this.panel38.Size = new System.Drawing.Size(236, 34);
-            this.panel38.TabIndex = 33;
-            // 
-            // tbFindEmpName
-            // 
-            this.tbFindEmpName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbFindEmpName.Location = new System.Drawing.Point(104, 0);
-            this.tbFindEmpName.Name = "tbFindEmpName";
-            this.tbFindEmpName.Size = new System.Drawing.Size(128, 26);
-            this.tbFindEmpName.TabIndex = 6;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(30, 3);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(56, 16);
-            this.label20.TabIndex = 1;
-            this.label20.Text = "姓名：";
-            // 
-            // panel39
-            // 
-            this.panel39.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel39.Controls.Add(this.dgvKSGL_EMP);
-            this.panel39.Location = new System.Drawing.Point(91, 92);
-            this.panel39.Name = "panel39";
-            this.panel39.Size = new System.Drawing.Size(1075, 375);
-            this.panel39.TabIndex = 40;
-            // 
-            // dgvKSGL_EMP
-            // 
-            this.dgvKSGL_EMP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvKSGL_EMP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKSGL_EMP.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvKSGL_EMP.EnableHeadersVisualStyles = false;
-            this.dgvKSGL_EMP.Location = new System.Drawing.Point(0, 0);
-            this.dgvKSGL_EMP.Name = "dgvKSGL_EMP";
-            this.dgvKSGL_EMP.ReadOnly = true;
-            this.dgvKSGL_EMP.RowTemplate.Height = 23;
-            this.dgvKSGL_EMP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect;
-            this.dgvKSGL_EMP.Size = new System.Drawing.Size(1073, 373);
-            this.dgvKSGL_EMP.TabIndex = 1;
-            this.dgvKSGL_EMP.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.autoAddId);
-            // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.btnRoomEmpManager);
-            this.panel13.Controls.Add(this.btnRoomInfoManager);
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel13.Location = new System.Drawing.Point(0, 0);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(1280, 35);
-            this.panel13.TabIndex = 4;
-            // 
-            // btnRoomEmpManager
-            // 
-            this.btnRoomEmpManager.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnRoomEmpManager.FlatAppearance.BorderSize = 0;
-            this.btnRoomEmpManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRoomEmpManager.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnRoomEmpManager.ForeColor = System.Drawing.Color.White;
-            this.btnRoomEmpManager.Location = new System.Drawing.Point(134, 0);
-            this.btnRoomEmpManager.Name = "btnRoomEmpManager";
-            this.btnRoomEmpManager.Size = new System.Drawing.Size(131, 36);
-            this.btnRoomEmpManager.TabIndex = 5;
-            this.btnRoomEmpManager.Text = "科室职员管理";
-            this.btnRoomEmpManager.UseVisualStyleBackColor = false;
-            this.btnRoomEmpManager.Click += new System.EventHandler(this.btnRoomEmpManager_Click);
-            // 
-            // btnRoomInfoManager
-            // 
-            this.btnRoomInfoManager.BackColor = System.Drawing.Color.Transparent;
-            this.btnRoomInfoManager.FlatAppearance.BorderSize = 0;
-            this.btnRoomInfoManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRoomInfoManager.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnRoomInfoManager.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnRoomInfoManager.Location = new System.Drawing.Point(0, 0);
-            this.btnRoomInfoManager.Name = "btnRoomInfoManager";
-            this.btnRoomInfoManager.Size = new System.Drawing.Size(131, 36);
-            this.btnRoomInfoManager.TabIndex = 4;
-            this.btnRoomInfoManager.Text = "科室信息管理";
-            this.btnRoomInfoManager.UseVisualStyleBackColor = false;
-            this.btnRoomInfoManager.Click += new System.EventHandler(this.btnRoomInfoManager_Click);
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel4.Controls.Add(this.panelSSXGXY);
+            this.panel4.Controls.Add(this.panelSSZZ);
+            this.panel4.Controls.Add(this.panelZDGL);
             this.panel4.Controls.Add(this.panelSSLR);
             this.panel4.Controls.Add(this.panelKSGL);
             this.panel4.Controls.Add(this.panelCJFX);
             this.panel4.Controls.Add(this.panelSJCX);
-            this.panel4.Controls.Add(this.panelZDGL);
             this.panel4.Controls.Add(this.panel122);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 134);
@@ -5352,6 +4863,692 @@
             this.panel4.Padding = new System.Windows.Forms.Padding(10);
             this.panel4.Size = new System.Drawing.Size(1300, 570);
             this.panel4.TabIndex = 13;
+            // 
+            // panelSSXGXY
+            // 
+            this.panelSSXGXY.BackColor = System.Drawing.Color.White;
+            this.panelSSXGXY.Controls.Add(this.panel131);
+            this.panelSSXGXY.Controls.Add(this.panel130);
+            this.panelSSXGXY.Controls.Add(this.panel101);
+            this.panelSSXGXY.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelSSXGXY.Location = new System.Drawing.Point(10, 37);
+            this.panelSSXGXY.Name = "panelSSXGXY";
+            this.panelSSXGXY.Size = new System.Drawing.Size(1280, 523);
+            this.panelSSXGXY.TabIndex = 33;
+            // 
+            // panelSSZZ
+            // 
+            this.panelSSZZ.AutoScroll = true;
+            this.panelSSZZ.BackColor = System.Drawing.Color.White;
+            this.panelSSZZ.Controls.Add(this.panel82);
+            this.panelSSZZ.Controls.Add(this.panel80);
+            this.panelSSZZ.Controls.Add(this.button5);
+            this.panelSSZZ.Controls.Add(this.btnGoAddSSZZ);
+            this.panelSSZZ.Controls.Add(this.panel79);
+            this.panelSSZZ.Controls.Add(this.panel77);
+            this.panelSSZZ.Controls.Add(this.panel42);
+            this.panelSSZZ.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelSSZZ.Location = new System.Drawing.Point(10, 37);
+            this.panelSSZZ.Name = "panelSSZZ";
+            this.panelSSZZ.Size = new System.Drawing.Size(1280, 523);
+            this.panelSSZZ.TabIndex = 32;
+            // 
+            // panel82
+            // 
+            this.panel82.Controls.Add(this.panel86);
+            this.panel82.Controls.Add(this.panel85);
+            this.panel82.Controls.Add(this.panel84);
+            this.panel82.Controls.Add(this.panel97);
+            this.panel82.Controls.Add(this.panel83);
+            this.panel82.Location = new System.Drawing.Point(371, 62);
+            this.panel82.Name = "panel82";
+            this.panel82.Size = new System.Drawing.Size(619, 130);
+            this.panel82.TabIndex = 42;
+            // 
+            // panel86
+            // 
+            this.panel86.Controls.Add(this.label49);
+            this.panel86.Location = new System.Drawing.Point(310, 52);
+            this.panel86.Name = "panel86";
+            this.panel86.Size = new System.Drawing.Size(242, 34);
+            this.panel86.TabIndex = 33;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(3, 4);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(88, 16);
+            this.label49.TabIndex = 1;
+            this.label49.Text = "手术方式：";
+            // 
+            // panel85
+            // 
+            this.panel85.Controls.Add(this.label45);
+            this.panel85.Location = new System.Drawing.Point(24, 51);
+            this.panel85.Name = "panel85";
+            this.panel85.Size = new System.Drawing.Size(242, 34);
+            this.panel85.TabIndex = 30;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(3, 4);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(88, 16);
+            this.label45.TabIndex = 1;
+            this.label45.Text = "手术类型：";
+            // 
+            // panel84
+            // 
+            this.panel84.Controls.Add(this.label44);
+            this.panel84.Location = new System.Drawing.Point(24, 91);
+            this.panel84.Name = "panel84";
+            this.panel84.Size = new System.Drawing.Size(242, 34);
+            this.panel84.TabIndex = 30;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(3, 4);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(88, 16);
+            this.label44.TabIndex = 1;
+            this.label44.Text = "联系方式：";
+            // 
+            // panel97
+            // 
+            this.panel97.Controls.Add(this.label53);
+            this.panel97.Location = new System.Drawing.Point(309, 11);
+            this.panel97.Name = "panel97";
+            this.panel97.Size = new System.Drawing.Size(242, 34);
+            this.panel97.TabIndex = 31;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(3, 4);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(88, 16);
+            this.label53.TabIndex = 1;
+            this.label53.Text = "手术地点：";
+            // 
+            // panel83
+            // 
+            this.panel83.Controls.Add(this.label43);
+            this.panel83.Location = new System.Drawing.Point(23, 10);
+            this.panel83.Name = "panel83";
+            this.panel83.Size = new System.Drawing.Size(242, 34);
+            this.panel83.TabIndex = 29;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(3, 4);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(88, 16);
+            this.label43.TabIndex = 1;
+            this.label43.Text = "手术日期：";
+            // 
+            // panel80
+            // 
+            this.panel80.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel80.Controls.Add(this.button4);
+            this.panel80.Location = new System.Drawing.Point(16, 62);
+            this.panel80.Name = "panel80";
+            this.panel80.Size = new System.Drawing.Size(141, 420);
+            this.panel80.TabIndex = 41;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("宋体", 12F);
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(0, 0);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(139, 26);
+            this.button4.TabIndex = 39;
+            this.button4.Text = "患者列表";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("宋体", 12F);
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(290, 493);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(68, 26);
+            this.button5.TabIndex = 40;
+            this.button5.Text = "删除";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // btnGoAddSSZZ
+            // 
+            this.btnGoAddSSZZ.BackColor = System.Drawing.Color.HotPink;
+            this.btnGoAddSSZZ.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnGoAddSSZZ.FlatAppearance.BorderSize = 0;
+            this.btnGoAddSSZZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGoAddSSZZ.Font = new System.Drawing.Font("宋体", 12F);
+            this.btnGoAddSSZZ.ForeColor = System.Drawing.Color.White;
+            this.btnGoAddSSZZ.Location = new System.Drawing.Point(178, 492);
+            this.btnGoAddSSZZ.Name = "btnGoAddSSZZ";
+            this.btnGoAddSSZZ.Size = new System.Drawing.Size(68, 26);
+            this.btnGoAddSSZZ.TabIndex = 39;
+            this.btnGoAddSSZZ.Text = "添加";
+            this.btnGoAddSSZZ.UseVisualStyleBackColor = false;
+            this.btnGoAddSSZZ.Click += new System.EventHandler(this.btnGoAddSSZZ_Click);
+            // 
+            // panel79
+            // 
+            this.panel79.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel79.Controls.Add(this.dataGridView1);
+            this.panel79.Controls.Add(this.button3);
+            this.panel79.Location = new System.Drawing.Point(178, 61);
+            this.panel79.Name = "panel79";
+            this.panel79.Size = new System.Drawing.Size(178, 420);
+            this.panel79.TabIndex = 11;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 26);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 23;
+            this.dataGridView1.Size = new System.Drawing.Size(176, 392);
+            this.dataGridView1.TabIndex = 40;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("宋体", 12F);
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(0, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(176, 26);
+            this.button3.TabIndex = 39;
+            this.button3.Text = "创建手术追踪";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // panel77
+            // 
+            this.panel77.AutoScroll = true;
+            this.panel77.Controls.Add(this.groupBox4);
+            this.panel77.Controls.Add(this.groupBox3);
+            this.panel77.Controls.Add(this.panel8);
+            this.panel77.Location = new System.Drawing.Point(371, 198);
+            this.panel77.Name = "panel77";
+            this.panel77.Padding = new System.Windows.Forms.Padding(10);
+            this.panel77.Size = new System.Drawing.Size(885, 452);
+            this.panel77.TabIndex = 8;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.panel96);
+            this.groupBox4.Controls.Add(this.btnSaveSSLR_SSZZ);
+            this.groupBox4.Controls.Add(this.panel95);
+            this.groupBox4.Controls.Add(this.panel81);
+            this.groupBox4.Controls.Add(this.panel94);
+            this.groupBox4.Controls.Add(this.panel88);
+            this.groupBox4.Controls.Add(this.panel90);
+            this.groupBox4.Controls.Add(this.panel93);
+            this.groupBox4.Controls.Add(this.panel89);
+            this.groupBox4.Controls.Add(this.panel91);
+            this.groupBox4.Controls.Add(this.panel92);
+            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox4.Location = new System.Drawing.Point(10, 230);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(848, 372);
+            this.groupBox4.TabIndex = 34;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "手术追踪失败原因：";
+            // 
+            // panel96
+            // 
+            this.panel96.Controls.Add(this.cbSSLR_SSZZ_SFTC);
+            this.panel96.Controls.Add(this.label128);
+            this.panel96.Location = new System.Drawing.Point(9, 25);
+            this.panel96.Name = "panel96";
+            this.panel96.Size = new System.Drawing.Size(242, 34);
+            this.panel96.TabIndex = 28;
+            // 
+            // cbSSLR_SSZZ_SFTC
+            // 
+            this.cbSSLR_SSZZ_SFTC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSSLR_SSZZ_SFTC.FormattingEnabled = true;
+            this.cbSSLR_SSZZ_SFTC.Items.AddRange(new object[] {
+            "是",
+            "否"});
+            this.cbSSLR_SSZZ_SFTC.Location = new System.Drawing.Point(108, 1);
+            this.cbSSLR_SSZZ_SFTC.Name = "cbSSLR_SSZZ_SFTC";
+            this.cbSSLR_SSZZ_SFTC.Size = new System.Drawing.Size(115, 24);
+            this.cbSSLR_SSZZ_SFTC.TabIndex = 2;
+            // 
+            // label128
+            // 
+            this.label128.AutoSize = true;
+            this.label128.Location = new System.Drawing.Point(3, 4);
+            this.label128.Name = "label128";
+            this.label128.Size = new System.Drawing.Size(88, 16);
+            this.label128.TabIndex = 1;
+            this.label128.Text = "是否畅通：";
+            // 
+            // btnSaveSSLR_SSZZ
+            // 
+            this.btnSaveSSLR_SSZZ.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnSaveSSLR_SSZZ.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSaveSSLR_SSZZ.FlatAppearance.BorderSize = 0;
+            this.btnSaveSSLR_SSZZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveSSLR_SSZZ.Font = new System.Drawing.Font("宋体", 12F);
+            this.btnSaveSSLR_SSZZ.ForeColor = System.Drawing.Color.White;
+            this.btnSaveSSLR_SSZZ.Location = new System.Drawing.Point(379, 333);
+            this.btnSaveSSLR_SSZZ.Name = "btnSaveSSLR_SSZZ";
+            this.btnSaveSSLR_SSZZ.Size = new System.Drawing.Size(109, 23);
+            this.btnSaveSSLR_SSZZ.TabIndex = 32;
+            this.btnSaveSSLR_SSZZ.Text = "保存";
+            this.btnSaveSSLR_SSZZ.UseVisualStyleBackColor = false;
+            // 
+            // panel95
+            // 
+            this.panel95.Controls.Add(this.cbSSLR_SSZZ_YWXLBCT);
+            this.panel95.Controls.Add(this.label127);
+            this.panel95.Location = new System.Drawing.Point(308, 25);
+            this.panel95.Name = "panel95";
+            this.panel95.Size = new System.Drawing.Size(280, 34);
+            this.panel95.TabIndex = 31;
+            // 
+            // cbSSLR_SSZZ_YWXLBCT
+            // 
+            this.cbSSLR_SSZZ_YWXLBCT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSSLR_SSZZ_YWXLBCT.FormattingEnabled = true;
+            this.cbSSLR_SSZZ_YWXLBCT.Items.AddRange(new object[] {
+            "有",
+            "无"});
+            this.cbSSLR_SSZZ_YWXLBCT.Location = new System.Drawing.Point(145, 0);
+            this.cbSSLR_SSZZ_YWXLBCT.Name = "cbSSLR_SSZZ_YWXLBCT";
+            this.cbSSLR_SSZZ_YWXLBCT.Size = new System.Drawing.Size(115, 24);
+            this.cbSSLR_SSZZ_YWXLBCT.TabIndex = 2;
+            // 
+            // label127
+            // 
+            this.label127.AutoSize = true;
+            this.label127.Location = new System.Drawing.Point(1, 4);
+            this.label127.Name = "label127";
+            this.label127.Size = new System.Drawing.Size(136, 16);
+            this.label127.TabIndex = 1;
+            this.label127.Text = "有无血流不畅通：";
+            // 
+            // panel81
+            // 
+            this.panel81.Controls.Add(this.tbSSLR_SSZZ_ZWQMJTZQK);
+            this.panel81.Controls.Add(this.label113);
+            this.panel81.Location = new System.Drawing.Point(9, 224);
+            this.panel81.Name = "panel81";
+            this.panel81.Size = new System.Drawing.Size(861, 104);
+            this.panel81.TabIndex = 40;
+            // 
+            // tbSSLR_SSZZ_ZWQMJTZQK
+            // 
+            this.tbSSLR_SSZZ_ZWQMJTZQK.Location = new System.Drawing.Point(160, 4);
+            this.tbSSLR_SSZZ_ZWQMJTZQK.Name = "tbSSLR_SSZZ_ZWQMJTZQK";
+            this.tbSSLR_SSZZ_ZWQMJTZQK.Size = new System.Drawing.Size(680, 96);
+            this.tbSSLR_SSZZ_ZWQMJTZQK.TabIndex = 7;
+            this.tbSSLR_SSZZ_ZWQMJTZQK.Text = "";
+            // 
+            // label113
+            // 
+            this.label113.AutoSize = true;
+            this.label113.Location = new System.Drawing.Point(3, 5);
+            this.label113.Name = "label113";
+            this.label113.Size = new System.Drawing.Size(168, 16);
+            this.label113.TabIndex = 1;
+            this.label113.Text = "自我触摸及听诊情况：";
+            // 
+            // panel94
+            // 
+            this.panel94.Controls.Add(this.cbSSLR_SSZZ_YWXM);
+            this.panel94.Controls.Add(this.label126);
+            this.panel94.Location = new System.Drawing.Point(621, 25);
+            this.panel94.Name = "panel94";
+            this.panel94.Size = new System.Drawing.Size(228, 34);
+            this.panel94.TabIndex = 32;
+            // 
+            // cbSSLR_SSZZ_YWXM
+            // 
+            this.cbSSLR_SSZZ_YWXM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSSLR_SSZZ_YWXM.FormattingEnabled = true;
+            this.cbSSLR_SSZZ_YWXM.Items.AddRange(new object[] {
+            "有",
+            "无"});
+            this.cbSSLR_SSZZ_YWXM.Location = new System.Drawing.Point(86, 2);
+            this.cbSSLR_SSZZ_YWXM.Name = "cbSSLR_SSZZ_YWXM";
+            this.cbSSLR_SSZZ_YWXM.Size = new System.Drawing.Size(115, 24);
+            this.cbSSLR_SSZZ_YWXM.TabIndex = 2;
+            // 
+            // label126
+            // 
+            this.label126.AutoSize = true;
+            this.label126.Location = new System.Drawing.Point(6, 7);
+            this.label126.Name = "label126";
+            this.label126.Size = new System.Drawing.Size(88, 16);
+            this.label126.TabIndex = 1;
+            this.label126.Text = "有无胸闷：";
+            // 
+            // panel88
+            // 
+            this.panel88.Controls.Add(this.cbSSLR_SSZZ_CCBWPFQK);
+            this.panel88.Controls.Add(this.label120);
+            this.panel88.Location = new System.Drawing.Point(10, 159);
+            this.panel88.Name = "panel88";
+            this.panel88.Size = new System.Drawing.Size(364, 34);
+            this.panel88.TabIndex = 37;
+            // 
+            // cbSSLR_SSZZ_CCBWPFQK
+            // 
+            this.cbSSLR_SSZZ_CCBWPFQK.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSSLR_SSZZ_CCBWPFQK.FormattingEnabled = true;
+            this.cbSSLR_SSZZ_CCBWPFQK.Location = new System.Drawing.Point(152, 1);
+            this.cbSSLR_SSZZ_CCBWPFQK.Name = "cbSSLR_SSZZ_CCBWPFQK";
+            this.cbSSLR_SSZZ_CCBWPFQK.Size = new System.Drawing.Size(192, 24);
+            this.cbSSLR_SSZZ_CCBWPFQK.TabIndex = 2;
+            // 
+            // label120
+            // 
+            this.label120.AutoSize = true;
+            this.label120.Location = new System.Drawing.Point(3, 3);
+            this.label120.Name = "label120";
+            this.label120.Size = new System.Drawing.Size(152, 16);
+            this.label120.TabIndex = 1;
+            this.label120.Text = "穿刺部位皮肤情况：";
+            // 
+            // panel90
+            // 
+            this.panel90.Controls.Add(this.cbSSLR_SSZZ_GRKZFS);
+            this.panel90.Controls.Add(this.label122);
+            this.panel90.Location = new System.Drawing.Point(9, 193);
+            this.panel90.Name = "panel90";
+            this.panel90.Size = new System.Drawing.Size(361, 34);
+            this.panel90.TabIndex = 36;
+            // 
+            // cbSSLR_SSZZ_GRKZFS
+            // 
+            this.cbSSLR_SSZZ_GRKZFS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSSLR_SSZZ_GRKZFS.FormattingEnabled = true;
+            this.cbSSLR_SSZZ_GRKZFS.Location = new System.Drawing.Point(132, 0);
+            this.cbSSLR_SSZZ_GRKZFS.Name = "cbSSLR_SSZZ_GRKZFS";
+            this.cbSSLR_SSZZ_GRKZFS.Size = new System.Drawing.Size(226, 24);
+            this.cbSSLR_SSZZ_GRKZFS.TabIndex = 2;
+            // 
+            // label122
+            // 
+            this.label122.AutoSize = true;
+            this.label122.Location = new System.Drawing.Point(2, 3);
+            this.label122.Name = "label122";
+            this.label122.Size = new System.Drawing.Size(120, 16);
+            this.label122.TabIndex = 1;
+            this.label122.Text = "感染控制方式：";
+            // 
+            // panel93
+            // 
+            this.panel93.Controls.Add(this.cbSSLR_SSZZ_YWCCBWPFGMQK);
+            this.panel93.Controls.Add(this.label125);
+            this.panel93.Location = new System.Drawing.Point(9, 93);
+            this.panel93.Name = "panel93";
+            this.panel93.Size = new System.Drawing.Size(364, 34);
+            this.panel93.TabIndex = 33;
+            // 
+            // cbSSLR_SSZZ_YWCCBWPFGMQK
+            // 
+            this.cbSSLR_SSZZ_YWCCBWPFGMQK.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSSLR_SSZZ_YWCCBWPFGMQK.FormattingEnabled = true;
+            this.cbSSLR_SSZZ_YWCCBWPFGMQK.Items.AddRange(new object[] {
+            "有",
+            "无"});
+            this.cbSSLR_SSZZ_YWCCBWPFGMQK.Location = new System.Drawing.Point(214, 0);
+            this.cbSSLR_SSZZ_YWCCBWPFGMQK.Name = "cbSSLR_SSZZ_YWCCBWPFGMQK";
+            this.cbSSLR_SSZZ_YWCCBWPFGMQK.Size = new System.Drawing.Size(131, 24);
+            this.cbSSLR_SSZZ_YWCCBWPFGMQK.TabIndex = 2;
+            // 
+            // label125
+            // 
+            this.label125.AutoSize = true;
+            this.label125.Location = new System.Drawing.Point(3, 3);
+            this.label125.Name = "label125";
+            this.label125.Size = new System.Drawing.Size(216, 16);
+            this.label125.TabIndex = 1;
+            this.label125.Text = "有无穿刺部位皮肤过敏情况：";
+            // 
+            // panel89
+            // 
+            this.panel89.Controls.Add(this.cbSSLR_SSZZ_NWZWDLQK);
+            this.panel89.Controls.Add(this.label121);
+            this.panel89.Location = new System.Drawing.Point(9, 125);
+            this.panel89.Name = "panel89";
+            this.panel89.Size = new System.Drawing.Size(364, 34);
+            this.panel89.TabIndex = 37;
+            // 
+            // cbSSLR_SSZZ_NWZWDLQK
+            // 
+            this.cbSSLR_SSZZ_NWZWDLQK.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSSLR_SSZZ_NWZWDLQK.FormattingEnabled = true;
+            this.cbSSLR_SSZZ_NWZWDLQK.Location = new System.Drawing.Point(153, 2);
+            this.cbSSLR_SSZZ_NWZWDLQK.Name = "cbSSLR_SSZZ_NWZWDLQK";
+            this.cbSSLR_SSZZ_NWZWDLQK.Size = new System.Drawing.Size(191, 24);
+            this.cbSSLR_SSZZ_NWZWDLQK.TabIndex = 2;
+            // 
+            // label121
+            // 
+            this.label121.AutoSize = true;
+            this.label121.Location = new System.Drawing.Point(1, 5);
+            this.label121.Name = "label121";
+            this.label121.Size = new System.Drawing.Size(152, 16);
+            this.label121.TabIndex = 1;
+            this.label121.Text = "内痿自我锻炼情况：";
+            // 
+            // panel91
+            // 
+            this.panel91.Controls.Add(this.cbSSLR_SSZZ_YWXBJMQZ);
+            this.panel91.Controls.Add(this.label123);
+            this.panel91.Location = new System.Drawing.Point(308, 60);
+            this.panel91.Name = "panel91";
+            this.panel91.Size = new System.Drawing.Size(280, 34);
+            this.panel91.TabIndex = 35;
+            // 
+            // cbSSLR_SSZZ_YWXBJMQZ
+            // 
+            this.cbSSLR_SSZZ_YWXBJMQZ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSSLR_SSZZ_YWXBJMQZ.FormattingEnabled = true;
+            this.cbSSLR_SSZZ_YWXBJMQZ.Items.AddRange(new object[] {
+            "有",
+            "无"});
+            this.cbSSLR_SSZZ_YWXBJMQZ.Location = new System.Drawing.Point(148, 0);
+            this.cbSSLR_SSZZ_YWXBJMQZ.Name = "cbSSLR_SSZZ_YWXBJMQZ";
+            this.cbSSLR_SSZZ_YWXBJMQZ.Size = new System.Drawing.Size(115, 24);
+            this.cbSSLR_SSZZ_YWXBJMQZ.TabIndex = 2;
+            // 
+            // label123
+            // 
+            this.label123.AutoSize = true;
+            this.label123.Location = new System.Drawing.Point(3, 3);
+            this.label123.Name = "label123";
+            this.label123.Size = new System.Drawing.Size(152, 16);
+            this.label123.TabIndex = 1;
+            this.label123.Text = "有无胸壁静脉曲张：";
+            // 
+            // panel92
+            // 
+            this.panel92.Controls.Add(this.cbSSLR_SSZZ_YWBFZ);
+            this.panel92.Controls.Add(this.label124);
+            this.panel92.Location = new System.Drawing.Point(9, 60);
+            this.panel92.Name = "panel92";
+            this.panel92.Size = new System.Drawing.Size(242, 34);
+            this.panel92.TabIndex = 34;
+            // 
+            // cbSSLR_SSZZ_YWBFZ
+            // 
+            this.cbSSLR_SSZZ_YWBFZ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSSLR_SSZZ_YWBFZ.FormattingEnabled = true;
+            this.cbSSLR_SSZZ_YWBFZ.Items.AddRange(new object[] {
+            "有",
+            "无"});
+            this.cbSSLR_SSZZ_YWBFZ.Location = new System.Drawing.Point(108, 2);
+            this.cbSSLR_SSZZ_YWBFZ.Name = "cbSSLR_SSZZ_YWBFZ";
+            this.cbSSLR_SSZZ_YWBFZ.Size = new System.Drawing.Size(115, 24);
+            this.cbSSLR_SSZZ_YWBFZ.TabIndex = 2;
+            // 
+            // label124
+            // 
+            this.label124.AutoSize = true;
+            this.label124.Location = new System.Drawing.Point(1, 1);
+            this.label124.Name = "label124";
+            this.label124.Size = new System.Drawing.Size(104, 16);
+            this.label124.TabIndex = 1;
+            this.label124.Text = "有无并发症：";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.richTextBox1);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox3.Location = new System.Drawing.Point(10, 42);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(10);
+            this.groupBox3.Size = new System.Drawing.Size(848, 188);
+            this.groupBox3.TabIndex = 35;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "手术追踪失败原因：";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBox1.Location = new System.Drawing.Point(10, 29);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(828, 149);
+            this.richTextBox1.TabIndex = 7;
+            this.richTextBox1.Text = "";
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.comboBox1);
+            this.panel8.Controls.Add(this.label2);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(10, 10);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(848, 32);
+            this.panel8.TabIndex = 32;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "是",
+            "否"});
+            this.comboBox1.Location = new System.Drawing.Point(175, 3);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(115, 24);
+            this.comboBox1.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Location = new System.Drawing.Point(6, 3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(161, 16);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "是否手术追踪成功：";
+            // 
+            // panel42
+            // 
+            this.panel42.Controls.Add(this.button2);
+            this.panel42.Controls.Add(this.panel127);
+            this.panel42.Controls.Add(this.panel126);
+            this.panel42.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel42.Location = new System.Drawing.Point(0, 0);
+            this.panel42.Name = "panel42";
+            this.panel42.Size = new System.Drawing.Size(1263, 47);
+            this.panel42.TabIndex = 9;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("宋体", 12F);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(565, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(68, 26);
+            this.button2.TabIndex = 38;
+            this.button2.Text = "查询";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // panel127
+            // 
+            this.panel127.Controls.Add(this.dateTimePicker1);
+            this.panel127.Controls.Add(this.label42);
+            this.panel127.Location = new System.Drawing.Point(265, 12);
+            this.panel127.Name = "panel127";
+            this.panel127.Size = new System.Drawing.Size(263, 34);
+            this.panel127.TabIndex = 37;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "yyyy年MM月";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(146, 0);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.ShowUpDown = true;
+            this.dateTimePicker1.Size = new System.Drawing.Size(103, 26);
+            this.dateTimePicker1.TabIndex = 34;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(25, 4);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(120, 16);
+            this.label42.TabIndex = 1;
+            this.label42.Text = "手术追踪时间：";
+            // 
+            // panel126
+            // 
+            this.panel126.Controls.Add(this.textBox1);
+            this.panel126.Controls.Add(this.label41);
+            this.panel126.Location = new System.Drawing.Point(19, 12);
+            this.panel126.Name = "panel126";
+            this.panel126.Size = new System.Drawing.Size(190, 32);
+            this.panel126.TabIndex = 36;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Location = new System.Drawing.Point(56, 1);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(116, 26);
+            this.textBox1.TabIndex = 7;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(5, 4);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(56, 16);
+            this.label41.TabIndex = 1;
+            this.label41.Text = "姓名：";
             // 
             // panel122
             // 
@@ -5361,6 +5558,7 @@
             this.panel122.Name = "panel122";
             this.panel122.Size = new System.Drawing.Size(1280, 27);
             this.panel122.TabIndex = 31;
+            this.panel122.MouseHover += new System.EventHandler(this.panel122_MouseHover);
             // 
             // labelNowDate
             // 
@@ -5421,32 +5619,251 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // tbSSLR_SSZZ_SFRQ
+            // openFileDialogSSLR
             // 
-            this.tbSSLR_SSZZ_SFRQ.CustomFormat = "yyyy年MM月dd日 hh:mm";
-            this.tbSSLR_SSZZ_SFRQ.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.tbSSLR_SSZZ_SFRQ.Location = new System.Drawing.Point(146, 0);
-            this.tbSSLR_SSZZ_SFRQ.Name = "tbSSLR_SSZZ_SFRQ";
-            this.tbSSLR_SSZZ_SFRQ.ShowUpDown = true;
-            this.tbSSLR_SSZZ_SFRQ.Size = new System.Drawing.Size(213, 26);
-            this.tbSSLR_SSZZ_SFRQ.TabIndex = 34;
+            this.openFileDialogSSLR.FileName = "openFileDialog1";
             // 
-            // tbSSLR_SSZZ_ZWQMJTZQK
+            // imageList1
             // 
-            this.tbSSLR_SSZZ_ZWQMJTZQK.Location = new System.Drawing.Point(160, 4);
-            this.tbSSLR_SSZZ_ZWQMJTZQK.Name = "tbSSLR_SSZZ_ZWQMJTZQK";
-            this.tbSSLR_SSZZ_ZWQMJTZQK.Size = new System.Drawing.Size(689, 96);
-            this.tbSSLR_SSZZ_ZWQMJTZQK.TabIndex = 7;
-            this.tbSSLR_SSZZ_ZWQMJTZQK.Text = "";
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // all_zwcmzcjtzqk
+            // button10
             // 
-            this.all_zwcmzcjtzqk.Location = new System.Drawing.Point(182, 3);
-            this.all_zwcmzcjtzqk.Name = "all_zwcmzcjtzqk";
-            this.all_zwcmzcjtzqk.ReadOnly = true;
-            this.all_zwcmzcjtzqk.Size = new System.Drawing.Size(758, 93);
-            this.all_zwcmzcjtzqk.TabIndex = 9;
-            this.all_zwcmzcjtzqk.Text = "";
+            this.button10.BackColor = System.Drawing.Color.Red;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button10.ForeColor = System.Drawing.Color.White;
+            this.button10.Location = new System.Drawing.Point(1174, 5);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(83, 26);
+            this.button10.TabIndex = 6;
+            this.button10.Text = "删除";
+            this.button10.UseVisualStyleBackColor = false;
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button11.ForeColor = System.Drawing.Color.White;
+            this.button11.Location = new System.Drawing.Point(1085, 5);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(83, 26);
+            this.button11.TabIndex = 7;
+            this.button11.Text = "修改";
+            this.button11.UseVisualStyleBackColor = false;
+            // 
+            // btnSSXGXY_add_control
+            // 
+            this.btnSSXGXY_add_control.BackColor = System.Drawing.Color.Green;
+            this.btnSSXGXY_add_control.FlatAppearance.BorderSize = 0;
+            this.btnSSXGXY_add_control.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSSXGXY_add_control.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSSXGXY_add_control.ForeColor = System.Drawing.Color.White;
+            this.btnSSXGXY_add_control.Location = new System.Drawing.Point(996, 5);
+            this.btnSSXGXY_add_control.Name = "btnSSXGXY_add_control";
+            this.btnSSXGXY_add_control.Size = new System.Drawing.Size(83, 26);
+            this.btnSSXGXY_add_control.TabIndex = 8;
+            this.btnSSXGXY_add_control.Text = "添加";
+            this.btnSSXGXY_add_control.UseVisualStyleBackColor = false;
+            this.btnSSXGXY_add_control.Click += new System.EventHandler(this.btnSSXGXY_add_control_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(117, 7);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(196, 26);
+            this.textBox2.TabIndex = 9;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.SteelBlue;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Location = new System.Drawing.Point(334, 7);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(83, 26);
+            this.button7.TabIndex = 10;
+            this.button7.Text = "查询";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // panel101
+            // 
+            this.panel101.Controls.Add(this.label63);
+            this.panel101.Controls.Add(this.textBox2);
+            this.panel101.Controls.Add(this.button7);
+            this.panel101.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel101.Location = new System.Drawing.Point(0, 0);
+            this.panel101.Name = "panel101";
+            this.panel101.Size = new System.Drawing.Size(1280, 40);
+            this.panel101.TabIndex = 11;
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label63.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label63.Location = new System.Drawing.Point(18, 12);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(93, 16);
+            this.label63.TabIndex = 10;
+            this.label63.Text = "协议名称：";
+            // 
+            // panel130
+            // 
+            this.panel130.Controls.Add(this.button11);
+            this.panel130.Controls.Add(this.btnSSXGXY_add_control);
+            this.panel130.Controls.Add(this.button10);
+            this.panel130.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel130.Location = new System.Drawing.Point(0, 40);
+            this.panel130.Name = "panel130";
+            this.panel130.Size = new System.Drawing.Size(1280, 40);
+            this.panel130.TabIndex = 12;
+            // 
+            // panel131
+            // 
+            this.panel131.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel131.Controls.Add(this.dataGridView2);
+            this.panel131.Location = new System.Drawing.Point(25, 88);
+            this.panel131.Name = "panel131";
+            this.panel131.Padding = new System.Windows.Forms.Padding(10);
+            this.panel131.Size = new System.Drawing.Size(1226, 420);
+            this.panel131.TabIndex = 13;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.Location = new System.Drawing.Point(10, 10);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowTemplate.Height = 23;
+            this.dataGridView2.Size = new System.Drawing.Size(1204, 398);
+            this.dataGridView2.TabIndex = 0;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pictureBox5.Location = new System.Drawing.Point(0, 516);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(1243, 22);
+            this.pictureBox5.TabIndex = 51;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox4.Location = new System.Drawing.Point(0, 209);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(1243, 22);
+            this.pictureBox4.TabIndex = 38;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 153);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1243, 22);
+            this.pictureBox2.TabIndex = 37;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox9.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pictureBox9.Location = new System.Drawing.Point(0, 1133);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(1243, 22);
+            this.pictureBox9.TabIndex = 35;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox7.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pictureBox7.Location = new System.Drawing.Point(0, 181);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(1243, 22);
+            this.pictureBox7.TabIndex = 34;
+            this.pictureBox7.TabStop = false;
+            // 
+            // flowLayoutForm
+            // 
+            this.flowLayoutForm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutForm.BackColor = System.Drawing.Color.SteelBlue;
+            this.flowLayoutForm.BackgroundImage = global::xzj.Properties.Resources.mainToRight;
+            this.flowLayoutForm.Controls.Add(this.picClose);
+            this.flowLayoutForm.Controls.Add(this.picMax);
+            this.flowLayoutForm.Controls.Add(this.picMin);
+            this.flowLayoutForm.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutForm.Location = new System.Drawing.Point(1186, 0);
+            this.flowLayoutForm.Name = "flowLayoutForm";
+            this.flowLayoutForm.Size = new System.Drawing.Size(102, 25);
+            this.flowLayoutForm.TabIndex = 6;
+            this.flowLayoutForm.Visible = false;
+            // 
+            // picClose
+            // 
+            this.picClose.BackColor = System.Drawing.Color.Transparent;
+            this.picClose.Location = new System.Drawing.Point(74, 3);
+            this.picClose.Name = "picClose";
+            this.picClose.Size = new System.Drawing.Size(25, 19);
+            this.picClose.TabIndex = 0;
+            this.picClose.TabStop = false;
+            this.picClose.Click += new System.EventHandler(this.picClose_Click);
+            // 
+            // picMax
+            // 
+            this.picMax.BackColor = System.Drawing.Color.Transparent;
+            this.picMax.Location = new System.Drawing.Point(43, 3);
+            this.picMax.Name = "picMax";
+            this.picMax.Size = new System.Drawing.Size(25, 19);
+            this.picMax.TabIndex = 1;
+            this.picMax.TabStop = false;
+            this.picMax.Click += new System.EventHandler(this.picMax_Click);
+            // 
+            // picMin
+            // 
+            this.picMin.BackColor = System.Drawing.Color.Transparent;
+            this.picMin.Location = new System.Drawing.Point(12, 3);
+            this.picMin.Name = "picMin";
+            this.picMin.Size = new System.Drawing.Size(25, 19);
+            this.picMin.TabIndex = 2;
+            this.picMin.TabStop = false;
+            this.picMin.Click += new System.EventHandler(this.picMin_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::xzj.Properties.Resources.logo1;
+            this.pictureBox3.Location = new System.Drawing.Point(0, -1);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(120, 98);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 12;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox1.Image = global::xzj.Properties.Resources.mainTop2;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1300, 137);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
             // 
             // FormMain
             // 
@@ -5467,72 +5884,25 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.flowLayoutForm.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMax)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.flowLayoutPanel4.ResumeLayout(false);
             this.panelSSLR.ResumeLayout(false);
-            this.panel77.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            this.panel79.ResumeLayout(false);
-            this.panel79.PerformLayout();
-            this.panel80.ResumeLayout(false);
-            this.panel80.PerformLayout();
-            this.panel81.ResumeLayout(false);
-            this.panel81.PerformLayout();
-            this.panel82.ResumeLayout(false);
-            this.panel82.PerformLayout();
-            this.panel83.ResumeLayout(false);
-            this.panel83.PerformLayout();
-            this.panel84.ResumeLayout(false);
-            this.panel84.PerformLayout();
-            this.panel85.ResumeLayout(false);
-            this.panel85.PerformLayout();
-            this.panel86.ResumeLayout(false);
-            this.panel86.PerformLayout();
-            this.panel87.ResumeLayout(false);
-            this.panel87.PerformLayout();
-            this.panel88.ResumeLayout(false);
-            this.panel88.PerformLayout();
-            this.panel89.ResumeLayout(false);
-            this.panel89.PerformLayout();
-            this.panel90.ResumeLayout(false);
-            this.panel90.PerformLayout();
-            this.panel91.ResumeLayout(false);
-            this.panel91.PerformLayout();
-            this.panel92.ResumeLayout(false);
-            this.panel92.PerformLayout();
-            this.panel93.ResumeLayout(false);
-            this.panel93.PerformLayout();
-            this.panel94.ResumeLayout(false);
-            this.panel94.PerformLayout();
-            this.panel95.ResumeLayout(false);
-            this.panel95.PerformLayout();
-            this.panel96.ResumeLayout(false);
-            this.panel96.PerformLayout();
-            this.panel97.ResumeLayout(false);
-            this.panel97.PerformLayout();
-            this.panel98.ResumeLayout(false);
-            this.panel98.PerformLayout();
-            this.panel99.ResumeLayout(false);
-            this.panel101.ResumeLayout(false);
-            this.panel101.PerformLayout();
             this.panel6.ResumeLayout(false);
+            this.panel99.ResumeLayout(false);
+            this.panel99.PerformLayout();
+            this.panel128.ResumeLayout(false);
+            this.panel128.PerformLayout();
+            this.panel129.ResumeLayout(false);
+            this.panel129.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel68.ResumeLayout(false);
             this.panel68.PerformLayout();
             this.panel69.ResumeLayout(false);
-            this.panel44.ResumeLayout(false);
-            this.panel44.PerformLayout();
             this.panel43.ResumeLayout(false);
             this.panel43.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel87.ResumeLayout(false);
+            this.panel87.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel71.ResumeLayout(false);
             this.panel71.PerformLayout();
@@ -5546,11 +5916,12 @@
             this.panel75.PerformLayout();
             this.panel76.ResumeLayout(false);
             this.panel76.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.panel98.ResumeLayout(false);
+            this.panel98.PerformLayout();
+            this.panel44.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel58.ResumeLayout(false);
             this.panel58.PerformLayout();
@@ -5674,7 +6045,17 @@
             this.panel57.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartPie_1)).EndInit();
             this.panelKSGL.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
+            this.panelRoomEmpManager.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.panel36.ResumeLayout(false);
+            this.panel37.ResumeLayout(false);
+            this.panel37.PerformLayout();
+            this.panel38.ResumeLayout(false);
+            this.panel38.PerformLayout();
+            this.panel39.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKSGL_EMP)).EndInit();
             this.panelRoomInfoManager.ResumeLayout(false);
             this.panel30.ResumeLayout(false);
             this.panel32.ResumeLayout(false);
@@ -5713,20 +6094,72 @@
             this.panel15.PerformLayout();
             this.panel35.ResumeLayout(false);
             this.panel35.PerformLayout();
-            this.panelRoomEmpManager.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.panel36.ResumeLayout(false);
-            this.panel37.ResumeLayout(false);
-            this.panel37.PerformLayout();
-            this.panel38.ResumeLayout(false);
-            this.panel38.PerformLayout();
-            this.panel39.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKSGL_EMP)).EndInit();
-            this.panel13.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.panelSSXGXY.ResumeLayout(false);
+            this.panelSSZZ.ResumeLayout(false);
+            this.panel82.ResumeLayout(false);
+            this.panel86.ResumeLayout(false);
+            this.panel86.PerformLayout();
+            this.panel85.ResumeLayout(false);
+            this.panel85.PerformLayout();
+            this.panel84.ResumeLayout(false);
+            this.panel84.PerformLayout();
+            this.panel97.ResumeLayout(false);
+            this.panel97.PerformLayout();
+            this.panel83.ResumeLayout(false);
+            this.panel83.PerformLayout();
+            this.panel80.ResumeLayout(false);
+            this.panel79.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel77.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.panel96.ResumeLayout(false);
+            this.panel96.PerformLayout();
+            this.panel95.ResumeLayout(false);
+            this.panel95.PerformLayout();
+            this.panel81.ResumeLayout(false);
+            this.panel81.PerformLayout();
+            this.panel94.ResumeLayout(false);
+            this.panel94.PerformLayout();
+            this.panel88.ResumeLayout(false);
+            this.panel88.PerformLayout();
+            this.panel90.ResumeLayout(false);
+            this.panel90.PerformLayout();
+            this.panel93.ResumeLayout(false);
+            this.panel93.PerformLayout();
+            this.panel89.ResumeLayout(false);
+            this.panel89.PerformLayout();
+            this.panel91.ResumeLayout(false);
+            this.panel91.PerformLayout();
+            this.panel92.ResumeLayout(false);
+            this.panel92.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel42.ResumeLayout(false);
+            this.panel127.ResumeLayout(false);
+            this.panel127.PerformLayout();
+            this.panel126.ResumeLayout(false);
+            this.panel126.PerformLayout();
             this.panel122.ResumeLayout(false);
             this.panel122.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
+            this.panel101.ResumeLayout(false);
+            this.panel101.PerformLayout();
+            this.panel130.ResumeLayout(false);
+            this.panel131.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.flowLayoutForm.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMax)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -5751,11 +6184,9 @@
         private System.Windows.Forms.Panel panelSSLR;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Panel panel68;
         private System.Windows.Forms.Panel panel69;
         private System.Windows.Forms.Button btnRecordClear;
         private System.Windows.Forms.Button btnSaveSSJL;
-        private System.Windows.Forms.Label label104;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel71;
@@ -5901,7 +6332,6 @@
         private System.Windows.Forms.ListView listViewDictionaryQKZD;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.Label labelAccountShow;
-        private System.Windows.Forms.RichTextBox rtbSSLR_SSJL;
         private System.Windows.Forms.ComboBox cbSSLR_SSDD;
         private System.Windows.Forms.Panel panel74;
         private System.Windows.Forms.ComboBox cbSSLR_SSFS;
@@ -6026,68 +6456,6 @@
         private System.Windows.Forms.Panel panel109;
         private System.Windows.Forms.Label all_sszzqx;
         private System.Windows.Forms.Label label95;
-        private System.Windows.Forms.Panel panel77;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button btnSaveSSLR_SSZZ;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.Panel panel79;
-        private System.Windows.Forms.Panel panel80;
-        private System.Windows.Forms.TextBox tbSSLR_SSZZ_SFYS;
-        private System.Windows.Forms.Label label112;
-        private System.Windows.Forms.Panel panel81;
-        private System.Windows.Forms.Label label113;
-        private System.Windows.Forms.Panel panel82;
-        private System.Windows.Forms.Label label114;
-        private System.Windows.Forms.Panel panel83;
-        private System.Windows.Forms.Label label115;
-        private System.Windows.Forms.Panel panel84;
-        private System.Windows.Forms.Label label116;
-        private System.Windows.Forms.Panel panel85;
-        private System.Windows.Forms.Label label117;
-        private System.Windows.Forms.Panel panel86;
-        private System.Windows.Forms.Label label118;
-        private System.Windows.Forms.Panel panel87;
-        private System.Windows.Forms.ComboBox cbSSLR_SSZZ_SSFZ;
-        private System.Windows.Forms.Label label119;
-        private System.Windows.Forms.Panel panel88;
-        private System.Windows.Forms.ComboBox cbSSLR_SSZZ_CCBWPFQK;
-        private System.Windows.Forms.Label label120;
-        private System.Windows.Forms.Panel panel89;
-        private System.Windows.Forms.ComboBox cbSSLR_SSZZ_NWZWDLQK;
-        private System.Windows.Forms.Label label121;
-        private System.Windows.Forms.Panel panel90;
-        private System.Windows.Forms.ComboBox cbSSLR_SSZZ_GRKZFS;
-        private System.Windows.Forms.Label label122;
-        private System.Windows.Forms.Panel panel91;
-        private System.Windows.Forms.ComboBox cbSSLR_SSZZ_YWXBJMQZ;
-        private System.Windows.Forms.Label label123;
-        private System.Windows.Forms.Panel panel92;
-        private System.Windows.Forms.ComboBox cbSSLR_SSZZ_YWBFZ;
-        private System.Windows.Forms.Label label124;
-        private System.Windows.Forms.Panel panel93;
-        private System.Windows.Forms.ComboBox cbSSLR_SSZZ_YWCCBWPFGMQK;
-        private System.Windows.Forms.Label label125;
-        private System.Windows.Forms.Panel panel94;
-        private System.Windows.Forms.ComboBox cbSSLR_SSZZ_YWXM;
-        private System.Windows.Forms.Label label126;
-        private System.Windows.Forms.Panel panel95;
-        private System.Windows.Forms.ComboBox cbSSLR_SSZZ_YWXLBCT;
-        private System.Windows.Forms.Label label127;
-        private System.Windows.Forms.Panel panel96;
-        private System.Windows.Forms.ComboBox cbSSLR_SSZZ_SFTC;
-        private System.Windows.Forms.Label label128;
-        private System.Windows.Forms.Panel panel97;
-        private System.Windows.Forms.Label label129;
-        private System.Windows.Forms.Panel panel98;
-        private System.Windows.Forms.ComboBox cbSSLR_SSZZ_CCFS;
-        private System.Windows.Forms.Label label130;
-        private System.Windows.Forms.Label label131;
-        private System.Windows.Forms.Panel panel99;
-        private System.Windows.Forms.Panel panel101;
-        private System.Windows.Forms.ComboBox cbSSLR_SSZZQX;
-        private System.Windows.Forms.Label label133;
         private System.Windows.Forms.Panel panelSJCX_SSZZD;
         private System.Windows.Forms.Panel panel117;
         private System.Windows.Forms.Panel panel120;
@@ -6103,15 +6471,10 @@
         private System.Windows.Forms.TextBox tbSJCX_SSZZ_NAME;
         private System.Windows.Forms.Label label154;
         private System.Windows.Forms.DataGridView dgvSJCX_SSZZ;
-        private System.Windows.Forms.TextBox tbSSLR_SSZZ_XJQBXSJMY;
-        private System.Windows.Forms.TextBox tbSSLR_SSZZ_SJQBXSJMY;
-        private System.Windows.Forms.TextBox tbSSLR_SSZZ_JMYFW;
         private System.Windows.Forms.Panel panel121;
         private System.Windows.Forms.Button btnTJFX_GZLTJ;
         private System.Windows.Forms.Button btnTJFX_SSTJ;
         private System.Windows.Forms.Button btnTJFX_JBXXTJ;
-        private System.Windows.Forms.TextBox tbSSLR_SSZZ_YPZXSJ;
-        private System.Windows.Forms.TextBox tbSSLR_SSZZ_XLL;
         private System.Windows.Forms.Label labelSSLR_SSJL_ID;
         private System.Windows.Forms.Button btnSSCX_SSZZDY;
         private System.Windows.Forms.Panel panelTJFX_PIE;
@@ -6185,9 +6548,108 @@
         private System.Windows.Forms.Panel panel122;
         private System.Windows.Forms.Label labelNowDate;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.DateTimePicker tbSSLR_SSZZ_SFRQ;
-        private System.Windows.Forms.RichTextBox tbSSLR_SSZZ_ZWQMJTZQK;
         private System.Windows.Forms.RichTextBox all_zwcmzcjtzqk;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
+        private System.Windows.Forms.Button btnSSZZ;
+        private System.Windows.Forms.Button btnSSXGXY;
+        private System.Windows.Forms.Panel panelSSZZ;
+        private System.Windows.Forms.Panel panelSSXGXY;
+        private System.Windows.Forms.Panel panel42;
+        private System.Windows.Forms.Panel panel126;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Panel panel77;
+        private System.Windows.Forms.Button btnSaveSSLR_SSZZ;
+        private System.Windows.Forms.Panel panel81;
+        private System.Windows.Forms.RichTextBox tbSSLR_SSZZ_ZWQMJTZQK;
+        private System.Windows.Forms.Label label113;
+        private System.Windows.Forms.Panel panel88;
+        private System.Windows.Forms.ComboBox cbSSLR_SSZZ_CCBWPFQK;
+        private System.Windows.Forms.Label label120;
+        private System.Windows.Forms.Panel panel89;
+        private System.Windows.Forms.ComboBox cbSSLR_SSZZ_NWZWDLQK;
+        private System.Windows.Forms.Label label121;
+        private System.Windows.Forms.Panel panel90;
+        private System.Windows.Forms.ComboBox cbSSLR_SSZZ_GRKZFS;
+        private System.Windows.Forms.Label label122;
+        private System.Windows.Forms.Panel panel91;
+        private System.Windows.Forms.ComboBox cbSSLR_SSZZ_YWXBJMQZ;
+        private System.Windows.Forms.Label label123;
+        private System.Windows.Forms.Panel panel92;
+        private System.Windows.Forms.ComboBox cbSSLR_SSZZ_YWBFZ;
+        private System.Windows.Forms.Label label124;
+        private System.Windows.Forms.Panel panel93;
+        private System.Windows.Forms.ComboBox cbSSLR_SSZZ_YWCCBWPFGMQK;
+        private System.Windows.Forms.Label label125;
+        private System.Windows.Forms.Panel panel127;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Panel panel96;
+        private System.Windows.Forms.ComboBox cbSSLR_SSZZ_SFTC;
+        private System.Windows.Forms.Label label128;
+        private System.Windows.Forms.Panel panel95;
+        private System.Windows.Forms.ComboBox cbSSLR_SSZZ_YWXLBCT;
+        private System.Windows.Forms.Label label127;
+        private System.Windows.Forms.Panel panel94;
+        private System.Windows.Forms.ComboBox cbSSLR_SSZZ_YWXM;
+        private System.Windows.Forms.Label label126;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Panel panel79;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnGoAddSSZZ;
+        private System.Windows.Forms.Panel panel80;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Panel panel82;
+        private System.Windows.Forms.Panel panel85;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Panel panel84;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Panel panel83;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Panel panel86;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Panel panel97;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Panel panel87;
+        private System.Windows.Forms.ComboBox cbSSLR_SSZZQX;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Panel panel98;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.RichTextBox rtbSSLR_SSJL;
+        private System.Windows.Forms.Panel panel99;
+        private System.Windows.Forms.Panel paneSSBW_pic;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Panel panel68;
+        private System.Windows.Forms.Label label104;
+        private System.Windows.Forms.Panel panel128;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Panel panel129;
+        private System.Windows.Forms.ComboBox cbSSLR_SSBW;
+        private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnSSJLa_addPic;
+        private System.Windows.Forms.OpenFileDialog openFileDialogSSLR;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button btnSSXGXY_add_control;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Panel panel101;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Panel panel130;
+        private System.Windows.Forms.Panel panel131;
+        private System.Windows.Forms.DataGridView dataGridView2;
 
     }
 }

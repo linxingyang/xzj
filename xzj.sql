@@ -112,11 +112,23 @@ create table t_record
 	r_ss_type varchar(50),##手术类型（下拉框：字典表-手术类型）
 	r_ss_method varchar(50),##手术方式（下拉框：字典表-手术方式）
 	r_cc_method varchar(50),##穿刺方式（下拉框：字典表-穿刺方式）类型
+	r_sszzqx datetime,##手术追踪期限
 	r_zd_docotor varchar(50),##主刀医生
 	r_zs varchar(50),## 助手
 	r_qxhs varchar(50),##器械护士
-	r_ss_record varchar(20000),##手术记录（文本框，能够调整文本格式和字体）--格式和字体？格式是？字体是（宋体，黑体？）？
+	r_ss_record LONGTEXT,##手术记录（文本框，能够调整文本格式和字体）--格式和字体？格式是？字体是（宋体，黑体？）？
 	r_is_sszz varchar(4),##是否手术追踪
+	primary key (id)
+);
+
+### 图片表
+drop table if exists t_picture;
+create table t_picture
+(
+	id int not null auto_increment,
+	p_r_id int,##手术记录id
+	p_path varchar(20),##图片存放路径
+	p_desc varchar(200),##图片描述 
 	primary key (id)
 );
 
@@ -250,7 +262,17 @@ create table t_track
 	primary key (id)
 );
 
-
+### 手术追踪表
+drop table if exists t_control;
+create table t_control
+(
+	id int not null auto_increment,
+	c_order_id int,
+	c_name varchar(200),##协议名称
+	c_desc varchar(200),##协议描述
+	c_content LONGTEXT,##协议内容
+	primary key (id)
+);
 
 
 insert into t_emp(e_account,e_name,e_pwd) values('admin','管理员','12345678');
@@ -266,6 +288,7 @@ insert into t_dictionary(d_parent_id,d_order,d_name) values(2,1,'手术地点字
 insert into t_dictionary(d_parent_id,d_order,d_name) values(2,2,'手术方式字典');
 insert into t_dictionary(d_parent_id,d_order,d_name) values(2,3,'穿刺方式字典');
 insert into t_dictionary(d_parent_id,d_order,d_name) values(2,4,'手术追踪期限字典');
+insert into t_dictionary(d_parent_id,d_order,d_name) values(2,5,'手术部位字典');
 
 #情况字典  
 insert into t_dictionary(d_parent_id,d_order,d_name) values(3,0,'内瘘自我锻炼情况字典');

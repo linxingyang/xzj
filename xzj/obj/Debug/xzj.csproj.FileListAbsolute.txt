@@ -17,3 +17,6 @@ D:\workspace\MyProject\xzj\xzj\obj\Debug\析之助手术登记管理系统.exe.m
 D:\workspace\MyProject\xzj\xzj\obj\Debug\析之助手术登记管理系统.application
 D:\workspace\MyProject\xzj\xzj\obj\Debug\析之助手术登记管理系统.exe
 D:\workspace\MyProject\xzj\xzj\obj\Debug\析之助手术登记管理系统.pdb
+D:\workspace\MyProject\xzj\xzj\obj\Debug\xzj.FormAddSSZZ.resources
+D:\workspace\MyProject\xzj\xzj\obj\Debug\xzj.FormControl.resources
+D:\workspace\MyProject\xzj\xzj\obj\Debug\xzj.FormAddControl.resources
