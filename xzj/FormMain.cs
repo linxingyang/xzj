@@ -12,6 +12,9 @@ using System.Drawing.Printing;
 using System.IO;
 using System.Data.SqlClient;
 using MySql.Data.MySqlClient;
+using xzj.utils;
+using xzj.xzjForm;
+
 
 namespace xzj
 {
@@ -53,6 +56,15 @@ namespace xzj
                     this.labelAccountShow.ForeColor = ColorTranslator.FromHtml("#fff");
                 }
             }
+
+            // 既然能够进到主界面，就说明登录成功了
+            // 那么就可以设置SqlHelper4MySql要用的sql字符串
+            SqlHelper4MySql.setConStr(UtilConfig.SQL_ADDRESS);
+            Console.WriteLine("连接是：" + SqlHelper4MySql.getConStr());
+
+
+            // 隐藏要展示的追踪时间
+            hideAllTraceTime();
 
             //初始化手术录入
             initSSLR();
@@ -132,6 +144,9 @@ namespace xzj
             }
         }
 
+
+        private const string EVERY_THREE_MONTH = "每三个月";
+        private const string EVERY_SIX_MONTH = "每六个月";
         //初始化手术录入
         private void initSSLR()
         {
@@ -186,8 +201,12 @@ namespace xzj
             combobox(this.cbSSLR_CCFS, dt);
 
             //查询手术追踪期限字典
-            dt = DBDictionary.getInstance().getDictionarysByParentId(8);
-            combobox(this.cbSSLR_SSZZQX, dt);
+            // dt = DBDictionary.getInstance().getDictionarysByParentId(8);
+            // combobox(this.cbSSLR_SSZZQX, dt);
+            this.cbSSLR_SSZZQX.Items.Clear();
+            this.cbSSLR_SSZZQX.Items.Add(EVERY_THREE_MONTH);
+            this.cbSSLR_SSZZQX.Items.Add(EVERY_SIX_MONTH);
+
 
             //查询手术部位字典
             dt = DBDictionary.getInstance().getDictionarysByParentId(9);
@@ -293,7 +312,12 @@ namespace xzj
             initTjfx();
         }
 
-        //科室管理
+
+
+
+        // --------------科室管理
+
+        // 科室管理
         private void btnKSGL_Click(object sender, EventArgs e)
         {
             this.btnSSLR.BackColor = ColorTranslator.FromHtml("#0000cd");
@@ -311,9 +335,11 @@ namespace xzj
             this.panelCJFX.Visible = false;
             this.panelSSXGXY.Visible = false;
             this.panelKSGL.Visible = true;
+            
 
             //查询科室信息
-            setKSGL_room();
+            this.btnRoomInfoManager.PerformClick();
+            // setKSGL_room();
         }
 
         //查询科室信息
@@ -348,6 +374,9 @@ namespace xzj
             }
 
         }
+
+
+
 
         //切换科室信息管理按钮
         private void btnRoomInfoManager_Click(object sender, EventArgs e)
@@ -822,6 +851,200 @@ namespace xzj
             
         }
 
+
+
+
+        private void btnSaveSSJL2_Click(object sender, EventArgs e)
+        {
+
+            string name = this.tbSSLR_NAME.Text;//患者姓名
+            string sex = this.cbSSLR_SEX.Text;//性别
+            string age = this.tbSSLR_AGE.Text;//年龄
+            string tel = this.tbSSLR_TEL.Text;//手机号
+            string ID = this.tbSSLR_ID.Text;//身份证号
+            string yblx = this.cbSSLR_YBLX.Text;//医保类型
+            string province = this.cbSSLR_PROVINCE.Text;//省
+            string city = this.cbSSLR_CITY.Text;//市
+            string county = this.cbSSLR_COUNTY.Text;//县
+            string deatilAddress = this.tbSSLR_DETAIL_ADDRESS.Text;//详细地址
+            string ctxyy = this.tbSSLR_CTXYY.Text;//常透析医院
+            string ctxyylxr = this.tbSSLR_CTXYYLXR.Text;//常透析医院联系人
+            string ctxyylxrdh = this.tbSSLR_CTXYYLXRDH.Text;//常透析医院联系人电话
+            DateTime ssrq = this.dpSSLR_SSRQ.Value;//手术日期
+            string ssdd = this.cbSSLR_SSDD.Text;// SelectedValue.ToString();//手术地点
+            string sslx = this.cbSSLR_SSLX.Text;// SelectedValue.ToString();//手术类型
+            string ssfs = this.cbSSLR_SSFS.Text;//SelectedValue.ToString();//手术方式
+            string ccfs = this.cbSSLR_CCFS.Text;//SelectedValue.ToString();//穿刺方式
+            DateTime sszz = this.dtSSLR_SSZZ.Value; // 手术追踪日期
+            string sszzqx = this.cbSSLR_SSZZQX.Text;//SelectedValue.ToString();//手术追踪期限--每三个月/每六个月
+            DateTime zz1 = this.dtTraceTime1.Value;
+            DateTime zz2 = this.dtTraceTime2.Value;
+            DateTime zz3 = this.dtTraceTime3.Value;
+            DateTime zz4 = this.dtTraceTime4.Value;
+            string ssbw = this.cbSSLR_SSBW.Text; // 手术部位
+            string ssjl = this.rtbSSLR_SSJL.Rtf;//手术记录
+            string zdys = this.tbSSLR_ZDYS.Text;//主刀医生
+            string zs = this.tbSSLR_ZS.Text;//助手
+            string qxfs = this.tbSSLR_QXFS.Text;//器械护士
+
+            int imgNumber = this.imgLstTTLB.Images.Count; // 上传图片数量
+
+            string address = province + "-" + city + "-" + county + "-" + deatilAddress + "";
+           
+            if (string.IsNullOrEmpty(name)) { MessageBox.Show("【姓名】不能为空"); return; }
+            if (string.IsNullOrEmpty(sex)) { MessageBox.Show("【性别】不能为空"); return; }
+            if (string.IsNullOrEmpty(tel)) { MessageBox.Show("【电话】不能为空"); return; }
+            if (tel.Length != 11) { MessageBox.Show("【电话】格式错误"); return; }
+            if (string.IsNullOrEmpty(ID)) { MessageBox.Show("【身份证号】不能为空"); return; }
+            if (ID.Length != 18) { MessageBox.Show("【身份证号】格式错误"); return; }
+            if (string.IsNullOrEmpty(ctxyy)) { MessageBox.Show("【常透析医院】不能为空"); return; }
+            if (string.IsNullOrEmpty(ctxyylxr)) { MessageBox.Show("【常透析医院联系人】不能为空"); return; }
+            if (string.IsNullOrEmpty(ctxyylxrdh)) { MessageBox.Show("【常透析医院联系人电话】不能为空"); return; }
+            if (ctxyylxrdh.Length != 11) { MessageBox.Show("【常透析医院联系人电话】格式错误"); return; }
+            if (string.IsNullOrEmpty(sszzqx)) { MessageBox.Show("请选择【手术追踪期限】"); return; }
+            if (string.IsNullOrEmpty(ssjl)) { MessageBox.Show("【手术记录】不能为空"); return; }
+            if (string.IsNullOrEmpty(zdys)) { MessageBox.Show("【主刀医生】不能为空"); return; }
+            if (string.IsNullOrEmpty(zs)) { MessageBox.Show("【助手】不能为空"); return; }
+            if (string.IsNullOrEmpty(qxfs)) { MessageBox.Show("【器械护士】不能为空"); return; }
+            if (0 == imgNumber) { MessageBox.Show("【请上传手术图片】"); }
+
+
+            // Console.WriteLine("--> OK 进入保存");
+
+            using (MySqlConnection con = SqlHelper4MySql.getConnection()) {
+                try
+                {
+                    con.Open();
+                    MySqlTransaction tx = con.BeginTransaction();
+
+                    // 1，保存患者 ，如果已经存在该患者就更新，如果不存在就插入
+
+                    // 1.1查询该患者是否已经存在
+                    MySqlParameter[] ps = new MySqlParameter[] {
+                        new MySqlParameter("@p_id", ID)
+                    };
+                    // Console.WriteLine("-->" + SqlHelper4MySql.ExecuteScalar(con, SqlCommandHelpler.T_PATIENT_SELECT_COUNT_BY_PATIENT_ID, ps));
+                    Boolean patientExists = Convert.ToInt32(SqlHelper4MySql.ExecuteScalar(con, SqlCommandHelpler.T_PATIENT_SELECT_COUNT_BY_PATIENT_ID, ps)) > 0 ? true : false;
+
+                    // @p_name, @p_sex, @p_age, @p_tel, @p_dialyse_hospital_tel, 
+                    // @p_health_type, @p_address,@p_dialyse_hospital, @p_dialyse_hospital_contact, @p_ID
+                    ps = new MySqlParameter[] {
+                        new MySqlParameter("@p_name", name),
+                        new MySqlParameter("@p_sex", sex),
+                        new MySqlParameter("@p_age", age),
+                        new MySqlParameter("@p_tel", tel),
+                        new MySqlParameter("@p_dialyse_hospital_tel", ctxyylxrdh),
+
+                        new MySqlParameter("@p_health_type", yblx),
+                        new MySqlParameter("@p_address", address),
+                        new MySqlParameter("@p_dialyse_hospital", ctxyy),
+                        new MySqlParameter("@p_dialyse_hospital_contact", ctxyylxr),
+                        new MySqlParameter("@p_ID", ID),
+                    };
+                    if (patientExists)
+                    {
+                        // 1.2.1存在就更新
+                        SqlHelper4MySql.ExecuteNonQuery(con, SqlCommandHelpler.T_PATIENT_UPDATE_BY_PATIENT_ID, ps);
+                    }
+                    else
+                    {
+                        // 1.2.2不存在就插入
+                        SqlHelper4MySql.ExecuteNonQuery(con, SqlCommandHelpler.T_PATIENT_INSERT, ps);
+                    }
+
+                    // 2保存手术记录
+                    ps = new MySqlParameter[] {
+                        new MySqlParameter("@p_ID", ID),
+                        new MySqlParameter("@r_date", ssrq),
+                        new MySqlParameter("@r_ss_address", ssdd),
+                        new MySqlParameter("@r_ss_type", sslx),
+                        new MySqlParameter("@r_ss_method", ssfs),
+
+                        new MySqlParameter("@r_cc_method", ccfs),
+                        new MySqlParameter("@r_sszzqx", sszz),
+                        new MySqlParameter("@r_sszz", sszzqx),
+                        new MySqlParameter("@r_zz1", zz1),
+                        new MySqlParameter("@r_zz2", zz2),
+
+                        new MySqlParameter("@r_zz3", zz3),
+                        new MySqlParameter("@r_zz4", zz4),
+                        new MySqlParameter("@r_ssbw", ssbw),
+                        new MySqlParameter("@r_zd_docotor", zdys),
+                        new MySqlParameter("@r_zs", zs),
+
+                        new MySqlParameter("@r_qxhs", qxfs),
+                        new MySqlParameter("@r_ss_record", ssjl),
+                        new MySqlParameter("@r_is_sszz", "否"),
+                    };
+                    SqlHelper4MySql.ExecuteNonQuery(con, SqlCommandHelpler.T_RECORD_INSERT, ps);
+                    // 得到手术记录的ID
+                    int recordId = Convert.ToInt32(SqlHelper4MySql.ExecuteScalar(con, SqlCommandHelpler.COMMON_SELECT_LAST_INSERT_ID, null));
+                    // Console.WriteLine("手术记录的ID是:" + recordId);
+                    
+
+                    // 3保存图片
+                    for (int i = 0; i < imgNumber; i++)
+                    {
+                        Image img = this.imgLstTTLB.Images[i];
+                        ps = new MySqlParameter[] {
+                            new MySqlParameter("@p_r_id", recordId),
+                            new MySqlParameter("@p_path", ""),
+                            new MySqlParameter("@p_desc", ""),
+                            new MySqlParameter("@p_content", ImageHelpler.imageToByte(img)),
+                            new MySqlParameter("@p_order", i),
+                        };
+                        SqlHelper4MySql.ExecuteNonQuery(con, SqlCommandHelpler.T_PICTURE_INSERT, ps);
+                    }
+
+                    // 4保存手术追踪。根据每三个月/每六个月创建4/2个对应的手术跟踪
+                    // 第一次追踪
+                    ps = new MySqlParameter[] {
+                        new MySqlParameter("@t_record_id", recordId),
+                        new MySqlParameter("@t_zzrq", zz1),
+                        new MySqlParameter("@t_patient_ID", ID),
+                        new MySqlParameter("@t_sfsszz", "否"),
+                        new MySqlParameter("@t_sfsszzcg", "否")
+                    };
+                    SqlHelper4MySql.ExecuteNonQuery(con, SqlCommandHelpler.T_TRACK_INSERT_PART, ps);
+                    // 第二次追踪
+                    ps[1] = new MySqlParameter("@t_zzrq", zz2);
+                    SqlHelper4MySql.ExecuteNonQuery(con, SqlCommandHelpler.T_TRACK_INSERT_PART, ps);
+
+                    if (sszzqx.Equals("每三个月"))
+                    {
+                        // 第三次追踪
+                        ps[1] = new MySqlParameter("@t_zzrq", zz3);
+                        SqlHelper4MySql.ExecuteNonQuery(con, SqlCommandHelpler.T_TRACK_INSERT_PART, ps);
+                        // 第四次追踪
+                        ps[1] = new MySqlParameter("@t_zzrq", zz4);
+                        SqlHelper4MySql.ExecuteNonQuery(con, SqlCommandHelpler.T_TRACK_INSERT_PART, ps);
+                    }
+
+                    tx.Commit();
+
+                    MessageBox.Show("保存成功");
+                    this.tbSSLR_NAME.Text = "";//患者姓名
+                    this.cbSSLR_SEX.Text = "";//性别
+                    this.tbSSLR_AGE.Text = "";//年龄
+                    this.tbSSLR_TEL.Text = "";//手机号
+                    this.tbSSLR_ID.Text = "";//身份证号
+                    this.tbSSLR_DETAIL_ADDRESS.Text = "";//详细地址
+                    this.tbSSLR_CTXYY.Text = "";//常透析医院
+                    this.tbSSLR_CTXYYLXR.Text = "";//常透析医院联系人
+                    this.tbSSLR_CTXYYLXRDH.Text = "";//常透析医院联系人电话
+                    this.rtbSSLR_SSJL.Text = "";//手术记录
+                    this.tbSSLR_ZDYS.Text = "";//主刀医生
+                    this.tbSSLR_ZS.Text = "";//助手
+                    this.tbSSLR_QXFS.Text = "";//器械护士
+                    removeAllSSTP();
+                }
+                catch (Exception ex) {
+                    MessageBox.Show("保存失败：" + ex.Message);
+                }
+            }
+
+        }
+
         //保存手术记录
         private void btnSaveSSJL_Click(object sender, EventArgs e)
         {
@@ -865,6 +1088,9 @@ namespace xzj
             if (string.IsNullOrEmpty(zdys)) { MessageBox.Show("【主刀医生】不能为空"); return; }
             if (string.IsNullOrEmpty(zs)) { MessageBox.Show("【助手】不能为空"); return; }
             if (string.IsNullOrEmpty(qxfs)) { MessageBox.Show("【器械护士】不能为空"); return; }
+
+
+
 
             int flag = -1;
             
@@ -1251,8 +1477,12 @@ namespace xzj
                     "from t_track t";
 
 
-            btnSJCX_SSZZ_FIND_Click(null, null);
+            // btnSJCX_SSZZ_FIND_Click(null, null);
+            btn_SJCX_SSZZCX_2_Click(null, null);
         }
+
+
+
 
 
         //初始化数据查询界面
@@ -1333,6 +1563,13 @@ namespace xzj
             this.all_ypzxsj.Text = "";
             this.all_zwcmzcjtzqk.Text = "";
             this.all_sfys.Text = "";
+
+            this.labSJCX_TraceTime.Text = "";
+            this.labSJCX_TraceValue1.Text = "";
+            this.labSJCX_TraceValue2.Text = "";
+            this.labSJCX_TraceValue3.Text = "";
+            this.labSJCX_TraceValue4.Text = "";
+                    
         }
 
         //设置手术记录列表
@@ -1390,7 +1627,8 @@ namespace xzj
 	                "p.p_name,p.p_sex,p.p_age,p.p_tel,p.p_ID,p.p_health_type,p.p_address, "+
                     "p.p_dialyse_hospital,p.p_dialyse_hospital_contact,p.p_dialyse_hospital_tel, " +
                     "r.r_date,r.r_ss_address,r.r_ss_type,r.r_ss_method,r.r_cc_method,r.r_zd_docotor, " +
-                    "r.r_zs,r_qxhs,r.r_ss_record,r.r_is_sszz " +
+                    "r.r_zs,r_qxhs,r.r_ss_record,r.r_is_sszz, r.r_sszz, r.r_zz1, " +
+                    "r.r_zz2, r.r_zz3, r.r_zz4, r.r_ssbw " +
                 "from t_patient p,t_record r " +
                 "where  " +
                     "p.p_ID = r.r_patient_ID " +
@@ -1411,7 +1649,7 @@ namespace xzj
                     this.all_ctxyy.Text = row["p_dialyse_hospital"].ToString();
                     this.all_ctxyylxr.Text = row["p_dialyse_hospital_contact"].ToString();
                     this.all_ctxyylxrdh.Text = row["p_dialyse_hospital_tel"].ToString();
-                    this.all_ssrq.Text = row["r_date"].ToString();
+                    this.all_ssrq.Text = Convert.ToDateTime(row["r_date"]).ToShortDateString();
                     this.all_ssdd.Text = row["r_ss_address"].ToString();
                     this.all_sslx.Text = row["r_ss_type"].ToString();
                     this.all_ssfs.Text = row["r_ss_method"].ToString();
@@ -1420,10 +1658,98 @@ namespace xzj
                     this.all_zdys.Text = row["r_zd_docotor"].ToString();
                     this.all_zs.Text = row["r_zs"].ToString();
                     this.all_qxhs.Text = row["r_qxhs"].ToString();
-                    this.all_ssjl.Text = row["r_ss_record"].ToString();
+                    this.all_ssjl.Rtf = row["r_ss_record"].ToString();
+                    // this.richTextBoxPrintCtrl1.Rtf = row["r_ss_record"].ToString();
+                    // this.all_ssjl.
+                    // all_ssjl.
+                    // this.all_ssjl.Text = "test";
+
+                    this.labSJCX_TraceTime.Text = row["r_sszz"].ToString();
+                    this.labSJCX_TraceValue1.Text = Convert.ToDateTime(row["r_zz1"]).ToShortDateString();
+                    this.labSJCX_TraceValue2.Text = Convert.ToDateTime(row["r_zz2"]).ToShortDateString();
+                    if (this.labSJCX_TraceTime.Text.Equals("每三个月"))
+                    {
+                        this.labSJCX_Trace3.Show();
+                        this.labSJCX_TraceValue3.Show();
+                        this.labSJCX_TraceValue4.Show();
+                        this.labSJCX_Trace4.Show();
+                        this.labSJCX_TraceValue3.Text = Convert.ToDateTime(row["r_zz3"]).ToShortDateString();
+                        this.labSJCX_TraceValue4.Text = Convert.ToDateTime(row["r_zz4"]).ToShortDateString();
+                    }
+                    else {
+                        this.labSJCX_Trace3.Hide();
+                        this.labSJCX_TraceValue3.Hide();
+                        this.labSJCX_TraceValue4.Hide();
+                        this.labSJCX_Trace4.Hide();
+                    }
+                    this.labSJCX_SSBW.Text = row["r_ssbw"].ToString();
+                    
+                    // this.all_ssjl.Cont
                 }
             }
+            MySqlParameter[] ps = new MySqlParameter[] {
+                new MySqlParameter("@p_r_id", id)
+            };
+            using (MySqlDataReader reader = SqlHelper4MySql.ExecuteReader(SqlCommandHelpler.T_PICTURE_SELECT_BY_RID, ps))
+            {
+                int i = 1;
+                Point p = new Point(20, 20);
+                while (reader.Read()) {
+                    PictureBox picbx = new PictureBox();
+                    picbx.Size = new Size(ValueSender.imageWidth, ValueSender.imageHeight);
+
+                    long length = reader.GetBytes(0, 0, null, 0, int.MaxValue);
+                    byte[] bytes = new byte[length];
+                    reader.GetBytes(0, 0, bytes, 0, bytes.Length);
+                    picbx.Image = ImageHelpler.byteToImage(bytes);
+
+                    // int poc = y++ * ValueSender.imageHeight + picPositionY;
+                    Console.WriteLine("第" + i++ + "张图片");
+
+                    picbx.Location = p;
+                    if ((p.Y + picbx.Height) > grpbxImgs.Height) {
+                        grpbxImgs.Height = (p.Y + picbx.Height) + 20;
+                    }
+
+                    p = picLocation(p);
+                    grpbxImgs.Controls.Add(picbx);
+
+                    
+                    // all_ssjl.draw
+                }
+            }  
+
         }
+
+        private Point picLocation(Point p) { 
+            //if ()
+            // 宽626
+            // 高969
+            if (p.X > 300)
+            {
+                // 那么横排只能放一张图片，那么4张图就只能如下排版
+                // 图片1
+                // 图片2
+                // 图片3
+                // 图片4
+                p.X = 20;
+                p.Y = ValueSender.imageHeight + 10 + p.Y;
+                
+            }
+            else
+            {
+                // 那么横排能放2张图
+                // 图片1 图片2
+                // 图片3 图片4
+                p.X = 310;
+               
+            }
+            return p;
+
+
+        }
+
+
 
         //是否显示手术追踪
         private void cbSJCX_XSSSZZ_CheckedChanged(object sender, EventArgs e)
@@ -1489,9 +1815,80 @@ namespace xzj
             }
         }
 
+
+        
+        DataTable dataTableForSSZZ;
+        // 查询手术追踪2
+        private void btn_SJCX_SSZZCX_2_Click(object sender, EventArgs e)
+        {
+
+            this.dgvSJCX_SSZZ.DataSource = null;
+
+            string name = this.tbSJCX_SSZZ_NAME.Text;//姓名
+            string sszz = this.cbSJCX_SSZZ_CXTJ.Text;//追踪状态 是 否  全部
+            sszz = string.IsNullOrEmpty(sszz) ? "全部" : sszz;
+
+            DateTime date = this.dtpSJCX_SSZZ_KSRQ.Value;
+            // 根据日期查询
+            DateTime startTime = new DateTime(date.Year, date.Month, 1, 0, 0, 0);
+            DateTime endTime;
+            if (12 == date.Month)
+            {
+                endTime = new DateTime(date.Year + 1, 1, 1, 0, 0, 0);
+            }
+            else
+            {
+                endTime = new DateTime(date.Year, date.Month + 1, 1, 0, 0, 0);
+            }
+
+            // DataTable dataTable;
+            if (sszz.Equals("全部"))
+            {
+                MySqlParameter[] ps = new MySqlParameter[] {
+                    new MySqlParameter("@p_name", "%" + name + "%"),
+                    new MySqlParameter("@startTime", startTime),
+                    new MySqlParameter("@endTime", endTime)
+                };
+                dataTableForSSZZ = SqlHelper4MySql.getDataTable(SqlCommandHelpler.T_PATIENT_TRACK_RECORD_SELECT_BY_PNAME_ZZRQ, ps);
+            }
+            else
+            {
+                MySqlParameter[] ps = new MySqlParameter[] {
+                    new MySqlParameter("@p_name", "%" + name + "%"),
+                    new MySqlParameter("@t_sfsszz", sszz),
+                    new MySqlParameter("@startTime", startTime),
+                    new MySqlParameter("@endTime", endTime)
+                };
+                dataTableForSSZZ = SqlHelper4MySql.getDataTable(SqlCommandHelpler.T_PATIENT_TRACK_RECORD_SELECT_BY_PNAME_FFZZCG_ZZRQ, ps);
+            }
+            if (dataTableForSSZZ == null || dataTableForSSZZ.Rows.Count == 0)
+            {
+                MessageBox.Show("当前数据为空");
+            }
+            else
+            {
+                this.dgvSJCX_SSZZ.SelectionMode = DataGridViewSelectionMode.FullRowSelect;//选中整行
+                this.dgvSJCX_SSZZ.DataSource = null;//清空
+                this.dgvSJCX_SSZZ.DataSource = dataTableForSSZZ;
+
+                // Header以外所有的单元格的背景色
+                this.dgvSJCX_SSZZ.RowsDefaultCellStyle.BackColor = Color.White;
+
+                ////列Header的背景色 CellBorderStyle->Single   EnableHeaderVisualStyles->false
+                this.dgvSJCX_SSZZ.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#4f81DD");
+                this.dgvSJCX_SSZZ.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+                this.dgvSJCX_SSZZ.DefaultCellStyle.SelectionBackColor = Color.Gray;//设置选中的颜色
+            }
+        }
+
         //查询手术追踪
         private void btnSJCX_SSZZ_FIND_Click(object sender, EventArgs e)
         {
+            // getDataTable
+
+
+            
             this.dgvSJCX_SSZZ.DataSource = null;
 
             string name = this.tbSJCX_SSZZ_NAME.Text;//姓名
@@ -2053,6 +2450,7 @@ namespace xzj
             initTJFX_XXTJ();
         }
 
+        private DataTable dataTableForTJFX_XXTJ;
         //详细统计
         private void initTJFX_XXTJ()
         {
@@ -2094,6 +2492,7 @@ namespace xzj
             this.dgvTJCX_GZL.SelectionMode = DataGridViewSelectionMode.FullRowSelect;//选中整行
             this.dgvTJCX_GZL.DataSource = null;//清空
             this.dgvTJCX_GZL.DataSource = dt1;
+            dataTableForTJFX_XXTJ = dt1;
 
             // Header以外所有的单元格的背景色
             this.dgvTJCX_GZL.RowsDefaultCellStyle.BackColor = Color.White;
@@ -2164,12 +2563,133 @@ namespace xzj
             }
         }
 
+
+        struct MY_PRINT_PAGE {
+            public Point points;
+            public Bitmap bitmaps;
+        }
+        // private MY_PRINT_PAGE[] printPages;
+        private List<List<Bitmap>> printPages = new List<List<Bitmap>>();
+
+        int currentPageIndex = 0;
+        // 打印前
+        private void printDucumentSSCX_SSJL_BeginPrint(object sender, PrintEventArgs e)
+        {
+            currentPageIndex = 0;
+            Console.WriteLine("BeginPrint");
+
+            int pageHeight = 969;
+            int top = 0;
+            List<Bitmap> page = new List<Bitmap>();
+
+            // 高可用的：969
+            // 宽可用的：627
+            // 头部 高度75 宽度627
+
+            Bitmap head = new Bitmap(this.panelSJCX_SSJL_Head.Width, this.panelSJCX_SSJL_Head.Height);
+            this.panelSJCX_SSJL_Head.DrawToBitmap(head, new Rectangle(0, 0, head.Width, head.Height));
+            // e.Graphics.DrawImage(head, left, top, head.Width, head.Height);
+            // top += head.Height;
+            top += head.Height;
+            page.Add(head);
+            Console.WriteLine("head之后当前top值:" + top);
+
+            // 基本信息 高度285 宽度627
+            Bitmap baseInfo = new Bitmap(this.panelSJCX_SSJL_BaseInfo.Width, this.panelSJCX_SSJL_BaseInfo.Height);
+            this.panelSJCX_SSJL_BaseInfo.DrawToBitmap(baseInfo, new Rectangle(0, 0, baseInfo.Width, baseInfo.Height));
+            // e.Graphics.DrawImage(baseInfo, left, top, baseInfo.Width, baseInfo.Height);
+            // top += baseInfo.Height;
+            top += baseInfo.Height;
+            page.Add(baseInfo);
+            Console.WriteLine("baseInfo之后当前top值:" + top);
+
+            // 手术记录 
+            Bitmap ssjl = CutImage.RtbToBitmap(this.all_ssjl);
+            // e.Graphics.DrawImage(ssjl, left, top, ssjl.Width, ssjl.Height);
+            top += ssjl.Height;
+
+            if (top > pageHeight)
+            {
+                // 说明手术记录比较大了，需要分页
+                // top 
+                
+            }
+            else { 
+                // 不需要分页
+                page.Add(ssjl);
+            }
+            Console.WriteLine("手术记录之后当前top值:" + top);
+
+            Bitmap zdys = new Bitmap(this.panelSJCX_ZDYS.Width, this.panelSJCX_ZDYS.Height);
+            this.panelSJCX_ZDYS.DrawToBitmap(zdys, new Rectangle(0, 0, zdys.Width, zdys.Height));
+            // e.Graphics.DrawImage(baseInfo, left, top, baseInfo.Width, baseInfo.Height);
+            // top += baseInfo.Height;
+            top += zdys.Height;
+            page.Add(zdys);
+            Console.WriteLine("主刀医生之后当前top值:" + top);
+
+            printPages.Add(page);
+        }
+
+        
         private void printDucumentSSCX_SSJL_PrintPage(object sender, PrintPageEventArgs e)
         {
+            Console.WriteLine("PrintPage, currentPageIndex:" + currentPageIndex);
             //打印内容 为 局部的 this.panel1
-            Bitmap _NewBitmap = new Bitmap(this.panelSSCX_SSJLD.Width, this.panelSSCX_SSJLD.Height);
-            this.panelSSCX_SSJLD.DrawToBitmap(_NewBitmap, new Rectangle(0, 0, _NewBitmap.Width, _NewBitmap.Height));
-            e.Graphics.DrawImage(_NewBitmap, 0, 0, _NewBitmap.Width, _NewBitmap.Height);
+            int left = e.MarginBounds.Left;
+            int top = e.MarginBounds.Top;
+            int right = e.MarginBounds.Right;
+            int bottom = e.MarginBounds.Bottom;
+            Console.Write("全部范围：left" + e.PageBounds.Left + ", top" + e.PageBounds.Top + ",Right:" + e.PageBounds.Right + ",Bottom" + e.PageBounds.Bottom);
+            Console.WriteLine("A4值范围: left:" + left + ", top:" + top + ", right:" + right + ",bottom" + bottom);
+
+
+            List<Bitmap> page = printPages[currentPageIndex];
+            for (int i = 0; i < page.Count; i++) {
+                Console.WriteLine("第" + (i + 1) + "张图片");
+                Bitmap b = page[i];
+                e.Graphics.DrawImage(b, left, top, b.Width, b.Height);
+                top += b.Height;
+            }
+            if ((printPages.Count - 1) > currentPageIndex)
+            {
+                e.HasMorePages = true;
+            }
+            else {
+                e.HasMorePages = false;
+            }
+
+            
+            // Bitmap ssjl = new Bitmap(this.all_ssjl.Width, this.all_ssjl.Height);
+            // this.all_ssjl.DrawToBitmap(ssjl, new Rectangle(0, 0, ssjl.Width, ssjl.Height));
+            // string[] lines = all_ssjl.Lines;
+            // all_ssjl.Lines[0].
+            // for (int j = 0; j < lines.Length; j++) {
+                // e.Graphics.DrawString(lines[j], Font.Bold, new Brush(Brush, 100, 500);
+            // }
+            
+            // e.Graphics.DrawImage(ssjl, left, top, ssjl.Width, ssjl.Height);
+            // top += baseInfo.Height;
+
+            // checkPrint = richTextBoxPrintCtrl1.Print(checkPrint, richTextBoxPrintCtrl1.TextLength, e);
+            /*
+            if (checkPrint < richTextBoxPrintCtrl1.TextLength)
+                e.HasMorePages = true;
+            else
+                e.HasMorePages = false;
+            */
+            
+
+            /*Bitmap _NewBitmap = new Bitmap(this.panelSSCX_SSJLD.Width, this.panelSSCX_SSJLD.Height);//
+            // 把panel画上去
+            this.panelSSCX_SSJLD.DrawToBitmap(_NewBitmap, new Rectangle(0, 0, _NewBitmap.Width, _NewBitmap.Height));*/
+
+            e.Graphics.DrawLine(new Pen(Color.Red), new Point(100, 100), new Point(727, 100));
+            e.Graphics.DrawLine(new Pen(Color.Red), new Point(100, 1069), new Point(727, 1069));
+
+            e.Graphics.DrawLine(new Pen(Color.Red), new Point(100, 100), new Point(100, 1069));
+            e.Graphics.DrawLine(new Pen(Color.Red), new Point(727, 100), new Point(727, 1069));
+            // e.Graphics.DrawImage(_NewBitmap, left, top, _NewBitmap.Width, _NewBitmap.Height);
         }
 
         //打印手术追踪查询
@@ -2181,15 +2701,49 @@ namespace xzj
             e.Graphics.DrawImage(_NewBitmap, 0, 0, _NewBitmap.Width, _NewBitmap.Height);
         }
 
+        
+
         //手术追踪打印
         private void btnSSCX_SSZZDY_Click(object sender, EventArgs e)
         {
+            
             this.printDialogSSCX_SSJL.Document = this.printDucumentSSCX_SSJL;
             if (this.printDialogSSCX_SSJL.ShowDialog() == DialogResult.OK)
             {
                 this.printDocumentSJCX_SSZZ.Print();
             }
         }
+        // 手术追踪导出pdf
+        private void btnSJCX_SSZZ_Out_Click(object sender, EventArgs e)
+        {
+            // dataTableForSSZZ
+            if (null == dataTableForSSZZ || 0 == dataTableForSSZZ.Rows.Count) {
+                MessageBox.Show("请先查询数据!");
+                return;
+            }
+            string strFileName = "";
+            SaveFileDialog savFile = new SaveFileDialog();
+            savFile.Filter = "PDF文件|.pdf";
+            savFile.ShowDialog();
+            if (savFile.FileName != "")
+            {
+                strFileName = savFile.FileName;
+            }
+            else
+            {
+                return;
+            }
+
+            Console.WriteLine("fn:" + strFileName);
+            PDFHelpler.ToPdf(dataTableForSSZZ, strFileName);
+            // string sql = "SELECT p_name 姓名, p_sex 性别 FROM t_patient";
+            // MySqlDataAdapter ad = new MySqlDataAdapter();
+            // DataTable dt = SqlHelper4MySql.getDataTable(sql, null);
+            // this.dataGridView1.DataSource = dt;
+            
+        }
+
+
 
     
         //设置字体加粗
@@ -2373,7 +2927,25 @@ namespace xzj
             this.panelCJFX.Visible = false;
             this.panelSSXGXY.Visible = false;
             this.panelKSGL.Visible = false;
+
+            // 查询内痿自我锻炼
+            DataTable dt = DBDictionary.getInstance().getDictionarysByParentId(10);
+            combobox(this.cbSSLR_SSZZ_NWZWDLQK, dt);//
+
+            // 查询穿刺部位皮肤情况
+            dt = DBDictionary.getInstance().getDictionarysByParentId(11);
+            combobox(this.cbSSLR_SSZZ_CCBWPFQK, dt);
+
+            // 查询感染控制方式
+            dt = DBDictionary.getInstance().getDictionarysByParentId(12);
+            combobox(this.cbSSLR_SSZZ_GRKZFS, dt);
+
+
+            initSSZZState();
+
         }
+
+        
 
         //切换到手术相关协议
         private void btnSSXGXY_Click(object sender, EventArgs e)
@@ -2393,13 +2965,76 @@ namespace xzj
             this.panelCJFX.Visible = false;
             this.panelSSXGXY.Visible = true;
             this.panelKSGL.Visible = false;
+
+
+            // 加载手术相关协议
+            loadControl("");
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            loadControl(this.btnSSXGXY_XYMC.Text);
+        }
+
+        private void loadControl(string ctrName) {
+            this.dgvSSXGXY_Control.Rows.Clear();
+
+            MySqlParameter[] ps = new MySqlParameter[]{
+                new MySqlParameter("@c_name", "%" + ctrName + "%")
+            };
+            // DataTable dt = SqlHelper4MySql.getDataTable(SqlCommandHelpler.T_CONTROL_SELECT_BY_NAME, ps);
+            // this.dgvSSXGXY_Control.DataSource = dt;
+            using (MySqlDataReader reader = SqlHelper4MySql.ExecuteReader(SqlCommandHelpler.T_CONTROL_SELECT_BY_NAME, ps))
+            {
+                while (reader.Read()) {
+                    int index = this.dgvSSXGXY_Control.Rows.Add();
+                    // SELECT c_order_id, c_name, c_desc
+                    this.dgvSSXGXY_Control.Rows[index].Cells[0].Value = reader.GetString("id");
+                    this.dgvSSXGXY_Control.Rows[index].Cells[1].Value = reader.GetString("c_order_id");
+                    this.dgvSSXGXY_Control.Rows[index].Cells[2].Value = reader.GetString("c_name");
+                    this.dgvSSXGXY_Control.Rows[index].Cells[3].Value = reader.GetString("c_desc");
+                    // this.dgvSSXGXY_Control.Rows[index].Cells[3].Value = "内容";
+                    // DataGridViewButtonColumn
+                }
+            }
+
+        }
+
+
+
 
         //去添加手术追踪界面
         private void btnGoAddSSZZ_Click(object sender, EventArgs e)
         {
+            // if (ValueSender.isAdd) {
+                // MessageBox.Show("您已经为本次追踪记录添加创建时间和创建人，无法再添加!");
+            // }
 
+            ValueSender.isAdd = false;
+            FormAddSSZZ form = new FormAddSSZZ();
+            form.ShowDialog();
+            // Console.WriteLine("here");
+            if (ValueSender.isAdd) { 
+                int rowNumber = this.dgvSSZZ.Rows.Add();
+                this.dgvSSZZ.Rows[rowNumber].Cells[0].Value = ValueSender.createDate.ToShortDateString();
+                this.dgvSSZZ.Rows[rowNumber].Cells[1].Value = ValueSender.creator;
+            }
+            
         }
+        private void initSSZZState() {
+            this.btnGoAddSSZZ.Enabled = false;
+            this.btnSSZZ_SB.Enabled = false;
+            this.btnSaveSSLR_SSZZ.Enabled = false;
+            this.dgvSSZZ.Rows.Clear();
+        }
+        private void enableSSZZState() {
+            this.btnGoAddSSZZ.Enabled = true;
+            this.btnSSZZ_SB.Enabled = true;
+            this.btnSaveSSLR_SSZZ.Enabled = true;
+            // this.dgvSSZZ.Rows.Clear();
+        }
+
+
 
         //手术记录添加图片
         private void btnSSJLa_addPic_Click(object sender, EventArgs e)
@@ -2419,7 +3054,13 @@ namespace xzj
             {
                 foreach (string s in this.openFileDialogSSLR.FileNames)
                 {
-                    
+                    Console.WriteLine("添加图片：" + s);
+                    Image img = Image.FromFile(s);
+                    // 图片列表中添加该图片
+                    imgLstTTLB.Images.Add(img);
+                    // 获得该图片的名称
+                    String picName = s.Substring(s.LastIndexOf("\\") + 1);
+                    lstboxTTLB.Items.Add(picName);
                 } 
             }
         }
@@ -2436,11 +3077,671 @@ namespace xzj
             FormAddControl formAddControl = new FormAddControl();
             //formAddControl.setDesc(-1, dictionary_parent_id, "添加字典", this.labelDictionaryShow.Text);
             formAddControl.ShowDialog();
-            if (formAddControl.DialogResult == DialogResult.OK)
-            {
+            button7_Click(null, null);
+            // if (formAddControl.DialogResult == DialogResult.OK)
+            // {
                 //this.setListViewDictionary(this.labelDictionaryShow.Text, dictionary_parent_id);//重新绑定
+            // }
+        }
+        
+
+
+        private void hideAllTraceTime() {
+            // 3个月 12/3 4次
+            // 6个月 12/6 2次
+            labTraceTime1.Hide();
+            labTraceTime2.Hide();
+            labTraceTime3.Hide();
+            labTraceTime4.Hide();
+            labTraceTime5.Hide();
+            labTraceTime6.Hide();
+            labTraceTime7.Hide();
+            labTraceTime8.Hide();
+            labTraceTime9.Hide();
+            labTraceTime10.Hide();
+            labTraceTime11.Hide();
+            labTraceTime12.Hide();
+            dtTraceTime1.Hide();
+            dtTraceTime2.Hide();
+            dtTraceTime3.Hide();
+            dtTraceTime4.Hide();
+            dtTraceTime5.Hide();
+            dtTraceTime6.Hide();
+            dtTraceTime7.Hide();
+            dtTraceTime8.Hide();
+            dtTraceTime9.Hide();
+            dtTraceTime10.Hide();
+            dtTraceTime11.Hide();
+            dtTraceTime12.Hide();
+        }
+
+        // 下拉选择手术追踪 值改变
+        private void cbSSLR_SSZZQX_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (showTraceTime) {
+                hideAllTraceTime();
+
+                DateTime dateTime = this.dtSSLR_SSZZ.Value;
+                // MessageBox.Show(EVERY_THREE_MONTH + "  " + this.cbSSLR_SSZZQX.Text.Equals(EVERY_THREE_MONTH) + " " + this.cbSSLR_SSZZQX.Text);
+                if (this.cbSSLR_SSZZQX.Text.Equals(EVERY_THREE_MONTH))
+                {
+                    const int monthInteval = 3;
+                    labTraceTime1.Show();
+                    dtTraceTime1.Show();
+                    dtTraceTime1.Value = dateTime.AddMonths(monthInteval * 1);
+                    labTraceTime2.Show();
+                    dtTraceTime2.Show();
+                    dtTraceTime2.Value = dateTime.AddMonths(monthInteval * 2);
+                    labTraceTime3.Show();
+                    dtTraceTime3.Show();
+                    dtTraceTime3.Value = dateTime.AddMonths(monthInteval * 3);
+                    labTraceTime4.Show();
+                    dtTraceTime4.Show();
+                    dtTraceTime4.Value = dateTime.AddMonths(monthInteval * 4);
+                }
+                else
+                {
+                    // EVERY_SIX_MONTH
+                    const int monthInteval = 6;
+                    labTraceTime1.Show();
+                    dtTraceTime1.Show();
+                    dtTraceTime1.Value = dateTime.AddMonths(monthInteval * 1);
+                    labTraceTime2.Show();
+                    dtTraceTime2.Show();
+                    dtTraceTime2.Value = dateTime.AddMonths(monthInteval * 2);
+                }
+
+                /* if (5 <= traceTimes)
+                {
+                    labTraceTime5.Show();
+                    dtTraceTime5.Show();
+                    dtTraceTime5.Value = dateTime.AddMonths(monthInteval * 5);
+                }
+                if (6 <= traceTimes)
+                {
+                    labTraceTime6.Show();
+                    dtTraceTime6.Show();
+                    dtTraceTime6.Value = dateTime.AddMonths(monthInteval * 6);
+                }
+                if (7 <= traceTimes)
+                {
+                    labTraceTime7.Show();
+                    dtTraceTime7.Show();
+                    dtTraceTime7.Value = dateTime.AddMonths(monthInteval * 7);
+                }
+                if (8 <= traceTimes)
+                {
+                    labTraceTime8.Show();
+                    dtTraceTime8.Show();
+                    dtTraceTime8.Value = dateTime.AddMonths(monthInteval * 8);
+                }
+                if (9 <= traceTimes)
+                {
+                    labTraceTime9.Show();
+                    dtTraceTime9.Show();
+                    dtTraceTime9.Value = dateTime.AddMonths(monthInteval * 9);
+                }
+                if (10 <= traceTimes)
+                {
+                    labTraceTime10.Show();
+                    dtTraceTime10.Show();
+                    dtTraceTime10.Value = dateTime.AddMonths(monthInteval * 10);
+                }
+                if (11 <= traceTimes)
+                {
+                    labTraceTime11.Show();
+                    dtTraceTime11.Show();
+                    dtTraceTime11.Value = dateTime.AddMonths(monthInteval * 11);
+                }
+                if (12 == traceTimes) {
+                    labTraceTime12.Show();
+                    dtTraceTime12.Show();
+                    dtTraceTime12.Value = dateTime.AddMonths(monthInteval * 12);
+                }*/
+            }
+           
+        }
+        private Boolean showTraceTime = false;
+        // 下拉选择手术追踪 点击事件
+        private void cbSSLR_SSZZQX_Click(object sender, EventArgs e)
+        {
+            showTraceTime = true;
+        }
+
+        // 选择图片
+        private void lstboxTTLB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = this.lstboxTTLB.SelectedIndex;
+            // Console.WriteLine("当前选择图片下标：" + index);
+            if (-1 != index)
+            {
+                picSSTP.Image = imgLstTTLB.Images[index];
             }
         }
+
+        private void btnRemoveSSTP_Click(object sender, EventArgs e)
+        {
+            int index = this.lstboxTTLB.SelectedIndex;
+            if (-1 == index)
+            {
+                if (0 == this.imgLstTTLB.Images.Count)
+                {
+                    MessageBox.Show("当前没有可移除的图片!");
+                }
+                else
+                {
+                    MessageBox.Show("请选择要移除的图片!");
+                }
+            }
+            else
+            {
+                this.lstboxTTLB.Items.RemoveAt(index);
+                this.imgLstTTLB.Images.RemoveAt(index);
+                this.picSSTP.CreateGraphics().Clear(Color.White);
+            }
+        }
+
+        private void removeAllSSTP() {
+            this.lstboxTTLB.Items.Clear();
+            this.imgLstTTLB.Images.Clear();
+            this.picSSTP.CreateGraphics().Clear(Color.White);
+        }
+        private void btnRemoveAllSSTP_Click(object sender, EventArgs e)
+        {
+            removeAllSSTP();
+        }
+
+        private void cbSSLR_CITY_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSSZZ_SB_Click(object sender, EventArgs e)
+        {
+            if (!ValueSender.isAdd) { MessageBox.Show("请添加本次追踪创建人及创建日期!"); return; }
+            if (-1 == currentIndex) { MessageBox.Show("请选择患者!"); return; }
+
+            DateTime createDate = ValueSender.createDate;
+            string creator = ValueSender.creator;
+            string sssbyy = this.rtbSSZZ_FailReason.Text;
+            if (string.IsNullOrEmpty(sssbyy)) { MessageBox.Show("请输入【手术失败原因】"); return; }
+
+
+            MySqlParameter[] ps = new MySqlParameter[] {
+                new MySqlParameter("@t_t_sszzrq", createDate), // 创建日期
+                new MySqlParameter("@t_sszzcjr", creator), // 创建人
+                new MySqlParameter("@t_sfsszz", "是"), // 是否手术跟踪
+                new MySqlParameter("@t_sfsszzcg", "否"), // 是否手术跟踪成功
+                new MySqlParameter("@t_sssbyy", sssbyy), // 手术失败原因
+
+                new MySqlParameter("@t_ssct", null), // 是否畅通
+                new MySqlParameter("@t_ywxlbct", null),
+                new MySqlParameter("@t_ywxm", null),
+                new MySqlParameter("@t_ywbfz", null),
+                new MySqlParameter("@t_ywxbjmqz", null),
+
+                new MySqlParameter("@t_ywccbwphgmqk", null),
+                new MySqlParameter("@t_nwzwdlqk", null),
+                new MySqlParameter("@t_ccbwpfqk", null),
+                new MySqlParameter("@t_grkzfs", null),
+                new MySqlParameter("@t_zwcmzcjtzqk", null),
+
+                new MySqlParameter("@t_id", trackID[currentIndex]) // 这条追踪的id
+            };
+            try
+            {
+                SqlHelper4MySql.ExecuteNonQuery(SqlCommandHelpler.I_TRACK_UPDATE, ps);
+                MessageBox.Show("保存成功!");
+                // 清空界面上的东西
+                this.lstbxPatientNames.Items.RemoveAt(currentIndex);
+                currentIndex = -1;
+                this.tbSSLR_SSZZ_ZWQMJTZQK.Text = "";
+                this.rtbSSZZ_FailReason.Text = "";
+                // this.dgvSSZZ.Rows.Clear();
+                initSSZZState();
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("保存失败:" + err.Message);
+                
+            }
+
+
+        }
+
+
+        private void btnSaveSSLR_SSZZ_Click_1(object sender, EventArgs e)
+        {
+
+            if (!ValueSender.isAdd) { MessageBox.Show("请添加本次追踪创建人及创建日期!"); return; }
+            if (-1 == currentIndex) { MessageBox.Show("请选择患者!"); return;  }
+
+
+            // Datethis.dgvSSZZ.Rows[this.dgvSSZZ.Rows.Count - 1].Cells[0];
+            DateTime createDate = ValueSender.createDate;
+            string creator = ValueSender.creator;
+            string sfct = this.cbSSLR_SSZZ_SFTC.Text; // 是否畅通
+            string ywxlbct = this.cbSSLR_SSZZ_YWXLBCT.Text;// 有无血流不畅通
+            string ywxm = this.cbSSLR_SSZZ_YWXM.Text; // 有无胸闷
+            string ywbfz = this.cbSSLR_SSZZ_YWBFZ.Text; // 有无并发症
+            string ywxbjmqz = this.cbSSLR_SSZZ_YWXBJMQZ.Text; // 有无胸壁静脉曲张
+            string ywccbwpfgmqk = this.cbSSLR_SSZZ_YWCCBWPFGMQK.Text; // 有无穿刺部位皮肤过敏情况
+            string nwzwdlqk = this.cbSSLR_SSZZ_NWZWDLQK.Text; // 内痿自我锻炼情况
+            string ccbwpfqk = this.cbSSLR_SSZZ_CCBWPFQK.Text; // 穿刺部位皮肤情况
+            string grkzfs = this.cbSSLR_SSZZ_GRKZFS.Text; // 感染控制方式
+            string zwcmjtzqk = this.tbSSLR_SSZZ_ZWQMJTZQK.Text; // 自我触摸及听诊情况
+
+            if (string.IsNullOrEmpty(sfct)) { MessageBox.Show("请选择【是否畅通】"); return; }
+            if (string.IsNullOrEmpty(ywxlbct)) { MessageBox.Show("请选择【有无血流不畅通】"); return; }
+            if (string.IsNullOrEmpty(ywxm)) { MessageBox.Show("请选择【有无胸闷】"); return; }
+            if (string.IsNullOrEmpty(ywbfz)) { MessageBox.Show("请选择【有无并发症】"); return; }
+            if (string.IsNullOrEmpty(ywxbjmqz)) { MessageBox.Show("请选择【有无胸壁静脉曲张】"); return; }
+            if (string.IsNullOrEmpty(ywccbwpfgmqk)) { MessageBox.Show("请选择【有无穿刺皮肤过敏情况】"); return; }
+            if (string.IsNullOrEmpty(nwzwdlqk)) { MessageBox.Show("请选择【内痿自我锻炼情况】"); return; }
+            if (string.IsNullOrEmpty(ccbwpfqk)) { MessageBox.Show("请选择【穿刺部位皮肤情况】"); return; }
+            if (string.IsNullOrEmpty(grkzfs)) { MessageBox.Show("请选择【感染控制方式】"); return; }
+            if (string.IsNullOrEmpty(zwcmjtzqk)) { MessageBox.Show("请输入【自我触摸及听诊情况】"); return; }
+
+
+            MySqlParameter[] ps = new MySqlParameter[] {
+                new MySqlParameter("@t_t_sszzrq", createDate), // 创建日期
+                new MySqlParameter("@t_sszzcjr", creator), // 创建人
+                new MySqlParameter("@t_sfsszz", "是"), // 是否手术跟踪
+                new MySqlParameter("@t_sfsszzcg", "是"), // 是否手术跟踪成功
+                new MySqlParameter("@t_sssbyy", null), // 手术失败原因
+
+                new MySqlParameter("@t_ssct", sfct), // 是否畅通
+                new MySqlParameter("@t_ywxlbct", ywxlbct),
+                new MySqlParameter("@t_ywxm", ywxm),
+                new MySqlParameter("@t_ywbfz", ywbfz),
+                new MySqlParameter("@t_ywxbjmqz", ywxbjmqz),
+
+                new MySqlParameter("@t_ywccbwphgmqk", ywccbwpfgmqk),
+                new MySqlParameter("@t_nwzwdlqk", nwzwdlqk),
+                new MySqlParameter("@t_ccbwpfqk", ccbwpfqk),
+                new MySqlParameter("@t_grkzfs", grkzfs),
+                new MySqlParameter("@t_zwcmzcjtzqk", zwcmjtzqk),
+
+                new MySqlParameter("@t_id", trackID[currentIndex]) // 这条追踪的id
+            };
+            try
+            {
+                SqlHelper4MySql.ExecuteNonQuery(SqlCommandHelpler.I_TRACK_UPDATE, ps);
+                MessageBox.Show("保存成功!");
+                // 清空界面上的东西
+                // 测试测试
+                this.lstbxPatientNames.Items.RemoveAt(currentIndex);
+                currentIndex = -1;
+                this.tbSSLR_SSZZ_ZWQMJTZQK.Text = "";
+                // this.dgvSSZZ.Rows.Clear();
+                initSSZZState();
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("保存失败:" + err.Message);
+                throw;
+            }
+            
+
+        }
+
+        private string[] patientNames;
+        private string[] patientID;
+        private int[] recordID;
+        private int[] trackID;
+        private int currentIndex = -1;
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string patientName = this.txtbxPatientName.Text;
+            DateTime date = this.dtpTraceTime.Value;
+            
+            // 
+            if (String.IsNullOrEmpty(patientName)) {
+                // 根据日期查询
+                DateTime startTime = new DateTime(date.Year, date.Month, 1, 0, 0, 0);
+                DateTime endTime;
+                if (12 == date.Month)
+                {
+                    endTime = new DateTime(date.Year + 1, 1, 1, 0, 0, 0);
+                }
+                else {
+                    endTime = new DateTime(date.Year, date.Month + 1, 1, 0, 0, 0);
+                }
+                
+                // Console.WriteLine("startTime" + startTime);
+                // Console.WriteLine("endTime" + endTime);
+                MySqlParameter[] ps = new MySqlParameter[] {
+                    new MySqlParameter("@startTime", startTime),
+                    new MySqlParameter("@endTime", endTime)
+                };
+                int count = Convert.ToInt32(SqlHelper4MySql.ExecuteScalar(SqlCommandHelpler.T_TRACK_PATIENT_COUNT_NAME_AND_ID_BY_ZZRQ, ps));
+                if (0 == count) {
+                    MessageBox.Show("没有符合条件的患者!");
+                    return;
+                }
+                patientNames = new string[count];
+                patientID = new string[count];
+                recordID = new int[count];
+                trackID = new int[count];
+                int i = 0;
+                using (MySqlDataReader reader = SqlHelper4MySql.ExecuteReader(SqlCommandHelpler.T_TRACK_PATIENT_FIND_NAME_AND_ID_BY_ZZRQ, ps))
+                {
+                    while (reader.Read())
+                    {
+                        // Console.WriteLine(">>>" + reader.GetString("p_name") + ">>>" + reader.GetString("p_id"));
+                        patientNames[i] = reader.GetString("p_name");
+                        patientID[i] = reader.GetString("p_id");
+                        recordID[i] = reader.GetInt32("t_record_id");
+                        trackID[i++] = reader.GetInt32("t_id");
+                    }
+                }
+
+            } else {
+                // 根据患者姓名模糊查询
+
+                MySqlParameter[] ps = new MySqlParameter[] {
+                    new MySqlParameter("@p_name", "%" + patientName + "%")
+                };
+                int count = Convert.ToInt32(SqlHelper4MySql.ExecuteScalar(SqlCommandHelpler.T_PATIENT_COUNT_NAME_AND_ID_BY_NAME, ps));
+                if (0 == count)
+                {
+                    MessageBox.Show("没有符合条件的患者!");
+                    return;
+                }
+                patientNames = new string[count];
+                patientID = new string[count];
+                recordID = new int[count];
+                trackID = new int[count];
+                int i = 0;
+                using (MySqlDataReader reader = SqlHelper4MySql.ExecuteReader(SqlCommandHelpler.T_TRACK_PATIENT_FIND_NAME_AND_ID_BY_ZZRQ_AND_NAME, ps))
+                {
+                    while (reader.Read()) {
+                        // Console.WriteLine(">>>" + reader.GetString("p_name") + ">>>" + reader.GetString("p_id"));
+                        patientNames[i] = reader.GetString("p_name");
+                        patientID[i] = reader.GetString("p_id");
+                        recordID[i++] = reader.GetInt32("t_record_id");
+                        recordID[i] = reader.GetInt32("t_record_id");
+                        trackID[i++] = reader.GetInt32("t_id");
+                    }
+                }
+            }
+            this.lstbxPatientNames.Items.Clear();
+            this.lstbxPatientNames.Items.AddRange(patientNames);
+
+        }
+
+        private void lstbxPatientNames_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = this.lstbxPatientNames.SelectedIndex;
+            currentIndex = index;
+
+            initSSZZState();
+            if (-1 != index) {
+                enableSSZZState();
+
+                
+                int rId = recordID[index];
+                string pID = patientID[index];
+
+
+                // 载入手术信息
+                MySqlParameter[] ps = new MySqlParameter[] {
+                    new MySqlParameter("@id", rId)
+                };
+                using (MySqlDataReader reader = SqlHelper4MySql.ExecuteReader(SqlCommandHelpler.T_RECORD_SELECT_PART_BY_ID, ps))
+	            {
+                    while (reader.Read())
+                    {
+                        this.labSSZZ_SSRQ.Text = reader.GetDateTime("r_date").ToLongDateString();
+                        this.labSSZZ_SSDD.Text = reader.GetString("r_ss_address");
+                        this.labSSZZ_SSLX.Text = reader.GetString("r_ss_type");
+                        this.labSSZZ_SSFS.Text = reader.GetString("r_ss_method");
+
+                    }
+	            }
+
+                // 载入患者信息
+                ps = new MySqlParameter[] {
+                    new MySqlParameter("@p_id", pID)
+                };
+                using (MySqlDataReader reader = SqlHelper4MySql.ExecuteReader(SqlCommandHelpler.T_PATIENT_SELECT_TEL_BY_ID, ps))
+                {
+                    while (reader.Read())
+                    {
+                        this.labSSZZ_LXFS.Text = reader.GetString("p_tel");
+                        Console.WriteLine(reader.GetString("p_tel"));
+                    }
+                }
+
+                // 载入该患者本次手术所有已追踪的创建人和创建日期
+                ps = new MySqlParameter[] {
+                    new MySqlParameter("@t_record_id", rId)
+                };
+                using (MySqlDataReader reader = SqlHelper4MySql.ExecuteReader(SqlCommandHelpler.T_TRACK_SELECT_BY_RECORD_ID, ps))
+                {
+                    while (reader.Read())
+                    { 
+                       //  this.labSSZZ_LXFS.Text = reader.GetString("t_sszzrq");
+                        // Console.WriteLine(reader.GetString("t_sszzcjr"));
+                        int rowNumber = this.dgvSSZZ.Rows.Add();
+                        this.dgvSSZZ.Rows[rowNumber].Cells[0].Value = reader.GetDateTime("t_sszzrq").ToShortDateString();
+                        this.dgvSSZZ.Rows[rowNumber].Cells[1].Value = reader.GetString("t_sszzcjr");
+                    }
+                }
+                
+
+            }
+        }
+
+        private void panel122_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cbxSSZZ_SFCG_SelectedValueChanged(object sender, EventArgs e)
+        {
+            string value = Convert.ToString(this.cbxSSZZ_SFCG.Text);
+            if (string.IsNullOrEmpty(value)) {
+                this.grupbxSSZZ_ZZSB.Hide();
+                this.grupbxSSZZ_ZZCG.Hide();
+            }
+            else if (value.Equals("是"))
+            {
+                this.grupbxSSZZ_ZZSB.Hide();
+                this.grupbxSSZZ_ZZCG.Show();
+            }
+            else {
+                this.grupbxSSZZ_ZZSB.Show();
+                this.grupbxSSZZ_ZZCG.Hide();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // dlgPrintPreview.Document = 
+            printPreviewDialogSJCX_SSJL.Document = this.printDucumentSSCX_SSJL;
+            printPreviewDialogSJCX_SSJL.ShowDialog();
+        }
+
+        private void all_ccfs_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void all_ssjl_ContentsResized(object sender, ContentsResizedEventArgs e)
+        {
+            panelSJCX_SSJL.Height = e.NewRectangle.Height + 50; 
+            // all_ssjl.Height = e.NewRectangle.Height + 50;
+            // groupBox2.Height = e.NewRectangle.Height + 50;
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTJFX_GZLTJ_Export_Click(object sender, EventArgs e)
+        {
+            // dataTableForTJFX_XXTJ
+            if (null == dataTableForTJFX_XXTJ || 0 == dataTableForTJFX_XXTJ.Rows.Count)
+            {
+                MessageBox.Show("请先查询数据!");
+                return;
+            }
+            string strFileName = "";
+            SaveFileDialog savFile = new SaveFileDialog();
+            savFile.Filter = "PDF文件|.pdf";
+            savFile.ShowDialog();
+            if (savFile.FileName != "")
+            {
+                strFileName = savFile.FileName;
+            }
+            else
+            {
+                return;
+            }
+
+            Console.WriteLine("fn:" + strFileName);
+            PDFHelpler.ToPdf(dataTableForTJFX_XXTJ, strFileName);
+        }
+
+        private void btnTJFX_SSTJ_OUT_Click(object sender, EventArgs e)
+        {
+            
+            Bitmap nvbl1 = new Bitmap(this.panelSJTJ_SSTJ_1.Width, this.panelSJTJ_SSTJ_1.Height);
+            this.panelSJTJ_SSTJ_1.DrawToBitmap(nvbl1, new Rectangle(0, 0, nvbl1.Width, nvbl1.Height));
+
+            Bitmap nvbl2 = new Bitmap(this.panelSJTJ_SSTJ_2.Width, this.panelSJTJ_SSTJ_2.Height);
+            this.panelSJTJ_SSTJ_2.DrawToBitmap(nvbl2, new Rectangle(0, 0, nvbl2.Width, nvbl2.Height));
+
+            Bitmap nvbl3 = new Bitmap(this.panelSJTJ_SSTJ_3.Width, this.panelSJTJ_SSTJ_3.Height);
+            this.panelSJTJ_SSTJ_3.DrawToBitmap(nvbl3, new Rectangle(0, 0, nvbl3.Width, nvbl3.Height));
+
+            Bitmap nvbl4 = new Bitmap(this.panelSJTJ_SSTJ_4.Width, this.panelSJTJ_SSTJ_4.Height);
+            this.panelSJTJ_SSTJ_4.DrawToBitmap(nvbl4, new Rectangle(0, 0, nvbl4.Width, nvbl4.Height));
+
+          
+
+
+            Bitmap[] bms = new Bitmap[4];
+            bms[0] = nvbl1;
+            bms[1] = nvbl2;
+            bms[2] = nvbl3;
+            bms[3] = nvbl4;
+            
+
+            string strFileName = "";
+            SaveFileDialog savFile = new SaveFileDialog();
+            savFile.Filter = "PDF文件|.pdf";
+            savFile.ShowDialog();
+            if (savFile.FileName != "")
+            {
+                strFileName = savFile.FileName;
+            }
+            else
+            {
+                return;
+            }
+
+            Console.WriteLine("fn:" + strFileName);
+            PDFHelpler.imageToPDF(bms, strFileName);
+            // nvbl4.get
+
+            // e.Graphics.DrawImage(baseInfo, left, top, baseInfo.Width, baseInfo.Height);
+            // top += baseInfo.Height;
+            // top += baseInfo.Height;
+            // page.Add(baseInfo);
+            // Console.WriteLine("baseInfo之后当前top值:" + top);
+
+
+            
+        }
+
+        private void dgvSSXGXY_Control_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // e.ColumnIndex
+            // e.RowIndex
+            int r = e.RowIndex;
+            int c = e.ColumnIndex;
+            Console.WriteLine("row:" + r + " col:" + c);
+            // Console.WriteLine(this.dgvSSXGXY_Control.Rows[e.RowIndex].Cells[e.ColumnIndex].);
+            if (this.dgvSSXGXY_Control.Columns[c].Name.Equals("内容") && r >= 0) {
+                // row:0 col:4
+                // row:1 col:4
+                // row:2 col:4
+                int id = Convert.ToInt32(this.dgvSSXGXY_Control.Rows[r].Cells[0].Value);
+
+            }
+        }
+
+        private void btnSSXGXY_XGXY_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow dgvr = this.dgvSSXGXY_Control.CurrentRow;
+            if (null == dgvr)
+            {
+                MessageBox.Show("请先选择要修改的行");
+            }
+            else {
+                // MessageBox.Show("选中了");
+                int id = Convert.ToInt32(dgvr.Cells[0].Value);
+                string orderId = Convert.ToString(dgvr.Cells[1].Value);
+                string name = Convert.ToString(dgvr.Cells[2].Value);
+                string desc = Convert.ToString(dgvr.Cells[3].Value);
+
+                FormModifyControl form = new FormModifyControl(id, orderId, name, desc);
+                form.ShowDialog();
+                // 重新加载当前表格
+                button7_Click(null, null);
+            }
+        }
+
+        private void btnSSXGXY_SCXY_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow dgvr = this.dgvSSXGXY_Control.CurrentRow;
+            if (null == dgvr)
+            {
+                MessageBox.Show("请先选择要删除的行");
+            }
+            else
+            {
+                DialogResult dr = MessageBox.Show("确定删除【" + dgvr.Cells[1].Value + "】", "确定删除", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.Yes) {
+                    MySqlParameter[] ps = new MySqlParameter[] {
+                        new MySqlParameter("@id", dgvr.Cells[0].Value)
+                    };
+                    SqlHelper4MySql.ExecuteNonQuery(SqlCommandHelpler.T_CONTROL_DELETE, ps);
+                    // 重新加载当前表格
+                    button7_Click(null, null);
+                }
+
+            }
+        }
+
+       
+
+        
+
+        
+
+       
+
+       
+
+       
+
+       
 
         
 

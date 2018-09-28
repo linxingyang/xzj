@@ -133,6 +133,8 @@ namespace xzj
                 }
 
 
+
+
                 MessageBox.Show("保存成功");
             }
 
@@ -154,7 +156,7 @@ namespace xzj
             }
             catch (Exception err)
             {
-                MessageBox.Show("连接失败，失败信息：" + err); ;
+                MessageBox.Show("连接失败，失败信息：" + err.Message); ;
             }
            
         }

@@ -38,10 +38,10 @@
             this.menuSSLR_ZDQ = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSSLR_YDQ = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSSLR_JZ = new System.Windows.Forms.ToolStripMenuItem();
+            this.打印ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.打印ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -120,14 +120,14 @@
             // 
             this.menuSSLR_XT.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Italic);
             this.menuSSLR_XT.Name = "menuSSLR_XT";
-            this.menuSSLR_XT.Size = new System.Drawing.Size(24, 25);
+            this.menuSSLR_XT.Size = new System.Drawing.Size(23, 25);
             this.menuSSLR_XT.Text = "I";
             // 
             // menuSSLR_XHX
             // 
             this.menuSSLR_XHX.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Underline);
             this.menuSSLR_XHX.Name = "menuSSLR_XHX";
-            this.menuSSLR_XHX.Size = new System.Drawing.Size(29, 25);
+            this.menuSSLR_XHX.Size = new System.Drawing.Size(28, 25);
             this.menuSSLR_XHX.Text = "U";
             // 
             // menuSSLR_ZDQ
@@ -147,6 +147,12 @@
             this.menuSSLR_JZ.Name = "menuSSLR_JZ";
             this.menuSSLR_JZ.Size = new System.Drawing.Size(44, 25);
             this.menuSSLR_JZ.Text = "居中";
+            // 
+            // 打印ToolStripMenuItem
+            // 
+            this.打印ToolStripMenuItem.Name = "打印ToolStripMenuItem";
+            this.打印ToolStripMenuItem.Size = new System.Drawing.Size(44, 25);
+            this.打印ToolStripMenuItem.Text = "打印";
             // 
             // panel1
             // 
@@ -188,12 +194,6 @@
             this.btnSave.Text = "保存";
             this.btnSave.UseVisualStyleBackColor = false;
             // 
-            // 打印ToolStripMenuItem
-            // 
-            this.打印ToolStripMenuItem.Name = "打印ToolStripMenuItem";
-            this.打印ToolStripMenuItem.Size = new System.Drawing.Size(44, 25);
-            this.打印ToolStripMenuItem.Text = "打印";
-            // 
             // FormControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -204,7 +204,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("宋体", 12F);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormControl";
             this.Text = "手术相关协议";
             this.menuStrip1.ResumeLayout(false);

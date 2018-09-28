@@ -35,11 +35,14 @@ namespace xzj
 
         private void FormAddDictionary_Load(object sender, EventArgs e)
         {
+
+            // MessageBox.Show("hi" + this.dictionary_parent_id);
             this.Text = this.title;
             this.labelName.Text = this.typeName+"：";
             //修改
             if (this.dictionary_id >= 0)
             {
+               
                 DataTable dt = DBDictionary.getInstance().getDictionarysById(this.dictionary_id);
 
                 foreach (DataRow row in dt.Rows)
@@ -95,6 +98,19 @@ namespace xzj
                 MessageBox.Show("名称不能为空");
                 return;
             }
+            // 此处任务 parent_id=8的就是 手术追踪期限字典
+            else if (8 == this.dictionary_parent_id)
+            {
+                try
+                {
+                    Convert.ToInt32(name);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("请输入数字，1代表每一月，2代表每两月!");
+                    return;
+                }
+            }
 
             if (string.IsNullOrEmpty(desc))
             {
@@ -144,6 +160,7 @@ namespace xzj
                 DataTable dt = DBDictionary.getInstance().getDictionarysByParentIdAndName(this.dictionary_parent_id, name);
                 if (dt == null || dt.Rows.Count == 0)
                 {
+
                     int flag = DBDictionary.getInstance().addDictionary(rank, this.dictionary_parent_id, name, desc);
                     if (flag > 0)
                     {

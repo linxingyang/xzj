@@ -230,7 +230,6 @@
             this.cbSex.Name = "cbSex";
             this.cbSex.Size = new System.Drawing.Size(195, 24);
             this.cbSex.TabIndex = 2;
-//            this.cbSex.SelectedIndexChanged += new System.EventHandler(this.cbSex_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -478,6 +477,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormAddEmp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "新增用户信息";
             this.Load += new System.EventHandler(this.FormAddEmp_Load);
             this.groupBox1.ResumeLayout(false);

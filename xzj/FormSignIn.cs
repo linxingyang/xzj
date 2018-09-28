@@ -51,6 +51,7 @@ namespace xzj
                 return;
             }
 
+
             bool flag = DBEmp.getInstance().isAccount(account);
 
             if (flag)

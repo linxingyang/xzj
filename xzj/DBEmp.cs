@@ -18,9 +18,12 @@ namespace xzj
 
         private DBEmp()
         {
+
             conn = new MySqlConnection(UtilConfig.SQL_ADDRESS);
             conn.Open();
+            
         }
+
 
         public static DBEmp getInstance()
         {
@@ -32,6 +35,8 @@ namespace xzj
             return instance;
             
         }
+
+
 
         // 登录
         public bool isLogin(string account, string pwd)

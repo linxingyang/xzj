@@ -20,7 +20,23 @@ namespace xzj
         {
             conn = new MySqlConnection(UtilConfig.SQL_ADDRESS);
             conn.Open();
+           
         }
+
+        public static Boolean isConnectionWorks() { 
+            MySqlConnection testConnection = new MySqlConnection(UtilConfig.SQL_ADDRESS);
+
+            try
+            {
+                testConnection.Open();
+                return true;
+            }
+            catch (Exception err) {
+                Console.WriteLine(err.Message);
+                return false;
+            }
+        }
+
 
         public static DBManager getInstance()
         {

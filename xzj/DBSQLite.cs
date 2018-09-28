@@ -175,7 +175,8 @@ namespace xzj
                 return 0;
             }
             int flag = 0;
-            string sqlstr = string.Format("update mydata set value='{0}' where key='{1}'", key, value);
+            // [bugfix lxy]
+            string sqlstr = string.Format("update mydata set value='{0}' where key='{1}'", value, key);
             try
             {
                 SQLiteConnection cn = new SQLiteConnection("data source=" + path);
@@ -187,12 +188,14 @@ namespace xzj
                     //cmd.Parameters.Add("key", System.Data.DbType.String).Value = key;
                     //cmd.Parameters.Add("value", System.Data.DbType.String).Value = value;
                     flag = cmd.ExecuteNonQuery();
+                    cn.Close();
                 }
              }
              catch (Exception err)
              {
                  Console.WriteLine("-->updateValue" + err);
              }
+            
             return flag;
         }
 
