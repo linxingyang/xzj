@@ -9,7 +9,7 @@ namespace xzj.utils
     class ValueSender
     {
 
-        // 
+        // 创建人和创建日期
         public static Boolean isAdd = false;
         public static DateTime createDate;
         public static string creator;

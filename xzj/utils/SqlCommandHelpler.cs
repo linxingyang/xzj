@@ -55,6 +55,7 @@ namespace xzj.utils
 
         // t_record表 s i u d
         public static string T_RECORD_SELECT_PART_BY_ID = "SELECT r_date, r_ss_address, r_ss_type, r_ss_method FROM t_record WHERE id = @id";
+        public static string T_RECORD_SELECT_TRACK_TIME_BY_ID = "SELECT r_sszz, r_zz1, r_zz2, r_zz3, r_zz4 FROM t_record WHERE id = @id";
         public static string T_RECORD_INSERT = "INSERT INTO t_record( " +
             "r_patient_ID, " +
             "r_date, " +
@@ -120,6 +121,7 @@ namespace xzj.utils
         // t_track 手术跟踪
         // 查询某个手术的已经跟踪的手术追踪
         public static string T_TRACK_SELECT_BY_RECORD_ID = "SELECT t_sszzrq, t_sszzcjr FROM t_track WHERE t_record_id = @t_record_id AND t_sfsszz = '是'";
+        public static string T_TRACK_SELECT_BY_RECORD_ID_2 = "SELECT t_record_id, t_patient_id, t_zzrq FROM t_track WHERE id = @id;";
         public static string T_TRACK_INSERT_PART = "INSERT INTO t_track( " +
             "t_record_id, " +
             "t_patient_ID, " +
@@ -163,14 +165,18 @@ namespace xzj.utils
             "WHERE (t.t_zzrq BETWEEN @startTime AND @endTime) " +
             "AND (t.t_sfsszz = '否') " +
             "AND (p.p_id  = t.t_patient_ID) ";
-        // 根据姓名模糊查询患者的姓名和身份证
+        // 根据姓名模糊查询患者 + 日期 的姓名和身份证
         // public static string T_PATIENT_SELECT_NAME_AND_ID_BY_NAME = "SELECT p_name, p_id FROM t_patient WHERE p_name LIKE @p_name;";
         public static string T_TRACK_PATIENT_FIND_NAME_AND_ID_BY_ZZRQ_AND_NAME = "SELECT t.id t_id, p_name, p_id, t_record_id FROM t_track t, t_patient p " +
             "WHERE (t.t_zzrq BETWEEN @startTime AND @endTime) " +
             "AND (t.t_sfsszz = '否') " +
             "AND (p.p_id  = t.t_patient_ID) " +
             "AND (p.p_name LIKE @p_name)";
-        public static string T_PATIENT_COUNT_NAME_AND_ID_BY_NAME = "SELECT COUNT(*) FROM t_patient WHERE p_name LIKE @p_name;";
+        public static string T_TRACK_PATIENT_COUNT_NAME_AND_ID_BY_ZZRQ_AND_NAME = "SELECT COUNT(*) FROM t_track t, t_patient p " +
+            "WHERE (t.t_zzrq BETWEEN @startTime AND @endTime) " +
+            "AND (t.t_sfsszz = '否') " +
+            "AND (p.p_id  = t.t_patient_ID) " +
+            "AND (p.p_name LIKE @p_name)";
 
 
         // 手术追踪查询，根据 患者姓名，是否手术追踪，追踪日期范围
@@ -189,7 +195,9 @@ namespace xzj.utils
 
         // 手术协议表
         public static string T_CONTROL_SELECT_BY_NAME = "SELECT id, c_order_id, c_name, c_desc FROM t_control WHERE c_name LIKE @c_name ORDER BY c_order_id";
+        public static string T_CONTROL_SELECT_CONTENT_BY_ID = "SELECT c_content FROM t_control WHERE id = @id;";
         public static string T_CONTROL_UPDATE_BY_ID = "UPDATE t_control SET c_order_id = @c_order_id, c_name = @c_name, c_desc = @c_desc WHERE id = @id";
+        public static string T_CONTROL_UPDATE_CONTENT_BY_ID = "UPDATE t_control SET c_content = @c_content WHERE id = @id;";
         // public static string T_CONTROL_SELECT_CONTENT_BY_ID = "select c_content fr"
         public static string T_CONTROL_INSERT = "INSERT INTO t_control(c_order_id, c_name, c_desc) VALUES (@c_order_id, @c_name, @c_desc);";
         public static string T_CONTROL_DELETE = "DELETE FROM t_control WHERE id = @id";

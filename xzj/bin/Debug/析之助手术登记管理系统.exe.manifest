@@ -96,14 +96,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="析之助手术登记管理系统.exe" size="1017344">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="析之助手术登记管理系统.exe" size="1037824">
       <assemblyIdentity name="析之助手术登记管理系统" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>N61Fjw8jRTBiJAIiwvgRzoEV3PHJ0pBqUfDI2COsjg4=</dsig:DigestValue>
+        <dsig:DigestValue>rCPAVSw3WsM6T60aWkcx1ZvpREASM6uTxxU9UNHNGJA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

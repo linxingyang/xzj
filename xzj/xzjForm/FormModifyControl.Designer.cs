@@ -193,6 +193,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FormModifyControl";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "修改手术相关协议";
             this.Load += new System.EventHandler(this.FormModifyControl_Load);
             this.groupBox1.ResumeLayout(false);

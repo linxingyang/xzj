@@ -46,7 +46,7 @@ namespace xzj.utils
         public static Bitmap RtbToBitmap(RichTextBox rtb)
         {
             // 这个地方是可打印的大小
-            return RtbToBitmap(rtb, rtb.Bounds.Width, rtb.Bounds.Height * 2);
+            return RtbToBitmap(rtb, rtb.Bounds.Width, rtb.Bounds.Height);
         }
         public static Bitmap RtbToBitmap(RichTextBox rtb, int width, int height)
         {

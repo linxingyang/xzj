@@ -24,5 +24,10 @@ namespace xzj.utils
             Image _Image = Image.FromStream(ms);
             return _Image;
         }
+
+        public static Bitmap cutImage(Bitmap b, int x, int y, int width, int height) {
+            
+            return b.Clone(new System.Drawing.Rectangle(x, y, width, height), b.PixelFormat);
+        }
     }
 }
