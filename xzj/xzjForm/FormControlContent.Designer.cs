@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormControlContent));
             this.panel68 = new System.Windows.Forms.Panel();
             this.panel69 = new System.Windows.Forms.Panel();
+            this.panelRTB = new System.Windows.Forms.Panel();
             this.rtbSSLR_SSJL = new System.Windows.Forms.RichTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnPrintPreview = new System.Windows.Forms.Button();
@@ -49,13 +50,13 @@
             this.menuSSLR_JZ = new System.Windows.Forms.ToolStripMenuItem();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.panelRTB = new System.Windows.Forms.Panel();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.panel68.SuspendLayout();
             this.panel69.SuspendLayout();
+            this.panelRTB.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel43.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.panelRTB.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel68
@@ -81,6 +82,15 @@
             this.panel69.Name = "panel69";
             this.panel69.Size = new System.Drawing.Size(648, 303);
             this.panel69.TabIndex = 24;
+            // 
+            // panelRTB
+            // 
+            this.panelRTB.Controls.Add(this.rtbSSLR_SSJL);
+            this.panelRTB.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelRTB.Location = new System.Drawing.Point(0, 0);
+            this.panelRTB.Name = "panelRTB";
+            this.panelRTB.Size = new System.Drawing.Size(646, 280);
+            this.panelRTB.TabIndex = 7;
             // 
             // rtbSSLR_SSJL
             // 
@@ -294,14 +304,9 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // panelRTB
+            // printDialog1
             // 
-            this.panelRTB.Controls.Add(this.rtbSSLR_SSJL);
-            this.panelRTB.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelRTB.Location = new System.Drawing.Point(0, 0);
-            this.panelRTB.Name = "panelRTB";
-            this.panelRTB.Size = new System.Drawing.Size(646, 280);
-            this.panelRTB.TabIndex = 7;
+            this.printDialog1.UseEXDialog = true;
             // 
             // FormControlContent
             // 
@@ -315,12 +320,12 @@
             this.Text = "手术相关协议";
             this.panel68.ResumeLayout(false);
             this.panel69.ResumeLayout(false);
+            this.panelRTB.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel43.ResumeLayout(false);
             this.panel43.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.panelRTB.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -348,5 +353,6 @@
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.Button btnPrintPreview;
         private System.Windows.Forms.Panel panelRTB;
+        private System.Windows.Forms.PrintDialog printDialog1;
     }
 }

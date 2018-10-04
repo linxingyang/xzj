@@ -44,3 +44,4 @@ C:\project\xzz\xzj\xzj\bin\Debug\itextsharp.dll
 C:\project\xzz\xzj\xzj\bin\Debug\itextsharp.xml
 C:\project\xzz\xzj\xzj\obj\Debug\xzj.xzjForm.FormModifyControl.resources
 C:\project\xzz\xzj\xzj\obj\Debug\xzj.xzjForm.FormControlContent.resources
+C:\project\xzz\xzj\xzj\bin\Debug\System.Data.SQLite.dll

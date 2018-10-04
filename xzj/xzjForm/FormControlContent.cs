@@ -85,7 +85,12 @@ namespace xzj.xzjForm
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-
+            this.printDialog1.Document = this.printDocument1;
+            // this.printDialog1.ShowDialog();
+            if (this.printDialog1.ShowDialog() == DialogResult.OK)
+            {
+                this.printDocument1.Print();
+            }
         }
 
         int currentPageIndex = 0;

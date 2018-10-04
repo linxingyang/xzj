@@ -39,8 +39,8 @@ namespace xzj.utils
 
 
             PdfPTable table = new PdfPTable(dt.Columns.Count);
-            for (int m = 0; m < 10; m++)
-            {
+            // for (int m = 0; m < 10; m++)
+            // {
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 if (i == 0)
@@ -59,7 +59,7 @@ namespace xzj.utils
                     }
                 
             }
-            }
+            // }
             
             document.Add(table);
             document.Close();

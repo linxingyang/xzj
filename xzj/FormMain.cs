@@ -529,6 +529,10 @@ namespace xzj
                 DataTable dt = DBDictionary.getInstance().getDictionarysByParentId(2);
                 foreach (DataRow row in dt.Rows)
                 {
+                    // 不展示手术追踪期限字典
+                    if (row["id"].ToString().Equals("8")) {
+                        continue;
+                    }
                     ListViewItem item = new ListViewItem();
                     item.SubItems.Clear();
                     item.Text = row["d_name"].ToString();
@@ -536,6 +540,7 @@ namespace xzj
                     item.SubItems.Add(row["id"].ToString());
                     //item.SubItems.Add(row["d_name"].ToString());
                     //记住view改成detail
+                    // if (ro)
                     this.listViewDictionarySSZD.Items.Add(item);
                     this.listViewDictionarySSZD.Columns[0].Width = 300;
                     //隐藏第二列
@@ -2270,21 +2275,28 @@ namespace xzj
             List<int> data = new List<int>();
             if (string.IsNullOrEmpty(kssj) && string.IsNullOrEmpty(jssj))
             {
+                /*
                 string sql =
                     "select t.t_ccfs,count(*) as total " +
                     "from t_track t,t_record r  " +
                     "where t.t_record_id = r.id " +
-                    "group by t.t_ccfs";
+                    "group by t.t_ccfs";*/
+                string sql =
+                    "SELECT r_cc_method, COUNT(*) AS total FROM t_record GROUP BY r_cc_method";
                 dataTable = DBManager.getInstance().find(sql);
             }
             else
             {
                 string sql = string.Format(
-                     "select t.t_ccfs,count(*) as total " +
-                    "from t_track t,t_record r  " +
-                    "where t.t_record_id = r.id " +
-                    "and r.r_date > '{0}' and r.r_date < '{1}' " +
-                    "group by t.t_ccfs", kssj, jssj);
+                    "SELECT r_cc_method, COUNT(*) AS total FROM t_record " +
+                    "WHERE r_date > '{0}' and r_date < '{1}' " +
+                    "GROUP BY r_cc_method ", kssj, jssj);
+                // string sql = string.Format(
+                     // "select t.t_ccfs,count(*) as total " +
+                    // "from t_track t,t_record r  " +
+                    // "where t.t_record_id = r.id " +
+                    // "and r.r_date > '{0}' and r.r_date < '{1}' " +
+                    // "group by t.t_ccfs", kssj, jssj);
                 dataTable = DBManager.getInstance().find(sql);
             }
 
@@ -2295,7 +2307,7 @@ namespace xzj
                 foreach (DataRow row in dataTable.Rows)
                 {
                     int y = Convert.ToInt32(row["total"].ToString());
-                    string x = row["t_ccfs"].ToString();
+                    string x = row["r_cc_method"].ToString();
                     //string legel = row["t_nwzwdlqk"].ToString() + "[" + y + "](" + row["percent"].ToString() + "%)";
                     arrays.Add(y);
                     values.Add(x);
