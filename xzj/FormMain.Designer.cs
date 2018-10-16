@@ -65,6 +65,16 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panelSSLR = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel98 = new System.Windows.Forms.Panel();
+            this.btnSaveSSJL2 = new System.Windows.Forms.Button();
+            this.btnRecordClear = new System.Windows.Forms.Button();
+            this.label24 = new System.Windows.Forms.Label();
+            this.btnSaveSSJL = new System.Windows.Forms.Button();
+            this.tbSSLR_ZDYS = new System.Windows.Forms.TextBox();
+            this.tbSSLR_QXFS = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.tbSSLR_ZS = new System.Windows.Forms.TextBox();
             this.panel68 = new System.Windows.Forms.Panel();
             this.panel69 = new System.Windows.Forms.Panel();
             this.panel43 = new System.Windows.Forms.Panel();
@@ -79,34 +89,26 @@
             this.menuSSLR_JZ = new System.Windows.Forms.ToolStripMenuItem();
             this.rtbSSLR_SSJL = new System.Windows.Forms.RichTextBox();
             this.label104 = new System.Windows.Forms.Label();
-            this.panel98 = new System.Windows.Forms.Panel();
-            this.btnSaveSSJL2 = new System.Windows.Forms.Button();
-            this.btnRecordClear = new System.Windows.Forms.Button();
-            this.label24 = new System.Windows.Forms.Label();
-            this.btnSaveSSJL = new System.Windows.Forms.Button();
-            this.tbSSLR_ZDYS = new System.Windows.Forms.TextBox();
-            this.tbSSLR_QXFS = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.tbSSLR_ZS = new System.Windows.Forms.TextBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel44 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel99 = new System.Windows.Forms.Panel();
             this.paneSSBW_pic = new System.Windows.Forms.Panel();
-            this.btnRemoveAllSSTP = new System.Windows.Forms.Button();
-            this.btnSSJLa_addPic = new System.Windows.Forms.Button();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.btnRemoveSSTP = new System.Windows.Forms.Button();
             this.lstboxTTLB = new System.Windows.Forms.ListBox();
             this.picSSTP = new System.Windows.Forms.PictureBox();
             this.panel128 = new System.Windows.Forms.Panel();
-            this.panel129 = new System.Windows.Forms.Panel();
-            this.cbSSLR_SSBW = new System.Windows.Forms.ComboBox();
-            this.label62 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label58 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
+            this.panel129 = new System.Windows.Forms.Panel();
+            this.cbSSLR_SSBW = new System.Windows.Forms.ComboBox();
+            this.btnRemoveAllSSTP = new System.Windows.Forms.Button();
+            this.label62 = new System.Windows.Forms.Label();
+            this.btnSSJLa_addPic = new System.Windows.Forms.Button();
+            this.label88 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel87 = new System.Windows.Forms.Panel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dtTraceTime10 = new System.Windows.Forms.DateTimePicker();
@@ -232,9 +234,11 @@
             this.label56 = new System.Windows.Forms.Label();
             this.panelSJCX_SSJL_SSST = new System.Windows.Forms.Panel();
             this.grpbxImgs = new System.Windows.Forms.GroupBox();
-            this.panelSJCX_SSZZCX_SSBW_NAME = new System.Windows.Forms.Panel();
             this.labSJCX_SSBW = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.label85 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.panelSJCX_SSZZCX_SSBW_NAME = new System.Windows.Forms.Panel();
             this.panelSJCX_SSJL_BaseInfo = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.labSJCX_TraceValue4 = new System.Windows.Forms.Label();
@@ -383,6 +387,18 @@
             this.btnSJCX_SSZZCX = new System.Windows.Forms.Button();
             this.btnSJCX_SSJLD = new System.Windows.Forms.Button();
             this.panelCJFX = new System.Windows.Forms.Panel();
+            this.panelTJFX_GZLTJ = new System.Windows.Forms.Panel();
+            this.dgvTJCX_GZL = new System.Windows.Forms.DataGridView();
+            this.panel124 = new System.Windows.Forms.Panel();
+            this.btnTJFX_GZLTJ_Export = new System.Windows.Forms.Button();
+            this.tbTJCX_XXTJ = new System.Windows.Forms.RadioButton();
+            this.tbTJCX_TJMS = new System.Windows.Forms.RadioButton();
+            this.btnTJFX_GZL = new System.Windows.Forms.Button();
+            this.panel125 = new System.Windows.Forms.Panel();
+            this.label29 = new System.Windows.Forms.Label();
+            this.dtpTJFX_GZLGL_JSSJ = new System.Windows.Forms.DateTimePicker();
+            this.dtpTJFX_GZLGL_KSSJ = new System.Windows.Forms.DateTimePicker();
+            this.label39 = new System.Windows.Forms.Label();
             this.panelTJFX_PIE = new System.Windows.Forms.Panel();
             this.panel116 = new System.Windows.Forms.Panel();
             this.btnTJFX_SSTJ_OUT = new System.Windows.Forms.Button();
@@ -404,18 +420,6 @@
             this.panelSJTJ_SSTJ_1 = new System.Windows.Forms.Panel();
             this.labelTJFX_PIE_1 = new System.Windows.Forms.Label();
             this.chartPie_1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.panelTJFX_GZLTJ = new System.Windows.Forms.Panel();
-            this.dgvTJCX_GZL = new System.Windows.Forms.DataGridView();
-            this.panel124 = new System.Windows.Forms.Panel();
-            this.btnTJFX_GZLTJ_Export = new System.Windows.Forms.Button();
-            this.tbTJCX_XXTJ = new System.Windows.Forms.RadioButton();
-            this.tbTJCX_TJMS = new System.Windows.Forms.RadioButton();
-            this.btnTJFX_GZL = new System.Windows.Forms.Button();
-            this.panel125 = new System.Windows.Forms.Panel();
-            this.label29 = new System.Windows.Forms.Label();
-            this.dtpTJFX_GZLGL_JSSJ = new System.Windows.Forms.DateTimePicker();
-            this.dtpTJFX_GZLGL_KSSJ = new System.Windows.Forms.DateTimePicker();
-            this.label39 = new System.Windows.Forms.Label();
             this.panel121 = new System.Windows.Forms.Panel();
             this.btnTJFX_GZLTJ = new System.Windows.Forms.Button();
             this.btnTJFX_SSTJ = new System.Windows.Forms.Button();
@@ -496,22 +500,6 @@
             this.tbRoomHispitorName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panelSSXGXY = new System.Windows.Forms.Panel();
-            this.panel131 = new System.Windows.Forms.Panel();
-            this.dgvSSXGXY_Control = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_order_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_desc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_content = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.panel130 = new System.Windows.Forms.Panel();
-            this.btnSSXGXY_XGXY = new System.Windows.Forms.Button();
-            this.btnSSXGXY_add_control = new System.Windows.Forms.Button();
-            this.btnSSXGXY_SCXY = new System.Windows.Forms.Button();
-            this.panel101 = new System.Windows.Forms.Panel();
-            this.label63 = new System.Windows.Forms.Label();
-            this.btnSSXGXY_XYMC = new System.Windows.Forms.TextBox();
-            this.button7 = new System.Windows.Forms.Button();
             this.panelSSZZ = new System.Windows.Forms.Panel();
             this.panel82 = new System.Windows.Forms.Panel();
             this.panel86 = new System.Windows.Forms.Panel();
@@ -586,6 +574,22 @@
             this.panel126 = new System.Windows.Forms.Panel();
             this.txtbxPatientName = new System.Windows.Forms.TextBox();
             this.label41 = new System.Windows.Forms.Label();
+            this.panelSSXGXY = new System.Windows.Forms.Panel();
+            this.panel131 = new System.Windows.Forms.Panel();
+            this.dgvSSXGXY_Control = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_order_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_desc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_content = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.panel130 = new System.Windows.Forms.Panel();
+            this.btnSSXGXY_XGXY = new System.Windows.Forms.Button();
+            this.btnSSXGXY_add_control = new System.Windows.Forms.Button();
+            this.btnSSXGXY_SCXY = new System.Windows.Forms.Button();
+            this.panel101 = new System.Windows.Forms.Panel();
+            this.label63 = new System.Windows.Forms.Label();
+            this.btnSSXGXY_XYMC = new System.Windows.Forms.TextBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.panel122 = new System.Windows.Forms.Panel();
             this.labelNowDate = new System.Windows.Forms.Label();
             this.printDucumentSSCX_SSJL = new System.Drawing.Printing.PrintDocument();
@@ -611,19 +615,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelSSLR.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel98.SuspendLayout();
             this.panel68.SuspendLayout();
             this.panel69.SuspendLayout();
             this.panel43.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.panel98.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel99.SuspendLayout();
             this.paneSSBW_pic.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSSTP)).BeginInit();
             this.panel128.SuspendLayout();
             this.panel129.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel87.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -662,7 +668,9 @@
             this.panelSJCX_SSJL.SuspendLayout();
             this.panelSJCX_SSJL_NAME.SuspendLayout();
             this.panelSJCX_SSJL_SSST.SuspendLayout();
-            this.panelSJCX_SSZZCX_SSBW_NAME.SuspendLayout();
+            this.grpbxImgs.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panelSJCX_SSJL_BaseInfo.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panelSJCX_SSJL_Head.SuspendLayout();
@@ -697,6 +705,10 @@
             this.panel119.SuspendLayout();
             this.panel45.SuspendLayout();
             this.panelCJFX.SuspendLayout();
+            this.panelTJFX_GZLTJ.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTJCX_GZL)).BeginInit();
+            this.panel124.SuspendLayout();
+            this.panel125.SuspendLayout();
             this.panelTJFX_PIE.SuspendLayout();
             this.panel116.SuspendLayout();
             this.panel123.SuspendLayout();
@@ -708,10 +720,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartPie_2)).BeginInit();
             this.panelSJTJ_SSTJ_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartPie_1)).BeginInit();
-            this.panelTJFX_GZLTJ.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTJCX_GZL)).BeginInit();
-            this.panel124.SuspendLayout();
-            this.panel125.SuspendLayout();
             this.panel121.SuspendLayout();
             this.panelKSGL.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -746,11 +754,6 @@
             this.panel15.SuspendLayout();
             this.panel35.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panelSSXGXY.SuspendLayout();
-            this.panel131.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSSXGXY_Control)).BeginInit();
-            this.panel130.SuspendLayout();
-            this.panel101.SuspendLayout();
             this.panelSSZZ.SuspendLayout();
             this.panel82.SuspendLayout();
             this.panel86.SuspendLayout();
@@ -778,6 +781,11 @@
             this.panel42.SuspendLayout();
             this.panel127.SuspendLayout();
             this.panel126.SuspendLayout();
+            this.panelSSXGXY.SuspendLayout();
+            this.panel131.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSSXGXY_Control)).BeginInit();
+            this.panel130.SuspendLayout();
+            this.panel101.SuspendLayout();
             this.panel122.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -1030,7 +1038,7 @@
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 704);
+            this.panel3.Location = new System.Drawing.Point(0, 721);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1300, 29);
             this.panel3.TabIndex = 12;
@@ -1045,13 +1053,14 @@
             this.panelSSLR.Location = new System.Drawing.Point(10, 37);
             this.panelSSLR.Name = "panelSSLR";
             this.panelSSLR.Padding = new System.Windows.Forms.Padding(10);
-            this.panelSSLR.Size = new System.Drawing.Size(1280, 523);
+            this.panelSSLR.Size = new System.Drawing.Size(1280, 540);
             this.panelSSLR.TabIndex = 30;
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.panel68);
             this.panel6.Controls.Add(this.panel98);
+            this.panel6.Controls.Add(this.panel68);
+            this.panel6.Controls.Add(this.pictureBox6);
             this.panel6.Controls.Add(this.pictureBox5);
             this.panel6.Controls.Add(this.panel44);
             this.panel6.Controls.Add(this.panel10);
@@ -1060,10 +1069,130 @@
             this.panel6.Controls.Add(this.panel9);
             this.panel6.Controls.Add(this.panel7);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(10, 213);
+            this.panel6.Location = new System.Drawing.Point(10, 192);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1243, 1415);
             this.panel6.TabIndex = 6;
+            // 
+            // panel98
+            // 
+            this.panel98.BackColor = System.Drawing.Color.White;
+            this.panel98.Controls.Add(this.btnSaveSSJL2);
+            this.panel98.Controls.Add(this.btnRecordClear);
+            this.panel98.Controls.Add(this.label24);
+            this.panel98.Controls.Add(this.btnSaveSSJL);
+            this.panel98.Controls.Add(this.tbSSLR_ZDYS);
+            this.panel98.Controls.Add(this.tbSSLR_QXFS);
+            this.panel98.Controls.Add(this.label23);
+            this.panel98.Controls.Add(this.label22);
+            this.panel98.Controls.Add(this.tbSSLR_ZS);
+            this.panel98.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel98.Location = new System.Drawing.Point(0, 1249);
+            this.panel98.Name = "panel98";
+            this.panel98.Size = new System.Drawing.Size(1243, 140);
+            this.panel98.TabIndex = 51;
+            // 
+            // btnSaveSSJL2
+            // 
+            this.btnSaveSSJL2.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnSaveSSJL2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSaveSSJL2.FlatAppearance.BorderSize = 0;
+            this.btnSaveSSJL2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveSSJL2.Font = new System.Drawing.Font("宋体", 12F);
+            this.btnSaveSSJL2.ForeColor = System.Drawing.Color.White;
+            this.btnSaveSSJL2.Location = new System.Drawing.Point(431, 74);
+            this.btnSaveSSJL2.Name = "btnSaveSSJL2";
+            this.btnSaveSSJL2.Size = new System.Drawing.Size(151, 23);
+            this.btnSaveSSJL2.TabIndex = 11;
+            this.btnSaveSSJL2.Text = "保存";
+            this.btnSaveSSJL2.UseVisualStyleBackColor = false;
+            this.btnSaveSSJL2.Click += new System.EventHandler(this.btnSaveSSJL2_Click);
+            // 
+            // btnRecordClear
+            // 
+            this.btnRecordClear.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnRecordClear.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnRecordClear.FlatAppearance.BorderSize = 0;
+            this.btnRecordClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecordClear.Font = new System.Drawing.Font("宋体", 12F);
+            this.btnRecordClear.ForeColor = System.Drawing.Color.White;
+            this.btnRecordClear.Location = new System.Drawing.Point(595, 74);
+            this.btnRecordClear.Name = "btnRecordClear";
+            this.btnRecordClear.Size = new System.Drawing.Size(141, 23);
+            this.btnRecordClear.TabIndex = 5;
+            this.btnRecordClear.Text = "取消";
+            this.btnRecordClear.UseVisualStyleBackColor = false;
+            this.btnRecordClear.Click += new System.EventHandler(this.btnRecordClear_Click);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label24.Location = new System.Drawing.Point(22, 14);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(93, 16);
+            this.label24.TabIndex = 1;
+            this.label24.Text = "主刀医生：";
+            // 
+            // btnSaveSSJL
+            // 
+            this.btnSaveSSJL.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnSaveSSJL.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSaveSSJL.FlatAppearance.BorderSize = 0;
+            this.btnSaveSSJL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveSSJL.Font = new System.Drawing.Font("宋体", 12F);
+            this.btnSaveSSJL.ForeColor = System.Drawing.Color.White;
+            this.btnSaveSSJL.Location = new System.Drawing.Point(431, 75);
+            this.btnSaveSSJL.Name = "btnSaveSSJL";
+            this.btnSaveSSJL.Size = new System.Drawing.Size(151, 23);
+            this.btnSaveSSJL.TabIndex = 1;
+            this.btnSaveSSJL.Text = "保存";
+            this.btnSaveSSJL.UseVisualStyleBackColor = false;
+            this.btnSaveSSJL.Visible = false;
+            // 
+            // tbSSLR_ZDYS
+            // 
+            this.tbSSLR_ZDYS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbSSLR_ZDYS.Location = new System.Drawing.Point(115, 11);
+            this.tbSSLR_ZDYS.Name = "tbSSLR_ZDYS";
+            this.tbSSLR_ZDYS.Size = new System.Drawing.Size(130, 26);
+            this.tbSSLR_ZDYS.TabIndex = 6;
+            // 
+            // tbSSLR_QXFS
+            // 
+            this.tbSSLR_QXFS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbSSLR_QXFS.Location = new System.Drawing.Point(514, 13);
+            this.tbSSLR_QXFS.Name = "tbSSLR_QXFS";
+            this.tbSSLR_QXFS.Size = new System.Drawing.Size(102, 26);
+            this.tbSSLR_QXFS.TabIndex = 10;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label23.Location = new System.Drawing.Point(252, 16);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(59, 16);
+            this.label23.TabIndex = 7;
+            this.label23.Text = "助手：";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label22.Location = new System.Drawing.Point(432, 14);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(93, 16);
+            this.label22.TabIndex = 9;
+            this.label22.Text = "器械护士：";
+            // 
+            // tbSSLR_ZS
+            // 
+            this.tbSSLR_ZS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbSSLR_ZS.Location = new System.Drawing.Point(312, 11);
+            this.tbSSLR_ZS.Name = "tbSSLR_ZS";
+            this.tbSSLR_ZS.Size = new System.Drawing.Size(114, 26);
+            this.tbSSLR_ZS.TabIndex = 8;
             // 
             // panel68
             // 
@@ -1071,11 +1200,11 @@
             this.panel68.Controls.Add(this.label104);
             this.panel68.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel68.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.panel68.Location = new System.Drawing.Point(0, 781);
+            this.panel68.Location = new System.Drawing.Point(0, 836);
             this.panel68.Name = "panel68";
             this.panel68.Padding = new System.Windows.Forms.Padding(10);
-            this.panel68.Size = new System.Drawing.Size(1243, 510);
-            this.panel68.TabIndex = 30;
+            this.panel68.Size = new System.Drawing.Size(1243, 413);
+            this.panel68.TabIndex = 31;
             // 
             // panel69
             // 
@@ -1083,11 +1212,11 @@
             this.panel69.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel69.Controls.Add(this.panel43);
             this.panel69.Controls.Add(this.rtbSSLR_SSJL);
-            this.panel69.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel69.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel69.Location = new System.Drawing.Point(10, 32);
             this.panel69.Name = "panel69";
             this.panel69.Padding = new System.Windows.Forms.Padding(30, 30, 10, 10);
-            this.panel69.Size = new System.Drawing.Size(1223, 468);
+            this.panel69.Size = new System.Drawing.Size(1223, 368);
             this.panel69.TabIndex = 22;
             // 
             // panel43
@@ -1127,7 +1256,6 @@
             "微软雅黑"});
             this.menuSSLR_ZZLX.Name = "menuSSLR_ZZLX";
             this.menuSSLR_ZZLX.Size = new System.Drawing.Size(121, 25);
-            this.menuSSLR_ZZLX.SelectedIndexChanged += new System.EventHandler(this.menuSSLR_setFont_SelectedIndexChanged);
             // 
             // menuSSLR_ZZDX
             // 
@@ -1152,8 +1280,6 @@
             this.menuSSLR_ZZDX.Size = new System.Drawing.Size(121, 25);
             this.menuSSLR_ZZDX.Text = "15";
             this.menuSSLR_ZZDX.Visible = false;
-            this.menuSSLR_ZZDX.SelectedIndexChanged += new System.EventHandler(this.menuSSLR_setFont_SelectedIndexChanged);
-            this.menuSSLR_ZZDX.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
             // 
             // menuSSLR_CT
             // 
@@ -1207,7 +1333,7 @@
             this.rtbSSLR_SSJL.Location = new System.Drawing.Point(30, 30);
             this.rtbSSLR_SSJL.Name = "rtbSSLR_SSJL";
             this.rtbSSLR_SSJL.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.rtbSSLR_SSJL.Size = new System.Drawing.Size(1181, 426);
+            this.rtbSSLR_SSJL.Size = new System.Drawing.Size(1181, 326);
             this.rtbSSLR_SSJL.TabIndex = 6;
             this.rtbSSLR_SSJL.Text = "";
             // 
@@ -1216,131 +1342,24 @@
             this.label104.AutoSize = true;
             this.label104.BackColor = System.Drawing.Color.White;
             this.label104.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label104.Font = new System.Drawing.Font("宋体", 12F);
+            this.label104.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
             this.label104.ForeColor = System.Drawing.Color.Black;
             this.label104.Location = new System.Drawing.Point(10, 10);
             this.label104.Name = "label104";
             this.label104.Padding = new System.Windows.Forms.Padding(3);
-            this.label104.Size = new System.Drawing.Size(78, 22);
+            this.label104.Size = new System.Drawing.Size(82, 22);
             this.label104.TabIndex = 21;
             this.label104.Text = "手术记录";
             // 
-            // panel98
+            // pictureBox6
             // 
-            this.panel98.BackColor = System.Drawing.Color.White;
-            this.panel98.Controls.Add(this.btnSaveSSJL2);
-            this.panel98.Controls.Add(this.btnRecordClear);
-            this.panel98.Controls.Add(this.label24);
-            this.panel98.Controls.Add(this.btnSaveSSJL);
-            this.panel98.Controls.Add(this.tbSSLR_ZDYS);
-            this.panel98.Controls.Add(this.tbSSLR_QXFS);
-            this.panel98.Controls.Add(this.label23);
-            this.panel98.Controls.Add(this.label22);
-            this.panel98.Controls.Add(this.tbSSLR_ZS);
-            this.panel98.Location = new System.Drawing.Point(0, 1291);
-            this.panel98.Name = "panel98";
-            this.panel98.Size = new System.Drawing.Size(1243, 140);
-            this.panel98.TabIndex = 50;
-            // 
-            // btnSaveSSJL2
-            // 
-            this.btnSaveSSJL2.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnSaveSSJL2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnSaveSSJL2.FlatAppearance.BorderSize = 0;
-            this.btnSaveSSJL2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveSSJL2.Font = new System.Drawing.Font("宋体", 12F);
-            this.btnSaveSSJL2.ForeColor = System.Drawing.Color.White;
-            this.btnSaveSSJL2.Location = new System.Drawing.Point(431, 74);
-            this.btnSaveSSJL2.Name = "btnSaveSSJL2";
-            this.btnSaveSSJL2.Size = new System.Drawing.Size(151, 23);
-            this.btnSaveSSJL2.TabIndex = 11;
-            this.btnSaveSSJL2.Text = "保存";
-            this.btnSaveSSJL2.UseVisualStyleBackColor = false;
-            this.btnSaveSSJL2.Click += new System.EventHandler(this.btnSaveSSJL2_Click);
-            // 
-            // btnRecordClear
-            // 
-            this.btnRecordClear.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnRecordClear.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnRecordClear.FlatAppearance.BorderSize = 0;
-            this.btnRecordClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRecordClear.Font = new System.Drawing.Font("宋体", 12F);
-            this.btnRecordClear.ForeColor = System.Drawing.Color.White;
-            this.btnRecordClear.Location = new System.Drawing.Point(595, 74);
-            this.btnRecordClear.Name = "btnRecordClear";
-            this.btnRecordClear.Size = new System.Drawing.Size(141, 23);
-            this.btnRecordClear.TabIndex = 5;
-            this.btnRecordClear.Text = "取消";
-            this.btnRecordClear.UseVisualStyleBackColor = false;
-            this.btnRecordClear.Click += new System.EventHandler(this.btnRecordClear_Click);
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(22, 14);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(88, 16);
-            this.label24.TabIndex = 1;
-            this.label24.Text = "主刀医生：";
-            // 
-            // btnSaveSSJL
-            // 
-            this.btnSaveSSJL.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnSaveSSJL.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnSaveSSJL.FlatAppearance.BorderSize = 0;
-            this.btnSaveSSJL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveSSJL.Font = new System.Drawing.Font("宋体", 12F);
-            this.btnSaveSSJL.ForeColor = System.Drawing.Color.White;
-            this.btnSaveSSJL.Location = new System.Drawing.Point(431, 75);
-            this.btnSaveSSJL.Name = "btnSaveSSJL";
-            this.btnSaveSSJL.Size = new System.Drawing.Size(151, 23);
-            this.btnSaveSSJL.TabIndex = 1;
-            this.btnSaveSSJL.Text = "保存";
-            this.btnSaveSSJL.UseVisualStyleBackColor = false;
-            this.btnSaveSSJL.Visible = false;
-            this.btnSaveSSJL.Click += new System.EventHandler(this.btnSaveSSJL_Click);
-            // 
-            // tbSSLR_ZDYS
-            // 
-            this.tbSSLR_ZDYS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbSSLR_ZDYS.Location = new System.Drawing.Point(115, 11);
-            this.tbSSLR_ZDYS.Name = "tbSSLR_ZDYS";
-            this.tbSSLR_ZDYS.Size = new System.Drawing.Size(130, 26);
-            this.tbSSLR_ZDYS.TabIndex = 6;
-            // 
-            // tbSSLR_QXFS
-            // 
-            this.tbSSLR_QXFS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbSSLR_QXFS.Location = new System.Drawing.Point(510, 13);
-            this.tbSSLR_QXFS.Name = "tbSSLR_QXFS";
-            this.tbSSLR_QXFS.Size = new System.Drawing.Size(102, 26);
-            this.tbSSLR_QXFS.TabIndex = 10;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(252, 16);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(56, 16);
-            this.label23.TabIndex = 7;
-            this.label23.Text = "助手：";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(428, 14);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(88, 16);
-            this.label22.TabIndex = 9;
-            this.label22.Text = "器械护士：";
-            // 
-            // tbSSLR_ZS
-            // 
-            this.tbSSLR_ZS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbSSLR_ZS.Location = new System.Drawing.Point(308, 11);
-            this.tbSSLR_ZS.Name = "tbSSLR_ZS";
-            this.tbSSLR_ZS.Size = new System.Drawing.Size(114, 26);
-            this.tbSSLR_ZS.TabIndex = 8;
+            this.pictureBox6.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox6.Location = new System.Drawing.Point(0, 824);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(1243, 12);
+            this.pictureBox6.TabIndex = 54;
+            this.pictureBox6.TabStop = false;
             // 
             // pictureBox5
             // 
@@ -1362,84 +1381,51 @@
             // 
             // panel10
             // 
-            this.panel10.Controls.Add(this.pictureBox4);
             this.panel10.Controls.Add(this.panel99);
+            this.panel10.Controls.Add(this.pictureBox4);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(0, 408);
+            this.panel10.Location = new System.Drawing.Point(0, 375);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1243, 373);
+            this.panel10.Size = new System.Drawing.Size(1243, 449);
             this.panel10.TabIndex = 38;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox4.Location = new System.Drawing.Point(0, 347);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(1243, 22);
-            this.pictureBox4.TabIndex = 38;
-            this.pictureBox4.TabStop = false;
             // 
             // panel99
             // 
             this.panel99.Controls.Add(this.paneSSBW_pic);
             this.panel99.Controls.Add(this.panel128);
-            this.panel99.Controls.Add(this.label54);
+            this.panel99.Controls.Add(this.panel129);
+            this.panel99.Controls.Add(this.label88);
             this.panel99.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel99.Font = new System.Drawing.Font("宋体", 12F);
-            this.panel99.Location = new System.Drawing.Point(0, 0);
+            this.panel99.Location = new System.Drawing.Point(0, 12);
             this.panel99.Name = "panel99";
             this.panel99.Padding = new System.Windows.Forms.Padding(10);
-            this.panel99.Size = new System.Drawing.Size(1243, 347);
-            this.panel99.TabIndex = 52;
+            this.panel99.Size = new System.Drawing.Size(1243, 450);
+            this.panel99.TabIndex = 53;
             // 
             // paneSSBW_pic
             // 
             this.paneSSBW_pic.AutoScroll = true;
             this.paneSSBW_pic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.paneSSBW_pic.Controls.Add(this.btnRemoveAllSSTP);
-            this.paneSSBW_pic.Controls.Add(this.btnSSJLa_addPic);
+            this.paneSSBW_pic.Controls.Add(this.pictureBox10);
             this.paneSSBW_pic.Controls.Add(this.btnRemoveSSTP);
             this.paneSSBW_pic.Controls.Add(this.lstboxTTLB);
             this.paneSSBW_pic.Controls.Add(this.picSSTP);
-            this.paneSSBW_pic.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.paneSSBW_pic.Location = new System.Drawing.Point(10, 65);
+            this.paneSSBW_pic.Dock = System.Windows.Forms.DockStyle.Top;
+            this.paneSSBW_pic.Location = new System.Drawing.Point(10, 102);
             this.paneSSBW_pic.Name = "paneSSBW_pic";
             this.paneSSBW_pic.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.paneSSBW_pic.Size = new System.Drawing.Size(1223, 272);
-            this.paneSSBW_pic.TabIndex = 22;
+            this.paneSSBW_pic.Size = new System.Drawing.Size(1223, 332);
+            this.paneSSBW_pic.TabIndex = 23;
             // 
-            // btnRemoveAllSSTP
+            // pictureBox10
             // 
-            this.btnRemoveAllSSTP.BackColor = System.Drawing.Color.Crimson;
-            this.btnRemoveAllSSTP.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnRemoveAllSSTP.FlatAppearance.BorderSize = 0;
-            this.btnRemoveAllSSTP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoveAllSSTP.Font = new System.Drawing.Font("宋体", 12F);
-            this.btnRemoveAllSSTP.ForeColor = System.Drawing.Color.White;
-            this.btnRemoveAllSSTP.Location = new System.Drawing.Point(560, 94);
-            this.btnRemoveAllSSTP.Name = "btnRemoveAllSSTP";
-            this.btnRemoveAllSSTP.Size = new System.Drawing.Size(92, 28);
-            this.btnRemoveAllSSTP.TabIndex = 37;
-            this.btnRemoveAllSSTP.Text = "全部移除";
-            this.btnRemoveAllSSTP.UseVisualStyleBackColor = false;
-            this.btnRemoveAllSSTP.Click += new System.EventHandler(this.btnRemoveAllSSTP_Click);
-            // 
-            // btnSSJLa_addPic
-            // 
-            this.btnSSJLa_addPic.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnSSJLa_addPic.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnSSJLa_addPic.FlatAppearance.BorderSize = 0;
-            this.btnSSJLa_addPic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSSJLa_addPic.Font = new System.Drawing.Font("宋体", 12F);
-            this.btnSSJLa_addPic.ForeColor = System.Drawing.Color.White;
-            this.btnSSJLa_addPic.Location = new System.Drawing.Point(560, 10);
-            this.btnSSJLa_addPic.Name = "btnSSJLa_addPic";
-            this.btnSSJLa_addPic.Size = new System.Drawing.Size(92, 28);
-            this.btnSSJLa_addPic.TabIndex = 35;
-            this.btnSSJLa_addPic.Text = "添加图片";
-            this.btnSSJLa_addPic.UseVisualStyleBackColor = false;
-            this.btnSSJLa_addPic.Click += new System.EventHandler(this.btnSSJLa_addPic_Click);
+            this.pictureBox10.Location = new System.Drawing.Point(632, 13);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(500, 300);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 38;
+            this.pictureBox10.TabStop = false;
             // 
             // btnRemoveSSTP
             // 
@@ -1449,70 +1435,45 @@
             this.btnRemoveSSTP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveSSTP.Font = new System.Drawing.Font("宋体", 12F);
             this.btnRemoveSSTP.ForeColor = System.Drawing.Color.White;
-            this.btnRemoveSSTP.Location = new System.Drawing.Point(560, 53);
+            this.btnRemoveSSTP.Location = new System.Drawing.Point(1111, 61);
             this.btnRemoveSSTP.Name = "btnRemoveSSTP";
             this.btnRemoveSSTP.Size = new System.Drawing.Size(92, 28);
             this.btnRemoveSSTP.TabIndex = 36;
             this.btnRemoveSSTP.Text = "移除图片";
             this.btnRemoveSSTP.UseVisualStyleBackColor = false;
+            this.btnRemoveSSTP.Visible = false;
             this.btnRemoveSSTP.Click += new System.EventHandler(this.btnRemoveSSTP_Click);
             // 
             // lstboxTTLB
             // 
             this.lstboxTTLB.FormattingEnabled = true;
             this.lstboxTTLB.ItemHeight = 16;
-            this.lstboxTTLB.Location = new System.Drawing.Point(290, 5);
+            this.lstboxTTLB.Location = new System.Drawing.Point(1014, 5);
             this.lstboxTTLB.Name = "lstboxTTLB";
-            this.lstboxTTLB.Size = new System.Drawing.Size(250, 244);
+            this.lstboxTTLB.Size = new System.Drawing.Size(91, 244);
             this.lstboxTTLB.TabIndex = 1;
+            this.lstboxTTLB.Visible = false;
             this.lstboxTTLB.SelectedIndexChanged += new System.EventHandler(this.lstboxTTLB_SelectedIndexChanged);
             // 
             // picSSTP
             // 
-            this.picSSTP.Location = new System.Drawing.Point(26, 5);
+            this.picSSTP.Location = new System.Drawing.Point(92, 13);
             this.picSSTP.Name = "picSSTP";
-            this.picSSTP.Size = new System.Drawing.Size(250, 250);
+            this.picSSTP.Size = new System.Drawing.Size(500, 300);
+            this.picSSTP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picSSTP.TabIndex = 0;
             this.picSSTP.TabStop = false;
             // 
             // panel128
             // 
-            this.panel128.Controls.Add(this.panel129);
             this.panel128.Controls.Add(this.comboBox3);
             this.panel128.Controls.Add(this.label58);
             this.panel128.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel128.Location = new System.Drawing.Point(10, 30);
+            this.panel128.Location = new System.Drawing.Point(10, 67);
             this.panel128.Name = "panel128";
             this.panel128.Size = new System.Drawing.Size(1223, 35);
-            this.panel128.TabIndex = 34;
-            // 
-            // panel129
-            // 
-            this.panel129.Controls.Add(this.cbSSLR_SSBW);
-            this.panel129.Controls.Add(this.label62);
-            this.panel129.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel129.Location = new System.Drawing.Point(0, 0);
-            this.panel129.Name = "panel129";
-            this.panel129.Size = new System.Drawing.Size(1223, 35);
-            this.panel129.TabIndex = 37;
-            // 
-            // cbSSLR_SSBW
-            // 
-            this.cbSSLR_SSBW.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSSLR_SSBW.FormattingEnabled = true;
-            this.cbSSLR_SSBW.Location = new System.Drawing.Point(93, 6);
-            this.cbSSLR_SSBW.Name = "cbSSLR_SSBW";
-            this.cbSSLR_SSBW.Size = new System.Drawing.Size(233, 24);
-            this.cbSSLR_SSBW.TabIndex = 3;
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(12, 9);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(88, 16);
-            this.label62.TabIndex = 1;
-            this.label62.Text = "手术部位：";
+            this.panel128.TabIndex = 54;
+            this.panel128.Visible = false;
             // 
             // comboBox3
             // 
@@ -1532,19 +1493,92 @@
             this.label58.TabIndex = 1;
             this.label58.Text = "手术部位：";
             // 
-            // label54
+            // panel129
             // 
-            this.label54.AutoSize = true;
-            this.label54.BackColor = System.Drawing.Color.White;
-            this.label54.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label54.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label54.ForeColor = System.Drawing.Color.Black;
-            this.label54.Location = new System.Drawing.Point(10, 10);
-            this.label54.Name = "label54";
-            this.label54.Padding = new System.Windows.Forms.Padding(3);
-            this.label54.Size = new System.Drawing.Size(69, 20);
-            this.label54.TabIndex = 21;
-            this.label54.Text = "手术视图";
+            this.panel129.Controls.Add(this.cbSSLR_SSBW);
+            this.panel129.Controls.Add(this.btnRemoveAllSSTP);
+            this.panel129.Controls.Add(this.label62);
+            this.panel129.Controls.Add(this.btnSSJLa_addPic);
+            this.panel129.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel129.Location = new System.Drawing.Point(10, 32);
+            this.panel129.Name = "panel129";
+            this.panel129.Size = new System.Drawing.Size(1223, 35);
+            this.panel129.TabIndex = 55;
+            // 
+            // cbSSLR_SSBW
+            // 
+            this.cbSSLR_SSBW.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSSLR_SSBW.FormattingEnabled = true;
+            this.cbSSLR_SSBW.Location = new System.Drawing.Point(93, 6);
+            this.cbSSLR_SSBW.Name = "cbSSLR_SSBW";
+            this.cbSSLR_SSBW.Size = new System.Drawing.Size(233, 24);
+            this.cbSSLR_SSBW.TabIndex = 3;
+            // 
+            // btnRemoveAllSSTP
+            // 
+            this.btnRemoveAllSSTP.BackColor = System.Drawing.Color.Crimson;
+            this.btnRemoveAllSSTP.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnRemoveAllSSTP.FlatAppearance.BorderSize = 0;
+            this.btnRemoveAllSSTP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveAllSSTP.Font = new System.Drawing.Font("宋体", 12F);
+            this.btnRemoveAllSSTP.ForeColor = System.Drawing.Color.White;
+            this.btnRemoveAllSSTP.Location = new System.Drawing.Point(438, 3);
+            this.btnRemoveAllSSTP.Name = "btnRemoveAllSSTP";
+            this.btnRemoveAllSSTP.Size = new System.Drawing.Size(92, 28);
+            this.btnRemoveAllSSTP.TabIndex = 37;
+            this.btnRemoveAllSSTP.Text = "全部移除";
+            this.btnRemoveAllSSTP.UseVisualStyleBackColor = false;
+            this.btnRemoveAllSSTP.Click += new System.EventHandler(this.btnRemoveAllSSTP_Click);
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.label62.Location = new System.Drawing.Point(12, 9);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(93, 16);
+            this.label62.TabIndex = 1;
+            this.label62.Text = "手术部位：";
+            // 
+            // btnSSJLa_addPic
+            // 
+            this.btnSSJLa_addPic.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnSSJLa_addPic.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSSJLa_addPic.FlatAppearance.BorderSize = 0;
+            this.btnSSJLa_addPic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSSJLa_addPic.Font = new System.Drawing.Font("宋体", 12F);
+            this.btnSSJLa_addPic.ForeColor = System.Drawing.Color.White;
+            this.btnSSJLa_addPic.Location = new System.Drawing.Point(338, 3);
+            this.btnSSJLa_addPic.Name = "btnSSJLa_addPic";
+            this.btnSSJLa_addPic.Size = new System.Drawing.Size(92, 28);
+            this.btnSSJLa_addPic.TabIndex = 35;
+            this.btnSSJLa_addPic.Text = "添加图片";
+            this.btnSSJLa_addPic.UseVisualStyleBackColor = false;
+            this.btnSSJLa_addPic.Click += new System.EventHandler(this.btnSSJLa_addPic_Click);
+            // 
+            // label88
+            // 
+            this.label88.AutoSize = true;
+            this.label88.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.label88.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label88.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label88.ForeColor = System.Drawing.Color.White;
+            this.label88.Location = new System.Drawing.Point(10, 10);
+            this.label88.Name = "label88";
+            this.label88.Padding = new System.Windows.Forms.Padding(3);
+            this.label88.Size = new System.Drawing.Size(82, 22);
+            this.label88.TabIndex = 53;
+            this.label88.Text = "手术视图";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox4.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(1243, 12);
+            this.pictureBox4.TabIndex = 38;
+            this.pictureBox4.TabStop = false;
             // 
             // panel87
             // 
@@ -1554,9 +1588,10 @@
             this.panel87.Controls.Add(this.label64);
             this.panel87.Controls.Add(this.label52);
             this.panel87.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel87.Location = new System.Drawing.Point(0, 175);
+            this.panel87.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.panel87.Location = new System.Drawing.Point(0, 158);
             this.panel87.Name = "panel87";
-            this.panel87.Size = new System.Drawing.Size(1243, 233);
+            this.panel87.Size = new System.Drawing.Size(1243, 217);
             this.panel87.TabIndex = 32;
             // 
             // groupBox5
@@ -1606,7 +1641,7 @@
             this.labTraceTime10.AutoSize = true;
             this.labTraceTime10.Location = new System.Drawing.Point(29, 129);
             this.labTraceTime10.Name = "labTraceTime10";
-            this.labTraceTime10.Size = new System.Drawing.Size(136, 16);
+            this.labTraceTime10.Size = new System.Drawing.Size(144, 16);
             this.labTraceTime10.TabIndex = 25;
             this.labTraceTime10.Text = "第十次追踪时间：";
             // 
@@ -1635,7 +1670,7 @@
             this.labTraceTime12.AutoSize = true;
             this.labTraceTime12.Location = new System.Drawing.Point(707, 129);
             this.labTraceTime12.Name = "labTraceTime12";
-            this.labTraceTime12.Size = new System.Drawing.Size(152, 16);
+            this.labTraceTime12.Size = new System.Drawing.Size(161, 16);
             this.labTraceTime12.TabIndex = 21;
             this.labTraceTime12.Text = "第十二次追踪时间：";
             // 
@@ -1644,36 +1679,39 @@
             this.labTraceTime11.AutoSize = true;
             this.labTraceTime11.Location = new System.Drawing.Point(366, 129);
             this.labTraceTime11.Name = "labTraceTime11";
-            this.labTraceTime11.Size = new System.Drawing.Size(152, 16);
+            this.labTraceTime11.Size = new System.Drawing.Size(161, 16);
             this.labTraceTime11.TabIndex = 20;
             this.labTraceTime11.Text = "第十一次追踪时间：";
             // 
             // dtTraceTime9
             // 
-            this.dtTraceTime9.CustomFormat = "yyyy-MM";
+            this.dtTraceTime9.CustomFormat = "yyyy年MM月";
             this.dtTraceTime9.Enabled = false;
+            this.dtTraceTime9.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dtTraceTime9.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtTraceTime9.Location = new System.Drawing.Point(857, 92);
+            this.dtTraceTime9.Location = new System.Drawing.Point(870, 92);
             this.dtTraceTime9.Name = "dtTraceTime9";
             this.dtTraceTime9.Size = new System.Drawing.Size(167, 26);
             this.dtTraceTime9.TabIndex = 19;
             // 
             // dtTraceTime8
             // 
-            this.dtTraceTime8.CustomFormat = "yyyy-MM";
+            this.dtTraceTime8.CustomFormat = "yyyy年MM月";
             this.dtTraceTime8.Enabled = false;
+            this.dtTraceTime8.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dtTraceTime8.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtTraceTime8.Location = new System.Drawing.Point(517, 93);
+            this.dtTraceTime8.Location = new System.Drawing.Point(533, 93);
             this.dtTraceTime8.Name = "dtTraceTime8";
             this.dtTraceTime8.Size = new System.Drawing.Size(167, 26);
             this.dtTraceTime8.TabIndex = 18;
             // 
             // dtTraceTime7
             // 
-            this.dtTraceTime7.CustomFormat = "yyyy-MM";
+            this.dtTraceTime7.CustomFormat = "yyyy年MM月";
             this.dtTraceTime7.Enabled = false;
+            this.dtTraceTime7.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dtTraceTime7.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtTraceTime7.Location = new System.Drawing.Point(175, 92);
+            this.dtTraceTime7.Location = new System.Drawing.Point(179, 92);
             this.dtTraceTime7.Name = "dtTraceTime7";
             this.dtTraceTime7.Size = new System.Drawing.Size(167, 26);
             this.dtTraceTime7.TabIndex = 17;
@@ -1681,56 +1719,62 @@
             // labTraceTime9
             // 
             this.labTraceTime9.AutoSize = true;
+            this.labTraceTime9.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labTraceTime9.Location = new System.Drawing.Point(723, 97);
             this.labTraceTime9.Name = "labTraceTime9";
-            this.labTraceTime9.Size = new System.Drawing.Size(136, 16);
+            this.labTraceTime9.Size = new System.Drawing.Size(144, 16);
             this.labTraceTime9.TabIndex = 16;
             this.labTraceTime9.Text = "第九次追踪时间：";
             // 
             // labTraceTime8
             // 
             this.labTraceTime8.AutoSize = true;
+            this.labTraceTime8.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labTraceTime8.Location = new System.Drawing.Point(382, 97);
             this.labTraceTime8.Name = "labTraceTime8";
-            this.labTraceTime8.Size = new System.Drawing.Size(136, 16);
+            this.labTraceTime8.Size = new System.Drawing.Size(144, 16);
             this.labTraceTime8.TabIndex = 15;
             this.labTraceTime8.Text = "第八次追踪时间：";
             // 
             // labTraceTime7
             // 
             this.labTraceTime7.AutoSize = true;
+            this.labTraceTime7.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labTraceTime7.Location = new System.Drawing.Point(29, 96);
             this.labTraceTime7.Name = "labTraceTime7";
-            this.labTraceTime7.Size = new System.Drawing.Size(136, 16);
+            this.labTraceTime7.Size = new System.Drawing.Size(144, 16);
             this.labTraceTime7.TabIndex = 14;
             this.labTraceTime7.Text = "第七次追踪时间：";
             // 
             // dtTraceTime6
             // 
-            this.dtTraceTime6.CustomFormat = "yyyy-MM";
+            this.dtTraceTime6.CustomFormat = "yyyy年MM月";
             this.dtTraceTime6.Enabled = false;
+            this.dtTraceTime6.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dtTraceTime6.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtTraceTime6.Location = new System.Drawing.Point(857, 58);
+            this.dtTraceTime6.Location = new System.Drawing.Point(870, 58);
             this.dtTraceTime6.Name = "dtTraceTime6";
             this.dtTraceTime6.Size = new System.Drawing.Size(167, 26);
             this.dtTraceTime6.TabIndex = 13;
             // 
             // dtTraceTime5
             // 
-            this.dtTraceTime5.CustomFormat = "yyyy-MM";
+            this.dtTraceTime5.CustomFormat = "yyyy年MM月";
             this.dtTraceTime5.Enabled = false;
+            this.dtTraceTime5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dtTraceTime5.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtTraceTime5.Location = new System.Drawing.Point(517, 59);
+            this.dtTraceTime5.Location = new System.Drawing.Point(533, 59);
             this.dtTraceTime5.Name = "dtTraceTime5";
             this.dtTraceTime5.Size = new System.Drawing.Size(167, 26);
             this.dtTraceTime5.TabIndex = 12;
             // 
             // dtTraceTime4
             // 
-            this.dtTraceTime4.CustomFormat = "yyyy-MM";
+            this.dtTraceTime4.CustomFormat = "yyyy年MM月";
             this.dtTraceTime4.Enabled = false;
+            this.dtTraceTime4.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dtTraceTime4.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtTraceTime4.Location = new System.Drawing.Point(175, 58);
+            this.dtTraceTime4.Location = new System.Drawing.Point(179, 58);
             this.dtTraceTime4.Name = "dtTraceTime4";
             this.dtTraceTime4.Size = new System.Drawing.Size(167, 26);
             this.dtTraceTime4.TabIndex = 11;
@@ -1738,56 +1782,62 @@
             // labTraceTime6
             // 
             this.labTraceTime6.AutoSize = true;
+            this.labTraceTime6.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labTraceTime6.Location = new System.Drawing.Point(723, 63);
             this.labTraceTime6.Name = "labTraceTime6";
-            this.labTraceTime6.Size = new System.Drawing.Size(136, 16);
+            this.labTraceTime6.Size = new System.Drawing.Size(144, 16);
             this.labTraceTime6.TabIndex = 10;
             this.labTraceTime6.Text = "第六次追踪时间：";
             // 
             // labTraceTime5
             // 
             this.labTraceTime5.AutoSize = true;
+            this.labTraceTime5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labTraceTime5.Location = new System.Drawing.Point(382, 63);
             this.labTraceTime5.Name = "labTraceTime5";
-            this.labTraceTime5.Size = new System.Drawing.Size(136, 16);
+            this.labTraceTime5.Size = new System.Drawing.Size(144, 16);
             this.labTraceTime5.TabIndex = 9;
             this.labTraceTime5.Text = "第五次追踪时间：";
             // 
             // labTraceTime4
             // 
             this.labTraceTime4.AutoSize = true;
+            this.labTraceTime4.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labTraceTime4.Location = new System.Drawing.Point(29, 62);
             this.labTraceTime4.Name = "labTraceTime4";
-            this.labTraceTime4.Size = new System.Drawing.Size(136, 16);
+            this.labTraceTime4.Size = new System.Drawing.Size(144, 16);
             this.labTraceTime4.TabIndex = 8;
             this.labTraceTime4.Text = "第四次追踪时间：";
             // 
             // dtTraceTime3
             // 
-            this.dtTraceTime3.CustomFormat = "yyyy-MM";
+            this.dtTraceTime3.CustomFormat = "yyyy年MM月";
             this.dtTraceTime3.Enabled = false;
+            this.dtTraceTime3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dtTraceTime3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtTraceTime3.Location = new System.Drawing.Point(857, 24);
+            this.dtTraceTime3.Location = new System.Drawing.Point(870, 24);
             this.dtTraceTime3.Name = "dtTraceTime3";
             this.dtTraceTime3.Size = new System.Drawing.Size(167, 26);
             this.dtTraceTime3.TabIndex = 7;
             // 
             // dtTraceTime2
             // 
-            this.dtTraceTime2.CustomFormat = "yyyy-MM";
+            this.dtTraceTime2.CustomFormat = "yyyy年MM月";
             this.dtTraceTime2.Enabled = false;
+            this.dtTraceTime2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dtTraceTime2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtTraceTime2.Location = new System.Drawing.Point(517, 25);
+            this.dtTraceTime2.Location = new System.Drawing.Point(533, 25);
             this.dtTraceTime2.Name = "dtTraceTime2";
             this.dtTraceTime2.Size = new System.Drawing.Size(167, 26);
             this.dtTraceTime2.TabIndex = 6;
             // 
             // dtTraceTime1
             // 
-            this.dtTraceTime1.CustomFormat = "yyyy-MM";
+            this.dtTraceTime1.CustomFormat = "yyyy年MM月";
             this.dtTraceTime1.Enabled = false;
+            this.dtTraceTime1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dtTraceTime1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtTraceTime1.Location = new System.Drawing.Point(175, 24);
+            this.dtTraceTime1.Location = new System.Drawing.Point(179, 24);
             this.dtTraceTime1.Name = "dtTraceTime1";
             this.dtTraceTime1.Size = new System.Drawing.Size(167, 26);
             this.dtTraceTime1.TabIndex = 5;
@@ -1795,33 +1845,37 @@
             // labTraceTime3
             // 
             this.labTraceTime3.AutoSize = true;
+            this.labTraceTime3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labTraceTime3.Location = new System.Drawing.Point(723, 29);
             this.labTraceTime3.Name = "labTraceTime3";
-            this.labTraceTime3.Size = new System.Drawing.Size(136, 16);
+            this.labTraceTime3.Size = new System.Drawing.Size(144, 16);
             this.labTraceTime3.TabIndex = 4;
             this.labTraceTime3.Text = "第三次追踪时间：";
             // 
             // labTraceTime2
             // 
             this.labTraceTime2.AutoSize = true;
+            this.labTraceTime2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labTraceTime2.Location = new System.Drawing.Point(382, 29);
             this.labTraceTime2.Name = "labTraceTime2";
-            this.labTraceTime2.Size = new System.Drawing.Size(136, 16);
+            this.labTraceTime2.Size = new System.Drawing.Size(144, 16);
             this.labTraceTime2.TabIndex = 3;
             this.labTraceTime2.Text = "第二次追踪时间：";
             // 
             // labTraceTime1
             // 
             this.labTraceTime1.AutoSize = true;
+            this.labTraceTime1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labTraceTime1.Location = new System.Drawing.Point(29, 28);
             this.labTraceTime1.Name = "labTraceTime1";
-            this.labTraceTime1.Size = new System.Drawing.Size(136, 16);
+            this.labTraceTime1.Size = new System.Drawing.Size(144, 16);
             this.labTraceTime1.TabIndex = 2;
             this.labTraceTime1.Text = "第一次追踪时间：";
             // 
             // dtSSLR_SSZZ
             // 
-            this.dtSSLR_SSZZ.CustomFormat = "yyyy-MM";
+            this.dtSSLR_SSZZ.CustomFormat = "yyyy年MM月";
+            this.dtSSLR_SSZZ.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dtSSLR_SSZZ.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtSSLR_SSZZ.Location = new System.Drawing.Point(149, 16);
             this.dtSSLR_SSZZ.Name = "dtSSLR_SSZZ";
@@ -1846,18 +1900,20 @@
             // label64
             // 
             this.label64.AutoSize = true;
+            this.label64.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label64.Location = new System.Drawing.Point(23, 23);
             this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(120, 16);
+            this.label64.Size = new System.Drawing.Size(129, 16);
             this.label64.TabIndex = 1;
             this.label64.Text = "手 术 追 踪 ：";
             // 
             // label52
             // 
             this.label52.AutoSize = true;
+            this.label52.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label52.Location = new System.Drawing.Point(23, 59);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(120, 16);
+            this.label52.Size = new System.Drawing.Size(127, 16);
             this.label52.TabIndex = 1;
             this.label52.Text = "手术追踪期限：";
             // 
@@ -1865,9 +1921,9 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Gainsboro;
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 153);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 146);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1243, 22);
+            this.pictureBox2.Size = new System.Drawing.Size(1243, 12);
             this.pictureBox2.TabIndex = 37;
             this.pictureBox2.TabStop = false;
             // 
@@ -1877,7 +1933,7 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(0, 24);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1243, 129);
+            this.panel9.Size = new System.Drawing.Size(1243, 122);
             this.panel9.TabIndex = 36;
             // 
             // panel71
@@ -1925,9 +1981,10 @@
             // label105
             // 
             this.label105.AutoSize = true;
+            this.label105.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label105.Location = new System.Drawing.Point(3, 3);
             this.label105.Name = "label105";
-            this.label105.Size = new System.Drawing.Size(88, 16);
+            this.label105.Size = new System.Drawing.Size(93, 16);
             this.label105.TabIndex = 1;
             this.label105.Text = "手术日期：";
             // 
@@ -1952,9 +2009,10 @@
             // label106
             // 
             this.label106.AutoSize = true;
+            this.label106.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label106.Location = new System.Drawing.Point(3, 3);
             this.label106.Name = "label106";
-            this.label106.Size = new System.Drawing.Size(88, 16);
+            this.label106.Size = new System.Drawing.Size(93, 16);
             this.label106.TabIndex = 1;
             this.label106.Text = "穿刺方式：";
             // 
@@ -1979,9 +2037,10 @@
             // label107
             // 
             this.label107.AutoSize = true;
+            this.label107.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label107.Location = new System.Drawing.Point(3, 3);
             this.label107.Name = "label107";
-            this.label107.Size = new System.Drawing.Size(88, 16);
+            this.label107.Size = new System.Drawing.Size(93, 16);
             this.label107.TabIndex = 1;
             this.label107.Text = "手术方式：";
             // 
@@ -2006,9 +2065,10 @@
             // label108
             // 
             this.label108.AutoSize = true;
+            this.label108.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label108.Location = new System.Drawing.Point(3, 3);
             this.label108.Name = "label108";
-            this.label108.Size = new System.Drawing.Size(88, 16);
+            this.label108.Size = new System.Drawing.Size(93, 16);
             this.label108.TabIndex = 1;
             this.label108.Text = "手术类型：";
             // 
@@ -2033,9 +2093,10 @@
             // label109
             // 
             this.label109.AutoSize = true;
+            this.label109.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label109.Location = new System.Drawing.Point(3, 3);
             this.label109.Name = "label109";
-            this.label109.Size = new System.Drawing.Size(88, 16);
+            this.label109.Size = new System.Drawing.Size(93, 16);
             this.label109.TabIndex = 1;
             this.label109.Text = "手术地点：";
             // 
@@ -2043,12 +2104,12 @@
             // 
             this.label110.AutoSize = true;
             this.label110.BackColor = System.Drawing.Color.White;
-            this.label110.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label110.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label110.ForeColor = System.Drawing.Color.Black;
             this.label110.Location = new System.Drawing.Point(1, 3);
             this.label110.Name = "label110";
             this.label110.Padding = new System.Windows.Forms.Padding(3);
-            this.label110.Size = new System.Drawing.Size(97, 20);
+            this.label110.Size = new System.Drawing.Size(116, 22);
             this.label110.TabIndex = 21;
             this.label110.Text = "手术相关信息";
             // 
@@ -2082,16 +2143,16 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(10, 10);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1243, 203);
+            this.panel5.Size = new System.Drawing.Size(1243, 182);
             this.panel5.TabIndex = 5;
             // 
             // pictureBox7
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBox7.Location = new System.Drawing.Point(0, 181);
+            this.pictureBox7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox7.Location = new System.Drawing.Point(0, 166);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(1243, 22);
+            this.pictureBox7.Size = new System.Drawing.Size(1243, 12);
             this.pictureBox7.TabIndex = 34;
             this.pictureBox7.TabStop = false;
             // 
@@ -2134,9 +2195,10 @@
             // label33
             // 
             this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label33.Location = new System.Drawing.Point(3, 3);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(72, 16);
+            this.label33.Size = new System.Drawing.Size(76, 16);
             this.label33.TabIndex = 1;
             this.label33.Text = "手机号：";
             // 
@@ -2161,9 +2223,10 @@
             // label34
             // 
             this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label34.Location = new System.Drawing.Point(3, 3);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(56, 16);
+            this.label34.Size = new System.Drawing.Size(59, 16);
             this.label34.TabIndex = 1;
             this.label34.Text = "年龄：";
             // 
@@ -2188,9 +2251,10 @@
             // label35
             // 
             this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label35.Location = new System.Drawing.Point(3, 3);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(184, 16);
+            this.label35.Size = new System.Drawing.Size(195, 16);
             this.label35.TabIndex = 1;
             this.label35.Text = "常透析医院联系人电话：";
             // 
@@ -2214,9 +2278,10 @@
             // label36
             // 
             this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label36.Location = new System.Drawing.Point(3, 3);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(152, 16);
+            this.label36.Size = new System.Drawing.Size(161, 16);
             this.label36.TabIndex = 1;
             this.label36.Text = "常透析医院联系人：";
             // 
@@ -2240,9 +2305,10 @@
             // label37
             // 
             this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label37.Location = new System.Drawing.Point(3, 3);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(104, 16);
+            this.label37.Size = new System.Drawing.Size(110, 16);
             this.label37.TabIndex = 1;
             this.label37.Text = "常透析医院：";
             // 
@@ -2262,10 +2328,10 @@
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("宋体", 9F);
+            this.label38.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold);
             this.label38.Location = new System.Drawing.Point(1061, 8);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(53, 12);
+            this.label38.Size = new System.Drawing.Size(57, 12);
             this.label38.TabIndex = 16;
             this.label38.Text = "详细地址";
             // 
@@ -2310,9 +2376,10 @@
             // label99
             // 
             this.label99.AutoSize = true;
+            this.label99.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label99.Location = new System.Drawing.Point(3, 3);
             this.label99.Name = "label99";
-            this.label99.Size = new System.Drawing.Size(88, 16);
+            this.label99.Size = new System.Drawing.Size(93, 16);
             this.label99.TabIndex = 1;
             this.label99.Text = "常住地址：";
             // 
@@ -2337,9 +2404,10 @@
             // label100
             // 
             this.label100.AutoSize = true;
+            this.label100.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label100.Location = new System.Drawing.Point(3, 3);
             this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(88, 16);
+            this.label100.Size = new System.Drawing.Size(93, 16);
             this.label100.TabIndex = 1;
             this.label100.Text = "医保类型：";
             // 
@@ -2373,9 +2441,10 @@
             // label101
             // 
             this.label101.AutoSize = true;
+            this.label101.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label101.Location = new System.Drawing.Point(3, 3);
             this.label101.Name = "label101";
-            this.label101.Size = new System.Drawing.Size(88, 16);
+            this.label101.Size = new System.Drawing.Size(93, 16);
             this.label101.TabIndex = 1;
             this.label101.Text = "身份证号：";
             // 
@@ -2403,9 +2472,10 @@
             // label102
             // 
             this.label102.AutoSize = true;
+            this.label102.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label102.Location = new System.Drawing.Point(3, 3);
             this.label102.Name = "label102";
-            this.label102.Size = new System.Drawing.Size(56, 16);
+            this.label102.Size = new System.Drawing.Size(59, 16);
             this.label102.TabIndex = 1;
             this.label102.Text = "性别：";
             // 
@@ -2430,9 +2500,10 @@
             // label103
             // 
             this.label103.AutoSize = true;
+            this.label103.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label103.Location = new System.Drawing.Point(3, 3);
             this.label103.Name = "label103";
-            this.label103.Size = new System.Drawing.Size(56, 16);
+            this.label103.Size = new System.Drawing.Size(59, 16);
             this.label103.TabIndex = 1;
             this.label103.Text = "姓名：";
             // 
@@ -2470,7 +2541,7 @@
             this.panelZDGL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelZDGL.Location = new System.Drawing.Point(10, 37);
             this.panelZDGL.Name = "panelZDGL";
-            this.panelZDGL.Size = new System.Drawing.Size(1280, 523);
+            this.panelZDGL.Size = new System.Drawing.Size(1280, 540);
             this.panelZDGL.TabIndex = 0;
             // 
             // listViewDictionaryQKZD
@@ -2679,7 +2750,7 @@
             this.panelSJCX.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelSJCX.Location = new System.Drawing.Point(10, 37);
             this.panelSJCX.Name = "panelSJCX";
-            this.panelSJCX.Size = new System.Drawing.Size(1280, 523);
+            this.panelSJCX.Size = new System.Drawing.Size(1280, 540);
             this.panelSJCX.TabIndex = 1;
             // 
             // panelSJCX_SSJLD
@@ -2699,26 +2770,26 @@
             this.panel51.AutoScroll = true;
             this.panel51.Controls.Add(this.panelSSCX_SSJLD);
             this.panel51.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel51.Location = new System.Drawing.Point(360, 57);
+            this.panel51.Location = new System.Drawing.Point(289, 57);
             this.panel51.Name = "panel51";
-            this.panel51.Size = new System.Drawing.Size(905, 425);
+            this.panel51.Size = new System.Drawing.Size(976, 425);
             this.panel51.TabIndex = 43;
             // 
             // panelSSCX_SSJLD
             // 
             this.panelSSCX_SSJLD.AutoScroll = true;
+            this.panelSSCX_SSJLD.AutoSize = true;
             this.panelSSCX_SSJLD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelSSCX_SSJLD.Controls.Add(this.panelSJCX_ZDYS);
             this.panelSSCX_SSJLD.Controls.Add(this.panelSJCX_SSJL);
             this.panelSSCX_SSJLD.Controls.Add(this.panelSJCX_SSJL_NAME);
             this.panelSSCX_SSJLD.Controls.Add(this.panelSJCX_SSJL_SSST);
-            this.panelSSCX_SSJLD.Controls.Add(this.panelSJCX_SSZZCX_SSBW_NAME);
             this.panelSSCX_SSJLD.Controls.Add(this.panelSJCX_SSJL_BaseInfo);
             this.panelSSCX_SSJLD.Controls.Add(this.panelSJCX_SSJL_Head);
-            this.panelSSCX_SSJLD.Location = new System.Drawing.Point(130, 20);
+            this.panelSSCX_SSJLD.Location = new System.Drawing.Point(150, 13);
             this.panelSSCX_SSJLD.Name = "panelSSCX_SSJLD";
             this.panelSSCX_SSJLD.Padding = new System.Windows.Forms.Padding(10, 10, 10, 0);
-            this.panelSSCX_SSJLD.Size = new System.Drawing.Size(620, 937);
+            this.panelSSCX_SSJLD.Size = new System.Drawing.Size(620, 1169);
             this.panelSSCX_SSJLD.TabIndex = 42;
             // 
             // panelSJCX_ZDYS
@@ -2730,15 +2801,15 @@
             this.panelSJCX_ZDYS.Controls.Add(this.all_zdys);
             this.panelSJCX_ZDYS.Controls.Add(this.label65);
             this.panelSJCX_ZDYS.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSJCX_ZDYS.Location = new System.Drawing.Point(10, 847);
+            this.panelSJCX_ZDYS.Location = new System.Drawing.Point(10, 1137);
             this.panelSJCX_ZDYS.Name = "panelSJCX_ZDYS";
-            this.panelSJCX_ZDYS.Size = new System.Drawing.Size(598, 40);
+            this.panelSJCX_ZDYS.Size = new System.Drawing.Size(598, 30);
             this.panelSJCX_ZDYS.TabIndex = 46;
             // 
             // all_qxhs
             // 
             this.all_qxhs.AutoSize = true;
-            this.all_qxhs.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
+            this.all_qxhs.Font = new System.Drawing.Font("宋体", 10F);
             this.all_qxhs.Location = new System.Drawing.Point(528, 8);
             this.all_qxhs.Name = "all_qxhs";
             this.all_qxhs.Size = new System.Drawing.Size(49, 14);
@@ -2748,16 +2819,17 @@
             // label150
             // 
             this.label150.AutoSize = true;
+            this.label150.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label150.Location = new System.Drawing.Point(432, 7);
             this.label150.Name = "label150";
-            this.label150.Size = new System.Drawing.Size(88, 16);
+            this.label150.Size = new System.Drawing.Size(93, 16);
             this.label150.TabIndex = 7;
             this.label150.Text = "器械护士：";
             // 
             // all_zs
             // 
             this.all_zs.AutoSize = true;
-            this.all_zs.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
+            this.all_zs.Font = new System.Drawing.Font("宋体", 10F);
             this.all_zs.Location = new System.Drawing.Point(363, 8);
             this.all_zs.Name = "all_zs";
             this.all_zs.Size = new System.Drawing.Size(49, 14);
@@ -2767,16 +2839,17 @@
             // label148
             // 
             this.label148.AutoSize = true;
+            this.label148.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label148.Location = new System.Drawing.Point(304, 7);
             this.label148.Name = "label148";
-            this.label148.Size = new System.Drawing.Size(56, 16);
+            this.label148.Size = new System.Drawing.Size(59, 16);
             this.label148.TabIndex = 5;
             this.label148.Text = "助手：";
             // 
             // all_zdys
             // 
             this.all_zdys.AutoSize = true;
-            this.all_zdys.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
+            this.all_zdys.Font = new System.Drawing.Font("宋体", 10F);
             this.all_zdys.Location = new System.Drawing.Point(235, 8);
             this.all_zdys.Name = "all_zdys";
             this.all_zdys.Size = new System.Drawing.Size(49, 14);
@@ -2786,9 +2859,10 @@
             // label65
             // 
             this.label65.AutoSize = true;
+            this.label65.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label65.Location = new System.Drawing.Point(146, 7);
             this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(88, 16);
+            this.label65.Size = new System.Drawing.Size(93, 16);
             this.label65.TabIndex = 3;
             this.label65.Text = "主刀医生：";
             // 
@@ -2796,7 +2870,7 @@
             // 
             this.panelSJCX_SSJL.Controls.Add(this.all_ssjl);
             this.panelSJCX_SSJL.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSJCX_SSJL.Location = new System.Drawing.Point(10, 680);
+            this.panelSJCX_SSJL.Location = new System.Drawing.Point(10, 970);
             this.panelSJCX_SSJL.Name = "panelSJCX_SSJL";
             this.panelSJCX_SSJL.Size = new System.Drawing.Size(598, 167);
             this.panelSJCX_SSJL.TabIndex = 51;
@@ -2816,7 +2890,7 @@
             // 
             this.panelSJCX_SSJL_NAME.Controls.Add(this.label56);
             this.panelSJCX_SSJL_NAME.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSJCX_SSJL_NAME.Location = new System.Drawing.Point(10, 650);
+            this.panelSJCX_SSJL_NAME.Location = new System.Drawing.Point(10, 940);
             this.panelSJCX_SSJL_NAME.Name = "panelSJCX_SSJL_NAME";
             this.panelSJCX_SSJL_NAME.Size = new System.Drawing.Size(598, 30);
             this.panelSJCX_SSJL_NAME.TabIndex = 55;
@@ -2824,9 +2898,10 @@
             // label56
             // 
             this.label56.AutoSize = true;
+            this.label56.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label56.Location = new System.Drawing.Point(18, 7);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(88, 16);
+            this.label56.Size = new System.Drawing.Size(93, 16);
             this.label56.TabIndex = 5;
             this.label56.Text = "手术记录：";
             // 
@@ -2834,56 +2909,79 @@
             // 
             this.panelSJCX_SSJL_SSST.Controls.Add(this.grpbxImgs);
             this.panelSJCX_SSJL_SSST.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSJCX_SSJL_SSST.Location = new System.Drawing.Point(10, 390);
+            this.panelSJCX_SSJL_SSST.Location = new System.Drawing.Point(10, 330);
             this.panelSJCX_SSJL_SSST.Name = "panelSJCX_SSJL_SSST";
-            this.panelSJCX_SSJL_SSST.Size = new System.Drawing.Size(598, 260);
+            this.panelSJCX_SSJL_SSST.Size = new System.Drawing.Size(598, 610);
             this.panelSJCX_SSJL_SSST.TabIndex = 54;
             // 
             // grpbxImgs
             // 
+            this.grpbxImgs.Controls.Add(this.labSJCX_SSBW);
+            this.grpbxImgs.Controls.Add(this.pictureBox9);
+            this.grpbxImgs.Controls.Add(this.label85);
+            this.grpbxImgs.Controls.Add(this.pictureBox8);
+            this.grpbxImgs.Controls.Add(this.panelSJCX_SSZZCX_SSBW_NAME);
             this.grpbxImgs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpbxImgs.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.grpbxImgs.Location = new System.Drawing.Point(0, 0);
             this.grpbxImgs.Name = "grpbxImgs";
-            this.grpbxImgs.Size = new System.Drawing.Size(598, 260);
+            this.grpbxImgs.Size = new System.Drawing.Size(598, 610);
             this.grpbxImgs.TabIndex = 46;
             this.grpbxImgs.TabStop = false;
-            // 
-            // panelSJCX_SSZZCX_SSBW_NAME
-            // 
-            this.panelSJCX_SSZZCX_SSBW_NAME.Controls.Add(this.labSJCX_SSBW);
-            this.panelSJCX_SSZZCX_SSBW_NAME.Controls.Add(this.label85);
-            this.panelSJCX_SSZZCX_SSBW_NAME.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSJCX_SSZZCX_SSBW_NAME.Location = new System.Drawing.Point(10, 350);
-            this.panelSJCX_SSZZCX_SSBW_NAME.Name = "panelSJCX_SSZZCX_SSBW_NAME";
-            this.panelSJCX_SSZZCX_SSBW_NAME.Size = new System.Drawing.Size(598, 40);
-            this.panelSJCX_SSZZCX_SSBW_NAME.TabIndex = 51;
+            this.grpbxImgs.Text = "手术视图";
             // 
             // labSJCX_SSBW
             // 
             this.labSJCX_SSBW.AutoSize = true;
-            this.labSJCX_SSBW.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.labSJCX_SSBW.Location = new System.Drawing.Point(108, 15);
+            this.labSJCX_SSBW.Font = new System.Drawing.Font("宋体", 10F);
+            this.labSJCX_SSBW.Location = new System.Drawing.Point(122, 20);
             this.labSJCX_SSBW.Name = "labSJCX_SSBW";
             this.labSJCX_SSBW.Size = new System.Drawing.Size(14, 14);
             this.labSJCX_SSBW.TabIndex = 4;
             this.labSJCX_SSBW.Text = "_";
             // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Location = new System.Drawing.Point(41, 320);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(500, 280);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 53;
+            this.pictureBox9.TabStop = false;
+            // 
             // label85
             // 
             this.label85.AutoSize = true;
-            this.label85.Location = new System.Drawing.Point(18, 14);
+            this.label85.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label85.Location = new System.Drawing.Point(20, 19);
             this.label85.Name = "label85";
-            this.label85.Size = new System.Drawing.Size(88, 16);
+            this.label85.Size = new System.Drawing.Size(93, 16);
             this.label85.TabIndex = 3;
             this.label85.Text = "手术部位：";
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Location = new System.Drawing.Point(41, 39);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(500, 280);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 52;
+            this.pictureBox8.TabStop = false;
+            // 
+            // panelSJCX_SSZZCX_SSBW_NAME
+            // 
+            this.panelSJCX_SSZZCX_SSBW_NAME.Location = new System.Drawing.Point(283, 18);
+            this.panelSJCX_SSZZCX_SSBW_NAME.Name = "panelSJCX_SSZZCX_SSBW_NAME";
+            this.panelSJCX_SSZZCX_SSBW_NAME.Size = new System.Drawing.Size(289, 10);
+            this.panelSJCX_SSZZCX_SSBW_NAME.TabIndex = 51;
             // 
             // panelSJCX_SSJL_BaseInfo
             // 
             this.panelSJCX_SSJL_BaseInfo.Controls.Add(this.groupBox1);
             this.panelSJCX_SSJL_BaseInfo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSJCX_SSJL_BaseInfo.Location = new System.Drawing.Point(10, 85);
+            this.panelSJCX_SSJL_BaseInfo.Location = new System.Drawing.Point(10, 70);
             this.panelSJCX_SSJL_BaseInfo.Name = "panelSJCX_SSJL_BaseInfo";
-            this.panelSJCX_SSJL_BaseInfo.Size = new System.Drawing.Size(598, 265);
+            this.panelSJCX_SSJL_BaseInfo.Size = new System.Drawing.Size(598, 260);
             this.panelSJCX_SSJL_BaseInfo.TabIndex = 48;
             // 
             // groupBox1
@@ -2929,10 +3027,10 @@
             this.groupBox1.Controls.Add(this.label46);
             this.groupBox1.Controls.Add(this.label47);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Font = new System.Drawing.Font("宋体", 10F);
+            this.groupBox1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(598, 265);
+            this.groupBox1.Size = new System.Drawing.Size(598, 260);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "基本信息";
@@ -2941,8 +3039,8 @@
             // labSJCX_TraceValue4
             // 
             this.labSJCX_TraceValue4.AutoSize = true;
-            this.labSJCX_TraceValue4.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.labSJCX_TraceValue4.Location = new System.Drawing.Point(417, 241);
+            this.labSJCX_TraceValue4.Font = new System.Drawing.Font("宋体", 10F);
+            this.labSJCX_TraceValue4.Location = new System.Drawing.Point(435, 236);
             this.labSJCX_TraceValue4.Name = "labSJCX_TraceValue4";
             this.labSJCX_TraceValue4.Size = new System.Drawing.Size(49, 14);
             this.labSJCX_TraceValue4.TabIndex = 17;
@@ -2951,17 +3049,18 @@
             // labSJCX_Trace4
             // 
             this.labSJCX_Trace4.AutoSize = true;
-            this.labSJCX_Trace4.Location = new System.Drawing.Point(284, 241);
+            this.labSJCX_Trace4.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labSJCX_Trace4.Location = new System.Drawing.Point(284, 235);
             this.labSJCX_Trace4.Name = "labSJCX_Trace4";
-            this.labSJCX_Trace4.Size = new System.Drawing.Size(119, 14);
+            this.labSJCX_Trace4.Size = new System.Drawing.Size(144, 16);
             this.labSJCX_Trace4.TabIndex = 16;
             this.labSJCX_Trace4.Text = "第四次追踪时间：";
             // 
             // labSJCX_TraceValue3
             // 
             this.labSJCX_TraceValue3.AutoSize = true;
-            this.labSJCX_TraceValue3.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.labSJCX_TraceValue3.Location = new System.Drawing.Point(148, 241);
+            this.labSJCX_TraceValue3.Font = new System.Drawing.Font("宋体", 10F);
+            this.labSJCX_TraceValue3.Location = new System.Drawing.Point(167, 236);
             this.labSJCX_TraceValue3.Name = "labSJCX_TraceValue3";
             this.labSJCX_TraceValue3.Size = new System.Drawing.Size(49, 14);
             this.labSJCX_TraceValue3.TabIndex = 15;
@@ -2970,17 +3069,18 @@
             // labSJCX_Trace3
             // 
             this.labSJCX_Trace3.AutoSize = true;
-            this.labSJCX_Trace3.Location = new System.Drawing.Point(19, 241);
+            this.labSJCX_Trace3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labSJCX_Trace3.Location = new System.Drawing.Point(19, 235);
             this.labSJCX_Trace3.Name = "labSJCX_Trace3";
-            this.labSJCX_Trace3.Size = new System.Drawing.Size(119, 14);
+            this.labSJCX_Trace3.Size = new System.Drawing.Size(144, 16);
             this.labSJCX_Trace3.TabIndex = 14;
             this.labSJCX_Trace3.Text = "第三次追踪时间：";
             // 
             // labSJCX_TraceValue2
             // 
             this.labSJCX_TraceValue2.AutoSize = true;
-            this.labSJCX_TraceValue2.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.labSJCX_TraceValue2.Location = new System.Drawing.Point(416, 217);
+            this.labSJCX_TraceValue2.Font = new System.Drawing.Font("宋体", 10F);
+            this.labSJCX_TraceValue2.Location = new System.Drawing.Point(435, 212);
             this.labSJCX_TraceValue2.Name = "labSJCX_TraceValue2";
             this.labSJCX_TraceValue2.Size = new System.Drawing.Size(49, 14);
             this.labSJCX_TraceValue2.TabIndex = 13;
@@ -2989,17 +3089,18 @@
             // labSJCX_Trace2
             // 
             this.labSJCX_Trace2.AutoSize = true;
-            this.labSJCX_Trace2.Location = new System.Drawing.Point(284, 217);
+            this.labSJCX_Trace2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labSJCX_Trace2.Location = new System.Drawing.Point(284, 211);
             this.labSJCX_Trace2.Name = "labSJCX_Trace2";
-            this.labSJCX_Trace2.Size = new System.Drawing.Size(119, 14);
+            this.labSJCX_Trace2.Size = new System.Drawing.Size(144, 16);
             this.labSJCX_Trace2.TabIndex = 12;
             this.labSJCX_Trace2.Text = "第二次追踪时间：";
             // 
             // labSJCX_TraceValue1
             // 
             this.labSJCX_TraceValue1.AutoSize = true;
-            this.labSJCX_TraceValue1.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.labSJCX_TraceValue1.Location = new System.Drawing.Point(148, 217);
+            this.labSJCX_TraceValue1.Font = new System.Drawing.Font("宋体", 10F);
+            this.labSJCX_TraceValue1.Location = new System.Drawing.Point(167, 212);
             this.labSJCX_TraceValue1.Name = "labSJCX_TraceValue1";
             this.labSJCX_TraceValue1.Size = new System.Drawing.Size(49, 14);
             this.labSJCX_TraceValue1.TabIndex = 11;
@@ -3008,17 +3109,18 @@
             // labSJCX_Trace1
             // 
             this.labSJCX_Trace1.AutoSize = true;
-            this.labSJCX_Trace1.Location = new System.Drawing.Point(18, 217);
+            this.labSJCX_Trace1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labSJCX_Trace1.Location = new System.Drawing.Point(19, 211);
             this.labSJCX_Trace1.Name = "labSJCX_Trace1";
-            this.labSJCX_Trace1.Size = new System.Drawing.Size(119, 14);
+            this.labSJCX_Trace1.Size = new System.Drawing.Size(144, 16);
             this.labSJCX_Trace1.TabIndex = 10;
             this.labSJCX_Trace1.Text = "第一次追踪时间：";
             // 
             // labSJCX_TraceTime
             // 
             this.labSJCX_TraceTime.AutoSize = true;
-            this.labSJCX_TraceTime.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.labSJCX_TraceTime.Location = new System.Drawing.Point(130, 194);
+            this.labSJCX_TraceTime.Font = new System.Drawing.Font("宋体", 10F);
+            this.labSJCX_TraceTime.Location = new System.Drawing.Point(150, 188);
             this.labSJCX_TraceTime.Name = "labSJCX_TraceTime";
             this.labSJCX_TraceTime.Size = new System.Drawing.Size(49, 14);
             this.labSJCX_TraceTime.TabIndex = 9;
@@ -3027,8 +3129,8 @@
             // all_ctxyylxr
             // 
             this.all_ctxyylxr.AutoSize = true;
-            this.all_ctxyylxr.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.all_ctxyylxr.Location = new System.Drawing.Point(448, 95);
+            this.all_ctxyylxr.Font = new System.Drawing.Font("宋体", 10F);
+            this.all_ctxyylxr.Location = new System.Drawing.Point(465, 92);
             this.all_ctxyylxr.Name = "all_ctxyylxr";
             this.all_ctxyylxr.Size = new System.Drawing.Size(49, 14);
             this.all_ctxyylxr.TabIndex = 8;
@@ -3037,17 +3139,18 @@
             // label84
             // 
             this.label84.AutoSize = true;
-            this.label84.Location = new System.Drawing.Point(284, 95);
+            this.label84.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label84.Location = new System.Drawing.Point(284, 91);
             this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(161, 14);
+            this.label84.Size = new System.Drawing.Size(161, 16);
             this.label84.TabIndex = 7;
-            this.label84.Text = "常透析医院联系人电话：";
+            this.label84.Text = "常透析医院联系人：";
             // 
             // all_ssdd
             // 
             this.all_ssdd.AutoSize = true;
-            this.all_ssdd.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.all_ssdd.Location = new System.Drawing.Point(279, 170);
+            this.all_ssdd.Font = new System.Drawing.Font("宋体", 10F);
+            this.all_ssdd.Location = new System.Drawing.Point(488, 164);
             this.all_ssdd.Name = "all_ssdd";
             this.all_ssdd.Size = new System.Drawing.Size(49, 14);
             this.all_ssdd.TabIndex = 3;
@@ -3056,17 +3159,18 @@
             // label75
             // 
             this.label75.AutoSize = true;
-            this.label75.Location = new System.Drawing.Point(18, 194);
+            this.label75.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label75.Location = new System.Drawing.Point(19, 187);
             this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(105, 14);
+            this.label75.Size = new System.Drawing.Size(127, 16);
             this.label75.TabIndex = 1;
             this.label75.Text = "手术追踪期限：";
             // 
             // all_ccfs
             // 
             this.all_ccfs.AutoSize = true;
-            this.all_ccfs.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.all_ccfs.Location = new System.Drawing.Point(471, 145);
+            this.all_ccfs.Font = new System.Drawing.Font("宋体", 10F);
+            this.all_ccfs.Location = new System.Drawing.Point(490, 140);
             this.all_ccfs.Name = "all_ccfs";
             this.all_ccfs.Size = new System.Drawing.Size(49, 14);
             this.all_ccfs.TabIndex = 4;
@@ -3076,8 +3180,8 @@
             // all_ssrq
             // 
             this.all_ssrq.AutoSize = true;
-            this.all_ssrq.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.all_ssrq.Location = new System.Drawing.Point(91, 170);
+            this.all_ssrq.Font = new System.Drawing.Font("宋体", 10F);
+            this.all_ssrq.Location = new System.Drawing.Point(120, 164);
             this.all_ssrq.Name = "all_ssrq";
             this.all_ssrq.Size = new System.Drawing.Size(49, 14);
             this.all_ssrq.TabIndex = 2;
@@ -3086,8 +3190,8 @@
             // all_czdz
             // 
             this.all_czdz.AutoSize = true;
-            this.all_czdz.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.all_czdz.Location = new System.Drawing.Point(101, 70);
+            this.all_czdz.Font = new System.Drawing.Font("宋体", 10F);
+            this.all_czdz.Location = new System.Drawing.Point(118, 68);
             this.all_czdz.Name = "all_czdz";
             this.all_czdz.Size = new System.Drawing.Size(49, 14);
             this.all_czdz.TabIndex = 2;
@@ -3096,17 +3200,18 @@
             // label66
             // 
             this.label66.AutoSize = true;
-            this.label66.Location = new System.Drawing.Point(203, 170);
+            this.label66.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label66.Location = new System.Drawing.Point(392, 163);
             this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(77, 14);
+            this.label66.Size = new System.Drawing.Size(93, 16);
             this.label66.TabIndex = 1;
             this.label66.Text = "手术地点：";
             // 
             // all_ssfs
             // 
             this.all_ssfs.AutoSize = true;
-            this.all_ssfs.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.all_ssfs.Location = new System.Drawing.Point(279, 145);
+            this.all_ssfs.Font = new System.Drawing.Font("宋体", 10F);
+            this.all_ssfs.Location = new System.Drawing.Point(302, 140);
             this.all_ssfs.Name = "all_ssfs";
             this.all_ssfs.Size = new System.Drawing.Size(49, 14);
             this.all_ssfs.TabIndex = 3;
@@ -3115,17 +3220,18 @@
             // label67
             // 
             this.label67.AutoSize = true;
-            this.label67.Location = new System.Drawing.Point(18, 170);
+            this.label67.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label67.Location = new System.Drawing.Point(19, 163);
             this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(77, 14);
+            this.label67.Size = new System.Drawing.Size(93, 16);
             this.label67.TabIndex = 1;
             this.label67.Text = "手术日期：";
             // 
             // all_ctxyylxrdh
             // 
             this.all_ctxyylxrdh.AutoSize = true;
-            this.all_ctxyylxrdh.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.all_ctxyylxrdh.Location = new System.Drawing.Point(182, 120);
+            this.all_ctxyylxrdh.Font = new System.Drawing.Font("宋体", 10F);
+            this.all_ctxyylxrdh.Location = new System.Drawing.Point(221, 116);
             this.all_ctxyylxrdh.Name = "all_ctxyylxrdh";
             this.all_ctxyylxrdh.Size = new System.Drawing.Size(49, 14);
             this.all_ctxyylxrdh.TabIndex = 4;
@@ -3134,8 +3240,8 @@
             // all_sslx
             // 
             this.all_sslx.AutoSize = true;
-            this.all_sslx.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.all_sslx.Location = new System.Drawing.Point(91, 145);
+            this.all_sslx.Font = new System.Drawing.Font("宋体", 10F);
+            this.all_sslx.Location = new System.Drawing.Point(119, 140);
             this.all_sslx.Name = "all_sslx";
             this.all_sslx.Size = new System.Drawing.Size(49, 14);
             this.all_sslx.TabIndex = 2;
@@ -3144,26 +3250,28 @@
             // label50
             // 
             this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(18, 70);
+            this.label50.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label50.Location = new System.Drawing.Point(19, 67);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(77, 14);
+            this.label50.Size = new System.Drawing.Size(93, 16);
             this.label50.TabIndex = 1;
             this.label50.Text = "常住地址：";
             // 
             // label59
             // 
             this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(391, 145);
+            this.label59.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label59.Location = new System.Drawing.Point(391, 139);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(77, 14);
+            this.label59.Size = new System.Drawing.Size(93, 16);
             this.label59.TabIndex = 1;
             this.label59.Text = "穿刺方式：";
             // 
             // all_yblx
             // 
             this.all_yblx.AutoSize = true;
-            this.all_yblx.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.all_yblx.Location = new System.Drawing.Point(367, 45);
+            this.all_yblx.Font = new System.Drawing.Font("宋体", 10F);
+            this.all_yblx.Location = new System.Drawing.Point(382, 44);
             this.all_yblx.Name = "all_yblx";
             this.all_yblx.Size = new System.Drawing.Size(49, 14);
             this.all_yblx.TabIndex = 4;
@@ -3172,17 +3280,18 @@
             // label60
             // 
             this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(204, 145);
+            this.label60.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label60.Location = new System.Drawing.Point(204, 139);
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(77, 14);
+            this.label60.Size = new System.Drawing.Size(93, 16);
             this.label60.TabIndex = 1;
             this.label60.Text = "手术方式：";
             // 
             // all_tel
             // 
             this.all_tel.AutoSize = true;
-            this.all_tel.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.all_tel.Location = new System.Drawing.Point(478, 20);
+            this.all_tel.Font = new System.Drawing.Font("宋体", 10F);
+            this.all_tel.Location = new System.Drawing.Point(479, 20);
             this.all_tel.Name = "all_tel";
             this.all_tel.Size = new System.Drawing.Size(49, 14);
             this.all_tel.TabIndex = 6;
@@ -3191,17 +3300,18 @@
             // label61
             // 
             this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(18, 145);
+            this.label61.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label61.Location = new System.Drawing.Point(19, 139);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(77, 14);
+            this.label61.Size = new System.Drawing.Size(93, 16);
             this.label61.TabIndex = 1;
             this.label61.Text = "手术类型：";
             // 
             // all_ctxyy
             // 
             this.all_ctxyy.AutoSize = true;
-            this.all_ctxyy.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.all_ctxyy.Location = new System.Drawing.Point(112, 95);
+            this.all_ctxyy.Font = new System.Drawing.Font("宋体", 10F);
+            this.all_ctxyy.Location = new System.Drawing.Point(131, 92);
             this.all_ctxyy.Name = "all_ctxyy";
             this.all_ctxyy.Size = new System.Drawing.Size(49, 14);
             this.all_ctxyy.TabIndex = 2;
@@ -3210,8 +3320,8 @@
             // all_ID
             // 
             this.all_ID.AutoSize = true;
-            this.all_ID.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.all_ID.Location = new System.Drawing.Point(95, 45);
+            this.all_ID.Font = new System.Drawing.Font("宋体", 10F);
+            this.all_ID.Location = new System.Drawing.Point(116, 44);
             this.all_ID.Name = "all_ID";
             this.all_ID.Size = new System.Drawing.Size(49, 14);
             this.all_ID.TabIndex = 2;
@@ -3220,53 +3330,58 @@
             // label55
             // 
             this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(18, 120);
+            this.label55.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label55.Location = new System.Drawing.Point(19, 115);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(161, 14);
+            this.label55.Size = new System.Drawing.Size(195, 16);
             this.label55.TabIndex = 1;
             this.label55.Text = "常透析医院联系人电话：";
             // 
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(284, 45);
+            this.label48.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label48.Location = new System.Drawing.Point(284, 43);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(77, 14);
+            this.label48.Size = new System.Drawing.Size(93, 16);
             this.label48.TabIndex = 1;
             this.label48.Text = "医保类型：";
             // 
             // label57
             // 
             this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(18, 95);
+            this.label57.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label57.Location = new System.Drawing.Point(19, 91);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(91, 14);
+            this.label57.Size = new System.Drawing.Size(110, 16);
             this.label57.TabIndex = 1;
             this.label57.Text = "常透析医院：";
             // 
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(415, 20);
+            this.label40.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label40.Location = new System.Drawing.Point(403, 19);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(63, 14);
+            this.label40.Size = new System.Drawing.Size(76, 16);
             this.label40.TabIndex = 5;
             this.label40.Text = "手机号：";
             // 
             // label51
             // 
             this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(18, 45);
+            this.label51.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label51.Location = new System.Drawing.Point(19, 43);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(77, 14);
+            this.label51.Size = new System.Drawing.Size(93, 16);
             this.label51.TabIndex = 1;
             this.label51.Text = "身份证号：";
             // 
             // all_age
             // 
             this.all_age.AutoSize = true;
-            this.all_age.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.all_age.Location = new System.Drawing.Point(341, 20);
+            this.all_age.Font = new System.Drawing.Font("宋体", 10F);
+            this.all_age.Location = new System.Drawing.Point(344, 20);
             this.all_age.Name = "all_age";
             this.all_age.Size = new System.Drawing.Size(49, 14);
             this.all_age.TabIndex = 4;
@@ -3275,8 +3390,8 @@
             // all_sex
             // 
             this.all_sex.AutoSize = true;
-            this.all_sex.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.all_sex.Location = new System.Drawing.Point(201, 20);
+            this.all_sex.Font = new System.Drawing.Font("宋体", 10F);
+            this.all_sex.Location = new System.Drawing.Point(209, 20);
             this.all_sex.Name = "all_sex";
             this.all_sex.Size = new System.Drawing.Size(49, 14);
             this.all_sex.TabIndex = 3;
@@ -3285,8 +3400,8 @@
             // all_name
             // 
             this.all_name.AutoSize = true;
-            this.all_name.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Underline);
-            this.all_name.Location = new System.Drawing.Point(74, 20);
+            this.all_name.Font = new System.Drawing.Font("宋体", 10F);
+            this.all_name.Location = new System.Drawing.Point(84, 20);
             this.all_name.Name = "all_name";
             this.all_name.Size = new System.Drawing.Size(49, 14);
             this.all_name.TabIndex = 2;
@@ -3295,27 +3410,30 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(284, 20);
+            this.label30.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label30.Location = new System.Drawing.Point(284, 19);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(49, 14);
+            this.label30.Size = new System.Drawing.Size(59, 16);
             this.label30.TabIndex = 1;
             this.label30.Text = "年龄：";
             // 
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(145, 20);
+            this.label46.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label46.Location = new System.Drawing.Point(145, 19);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(49, 14);
+            this.label46.Size = new System.Drawing.Size(59, 16);
             this.label46.TabIndex = 1;
             this.label46.Text = "性别：";
             // 
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(18, 20);
+            this.label47.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label47.Location = new System.Drawing.Point(19, 19);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(49, 14);
+            this.label47.Size = new System.Drawing.Size(59, 16);
             this.label47.TabIndex = 1;
             this.label47.Text = "姓名：";
             // 
@@ -3326,14 +3444,14 @@
             this.panelSJCX_SSJL_Head.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSJCX_SSJL_Head.Location = new System.Drawing.Point(10, 10);
             this.panelSJCX_SSJL_Head.Name = "panelSJCX_SSJL_Head";
-            this.panelSJCX_SSJL_Head.Size = new System.Drawing.Size(598, 75);
+            this.panelSJCX_SSJL_Head.Size = new System.Drawing.Size(598, 60);
             this.panelSJCX_SSJL_Head.TabIndex = 47;
             // 
             // labelSSJLD_TITLE
             // 
             this.labelSSJLD_TITLE.AutoSize = true;
             this.labelSSJLD_TITLE.Font = new System.Drawing.Font("黑体", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelSSJLD_TITLE.Location = new System.Drawing.Point(219, 14);
+            this.labelSSJLD_TITLE.Location = new System.Drawing.Point(219, 5);
             this.labelSSJLD_TITLE.Name = "labelSSJLD_TITLE";
             this.labelSSJLD_TITLE.Size = new System.Drawing.Size(188, 23);
             this.labelSSJLD_TITLE.TabIndex = 4;
@@ -3342,10 +3460,10 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("仿宋", 15F);
-            this.label28.Location = new System.Drawing.Point(243, 43);
+            this.label28.Font = new System.Drawing.Font("仿宋", 15F, System.Drawing.FontStyle.Bold);
+            this.label28.Location = new System.Drawing.Point(243, 34);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(109, 20);
+            this.label28.Size = new System.Drawing.Size(114, 20);
             this.label28.TabIndex = 7;
             this.label28.Text = "手术记录单";
             // 
@@ -3357,7 +3475,7 @@
             this.panel50.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel50.Location = new System.Drawing.Point(0, 57);
             this.panel50.Name = "panel50";
-            this.panel50.Size = new System.Drawing.Size(219, 425);
+            this.panel50.Size = new System.Drawing.Size(287, 425);
             this.panel50.TabIndex = 41;
             // 
             // dgvSJCX_RECORDS
@@ -3374,9 +3492,9 @@
             this.dgvSJCX_RECORDS.RowHeadersVisible = false;
             this.dgvSJCX_RECORDS.RowTemplate.Height = 23;
             this.dgvSJCX_RECORDS.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSJCX_RECORDS.Size = new System.Drawing.Size(217, 423);
+            this.dgvSJCX_RECORDS.Size = new System.Drawing.Size(285, 423);
             this.dgvSJCX_RECORDS.TabIndex = 0;
-            this.dgvSJCX_RECORDS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSJCX_RECORDS_CellContentClick);
+            this.dgvSJCX_RECORDS.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSJCX_RECORDS_CellContentClick);
             // 
             // panel52
             // 
@@ -3385,9 +3503,9 @@
             this.panel52.Controls.Add(this.panel133);
             this.panel52.Controls.Add(this.panel132);
             this.panel52.Controls.Add(this.gbSJCX_SSJLD_SSZZ);
-            this.panel52.Location = new System.Drawing.Point(273, 115);
+            this.panel52.Location = new System.Drawing.Point(291, 115);
             this.panel52.Name = "panel52";
-            this.panel52.Size = new System.Drawing.Size(119, 173);
+            this.panel52.Size = new System.Drawing.Size(101, 173);
             this.panel52.TabIndex = 46;
             this.panel52.Visible = false;
             // 
@@ -4065,9 +4183,10 @@
             // cbSJCX_XSSSZZ
             // 
             this.cbSJCX_XSSSZZ.AutoSize = true;
+            this.cbSJCX_XSSSZZ.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbSJCX_XSSSZZ.Location = new System.Drawing.Point(643, 5);
             this.cbSJCX_XSSSZZ.Name = "cbSJCX_XSSSZZ";
-            this.cbSJCX_XSSSZZ.Size = new System.Drawing.Size(123, 20);
+            this.cbSJCX_XSSSZZ.Size = new System.Drawing.Size(129, 20);
             this.cbSJCX_XSSSZZ.TabIndex = 37;
             this.cbSJCX_XSSSZZ.Text = "显示手术追踪";
             this.cbSJCX_XSSSZZ.UseVisualStyleBackColor = true;
@@ -4134,9 +4253,10 @@
             // label25
             // 
             this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label25.Location = new System.Drawing.Point(4, 4);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(88, 16);
+            this.label25.Size = new System.Drawing.Size(93, 16);
             this.label25.TabIndex = 1;
             this.label25.Text = "时间范围：";
             // 
@@ -4160,9 +4280,10 @@
             // label26
             // 
             this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label26.Location = new System.Drawing.Point(3, 2);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(56, 16);
+            this.label26.Size = new System.Drawing.Size(59, 16);
             this.label26.TabIndex = 1;
             this.label26.Text = "姓名：";
             // 
@@ -4302,9 +4423,10 @@
             // label155
             // 
             this.label155.AutoSize = true;
+            this.label155.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label155.Location = new System.Drawing.Point(3, 10);
             this.label155.Name = "label155";
-            this.label155.Size = new System.Drawing.Size(120, 16);
+            this.label155.Size = new System.Drawing.Size(127, 16);
             this.label155.TabIndex = 1;
             this.label155.Text = "是否手术追踪：";
             // 
@@ -4368,9 +4490,10 @@
             // label153
             // 
             this.label153.AutoSize = true;
+            this.label153.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label153.Location = new System.Drawing.Point(4, 10);
             this.label153.Name = "label153";
-            this.label153.Size = new System.Drawing.Size(88, 16);
+            this.label153.Size = new System.Drawing.Size(93, 16);
             this.label153.TabIndex = 1;
             this.label153.Text = "时间范围：";
             // 
@@ -4394,9 +4517,10 @@
             // label154
             // 
             this.label154.AutoSize = true;
+            this.label154.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label154.Location = new System.Drawing.Point(3, 10);
             this.label154.Name = "label154";
-            this.label154.Size = new System.Drawing.Size(56, 16);
+            this.label154.Size = new System.Drawing.Size(59, 16);
             this.label154.TabIndex = 1;
             this.label154.Text = "姓名：";
             // 
@@ -4449,8 +4573,148 @@
             this.panelCJFX.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCJFX.Location = new System.Drawing.Point(10, 37);
             this.panelCJFX.Name = "panelCJFX";
-            this.panelCJFX.Size = new System.Drawing.Size(1280, 523);
+            this.panelCJFX.Size = new System.Drawing.Size(1280, 540);
             this.panelCJFX.TabIndex = 2;
+            // 
+            // panelTJFX_GZLTJ
+            // 
+            this.panelTJFX_GZLTJ.Controls.Add(this.dgvTJCX_GZL);
+            this.panelTJFX_GZLTJ.Controls.Add(this.panel124);
+            this.panelTJFX_GZLTJ.Location = new System.Drawing.Point(13, 41);
+            this.panelTJFX_GZLTJ.Name = "panelTJFX_GZLTJ";
+            this.panelTJFX_GZLTJ.Size = new System.Drawing.Size(1237, 507);
+            this.panelTJFX_GZLTJ.TabIndex = 8;
+            // 
+            // dgvTJCX_GZL
+            // 
+            this.dgvTJCX_GZL.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTJCX_GZL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTJCX_GZL.EnableHeadersVisualStyles = false;
+            this.dgvTJCX_GZL.Location = new System.Drawing.Point(20, 54);
+            this.dgvTJCX_GZL.Name = "dgvTJCX_GZL";
+            this.dgvTJCX_GZL.RowTemplate.Height = 23;
+            this.dgvTJCX_GZL.Size = new System.Drawing.Size(1191, 453);
+            this.dgvTJCX_GZL.TabIndex = 43;
+            this.dgvTJCX_GZL.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgvTJCX_GZL_RowPostPaint);
+            // 
+            // panel124
+            // 
+            this.panel124.Controls.Add(this.btnTJFX_GZLTJ_Export);
+            this.panel124.Controls.Add(this.tbTJCX_XXTJ);
+            this.panel124.Controls.Add(this.tbTJCX_TJMS);
+            this.panel124.Controls.Add(this.btnTJFX_GZL);
+            this.panel124.Controls.Add(this.panel125);
+            this.panel124.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel124.Location = new System.Drawing.Point(0, 0);
+            this.panel124.Name = "panel124";
+            this.panel124.Size = new System.Drawing.Size(1237, 42);
+            this.panel124.TabIndex = 42;
+            // 
+            // btnTJFX_GZLTJ_Export
+            // 
+            this.btnTJFX_GZLTJ_Export.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnTJFX_GZLTJ_Export.FlatAppearance.BorderSize = 0;
+            this.btnTJFX_GZLTJ_Export.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTJFX_GZLTJ_Export.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnTJFX_GZLTJ_Export.ForeColor = System.Drawing.Color.White;
+            this.btnTJFX_GZLTJ_Export.Location = new System.Drawing.Point(825, 3);
+            this.btnTJFX_GZLTJ_Export.Name = "btnTJFX_GZLTJ_Export";
+            this.btnTJFX_GZLTJ_Export.Size = new System.Drawing.Size(81, 26);
+            this.btnTJFX_GZLTJ_Export.TabIndex = 39;
+            this.btnTJFX_GZLTJ_Export.Text = "导出";
+            this.btnTJFX_GZLTJ_Export.UseVisualStyleBackColor = false;
+            this.btnTJFX_GZLTJ_Export.Click += new System.EventHandler(this.btnTJFX_GZLTJ_Export_Click);
+            // 
+            // tbTJCX_XXTJ
+            // 
+            this.tbTJCX_XXTJ.AutoSize = true;
+            this.tbTJCX_XXTJ.Checked = true;
+            this.tbTJCX_XXTJ.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbTJCX_XXTJ.Location = new System.Drawing.Point(610, 10);
+            this.tbTJCX_XXTJ.Name = "tbTJCX_XXTJ";
+            this.tbTJCX_XXTJ.Size = new System.Drawing.Size(94, 20);
+            this.tbTJCX_XXTJ.TabIndex = 38;
+            this.tbTJCX_XXTJ.TabStop = true;
+            this.tbTJCX_XXTJ.Text = "详细统计";
+            this.tbTJCX_XXTJ.UseVisualStyleBackColor = true;
+            // 
+            // tbTJCX_TJMS
+            // 
+            this.tbTJCX_TJMS.AutoSize = true;
+            this.tbTJCX_TJMS.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbTJCX_TJMS.Location = new System.Drawing.Point(498, 9);
+            this.tbTJCX_TJMS.Name = "tbTJCX_TJMS";
+            this.tbTJCX_TJMS.Size = new System.Drawing.Size(94, 20);
+            this.tbTJCX_TJMS.TabIndex = 37;
+            this.tbTJCX_TJMS.Text = "统计模式";
+            this.tbTJCX_TJMS.UseVisualStyleBackColor = true;
+            // 
+            // btnTJFX_GZL
+            // 
+            this.btnTJFX_GZL.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnTJFX_GZL.FlatAppearance.BorderSize = 0;
+            this.btnTJFX_GZL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTJFX_GZL.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnTJFX_GZL.ForeColor = System.Drawing.Color.White;
+            this.btnTJFX_GZL.Location = new System.Drawing.Point(728, 3);
+            this.btnTJFX_GZL.Name = "btnTJFX_GZL";
+            this.btnTJFX_GZL.Size = new System.Drawing.Size(81, 26);
+            this.btnTJFX_GZL.TabIndex = 36;
+            this.btnTJFX_GZL.Text = "统计";
+            this.btnTJFX_GZL.UseVisualStyleBackColor = false;
+            this.btnTJFX_GZL.Click += new System.EventHandler(this.btnTJFX_GZL_Click);
+            // 
+            // panel125
+            // 
+            this.panel125.Controls.Add(this.label29);
+            this.panel125.Controls.Add(this.dtpTJFX_GZLGL_JSSJ);
+            this.panel125.Controls.Add(this.dtpTJFX_GZLGL_KSSJ);
+            this.panel125.Controls.Add(this.label39);
+            this.panel125.Location = new System.Drawing.Point(20, 3);
+            this.panel125.Name = "panel125";
+            this.panel125.Size = new System.Drawing.Size(402, 34);
+            this.panel125.TabIndex = 35;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(229, 5);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(16, 16);
+            this.label29.TabIndex = 4;
+            this.label29.Text = "-";
+            // 
+            // dtpTJFX_GZLGL_JSSJ
+            // 
+            this.dtpTJFX_GZLGL_JSSJ.CustomFormat = "yyyy年MM月";
+            this.dtpTJFX_GZLGL_JSSJ.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpTJFX_GZLGL_JSSJ.Location = new System.Drawing.Point(251, 0);
+            this.dtpTJFX_GZLGL_JSSJ.Name = "dtpTJFX_GZLGL_JSSJ";
+            this.dtpTJFX_GZLGL_JSSJ.ShowUpDown = true;
+            this.dtpTJFX_GZLGL_JSSJ.Size = new System.Drawing.Size(138, 26);
+            this.dtpTJFX_GZLGL_JSSJ.TabIndex = 3;
+            this.dtpTJFX_GZLGL_JSSJ.Value = new System.DateTime(2018, 9, 1, 0, 0, 0, 0);
+            // 
+            // dtpTJFX_GZLGL_KSSJ
+            // 
+            this.dtpTJFX_GZLGL_KSSJ.CustomFormat = "yyyy年MM月";
+            this.dtpTJFX_GZLGL_KSSJ.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpTJFX_GZLGL_KSSJ.Location = new System.Drawing.Point(85, 0);
+            this.dtpTJFX_GZLGL_KSSJ.Name = "dtpTJFX_GZLGL_KSSJ";
+            this.dtpTJFX_GZLGL_KSSJ.ShowUpDown = true;
+            this.dtpTJFX_GZLGL_KSSJ.Size = new System.Drawing.Size(138, 26);
+            this.dtpTJFX_GZLGL_KSSJ.TabIndex = 2;
+            this.dtpTJFX_GZLGL_KSSJ.Value = new System.DateTime(2018, 9, 1, 0, 0, 0, 0);
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label39.Location = new System.Drawing.Point(4, 4);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(93, 16);
+            this.label39.TabIndex = 1;
+            this.label39.Text = "时间范围：";
             // 
             // panelTJFX_PIE
             // 
@@ -4554,9 +4818,10 @@
             // label32
             // 
             this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label32.Location = new System.Drawing.Point(4, 4);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(88, 16);
+            this.label32.Size = new System.Drawing.Size(93, 16);
             this.label32.TabIndex = 1;
             this.label32.Text = "时间范围：";
             // 
@@ -4567,7 +4832,7 @@
             this.panelSJTJ_SSTJ_4.Controls.Add(this.chartPie_4);
             this.panelSJTJ_SSTJ_4.Location = new System.Drawing.Point(625, 267);
             this.panelSJTJ_SSTJ_4.Name = "panelSJTJ_SSTJ_4";
-            this.panelSJTJ_SSTJ_4.Size = new System.Drawing.Size(580, 211);
+            this.panelSJTJ_SSTJ_4.Size = new System.Drawing.Size(530, 211);
             this.panelSJTJ_SSTJ_4.TabIndex = 3;
             // 
             // labelTJFX_PIE_4
@@ -4583,9 +4848,10 @@
             // 
             chartArea1.Name = "ChartArea1";
             this.chartPie_4.ChartAreas.Add(chartArea1);
+            this.chartPie_4.Dock = System.Windows.Forms.DockStyle.Bottom;
             legend1.Name = "Legend1";
             this.chartPie_4.Legends.Add(legend1);
-            this.chartPie_4.Location = new System.Drawing.Point(8, 20);
+            this.chartPie_4.Location = new System.Drawing.Point(0, 25);
             this.chartPie_4.Name = "chartPie_4";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
@@ -4595,7 +4861,7 @@
             series1.Name = "Series1";
             series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
             this.chartPie_4.Series.Add(series1);
-            this.chartPie_4.Size = new System.Drawing.Size(550, 179);
+            this.chartPie_4.Size = new System.Drawing.Size(528, 184);
             this.chartPie_4.TabIndex = 2;
             this.chartPie_4.Text = "男女比例";
             // 
@@ -4606,16 +4872,17 @@
             this.panelSJTJ_SSTJ_3.Controls.Add(this.labelTJFX_PIE_3);
             this.panelSJTJ_SSTJ_3.Location = new System.Drawing.Point(20, 269);
             this.panelSJTJ_SSTJ_3.Name = "panelSJTJ_SSTJ_3";
-            this.panelSJTJ_SSTJ_3.Size = new System.Drawing.Size(566, 205);
+            this.panelSJTJ_SSTJ_3.Size = new System.Drawing.Size(530, 205);
             this.panelSJTJ_SSTJ_3.TabIndex = 2;
             // 
             // chartPie_3
             // 
             chartArea2.Name = "ChartArea1";
             this.chartPie_3.ChartAreas.Add(chartArea2);
+            this.chartPie_3.Dock = System.Windows.Forms.DockStyle.Bottom;
             legend2.Name = "Legend1";
             this.chartPie_3.Legends.Add(legend2);
-            this.chartPie_3.Location = new System.Drawing.Point(13, 19);
+            this.chartPie_3.Location = new System.Drawing.Point(0, 23);
             this.chartPie_3.Name = "chartPie_3";
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
@@ -4625,7 +4892,7 @@
             series2.Name = "Series1";
             series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
             this.chartPie_3.Series.Add(series2);
-            this.chartPie_3.Size = new System.Drawing.Size(552, 180);
+            this.chartPie_3.Size = new System.Drawing.Size(528, 180);
             this.chartPie_3.TabIndex = 4;
             this.chartPie_3.Text = "男女比例";
             // 
@@ -4645,7 +4912,7 @@
             this.panelSJTJ_SSTJ_2.Controls.Add(this.chartPie_2);
             this.panelSJTJ_SSTJ_2.Location = new System.Drawing.Point(624, 43);
             this.panelSJTJ_SSTJ_2.Name = "panelSJTJ_SSTJ_2";
-            this.panelSJTJ_SSTJ_2.Size = new System.Drawing.Size(581, 217);
+            this.panelSJTJ_SSTJ_2.Size = new System.Drawing.Size(530, 217);
             this.panelSJTJ_SSTJ_2.TabIndex = 1;
             // 
             // labelTJFX_PIE_2
@@ -4661,9 +4928,10 @@
             // 
             chartArea3.Name = "ChartArea1";
             this.chartPie_2.ChartAreas.Add(chartArea3);
+            this.chartPie_2.Dock = System.Windows.Forms.DockStyle.Bottom;
             legend3.Name = "Legend1";
             this.chartPie_2.Legends.Add(legend3);
-            this.chartPie_2.Location = new System.Drawing.Point(12, 21);
+            this.chartPie_2.Location = new System.Drawing.Point(0, 22);
             this.chartPie_2.Name = "chartPie_2";
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
@@ -4673,7 +4941,7 @@
             series3.Name = "Series1";
             series3.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
             this.chartPie_2.Series.Add(series3);
-            this.chartPie_2.Size = new System.Drawing.Size(552, 198);
+            this.chartPie_2.Size = new System.Drawing.Size(528, 193);
             this.chartPie_2.TabIndex = 2;
             this.chartPie_2.Text = "男女比例";
             // 
@@ -4684,7 +4952,7 @@
             this.panelSJTJ_SSTJ_1.Controls.Add(this.chartPie_1);
             this.panelSJTJ_SSTJ_1.Location = new System.Drawing.Point(20, 43);
             this.panelSJTJ_SSTJ_1.Name = "panelSJTJ_SSTJ_1";
-            this.panelSJTJ_SSTJ_1.Size = new System.Drawing.Size(566, 219);
+            this.panelSJTJ_SSTJ_1.Size = new System.Drawing.Size(530, 219);
             this.panelSJTJ_SSTJ_1.TabIndex = 0;
             // 
             // labelTJFX_PIE_1
@@ -4700,9 +4968,10 @@
             // 
             chartArea4.Name = "ChartArea1";
             this.chartPie_1.ChartAreas.Add(chartArea4);
+            this.chartPie_1.Dock = System.Windows.Forms.DockStyle.Bottom;
             legend4.Name = "Legend1";
             this.chartPie_1.Legends.Add(legend4);
-            this.chartPie_1.Location = new System.Drawing.Point(7, 19);
+            this.chartPie_1.Location = new System.Drawing.Point(0, 17);
             this.chartPie_1.Name = "chartPie_1";
             series4.ChartArea = "ChartArea1";
             series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
@@ -4711,146 +4980,9 @@
             series4.Legend = "Legend1";
             series4.Name = "Series1";
             this.chartPie_1.Series.Add(series4);
-            this.chartPie_1.Size = new System.Drawing.Size(558, 200);
+            this.chartPie_1.Size = new System.Drawing.Size(528, 200);
             this.chartPie_1.TabIndex = 0;
             this.chartPie_1.Text = "男女比例";
-            // 
-            // panelTJFX_GZLTJ
-            // 
-            this.panelTJFX_GZLTJ.Controls.Add(this.dgvTJCX_GZL);
-            this.panelTJFX_GZLTJ.Controls.Add(this.panel124);
-            this.panelTJFX_GZLTJ.Location = new System.Drawing.Point(13, 41);
-            this.panelTJFX_GZLTJ.Name = "panelTJFX_GZLTJ";
-            this.panelTJFX_GZLTJ.Size = new System.Drawing.Size(1237, 507);
-            this.panelTJFX_GZLTJ.TabIndex = 8;
-            // 
-            // dgvTJCX_GZL
-            // 
-            this.dgvTJCX_GZL.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvTJCX_GZL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTJCX_GZL.EnableHeadersVisualStyles = false;
-            this.dgvTJCX_GZL.Location = new System.Drawing.Point(20, 54);
-            this.dgvTJCX_GZL.Name = "dgvTJCX_GZL";
-            this.dgvTJCX_GZL.RowTemplate.Height = 23;
-            this.dgvTJCX_GZL.Size = new System.Drawing.Size(1191, 453);
-            this.dgvTJCX_GZL.TabIndex = 43;
-            this.dgvTJCX_GZL.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgvTJCX_GZL_RowPostPaint);
-            // 
-            // panel124
-            // 
-            this.panel124.Controls.Add(this.btnTJFX_GZLTJ_Export);
-            this.panel124.Controls.Add(this.tbTJCX_XXTJ);
-            this.panel124.Controls.Add(this.tbTJCX_TJMS);
-            this.panel124.Controls.Add(this.btnTJFX_GZL);
-            this.panel124.Controls.Add(this.panel125);
-            this.panel124.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel124.Location = new System.Drawing.Point(0, 0);
-            this.panel124.Name = "panel124";
-            this.panel124.Size = new System.Drawing.Size(1237, 42);
-            this.panel124.TabIndex = 42;
-            // 
-            // btnTJFX_GZLTJ_Export
-            // 
-            this.btnTJFX_GZLTJ_Export.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnTJFX_GZLTJ_Export.FlatAppearance.BorderSize = 0;
-            this.btnTJFX_GZLTJ_Export.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTJFX_GZLTJ_Export.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnTJFX_GZLTJ_Export.ForeColor = System.Drawing.Color.White;
-            this.btnTJFX_GZLTJ_Export.Location = new System.Drawing.Point(825, 3);
-            this.btnTJFX_GZLTJ_Export.Name = "btnTJFX_GZLTJ_Export";
-            this.btnTJFX_GZLTJ_Export.Size = new System.Drawing.Size(81, 26);
-            this.btnTJFX_GZLTJ_Export.TabIndex = 39;
-            this.btnTJFX_GZLTJ_Export.Text = "导出";
-            this.btnTJFX_GZLTJ_Export.UseVisualStyleBackColor = false;
-            this.btnTJFX_GZLTJ_Export.Click += new System.EventHandler(this.btnTJFX_GZLTJ_Export_Click);
-            // 
-            // tbTJCX_XXTJ
-            // 
-            this.tbTJCX_XXTJ.AutoSize = true;
-            this.tbTJCX_XXTJ.Checked = true;
-            this.tbTJCX_XXTJ.Location = new System.Drawing.Point(610, 10);
-            this.tbTJCX_XXTJ.Name = "tbTJCX_XXTJ";
-            this.tbTJCX_XXTJ.Size = new System.Drawing.Size(90, 20);
-            this.tbTJCX_XXTJ.TabIndex = 38;
-            this.tbTJCX_XXTJ.TabStop = true;
-            this.tbTJCX_XXTJ.Text = "详细统计";
-            this.tbTJCX_XXTJ.UseVisualStyleBackColor = true;
-            // 
-            // tbTJCX_TJMS
-            // 
-            this.tbTJCX_TJMS.AutoSize = true;
-            this.tbTJCX_TJMS.Location = new System.Drawing.Point(498, 9);
-            this.tbTJCX_TJMS.Name = "tbTJCX_TJMS";
-            this.tbTJCX_TJMS.Size = new System.Drawing.Size(90, 20);
-            this.tbTJCX_TJMS.TabIndex = 37;
-            this.tbTJCX_TJMS.Text = "统计模式";
-            this.tbTJCX_TJMS.UseVisualStyleBackColor = true;
-            // 
-            // btnTJFX_GZL
-            // 
-            this.btnTJFX_GZL.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnTJFX_GZL.FlatAppearance.BorderSize = 0;
-            this.btnTJFX_GZL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTJFX_GZL.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnTJFX_GZL.ForeColor = System.Drawing.Color.White;
-            this.btnTJFX_GZL.Location = new System.Drawing.Point(728, 3);
-            this.btnTJFX_GZL.Name = "btnTJFX_GZL";
-            this.btnTJFX_GZL.Size = new System.Drawing.Size(81, 26);
-            this.btnTJFX_GZL.TabIndex = 36;
-            this.btnTJFX_GZL.Text = "统计";
-            this.btnTJFX_GZL.UseVisualStyleBackColor = false;
-            this.btnTJFX_GZL.Click += new System.EventHandler(this.btnTJFX_GZL_Click);
-            // 
-            // panel125
-            // 
-            this.panel125.Controls.Add(this.label29);
-            this.panel125.Controls.Add(this.dtpTJFX_GZLGL_JSSJ);
-            this.panel125.Controls.Add(this.dtpTJFX_GZLGL_KSSJ);
-            this.panel125.Controls.Add(this.label39);
-            this.panel125.Location = new System.Drawing.Point(20, 3);
-            this.panel125.Name = "panel125";
-            this.panel125.Size = new System.Drawing.Size(402, 34);
-            this.panel125.TabIndex = 35;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(229, 5);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(16, 16);
-            this.label29.TabIndex = 4;
-            this.label29.Text = "-";
-            // 
-            // dtpTJFX_GZLGL_JSSJ
-            // 
-            this.dtpTJFX_GZLGL_JSSJ.CustomFormat = "yyyy年MM月";
-            this.dtpTJFX_GZLGL_JSSJ.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTJFX_GZLGL_JSSJ.Location = new System.Drawing.Point(251, 0);
-            this.dtpTJFX_GZLGL_JSSJ.Name = "dtpTJFX_GZLGL_JSSJ";
-            this.dtpTJFX_GZLGL_JSSJ.ShowUpDown = true;
-            this.dtpTJFX_GZLGL_JSSJ.Size = new System.Drawing.Size(138, 26);
-            this.dtpTJFX_GZLGL_JSSJ.TabIndex = 3;
-            this.dtpTJFX_GZLGL_JSSJ.Value = new System.DateTime(2018, 9, 1, 0, 0, 0, 0);
-            // 
-            // dtpTJFX_GZLGL_KSSJ
-            // 
-            this.dtpTJFX_GZLGL_KSSJ.CustomFormat = "yyyy年MM月";
-            this.dtpTJFX_GZLGL_KSSJ.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTJFX_GZLGL_KSSJ.Location = new System.Drawing.Point(85, 0);
-            this.dtpTJFX_GZLGL_KSSJ.Name = "dtpTJFX_GZLGL_KSSJ";
-            this.dtpTJFX_GZLGL_KSSJ.ShowUpDown = true;
-            this.dtpTJFX_GZLGL_KSSJ.Size = new System.Drawing.Size(138, 26);
-            this.dtpTJFX_GZLGL_KSSJ.TabIndex = 2;
-            this.dtpTJFX_GZLGL_KSSJ.Value = new System.DateTime(2018, 9, 1, 0, 0, 0, 0);
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(4, 4);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(88, 16);
-            this.label39.TabIndex = 1;
-            this.label39.Text = "时间范围：";
             // 
             // panel121
             // 
@@ -4916,7 +5048,7 @@
             this.panelKSGL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelKSGL.Location = new System.Drawing.Point(10, 37);
             this.panelKSGL.Name = "panelKSGL";
-            this.panelKSGL.Size = new System.Drawing.Size(1280, 523);
+            this.panelKSGL.Size = new System.Drawing.Size(1280, 540);
             this.panelKSGL.TabIndex = 3;
             // 
             // panel13
@@ -5083,9 +5215,10 @@
             // label19
             // 
             this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label19.Location = new System.Drawing.Point(4, 4);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(72, 16);
+            this.label19.Size = new System.Drawing.Size(76, 16);
             this.label19.TabIndex = 1;
             this.label19.Text = "登录名：";
             // 
@@ -5109,9 +5242,10 @@
             // label20
             // 
             this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label20.Location = new System.Drawing.Point(30, 3);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(56, 16);
+            this.label20.Size = new System.Drawing.Size(59, 16);
             this.label20.TabIndex = 1;
             this.label20.Text = "姓名：";
             // 
@@ -5200,9 +5334,10 @@
             // label15
             // 
             this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label15.Location = new System.Drawing.Point(4, 4);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(120, 16);
+            this.label15.Size = new System.Drawing.Size(127, 16);
             this.label15.TabIndex = 1;
             this.label15.Text = "透析单元面积：";
             // 
@@ -5225,9 +5360,10 @@
             // label17
             // 
             this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label17.Location = new System.Drawing.Point(4, 4);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(88, 16);
+            this.label17.Size = new System.Drawing.Size(93, 16);
             this.label17.TabIndex = 1;
             this.label17.Text = "启用日期：";
             // 
@@ -5251,9 +5387,10 @@
             // label18
             // 
             this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label18.Location = new System.Drawing.Point(1, 4);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(120, 16);
+            this.label18.Size = new System.Drawing.Size(127, 16);
             this.label18.TabIndex = 1;
             this.label18.Text = "透析中心面积：";
             // 
@@ -5286,9 +5423,10 @@
             // label14
             // 
             this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label14.Location = new System.Drawing.Point(4, 4);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(104, 16);
+            this.label14.Size = new System.Drawing.Size(110, 16);
             this.label14.TabIndex = 1;
             this.label14.Text = "负责人邮箱：";
             // 
@@ -5312,9 +5450,10 @@
             // label16
             // 
             this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label16.Location = new System.Drawing.Point(6, 4);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(104, 16);
+            this.label16.Size = new System.Drawing.Size(110, 16);
             this.label16.TabIndex = 1;
             this.label16.Text = "负责人手机：";
             // 
@@ -5348,9 +5487,10 @@
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label11.Location = new System.Drawing.Point(4, 4);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(104, 16);
+            this.label11.Size = new System.Drawing.Size(110, 16);
             this.label11.TabIndex = 1;
             this.label11.Text = "负责人职称：";
             // 
@@ -5375,9 +5515,10 @@
             // label12
             // 
             this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label12.Location = new System.Drawing.Point(4, 4);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(104, 16);
+            this.label12.Size = new System.Drawing.Size(110, 16);
             this.label12.TabIndex = 1;
             this.label12.Text = "负责人电话：";
             // 
@@ -5401,9 +5542,10 @@
             // label13
             // 
             this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label13.Location = new System.Drawing.Point(38, 4);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(72, 16);
+            this.label13.Size = new System.Drawing.Size(76, 16);
             this.label13.TabIndex = 1;
             this.label13.Text = "负责人：";
             // 
@@ -5438,9 +5580,10 @@
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label10.Location = new System.Drawing.Point(4, 4);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(88, 16);
+            this.label10.Size = new System.Drawing.Size(93, 16);
             this.label10.TabIndex = 1;
             this.label10.Text = "科室电话：";
             // 
@@ -5464,9 +5607,10 @@
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label9.Location = new System.Drawing.Point(4, 4);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(88, 16);
+            this.label9.Size = new System.Drawing.Size(93, 16);
             this.label9.TabIndex = 1;
             this.label9.Text = "科室传真：";
             // 
@@ -5490,9 +5634,10 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label8.Location = new System.Drawing.Point(22, 2);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(88, 16);
+            this.label8.Size = new System.Drawing.Size(93, 16);
             this.label8.TabIndex = 1;
             this.label8.Text = "科室名称：";
             // 
@@ -5527,9 +5672,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label7.Location = new System.Drawing.Point(4, 4);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 16);
+            this.label7.Size = new System.Drawing.Size(59, 16);
             this.label7.TabIndex = 1;
             this.label7.Text = "邮编：";
             // 
@@ -5566,9 +5712,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label6.Location = new System.Drawing.Point(8, 3);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 16);
+            this.label6.Size = new System.Drawing.Size(59, 16);
             this.label6.TabIndex = 1;
             this.label6.Text = "等级：";
             // 
@@ -5628,9 +5775,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label5.Location = new System.Drawing.Point(8, 3);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(104, 16);
+            this.label5.Size = new System.Drawing.Size(111, 16);
             this.label5.TabIndex = 1;
             this.label5.Text = "省(直辖市)：";
             // 
@@ -5654,9 +5802,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label4.Location = new System.Drawing.Point(82, 2);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 16);
+            this.label4.Size = new System.Drawing.Size(59, 16);
             this.label4.TabIndex = 1;
             this.label4.Text = "地址：";
             // 
@@ -5680,29 +5829,823 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label3.Location = new System.Drawing.Point(51, 3);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 16);
+            this.label3.Size = new System.Drawing.Size(93, 16);
             this.label3.TabIndex = 1;
             this.label3.Text = "医院名称：";
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel4.Controls.Add(this.panelSJCX);
             this.panel4.Controls.Add(this.panelCJFX);
-            this.panel4.Controls.Add(this.panelZDGL);
-            this.panel4.Controls.Add(this.panelSSLR);
             this.panel4.Controls.Add(this.panelSSXGXY);
-            this.panel4.Controls.Add(this.panelSSZZ);
+            this.panel4.Controls.Add(this.panelSJCX);
             this.panel4.Controls.Add(this.panelKSGL);
+            this.panel4.Controls.Add(this.panelSSLR);
+            this.panel4.Controls.Add(this.panelSSZZ);
+            this.panel4.Controls.Add(this.panelZDGL);
             this.panel4.Controls.Add(this.panel122);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 134);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(10);
-            this.panel4.Size = new System.Drawing.Size(1300, 570);
+            this.panel4.Size = new System.Drawing.Size(1300, 587);
             this.panel4.TabIndex = 13;
+            // 
+            // panelSSZZ
+            // 
+            this.panelSSZZ.AutoScroll = true;
+            this.panelSSZZ.BackColor = System.Drawing.Color.White;
+            this.panelSSZZ.Controls.Add(this.panel82);
+            this.panelSSZZ.Controls.Add(this.panel80);
+            this.panelSSZZ.Controls.Add(this.button5);
+            this.panelSSZZ.Controls.Add(this.btnGoAddSSZZ);
+            this.panelSSZZ.Controls.Add(this.panel79);
+            this.panelSSZZ.Controls.Add(this.panel77);
+            this.panelSSZZ.Controls.Add(this.panel42);
+            this.panelSSZZ.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelSSZZ.Location = new System.Drawing.Point(10, 37);
+            this.panelSSZZ.Name = "panelSSZZ";
+            this.panelSSZZ.Size = new System.Drawing.Size(1280, 540);
+            this.panelSSZZ.TabIndex = 32;
+            // 
+            // panel82
+            // 
+            this.panel82.Controls.Add(this.panel86);
+            this.panel82.Controls.Add(this.panel85);
+            this.panel82.Controls.Add(this.panel84);
+            this.panel82.Controls.Add(this.panel97);
+            this.panel82.Controls.Add(this.panel83);
+            this.panel82.Location = new System.Drawing.Point(371, 62);
+            this.panel82.Name = "panel82";
+            this.panel82.Size = new System.Drawing.Size(619, 110);
+            this.panel82.TabIndex = 42;
+            // 
+            // panel86
+            // 
+            this.panel86.Controls.Add(this.labSSZZ_SSFS);
+            this.panel86.Controls.Add(this.label49);
+            this.panel86.Location = new System.Drawing.Point(310, 43);
+            this.panel86.Name = "panel86";
+            this.panel86.Size = new System.Drawing.Size(242, 23);
+            this.panel86.TabIndex = 33;
+            // 
+            // labSSZZ_SSFS
+            // 
+            this.labSSZZ_SSFS.AutoSize = true;
+            this.labSSZZ_SSFS.Location = new System.Drawing.Point(88, 3);
+            this.labSSZZ_SSFS.Name = "labSSZZ_SSFS";
+            this.labSSZZ_SSFS.Size = new System.Drawing.Size(16, 16);
+            this.labSSZZ_SSFS.TabIndex = 3;
+            this.labSSZZ_SSFS.Text = "_";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label49.Location = new System.Drawing.Point(3, 3);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(93, 16);
+            this.label49.TabIndex = 1;
+            this.label49.Text = "手术方式：";
+            // 
+            // panel85
+            // 
+            this.panel85.Controls.Add(this.labSSZZ_SSLX);
+            this.panel85.Controls.Add(this.label45);
+            this.panel85.Location = new System.Drawing.Point(23, 43);
+            this.panel85.Name = "panel85";
+            this.panel85.Size = new System.Drawing.Size(242, 23);
+            this.panel85.TabIndex = 30;
+            // 
+            // labSSZZ_SSLX
+            // 
+            this.labSSZZ_SSLX.AutoSize = true;
+            this.labSSZZ_SSLX.Location = new System.Drawing.Point(88, 4);
+            this.labSSZZ_SSLX.Name = "labSSZZ_SSLX";
+            this.labSSZZ_SSLX.Size = new System.Drawing.Size(16, 16);
+            this.labSSZZ_SSLX.TabIndex = 3;
+            this.labSSZZ_SSLX.Text = "_";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label45.Location = new System.Drawing.Point(3, 4);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(93, 16);
+            this.label45.TabIndex = 1;
+            this.label45.Text = "手术类型：";
+            // 
+            // panel84
+            // 
+            this.panel84.Controls.Add(this.labSSZZ_LXFS);
+            this.panel84.Controls.Add(this.label44);
+            this.panel84.Location = new System.Drawing.Point(23, 75);
+            this.panel84.Name = "panel84";
+            this.panel84.Size = new System.Drawing.Size(242, 23);
+            this.panel84.TabIndex = 30;
+            // 
+            // labSSZZ_LXFS
+            // 
+            this.labSSZZ_LXFS.AutoSize = true;
+            this.labSSZZ_LXFS.Location = new System.Drawing.Point(87, 4);
+            this.labSSZZ_LXFS.Name = "labSSZZ_LXFS";
+            this.labSSZZ_LXFS.Size = new System.Drawing.Size(16, 16);
+            this.labSSZZ_LXFS.TabIndex = 3;
+            this.labSSZZ_LXFS.Text = "_";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label44.Location = new System.Drawing.Point(3, 4);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(93, 16);
+            this.label44.TabIndex = 1;
+            this.label44.Text = "联系方式：";
+            // 
+            // panel97
+            // 
+            this.panel97.Controls.Add(this.labSSZZ_SSDD);
+            this.panel97.Controls.Add(this.label53);
+            this.panel97.Location = new System.Drawing.Point(309, 11);
+            this.panel97.Name = "panel97";
+            this.panel97.Size = new System.Drawing.Size(242, 23);
+            this.panel97.TabIndex = 31;
+            // 
+            // labSSZZ_SSDD
+            // 
+            this.labSSZZ_SSDD.AutoSize = true;
+            this.labSSZZ_SSDD.Location = new System.Drawing.Point(89, 6);
+            this.labSSZZ_SSDD.Name = "labSSZZ_SSDD";
+            this.labSSZZ_SSDD.Size = new System.Drawing.Size(16, 16);
+            this.labSSZZ_SSDD.TabIndex = 3;
+            this.labSSZZ_SSDD.Text = "_";
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label53.Location = new System.Drawing.Point(3, 6);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(93, 16);
+            this.label53.TabIndex = 1;
+            this.label53.Text = "手术地点：";
+            // 
+            // panel83
+            // 
+            this.panel83.Controls.Add(this.labSSZZ_SSRQ);
+            this.panel83.Controls.Add(this.label43);
+            this.panel83.Location = new System.Drawing.Point(23, 10);
+            this.panel83.Name = "panel83";
+            this.panel83.Size = new System.Drawing.Size(242, 23);
+            this.panel83.TabIndex = 29;
+            // 
+            // labSSZZ_SSRQ
+            // 
+            this.labSSZZ_SSRQ.AutoSize = true;
+            this.labSSZZ_SSRQ.Location = new System.Drawing.Point(89, 5);
+            this.labSSZZ_SSRQ.Name = "labSSZZ_SSRQ";
+            this.labSSZZ_SSRQ.Size = new System.Drawing.Size(16, 16);
+            this.labSSZZ_SSRQ.TabIndex = 2;
+            this.labSSZZ_SSRQ.Text = "_";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label43.Location = new System.Drawing.Point(3, 5);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(93, 16);
+            this.label43.TabIndex = 1;
+            this.label43.Text = "手术日期：";
+            // 
+            // panel80
+            // 
+            this.panel80.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel80.Controls.Add(this.lstbxPatientNames);
+            this.panel80.Controls.Add(this.button4);
+            this.panel80.Location = new System.Drawing.Point(16, 62);
+            this.panel80.Name = "panel80";
+            this.panel80.Size = new System.Drawing.Size(96, 384);
+            this.panel80.TabIndex = 41;
+            // 
+            // lstbxPatientNames
+            // 
+            this.lstbxPatientNames.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstbxPatientNames.FormattingEnabled = true;
+            this.lstbxPatientNames.ItemHeight = 16;
+            this.lstbxPatientNames.Location = new System.Drawing.Point(0, 26);
+            this.lstbxPatientNames.Name = "lstbxPatientNames";
+            this.lstbxPatientNames.Size = new System.Drawing.Size(94, 356);
+            this.lstbxPatientNames.TabIndex = 40;
+            this.lstbxPatientNames.SelectedIndexChanged += new System.EventHandler(this.lstbxPatientNames_SelectedIndexChanged);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("宋体", 12F);
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(0, 0);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(94, 26);
+            this.button4.TabIndex = 39;
+            this.button4.Text = "患者列表";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("宋体", 12F);
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(289, 420);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(68, 26);
+            this.button5.TabIndex = 40;
+            this.button5.Text = "删除";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Visible = false;
+            // 
+            // btnGoAddSSZZ
+            // 
+            this.btnGoAddSSZZ.BackColor = System.Drawing.Color.HotPink;
+            this.btnGoAddSSZZ.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnGoAddSSZZ.FlatAppearance.BorderSize = 0;
+            this.btnGoAddSSZZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGoAddSSZZ.Font = new System.Drawing.Font("宋体", 12F);
+            this.btnGoAddSSZZ.ForeColor = System.Drawing.Color.White;
+            this.btnGoAddSSZZ.Location = new System.Drawing.Point(116, 420);
+            this.btnGoAddSSZZ.Name = "btnGoAddSSZZ";
+            this.btnGoAddSSZZ.Size = new System.Drawing.Size(68, 26);
+            this.btnGoAddSSZZ.TabIndex = 39;
+            this.btnGoAddSSZZ.Text = "添加";
+            this.btnGoAddSSZZ.UseVisualStyleBackColor = false;
+            this.btnGoAddSSZZ.Click += new System.EventHandler(this.btnGoAddSSZZ_Click);
+            // 
+            // panel79
+            // 
+            this.panel79.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel79.Controls.Add(this.dgvSSZZ);
+            this.panel79.Controls.Add(this.button3);
+            this.panel79.Location = new System.Drawing.Point(116, 61);
+            this.panel79.Name = "panel79";
+            this.panel79.Size = new System.Drawing.Size(243, 353);
+            this.panel79.TabIndex = 11;
+            // 
+            // dgvSSZZ
+            // 
+            this.dgvSSZZ.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSSZZ.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.createDate,
+            this.creator});
+            this.dgvSSZZ.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvSSZZ.Location = new System.Drawing.Point(0, 26);
+            this.dgvSSZZ.Name = "dgvSSZZ";
+            this.dgvSSZZ.RowTemplate.Height = 23;
+            this.dgvSSZZ.Size = new System.Drawing.Size(241, 325);
+            this.dgvSSZZ.TabIndex = 40;
+            // 
+            // createDate
+            // 
+            this.createDate.HeaderText = "创建日期";
+            this.createDate.Name = "createDate";
+            // 
+            // creator
+            // 
+            this.creator.HeaderText = "创建人";
+            this.creator.Name = "creator";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("宋体", 12F);
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(0, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(241, 26);
+            this.button3.TabIndex = 39;
+            this.button3.Text = "创建手术追踪";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // panel77
+            // 
+            this.panel77.AutoScroll = true;
+            this.panel77.Controls.Add(this.grupbxSSZZ_ZZCG);
+            this.panel77.Controls.Add(this.grupbxSSZZ_ZZSB);
+            this.panel77.Controls.Add(this.panel8);
+            this.panel77.Location = new System.Drawing.Point(370, 178);
+            this.panel77.Name = "panel77";
+            this.panel77.Padding = new System.Windows.Forms.Padding(10);
+            this.panel77.Size = new System.Drawing.Size(885, 452);
+            this.panel77.TabIndex = 8;
+            // 
+            // grupbxSSZZ_ZZCG
+            // 
+            this.grupbxSSZZ_ZZCG.Controls.Add(this.panel96);
+            this.grupbxSSZZ_ZZCG.Controls.Add(this.btnSaveSSLR_SSZZ);
+            this.grupbxSSZZ_ZZCG.Controls.Add(this.panel95);
+            this.grupbxSSZZ_ZZCG.Controls.Add(this.panel81);
+            this.grupbxSSZZ_ZZCG.Controls.Add(this.panel94);
+            this.grupbxSSZZ_ZZCG.Controls.Add(this.panel88);
+            this.grupbxSSZZ_ZZCG.Controls.Add(this.panel90);
+            this.grupbxSSZZ_ZZCG.Controls.Add(this.panel93);
+            this.grupbxSSZZ_ZZCG.Controls.Add(this.panel89);
+            this.grupbxSSZZ_ZZCG.Controls.Add(this.panel91);
+            this.grupbxSSZZ_ZZCG.Controls.Add(this.panel92);
+            this.grupbxSSZZ_ZZCG.Dock = System.Windows.Forms.DockStyle.Top;
+            this.grupbxSSZZ_ZZCG.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.grupbxSSZZ_ZZCG.Location = new System.Drawing.Point(10, 343);
+            this.grupbxSSZZ_ZZCG.Name = "grupbxSSZZ_ZZCG";
+            this.grupbxSSZZ_ZZCG.Size = new System.Drawing.Size(848, 399);
+            this.grupbxSSZZ_ZZCG.TabIndex = 34;
+            this.grupbxSSZZ_ZZCG.TabStop = false;
+            this.grupbxSSZZ_ZZCG.Text = "手术追踪成功：";
+            this.grupbxSSZZ_ZZCG.Visible = false;
+            // 
+            // panel96
+            // 
+            this.panel96.Controls.Add(this.cbSSLR_SSZZ_SFTC);
+            this.panel96.Controls.Add(this.label128);
+            this.panel96.Location = new System.Drawing.Point(9, 25);
+            this.panel96.Name = "panel96";
+            this.panel96.Size = new System.Drawing.Size(242, 34);
+            this.panel96.TabIndex = 28;
+            // 
+            // cbSSLR_SSZZ_SFTC
+            // 
+            this.cbSSLR_SSZZ_SFTC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSSLR_SSZZ_SFTC.FormattingEnabled = true;
+            this.cbSSLR_SSZZ_SFTC.Items.AddRange(new object[] {
+            "是",
+            "否"});
+            this.cbSSLR_SSZZ_SFTC.Location = new System.Drawing.Point(108, 1);
+            this.cbSSLR_SSZZ_SFTC.Name = "cbSSLR_SSZZ_SFTC";
+            this.cbSSLR_SSZZ_SFTC.Size = new System.Drawing.Size(115, 24);
+            this.cbSSLR_SSZZ_SFTC.TabIndex = 2;
+            // 
+            // label128
+            // 
+            this.label128.AutoSize = true;
+            this.label128.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label128.Location = new System.Drawing.Point(3, 4);
+            this.label128.Name = "label128";
+            this.label128.Size = new System.Drawing.Size(93, 16);
+            this.label128.TabIndex = 1;
+            this.label128.Text = "是否畅通：";
+            // 
+            // btnSaveSSLR_SSZZ
+            // 
+            this.btnSaveSSLR_SSZZ.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnSaveSSLR_SSZZ.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSaveSSLR_SSZZ.FlatAppearance.BorderSize = 0;
+            this.btnSaveSSLR_SSZZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveSSLR_SSZZ.Font = new System.Drawing.Font("宋体", 12F);
+            this.btnSaveSSLR_SSZZ.ForeColor = System.Drawing.Color.White;
+            this.btnSaveSSLR_SSZZ.Location = new System.Drawing.Point(378, 361);
+            this.btnSaveSSLR_SSZZ.Name = "btnSaveSSLR_SSZZ";
+            this.btnSaveSSLR_SSZZ.Size = new System.Drawing.Size(109, 23);
+            this.btnSaveSSLR_SSZZ.TabIndex = 32;
+            this.btnSaveSSLR_SSZZ.Text = "保存";
+            this.btnSaveSSLR_SSZZ.UseVisualStyleBackColor = false;
+            this.btnSaveSSLR_SSZZ.Click += new System.EventHandler(this.btnSaveSSLR_SSZZ_Click_1);
+            // 
+            // panel95
+            // 
+            this.panel95.Controls.Add(this.cbSSLR_SSZZ_YWXLBCT);
+            this.panel95.Controls.Add(this.label127);
+            this.panel95.Location = new System.Drawing.Point(308, 25);
+            this.panel95.Name = "panel95";
+            this.panel95.Size = new System.Drawing.Size(280, 34);
+            this.panel95.TabIndex = 31;
+            // 
+            // cbSSLR_SSZZ_YWXLBCT
+            // 
+            this.cbSSLR_SSZZ_YWXLBCT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSSLR_SSZZ_YWXLBCT.FormattingEnabled = true;
+            this.cbSSLR_SSZZ_YWXLBCT.Items.AddRange(new object[] {
+            "有",
+            "无"});
+            this.cbSSLR_SSZZ_YWXLBCT.Location = new System.Drawing.Point(145, 0);
+            this.cbSSLR_SSZZ_YWXLBCT.Name = "cbSSLR_SSZZ_YWXLBCT";
+            this.cbSSLR_SSZZ_YWXLBCT.Size = new System.Drawing.Size(115, 24);
+            this.cbSSLR_SSZZ_YWXLBCT.TabIndex = 2;
+            // 
+            // label127
+            // 
+            this.label127.AutoSize = true;
+            this.label127.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label127.Location = new System.Drawing.Point(1, 4);
+            this.label127.Name = "label127";
+            this.label127.Size = new System.Drawing.Size(144, 16);
+            this.label127.TabIndex = 1;
+            this.label127.Text = "有无血流不畅通：";
+            // 
+            // panel81
+            // 
+            this.panel81.Controls.Add(this.tbSSLR_SSZZ_ZWQMJTZQK);
+            this.panel81.Controls.Add(this.label113);
+            this.panel81.Location = new System.Drawing.Point(9, 224);
+            this.panel81.Name = "panel81";
+            this.panel81.Size = new System.Drawing.Size(861, 124);
+            this.panel81.TabIndex = 40;
+            // 
+            // tbSSLR_SSZZ_ZWQMJTZQK
+            // 
+            this.tbSSLR_SSZZ_ZWQMJTZQK.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tbSSLR_SSZZ_ZWQMJTZQK.Location = new System.Drawing.Point(0, 28);
+            this.tbSSLR_SSZZ_ZWQMJTZQK.Name = "tbSSLR_SSZZ_ZWQMJTZQK";
+            this.tbSSLR_SSZZ_ZWQMJTZQK.Size = new System.Drawing.Size(861, 96);
+            this.tbSSLR_SSZZ_ZWQMJTZQK.TabIndex = 7;
+            this.tbSSLR_SSZZ_ZWQMJTZQK.Text = "";
+            // 
+            // label113
+            // 
+            this.label113.AutoSize = true;
+            this.label113.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label113.Location = new System.Drawing.Point(3, 5);
+            this.label113.Name = "label113";
+            this.label113.Size = new System.Drawing.Size(178, 16);
+            this.label113.TabIndex = 1;
+            this.label113.Text = "自我触摸及听诊情况：";
+            // 
+            // panel94
+            // 
+            this.panel94.Controls.Add(this.cbSSLR_SSZZ_YWXM);
+            this.panel94.Controls.Add(this.label126);
+            this.panel94.Location = new System.Drawing.Point(621, 25);
+            this.panel94.Name = "panel94";
+            this.panel94.Size = new System.Drawing.Size(228, 34);
+            this.panel94.TabIndex = 32;
+            // 
+            // cbSSLR_SSZZ_YWXM
+            // 
+            this.cbSSLR_SSZZ_YWXM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSSLR_SSZZ_YWXM.FormattingEnabled = true;
+            this.cbSSLR_SSZZ_YWXM.Items.AddRange(new object[] {
+            "有",
+            "无"});
+            this.cbSSLR_SSZZ_YWXM.Location = new System.Drawing.Point(86, 2);
+            this.cbSSLR_SSZZ_YWXM.Name = "cbSSLR_SSZZ_YWXM";
+            this.cbSSLR_SSZZ_YWXM.Size = new System.Drawing.Size(115, 24);
+            this.cbSSLR_SSZZ_YWXM.TabIndex = 2;
+            // 
+            // label126
+            // 
+            this.label126.AutoSize = true;
+            this.label126.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label126.Location = new System.Drawing.Point(6, 7);
+            this.label126.Name = "label126";
+            this.label126.Size = new System.Drawing.Size(93, 16);
+            this.label126.TabIndex = 1;
+            this.label126.Text = "有无胸闷：";
+            // 
+            // panel88
+            // 
+            this.panel88.Controls.Add(this.cbSSLR_SSZZ_CCBWPFQK);
+            this.panel88.Controls.Add(this.label120);
+            this.panel88.Location = new System.Drawing.Point(10, 159);
+            this.panel88.Name = "panel88";
+            this.panel88.Size = new System.Drawing.Size(364, 34);
+            this.panel88.TabIndex = 37;
+            // 
+            // cbSSLR_SSZZ_CCBWPFQK
+            // 
+            this.cbSSLR_SSZZ_CCBWPFQK.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSSLR_SSZZ_CCBWPFQK.FormattingEnabled = true;
+            this.cbSSLR_SSZZ_CCBWPFQK.Location = new System.Drawing.Point(166, 1);
+            this.cbSSLR_SSZZ_CCBWPFQK.Name = "cbSSLR_SSZZ_CCBWPFQK";
+            this.cbSSLR_SSZZ_CCBWPFQK.Size = new System.Drawing.Size(192, 24);
+            this.cbSSLR_SSZZ_CCBWPFQK.TabIndex = 2;
+            // 
+            // label120
+            // 
+            this.label120.AutoSize = true;
+            this.label120.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label120.Location = new System.Drawing.Point(3, 3);
+            this.label120.Name = "label120";
+            this.label120.Size = new System.Drawing.Size(161, 16);
+            this.label120.TabIndex = 1;
+            this.label120.Text = "穿刺部位皮肤情况：";
+            // 
+            // panel90
+            // 
+            this.panel90.Controls.Add(this.cbSSLR_SSZZ_GRKZFS);
+            this.panel90.Controls.Add(this.label122);
+            this.panel90.Location = new System.Drawing.Point(9, 193);
+            this.panel90.Name = "panel90";
+            this.panel90.Size = new System.Drawing.Size(361, 34);
+            this.panel90.TabIndex = 36;
+            // 
+            // cbSSLR_SSZZ_GRKZFS
+            // 
+            this.cbSSLR_SSZZ_GRKZFS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSSLR_SSZZ_GRKZFS.FormattingEnabled = true;
+            this.cbSSLR_SSZZ_GRKZFS.Location = new System.Drawing.Point(166, 0);
+            this.cbSSLR_SSZZ_GRKZFS.Name = "cbSSLR_SSZZ_GRKZFS";
+            this.cbSSLR_SSZZ_GRKZFS.Size = new System.Drawing.Size(192, 24);
+            this.cbSSLR_SSZZ_GRKZFS.TabIndex = 2;
+            // 
+            // label122
+            // 
+            this.label122.AutoSize = true;
+            this.label122.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label122.Location = new System.Drawing.Point(3, 3);
+            this.label122.Name = "label122";
+            this.label122.Size = new System.Drawing.Size(127, 16);
+            this.label122.TabIndex = 1;
+            this.label122.Text = "感染控制方式：";
+            // 
+            // panel93
+            // 
+            this.panel93.Controls.Add(this.cbSSLR_SSZZ_YWCCBWPFGMQK);
+            this.panel93.Controls.Add(this.label125);
+            this.panel93.Location = new System.Drawing.Point(9, 93);
+            this.panel93.Name = "panel93";
+            this.panel93.Size = new System.Drawing.Size(364, 34);
+            this.panel93.TabIndex = 33;
+            // 
+            // cbSSLR_SSZZ_YWCCBWPFGMQK
+            // 
+            this.cbSSLR_SSZZ_YWCCBWPFGMQK.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSSLR_SSZZ_YWCCBWPFGMQK.FormattingEnabled = true;
+            this.cbSSLR_SSZZ_YWCCBWPFGMQK.Items.AddRange(new object[] {
+            "有",
+            "无"});
+            this.cbSSLR_SSZZ_YWCCBWPFGMQK.Location = new System.Drawing.Point(227, 0);
+            this.cbSSLR_SSZZ_YWCCBWPFGMQK.Name = "cbSSLR_SSZZ_YWCCBWPFGMQK";
+            this.cbSSLR_SSZZ_YWCCBWPFGMQK.Size = new System.Drawing.Size(131, 24);
+            this.cbSSLR_SSZZ_YWCCBWPFGMQK.TabIndex = 2;
+            // 
+            // label125
+            // 
+            this.label125.AutoSize = true;
+            this.label125.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label125.Location = new System.Drawing.Point(3, 3);
+            this.label125.Name = "label125";
+            this.label125.Size = new System.Drawing.Size(229, 16);
+            this.label125.TabIndex = 1;
+            this.label125.Text = "有无穿刺部位皮肤过敏情况：";
+            // 
+            // panel89
+            // 
+            this.panel89.Controls.Add(this.cbSSLR_SSZZ_NWZWDLQK);
+            this.panel89.Controls.Add(this.label121);
+            this.panel89.Location = new System.Drawing.Point(9, 125);
+            this.panel89.Name = "panel89";
+            this.panel89.Size = new System.Drawing.Size(364, 34);
+            this.panel89.TabIndex = 37;
+            // 
+            // cbSSLR_SSZZ_NWZWDLQK
+            // 
+            this.cbSSLR_SSZZ_NWZWDLQK.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSSLR_SSZZ_NWZWDLQK.FormattingEnabled = true;
+            this.cbSSLR_SSZZ_NWZWDLQK.Location = new System.Drawing.Point(167, 2);
+            this.cbSSLR_SSZZ_NWZWDLQK.Name = "cbSSLR_SSZZ_NWZWDLQK";
+            this.cbSSLR_SSZZ_NWZWDLQK.Size = new System.Drawing.Size(191, 24);
+            this.cbSSLR_SSZZ_NWZWDLQK.TabIndex = 2;
+            // 
+            // label121
+            // 
+            this.label121.AutoSize = true;
+            this.label121.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label121.Location = new System.Drawing.Point(3, 5);
+            this.label121.Name = "label121";
+            this.label121.Size = new System.Drawing.Size(161, 16);
+            this.label121.TabIndex = 1;
+            this.label121.Text = "内痿自我锻炼情况：";
+            // 
+            // panel91
+            // 
+            this.panel91.Controls.Add(this.cbSSLR_SSZZ_YWXBJMQZ);
+            this.panel91.Controls.Add(this.label123);
+            this.panel91.Location = new System.Drawing.Point(308, 60);
+            this.panel91.Name = "panel91";
+            this.panel91.Size = new System.Drawing.Size(280, 34);
+            this.panel91.TabIndex = 35;
+            // 
+            // cbSSLR_SSZZ_YWXBJMQZ
+            // 
+            this.cbSSLR_SSZZ_YWXBJMQZ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSSLR_SSZZ_YWXBJMQZ.FormattingEnabled = true;
+            this.cbSSLR_SSZZ_YWXBJMQZ.Items.AddRange(new object[] {
+            "有",
+            "无"});
+            this.cbSSLR_SSZZ_YWXBJMQZ.Location = new System.Drawing.Point(148, 0);
+            this.cbSSLR_SSZZ_YWXBJMQZ.Name = "cbSSLR_SSZZ_YWXBJMQZ";
+            this.cbSSLR_SSZZ_YWXBJMQZ.Size = new System.Drawing.Size(115, 24);
+            this.cbSSLR_SSZZ_YWXBJMQZ.TabIndex = 2;
+            // 
+            // label123
+            // 
+            this.label123.AutoSize = true;
+            this.label123.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label123.Location = new System.Drawing.Point(3, 3);
+            this.label123.Name = "label123";
+            this.label123.Size = new System.Drawing.Size(161, 16);
+            this.label123.TabIndex = 1;
+            this.label123.Text = "有无胸壁静脉曲张：";
+            // 
+            // panel92
+            // 
+            this.panel92.Controls.Add(this.cbSSLR_SSZZ_YWBFZ);
+            this.panel92.Controls.Add(this.label124);
+            this.panel92.Location = new System.Drawing.Point(9, 60);
+            this.panel92.Name = "panel92";
+            this.panel92.Size = new System.Drawing.Size(242, 34);
+            this.panel92.TabIndex = 34;
+            // 
+            // cbSSLR_SSZZ_YWBFZ
+            // 
+            this.cbSSLR_SSZZ_YWBFZ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSSLR_SSZZ_YWBFZ.FormattingEnabled = true;
+            this.cbSSLR_SSZZ_YWBFZ.Items.AddRange(new object[] {
+            "有",
+            "无"});
+            this.cbSSLR_SSZZ_YWBFZ.Location = new System.Drawing.Point(108, 2);
+            this.cbSSLR_SSZZ_YWBFZ.Name = "cbSSLR_SSZZ_YWBFZ";
+            this.cbSSLR_SSZZ_YWBFZ.Size = new System.Drawing.Size(115, 24);
+            this.cbSSLR_SSZZ_YWBFZ.TabIndex = 2;
+            // 
+            // label124
+            // 
+            this.label124.AutoSize = true;
+            this.label124.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label124.Location = new System.Drawing.Point(3, 1);
+            this.label124.Name = "label124";
+            this.label124.Size = new System.Drawing.Size(110, 16);
+            this.label124.TabIndex = 1;
+            this.label124.Text = "有无并发症：";
+            // 
+            // grupbxSSZZ_ZZSB
+            // 
+            this.grupbxSSZZ_ZZSB.Controls.Add(this.btnSSZZ_SB);
+            this.grupbxSSZZ_ZZSB.Controls.Add(this.rtbSSZZ_FailReason);
+            this.grupbxSSZZ_ZZSB.Dock = System.Windows.Forms.DockStyle.Top;
+            this.grupbxSSZZ_ZZSB.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.grupbxSSZZ_ZZSB.Location = new System.Drawing.Point(10, 42);
+            this.grupbxSSZZ_ZZSB.Name = "grupbxSSZZ_ZZSB";
+            this.grupbxSSZZ_ZZSB.Padding = new System.Windows.Forms.Padding(10);
+            this.grupbxSSZZ_ZZSB.Size = new System.Drawing.Size(848, 301);
+            this.grupbxSSZZ_ZZSB.TabIndex = 35;
+            this.grupbxSSZZ_ZZSB.TabStop = false;
+            this.grupbxSSZZ_ZZSB.Text = "手术追踪失败原因：";
+            this.grupbxSSZZ_ZZSB.Visible = false;
+            // 
+            // btnSSZZ_SB
+            // 
+            this.btnSSZZ_SB.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnSSZZ_SB.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSSZZ_SB.FlatAppearance.BorderSize = 0;
+            this.btnSSZZ_SB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSSZZ_SB.Font = new System.Drawing.Font("宋体", 12F);
+            this.btnSSZZ_SB.ForeColor = System.Drawing.Color.White;
+            this.btnSSZZ_SB.Location = new System.Drawing.Point(363, 265);
+            this.btnSSZZ_SB.Name = "btnSSZZ_SB";
+            this.btnSSZZ_SB.Size = new System.Drawing.Size(109, 23);
+            this.btnSSZZ_SB.TabIndex = 33;
+            this.btnSSZZ_SB.Text = "保存";
+            this.btnSSZZ_SB.UseVisualStyleBackColor = false;
+            this.btnSSZZ_SB.Click += new System.EventHandler(this.btnSSZZ_SB_Click);
+            // 
+            // rtbSSZZ_FailReason
+            // 
+            this.rtbSSZZ_FailReason.Dock = System.Windows.Forms.DockStyle.Top;
+            this.rtbSSZZ_FailReason.Location = new System.Drawing.Point(10, 29);
+            this.rtbSSZZ_FailReason.Name = "rtbSSZZ_FailReason";
+            this.rtbSSZZ_FailReason.Size = new System.Drawing.Size(828, 226);
+            this.rtbSSZZ_FailReason.TabIndex = 7;
+            this.rtbSSZZ_FailReason.Text = "";
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.cbxSSZZ_SFCG);
+            this.panel8.Controls.Add(this.label2);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(10, 10);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(848, 32);
+            this.panel8.TabIndex = 32;
+            // 
+            // cbxSSZZ_SFCG
+            // 
+            this.cbxSSZZ_SFCG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxSSZZ_SFCG.FormattingEnabled = true;
+            this.cbxSSZZ_SFCG.Items.AddRange(new object[] {
+            "是",
+            "否"});
+            this.cbxSSZZ_SFCG.Location = new System.Drawing.Point(175, 3);
+            this.cbxSSZZ_SFCG.Name = "cbxSSZZ_SFCG";
+            this.cbxSSZZ_SFCG.Size = new System.Drawing.Size(115, 24);
+            this.cbxSSZZ_SFCG.TabIndex = 2;
+            this.cbxSSZZ_SFCG.SelectedValueChanged += new System.EventHandler(this.cbxSSZZ_SFCG_SelectedValueChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Location = new System.Drawing.Point(6, 7);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(161, 16);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "是否手术追踪成功：";
+            // 
+            // panel42
+            // 
+            this.panel42.Controls.Add(this.btnSearch);
+            this.panel42.Controls.Add(this.panel127);
+            this.panel42.Controls.Add(this.panel126);
+            this.panel42.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel42.Location = new System.Drawing.Point(0, 0);
+            this.panel42.Name = "panel42";
+            this.panel42.Size = new System.Drawing.Size(1263, 47);
+            this.panel42.TabIndex = 9;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("宋体", 12F);
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Location = new System.Drawing.Point(565, 12);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(68, 26);
+            this.btnSearch.TabIndex = 38;
+            this.btnSearch.Text = "查询";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // panel127
+            // 
+            this.panel127.Controls.Add(this.dtpTraceTime);
+            this.panel127.Controls.Add(this.label42);
+            this.panel127.Location = new System.Drawing.Point(265, 12);
+            this.panel127.Name = "panel127";
+            this.panel127.Size = new System.Drawing.Size(263, 34);
+            this.panel127.TabIndex = 37;
+            // 
+            // dtpTraceTime
+            // 
+            this.dtpTraceTime.CustomFormat = "yyyy年MM月";
+            this.dtpTraceTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpTraceTime.Location = new System.Drawing.Point(146, 0);
+            this.dtpTraceTime.Name = "dtpTraceTime";
+            this.dtpTraceTime.ShowUpDown = true;
+            this.dtpTraceTime.Size = new System.Drawing.Size(103, 26);
+            this.dtpTraceTime.TabIndex = 34;
+            this.dtpTraceTime.Value = new System.DateTime(2018, 9, 1, 0, 0, 0, 0);
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label42.Location = new System.Drawing.Point(25, 4);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(127, 16);
+            this.label42.TabIndex = 1;
+            this.label42.Text = "手术追踪时间：";
+            // 
+            // panel126
+            // 
+            this.panel126.Controls.Add(this.txtbxPatientName);
+            this.panel126.Controls.Add(this.label41);
+            this.panel126.Location = new System.Drawing.Point(19, 12);
+            this.panel126.Name = "panel126";
+            this.panel126.Size = new System.Drawing.Size(190, 32);
+            this.panel126.TabIndex = 36;
+            // 
+            // txtbxPatientName
+            // 
+            this.txtbxPatientName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbxPatientName.Location = new System.Drawing.Point(56, 1);
+            this.txtbxPatientName.Name = "txtbxPatientName";
+            this.txtbxPatientName.Size = new System.Drawing.Size(116, 26);
+            this.txtbxPatientName.TabIndex = 7;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label41.Location = new System.Drawing.Point(5, 4);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(59, 16);
+            this.label41.TabIndex = 1;
+            this.label41.Text = "姓名：";
             // 
             // panelSSXGXY
             // 
@@ -5713,7 +6656,7 @@
             this.panelSSXGXY.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelSSXGXY.Location = new System.Drawing.Point(10, 37);
             this.panelSSXGXY.Name = "panelSSXGXY";
-            this.panelSSXGXY.Size = new System.Drawing.Size(1280, 523);
+            this.panelSSXGXY.Size = new System.Drawing.Size(1280, 540);
             this.panelSSXGXY.TabIndex = 33;
             // 
             // panel131
@@ -5884,780 +6827,6 @@
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // panelSSZZ
-            // 
-            this.panelSSZZ.AutoScroll = true;
-            this.panelSSZZ.BackColor = System.Drawing.Color.White;
-            this.panelSSZZ.Controls.Add(this.panel82);
-            this.panelSSZZ.Controls.Add(this.panel80);
-            this.panelSSZZ.Controls.Add(this.button5);
-            this.panelSSZZ.Controls.Add(this.btnGoAddSSZZ);
-            this.panelSSZZ.Controls.Add(this.panel79);
-            this.panelSSZZ.Controls.Add(this.panel77);
-            this.panelSSZZ.Controls.Add(this.panel42);
-            this.panelSSZZ.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelSSZZ.Location = new System.Drawing.Point(10, 37);
-            this.panelSSZZ.Name = "panelSSZZ";
-            this.panelSSZZ.Size = new System.Drawing.Size(1280, 523);
-            this.panelSSZZ.TabIndex = 32;
-            // 
-            // panel82
-            // 
-            this.panel82.Controls.Add(this.panel86);
-            this.panel82.Controls.Add(this.panel85);
-            this.panel82.Controls.Add(this.panel84);
-            this.panel82.Controls.Add(this.panel97);
-            this.panel82.Controls.Add(this.panel83);
-            this.panel82.Location = new System.Drawing.Point(371, 62);
-            this.panel82.Name = "panel82";
-            this.panel82.Size = new System.Drawing.Size(619, 110);
-            this.panel82.TabIndex = 42;
-            // 
-            // panel86
-            // 
-            this.panel86.Controls.Add(this.labSSZZ_SSFS);
-            this.panel86.Controls.Add(this.label49);
-            this.panel86.Location = new System.Drawing.Point(310, 43);
-            this.panel86.Name = "panel86";
-            this.panel86.Size = new System.Drawing.Size(242, 23);
-            this.panel86.TabIndex = 33;
-            // 
-            // labSSZZ_SSFS
-            // 
-            this.labSSZZ_SSFS.AutoSize = true;
-            this.labSSZZ_SSFS.Location = new System.Drawing.Point(88, 3);
-            this.labSSZZ_SSFS.Name = "labSSZZ_SSFS";
-            this.labSSZZ_SSFS.Size = new System.Drawing.Size(16, 16);
-            this.labSSZZ_SSFS.TabIndex = 3;
-            this.labSSZZ_SSFS.Text = "_";
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(3, 3);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(88, 16);
-            this.label49.TabIndex = 1;
-            this.label49.Text = "手术方式：";
-            // 
-            // panel85
-            // 
-            this.panel85.Controls.Add(this.labSSZZ_SSLX);
-            this.panel85.Controls.Add(this.label45);
-            this.panel85.Location = new System.Drawing.Point(23, 43);
-            this.panel85.Name = "panel85";
-            this.panel85.Size = new System.Drawing.Size(242, 23);
-            this.panel85.TabIndex = 30;
-            // 
-            // labSSZZ_SSLX
-            // 
-            this.labSSZZ_SSLX.AutoSize = true;
-            this.labSSZZ_SSLX.Location = new System.Drawing.Point(88, 4);
-            this.labSSZZ_SSLX.Name = "labSSZZ_SSLX";
-            this.labSSZZ_SSLX.Size = new System.Drawing.Size(16, 16);
-            this.labSSZZ_SSLX.TabIndex = 3;
-            this.labSSZZ_SSLX.Text = "_";
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(3, 4);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(88, 16);
-            this.label45.TabIndex = 1;
-            this.label45.Text = "手术类型：";
-            // 
-            // panel84
-            // 
-            this.panel84.Controls.Add(this.labSSZZ_LXFS);
-            this.panel84.Controls.Add(this.label44);
-            this.panel84.Location = new System.Drawing.Point(23, 75);
-            this.panel84.Name = "panel84";
-            this.panel84.Size = new System.Drawing.Size(242, 23);
-            this.panel84.TabIndex = 30;
-            // 
-            // labSSZZ_LXFS
-            // 
-            this.labSSZZ_LXFS.AutoSize = true;
-            this.labSSZZ_LXFS.Location = new System.Drawing.Point(87, 4);
-            this.labSSZZ_LXFS.Name = "labSSZZ_LXFS";
-            this.labSSZZ_LXFS.Size = new System.Drawing.Size(16, 16);
-            this.labSSZZ_LXFS.TabIndex = 3;
-            this.labSSZZ_LXFS.Text = "_";
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(3, 4);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(88, 16);
-            this.label44.TabIndex = 1;
-            this.label44.Text = "联系方式：";
-            // 
-            // panel97
-            // 
-            this.panel97.Controls.Add(this.labSSZZ_SSDD);
-            this.panel97.Controls.Add(this.label53);
-            this.panel97.Location = new System.Drawing.Point(309, 11);
-            this.panel97.Name = "panel97";
-            this.panel97.Size = new System.Drawing.Size(242, 23);
-            this.panel97.TabIndex = 31;
-            // 
-            // labSSZZ_SSDD
-            // 
-            this.labSSZZ_SSDD.AutoSize = true;
-            this.labSSZZ_SSDD.Location = new System.Drawing.Point(89, 6);
-            this.labSSZZ_SSDD.Name = "labSSZZ_SSDD";
-            this.labSSZZ_SSDD.Size = new System.Drawing.Size(16, 16);
-            this.labSSZZ_SSDD.TabIndex = 3;
-            this.labSSZZ_SSDD.Text = "_";
-            // 
-            // label53
-            // 
-            this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(3, 6);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(88, 16);
-            this.label53.TabIndex = 1;
-            this.label53.Text = "手术地点：";
-            // 
-            // panel83
-            // 
-            this.panel83.Controls.Add(this.labSSZZ_SSRQ);
-            this.panel83.Controls.Add(this.label43);
-            this.panel83.Location = new System.Drawing.Point(23, 10);
-            this.panel83.Name = "panel83";
-            this.panel83.Size = new System.Drawing.Size(242, 23);
-            this.panel83.TabIndex = 29;
-            // 
-            // labSSZZ_SSRQ
-            // 
-            this.labSSZZ_SSRQ.AutoSize = true;
-            this.labSSZZ_SSRQ.Location = new System.Drawing.Point(89, 5);
-            this.labSSZZ_SSRQ.Name = "labSSZZ_SSRQ";
-            this.labSSZZ_SSRQ.Size = new System.Drawing.Size(16, 16);
-            this.labSSZZ_SSRQ.TabIndex = 2;
-            this.labSSZZ_SSRQ.Text = "_";
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(3, 5);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(88, 16);
-            this.label43.TabIndex = 1;
-            this.label43.Text = "手术日期：";
-            // 
-            // panel80
-            // 
-            this.panel80.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel80.Controls.Add(this.lstbxPatientNames);
-            this.panel80.Controls.Add(this.button4);
-            this.panel80.Location = new System.Drawing.Point(16, 62);
-            this.panel80.Name = "panel80";
-            this.panel80.Size = new System.Drawing.Size(96, 420);
-            this.panel80.TabIndex = 41;
-            // 
-            // lstbxPatientNames
-            // 
-            this.lstbxPatientNames.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lstbxPatientNames.FormattingEnabled = true;
-            this.lstbxPatientNames.ItemHeight = 16;
-            this.lstbxPatientNames.Location = new System.Drawing.Point(0, 26);
-            this.lstbxPatientNames.Name = "lstbxPatientNames";
-            this.lstbxPatientNames.Size = new System.Drawing.Size(94, 392);
-            this.lstbxPatientNames.TabIndex = 40;
-            this.lstbxPatientNames.SelectedIndexChanged += new System.EventHandler(this.lstbxPatientNames_SelectedIndexChanged);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("宋体", 12F);
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(0, 0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(94, 26);
-            this.button4.TabIndex = 39;
-            this.button4.Text = "患者列表";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("宋体", 12F);
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(290, 495);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(68, 26);
-            this.button5.TabIndex = 40;
-            this.button5.Text = "删除";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Visible = false;
-            // 
-            // btnGoAddSSZZ
-            // 
-            this.btnGoAddSSZZ.BackColor = System.Drawing.Color.HotPink;
-            this.btnGoAddSSZZ.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnGoAddSSZZ.FlatAppearance.BorderSize = 0;
-            this.btnGoAddSSZZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGoAddSSZZ.Font = new System.Drawing.Font("宋体", 12F);
-            this.btnGoAddSSZZ.ForeColor = System.Drawing.Color.White;
-            this.btnGoAddSSZZ.Location = new System.Drawing.Point(117, 495);
-            this.btnGoAddSSZZ.Name = "btnGoAddSSZZ";
-            this.btnGoAddSSZZ.Size = new System.Drawing.Size(68, 26);
-            this.btnGoAddSSZZ.TabIndex = 39;
-            this.btnGoAddSSZZ.Text = "添加";
-            this.btnGoAddSSZZ.UseVisualStyleBackColor = false;
-            this.btnGoAddSSZZ.Click += new System.EventHandler(this.btnGoAddSSZZ_Click);
-            // 
-            // panel79
-            // 
-            this.panel79.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel79.Controls.Add(this.dgvSSZZ);
-            this.panel79.Controls.Add(this.button3);
-            this.panel79.Location = new System.Drawing.Point(116, 61);
-            this.panel79.Name = "panel79";
-            this.panel79.Size = new System.Drawing.Size(243, 420);
-            this.panel79.TabIndex = 11;
-            // 
-            // dgvSSZZ
-            // 
-            this.dgvSSZZ.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSSZZ.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.createDate,
-            this.creator});
-            this.dgvSSZZ.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvSSZZ.Location = new System.Drawing.Point(0, 26);
-            this.dgvSSZZ.Name = "dgvSSZZ";
-            this.dgvSSZZ.RowTemplate.Height = 23;
-            this.dgvSSZZ.Size = new System.Drawing.Size(241, 392);
-            this.dgvSSZZ.TabIndex = 40;
-            // 
-            // createDate
-            // 
-            this.createDate.HeaderText = "创建日期";
-            this.createDate.Name = "createDate";
-            // 
-            // creator
-            // 
-            this.creator.HeaderText = "创建人";
-            this.creator.Name = "creator";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("宋体", 12F);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(241, 26);
-            this.button3.TabIndex = 39;
-            this.button3.Text = "创建手术追踪";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // panel77
-            // 
-            this.panel77.AutoScroll = true;
-            this.panel77.Controls.Add(this.grupbxSSZZ_ZZCG);
-            this.panel77.Controls.Add(this.grupbxSSZZ_ZZSB);
-            this.panel77.Controls.Add(this.panel8);
-            this.panel77.Location = new System.Drawing.Point(370, 178);
-            this.panel77.Name = "panel77";
-            this.panel77.Padding = new System.Windows.Forms.Padding(10);
-            this.panel77.Size = new System.Drawing.Size(885, 452);
-            this.panel77.TabIndex = 8;
-            // 
-            // grupbxSSZZ_ZZCG
-            // 
-            this.grupbxSSZZ_ZZCG.Controls.Add(this.panel96);
-            this.grupbxSSZZ_ZZCG.Controls.Add(this.btnSaveSSLR_SSZZ);
-            this.grupbxSSZZ_ZZCG.Controls.Add(this.panel95);
-            this.grupbxSSZZ_ZZCG.Controls.Add(this.panel81);
-            this.grupbxSSZZ_ZZCG.Controls.Add(this.panel94);
-            this.grupbxSSZZ_ZZCG.Controls.Add(this.panel88);
-            this.grupbxSSZZ_ZZCG.Controls.Add(this.panel90);
-            this.grupbxSSZZ_ZZCG.Controls.Add(this.panel93);
-            this.grupbxSSZZ_ZZCG.Controls.Add(this.panel89);
-            this.grupbxSSZZ_ZZCG.Controls.Add(this.panel91);
-            this.grupbxSSZZ_ZZCG.Controls.Add(this.panel92);
-            this.grupbxSSZZ_ZZCG.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grupbxSSZZ_ZZCG.Location = new System.Drawing.Point(10, 343);
-            this.grupbxSSZZ_ZZCG.Name = "grupbxSSZZ_ZZCG";
-            this.grupbxSSZZ_ZZCG.Size = new System.Drawing.Size(848, 399);
-            this.grupbxSSZZ_ZZCG.TabIndex = 34;
-            this.grupbxSSZZ_ZZCG.TabStop = false;
-            this.grupbxSSZZ_ZZCG.Text = "手术追踪成功：";
-            this.grupbxSSZZ_ZZCG.Visible = false;
-            // 
-            // panel96
-            // 
-            this.panel96.Controls.Add(this.cbSSLR_SSZZ_SFTC);
-            this.panel96.Controls.Add(this.label128);
-            this.panel96.Location = new System.Drawing.Point(9, 25);
-            this.panel96.Name = "panel96";
-            this.panel96.Size = new System.Drawing.Size(242, 34);
-            this.panel96.TabIndex = 28;
-            // 
-            // cbSSLR_SSZZ_SFTC
-            // 
-            this.cbSSLR_SSZZ_SFTC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSSLR_SSZZ_SFTC.FormattingEnabled = true;
-            this.cbSSLR_SSZZ_SFTC.Items.AddRange(new object[] {
-            "是",
-            "否"});
-            this.cbSSLR_SSZZ_SFTC.Location = new System.Drawing.Point(108, 1);
-            this.cbSSLR_SSZZ_SFTC.Name = "cbSSLR_SSZZ_SFTC";
-            this.cbSSLR_SSZZ_SFTC.Size = new System.Drawing.Size(115, 24);
-            this.cbSSLR_SSZZ_SFTC.TabIndex = 2;
-            // 
-            // label128
-            // 
-            this.label128.AutoSize = true;
-            this.label128.Location = new System.Drawing.Point(3, 4);
-            this.label128.Name = "label128";
-            this.label128.Size = new System.Drawing.Size(88, 16);
-            this.label128.TabIndex = 1;
-            this.label128.Text = "是否畅通：";
-            // 
-            // btnSaveSSLR_SSZZ
-            // 
-            this.btnSaveSSLR_SSZZ.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnSaveSSLR_SSZZ.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnSaveSSLR_SSZZ.FlatAppearance.BorderSize = 0;
-            this.btnSaveSSLR_SSZZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveSSLR_SSZZ.Font = new System.Drawing.Font("宋体", 12F);
-            this.btnSaveSSLR_SSZZ.ForeColor = System.Drawing.Color.White;
-            this.btnSaveSSLR_SSZZ.Location = new System.Drawing.Point(378, 361);
-            this.btnSaveSSLR_SSZZ.Name = "btnSaveSSLR_SSZZ";
-            this.btnSaveSSLR_SSZZ.Size = new System.Drawing.Size(109, 23);
-            this.btnSaveSSLR_SSZZ.TabIndex = 32;
-            this.btnSaveSSLR_SSZZ.Text = "保存";
-            this.btnSaveSSLR_SSZZ.UseVisualStyleBackColor = false;
-            this.btnSaveSSLR_SSZZ.Click += new System.EventHandler(this.btnSaveSSLR_SSZZ_Click_1);
-            // 
-            // panel95
-            // 
-            this.panel95.Controls.Add(this.cbSSLR_SSZZ_YWXLBCT);
-            this.panel95.Controls.Add(this.label127);
-            this.panel95.Location = new System.Drawing.Point(308, 25);
-            this.panel95.Name = "panel95";
-            this.panel95.Size = new System.Drawing.Size(280, 34);
-            this.panel95.TabIndex = 31;
-            // 
-            // cbSSLR_SSZZ_YWXLBCT
-            // 
-            this.cbSSLR_SSZZ_YWXLBCT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSSLR_SSZZ_YWXLBCT.FormattingEnabled = true;
-            this.cbSSLR_SSZZ_YWXLBCT.Items.AddRange(new object[] {
-            "有",
-            "无"});
-            this.cbSSLR_SSZZ_YWXLBCT.Location = new System.Drawing.Point(145, 0);
-            this.cbSSLR_SSZZ_YWXLBCT.Name = "cbSSLR_SSZZ_YWXLBCT";
-            this.cbSSLR_SSZZ_YWXLBCT.Size = new System.Drawing.Size(115, 24);
-            this.cbSSLR_SSZZ_YWXLBCT.TabIndex = 2;
-            // 
-            // label127
-            // 
-            this.label127.AutoSize = true;
-            this.label127.Location = new System.Drawing.Point(1, 4);
-            this.label127.Name = "label127";
-            this.label127.Size = new System.Drawing.Size(136, 16);
-            this.label127.TabIndex = 1;
-            this.label127.Text = "有无血流不畅通：";
-            // 
-            // panel81
-            // 
-            this.panel81.Controls.Add(this.tbSSLR_SSZZ_ZWQMJTZQK);
-            this.panel81.Controls.Add(this.label113);
-            this.panel81.Location = new System.Drawing.Point(9, 224);
-            this.panel81.Name = "panel81";
-            this.panel81.Size = new System.Drawing.Size(861, 124);
-            this.panel81.TabIndex = 40;
-            // 
-            // tbSSLR_SSZZ_ZWQMJTZQK
-            // 
-            this.tbSSLR_SSZZ_ZWQMJTZQK.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tbSSLR_SSZZ_ZWQMJTZQK.Location = new System.Drawing.Point(0, 28);
-            this.tbSSLR_SSZZ_ZWQMJTZQK.Name = "tbSSLR_SSZZ_ZWQMJTZQK";
-            this.tbSSLR_SSZZ_ZWQMJTZQK.Size = new System.Drawing.Size(861, 96);
-            this.tbSSLR_SSZZ_ZWQMJTZQK.TabIndex = 7;
-            this.tbSSLR_SSZZ_ZWQMJTZQK.Text = "";
-            // 
-            // label113
-            // 
-            this.label113.AutoSize = true;
-            this.label113.Location = new System.Drawing.Point(3, 5);
-            this.label113.Name = "label113";
-            this.label113.Size = new System.Drawing.Size(168, 16);
-            this.label113.TabIndex = 1;
-            this.label113.Text = "自我触摸及听诊情况：";
-            // 
-            // panel94
-            // 
-            this.panel94.Controls.Add(this.cbSSLR_SSZZ_YWXM);
-            this.panel94.Controls.Add(this.label126);
-            this.panel94.Location = new System.Drawing.Point(621, 25);
-            this.panel94.Name = "panel94";
-            this.panel94.Size = new System.Drawing.Size(228, 34);
-            this.panel94.TabIndex = 32;
-            // 
-            // cbSSLR_SSZZ_YWXM
-            // 
-            this.cbSSLR_SSZZ_YWXM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSSLR_SSZZ_YWXM.FormattingEnabled = true;
-            this.cbSSLR_SSZZ_YWXM.Items.AddRange(new object[] {
-            "有",
-            "无"});
-            this.cbSSLR_SSZZ_YWXM.Location = new System.Drawing.Point(86, 2);
-            this.cbSSLR_SSZZ_YWXM.Name = "cbSSLR_SSZZ_YWXM";
-            this.cbSSLR_SSZZ_YWXM.Size = new System.Drawing.Size(115, 24);
-            this.cbSSLR_SSZZ_YWXM.TabIndex = 2;
-            // 
-            // label126
-            // 
-            this.label126.AutoSize = true;
-            this.label126.Location = new System.Drawing.Point(6, 7);
-            this.label126.Name = "label126";
-            this.label126.Size = new System.Drawing.Size(88, 16);
-            this.label126.TabIndex = 1;
-            this.label126.Text = "有无胸闷：";
-            // 
-            // panel88
-            // 
-            this.panel88.Controls.Add(this.cbSSLR_SSZZ_CCBWPFQK);
-            this.panel88.Controls.Add(this.label120);
-            this.panel88.Location = new System.Drawing.Point(10, 159);
-            this.panel88.Name = "panel88";
-            this.panel88.Size = new System.Drawing.Size(364, 34);
-            this.panel88.TabIndex = 37;
-            // 
-            // cbSSLR_SSZZ_CCBWPFQK
-            // 
-            this.cbSSLR_SSZZ_CCBWPFQK.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSSLR_SSZZ_CCBWPFQK.FormattingEnabled = true;
-            this.cbSSLR_SSZZ_CCBWPFQK.Location = new System.Drawing.Point(166, 1);
-            this.cbSSLR_SSZZ_CCBWPFQK.Name = "cbSSLR_SSZZ_CCBWPFQK";
-            this.cbSSLR_SSZZ_CCBWPFQK.Size = new System.Drawing.Size(192, 24);
-            this.cbSSLR_SSZZ_CCBWPFQK.TabIndex = 2;
-            // 
-            // label120
-            // 
-            this.label120.AutoSize = true;
-            this.label120.Location = new System.Drawing.Point(3, 3);
-            this.label120.Name = "label120";
-            this.label120.Size = new System.Drawing.Size(152, 16);
-            this.label120.TabIndex = 1;
-            this.label120.Text = "穿刺部位皮肤情况：";
-            // 
-            // panel90
-            // 
-            this.panel90.Controls.Add(this.cbSSLR_SSZZ_GRKZFS);
-            this.panel90.Controls.Add(this.label122);
-            this.panel90.Location = new System.Drawing.Point(9, 193);
-            this.panel90.Name = "panel90";
-            this.panel90.Size = new System.Drawing.Size(361, 34);
-            this.panel90.TabIndex = 36;
-            // 
-            // cbSSLR_SSZZ_GRKZFS
-            // 
-            this.cbSSLR_SSZZ_GRKZFS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSSLR_SSZZ_GRKZFS.FormattingEnabled = true;
-            this.cbSSLR_SSZZ_GRKZFS.Location = new System.Drawing.Point(166, 0);
-            this.cbSSLR_SSZZ_GRKZFS.Name = "cbSSLR_SSZZ_GRKZFS";
-            this.cbSSLR_SSZZ_GRKZFS.Size = new System.Drawing.Size(192, 24);
-            this.cbSSLR_SSZZ_GRKZFS.TabIndex = 2;
-            // 
-            // label122
-            // 
-            this.label122.AutoSize = true;
-            this.label122.Location = new System.Drawing.Point(3, 3);
-            this.label122.Name = "label122";
-            this.label122.Size = new System.Drawing.Size(120, 16);
-            this.label122.TabIndex = 1;
-            this.label122.Text = "感染控制方式：";
-            // 
-            // panel93
-            // 
-            this.panel93.Controls.Add(this.cbSSLR_SSZZ_YWCCBWPFGMQK);
-            this.panel93.Controls.Add(this.label125);
-            this.panel93.Location = new System.Drawing.Point(9, 93);
-            this.panel93.Name = "panel93";
-            this.panel93.Size = new System.Drawing.Size(364, 34);
-            this.panel93.TabIndex = 33;
-            // 
-            // cbSSLR_SSZZ_YWCCBWPFGMQK
-            // 
-            this.cbSSLR_SSZZ_YWCCBWPFGMQK.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSSLR_SSZZ_YWCCBWPFGMQK.FormattingEnabled = true;
-            this.cbSSLR_SSZZ_YWCCBWPFGMQK.Items.AddRange(new object[] {
-            "有",
-            "无"});
-            this.cbSSLR_SSZZ_YWCCBWPFGMQK.Location = new System.Drawing.Point(227, 0);
-            this.cbSSLR_SSZZ_YWCCBWPFGMQK.Name = "cbSSLR_SSZZ_YWCCBWPFGMQK";
-            this.cbSSLR_SSZZ_YWCCBWPFGMQK.Size = new System.Drawing.Size(131, 24);
-            this.cbSSLR_SSZZ_YWCCBWPFGMQK.TabIndex = 2;
-            // 
-            // label125
-            // 
-            this.label125.AutoSize = true;
-            this.label125.Location = new System.Drawing.Point(3, 3);
-            this.label125.Name = "label125";
-            this.label125.Size = new System.Drawing.Size(216, 16);
-            this.label125.TabIndex = 1;
-            this.label125.Text = "有无穿刺部位皮肤过敏情况：";
-            // 
-            // panel89
-            // 
-            this.panel89.Controls.Add(this.cbSSLR_SSZZ_NWZWDLQK);
-            this.panel89.Controls.Add(this.label121);
-            this.panel89.Location = new System.Drawing.Point(9, 125);
-            this.panel89.Name = "panel89";
-            this.panel89.Size = new System.Drawing.Size(364, 34);
-            this.panel89.TabIndex = 37;
-            // 
-            // cbSSLR_SSZZ_NWZWDLQK
-            // 
-            this.cbSSLR_SSZZ_NWZWDLQK.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSSLR_SSZZ_NWZWDLQK.FormattingEnabled = true;
-            this.cbSSLR_SSZZ_NWZWDLQK.Location = new System.Drawing.Point(167, 2);
-            this.cbSSLR_SSZZ_NWZWDLQK.Name = "cbSSLR_SSZZ_NWZWDLQK";
-            this.cbSSLR_SSZZ_NWZWDLQK.Size = new System.Drawing.Size(191, 24);
-            this.cbSSLR_SSZZ_NWZWDLQK.TabIndex = 2;
-            // 
-            // label121
-            // 
-            this.label121.AutoSize = true;
-            this.label121.Location = new System.Drawing.Point(3, 5);
-            this.label121.Name = "label121";
-            this.label121.Size = new System.Drawing.Size(152, 16);
-            this.label121.TabIndex = 1;
-            this.label121.Text = "内痿自我锻炼情况：";
-            // 
-            // panel91
-            // 
-            this.panel91.Controls.Add(this.cbSSLR_SSZZ_YWXBJMQZ);
-            this.panel91.Controls.Add(this.label123);
-            this.panel91.Location = new System.Drawing.Point(308, 60);
-            this.panel91.Name = "panel91";
-            this.panel91.Size = new System.Drawing.Size(280, 34);
-            this.panel91.TabIndex = 35;
-            // 
-            // cbSSLR_SSZZ_YWXBJMQZ
-            // 
-            this.cbSSLR_SSZZ_YWXBJMQZ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSSLR_SSZZ_YWXBJMQZ.FormattingEnabled = true;
-            this.cbSSLR_SSZZ_YWXBJMQZ.Items.AddRange(new object[] {
-            "有",
-            "无"});
-            this.cbSSLR_SSZZ_YWXBJMQZ.Location = new System.Drawing.Point(148, 0);
-            this.cbSSLR_SSZZ_YWXBJMQZ.Name = "cbSSLR_SSZZ_YWXBJMQZ";
-            this.cbSSLR_SSZZ_YWXBJMQZ.Size = new System.Drawing.Size(115, 24);
-            this.cbSSLR_SSZZ_YWXBJMQZ.TabIndex = 2;
-            // 
-            // label123
-            // 
-            this.label123.AutoSize = true;
-            this.label123.Location = new System.Drawing.Point(3, 3);
-            this.label123.Name = "label123";
-            this.label123.Size = new System.Drawing.Size(152, 16);
-            this.label123.TabIndex = 1;
-            this.label123.Text = "有无胸壁静脉曲张：";
-            // 
-            // panel92
-            // 
-            this.panel92.Controls.Add(this.cbSSLR_SSZZ_YWBFZ);
-            this.panel92.Controls.Add(this.label124);
-            this.panel92.Location = new System.Drawing.Point(9, 60);
-            this.panel92.Name = "panel92";
-            this.panel92.Size = new System.Drawing.Size(242, 34);
-            this.panel92.TabIndex = 34;
-            // 
-            // cbSSLR_SSZZ_YWBFZ
-            // 
-            this.cbSSLR_SSZZ_YWBFZ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSSLR_SSZZ_YWBFZ.FormattingEnabled = true;
-            this.cbSSLR_SSZZ_YWBFZ.Items.AddRange(new object[] {
-            "有",
-            "无"});
-            this.cbSSLR_SSZZ_YWBFZ.Location = new System.Drawing.Point(108, 2);
-            this.cbSSLR_SSZZ_YWBFZ.Name = "cbSSLR_SSZZ_YWBFZ";
-            this.cbSSLR_SSZZ_YWBFZ.Size = new System.Drawing.Size(115, 24);
-            this.cbSSLR_SSZZ_YWBFZ.TabIndex = 2;
-            // 
-            // label124
-            // 
-            this.label124.AutoSize = true;
-            this.label124.Location = new System.Drawing.Point(3, 1);
-            this.label124.Name = "label124";
-            this.label124.Size = new System.Drawing.Size(104, 16);
-            this.label124.TabIndex = 1;
-            this.label124.Text = "有无并发症：";
-            // 
-            // grupbxSSZZ_ZZSB
-            // 
-            this.grupbxSSZZ_ZZSB.Controls.Add(this.btnSSZZ_SB);
-            this.grupbxSSZZ_ZZSB.Controls.Add(this.rtbSSZZ_FailReason);
-            this.grupbxSSZZ_ZZSB.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grupbxSSZZ_ZZSB.Location = new System.Drawing.Point(10, 42);
-            this.grupbxSSZZ_ZZSB.Name = "grupbxSSZZ_ZZSB";
-            this.grupbxSSZZ_ZZSB.Padding = new System.Windows.Forms.Padding(10);
-            this.grupbxSSZZ_ZZSB.Size = new System.Drawing.Size(848, 301);
-            this.grupbxSSZZ_ZZSB.TabIndex = 35;
-            this.grupbxSSZZ_ZZSB.TabStop = false;
-            this.grupbxSSZZ_ZZSB.Text = "手术追踪失败原因：";
-            this.grupbxSSZZ_ZZSB.Visible = false;
-            // 
-            // btnSSZZ_SB
-            // 
-            this.btnSSZZ_SB.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnSSZZ_SB.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnSSZZ_SB.FlatAppearance.BorderSize = 0;
-            this.btnSSZZ_SB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSSZZ_SB.Font = new System.Drawing.Font("宋体", 12F);
-            this.btnSSZZ_SB.ForeColor = System.Drawing.Color.White;
-            this.btnSSZZ_SB.Location = new System.Drawing.Point(363, 265);
-            this.btnSSZZ_SB.Name = "btnSSZZ_SB";
-            this.btnSSZZ_SB.Size = new System.Drawing.Size(109, 23);
-            this.btnSSZZ_SB.TabIndex = 33;
-            this.btnSSZZ_SB.Text = "保存";
-            this.btnSSZZ_SB.UseVisualStyleBackColor = false;
-            this.btnSSZZ_SB.Click += new System.EventHandler(this.btnSSZZ_SB_Click);
-            // 
-            // rtbSSZZ_FailReason
-            // 
-            this.rtbSSZZ_FailReason.Dock = System.Windows.Forms.DockStyle.Top;
-            this.rtbSSZZ_FailReason.Location = new System.Drawing.Point(10, 29);
-            this.rtbSSZZ_FailReason.Name = "rtbSSZZ_FailReason";
-            this.rtbSSZZ_FailReason.Size = new System.Drawing.Size(828, 226);
-            this.rtbSSZZ_FailReason.TabIndex = 7;
-            this.rtbSSZZ_FailReason.Text = "";
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.cbxSSZZ_SFCG);
-            this.panel8.Controls.Add(this.label2);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(10, 10);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(848, 32);
-            this.panel8.TabIndex = 32;
-            // 
-            // cbxSSZZ_SFCG
-            // 
-            this.cbxSSZZ_SFCG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxSSZZ_SFCG.FormattingEnabled = true;
-            this.cbxSSZZ_SFCG.Items.AddRange(new object[] {
-            "是",
-            "否"});
-            this.cbxSSZZ_SFCG.Location = new System.Drawing.Point(175, 3);
-            this.cbxSSZZ_SFCG.Name = "cbxSSZZ_SFCG";
-            this.cbxSSZZ_SFCG.Size = new System.Drawing.Size(115, 24);
-            this.cbxSSZZ_SFCG.TabIndex = 2;
-            this.cbxSSZZ_SFCG.SelectedValueChanged += new System.EventHandler(this.cbxSSZZ_SFCG_SelectedValueChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(6, 7);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "是否手术追踪成功：";
-            // 
-            // panel42
-            // 
-            this.panel42.Controls.Add(this.btnSearch);
-            this.panel42.Controls.Add(this.panel127);
-            this.panel42.Controls.Add(this.panel126);
-            this.panel42.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel42.Location = new System.Drawing.Point(0, 0);
-            this.panel42.Name = "panel42";
-            this.panel42.Size = new System.Drawing.Size(1263, 47);
-            this.panel42.TabIndex = 9;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("宋体", 12F);
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(565, 12);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(68, 26);
-            this.btnSearch.TabIndex = 38;
-            this.btnSearch.Text = "查询";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // panel127
-            // 
-            this.panel127.Controls.Add(this.dtpTraceTime);
-            this.panel127.Controls.Add(this.label42);
-            this.panel127.Location = new System.Drawing.Point(265, 12);
-            this.panel127.Name = "panel127";
-            this.panel127.Size = new System.Drawing.Size(263, 34);
-            this.panel127.TabIndex = 37;
-            // 
-            // dtpTraceTime
-            // 
-            this.dtpTraceTime.CustomFormat = "yyyy年MM月";
-            this.dtpTraceTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTraceTime.Location = new System.Drawing.Point(146, 0);
-            this.dtpTraceTime.Name = "dtpTraceTime";
-            this.dtpTraceTime.ShowUpDown = true;
-            this.dtpTraceTime.Size = new System.Drawing.Size(103, 26);
-            this.dtpTraceTime.TabIndex = 34;
-            this.dtpTraceTime.Value = new System.DateTime(2018, 9, 1, 0, 0, 0, 0);
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(25, 4);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(120, 16);
-            this.label42.TabIndex = 1;
-            this.label42.Text = "手术追踪时间：";
-            // 
-            // panel126
-            // 
-            this.panel126.Controls.Add(this.txtbxPatientName);
-            this.panel126.Controls.Add(this.label41);
-            this.panel126.Location = new System.Drawing.Point(19, 12);
-            this.panel126.Name = "panel126";
-            this.panel126.Size = new System.Drawing.Size(190, 32);
-            this.panel126.TabIndex = 36;
-            // 
-            // txtbxPatientName
-            // 
-            this.txtbxPatientName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbxPatientName.Location = new System.Drawing.Point(56, 1);
-            this.txtbxPatientName.Name = "txtbxPatientName";
-            this.txtbxPatientName.Size = new System.Drawing.Size(116, 26);
-            this.txtbxPatientName.TabIndex = 7;
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(5, 4);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(56, 16);
-            this.label41.TabIndex = 1;
-            this.label41.Text = "姓名：";
-            // 
             // panel122
             // 
             this.panel122.Controls.Add(this.labelNowDate);
@@ -6736,7 +6905,7 @@
             // imgLstTTLB
             // 
             this.imgLstTTLB.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imgLstTTLB.ImageSize = new System.Drawing.Size(250, 250);
+            this.imgLstTTLB.ImageSize = new System.Drawing.Size(250, 230);
             this.imgLstTTLB.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // imgSSTP
@@ -6754,13 +6923,14 @@
             this.printPreviewDialogSJCX_SSJL.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialogSJCX_SSJL.Icon")));
             this.printPreviewDialogSJCX_SSJL.Name = "printPreviewDialogSJCX_SSJL";
             this.printPreviewDialogSJCX_SSJL.Visible = false;
+            this.printPreviewDialogSJCX_SSJL.MouseDown += new System.Windows.Forms.MouseEventHandler(this.printPreviewDialogSJCX_SSJL_MouseDown);
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1300, 733);
+            this.ClientSize = new System.Drawing.Size(1300, 750);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -6784,6 +6954,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelSSLR.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
+            this.panel98.ResumeLayout(false);
+            this.panel98.PerformLayout();
             this.panel68.ResumeLayout(false);
             this.panel68.PerformLayout();
             this.panel69.ResumeLayout(false);
@@ -6791,19 +6963,19 @@
             this.panel43.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.panel98.ResumeLayout(false);
-            this.panel98.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel99.ResumeLayout(false);
             this.panel99.PerformLayout();
             this.paneSSBW_pic.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSSTP)).EndInit();
             this.panel128.ResumeLayout(false);
             this.panel128.PerformLayout();
             this.panel129.ResumeLayout(false);
             this.panel129.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel87.ResumeLayout(false);
             this.panel87.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -6858,6 +7030,7 @@
             this.panelSJCX.ResumeLayout(false);
             this.panelSJCX_SSJLD.ResumeLayout(false);
             this.panel51.ResumeLayout(false);
+            this.panel51.PerformLayout();
             this.panelSSCX_SSJLD.ResumeLayout(false);
             this.panelSJCX_ZDYS.ResumeLayout(false);
             this.panelSJCX_ZDYS.PerformLayout();
@@ -6865,8 +7038,10 @@
             this.panelSJCX_SSJL_NAME.ResumeLayout(false);
             this.panelSJCX_SSJL_NAME.PerformLayout();
             this.panelSJCX_SSJL_SSST.ResumeLayout(false);
-            this.panelSJCX_SSZZCX_SSBW_NAME.ResumeLayout(false);
-            this.panelSJCX_SSZZCX_SSBW_NAME.PerformLayout();
+            this.grpbxImgs.ResumeLayout(false);
+            this.grpbxImgs.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panelSJCX_SSJL_BaseInfo.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -6924,6 +7099,12 @@
             this.panel119.PerformLayout();
             this.panel45.ResumeLayout(false);
             this.panelCJFX.ResumeLayout(false);
+            this.panelTJFX_GZLTJ.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTJCX_GZL)).EndInit();
+            this.panel124.ResumeLayout(false);
+            this.panel124.PerformLayout();
+            this.panel125.ResumeLayout(false);
+            this.panel125.PerformLayout();
             this.panelTJFX_PIE.ResumeLayout(false);
             this.panel116.ResumeLayout(false);
             this.panel123.ResumeLayout(false);
@@ -6940,12 +7121,6 @@
             this.panelSJTJ_SSTJ_1.ResumeLayout(false);
             this.panelSJTJ_SSTJ_1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartPie_1)).EndInit();
-            this.panelTJFX_GZLTJ.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTJCX_GZL)).EndInit();
-            this.panel124.ResumeLayout(false);
-            this.panel124.PerformLayout();
-            this.panel125.ResumeLayout(false);
-            this.panel125.PerformLayout();
             this.panel121.ResumeLayout(false);
             this.panelKSGL.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
@@ -6998,12 +7173,6 @@
             this.panel35.ResumeLayout(false);
             this.panel35.PerformLayout();
             this.panel4.ResumeLayout(false);
-            this.panelSSXGXY.ResumeLayout(false);
-            this.panel131.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSSXGXY_Control)).EndInit();
-            this.panel130.ResumeLayout(false);
-            this.panel101.ResumeLayout(false);
-            this.panel101.PerformLayout();
             this.panelSSZZ.ResumeLayout(false);
             this.panel82.ResumeLayout(false);
             this.panel86.ResumeLayout(false);
@@ -7049,6 +7218,12 @@
             this.panel127.PerformLayout();
             this.panel126.ResumeLayout(false);
             this.panel126.PerformLayout();
+            this.panelSSXGXY.ResumeLayout(false);
+            this.panel131.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSSXGXY_Control)).EndInit();
+            this.panel130.ResumeLayout(false);
+            this.panel101.ResumeLayout(false);
+            this.panel101.PerformLayout();
             this.panel122.ResumeLayout(false);
             this.panel122.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
@@ -7076,9 +7251,6 @@
         private System.Windows.Forms.Panel panelSSLR;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Panel panel69;
-        private System.Windows.Forms.Button btnRecordClear;
-        private System.Windows.Forms.Button btnSaveSSJL;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel71;
@@ -7228,13 +7400,6 @@
         private System.Windows.Forms.ComboBox cbSSLR_SSFS;
         private System.Windows.Forms.Label label107;
         private System.Windows.Forms.Panel panel44;
-        private System.Windows.Forms.TextBox tbSSLR_QXFS;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox tbSSLR_ZS;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox tbSSLR_ZDYS;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Panel panel43;
         private System.Windows.Forms.Panel panel45;
         private System.Windows.Forms.Button btnSJCX_SSZZCX;
         private System.Windows.Forms.Button btnSJCX_SSJLD;
@@ -7343,15 +7508,6 @@
         private System.Windows.Forms.PrintDialog printDialogSSCX_SSJL;
         private System.Drawing.Printing.PrintDocument printDocumentSJCX_SSZZ;
         private System.Windows.Forms.Panel panelSJCX_SSZZ;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripComboBox menuSSLR_ZZLX;
-        private System.Windows.Forms.ToolStripComboBox menuSSLR_ZZDX;
-        private System.Windows.Forms.ToolStripMenuItem menuSSLR_CT;
-        private System.Windows.Forms.ToolStripMenuItem menuSSLR_XT;
-        private System.Windows.Forms.ToolStripMenuItem menuSSLR_XHX;
-        private System.Windows.Forms.ToolStripMenuItem menuSSLR_ZDQ;
-        private System.Windows.Forms.ToolStripMenuItem menuSSLR_YDQ;
-        private System.Windows.Forms.ToolStripMenuItem menuSSLR_JZ;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.DataGridView dgvDictionary;
@@ -7441,22 +7597,7 @@
         private System.Windows.Forms.Panel panel87;
         private System.Windows.Forms.ComboBox cbSSLR_SSZZQX;
         private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.Panel panel98;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.RichTextBox rtbSSLR_SSJL;
-        private System.Windows.Forms.Panel panel99;
-        private System.Windows.Forms.Panel paneSSBW_pic;
-        private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.Panel panel68;
-        private System.Windows.Forms.Label label104;
-        private System.Windows.Forms.Panel panel128;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.Panel panel129;
-        private System.Windows.Forms.ComboBox cbSSLR_SSBW;
-        private System.Windows.Forms.Label label62;
-        private System.Windows.Forms.Button btnRemoveSSTP;
-        private System.Windows.Forms.Button btnSSJLa_addPic;
         private System.Windows.Forms.OpenFileDialog openFileDialogSSLR;
         private System.Windows.Forms.Button btnSSXGXY_SCXY;
         private System.Windows.Forms.Button btnSSXGXY_XGXY;
@@ -7497,10 +7638,6 @@
         private System.Windows.Forms.DateTimePicker dtTraceTime10;
         private System.Windows.Forms.Label labTraceTime10;
         private System.Windows.Forms.ImageList imgSSTP;
-        private System.Windows.Forms.ListBox lstboxTTLB;
-        private System.Windows.Forms.PictureBox picSSTP;
-        private System.Windows.Forms.Button btnRemoveAllSSTP;
-        private System.Windows.Forms.Button btnSaveSSJL2;
         private System.Windows.Forms.ListBox lstbxPatientNames;
         private System.Windows.Forms.Label labSSZZ_SSRQ;
         private System.Windows.Forms.Label labSSZZ_SSFS;
@@ -7614,6 +7751,48 @@
         private System.Windows.Forms.Label label148;
         private System.Windows.Forms.Label all_zdys;
         private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.Panel panel99;
+        private System.Windows.Forms.Panel paneSSBW_pic;
+        private System.Windows.Forms.Button btnRemoveAllSSTP;
+        private System.Windows.Forms.Button btnSSJLa_addPic;
+        private System.Windows.Forms.Button btnRemoveSSTP;
+        private System.Windows.Forms.ListBox lstboxTTLB;
+        private System.Windows.Forms.PictureBox picSSTP;
+        private System.Windows.Forms.Panel panel128;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Panel panel129;
+        private System.Windows.Forms.ComboBox cbSSLR_SSBW;
+        private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.Label label88;
+        private System.Windows.Forms.Panel panel68;
+        private System.Windows.Forms.Panel panel69;
+        private System.Windows.Forms.Panel panel43;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripComboBox menuSSLR_ZZLX;
+        private System.Windows.Forms.ToolStripComboBox menuSSLR_ZZDX;
+        private System.Windows.Forms.ToolStripMenuItem menuSSLR_CT;
+        private System.Windows.Forms.ToolStripMenuItem menuSSLR_XT;
+        private System.Windows.Forms.ToolStripMenuItem menuSSLR_XHX;
+        private System.Windows.Forms.ToolStripMenuItem menuSSLR_ZDQ;
+        private System.Windows.Forms.ToolStripMenuItem menuSSLR_YDQ;
+        private System.Windows.Forms.ToolStripMenuItem menuSSLR_JZ;
+        private System.Windows.Forms.RichTextBox rtbSSLR_SSJL;
+        private System.Windows.Forms.Label label104;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Panel panel98;
+        private System.Windows.Forms.Button btnSaveSSJL2;
+        private System.Windows.Forms.Button btnRecordClear;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Button btnSaveSSJL;
+        private System.Windows.Forms.TextBox tbSSLR_ZDYS;
+        private System.Windows.Forms.TextBox tbSSLR_QXFS;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox tbSSLR_ZS;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox10;
 
     }
 }

@@ -892,7 +892,9 @@ namespace xzj
             string zs = this.tbSSLR_ZS.Text;//助手
             string qxfs = this.tbSSLR_QXFS.Text;//器械护士
 
-            int imgNumber = this.imgLstTTLB.Images.Count; // 上传图片数量
+            // int imgNumber = this.imgLstTTLB.Images.Count; // 上传图片数量
+           
+            
 
             string address = province + "-" + city + "-" + county + "-" + deatilAddress + "";
            
@@ -911,8 +913,12 @@ namespace xzj
             if (string.IsNullOrEmpty(zdys)) { MessageBox.Show("【主刀医生】不能为空"); return; }
             if (string.IsNullOrEmpty(zs)) { MessageBox.Show("【助手】不能为空"); return; }
             if (string.IsNullOrEmpty(qxfs)) { MessageBox.Show("【器械护士】不能为空"); return; }
-            if (0 == imgNumber) { MessageBox.Show("【请上传手术图片】"); }
-
+            
+            // if (0 == imgNumber) { MessageBox.Show("【请上传手术图片】"); }
+            if (null == picSSTP.Image)
+            {
+                MessageBox.Show("【请上传手术图片】");
+            }
 
             // Console.WriteLine("--> OK 进入保存");
 
@@ -988,8 +994,10 @@ namespace xzj
                     
 
                     // 3保存图片
-                    for (int i = 0; i < imgNumber; i++)
+                    /*for (int i = 0; i < imgNumber; i++)
                     {
+
+                        // 
                         Image img = this.imgLstTTLB.Images[i];
                         ps = new MySqlParameter[] {
                             new MySqlParameter("@p_r_id", recordId),
@@ -997,6 +1005,30 @@ namespace xzj
                             new MySqlParameter("@p_desc", ""),
                             new MySqlParameter("@p_content", ImageHelpler.imageToByte(img)),
                             new MySqlParameter("@p_order", i),
+                        };
+                        SqlHelper4MySql.ExecuteNonQuery(con, SqlCommandHelpler.T_PICTURE_INSERT, ps);
+                    }*/
+                    if (null != picSSTP.Image)
+                    {
+                        // Image img =  // this.imgLstTTLB.Images[i];
+                        ps = new MySqlParameter[] {
+                            new MySqlParameter("@p_r_id", recordId),
+                            new MySqlParameter("@p_path", ""),
+                            new MySqlParameter("@p_desc", ""),
+                            new MySqlParameter("@p_content", ImageHelpler.imageToByte(picSSTP.Image)),
+                            new MySqlParameter("@p_order", 1),
+                        };
+                        SqlHelper4MySql.ExecuteNonQuery(con, SqlCommandHelpler.T_PICTURE_INSERT, ps);
+                    }
+                    if (null != pictureBox10.Image)
+                    {
+                        // Image img = this.imgLstTTLB.Images[i];
+                        ps = new MySqlParameter[] {
+                            new MySqlParameter("@p_r_id", recordId),
+                            new MySqlParameter("@p_path", ""),
+                            new MySqlParameter("@p_desc", ""),
+                            new MySqlParameter("@p_content", ImageHelpler.imageToByte(pictureBox10.Image)),
+                            new MySqlParameter("@p_order", 2),
                         };
                         SqlHelper4MySql.ExecuteNonQuery(con, SqlCommandHelpler.T_PICTURE_INSERT, ps);
                     }
@@ -1504,7 +1536,7 @@ namespace xzj
 
             this.gbSJCX_SSJLD_SSZZ.Visible = false;
 
-            string sql = string.Format("select r.id 'id',p.p_name '姓名',r.r_date '手术日期' from t_patient p,t_record r where p.p_ID = r.r_patient_ID");
+            string sql = string.Format("select r.id 'id',p.p_name '姓名',date_format(r.r_date,'%Y年%m月%d日') '手术日期' from t_patient p,t_record r where p.p_ID = r.r_patient_ID");
             selectRecords(sql);
 
             sql = string.Format("select r_hospital_name,r_room_name from t_room");
@@ -1516,7 +1548,9 @@ namespace xzj
                     this.labelSSJLD_TITLE.Text = row["r_hospital_name"].ToString() + row["r_room_name"].ToString();
                 }
             }
-
+            // this.labelSSJLD_TITLE.TextAlign = ContentAlignment.TopCenter;
+            this.labelSSJLD_TITLE.Location = new Point((this.panelSJCX_SSJL_Head.Width - this.labelSSJLD_TITLE.Width) / 2, this.labelSSJLD_TITLE.Location.Y);
+            // this.labelSSJLD_TITLE.
             initRecord();
             
         }
@@ -1608,7 +1642,7 @@ namespace xzj
             string kssj = this.dtpSJCX_KSSJ.Value.ToString("yyyy-MM") + "-01";//开始时间
             string jssj = this.dtpSJCX_JSSJ.Value.ToString("yyyy-MM") + "-31";//结束时间
 
-            string sqlStr = "select r.id '身份证',p.p_name '姓名',r.r_date '手术日期' from t_patient p,t_record r where p.p_ID = r.r_patient_ID " +
+            string sqlStr = "select r.id '身份证',p.p_name '姓名',date_format(r.r_date,'%Y年%m月%d日') '手术日期' from t_patient p,t_record r where p.p_ID = r.r_patient_ID " +
                 "and r.r_date > '{0}' and r.r_date <= '{1}' ";
             if (!string.IsNullOrEmpty(name))
             {
@@ -1654,7 +1688,7 @@ namespace xzj
                     this.all_ctxyy.Text = row["p_dialyse_hospital"].ToString();
                     this.all_ctxyylxr.Text = row["p_dialyse_hospital_contact"].ToString();
                     this.all_ctxyylxrdh.Text = row["p_dialyse_hospital_tel"].ToString();
-                    this.all_ssrq.Text = Convert.ToDateTime(row["r_date"]).ToShortDateString();
+                    this.all_ssrq.Text = Convert.ToDateTime(row["r_date"]).ToString("yyyy年MM月dd日");
                     this.all_ssdd.Text = row["r_ss_address"].ToString();
                     this.all_sslx.Text = row["r_ss_type"].ToString();
                     this.all_ssfs.Text = row["r_ss_method"].ToString();
@@ -1670,16 +1704,16 @@ namespace xzj
                     // this.all_ssjl.Text = "test";
 
                     this.labSJCX_TraceTime.Text = row["r_sszz"].ToString();
-                    this.labSJCX_TraceValue1.Text = Convert.ToDateTime(row["r_zz1"]).ToShortDateString();
-                    this.labSJCX_TraceValue2.Text = Convert.ToDateTime(row["r_zz2"]).ToShortDateString();
+                    this.labSJCX_TraceValue1.Text = Convert.ToDateTime(row["r_zz1"]).ToString("yyyy年MM月");
+                    this.labSJCX_TraceValue2.Text = Convert.ToDateTime(row["r_zz2"]).ToString("yyyy年MM月");
                     if (this.labSJCX_TraceTime.Text.Equals("每三个月"))
                     {
                         this.labSJCX_Trace3.Show();
                         this.labSJCX_TraceValue3.Show();
                         this.labSJCX_TraceValue4.Show();
                         this.labSJCX_Trace4.Show();
-                        this.labSJCX_TraceValue3.Text = Convert.ToDateTime(row["r_zz3"]).ToShortDateString();
-                        this.labSJCX_TraceValue4.Text = Convert.ToDateTime(row["r_zz4"]).ToShortDateString();
+                        this.labSJCX_TraceValue3.Text = Convert.ToDateTime(row["r_zz3"]).ToString("yyyy年MM月");
+                        this.labSJCX_TraceValue4.Text = Convert.ToDateTime(row["r_zz4"]).ToString("yyyy年MM月");
                     }
                     else {
                         this.labSJCX_Trace3.Hide();
@@ -1694,19 +1728,38 @@ namespace xzj
             }
 
             // 载入图片
-            grpbxImgs.Controls.Clear(); // 先清空所有的图片
-            panelSJCX_SSJL_SSST.Height = 260; // 用来放图片的panel的高度还原成260，即初始化的高度
+            // grpbxImgs.Controls.Clear(); // 先清空所有的图片
+            // panelSJCX_SSJL_SSST.Height = 260; // 用来放图片的panel的高度还原成260，即初始化的高度
+            pictureBox8.Image = null;
+            pictureBox9.Image = null;
             MySqlParameter[] ps = new MySqlParameter[] {
                 new MySqlParameter("@p_r_id", id)
             };
             using (MySqlDataReader reader = SqlHelper4MySql.ExecuteReader(SqlCommandHelpler.T_PICTURE_SELECT_BY_RID, ps))
             {
-                int i = 0;
+                /*
+                
                 int startX = 20;
                 int startY = 20;
-                Point p = new Point(startX, startY);
+                Point p = new Point(startX, startY);*/
+                int i = 0;
                 while (reader.Read()) {
 
+                    long length = reader.GetBytes(0, 0, null, 0, int.MaxValue);
+                    byte[] bytes = new byte[length];
+                    reader.GetBytes(0, 0, bytes, 0, bytes.Length);
+
+                    if (i == 0)
+                    {
+                        i++;
+                        pictureBox8.Image = ImageHelpler.byteToImage(bytes);
+                    }
+                    else {
+                        pictureBox9.Image = ImageHelpler.byteToImage(bytes);
+                    }
+                    
+                        // pictureBox8
+                    /*
                     Console.WriteLine("第" + i++ + "张图片");
                     if (i < 3) {
                         PictureBox picbx = new PictureBox();
@@ -1726,7 +1779,7 @@ namespace xzj
                         p = picLocation(p);
                         grpbxImgs.Controls.Add(picbx);
                     }
-
+                    */
                     // all_ssjl.draw
                 }
             }  
@@ -2605,16 +2658,21 @@ namespace xzj
             // 高可用的：969
             // 宽可用的：627
 
-            // 头部 高度75   共75
+            // 头部 高度70   共70
             Bitmap head = new Bitmap(this.panelSJCX_SSJL_Head.Width, this.panelSJCX_SSJL_Head.Height);
+           
+            
             this.panelSJCX_SSJL_Head.DrawToBitmap(head, new Rectangle(0, 0, head.Width, head.Height));
+            // head.
+            // this.panelSJCX_SSJL_Head.DrawToBitmap(
+
             // e.Graphics.DrawImage(head, left, top, head.Width, head.Height);
             // top += head.Height;
             top += head.Height;
             page.Add(head);
             Console.WriteLine("head之后当前top值:" + top);
 
-            // 基本信息 高度265  共340
+            // 基本信息 高度260  共330
             Bitmap baseInfo = new Bitmap(this.panelSJCX_SSJL_BaseInfo.Width, this.panelSJCX_SSJL_BaseInfo.Height);
             this.panelSJCX_SSJL_BaseInfo.DrawToBitmap(baseInfo, new Rectangle(0, 0, baseInfo.Width, baseInfo.Height));
             // e.Graphics.DrawImage(baseInfo, left, top, baseInfo.Width, baseInfo.Height);
@@ -2624,6 +2682,7 @@ namespace xzj
             Console.WriteLine("baseInfo之后当前top值:" + top);
 
             // 手术部位头部 高度40 共380
+            /*
             Bitmap SSBW_NAME = new Bitmap(this.panelSJCX_SSZZCX_SSBW_NAME.Width, this.panelSJCX_SSZZCX_SSBW_NAME.Height);
             this.panelSJCX_SSZZCX_SSBW_NAME.DrawToBitmap(SSBW_NAME, new Rectangle(0, 0, SSBW_NAME.Width, SSBW_NAME.Height));
             // e.Graphics.DrawImage(baseInfo, left, top, baseInfo.Width, baseInfo.Height);
@@ -2631,6 +2690,7 @@ namespace xzj
             top += SSBW_NAME.Height;
             page.Add(SSBW_NAME);
             Console.WriteLine("SSBW_NAME之后当前top值:" + top);
+            */
 
             // 手术部位图片 高度290   共670
             Bitmap SSJL_SSST = new Bitmap(this.panelSJCX_SSJL_SSST.Width, this.panelSJCX_SSJL_SSST.Height);
@@ -2642,6 +2702,7 @@ namespace xzj
             Console.WriteLine("SSJL_SSST之后当前top值:" + top);
 
             // 手术记录名称 高度30 共700
+            /*
             Bitmap SSJL_NAME = new Bitmap(this.panelSJCX_SSJL_NAME.Width, this.panelSJCX_SSJL_NAME.Height);
             this.panelSJCX_SSJL_NAME.DrawToBitmap(SSJL_NAME, new Rectangle(0, 0, SSJL_NAME.Width, SSJL_NAME.Height));
             // e.Graphics.DrawImage(baseInfo, left, top, baseInfo.Width, baseInfo.Height);
@@ -2649,26 +2710,30 @@ namespace xzj
             top += SSJL_NAME.Height;
             page.Add(SSJL_NAME);
             Console.WriteLine("SSJL_NAME之后当前top值:" + top);
+            */
 
-
-            // 主刀医生等信息  高40
+            // 主刀医生等信息  高30
             Bitmap zdys = new Bitmap(this.panelSJCX_ZDYS.Width, this.panelSJCX_ZDYS.Height);
             this.panelSJCX_ZDYS.DrawToBitmap(zdys, new Rectangle(0, 0, zdys.Width, zdys.Height));
             // e.Graphics.DrawImage(baseInfo, left, top, baseInfo.Width, baseInfo.Height);
             // top += baseInfo.Height;
             // top += zdys.Height;
-            
-            // Console.WriteLine("主刀医生之后当前top值:" + top);
+            page.Add(zdys);
+            printPages.Add(page);
+
+
 
             // cutImage
             // 手术记录  超过359的情况，和没有超过359的情况
             
             Bitmap ssjl = CutImage.RtbToBitmap(this.all_ssjl);
             // e.Graphics.DrawImage(ssjl, left, top, ssjl.Width, ssjl.Height);
-            if (ssjl.Height > 220)
+            // 969
+            if (ssjl.Height > 939)
             {
+                page = new List<Bitmap>();
                 // 需要分页处理
-                Bitmap cut1 = ImageHelpler.cutImage(ssjl, 0, 0, ssjl.Width, 220);
+                Bitmap cut1 = ImageHelpler.cutImage(ssjl, 0, 0, ssjl.Width, 939);
                 page.Add(cut1);
                 top += cut1.Height;
                 page.Add(zdys);
@@ -2676,7 +2741,7 @@ namespace xzj
 
                 int nextY = cut1.Height;
                 int leftHeiht = ssjl.Height - cut1.Height;
-                int blockLength = 920;
+                int blockLength = 930;
                 int pageNumber = (leftHeiht / blockLength) + 1;
                 for (int i = 0; i < pageNumber; i++) {
                     page = new List<Bitmap>();
@@ -2697,6 +2762,8 @@ namespace xzj
                 }
             }
             else {
+                page = new List<Bitmap>();
+                
                 // 不需要分页处理
                 top += ssjl.Height;
                 page.Add(ssjl);
@@ -2718,12 +2785,14 @@ namespace xzj
             // Console.Write("全部范围：left" + e.PageBounds.Left + ", top" + e.PageBounds.Top + ",Right:" + e.PageBounds.Right + ",Bottom" + e.PageBounds.Bottom);
             // Console.WriteLine("A4值范围: left:" + left + ", top:" + top + ", right:" + right + ",bottom" + bottom);
 
+            // e.Graphics.draw
 
             List<Bitmap> page = printPages[currentPageIndex++];
             for (int i = 0; i < page.Count; i++) {
                 Console.WriteLine("第" + (i + 1) + "张图片");
                 Bitmap b = page[i];
                 e.Graphics.DrawImage(b, left + 10, top, b.Width, b.Height);
+                // e.Graphics.DrawImageUnscaledAndClipped(b, new Rectangle(left + 10, top, b.Width, b.Height));
                 top += b.Height;
             }
             if ((printPages.Count) > currentPageIndex)
@@ -2759,11 +2828,11 @@ namespace xzj
             // 把panel画上去
             this.panelSSCX_SSJLD.DrawToBitmap(_NewBitmap, new Rectangle(0, 0, _NewBitmap.Width, _NewBitmap.Height));*/
 
-            // e.Graphics.DrawLine(new Pen(Color.Red), new Point(100, 100), new Point(727, 100));
-            // e.Graphics.DrawLine(new Pen(Color.Red), new Point(100, 1069), new Point(727, 1069));
+            e.Graphics.DrawLine(new Pen(Color.Red), new Point(100, 100), new Point(727, 100));
+            e.Graphics.DrawLine(new Pen(Color.Red), new Point(100, 1069), new Point(727, 1069));
 
-            // e.Graphics.DrawLine(new Pen(Color.Red), new Point(100, 100), new Point(100, 1069));
-            // e.Graphics.DrawLine(new Pen(Color.Red), new Point(727, 100), new Point(727, 1069));
+            e.Graphics.DrawLine(new Pen(Color.Red), new Point(100, 100), new Point(100, 1069));
+            e.Graphics.DrawLine(new Pen(Color.Red), new Point(727, 100), new Point(727, 1069));
             // e.Graphics.DrawImage(_NewBitmap, left, top, _NewBitmap.Width, _NewBitmap.Height);
         }
 
@@ -3172,6 +3241,27 @@ namespace xzj
             //按下确定选择的按钮
             if (this.openFileDialogSSLR.ShowDialog() == DialogResult.OK)
             {
+                int imgLength = this.openFileDialogSSLR.FileNames.Length;
+                if (imgLength > 2) {
+                    MessageBox.Show("图片最多两张!");
+                    return;
+                }
+                picSSTP.Image = null;
+                pictureBox10.Image = null;
+                for (int i = 0; i < imgLength; i++)
+                {
+                    String imgPath = this.openFileDialogSSLR.FileNames[i];
+                    Image img = Image.FromFile(imgPath);
+                    if (i == 0)
+                    {
+                        picSSTP.Image = img;
+                    }
+                    else {
+                        pictureBox10.Image = img;
+                    }
+
+                }
+                /*
                 foreach (string s in this.openFileDialogSSLR.FileNames)
                 {
                     // Console.WriteLine("添加图片：" + s);
@@ -3181,7 +3271,11 @@ namespace xzj
                     // 获得该图片的名称
                     String picName = s.Substring(s.LastIndexOf("\\") + 1);
                     lstboxTTLB.Items.Add(picName);
-                } 
+
+                    picSSTP.Image = img;
+                    // picSSTP.
+                    
+                } */
             }
         }
 
@@ -3368,7 +3462,9 @@ namespace xzj
         }
         private void btnRemoveAllSSTP_Click(object sender, EventArgs e)
         {
-            removeAllSSTP();
+            // removeAllSSTP();
+            pictureBox10.Image = null;
+            picSSTP.Image = null;
         }
 
         private void cbSSLR_CITY_SelectedIndexChanged(object sender, EventArgs e)
@@ -3626,12 +3722,14 @@ namespace xzj
             DateTime endTime;
             if (12 == date.Month)
             {
-                endTime = new DateTime(date.Year + 1, 1, 1, 0, 0, 0);
+                endTime = new DateTime(date.Year + 1, 1, 1, 23, 59, 59);
             }
             else
             {
-                endTime = new DateTime(date.Year, date.Month + 1, 1, 0, 0, 0);
+                endTime = new DateTime(date.Year, date.Month + 1, 1, 23, 59, 59);
+                
             }
+            endTime = endTime.AddDays(-1);
             // Console.WriteLine("startTime" + startTime);
             // Console.WriteLine("endTime" + endTime);
                 
@@ -3853,15 +3951,11 @@ namespace xzj
             Bitmap nvbl4 = new Bitmap(this.panelSJTJ_SSTJ_4.Width, this.panelSJTJ_SSTJ_4.Height);
             this.panelSJTJ_SSTJ_4.DrawToBitmap(nvbl4, new Rectangle(0, 0, nvbl4.Width, nvbl4.Height));
 
-          
-
-
             Bitmap[] bms = new Bitmap[4];
             bms[0] = nvbl1;
             bms[1] = nvbl2;
             bms[2] = nvbl3;
             bms[3] = nvbl4;
-            
 
             string strFileName = "";
             SaveFileDialog savFile = new SaveFileDialog();
@@ -3950,6 +4044,11 @@ namespace xzj
                 }
 
             }
+        }
+
+        private void printPreviewDialogSJCX_SSJL_MouseDown(object sender, MouseEventArgs e)
+        {
+            // MessageBox.Show("hi");
         }
 
        

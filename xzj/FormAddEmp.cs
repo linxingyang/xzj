@@ -117,9 +117,9 @@ namespace xzj
                 return;
             }
 
-            if (pwd.Length < 6)
+            if (pwd.Length < 1)
             {
-                MessageBox.Show("密码至少大于6位");
+                MessageBox.Show("密码至少大于1位");
                 return;
             }
 
@@ -209,6 +209,11 @@ namespace xzj
             {
                 e.Handled = true;
             }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
        

@@ -205,7 +205,10 @@
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("宋体", 12F);
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormControl";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "手术相关协议";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
