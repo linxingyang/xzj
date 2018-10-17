@@ -21,7 +21,7 @@ namespace xzj
 
         private void FormSignIn_Load(object sender, EventArgs e)
         {
-            labelTitle.BackColor = ColorTranslator.FromHtml("#014684");
+            //labelTitle.BackColor = ColorTranslator.FromHtml("#014684");
             btnConfigDB.BackColor = ColorTranslator.FromHtml("#014684");
             btnTime.BackColor = ColorTranslator.FromHtml("#014684");
         }

@@ -30,6 +30,8 @@ namespace xzj
             this.ImeMode = System.Windows.Forms.ImeMode.OnHalf;
 
             this.WindowState = FormWindowState.Maximized;
+            this.flowLayoutPanel4.BackColor = ColorTranslator.FromHtml("#0000cd");
+
             this.btnSSLR.BackColor = ColorTranslator.FromHtml("#3399ff");
             this.btnZDGL.BackColor = ColorTranslator.FromHtml("#0000cd");
             this.btnSJCX.BackColor = ColorTranslator.FromHtml("#0000cd");
@@ -769,6 +771,7 @@ namespace xzj
             this.dgvDictionary.Columns[4].FillWeight = 40;
 
             this.dgvDictionary.Columns[0].HeaderText = "id";
+            //this.dgvDictionary.Columns[0].HeaderText.Bold = true;
             this.dgvDictionary.Columns[1].HeaderText = "pId";
             this.dgvDictionary.Columns[2].HeaderText = "排列序号";
             this.dgvDictionary.Columns[3].HeaderText = dName;
@@ -780,6 +783,7 @@ namespace xzj
             ////列Header的背景色 CellBorderStyle->Single   EnableHeaderVisualStyles->false
             this.dgvDictionary.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#4f81DD");
             this.dgvDictionary.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            this.dgvDictionary.ColumnHeadersDefaultCellStyle.Font = new Font("宋体",12f, FontStyle.Bold) ;
 
             //设置选中的颜色
             this.dgvDictionary.DefaultCellStyle.SelectionBackColor = Color.Gray;
@@ -1497,6 +1501,18 @@ namespace xzj
         //数据查询-->手术追踪单
         private void btnSJCX_SSZZCX_Click(object sender, EventArgs e)
         {
+            // Header以外所有的单元格的背景色
+            this.dgvSJCX_SSZZ.RowsDefaultCellStyle.BackColor = Color.White;
+
+            ////列Header的背景色 CellBorderStyle->Single   EnableHeaderVisualStyles->false
+            this.dgvSJCX_SSZZ.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#4f81DD");
+            this.dgvSJCX_SSZZ.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            this.dgvSJCX_SSZZ.ColumnHeadersDefaultCellStyle.Font = new Font("宋体", 12f, FontStyle.Bold);
+
+            //设置选中的颜色
+            this.dgvSJCX_SSZZ.DefaultCellStyle.SelectionBackColor = Color.Gray;
+
+
             this.btnSJCX_SSZZCX.ForeColor = ColorTranslator.FromHtml("#3399ff");
             this.btnSJCX_SSZZCX.BackColor = Color.White;
 
@@ -1525,6 +1541,18 @@ namespace xzj
         //初始化数据查询界面
         private void initSJCX()
         {
+            // Header以外所有的单元格的背景色
+            this.dgvSJCX_RECORDS.RowsDefaultCellStyle.BackColor = Color.White;
+
+            ////列Header的背景色 CellBorderStyle->Single   EnableHeaderVisualStyles->false
+            this.dgvSJCX_RECORDS.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#4f81DD");
+            this.dgvSJCX_RECORDS.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            this.dgvSJCX_RECORDS.ColumnHeadersDefaultCellStyle.Font = new Font("宋体", 12f, FontStyle.Bold);
+
+            //设置选中的颜色
+            this.dgvSJCX_RECORDS.DefaultCellStyle.SelectionBackColor = Color.Gray;
+
+
             this.btnSJCX_SSJLD.ForeColor = ColorTranslator.FromHtml("#3399ff");
             this.btnSJCX_SSJLD.BackColor = Color.White;
 
@@ -2295,6 +2323,17 @@ namespace xzj
         //工作量统计
         private void btnTJFX_GZLTJ_Click(object sender, EventArgs e)
         {
+            // Header以外所有的单元格的背景色
+            this.dgvTJCX_GZL.RowsDefaultCellStyle.BackColor = Color.White;
+
+            ////列Header的背景色 CellBorderStyle->Single   EnableHeaderVisualStyles->false
+            this.dgvTJCX_GZL.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#4f81DD");
+            this.dgvTJCX_GZL.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            this.dgvTJCX_GZL.ColumnHeadersDefaultCellStyle.Font = new Font("宋体", 12f, FontStyle.Bold);
+
+            //设置选中的颜色
+            this.dgvTJCX_GZL.DefaultCellStyle.SelectionBackColor = Color.Gray;
+
             this.btnTJFX_GZLTJ.ForeColor = ColorTranslator.FromHtml("#3399ff");
             this.btnTJFX_GZLTJ.BackColor = Color.White;
 
@@ -3163,7 +3202,18 @@ namespace xzj
         }
 
         private void loadControl(string ctrName) {
-            this.dgvSSXGXY_Control.Rows.Clear();
+           
+
+            // Header以外所有的单元格的背景色
+            this.dgvSSXGXY_Control.RowsDefaultCellStyle.BackColor = Color.White;
+
+            ////列Header的背景色 CellBorderStyle->Single   EnableHeaderVisualStyles->false
+            this.dgvSSXGXY_Control.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#ff0033");
+            this.dgvSSXGXY_Control.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            this.dgvSSXGXY_Control.ColumnHeadersDefaultCellStyle.Font = new Font("宋体", 12f, FontStyle.Bold);
+
+            //设置选中的颜色
+            this.dgvSSXGXY_Control.DefaultCellStyle.SelectionBackColor = Color.Gray;
 
             MySqlParameter[] ps = new MySqlParameter[]{
                 new MySqlParameter("@c_name", "%" + ctrName + "%")
@@ -4050,6 +4100,8 @@ namespace xzj
         {
             // MessageBox.Show("hi");
         }
+
+
 
        
 

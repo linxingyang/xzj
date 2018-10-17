@@ -48,6 +48,18 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Google.Protobuf.dll" size="294400">
+      <assemblyIdentity name="Google.Protobuf" version="3.5.1.0" publicKeyToken="A7D26565BAC4D604" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>kmmLSyM9YCkmP+X33YMDTg/6sJlFHUuInLwRv1o/LXM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="itextsharp.dll" size="4071424">
       <assemblyIdentity name="itextsharp" version="5.5.13.0" publicKeyToken="8354AE6D2174DDCA" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -72,14 +84,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MySql.Data.dll" size="391680">
-      <assemblyIdentity name="MySql.Data" version="6.6.5.0" publicKeyToken="C5687FC88969C44D" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MySql.Data.dll" size="698368">
+      <assemblyIdentity name="MySql.Data" version="8.0.12.0" publicKeyToken="C5687FC88969C44D" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>BEmsNeYFdR50lVuR9pRQ54rBsHhZU+qW+T0ENxRF4aE=</dsig:DigestValue>
+        <dsig:DigestValue>o1A1TiMHyyY2HLODhWlzi01juSSiEk3jKsgc9fnbhpo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -96,14 +108,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="析之助手术登记管理系统.exe" size="1029632">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="析之助手术登记管理系统.exe" size="1019392">
       <assemblyIdentity name="析之助手术登记管理系统" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>+VuHzpeCP/cOPYsaH9jw3kNkyCldG9wQx2MhE9HrP1k=</dsig:DigestValue>
+        <dsig:DigestValue>CbHjx8EP8lSeKeYITp4K4GGwCdFOERyIklXEuldOmjw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -125,13 +137,13 @@
       <dsig:DigestValue>ZMPsxcebGYyrnvCvkKAE/2/LNpEorBL2GorFR2g3GmQ=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="析之助手术登记管理系统.exe.config" size="207">
+  <file name="析之助手术登记管理系统.exe.config" size="209">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>7RnH5+pgtsKo/driw1+oiAWkdRipOXBiypFMnYXwS0A=</dsig:DigestValue>
+      <dsig:DigestValue>DdCj4Df9/oLSd749xArpaw8Lhbj7FI0O+vHlUzvxXB4=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

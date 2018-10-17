@@ -32,13 +32,12 @@
             this.textBoxPwd = new System.Windows.Forms.TextBox();
             this.textBoxAcount = new System.Windows.Forms.TextBox();
             this.btnConfigDB = new System.Windows.Forms.Button();
-            this.labelTitle = new System.Windows.Forms.Label();
+            this.btnTime = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnClose = new System.Windows.Forms.Button();
             this.btnSignIn = new System.Windows.Forms.Button();
             this.btnCloseForm = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnTime = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,7 +68,7 @@
             this.btnConfigDB.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnConfigDB.FlatAppearance.BorderSize = 0;
             this.btnConfigDB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfigDB.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Underline);
+            this.btnConfigDB.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Underline);
             this.btnConfigDB.ForeColor = System.Drawing.Color.White;
             this.btnConfigDB.Location = new System.Drawing.Point(434, 478);
             this.btnConfigDB.Name = "btnConfigDB";
@@ -79,17 +78,24 @@
             this.btnConfigDB.UseVisualStyleBackColor = false;
             this.btnConfigDB.Click += new System.EventHandler(this.btnConfigDB_Click);
             // 
-            // labelTitle
+            // btnTime
             // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.BackColor = System.Drawing.SystemColors.Highlight;
-            this.labelTitle.Font = new System.Drawing.Font("宋体", 30F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelTitle.ForeColor = System.Drawing.Color.White;
-            this.labelTitle.Location = new System.Drawing.Point(21, 18);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(457, 40);
-            this.labelTitle.TabIndex = 10;
-            this.labelTitle.Text = "析之助手术登记管理系统";
+            this.btnTime.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnTime.FlatAppearance.BorderSize = 0;
+            this.btnTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTime.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Underline);
+            this.btnTime.ForeColor = System.Drawing.Color.White;
+            this.btnTime.Location = new System.Drawing.Point(560, 478);
+            this.btnTime.Name = "btnTime";
+            this.btnTime.Size = new System.Drawing.Size(228, 32);
+            this.btnTime.TabIndex = 11;
+            this.btnTime.UseVisualStyleBackColor = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // btnClose
             // 
@@ -132,7 +138,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::xzj.Properties.Resources.signIn1;
+            this.pictureBox1.Image = global::xzj.Properties.Resources.signIn2;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(800, 525);
@@ -140,32 +146,12 @@
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
-            // btnTime
-            // 
-            this.btnTime.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnTime.FlatAppearance.BorderSize = 0;
-            this.btnTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTime.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Underline);
-            this.btnTime.ForeColor = System.Drawing.Color.White;
-            this.btnTime.Location = new System.Drawing.Point(560, 478);
-            this.btnTime.Name = "btnTime";
-            this.btnTime.Size = new System.Drawing.Size(228, 32);
-            this.btnTime.TabIndex = 11;
-            this.btnTime.UseVisualStyleBackColor = false;
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // FormSignIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 525);
             this.Controls.Add(this.btnTime);
-            this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.btnConfigDB);
             this.Controls.Add(this.textBoxAcount);
             this.Controls.Add(this.textBoxPwd);
@@ -194,7 +180,6 @@
         private System.Windows.Forms.TextBox textBoxAcount;
         private System.Windows.Forms.Button btnConfigDB;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Button btnTime;
         private System.Windows.Forms.Timer timer1;
 

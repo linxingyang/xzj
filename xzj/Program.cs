@@ -27,7 +27,6 @@ namespace xzj
             }
             else
             {
-                
                 UtilConfig.SQL_ADDRESS = DBSQLite.selectValue(UtilConfig.SQL_ADDRESS_KEY);
                 string account = DBSQLite.selectValue(UtilConfig.ACCOUNT_KEY);
                 string pwd = DBSQLite.selectValue(UtilConfig.PWD_KEY);
@@ -47,7 +46,8 @@ namespace xzj
                         Application.Run(new FormSignIn());
                     }
                 }
-                else {
+                else
+                {
                     Application.Run(new FormSignIn());
                 }
 

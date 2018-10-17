@@ -151,6 +151,9 @@
   <data name="signInBtn1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\signInBtn1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="signIn2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\signIn2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="next" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\next.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -162,6 +165,9 @@
   </data>
   <data name="logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="signInBtnClose1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\signInBtnClose1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="signInCloseForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\signInCloseForm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,7 +196,7 @@
   <data name="configDbTest" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\configDbTest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="signInBtnClose1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\signInBtnClose1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="mainTop3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mainTop3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -183,6 +183,16 @@ namespace xzj.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap mainTop3 {
+            get {
+                object obj = ResourceManager.GetObject("mainTop3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap mainToRight {
             get {
                 object obj = ResourceManager.GetObject("mainToRight", resourceCulture);
@@ -236,6 +246,16 @@ namespace xzj.Properties {
         internal static System.Drawing.Bitmap signIn1 {
             get {
                 object obj = ResourceManager.GetObject("signIn1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap signIn2 {
+            get {
+                object obj = ResourceManager.GetObject("signIn2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
