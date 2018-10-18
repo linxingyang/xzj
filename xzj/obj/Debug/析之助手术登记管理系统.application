@@ -7,14 +7,14 @@
     <framework targetVersion="4.5.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="析之助手术登记管理系统.exe.manifest" size="8256">
+    <dependentAssembly dependencyType="install" codebase="析之助手术登记管理系统.exe.manifest" size="8628">
       <assemblyIdentity name="析之助手术登记管理系统.exe" version="1.0.0.12" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>9a8Bvx780aM8dfD5A1kl0rr9pgGcpXsmLM2U8gpw5VI=</dsig:DigestValue>
+        <dsig:DigestValue>PTkKWy30NgBd3P/aR/8qjZydQ1OQmT/Q5sBtu9XL16o=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

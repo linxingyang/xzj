@@ -23,13 +23,16 @@ namespace xzj
         private DataTable dataTable;
         private static int dictionary_parent_id = 1;
         static int listViewDictionaryFlag = 0;//1代表在列表上，0代表不在列表上
+        int nowX = 0;
+        int nowY = 0;
+        Boolean mouseDown = false;
        
         public FormMain()
         {
             InitializeComponent();
             this.ImeMode = System.Windows.Forms.ImeMode.OnHalf;
 
-            this.WindowState = FormWindowState.Maximized;
+            //this.WindowState = FormWindowState.Maximized;
             this.flowLayoutPanel4.BackColor = ColorTranslator.FromHtml("#0000cd");
 
             this.btnSSLR.BackColor = ColorTranslator.FromHtml("#3399ff");
@@ -2867,11 +2870,11 @@ namespace xzj
             // 把panel画上去
             this.panelSSCX_SSJLD.DrawToBitmap(_NewBitmap, new Rectangle(0, 0, _NewBitmap.Width, _NewBitmap.Height));*/
 
-            e.Graphics.DrawLine(new Pen(Color.Red), new Point(100, 100), new Point(727, 100));
-            e.Graphics.DrawLine(new Pen(Color.Red), new Point(100, 1069), new Point(727, 1069));
+            //e.Graphics.DrawLine(new Pen(Color.Red), new Point(100, 100), new Point(727, 100));
+            //e.Graphics.DrawLine(new Pen(Color.Red), new Point(100, 1069), new Point(727, 1069));
 
-            e.Graphics.DrawLine(new Pen(Color.Red), new Point(100, 100), new Point(100, 1069));
-            e.Graphics.DrawLine(new Pen(Color.Red), new Point(727, 100), new Point(727, 1069));
+            //e.Graphics.DrawLine(new Pen(Color.Red), new Point(100, 100), new Point(100, 1069));
+            //e.Graphics.DrawLine(new Pen(Color.Red), new Point(727, 100), new Point(727, 1069));
             // e.Graphics.DrawImage(_NewBitmap, left, top, _NewBitmap.Width, _NewBitmap.Height);
         }
 
@@ -3114,8 +3117,10 @@ namespace xzj
                     if (contextMenuStrip1.Items[i].Text.Trim() == "退出登录")
                     {
                         this.Hide();
-                        FormSignIn f = new FormSignIn();
-                        f.Show();
+                        new System.Threading.Thread(() =>
+                        {
+                            Application.Run(new FormSignIn());
+                        }).Start(); ;
                         
                     }
 
@@ -3202,37 +3207,60 @@ namespace xzj
         }
 
         private void loadControl(string ctrName) {
-           
+            this.dgvSSXGXY_Control.DataSource = null;//清空
+            this.dgvSSXGXY_Control.Columns.Clear();
 
-            // Header以外所有的单元格的背景色
-            this.dgvSSXGXY_Control.RowsDefaultCellStyle.BackColor = Color.White;
+            this.dgvSSXGXY_Control.SelectionMode = DataGridViewSelectionMode.FullRowSelect;//选中整行
 
-            ////列Header的背景色 CellBorderStyle->Single   EnableHeaderVisualStyles->false
-            this.dgvSSXGXY_Control.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#ff0033");
-            this.dgvSSXGXY_Control.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            this.dgvSSXGXY_Control.ColumnHeadersDefaultCellStyle.Font = new Font("宋体", 12f, FontStyle.Bold);
-
-            //设置选中的颜色
-            this.dgvSSXGXY_Control.DefaultCellStyle.SelectionBackColor = Color.Gray;
 
             MySqlParameter[] ps = new MySqlParameter[]{
                 new MySqlParameter("@c_name", "%" + ctrName + "%")
             };
-            // DataTable dt = SqlHelper4MySql.getDataTable(SqlCommandHelpler.T_CONTROL_SELECT_BY_NAME, ps);
-            // this.dgvSSXGXY_Control.DataSource = dt;
-            using (MySqlDataReader reader = SqlHelper4MySql.ExecuteReader(SqlCommandHelpler.T_CONTROL_SELECT_BY_NAME, ps))
-            {
-                while (reader.Read()) {
-                    int index = this.dgvSSXGXY_Control.Rows.Add();
-                    // SELECT c_order_id, c_name, c_desc
-                    this.dgvSSXGXY_Control.Rows[index].Cells[0].Value = reader.GetString("id");
-                    this.dgvSSXGXY_Control.Rows[index].Cells[1].Value = reader.GetString("c_order_id");
-                    this.dgvSSXGXY_Control.Rows[index].Cells[2].Value = reader.GetString("c_name");
-                    this.dgvSSXGXY_Control.Rows[index].Cells[3].Value = reader.GetString("c_desc");
-                    // this.dgvSSXGXY_Control.Rows[index].Cells[3].Value = "内容";
-                    // DataGridViewButtonColumn
-                }
-            }
+            DataTable dt = SqlHelper4MySql.getDataTable(SqlCommandHelpler.T_CONTROL_SELECT_BY_NAME, ps);
+            this.dgvSSXGXY_Control.DataSource = dt;
+
+            DataGridViewButtonColumn dgvbc = new DataGridViewButtonColumn();
+            dgvbc.DefaultCellStyle.NullValue = "内容";
+            
+            this.dgvSSXGXY_Control.Columns.Add(dgvbc);
+         
+
+            this.dgvSSXGXY_Control.Columns[0].Visible = false;
+
+            this.dgvSSXGXY_Control.Columns[0].FillWeight = 1;
+            this.dgvSSXGXY_Control.Columns[1].FillWeight = 10;
+            this.dgvSSXGXY_Control.Columns[2].FillWeight = 40;
+            this.dgvSSXGXY_Control.Columns[3].FillWeight = 40;
+            this.dgvSSXGXY_Control.Columns[4].FillWeight = 10;
+
+            this.dgvSSXGXY_Control.Columns[0].HeaderText = "id";
+            this.dgvSSXGXY_Control.Columns[1].HeaderText = "排列顺序";
+            this.dgvSSXGXY_Control.Columns[2].HeaderText = "协议名称";
+            this.dgvSSXGXY_Control.Columns[3].HeaderText = "协议描述";
+            this.dgvSSXGXY_Control.Columns[4].HeaderText = "内容";
+
+            // Header以外所有的单元格的背景色
+            this.dgvSSXGXY_Control.RowsDefaultCellStyle.BackColor = Color.White;
+            ////列Header的背景色 CellBorderStyle->Single   EnableHeaderVisualStyles->false
+            this.dgvSSXGXY_Control.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#4f81DD");
+            this.dgvSSXGXY_Control.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            this.dgvSSXGXY_Control.ColumnHeadersDefaultCellStyle.Font = new Font("宋体", 12f, FontStyle.Bold);
+            this.dgvSSXGXY_Control.DefaultCellStyle.SelectionBackColor = Color.Gray;//设置选中的颜色
+
+            
+            //using (MySqlDataReader reader = SqlHelper4MySql.ExecuteReader(SqlCommandHelpler.T_CONTROL_SELECT_BY_NAME, ps))
+            //{
+            //    while (reader.Read()) {
+            //        int index = this.dgvSSXGXY_Control.Rows.Add();
+            //        // SELECT c_order_id, c_name, c_desc
+            //        this.dgvSSXGXY_Control.Rows[index].Cells[0].Value = reader.GetString("id");
+            //        this.dgvSSXGXY_Control.Rows[index].Cells[1].Value = reader.GetString("c_order_id");
+            //        this.dgvSSXGXY_Control.Rows[index].Cells[2].Value = reader.GetString("c_name");
+            //        this.dgvSSXGXY_Control.Rows[index].Cells[3].Value = reader.GetString("c_desc");
+            //        // this.dgvSSXGXY_Control.Rows[index].Cells[3].Value = "内容";
+            //        // DataGridViewButtonColumn
+            //    }
+            //}
 
         }
 
@@ -4042,7 +4070,8 @@ namespace xzj
             int c = e.ColumnIndex;
             Console.WriteLine("row:" + r + " col:" + c);
             // Console.WriteLine(this.dgvSSXGXY_Control.Rows[e.RowIndex].Cells[e.ColumnIndex].);
-            if (this.dgvSSXGXY_Control.Columns[c].Name.Equals("c_content") && r >= 0) {
+            if (c ==4 && r >= 0)
+            {
                 // row:0 col:4
                 // row:1 col:4
                 // row:2 col:4
@@ -4099,6 +4128,45 @@ namespace xzj
         private void printPreviewDialogSJCX_SSJL_MouseDown(object sender, MouseEventArgs e)
         {
             // MessageBox.Show("hi");
+        }
+
+        private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            // Console.WriteLine("按下鼠标");
+            nowX = e.X;
+            nowY = e.Y;
+            mouseDown = true;
+            Console.WriteLine("x:" + this.Location.X + ", y " + this.Location.Y);
+        }
+
+        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                int moveX = e.X - nowX;
+                int moveY = e.Y - nowY;
+                // Console.WriteLine("移动" + moveX + " " + moveY);
+                this.Location = new Point(this.Location.X + moveX, this.Location.Y + moveY);
+            }
+        }
+
+        private void label54_Click(object sender, EventArgs e)
+        {
+
+           
+            this.Close();
+            new System.Threading.Thread(() =>
+            {
+                Application.Run(new FormSignIn());
+            }).Start();
+
+            //FormSignIn f = new FormSignIn();
+            //f.Show();
         }
 
 

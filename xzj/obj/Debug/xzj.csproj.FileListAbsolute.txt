@@ -55,7 +55,6 @@ D:\xzj\xzj\bin\Debug\itextsharp.dll
 D:\xzj\xzj\bin\Debug\System.Data.SQLite.dll
 D:\xzj\xzj\bin\Debug\itextsharp.xml
 D:\xzj\xzj\bin\Debug\System.Data.SQLite.pdb
-D:\xzj\xzj\obj\Debug\xzj.csprojResolveAssemblyReference.cache
 D:\xzj\xzj\obj\Debug\xzj.FormAddDictionary.resources
 D:\xzj\xzj\obj\Debug\xzj.FormAddEmp.resources
 D:\xzj\xzj\obj\Debug\xzj.FormAddSSZZ.resources
@@ -70,3 +69,4 @@ D:\xzj\xzj\obj\Debug\xzj.xzjForm.FormModifyControl.resources
 D:\xzj\xzj\obj\Debug\xzj.csproj.GenerateResource.Cache
 D:\xzj\xzj\obj\Debug\析之助手术登记管理系统.exe.manifest
 D:\xzj\xzj\obj\Debug\析之助手术登记管理系统.application
+D:\xzj\xzj\obj\Debug\xzj.csprojResolveAssemblyReference.cache

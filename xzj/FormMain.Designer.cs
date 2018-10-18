@@ -45,9 +45,9 @@
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label54 = new System.Windows.Forms.Label();
             this.labelAccountShow = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
@@ -501,17 +501,6 @@
             this.tbRoomHispitorName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panelSSXGXY = new System.Windows.Forms.Panel();
-            this.panel131 = new System.Windows.Forms.Panel();
-            this.dgvSSXGXY_Control = new System.Windows.Forms.DataGridView();
-            this.panel130 = new System.Windows.Forms.Panel();
-            this.btnSSXGXY_XGXY = new System.Windows.Forms.Button();
-            this.btnSSXGXY_add_control = new System.Windows.Forms.Button();
-            this.btnSSXGXY_SCXY = new System.Windows.Forms.Button();
-            this.panel101 = new System.Windows.Forms.Panel();
-            this.label63 = new System.Windows.Forms.Label();
-            this.btnSSXGXY_XYMC = new System.Windows.Forms.TextBox();
-            this.button7 = new System.Windows.Forms.Button();
             this.panelSSZZ = new System.Windows.Forms.Panel();
             this.panel82 = new System.Windows.Forms.Panel();
             this.panel86 = new System.Windows.Forms.Panel();
@@ -586,6 +575,17 @@
             this.panel126 = new System.Windows.Forms.Panel();
             this.txtbxPatientName = new System.Windows.Forms.TextBox();
             this.label41 = new System.Windows.Forms.Label();
+            this.panelSSXGXY = new System.Windows.Forms.Panel();
+            this.panel131 = new System.Windows.Forms.Panel();
+            this.dgvSSXGXY_Control = new System.Windows.Forms.DataGridView();
+            this.panel130 = new System.Windows.Forms.Panel();
+            this.btnSSXGXY_XGXY = new System.Windows.Forms.Button();
+            this.btnSSXGXY_add_control = new System.Windows.Forms.Button();
+            this.btnSSXGXY_SCXY = new System.Windows.Forms.Button();
+            this.panel101 = new System.Windows.Forms.Panel();
+            this.label63 = new System.Windows.Forms.Label();
+            this.btnSSXGXY_XYMC = new System.Windows.Forms.TextBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.panel122 = new System.Windows.Forms.Panel();
             this.labelNowDate = new System.Windows.Forms.Label();
             this.printDucumentSSCX_SSJL = new System.Drawing.Printing.PrintDocument();
@@ -600,12 +600,8 @@
             this.imgLstTTLB = new System.Windows.Forms.ImageList(this.components);
             this.imgSSTP = new System.Windows.Forms.ImageList(this.components);
             this.printPreviewDialogSJCX_SSJL = new System.Windows.Forms.PrintPreviewDialog();
-            this.c_content = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.c_desc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_order_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
+            this.flowLayoutPanel5.SuspendLayout();
             this.panel2.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
             this.flowLayoutForm.SuspendLayout();
@@ -754,11 +750,6 @@
             this.panel15.SuspendLayout();
             this.panel35.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panelSSXGXY.SuspendLayout();
-            this.panel131.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSSXGXY_Control)).BeginInit();
-            this.panel130.SuspendLayout();
-            this.panel101.SuspendLayout();
             this.panelSSZZ.SuspendLayout();
             this.panel82.SuspendLayout();
             this.panel86.SuspendLayout();
@@ -786,13 +777,18 @@
             this.panel42.SuspendLayout();
             this.panel127.SuspendLayout();
             this.panel126.SuspendLayout();
+            this.panelSSXGXY.SuspendLayout();
+            this.panel131.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSSXGXY_Control)).BeginInit();
+            this.panel130.SuspendLayout();
+            this.panel101.SuspendLayout();
             this.panel122.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.labelAccountShow);
+            this.panel1.Controls.Add(this.flowLayoutPanel5);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.flowLayoutForm);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -802,11 +798,41 @@
             this.panel1.Size = new System.Drawing.Size(1300, 134);
             this.panel1.TabIndex = 7;
             // 
+            // flowLayoutPanel5
+            // 
+            this.flowLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel5.AutoSize = true;
+            this.flowLayoutPanel5.BackColor = System.Drawing.SystemColors.Highlight;
+            this.flowLayoutPanel5.Controls.Add(this.label54);
+            this.flowLayoutPanel5.Controls.Add(this.labelAccountShow);
+            this.flowLayoutPanel5.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(1155, 66);
+            this.flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
+            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(108, 26);
+            this.flowLayoutPanel5.TabIndex = 18;
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label54.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label54.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label54.Location = new System.Drawing.Point(68, 0);
+            this.label54.Margin = new System.Windows.Forms.Padding(0);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(40, 16);
+            this.label54.TabIndex = 17;
+            this.label54.Text = "注销";
+            this.label54.Click += new System.EventHandler(this.label54_Click);
+            // 
             // labelAccountShow
             // 
             this.labelAccountShow.AutoSize = true;
             this.labelAccountShow.BackColor = System.Drawing.Color.Transparent;
-            this.labelAccountShow.Location = new System.Drawing.Point(1160, 67);
+            this.labelAccountShow.ForeColor = System.Drawing.Color.White;
+            this.labelAccountShow.Location = new System.Drawing.Point(33, 0);
+            this.labelAccountShow.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.labelAccountShow.Name = "labelAccountShow";
             this.labelAccountShow.Size = new System.Drawing.Size(32, 16);
             this.labelAccountShow.TabIndex = 16;
@@ -958,11 +984,10 @@
             this.flowLayoutForm.Controls.Add(this.picMax);
             this.flowLayoutForm.Controls.Add(this.picMin);
             this.flowLayoutForm.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutForm.Location = new System.Drawing.Point(1186, 0);
+            this.flowLayoutForm.Location = new System.Drawing.Point(1195, 0);
             this.flowLayoutForm.Name = "flowLayoutForm";
             this.flowLayoutForm.Size = new System.Drawing.Size(102, 25);
             this.flowLayoutForm.TabIndex = 6;
-            this.flowLayoutForm.Visible = false;
             // 
             // picClose
             // 
@@ -1005,6 +1030,9 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
+            this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
             // 
             // panel3
             // 
@@ -5813,13 +5841,13 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel4.Controls.Add(this.panelSSXGXY);
-            this.panel4.Controls.Add(this.panelSJCX);
-            this.panel4.Controls.Add(this.panelKSGL);
             this.panel4.Controls.Add(this.panelSSLR);
             this.panel4.Controls.Add(this.panelSSZZ);
             this.panel4.Controls.Add(this.panelZDGL);
             this.panel4.Controls.Add(this.panelCJFX);
+            this.panel4.Controls.Add(this.panelSSXGXY);
+            this.panel4.Controls.Add(this.panelSJCX);
+            this.panel4.Controls.Add(this.panelKSGL);
             this.panel4.Controls.Add(this.panel122);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 134);
@@ -5827,158 +5855,6 @@
             this.panel4.Padding = new System.Windows.Forms.Padding(10);
             this.panel4.Size = new System.Drawing.Size(1300, 570);
             this.panel4.TabIndex = 13;
-            // 
-            // panelSSXGXY
-            // 
-            this.panelSSXGXY.BackColor = System.Drawing.Color.White;
-            this.panelSSXGXY.Controls.Add(this.panel131);
-            this.panelSSXGXY.Controls.Add(this.panel130);
-            this.panelSSXGXY.Controls.Add(this.panel101);
-            this.panelSSXGXY.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelSSXGXY.Location = new System.Drawing.Point(10, 37);
-            this.panelSSXGXY.Name = "panelSSXGXY";
-            this.panelSSXGXY.Size = new System.Drawing.Size(1280, 523);
-            this.panelSSXGXY.TabIndex = 33;
-            // 
-            // panel131
-            // 
-            this.panel131.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel131.Controls.Add(this.dgvSSXGXY_Control);
-            this.panel131.Location = new System.Drawing.Point(25, 88);
-            this.panel131.Name = "panel131";
-            this.panel131.Padding = new System.Windows.Forms.Padding(10);
-            this.panel131.Size = new System.Drawing.Size(1226, 420);
-            this.panel131.TabIndex = 13;
-            // 
-            // dgvSSXGXY_Control
-            // 
-            this.dgvSSXGXY_Control.AllowUserToAddRows = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSSXGXY_Control.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvSSXGXY_Control.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSSXGXY_Control.ColumnHeadersVisible = false;
-            this.dgvSSXGXY_Control.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.c_order_id,
-            this.c_name,
-            this.c_desc,
-            this.c_content});
-            this.dgvSSXGXY_Control.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvSSXGXY_Control.Location = new System.Drawing.Point(10, 10);
-            this.dgvSSXGXY_Control.MultiSelect = false;
-            this.dgvSSXGXY_Control.Name = "dgvSSXGXY_Control";
-            this.dgvSSXGXY_Control.ReadOnly = true;
-            this.dgvSSXGXY_Control.RowTemplate.Height = 23;
-            this.dgvSSXGXY_Control.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSSXGXY_Control.Size = new System.Drawing.Size(1204, 398);
-            this.dgvSSXGXY_Control.TabIndex = 0;
-            this.dgvSSXGXY_Control.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSSXGXY_Control_CellContentClick);
-            // 
-            // panel130
-            // 
-            this.panel130.Controls.Add(this.btnSSXGXY_XGXY);
-            this.panel130.Controls.Add(this.btnSSXGXY_add_control);
-            this.panel130.Controls.Add(this.btnSSXGXY_SCXY);
-            this.panel130.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel130.Location = new System.Drawing.Point(0, 40);
-            this.panel130.Name = "panel130";
-            this.panel130.Size = new System.Drawing.Size(1280, 40);
-            this.panel130.TabIndex = 12;
-            // 
-            // btnSSXGXY_XGXY
-            // 
-            this.btnSSXGXY_XGXY.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnSSXGXY_XGXY.FlatAppearance.BorderSize = 0;
-            this.btnSSXGXY_XGXY.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSSXGXY_XGXY.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnSSXGXY_XGXY.ForeColor = System.Drawing.Color.White;
-            this.btnSSXGXY_XGXY.Location = new System.Drawing.Point(1085, 5);
-            this.btnSSXGXY_XGXY.Name = "btnSSXGXY_XGXY";
-            this.btnSSXGXY_XGXY.Size = new System.Drawing.Size(83, 26);
-            this.btnSSXGXY_XGXY.TabIndex = 7;
-            this.btnSSXGXY_XGXY.Text = "修改";
-            this.btnSSXGXY_XGXY.UseVisualStyleBackColor = false;
-            this.btnSSXGXY_XGXY.Click += new System.EventHandler(this.btnSSXGXY_XGXY_Click);
-            // 
-            // btnSSXGXY_add_control
-            // 
-            this.btnSSXGXY_add_control.BackColor = System.Drawing.Color.Green;
-            this.btnSSXGXY_add_control.FlatAppearance.BorderSize = 0;
-            this.btnSSXGXY_add_control.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSSXGXY_add_control.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnSSXGXY_add_control.ForeColor = System.Drawing.Color.White;
-            this.btnSSXGXY_add_control.Location = new System.Drawing.Point(996, 5);
-            this.btnSSXGXY_add_control.Name = "btnSSXGXY_add_control";
-            this.btnSSXGXY_add_control.Size = new System.Drawing.Size(83, 26);
-            this.btnSSXGXY_add_control.TabIndex = 8;
-            this.btnSSXGXY_add_control.Text = "添加";
-            this.btnSSXGXY_add_control.UseVisualStyleBackColor = false;
-            this.btnSSXGXY_add_control.Click += new System.EventHandler(this.btnSSXGXY_add_control_Click);
-            // 
-            // btnSSXGXY_SCXY
-            // 
-            this.btnSSXGXY_SCXY.BackColor = System.Drawing.Color.Red;
-            this.btnSSXGXY_SCXY.FlatAppearance.BorderSize = 0;
-            this.btnSSXGXY_SCXY.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSSXGXY_SCXY.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnSSXGXY_SCXY.ForeColor = System.Drawing.Color.White;
-            this.btnSSXGXY_SCXY.Location = new System.Drawing.Point(1174, 5);
-            this.btnSSXGXY_SCXY.Name = "btnSSXGXY_SCXY";
-            this.btnSSXGXY_SCXY.Size = new System.Drawing.Size(83, 26);
-            this.btnSSXGXY_SCXY.TabIndex = 6;
-            this.btnSSXGXY_SCXY.Text = "删除";
-            this.btnSSXGXY_SCXY.UseVisualStyleBackColor = false;
-            this.btnSSXGXY_SCXY.Click += new System.EventHandler(this.btnSSXGXY_SCXY_Click);
-            // 
-            // panel101
-            // 
-            this.panel101.Controls.Add(this.label63);
-            this.panel101.Controls.Add(this.btnSSXGXY_XYMC);
-            this.panel101.Controls.Add(this.button7);
-            this.panel101.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel101.Location = new System.Drawing.Point(0, 0);
-            this.panel101.Name = "panel101";
-            this.panel101.Size = new System.Drawing.Size(1280, 40);
-            this.panel101.TabIndex = 11;
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label63.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label63.Location = new System.Drawing.Point(18, 12);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(93, 16);
-            this.label63.TabIndex = 10;
-            this.label63.Text = "协议名称：";
-            // 
-            // btnSSXGXY_XYMC
-            // 
-            this.btnSSXGXY_XYMC.Location = new System.Drawing.Point(117, 7);
-            this.btnSSXGXY_XYMC.Name = "btnSSXGXY_XYMC";
-            this.btnSSXGXY_XYMC.Size = new System.Drawing.Size(196, 26);
-            this.btnSSXGXY_XYMC.TabIndex = 9;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.SteelBlue;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(334, 7);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(83, 26);
-            this.button7.TabIndex = 10;
-            this.button7.Text = "查询";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // panelSSZZ
             // 
@@ -6773,6 +6649,153 @@
             this.label41.TabIndex = 1;
             this.label41.Text = "姓名：";
             // 
+            // panelSSXGXY
+            // 
+            this.panelSSXGXY.BackColor = System.Drawing.Color.White;
+            this.panelSSXGXY.Controls.Add(this.panel131);
+            this.panelSSXGXY.Controls.Add(this.panel130);
+            this.panelSSXGXY.Controls.Add(this.panel101);
+            this.panelSSXGXY.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelSSXGXY.Location = new System.Drawing.Point(10, 37);
+            this.panelSSXGXY.Name = "panelSSXGXY";
+            this.panelSSXGXY.Size = new System.Drawing.Size(1280, 523);
+            this.panelSSXGXY.TabIndex = 33;
+            // 
+            // panel131
+            // 
+            this.panel131.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel131.Controls.Add(this.dgvSSXGXY_Control);
+            this.panel131.Location = new System.Drawing.Point(25, 88);
+            this.panel131.Name = "panel131";
+            this.panel131.Padding = new System.Windows.Forms.Padding(10);
+            this.panel131.Size = new System.Drawing.Size(1226, 420);
+            this.panel131.TabIndex = 13;
+            // 
+            // dgvSSXGXY_Control
+            // 
+            this.dgvSSXGXY_Control.AllowUserToAddRows = false;
+            this.dgvSSXGXY_Control.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSSXGXY_Control.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvSSXGXY_Control.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSSXGXY_Control.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvSSXGXY_Control.EnableHeadersVisualStyles = false;
+            this.dgvSSXGXY_Control.Location = new System.Drawing.Point(10, 10);
+            this.dgvSSXGXY_Control.MultiSelect = false;
+            this.dgvSSXGXY_Control.Name = "dgvSSXGXY_Control";
+            this.dgvSSXGXY_Control.ReadOnly = true;
+            this.dgvSSXGXY_Control.RowTemplate.Height = 23;
+            this.dgvSSXGXY_Control.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSSXGXY_Control.Size = new System.Drawing.Size(1204, 398);
+            this.dgvSSXGXY_Control.TabIndex = 0;
+            this.dgvSSXGXY_Control.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSSXGXY_Control_CellContentClick);
+            // 
+            // panel130
+            // 
+            this.panel130.Controls.Add(this.btnSSXGXY_XGXY);
+            this.panel130.Controls.Add(this.btnSSXGXY_add_control);
+            this.panel130.Controls.Add(this.btnSSXGXY_SCXY);
+            this.panel130.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel130.Location = new System.Drawing.Point(0, 40);
+            this.panel130.Name = "panel130";
+            this.panel130.Size = new System.Drawing.Size(1280, 40);
+            this.panel130.TabIndex = 12;
+            // 
+            // btnSSXGXY_XGXY
+            // 
+            this.btnSSXGXY_XGXY.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSSXGXY_XGXY.FlatAppearance.BorderSize = 0;
+            this.btnSSXGXY_XGXY.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSSXGXY_XGXY.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSSXGXY_XGXY.ForeColor = System.Drawing.Color.White;
+            this.btnSSXGXY_XGXY.Location = new System.Drawing.Point(1085, 5);
+            this.btnSSXGXY_XGXY.Name = "btnSSXGXY_XGXY";
+            this.btnSSXGXY_XGXY.Size = new System.Drawing.Size(83, 26);
+            this.btnSSXGXY_XGXY.TabIndex = 7;
+            this.btnSSXGXY_XGXY.Text = "修改";
+            this.btnSSXGXY_XGXY.UseVisualStyleBackColor = false;
+            this.btnSSXGXY_XGXY.Click += new System.EventHandler(this.btnSSXGXY_XGXY_Click);
+            // 
+            // btnSSXGXY_add_control
+            // 
+            this.btnSSXGXY_add_control.BackColor = System.Drawing.Color.Green;
+            this.btnSSXGXY_add_control.FlatAppearance.BorderSize = 0;
+            this.btnSSXGXY_add_control.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSSXGXY_add_control.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSSXGXY_add_control.ForeColor = System.Drawing.Color.White;
+            this.btnSSXGXY_add_control.Location = new System.Drawing.Point(996, 5);
+            this.btnSSXGXY_add_control.Name = "btnSSXGXY_add_control";
+            this.btnSSXGXY_add_control.Size = new System.Drawing.Size(83, 26);
+            this.btnSSXGXY_add_control.TabIndex = 8;
+            this.btnSSXGXY_add_control.Text = "添加";
+            this.btnSSXGXY_add_control.UseVisualStyleBackColor = false;
+            this.btnSSXGXY_add_control.Click += new System.EventHandler(this.btnSSXGXY_add_control_Click);
+            // 
+            // btnSSXGXY_SCXY
+            // 
+            this.btnSSXGXY_SCXY.BackColor = System.Drawing.Color.Red;
+            this.btnSSXGXY_SCXY.FlatAppearance.BorderSize = 0;
+            this.btnSSXGXY_SCXY.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSSXGXY_SCXY.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSSXGXY_SCXY.ForeColor = System.Drawing.Color.White;
+            this.btnSSXGXY_SCXY.Location = new System.Drawing.Point(1174, 5);
+            this.btnSSXGXY_SCXY.Name = "btnSSXGXY_SCXY";
+            this.btnSSXGXY_SCXY.Size = new System.Drawing.Size(83, 26);
+            this.btnSSXGXY_SCXY.TabIndex = 6;
+            this.btnSSXGXY_SCXY.Text = "删除";
+            this.btnSSXGXY_SCXY.UseVisualStyleBackColor = false;
+            this.btnSSXGXY_SCXY.Click += new System.EventHandler(this.btnSSXGXY_SCXY_Click);
+            // 
+            // panel101
+            // 
+            this.panel101.Controls.Add(this.label63);
+            this.panel101.Controls.Add(this.btnSSXGXY_XYMC);
+            this.panel101.Controls.Add(this.button7);
+            this.panel101.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel101.Location = new System.Drawing.Point(0, 0);
+            this.panel101.Name = "panel101";
+            this.panel101.Size = new System.Drawing.Size(1280, 40);
+            this.panel101.TabIndex = 11;
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label63.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label63.Location = new System.Drawing.Point(18, 12);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(93, 16);
+            this.label63.TabIndex = 10;
+            this.label63.Text = "协议名称：";
+            // 
+            // btnSSXGXY_XYMC
+            // 
+            this.btnSSXGXY_XYMC.Location = new System.Drawing.Point(117, 7);
+            this.btnSSXGXY_XYMC.Name = "btnSSXGXY_XYMC";
+            this.btnSSXGXY_XYMC.Size = new System.Drawing.Size(196, 26);
+            this.btnSSXGXY_XYMC.TabIndex = 9;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.SteelBlue;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Location = new System.Drawing.Point(334, 7);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(83, 26);
+            this.button7.TabIndex = 10;
+            this.button7.Text = "查询";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // panel122
             // 
             this.panel122.Controls.Add(this.labelNowDate);
@@ -6871,47 +6894,6 @@
             this.printPreviewDialogSJCX_SSJL.Visible = false;
             this.printPreviewDialogSJCX_SSJL.MouseDown += new System.Windows.Forms.MouseEventHandler(this.printPreviewDialogSJCX_SSJL_MouseDown);
             // 
-            // c_content
-            // 
-            this.c_content.HeaderText = "内容";
-            this.c_content.Name = "c_content";
-            this.c_content.ReadOnly = true;
-            this.c_content.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.c_content.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.c_content.Text = "内容";
-            this.c_content.UseColumnTextForButtonValue = true;
-            // 
-            // c_desc
-            // 
-            this.c_desc.HeaderText = "协议描述";
-            this.c_desc.Name = "c_desc";
-            this.c_desc.ReadOnly = true;
-            this.c_desc.Width = 500;
-            // 
-            // c_name
-            // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Blue;
-            this.c_name.DefaultCellStyle = dataGridViewCellStyle4;
-            this.c_name.HeaderText = "协议名称";
-            this.c_name.Name = "c_name";
-            this.c_name.ReadOnly = true;
-            this.c_name.Width = 450;
-            // 
-            // c_order_id
-            // 
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.c_order_id.DefaultCellStyle = dataGridViewCellStyle3;
-            this.c_order_id.HeaderText = "排列顺序";
-            this.c_order_id.Name = "c_order_id";
-            this.c_order_id.ReadOnly = true;
-            // 
-            // id
-            // 
-            this.id.HeaderText = "id";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -6922,7 +6904,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -6931,6 +6913,8 @@
             this.SizeChanged += new System.EventHandler(this.FormMain_SizeChanged);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.flowLayoutPanel5.ResumeLayout(false);
+            this.flowLayoutPanel5.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.flowLayoutPanel4.ResumeLayout(false);
             this.flowLayoutForm.ResumeLayout(false);
@@ -7159,12 +7143,6 @@
             this.panel35.ResumeLayout(false);
             this.panel35.PerformLayout();
             this.panel4.ResumeLayout(false);
-            this.panelSSXGXY.ResumeLayout(false);
-            this.panel131.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSSXGXY_Control)).EndInit();
-            this.panel130.ResumeLayout(false);
-            this.panel101.ResumeLayout(false);
-            this.panel101.PerformLayout();
             this.panelSSZZ.ResumeLayout(false);
             this.panel82.ResumeLayout(false);
             this.panel86.ResumeLayout(false);
@@ -7210,6 +7188,12 @@
             this.panel127.PerformLayout();
             this.panel126.ResumeLayout(false);
             this.panel126.PerformLayout();
+            this.panelSSXGXY.ResumeLayout(false);
+            this.panel131.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSSXGXY_Control)).EndInit();
+            this.panel130.ResumeLayout(false);
+            this.panel101.ResumeLayout(false);
+            this.panel101.PerformLayout();
             this.panel122.ResumeLayout(false);
             this.panel122.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
@@ -7772,11 +7756,8 @@
         private System.Windows.Forms.Panel panel109;
         private System.Windows.Forms.Label all_sszzqx;
         private System.Windows.Forms.Label label95;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn c_order_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn c_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn c_desc;
-        private System.Windows.Forms.DataGridViewButtonColumn c_content;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
 
     }
 }

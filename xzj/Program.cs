@@ -38,7 +38,6 @@ namespace xzj
                     bool flag = DBEmp.getInstance().isLogin(account, pwd);
                     if (flag)
                     {
-
                         Application.Run(new FormMain());
                     }
                     else
