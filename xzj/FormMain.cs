@@ -139,12 +139,12 @@ namespace xzj
                     string text = row["d_name"].ToString();
                     int value = Convert.ToInt32(row["id"].ToString());
                     al.Add(new UtilTextAndValue(text, value));
-
+                    //al.Add(text);
                 }
                 cb.DataSource = al;
                 cb.DisplayMember = "DisplayText";
                 cb.ValueMember = "RealValue";
-                cb.SelectedIndex = 0;
+                cb.SelectedIndex = -1;
                 dt = null;
             }
         }
@@ -171,7 +171,7 @@ namespace xzj
             this.tbSSLR_QXFS.Text = "";//器械护士
 
             //性别
-            this.cbSSLR_SEX.SelectedIndex = 0;
+            //this.cbSSLR_SEX.SelectedIndex = 0;
 
             //查询省
             DataTable dt = DBManager.getInstance().find("SELECT id,p_name as d_name FROM t_province");

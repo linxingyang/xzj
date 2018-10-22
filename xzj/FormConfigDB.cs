@@ -147,7 +147,7 @@ namespace xzj
             string ipAdd = this.tbIP.Text;
             string user = this.tbUserName.Text;
             string pwd = this.tbPwd.Text;
-            string sqlAddress = "server=" + ipAdd + ";port=3306;database=" + dbName + ";user=" + user + ";password=" + pwd + ";SslMode = none;";
+            string sqlAddress = "server=" + ipAdd + ";port=3306;database=" + dbName + ";user=" + user + ";password=" + pwd + ";";
             try
             {
                  MySqlConnection conn = new MySqlConnection(sqlAddress);

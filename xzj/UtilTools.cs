@@ -87,7 +87,6 @@ namespace xzj
             return result;
         }
         
-
        //邮箱格式判断
         public static bool isEmail(String email)
         {
@@ -95,6 +94,107 @@ namespace xzj
             return r.IsMatch(email);
         }
 
-       
+        //保存值
+        public static bool saveValueByKey(string key, string value)
+        {
+            bool b = false;
+            try
+            {
+                deleteValueByKey(key);
+                // 创建文件
+                FileStream fs = new FileStream("mydate", FileMode.OpenOrCreate, FileAccess.ReadWrite); //可以指定盘符，也可以指定任意文件名，还可以为word等文件
+                StreamWriter sw = new StreamWriter(fs); // 创建写入流
+                string s = key+"|"+value;
+                sw.WriteLine(s); // 写入Hello World
+                sw.Close(); //关闭文件
+                b = true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("------>" + e.Message);
+            }
+            finally
+            {
+                
+            }
+            return b;
+        }
+
+        //获取值
+        public static string getValueByKey(string key)
+        {
+            string result = "";
+            try
+            {
+                // 创建文件
+                FileStream fs = new FileStream("mydate", FileMode.OpenOrCreate, FileAccess.ReadWrite); //可以指定盘符，也可以指定任意文件名，还可以为word等文件
+                //StreamWriter sw = new StreamWriter(fs); // 创建写入流
+                StreamReader sr = new StreamReader(fs);
+                List<string> arrayList = new List<string>();
+                while (sr.ReadLine() != null)
+                {
+                    arrayList.Add(sr.ReadLine());
+                }
+                sr.Close(); //关闭文件
+                foreach (string str in arrayList)
+                {
+                    string[] arrays = str.Split('|');
+                    if (arrays[0].Equals(key))
+                    {
+                        result = arrays[1];
+                        break;
+                    }
+
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("------>" + e.Message);
+            }
+            finally
+            {
+
+            }
+            return result;
+        }
+
+        //删除值
+        public static bool deleteValueByKey(string key)
+        {
+            bool result = false;
+            try
+            {
+                // 创建文件
+                FileStream fs = new FileStream("./mydate", FileMode.OpenOrCreate, FileAccess.ReadWrite); //可以指定盘符，也可以指定任意文件名，还可以为word等文件
+                StreamWriter sw = new StreamWriter(fs); // 创建写入流
+                StreamReader sr = new StreamReader(fs);
+                List<string> arrayList = new List<string>();
+                while (sr.ReadLine() != null)
+                {
+                    string str = sr.ReadLine();
+                    string[] arrays = str.Split('|');
+                    if (!arrays[0].Equals(key))
+                    {
+                        arrayList.Add(sr.ReadLine());
+                    }
+                }
+                sr.Close(); //关闭文件
+                foreach (string str in arrayList)
+                {
+                    sw.WriteLine(fs); 
+                }
+                sw.Close(); //关闭文件
+                result = true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("------>" + e.Message);
+            }
+            finally
+            {
+
+            }
+            return result;
+        }
     }
 }

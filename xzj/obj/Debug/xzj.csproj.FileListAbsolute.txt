@@ -70,3 +70,4 @@ D:\xzj\xzj\obj\Debug\xzj.csproj.GenerateResource.Cache
 D:\xzj\xzj\obj\Debug\析之助手术登记管理系统.exe.manifest
 D:\xzj\xzj\obj\Debug\析之助手术登记管理系统.application
 D:\xzj\xzj\obj\Debug\xzj.csprojResolveAssemblyReference.cache
+D:\xzj\xzj\bin\Debug\MySql.Data.dll

@@ -32,7 +32,7 @@ namespace xzj
             string account = this.textBoxAcount.Text;
             string pwd = this.textBoxPwd.Text;
 
-            string sqlAddress = DBSQLite.selectValue(UtilConfig.SQL_ADDRESS_KEY) + "";
+            string sqlAddress = UtilConfig.SQL_ADDRESS;//DBSQLite.selectValue(UtilConfig.SQL_ADDRESS_KEY) + "";
             if (sqlAddress.Length == 0)
             {
                 MessageBox.Show("你还没有配置数据库，需要先配置数据库，才能登录");
@@ -114,6 +114,11 @@ namespace xzj
             FormMain mainForm = new FormMain();
             mainForm.Show();
             Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

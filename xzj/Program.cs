@@ -27,27 +27,36 @@ namespace xzj
             }
             else
             {
-                UtilConfig.SQL_ADDRESS = DBSQLite.selectValue(UtilConfig.SQL_ADDRESS_KEY);
-                string account = DBSQLite.selectValue(UtilConfig.ACCOUNT_KEY);
-                string pwd = DBSQLite.selectValue(UtilConfig.PWD_KEY);
-
-                // 原先有保存连接，判断原先的数据库连接是否有用
-                Boolean isConnectionWorks = DBManager.isConnectionWorks();
-                if (isConnectionWorks)
+                try
                 {
-                    bool flag = DBEmp.getInstance().isLogin(account, pwd);
-                    if (flag)
+                    DBSQLite.CreateDB();
+                    DBSQLite.CreateTable();
+                    UtilConfig.SQL_ADDRESS = DBSQLite.selectValue(UtilConfig.SQL_ADDRESS_KEY);
+                    string account = DBSQLite.selectValue(UtilConfig.ACCOUNT_KEY);
+                    string pwd = DBSQLite.selectValue(UtilConfig.PWD_KEY);
+
+                    // 原先有保存连接，判断原先的数据库连接是否有用
+                    Boolean isConnectionWorks = DBManager.isConnectionWorks();
+                    if (isConnectionWorks)
                     {
-                        Application.Run(new FormMain());
+                        bool flag = DBEmp.getInstance().isLogin(account, pwd);
+                        if (flag)
+                        {
+                            Application.Run(new FormMain());
+                        }
+                        else
+                        {
+                            Application.Run(new FormSignIn());
+                        }
                     }
                     else
                     {
                         Application.Run(new FormSignIn());
                     }
                 }
-                else
+                catch (Exception err)
                 {
-                    Application.Run(new FormSignIn());
+                    MessageBox.Show(err.Message);
                 }
 
                 

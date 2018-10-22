@@ -14,7 +14,7 @@ namespace xzj
         public const string DB_USER_KEY = "db_user_key";//数据库用户名
         public const string DB_PWD_KEY = "db_pwd_key";//数据库密码
         public static string SQL_ADDRESS_KEY = "sql_address_key";//SQL连接
-        public static string SQL_ADDRESS = "";//"server=localhost;port=3306;database=xzj;user=" + user + ";password=" + pwd + ";SslMode = none;";//数据
+        public static string SQL_ADDRESS = "server=localhost;port=3306;database=xzj;user=root;password=123456;SslMode = none;";//数据
         //public static string sqlAddress = "server=localhost;port=3306;database=xzj;user=" + user + ";password=" + pwd + ";SslMode = none;";//数据
         public static string ACCOUNT_KEY = "account_key";//保存当前登录的帐号
         public static string PWD_KEY = "pwd_key";//保存当前登录的密码

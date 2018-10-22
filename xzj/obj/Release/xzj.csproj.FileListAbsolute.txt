@@ -48,3 +48,4 @@ D:\xzj\xzj\obj\Release\析之助手术登记管理系统.application
 D:\xzj\xzj\obj\Release\析之助手术登记管理系统.exe
 D:\xzj\xzj\obj\Release\析之助手术登记管理系统.pdb
 D:\xzj\xzj\obj\Release\xzj.csprojResolveAssemblyReference.cache
+D:\xzj\xzj\bin\Release\MySql.Data.dll
