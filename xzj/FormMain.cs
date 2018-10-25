@@ -178,11 +178,11 @@ namespace xzj
             combobox(this.cbSSLR_PROVINCE, dt);//
 
             //查询市
-            dt = DBManager.getInstance().find(string.Format("SELECT  id,c_name as d_name FROM xzj.t_city where c_province_id = {0}", this.cbSSLR_PROVINCE.SelectedValue));
+            dt = DBManager.getInstance().find(string.Format("SELECT  id,c_name as d_name FROM t_city where c_province_id = {0}", this.cbSSLR_PROVINCE.SelectedValue));
             combobox(this.cbSSLR_CITY, dt);//
 
             //查询县
-            dt = DBManager.getInstance().find(string.Format("SELECT  id,a_name as d_name FROM xzj.t_area where a_city_id = {0}", this.cbSSLR_CITY.SelectedValue));
+            dt = DBManager.getInstance().find(string.Format("SELECT  id,a_name as d_name FROM t_area where a_city_id = {0}", this.cbSSLR_CITY.SelectedValue));
             combobox(this.cbSSLR_COUNTY, dt);//
 
             //查询医保类型字典
@@ -3088,11 +3088,11 @@ namespace xzj
         private void cbSSLR_PROVINCE_SelectedIndexChanged(object sender, EventArgs e)
         {
             //查询市
-            dataTable = DBManager.getInstance().find(string.Format("SELECT  id,c_name as d_name FROM xzj.t_city where c_province_id = {0}", this.cbSSLR_PROVINCE.SelectedValue));
+            dataTable = DBManager.getInstance().find(string.Format("SELECT  id,c_name as d_name FROM t_city where c_province_id = {0}", this.cbSSLR_PROVINCE.SelectedValue));
             combobox(this.cbSSLR_CITY, dataTable);//
 
             //查询县
-            dataTable = DBManager.getInstance().find(string.Format("SELECT  id,a_name as d_name FROM xzj.t_area where a_city_id = {0}", this.cbSSLR_CITY.SelectedValue));
+            dataTable = DBManager.getInstance().find(string.Format("SELECT  id,a_name as d_name FROM t_area where a_city_id = {0}", this.cbSSLR_CITY.SelectedValue));
             combobox(this.cbSSLR_COUNTY, dataTable);//
 
         }
@@ -3101,7 +3101,7 @@ namespace xzj
         private void cbSSLR_CITY_SelectionChangeCommitted(object sender, EventArgs e)
         {
             //查询县
-            dataTable = DBManager.getInstance().find(string.Format("SELECT  id,a_name as d_name FROM xzj.t_area where a_city_id = {0}", this.cbSSLR_CITY.SelectedValue));
+            dataTable = DBManager.getInstance().find(string.Format("SELECT  id,a_name as d_name FROM t_area where a_city_id = {0}", this.cbSSLR_CITY.SelectedValue));
             combobox(this.cbSSLR_COUNTY, dataTable);//
         }
 

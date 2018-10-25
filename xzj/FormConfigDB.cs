@@ -121,7 +121,7 @@ namespace xzj
             }
             else
             {
-                string sqlAddress = "server=" + ipAdd + ";port=3306;database=" + dbName + ";user=" + user + ";password=" + pwd + ";SslMode = none;";
+                string sqlAddress = "server=" + ipAdd + ";port=3306;database=" + dbName + ";user=" + user + ";password=" + pwd + ";";
                 //UtilTools.setData(UtilConfig.SQL_ADDRESS_KEY, sqlAddress);
                 if (DBSQLite.selectValue(UtilConfig.SQL_ADDRESS_KEY) != null)
                 {
