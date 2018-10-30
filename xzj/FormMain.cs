@@ -14,6 +14,7 @@ using System.Data.SqlClient;
 using MySql.Data.MySqlClient;
 using xzj.utils;
 using xzj.xzjForm;
+using System.Drawing.Drawing2D;
 
 
 namespace xzj
@@ -47,8 +48,16 @@ namespace xzj
             this.panelCJFX.Visible = false;
             this.panelKSGL.Visible = false;
 
+            // 最大化大小
+            this.MaximumSize = new Size(Screen.PrimaryScreen.WorkingArea.Width, Screen.PrimaryScreen.WorkingArea.Height);
             //显示当前用户
-            this.labelAccountShow.BackColor = ColorTranslator.FromHtml("#0078d7");
+            // this.labelAccountShow.BackColor = ColorTranslator.FromHtml("#0078d7");
+            // 背景透明
+            this.flowLayoutPanel5.Parent = this.pictureBox1;
+            this.labelAccountShow.Parent = this.flowLayoutPanel5;
+            this.label54.Parent = this.flowLayoutPanel5;
+            //
+            this.flowLayoutForm.Parent = this.pictureBox1;
 
             //获取用户名
             string account = DBSQLite.selectValue(UtilConfig.ACCOUNT_KEY);
@@ -79,8 +88,9 @@ namespace xzj
         private void picClose_Click(object sender, EventArgs e)
         {
             //this.DialogResult = DialogResult.OK;
-            this.Hide();
-            this.WindowState = FormWindowState.Minimized;
+            // this.Hide();
+            // this.WindowState = FormWindowState.Minimized;
+            Application.Exit();
         }
 
         //最大化 正常化
@@ -93,8 +103,11 @@ namespace xzj
             }
             else
             {
+                
                 this.WindowState = FormWindowState.Maximized;
+                
             }
+            
 
             this.flowLayoutForm.Location = new Point(this.Width - 102, 0);
         }
@@ -170,6 +183,22 @@ namespace xzj
             this.tbSSLR_ZS.Text = "";//助手
             this.tbSSLR_QXFS.Text = "";//器械护士
 
+            this.cbSSLR_SEX.SelectedIndex = -1;
+            this.cbSSLR_YBLX.SelectedIndex = -1;
+           
+            this.cbSSLR_PROVINCE.SelectedIndex = -1;
+            this.cbSSLR_CITY.SelectedIndex = -1;
+            this.cbSSLR_COUNTY.SelectedIndex = -1;
+
+            this.cbSSLR_SSDD.SelectedIndex = -1;
+            this.cbSSLR_SSLX.SelectedIndex = -1;
+            this.cbSSLR_SSFS.SelectedIndex = -1;
+            this.cbSSLR_CCFS.SelectedIndex = -1;
+
+            this.cbSSLR_SSZZQX.SelectedIndex = -1;
+
+            this.cbSSLR_SSBW.SelectedIndex = -1;
+            hideAllTraceTime();
             //性别
             //this.cbSSLR_SEX.SelectedIndex = 0;
 
@@ -314,6 +343,7 @@ namespace xzj
             this.panelSSXGXY.Visible = false;
             this.panelKSGL.Visible = false;
 
+            this.dtpTJFX_GZLGL_KSSJ.Value = Convert.ToDateTime(UtilTools.getDayAndTimeMM());
             initTjfx();
         }
 
@@ -402,6 +432,9 @@ namespace xzj
         //切换科室职员管理按钮
         private void btnRoomEmpManager_Click(object sender, EventArgs e)
         {
+            this.tbFindEmpName.Text = "";
+            this.tbFindEmpAccount.Text = "";
+
             this.btnRoomEmpManager.ForeColor = ColorTranslator.FromHtml("#3399ff");
             this.btnRoomEmpManager.BackColor = Color.White;
 
@@ -797,7 +830,7 @@ namespace xzj
         private void btnGoAddDictionaryy_Click(object sender, EventArgs e)
         {
             FormAddDictionary formAddDictionary = new FormAddDictionary();
-            formAddDictionary.setDesc(-1, dictionary_parent_id, "添加字典", this.labelDictionaryShow.Text);
+            formAddDictionary.setDesc(-1, dictionary_parent_id, "添加", this.labelDictionaryShow.Text);
             formAddDictionary.ShowDialog();
             if (formAddDictionary.DialogResult == DialogResult.OK)
             {
@@ -820,7 +853,7 @@ namespace xzj
                 }
 
                 FormAddDictionary formAddDictionary = new FormAddDictionary();
-                formAddDictionary.setDesc(id, dictionary_parent_id, "修改字典", this.labelDictionaryShow.Text);
+                formAddDictionary.setDesc(id, dictionary_parent_id, "修改", this.labelDictionaryShow.Text);
                 formAddDictionary.ShowDialog();
                 if (formAddDictionary.DialogResult == DialogResult.OK)
                 {
@@ -1080,7 +1113,23 @@ namespace xzj
                     this.tbSSLR_ZDYS.Text = "";//主刀医生
                     this.tbSSLR_ZS.Text = "";//助手
                     this.tbSSLR_QXFS.Text = "";//器械护士
+                    this.cbSSLR_SEX.SelectedIndex = -1;
+                    this.cbSSLR_YBLX.SelectedIndex = -1;
+
+                    this.cbSSLR_PROVINCE.SelectedIndex = -1;
+                    this.cbSSLR_CITY.SelectedIndex = -1;
+                    this.cbSSLR_COUNTY.SelectedIndex = -1;
+
+                    this.cbSSLR_SSDD.SelectedIndex = -1;
+                    this.cbSSLR_SSLX.SelectedIndex = -1;
+                    this.cbSSLR_SSFS.SelectedIndex = -1;
+                    this.cbSSLR_CCFS.SelectedIndex = -1;
+
+                    this.cbSSLR_SSZZQX.SelectedIndex = -1;
+
+                    this.cbSSLR_SSBW.SelectedIndex = -1;
                     removeAllSSTP();
+                    hideAllTraceTime();
                 }
                 catch (Exception ex) {
                     MessageBox.Show("保存失败：" + ex.Message);
@@ -1191,6 +1240,22 @@ namespace xzj
                 this.tbSSLR_ZDYS.Text = "";//主刀医生
                 this.tbSSLR_ZS.Text = "";//助手
                 this.tbSSLR_QXFS.Text = "";//器械护士
+
+                this.cbSSLR_SEX.SelectedIndex = -1;
+                this.cbSSLR_YBLX.SelectedIndex = -1;
+
+                this.cbSSLR_PROVINCE.SelectedIndex = -1;
+                this.cbSSLR_CITY.SelectedIndex = -1;
+                this.cbSSLR_COUNTY.SelectedIndex = -1;
+
+                this.cbSSLR_SSDD.SelectedIndex = -1;
+                this.cbSSLR_SSLX.SelectedIndex = -1;
+                this.cbSSLR_SSFS.SelectedIndex = -1;
+                this.cbSSLR_CCFS.SelectedIndex = -1;
+
+                this.cbSSLR_SSZZQX.SelectedIndex = -1;
+
+                this.cbSSLR_SSBW.SelectedIndex = -1;
             }
             else
             {
@@ -1504,6 +1569,10 @@ namespace xzj
         //数据查询-->手术追踪单
         private void btnSJCX_SSZZCX_Click(object sender, EventArgs e)
         {
+            this.dtpSJCX_SSZZ_KSRQ.Value = Convert.ToDateTime(UtilTools.getDayAndTimeMM());
+            this.tbSJCX_SSZZ_NAME.Text = "";//SelectedIndex
+            this.cbSJCX_SSZZ_CXTJ.SelectedIndex = -1;
+
             // Header以外所有的单元格的背景色
             this.dgvSJCX_SSZZ.RowsDefaultCellStyle.BackColor = Color.White;
 
@@ -1544,6 +1613,9 @@ namespace xzj
         //初始化数据查询界面
         private void initSJCX()
         {
+            this.tbSJCX_NAME.Text = "";
+            this.cbSJCX_XSSSZZ.Checked = false;
+
             // Header以外所有的单元格的背景色
             this.dgvSJCX_RECORDS.RowsDefaultCellStyle.BackColor = Color.White;
 
@@ -1561,6 +1633,9 @@ namespace xzj
 
             this.btnSJCX_SSZZCX.ForeColor = Color.White;
             this.btnSJCX_SSZZCX.BackColor = ColorTranslator.FromHtml("#3399ff");
+
+            this.dtpSJCX_KSSJ.Value = Convert.ToDateTime(UtilTools.getDayAndTimeMM());
+            this.dtpSJCX_JSSJ.Value = Convert.ToDateTime(UtilTools.getDayAndTimeMM());
 
             this.panelSJCX_SSJLD.Visible = true;
             this.panelSJCX_SSZZD.Visible = false;
@@ -2061,6 +2136,9 @@ namespace xzj
             this.panelTJFX_PIE.Visible = true;
             this.panelTJFX_GZLTJ.Visible = false;
 
+            this.dtpTJCX_KSSJ.Value = Convert.ToDateTime(UtilTools.getDayAndTimeMM());
+            this.dtpTJCX_JSSJ.Value = Convert.ToDateTime(UtilTools.getDayAndTimeMM());
+
             JBXXTJ_PIE();
         }
 
@@ -2320,6 +2398,9 @@ namespace xzj
             this.panelTJFX_PIE.Visible = true;
             this.panelTJFX_GZLTJ.Visible = false;
 
+            this.dtpTJCX_KSSJ.Value = Convert.ToDateTime(UtilTools.getDayAndTimeMM());
+            this.dtpTJCX_JSSJ.Value = Convert.ToDateTime(UtilTools.getDayAndTimeMM());
+
             initTjss();
         }
 
@@ -2348,6 +2429,10 @@ namespace xzj
 
             this.panelTJFX_PIE.Visible = false;
             this.panelTJFX_GZLTJ.Visible = true;
+
+            this.dtpTJFX_GZLGL_KSSJ.Value = Convert.ToDateTime(UtilTools.getDayAndTimeMM());
+            this.dtpTJFX_GZLGL_JSSJ.Value = Convert.ToDateTime(UtilTools.getDayAndTimeMM());
+
 
             //工作量统计
            // initGJLTJ();
@@ -2827,6 +2912,8 @@ namespace xzj
             // Console.Write("全部范围：left" + e.PageBounds.Left + ", top" + e.PageBounds.Top + ",Right:" + e.PageBounds.Right + ",Bottom" + e.PageBounds.Bottom);
             // Console.WriteLine("A4值范围: left:" + left + ", top:" + top + ", right:" + right + ",bottom" + bottom);
 
+            // 设置图片插入高清模式
+            e.Graphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
             // e.Graphics.draw
 
             List<Bitmap> page = printPages[currentPageIndex++];
@@ -3158,9 +3245,21 @@ namespace xzj
             this.panelSSXGXY.Visible = false;
             this.panelKSGL.Visible = false;
 
+            this.lstbxPatientNames.Items.Clear();
+            this.labSSZZ_SSRQ.Text = "";
+            this.labSSZZ_SSDD.Text = "";
+            this.labSSZZ_SSLX.Text = "";
+            this.labSSZZ_SSFS.Text = "";
+            this.labSSZZ_LXFS.Text = "";
+
+
+            this.dtpTraceTime.Value = Convert.ToDateTime(UtilTools.getDayAndTimeMM());
+
             // 查询内痿自我锻炼
             DataTable dt = DBDictionary.getInstance().getDictionarysByParentId(10);
             combobox(this.cbSSLR_SSZZ_NWZWDLQK, dt);//
+
+            this.txtbxPatientName.Text = "";
 
             // 查询穿刺部位皮肤情况
             dt = DBDictionary.getInstance().getDictionarysByParentId(11);
@@ -3180,6 +3279,8 @@ namespace xzj
         //切换到手术相关协议
         private void btnSSXGXY_Click(object sender, EventArgs e)
         {
+            this.btnSSXGXY_XYMC.Text = "";
+
             this.btnSSLR.BackColor = ColorTranslator.FromHtml("#0000cd");
             this.btnSSZZ.BackColor = ColorTranslator.FromHtml("#0000cd");
             this.btnZDGL.BackColor = ColorTranslator.FromHtml("#0000cd");
@@ -3292,6 +3393,21 @@ namespace xzj
             this.dgvSSZZ.Rows.Clear();
             ValueSender.isAdd = false;
 
+            this.cbxSSZZ_SFCG.SelectedIndex = -1;
+            this.rtbSSZZ_FailReason.Text = "";
+            this.tbSSLR_SSZZ_ZWQMJTZQK.Text = "";
+            this.cbSSLR_SSZZ_SFTC.SelectedIndex = -1;
+            this.cbSSLR_SSZZ_YWXLBCT.SelectedIndex = -1;
+            this.cbSSLR_SSZZ_YWXM.SelectedIndex = -1;
+            this.cbSSLR_SSZZ_YWBFZ.SelectedIndex = -1;
+            this.cbSSLR_SSZZ_YWXBJMQZ.SelectedIndex = -1;
+            this.cbSSLR_SSZZ_YWCCBWPFGMQK.SelectedIndex = -1;
+            this.cbSSLR_SSZZ_CCBWPFQK.SelectedIndex = -1;
+            this.cbSSLR_SSZZ_NWZWDLQK.SelectedIndex = -1;
+            this.cbSSLR_SSZZ_CCBWPFQK.SelectedIndex = -1;
+            this.cbSSLR_SSZZ_NWZWDLQK.SelectedIndex = -1;
+            this.cbSSLR_SSZZ_GRKZFS.SelectedIndex = -1;
+
 
         }
         private void enableSSZZState() {
@@ -3319,11 +3435,48 @@ namespace xzj
             //按下确定选择的按钮
             if (this.openFileDialogSSLR.ShowDialog() == DialogResult.OK)
             {
+
                 int imgLength = this.openFileDialogSSLR.FileNames.Length;
-                if (imgLength > 2) {
+                if (null != pictureBox10.Image) {
+                    MessageBox.Show("无法再添加图片，请先删除所有图片!");
+                    return;
+                }
+                if (imgLength > 2)
+                {
                     MessageBox.Show("图片最多两张!");
                     return;
                 }
+
+                if (1 == imgLength) {
+                    String imgPath = this.openFileDialogSSLR.FileNames[0];
+                    Image img = Image.FromFile(imgPath);
+                    if (null == picSSTP.Image)
+                    {
+                        picSSTP.Image = img;
+                    } else {
+                        pictureBox10.Image = img;    
+                    }
+                }
+
+                if (2 == imgLength) {
+                    if (null != picSSTP.Image)
+                    {
+                        MessageBox.Show("只能再添加一张图片!");
+                        return;
+                    }
+                    else 
+                    {
+                        String imgPath = this.openFileDialogSSLR.FileNames[0];
+                        Image img = Image.FromFile(imgPath);
+                        picSSTP.Image = img;
+                        imgPath = this.openFileDialogSSLR.FileNames[1];
+                        img = Image.FromFile(imgPath);
+                        pictureBox10.Image = img;    
+                    }  
+                }
+                
+
+                /*
                 picSSTP.Image = null;
                 pictureBox10.Image = null;
                 for (int i = 0; i < imgLength; i++)
@@ -3338,22 +3491,8 @@ namespace xzj
                         pictureBox10.Image = img;
                     }
 
-                }
-                /*
-                foreach (string s in this.openFileDialogSSLR.FileNames)
-                {
-                    // Console.WriteLine("添加图片：" + s);
-                    Image img = Image.FromFile(s);
-                    // 图片列表中添加该图片
-                    imgLstTTLB.Images.Add(img);
-                    // 获得该图片的名称
-                    String picName = s.Substring(s.LastIndexOf("\\") + 1);
-                    lstboxTTLB.Items.Add(picName);
-
-                    picSSTP.Image = img;
-                    // picSSTP.
-                    
-                } */
+                }*/
+                
             }
         }
 
@@ -4168,6 +4307,13 @@ namespace xzj
             //FormSignIn f = new FormSignIn();
             //f.Show();
         }
+
+        private void dpSSLR_SSRQ_ValueChanged(object sender, EventArgs e)
+        {
+            dtSSLR_SSZZ.Value = dpSSLR_SSRQ.Value;
+        }
+
+      
 
 
 

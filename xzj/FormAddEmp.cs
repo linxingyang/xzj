@@ -26,7 +26,7 @@ namespace xzj
 
             if (!string.IsNullOrEmpty(ACCOUNT))
             {
-                this.Text = "编辑用户";
+                this.labelTitle.Text = "编辑用户";
                 this.tbAccount.Enabled = false;
                 DataTable dt = DBEmp.getInstance().getEmps(ACCOUNT, null);
 
@@ -213,6 +213,12 @@ namespace xzj
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void picClose_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
 

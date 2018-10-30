@@ -17,6 +17,27 @@ namespace xzj
         public FormAddControl()
         {
             InitializeComponent();
+
+        }
+
+        //自动编号
+        private void setRank()
+        {
+            string sql = string.Format("select c_order_id from t_control order by c_order_id desc limit 1");
+            DataTable dt = DBManager.getInstance().find(sql);
+
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                foreach (DataRow rows in dt.Rows)
+                {
+                    this.tbRank.Text = Convert.ToInt32(rows["c_order_id"].ToString()) + 1 + "";
+                }
+
+            }
+            else
+            {
+                this.tbRank.Text = "1";
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -68,6 +89,22 @@ namespace xzj
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void picClose_Click(object sender, EventArgs e)
+        {
+            //this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void FormAddControl_Load(object sender, EventArgs e)
+        {
+            setRank();
         }
     }
 }

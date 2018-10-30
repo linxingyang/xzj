@@ -160,7 +160,12 @@ namespace xzj.xzjForm
 
         private void rtbSSLR_SSJL_ContentsResized(object sender, ContentsResizedEventArgs e)
         {
-            this.panelRTB.Height = e.NewRectangle.Height + 50; 
+            this.panelRTB.Height = e.NewRectangle.Height + 50;
+        }
+
+        private void picClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

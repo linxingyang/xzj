@@ -84,5 +84,10 @@ namespace xzj.xzjForm
             MessageBox.Show("保存成功!");
             this.Close();
         }
+
+        private void picClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

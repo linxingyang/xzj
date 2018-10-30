@@ -323,6 +323,10 @@
     <Content Include="bitbug_favicon %282%29.ico" />
     <Content Include="bitbug_favicon.ico" />
     <Content Include="logo.ico" />
+    <Content Include="Resources\close.png" />
+    <None Include="Resources\square-o.png" />
+    <None Include="Resources\line.png" />
+    <None Include="Resources\close1.png" />
     <None Include="Resources\mainTop3.png" />
     <None Include="Resources\signIn2.png" />
     <None Include="Resources\signInBtnClose1.png" />

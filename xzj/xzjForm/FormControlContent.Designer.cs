@@ -51,25 +51,29 @@
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.label2 = new System.Windows.Forms.Label();
+            this.picClose = new System.Windows.Forms.PictureBox();
             this.panel68.SuspendLayout();
             this.panel69.SuspendLayout();
             this.panelRTB.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel43.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             this.SuspendLayout();
             // 
             // panel68
             // 
+            this.panel68.BackColor = System.Drawing.Color.White;
             this.panel68.Controls.Add(this.panel69);
             this.panel68.Controls.Add(this.panel1);
             this.panel68.Controls.Add(this.panel43);
             this.panel68.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel68.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.panel68.Location = new System.Drawing.Point(0, 0);
+            this.panel68.Location = new System.Drawing.Point(1, 30);
             this.panel68.Name = "panel68";
             this.panel68.Padding = new System.Windows.Forms.Padding(10);
-            this.panel68.Size = new System.Drawing.Size(668, 414);
+            this.panel68.Size = new System.Drawing.Size(702, 374);
             this.panel68.TabIndex = 31;
             // 
             // panel69
@@ -80,7 +84,7 @@
             this.panel69.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel69.Location = new System.Drawing.Point(10, 38);
             this.panel69.Name = "panel69";
-            this.panel69.Size = new System.Drawing.Size(648, 303);
+            this.panel69.Size = new System.Drawing.Size(682, 263);
             this.panel69.TabIndex = 24;
             // 
             // panelRTB
@@ -89,7 +93,7 @@
             this.panelRTB.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelRTB.Location = new System.Drawing.Point(0, 0);
             this.panelRTB.Name = "panelRTB";
-            this.panelRTB.Size = new System.Drawing.Size(646, 280);
+            this.panelRTB.Size = new System.Drawing.Size(663, 280);
             this.panelRTB.TabIndex = 7;
             // 
             // rtbSSLR_SSJL
@@ -99,7 +103,7 @@
             this.rtbSSLR_SSJL.Location = new System.Drawing.Point(0, 0);
             this.rtbSSLR_SSJL.Name = "rtbSSLR_SSJL";
             this.rtbSSLR_SSJL.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.rtbSSLR_SSJL.Size = new System.Drawing.Size(646, 280);
+            this.rtbSSLR_SSJL.Size = new System.Drawing.Size(663, 280);
             this.rtbSSLR_SSJL.TabIndex = 6;
             this.rtbSSLR_SSJL.Text = "";
             this.rtbSSLR_SSJL.ContentsResized += new System.Windows.Forms.ContentsResizedEventHandler(this.rtbSSLR_SSJL_ContentsResized);
@@ -111,9 +115,9 @@
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Controls.Add(this.btnSaveSSJL2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(10, 341);
+            this.panel1.Location = new System.Drawing.Point(10, 301);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(648, 63);
+            this.panel1.Size = new System.Drawing.Size(682, 63);
             this.panel1.TabIndex = 23;
             // 
             // btnPrintPreview
@@ -187,7 +191,7 @@
             this.panel43.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel43.Location = new System.Drawing.Point(10, 10);
             this.panel43.Name = "panel43";
-            this.panel43.Size = new System.Drawing.Size(648, 28);
+            this.panel43.Size = new System.Drawing.Size(682, 28);
             this.panel43.TabIndex = 7;
             // 
             // menuStrip1
@@ -205,7 +209,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(243, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(245, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -256,7 +260,7 @@
             // 
             this.menuSSLR_XT.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Italic);
             this.menuSSLR_XT.Name = "menuSSLR_XT";
-            this.menuSSLR_XT.Size = new System.Drawing.Size(23, 21);
+            this.menuSSLR_XT.Size = new System.Drawing.Size(24, 21);
             this.menuSSLR_XT.Text = "I";
             this.menuSSLR_XT.Click += new System.EventHandler(this.menuSSLR_XT_Click);
             // 
@@ -264,7 +268,7 @@
             // 
             this.menuSSLR_XHX.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Underline);
             this.menuSSLR_XHX.Name = "menuSSLR_XHX";
-            this.menuSSLR_XHX.Size = new System.Drawing.Size(28, 21);
+            this.menuSSLR_XHX.Size = new System.Drawing.Size(29, 21);
             this.menuSSLR_XHX.Text = "U";
             this.menuSSLR_XHX.Click += new System.EventHandler(this.menuSSLR_XHX_Click);
             // 
@@ -308,16 +312,43 @@
             // 
             this.printDialog1.UseEXDialog = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(8, 7);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(135, 20);
+            this.label2.TabIndex = 32;
+            this.label2.Text = "手术相关协议";
+            // 
+            // picClose
+            // 
+            this.picClose.BackColor = System.Drawing.Color.Transparent;
+            this.picClose.BackgroundImage = global::xzj.Properties.Resources.close;
+            this.picClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picClose.Location = new System.Drawing.Point(675, 2);
+            this.picClose.Name = "picClose";
+            this.picClose.Size = new System.Drawing.Size(25, 25);
+            this.picClose.TabIndex = 26;
+            this.picClose.TabStop = false;
+            this.picClose.Click += new System.EventHandler(this.picClose_Click);
+            // 
             // FormControlContent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(668, 414);
+            this.BackColor = System.Drawing.Color.RoyalBlue;
+            this.ClientSize = new System.Drawing.Size(704, 414);
+            this.Controls.Add(this.picClose);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel68);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormControlContent";
+            this.Padding = new System.Windows.Forms.Padding(1, 30, 1, 10);
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "手术相关协议";
@@ -329,7 +360,9 @@
             this.panel43.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -357,5 +390,7 @@
         private System.Windows.Forms.Button btnPrintPreview;
         private System.Windows.Forms.Panel panelRTB;
         private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox picClose;
     }
 }

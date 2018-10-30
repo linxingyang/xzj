@@ -37,8 +37,8 @@ namespace xzj
         {
 
             // MessageBox.Show("hi" + this.dictionary_parent_id);
-            this.Text = this.title;
-            this.labelName.Text = this.typeName+"：";
+            //this.Text = this.title;
+            this.labelTitle.Text = this.title+this.typeName;
             //修改
             if (this.dictionary_id >= 0)
             {
@@ -111,12 +111,12 @@ namespace xzj
                     return;
                 }
             }
-
+            /*
             if (string.IsNullOrEmpty(desc))
             {
                 MessageBox.Show("描述不能为空");
                 return;
-            }
+            }*/
 
             //编辑
             if (this.dictionary_id >= 0)
@@ -204,6 +204,11 @@ namespace xzj
         {
             this.DialogResult = DialogResult.OK;
             this.Close();//关闭容器
+        }
+
+        private void picClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

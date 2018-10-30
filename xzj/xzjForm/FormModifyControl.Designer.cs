@@ -41,10 +41,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.tbRank = new System.Windows.Forms.TextBox();
+            this.picClose = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSave
@@ -54,7 +57,7 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("宋体", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(279, 350);
+            this.btnSave.Location = new System.Drawing.Point(274, 317);
             this.btnSave.Margin = new System.Windows.Forms.Padding(5);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(117, 37);
@@ -65,24 +68,26 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.btnSave);
             this.groupBox1.Controls.Add(this.panel3);
             this.groupBox1.Controls.Add(this.panel2);
             this.groupBox1.Controls.Add(this.panel1);
-            this.groupBox1.Location = new System.Drawing.Point(83, 37);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(1, 30);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(592, 304);
+            this.groupBox1.Size = new System.Drawing.Size(694, 387);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "协议信息";
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.tb);
             this.panel3.Controls.Add(this.tbDesc);
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Location = new System.Drawing.Point(9, 136);
+            this.panel3.Location = new System.Drawing.Point(72, 147);
             this.panel3.Margin = new System.Windows.Forms.Padding(5);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(537, 145);
@@ -122,7 +127,7 @@
             this.panel2.Controls.Add(this.labelName);
             this.panel2.Controls.Add(this.tbName);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(9, 81);
+            this.panel2.Location = new System.Drawing.Point(72, 92);
             this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(537, 44);
@@ -160,7 +165,7 @@
             // 
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.tbRank);
-            this.panel1.Location = new System.Drawing.Point(9, 28);
+            this.panel1.Location = new System.Drawing.Point(72, 39);
             this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(537, 44);
@@ -184,14 +189,41 @@
             this.tbRank.Size = new System.Drawing.Size(259, 21);
             this.tbRank.TabIndex = 2;
             // 
+            // picClose
+            // 
+            this.picClose.BackColor = System.Drawing.Color.Transparent;
+            this.picClose.BackgroundImage = global::xzj.Properties.Resources.close;
+            this.picClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picClose.Location = new System.Drawing.Point(661, 1);
+            this.picClose.Name = "picClose";
+            this.picClose.Size = new System.Drawing.Size(25, 25);
+            this.picClose.TabIndex = 25;
+            this.picClose.TabStop = false;
+            this.picClose.Click += new System.EventHandler(this.picClose_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(8, 6);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(93, 20);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "修改协议";
+            // 
             // FormModifyControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(829, 427);
-            this.Controls.Add(this.btnSave);
+            this.BackColor = System.Drawing.Color.RoyalBlue;
+            this.ClientSize = new System.Drawing.Size(696, 427);
+            this.Controls.Add(this.picClose);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormModifyControl";
+            this.Padding = new System.Windows.Forms.Padding(1, 30, 1, 10);
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "修改手术相关协议";
@@ -203,7 +235,9 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -222,5 +256,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbRank;
+        private System.Windows.Forms.PictureBox picClose;
+        private System.Windows.Forms.Label label2;
     }
 }

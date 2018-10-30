@@ -42,18 +42,21 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.picClose = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             this.SuspendLayout();
             // 
             // rtbSSLR_SSJL
             // 
             this.rtbSSLR_SSJL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rtbSSLR_SSJL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rtbSSLR_SSJL.Location = new System.Drawing.Point(0, 29);
+            this.rtbSSLR_SSJL.Location = new System.Drawing.Point(1, 59);
             this.rtbSSLR_SSJL.Name = "rtbSSLR_SSJL";
             this.rtbSSLR_SSJL.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.rtbSSLR_SSJL.Size = new System.Drawing.Size(796, 361);
+            this.rtbSSLR_SSJL.Size = new System.Drawing.Size(768, 321);
             this.rtbSSLR_SSJL.TabIndex = 8;
             this.rtbSSLR_SSJL.Text = "";
             // 
@@ -69,10 +72,10 @@
             this.menuSSLR_YDQ,
             this.menuSSLR_JZ,
             this.打印ToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Location = new System.Drawing.Point(1, 30);
             this.menuStrip1.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(796, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(768, 29);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -120,14 +123,14 @@
             // 
             this.menuSSLR_XT.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Italic);
             this.menuSSLR_XT.Name = "menuSSLR_XT";
-            this.menuSSLR_XT.Size = new System.Drawing.Size(23, 25);
+            this.menuSSLR_XT.Size = new System.Drawing.Size(24, 25);
             this.menuSSLR_XT.Text = "I";
             // 
             // menuSSLR_XHX
             // 
             this.menuSSLR_XHX.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Underline);
             this.menuSSLR_XHX.Name = "menuSSLR_XHX";
-            this.menuSSLR_XHX.Size = new System.Drawing.Size(28, 25);
+            this.menuSSLR_XHX.Size = new System.Drawing.Size(29, 25);
             this.menuSSLR_XHX.Text = "U";
             // 
             // menuSSLR_ZDQ
@@ -156,12 +159,13 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.btnSave);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 390);
+            this.panel1.Location = new System.Drawing.Point(1, 380);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(796, 39);
+            this.panel1.Size = new System.Drawing.Size(768, 39);
             this.panel1.TabIndex = 9;
             // 
             // btnCancel
@@ -194,25 +198,54 @@
             this.btnSave.Text = "保存";
             this.btnSave.UseVisualStyleBackColor = false;
             // 
+            // picClose
+            // 
+            this.picClose.BackColor = System.Drawing.Color.Transparent;
+            this.picClose.BackgroundImage = global::xzj.Properties.Resources.close;
+            this.picClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picClose.Location = new System.Drawing.Point(741, 1);
+            this.picClose.Name = "picClose";
+            this.picClose.Size = new System.Drawing.Size(25, 25);
+            this.picClose.TabIndex = 25;
+            this.picClose.TabStop = false;
+            this.picClose.Click += new System.EventHandler(this.picClose_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(4, 6);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(135, 20);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "手术相关协议";
+            // 
             // FormControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(796, 429);
+            this.BackColor = System.Drawing.Color.RoyalBlue;
+            this.ClientSize = new System.Drawing.Size(770, 429);
+            this.Controls.Add(this.picClose);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.rtbSSLR_SSJL);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("宋体", 12F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormControl";
+            this.Padding = new System.Windows.Forms.Padding(1, 30, 1, 10);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "手术相关协议";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,5 +267,7 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.ToolStripMenuItem 打印ToolStripMenuItem;
+        private System.Windows.Forms.PictureBox picClose;
+        private System.Windows.Forms.Label label2;
     }
 }

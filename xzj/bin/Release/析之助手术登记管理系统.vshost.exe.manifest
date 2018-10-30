@@ -96,14 +96,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="析之助手术登记管理系统.exe" size="1139200">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="析之助手术登记管理系统.exe" size="1155584">
       <assemblyIdentity name="析之助手术登记管理系统" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>AVfN/AdHwdD54Q2zjr1NtWr1xqJCLsGOPzlgyCFNK2M=</dsig:DigestValue>
+        <dsig:DigestValue>S0EX1LSPQrfYg42iPFuZpiXID9ncWlxKEjxNc8MgyAQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -132,6 +132,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>OiwTYXpro/eB66SaUiq4HktzhdKsI17qSgre8SCj7CA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\close.png" size="2428">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>gGVZTuqBxcS0amrWgNhsjjI4I3/8FydG64dmRNQX7tY=</dsig:DigestValue>
     </hash>
   </file>
   <file name="析之助手术登记管理系统.exe.config" size="209">
